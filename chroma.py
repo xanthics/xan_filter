@@ -24,7 +24,7 @@ Purpose: Create an item filter based on config files
 Note: Requires Python 3.4.x
 """
 
-desc = "template"
+desc = "Chromes"
 
 # Text settings for various categories
 settings = {
