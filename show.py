@@ -41,10 +41,10 @@ settings = {
 
 # Base type : settings pair
 items = {
-    "Fishing Rod": {"base": "Fishing Rod", "type": "very high"},
-    "Hideout Doodads": {"class": "Hideout Doodads","type": "low"},
-    "Microtransactions": {"class": "Microtransactions","type": "low"},
-    "Quest": {"class": "Quest", "type": "normal"},
-    "Sacrificial Garb": {"base": "Sacrificial Garb", "type": "very high"},
-    "Jewel": {"class": "Jewel", "type": "normal"}
+    "0 Fishing Rod": {"base": "Fishing Rod", "type": "very high"},
+    "0 Hideout Doodads": {"class": "Hideout Doodads","type": "low"},
+    "0 Microtransactions": {"class": "Microtransactions","type": "low"},
+    "0 Quest": {"class": "Quest", "type": "normal"},
+    "0 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "very high"},
+    "0 Jewel": {"class": "Jewel", "type": "normal"}
 }

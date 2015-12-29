@@ -30,15 +30,12 @@ desc = "gems"
 settings = {
     "very high": ["Class \"Gems\"",
                   "SetBorderColor 27 162 155",
-                  "SetTextColor 27 162 155",
                   "SetFontSize 45"],
     "high": ["Class \"Gems\"",
              "SetBorderColor 27 162 155",
-             "SetTextColor 27 162 155",
              "SetFontSize 37"],
     "normal": ["Class \"Gems\"",
-               "SetBorderColor 27 162 155",
-               "SetTextColor 27 162 155"],
+               "SetBorderColor 27 162 155"],
     "low": ["Class \"Gems\"",
             "SetFontSize 18",
             "SetBackgroundColor 0 0 0 150"],
@@ -47,14 +44,14 @@ settings = {
 
 # Base type : settings pair
 items = {
-    "01 Quality Gem": {"other": ["Quality >= 10"], "type": "very high"},
+    "01 Quality Gem High": {"other": ["Quality >= 10"], "type": "very high"},
     "02 Quality Gem": {"other": ["Quality >= 1"], "type": "high"},
-    "03 Portal": {"base": "Portal", "type": "normal"},
-    "04 Detonate Mines": {"base": "Detonate Mines", "type": "normal"},
-    "05 Empower": {"base": "Empower", "type": "normal"},
-    "06 Enhance": {"base": "Enhance", "type": "normal"},
-    "07 Enlighten": {"base": "Enlighten", "type": "normal"},
-    "08 Added Chaos Damage": {"base": "Added Chaos Damage", "type": "normal"},
-    "09 Vaal Gems": {"base":"Vaal", "type": "normal"},
-    "10 Other Gems": {"type": "low"}
+    "1 Portal": {"base": "Portal", "type": "normal"},
+    "1 Detonate Mines": {"base": "Detonate Mines", "type": "normal"},
+    "1 Empower": {"base": "Empower", "type": "normal"},
+    "1 Enhance": {"base": "Enhance", "type": "normal"},
+    "1 Enlighten": {"base": "Enlighten", "type": "normal"},
+    "1 Added Chaos Damage": {"base": "Added Chaos Damage", "type": "normal"},
+    "1 Vaal Gems": {"base":"Vaal", "type": "normal"},
+    "9 Other Gems": {"type": "low"}
 }

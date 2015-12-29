@@ -24,7 +24,7 @@ Purpose: Create an item filter based on config files
 Note: Requires Python 3.4.x
 """
 
-desc = "template"
+desc = "General Rares"
 
 # Text settings for various categories
 settings = {
@@ -48,5 +48,5 @@ settings = {
 items = {
     "01 regal jewellery": {"class": "Rings\" \"Amulets\" \"Belts", "type": "regal"},
     "02 chaos jewellery": {"class": "Rings\" \"Amulets\" \"Belts", "type": "chaos"},
-    "99 Other rares": {"type": "normal"}
+    "9 Other rares": {"type": "normal"}
 }

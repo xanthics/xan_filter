@@ -41,9 +41,9 @@ settings = {
 
 # Base type : settings pair
 items = {
-    "01 Talisman": {"base": "Talisman", "type": "high"},
-    "02 6L": {"other": ["LinkedSockets 6"], "type": "very high"},
-    "03 5L": {"other": ["LinkedSockets 5"], "type": "high"},
-    "04 6S": {"other": ["Sockets 6", "PlayAlertSound 2 100"], "type": "high"},
-    "05 Tabula Exception": {"base": "Simple Robe", "other": ["Rarity Unique", "SocketGroup WWWWWW"], "type": "high"},
+    "01 6L": {"other": ["LinkedSockets 6"], "type": "very high"},
+    "02 5L": {"other": ["LinkedSockets 5"], "type": "high"},
+    "03 6S": {"other": ["Sockets 6", "PlayAlertSound 2 100"], "type": "high"},
+    "1 Talisman": {"base": "Talisman", "type": "high"},
+    "1 Tabula Exception": {"base": "Simple Robe", "other": ["Rarity Unique", "SocketGroup WWWWWW"], "type": "high"},
 }

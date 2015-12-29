@@ -38,8 +38,6 @@ import flask
 import rares
 
 def gen_list(obj):
-    settings = {}
-    # invert settings so we can group items
     b = ""
 
     # gen our string
@@ -87,9 +85,6 @@ def main():
         # divination cards
         f.write(gen_list(divination))
 
-        # chrome vendor items
-        f.write(gen_list(chroma))
-
         # Flasks
         f.write(gen_list(flask))
 
@@ -101,6 +96,9 @@ def main():
 
         # Always show these items
         f.write(gen_list(show))
+
+        # chrome vendor items
+        f.write(gen_list(chroma))
 
         # Default for all other items
         f.write("Hide\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
