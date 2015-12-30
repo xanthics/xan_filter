@@ -30,10 +30,10 @@ desc = "gems"
 settings = {
     "very high": ["Class \"Gems\"",
                   "SetBorderColor 27 162 155",
-                  "SetFontSize 45"],
+                  "SetFontSize 35"],
     "high": ["Class \"Gems\"",
              "SetBorderColor 27 162 155",
-             "SetFontSize 35"],
+             "SetFontSize 30"],
     "normal": ["Class \"Gems\"",
                "SetBorderColor 27 162 155"],
     "low": ["Class \"Gems\"",
