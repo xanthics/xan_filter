@@ -36,6 +36,7 @@ settings = {
     "normal": ["SetBorderColor 0 255 0",
                "SetFontSize 28"],
     "low": ["SetFontSize 20"],
+    "ignore": [""],
     "hide": [""]
 }
 

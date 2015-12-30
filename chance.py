@@ -48,6 +48,7 @@ settings = {
             "SetBackgroundColor 0 0 0 200",
             "SetBorderColor 175 96 37 150",
             "SetTextColor 200 200 200"],
+    "ignore": [""],
     "hide": [""]
 }
 

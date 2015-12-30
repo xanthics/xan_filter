@@ -37,8 +37,9 @@ settings = {
     "normal": ["Class \"Gems\"",
                "SetBorderColor 27 162 155"],
     "low": ["Class \"Gems\"",
-            "SetFontSize 18",
+            "SetFontSize 24",
             "SetBackgroundColor 0 0 0 150"],
+    "ignore": [""],
     "hide": ["Class \"Gems\""]
 }
 
@@ -47,7 +48,7 @@ items = {
     "01 Quality Gem High": {"other": ["Quality >= 10"], "type": "very high"},
     "02 Quality Gem": {"other": ["Quality >= 1"], "type": "high"},
     "1 Portal": {"base": "Portal", "type": "normal"},
-    "1 Detonate Mines": {"base": "Detonate Mines", "type": "normal"},
+    "1 Detonate Mines": {"base": "Detonate Mines", "type": "ignore"},
     "1 Empower": {"base": "Empower", "type": "normal"},
     "1 Enhance": {"base": "Enhance", "type": "normal"},
     "1 Enlighten": {"base": "Enlighten", "type": "normal"},

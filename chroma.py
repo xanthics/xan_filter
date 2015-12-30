@@ -36,6 +36,7 @@ settings = {
     "low": ["SocketGroup RGB",
             "SetBorderColor 27 162 155",
             "SetFontSize 20"],
+    "ignore": [""],
     "hide": ["SocketGroup RGB"]
 }
 

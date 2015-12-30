@@ -36,6 +36,7 @@ settings = {
     "normal": ["SetBorderColor 0 255 0",
                "SetFontSize 28"],
     "low": ["SetFontSize 20"],
+    "ignore": [""],
     "hide": [""]
 }
 
@@ -44,6 +45,8 @@ items = {
     "01 6L": {"other": ["LinkedSockets 6"], "type": "very high"},
     "02 5L": {"other": ["LinkedSockets 5"], "type": "high"},
     "03 6S": {"other": ["Sockets 6", "PlayAlertSound 2 100"], "type": "high"},
-    "1 Talisman": {"base": "Talisman", "type": "high"},
+    "10 Talisman": {'other': ["Rarity >= Rare"], "base": "Talisman", "type": "high"},
+    "11 Talisman": {'other': ["ItemLevel >= 70"], "base": "Talisman", "type": "high"},
+    "12 Talisman": {"base": "Talisman", "type": "low"},
     "1 Tabula Exception": {"base": "Simple Robe", "other": ["Rarity Unique", "SocketGroup WWWWWW"], "type": "high"},
 }

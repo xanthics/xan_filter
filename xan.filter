@@ -26,11 +26,24 @@ Show
 	SetBorderColor 0 255 75
 	SetFontSize 37
 
-#1 Talisman - Show first
+#10 Talisman - Show first
 Show
 	BaseType "Talisman"
+	Rarity >= Rare
 	SetBorderColor 0 255 75
 	SetFontSize 37
+
+#11 Talisman - Show first
+Show
+	BaseType "Talisman"
+	ItemLevel >= 70
+	SetBorderColor 0 255 75
+	SetFontSize 37
+
+#12 Talisman - Show first
+Show
+	BaseType "Talisman"
+	SetFontSize 20
 
 #0 Albino Rhoa Feather - Currency
 Show
@@ -46,7 +59,7 @@ Show
 	BaseType "Alteration Shard"
 	Class "Currency"
 	SetTextColor 170 158 130
-	SetBorderColor 170 158 130 0
+	SetBorderColor 170 158 130 200
 	SetBackgroundColor 0 0 0 255
 	SetFontSize 26
 
@@ -55,7 +68,7 @@ Show
 	BaseType "Armourer's Scrap"
 	Class "Currency"
 	SetTextColor 170 158 130
-	SetBorderColor 170 158 130 0
+	SetBorderColor 170 158 130 200
 	SetBackgroundColor 0 0 0 255
 	SetFontSize 26
 
@@ -64,7 +77,7 @@ Show
 	BaseType "Blacksmith's Whetstone"
 	Class "Currency"
 	SetTextColor 170 158 130
-	SetBorderColor 170 158 130 0
+	SetBorderColor 170 158 130 200
 	SetBackgroundColor 0 0 0 255
 	SetFontSize 26
 
@@ -82,7 +95,7 @@ Show
 	BaseType "Cartographer's Chisel"
 	Class "Currency"
 	SetTextColor 170 158 130
-	SetBorderColor 170 158 130 0
+	SetBorderColor 170 158 130
 	SetBackgroundColor 0 0 0 255
 	PlayAlertSound 5 75
 
@@ -100,7 +113,7 @@ Show
 	BaseType "Chromatic Orb"
 	Class "Currency"
 	SetTextColor 170 158 130
-	SetBorderColor 170 158 130 0
+	SetBorderColor 170 158 130
 	SetBackgroundColor 0 0 0 255
 	PlayAlertSound 5 75
 
@@ -136,7 +149,7 @@ Show
 	BaseType "Glassblower's Bauble"
 	Class "Currency"
 	SetTextColor 170 158 130
-	SetBorderColor 170 158 130 0
+	SetBorderColor 170 158 130
 	SetBackgroundColor 0 0 0 255
 	PlayAlertSound 5 75
 
@@ -145,7 +158,7 @@ Show
 	BaseType "Jeweller's Orb"
 	Class "Currency"
 	SetTextColor 170 158 130
-	SetBorderColor 170 158 130 0
+	SetBorderColor 170 158 130
 	SetBackgroundColor 0 0 0 255
 	PlayAlertSound 5 75
 
@@ -163,7 +176,7 @@ Show
 	BaseType "Orb of Alchemy"
 	Class "Currency"
 	SetTextColor 170 158 130
-	SetBorderColor 170 158 130 0
+	SetBorderColor 170 158 130
 	SetBackgroundColor 0 0 0 255
 	PlayAlertSound 5 75
 
@@ -172,16 +185,25 @@ Show
 	BaseType "Orb of Alteration"
 	Class "Currency"
 	SetTextColor 170 158 130
-	SetBorderColor 170 158 130 0
+	SetBorderColor 170 158 130
 	SetBackgroundColor 0 0 0 255
 	PlayAlertSound 5 75
+
+#0 Orb of Augmentation - Currency
+Show
+	BaseType "Orb of Augmentation"
+	Class "Currency"
+	SetTextColor 170 158 130
+	SetBorderColor 170 158 130 200
+	SetBackgroundColor 0 0 0 255
+	SetFontSize 26
 
 #0 Orb of Chance - Currency
 Show
 	BaseType "Orb of Chance"
 	Class "Currency"
 	SetTextColor 170 158 130
-	SetBorderColor 170 158 130 0
+	SetBorderColor 170 158 130
 	SetBackgroundColor 0 0 0 255
 	PlayAlertSound 5 75
 
@@ -217,16 +239,16 @@ Show
 	BaseType "Orb of Transmutation"
 	Class "Currency"
 	SetTextColor 170 158 130
-	SetBorderColor 170 158 130 0
+	SetBorderColor 170 158 130 200
 	SetBackgroundColor 0 0 0 255
-	PlayAlertSound 5 75
+	SetFontSize 26
 
 #0 Portal Scroll - Currency
 Show
 	BaseType "Portal Scroll"
 	Class "Currency"
 	SetTextColor 170 158 130
-	SetBorderColor 170 158 130 0
+	SetBorderColor 170 158 130 200
 	SetBackgroundColor 0 0 0 255
 	SetFontSize 26
 
@@ -244,7 +266,7 @@ Show
 	BaseType "Scroll of Wisdom"
 	Class "Currency"
 	SetTextColor 170 158 130
-	SetBorderColor 170 158 130 0
+	SetBorderColor 170 158 130 200
 	SetBackgroundColor 0 0 0 255
 	SetFontSize 26
 
@@ -267,7 +289,7 @@ Show
 	Class "Currency"
 	Class "Currency"
 	SetTextColor 170 158 130
-	SetBorderColor 170 158 130 0
+	SetBorderColor 170 158 130
 	SetBackgroundColor 0 0 0 255
 	PlayAlertSound 5 75
 
@@ -288,12 +310,6 @@ Show
 #1 Added Chaos Damage - gems
 Show
 	BaseType "Added Chaos Damage"
-	Class "Gems"
-	SetBorderColor 27 162 155
-
-#1 Detonate Mines - gems
-Show
-	BaseType "Detonate Mines"
 	Class "Gems"
 	SetBorderColor 27 162 155
 
@@ -330,7 +346,7 @@ Show
 #9 Other Gems - gems
 Show
 	Class "Gems"
-	SetFontSize 18
+	SetFontSize 24
 	SetBackgroundColor 0 0 0 150
 
 #0 Ancient Greaves - Unique
@@ -852,7 +868,7 @@ Show
 #0 Qual Flask - Flasks
 Show
 	BaseType "Flask"
-	Quality >= 1
+	Quality >= 5
 	SetBorderColor 0 255 0
 	SetFontSize 32
 
@@ -923,6 +939,12 @@ Show
 	ItemLevel <= 60
 	SetFontSize 28
 
+#1 Jade Flask - Flasks
+Show
+	BaseType "Jade Flask"
+	Rarity Normal
+	SetFontSize 28
+
 #1 Large Flask - Flasks
 Show
 	Class "Life Flasks" "Mana Flasks"
@@ -988,11 +1010,10 @@ Show
 	Rarity Normal
 	SetFontSize 28
 
-#7 Jade Flask - Flasks
-Hide
-	BaseType "Jade Flask"
-	Rarity Normal
-	
+#9 Other Flasks - Flasks
+Show
+	BaseType "Flask"
+	SetFontSize 28
 
 #0 Kaom's Heart - Chance Base
 Show
