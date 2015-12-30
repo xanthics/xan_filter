@@ -33,7 +33,7 @@ settings = {
                   "SetFontSize 45"],
     "high": ["Class \"Gems\"",
              "SetBorderColor 27 162 155",
-             "SetFontSize 37"],
+             "SetFontSize 35"],
     "normal": ["Class \"Gems\"",
                "SetBorderColor 27 162 155"],
     "low": ["Class \"Gems\"",

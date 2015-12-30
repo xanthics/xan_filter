@@ -47,7 +47,7 @@ settings = {
             "SetTextColor 170 158 130",
             "SetBorderColor 170 158 130 200",
             "SetBackgroundColor 0 0 0 255",
-            "SetFontSize 26"],
+            "SetFontSize 30"],
     "ignore": [""],
     "hide": ["Class \"Currency\""]
 }
