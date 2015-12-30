@@ -47,7 +47,11 @@ settings = {
 
 # Base type : settings pair
 items = {
-    "01 regal jewellery": {"class": "Rings\" \"Amulets\" \"Belts", "type": "regal"},
-    "02 chaos jewellery": {"class": "Rings\" \"Amulets\" \"Belts", "type": "chaos"},
+    "01 regal amulet": {"class": "Amulets", "type": "regal"},
+    "01 regal ring": {"class": "Rings", "type": "regal"},
+    "01 regal belt": {"class": "Belts", "type": "regal"},
+    "02 chaos amulet": {"class": "Amulets", "type": "chaos"},
+    "02 chaos ring": {"class": "Rings", "type": "chaos"},
+    "02 chaos belt": {"class": "Belts", "type": "chaos"},
     "9 Other rares": {"type": "normal"}
 }

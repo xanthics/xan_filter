@@ -38,7 +38,7 @@ settings = {
                "SetBorderColor 27 162 155"],
     "low": ["Class \"Gems\"",
             "SetFontSize 24",
-            "SetBackgroundColor 0 0 0 150"],
+            "SetBackgroundColor 0 0 0 200"],
     "ignore": [""],
     "hide": ["Class \"Gems\""]
 }
