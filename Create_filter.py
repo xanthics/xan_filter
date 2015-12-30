@@ -64,46 +64,52 @@ def gen_list(obj):
 
 # main function for creating a filter
 def main():
-    with open("xan.filter", "w") as f:
-        #Show ignoring other catagories
-        f.write(gen_list(special))
+    buffer = ""
+    #Show ignoring other catagories
+    buffer += gen_list(special)
 
-        # Always hide these items
-        f.write(gen_list(hide))
+    # Always hide these items
+    buffer += gen_list(hide)
 
-        # Currency
-        f.write(gen_list(currency))
+    # Currency
+    buffer += gen_list(currency)
 
-        # Gems
-        f.write(gen_list(gems))
+    # Gems
+    buffer += gen_list(gems)
 
-        # uniques
-        f.write(gen_list(uniques))
+    # uniques
+    buffer += gen_list(uniques)
 
-        # maps
-        f.write(gen_list(maps))
+    # maps
+    buffer += gen_list(maps)
 
-        # divination cards
-        f.write(gen_list(divination))
+    # divination cards
+    buffer += gen_list(divination)
 
-        # Flasks
-        f.write(gen_list(flask))
+    # Flasks
+    buffer += gen_list(flask)
 
-        # Chance bases
-        f.write(gen_list(chance))
+    # Chance bases
+    buffer += gen_list(chance)
 
-        # rares
-        f.write(gen_list(rares))
+    # rares
+    buffer += gen_list(rares)
 
-        # Always show these items
-        f.write(gen_list(show))
+    # Always show these items
+    buffer += gen_list(show)
 
-        # chrome vendor items
-        f.write(gen_list(chroma))
+    # chrome vendor items
+    buffer += gen_list(chroma)
 
+    with open("xan.show.filter", "w") as f:
+        f.write(buffer)
+        # Default for all other items
+        f.write("Show\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
+
+    with open("xan.hide.filter", "w") as f:
+        f.write(buffer)
         # Default for all other items
         f.write("Hide\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
-        # f.write("Show\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
 
 
 if __name__ == "__main__":
