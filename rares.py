@@ -41,6 +41,7 @@ settings = {
     "normal": ["Rarity Rare",
                "SetFontSize 30"],
     "low": ["Rarity Rare"],
+    "ignore": [""],
     "hide": ["Rarity Rare"]
 }
 

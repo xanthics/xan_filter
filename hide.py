@@ -32,6 +32,7 @@ settings = {
     "high": [],
     "normal": [],
     "low": [],
+    "ignore": [""],
     "hide": []
 }
 

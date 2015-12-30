@@ -37,8 +37,9 @@ settings = {
              "PlayAlertSound 3 175"],
     "normal": ["Rarity Unique"],
     "low": ["Rarity Unique",
-            "SetFontSize 18",
+            "SetFontSize 24",
             "SetBackgroundColor 0 0 0 100"],
+    "ignore": [""],
     "hide": ["Rarity Unique"]
 }
 

@@ -33,14 +33,16 @@ settings = {
              "SetFontSize 32"],
     "normal": ["SetFontSize 28"],
     "low": [""],
+    "ignore": [""],
     "hide": [""]
 }
 
 # Base type : settings pair
 items = {
-    "0 Qual Flask": {"base": "Flask", "other": ["Quality >= 1"], "type": "high"},
+    "0 Qual Flask": {"base": "Flask", "other": ["Quality >= 5"], "type": "high"},
     "1 Diamond Flask": {"base": "Diamond Flask", "other": ["Rarity Normal"], "type": "normal"},
     "1 Granite Flask": {"base": "Granite Flask", "other": ["Rarity Normal"], "type": "normal"},
+    "1 Jade Flask": {"base": "Jade Flask", "other": ["Rarity Normal"], "type": "normal"},
     "1 Topaz Flask": {"base": "Topaz Flask", "other": ["Rarity Normal"], "type": "normal"},
     "1 Sapphire Flask": {"base": "Sapphire Flask", "other": ["Rarity Normal"], "type": "normal"},
     "1 Ruby Flask": {"base": "Ruby Flask", "other": ["Rarity Normal"], "type": "normal"},
@@ -59,5 +61,5 @@ items = {
     "1 Sanctified Flask": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 50", "ItemLevel <= 60"], "type": "normal"},
     "1 Divine Flask": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 60", "ItemLevel <= 65"], "type": "normal"},
     "1 Eternal Flask": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 65", "ItemLevel <= 70"], "type": "normal"},
-    "7 Jade Flask": {"base": "Jade Flask", "other": ["Rarity Normal"], "type": "hide"}
+    "9 Other Flasks": {"base": "Flask", "type": "normal"}
 }

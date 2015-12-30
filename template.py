@@ -29,13 +29,14 @@ desc = "template"
 # Text settings for various categories
 # This is where you would define general settings for a category, such as PlayAlertSound.
 # Each config should be its own array element.  Parsing will handle tabs/etc.
-# hide will set the item to Hide, everything else is Show
+# ignore and hide have special meaning(see comment) everything else is local to file
 settings = {
     "very high": [""],
     "high": [""],
     "normal": [""],
     "low": [""],
-    "hide": [""]
+    "ignore": [""],  # will have no styling applied and will use the default set at the end
+    "hide": [""]  # Will be explicitly hidden with applied styling
 }
 
 # Base type : settings pair

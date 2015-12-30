@@ -43,20 +43,21 @@ def gen_list(obj):
     # gen our string
     for i in sorted(obj.items):
         s = obj.items[i]
-        b += "#{} - {}\n".format(i, obj.desc)
-        if s['type'] == "hide":
-            b += "Hide"
-        else:
-            b += "Show"
-        if 'base' in s:
-            b += "\n\tBaseType \"{}\"".format(s['base'])
-        if 'class' in s:
-            b += "\n\tClass \"{}\"".format(s['class'])
-        if 'other' in s:
-            b += "\n\t{}".format("\n\t".join(s['other']))
-        if obj.settings[s['type']]:
-            b += "\n\t{}".format("\n\t".join(obj.settings[s['type']]))
-        b += "\n\n"
+        if s['type'] != "ignore":
+            b += "#{} - {}\n".format(i, obj.desc)
+            if s['type'] == "hide":
+                b += "Hide"
+            else:
+                b += "Show"
+            if 'base' in s:
+                b += "\n\tBaseType \"{}\"".format(s['base'])
+            if 'class' in s:
+                b += "\n\tClass \"{}\"".format(s['class'])
+            if 'other' in s:
+                b += "\n\t{}".format("\n\t".join(s['other']))
+            if obj.settings[s['type']]:
+                b += "\n\t{}".format("\n\t".join(obj.settings[s['type']]))
+            b += "\n\n"
 
     return b
 

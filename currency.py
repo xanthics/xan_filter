@@ -40,14 +40,15 @@ settings = {
              "PlayAlertSound 5 175"],
     "normal": ["Class \"Currency\"",
                "SetTextColor 170 158 130",
-               "SetBorderColor 170 158 130 0",
+               "SetBorderColor 170 158 130",
                "SetBackgroundColor 0 0 0 255",
                "PlayAlertSound 5 75"],
     "low": ["Class \"Currency\"",
             "SetTextColor 170 158 130",
-            "SetBorderColor 170 158 130 0",
+            "SetBorderColor 170 158 130 200",
             "SetBackgroundColor 0 0 0 255",
             "SetFontSize 26"],
+    "ignore": [""],
     "hide": ["Class \"Currency\""]
 }
 
@@ -72,7 +73,8 @@ items = {
     "0 Jeweller's Orb": {"base": "Jeweller's Orb", "type": "normal"},
     "0 Chromatic Orb": {"base": "Chromatic Orb", "type": "normal"},
     "0 Orb of Alteration": {"base": "Orb of Alteration", "type": "normal"},
-    "0 Orb of Transmutation": {"base": "Orb of Transmutation", "type": "normal"},
+    "0 Orb of Augmentation": {"base": "Orb of Augmentation", "type": "low"},
+    "0 Orb of Transmutation": {"base": "Orb of Transmutation", "type": "low"},
     "0 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", "type": "low"},
     "0 Armourer's Scrap": {"base": "Armourer's Scrap", "type": "low"},
     "0 Scroll of Wisdom": {"base": "Scroll of Wisdom", "type": "low"},

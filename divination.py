@@ -37,6 +37,7 @@ settings = {
                "SetBorderColor 0 186 254",
                "PlayAlertSound 6 75"],
     "low": ["Class \"Divination Card\""],
+    "ignore": [""],
     "hide": ["Class \"Divination Card\""]
 }
 

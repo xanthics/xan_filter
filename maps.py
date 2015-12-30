@@ -37,6 +37,7 @@ settings = {
              "SetFontSize 37"],
     "normal": ["Class \"Maps\""],
     "low": ["Class \"Maps\""],
+    "ignore": [""],
     "hide": ["Class \"Maps\""]
 }
 
