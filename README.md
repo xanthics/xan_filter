@@ -2,6 +2,10 @@
 
 This is a simple script to generate a filter file for Path of Exile using the included config files.
 
+[Hide Download](https://raw.githubusercontent.com/xanthics/poe_filter/master/xan.hide.filter)
+
+[Show Download](https://raw.githubusercontent.com/xanthics/poe_filter/master/xan.show.filter)
+
 Usage
 =====
 Run Create_filter with necessary config files to generate xan.filter
