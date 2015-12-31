@@ -39,7 +39,7 @@ settings = {
     "very high": ["Rarity Rare"],
     "high": ["Rarity Rare"],
     "normal": ["Rarity Rare",
-               "SetFontSize 30"],
+               "SetFontSize 28"],
     "low": ["Rarity Rare"],
     "ignore": [""],
     "hide": ["Rarity Rare"]
@@ -47,11 +47,5 @@ settings = {
 
 # Base type : settings pair
 items = {
-    "01 regal amulet": {"class": "Amulets", "type": "regal"},
-    "01 regal ring": {"class": "Rings", "type": "regal"},
-    "01 regal belt": {"class": "Belts", "type": "regal"},
-    "02 chaos amulet": {"class": "Amulets", "type": "chaos"},
-    "02 chaos ring": {"class": "Rings", "type": "chaos"},
-    "02 chaos belt": {"class": "Belts", "type": "chaos"},
     "9 Other rares": {"type": "normal"}
 }

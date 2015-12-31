@@ -30,12 +30,13 @@ import show
 import currency
 import gems
 import uniques
-import special
 import maps
 import divination
 import chroma
 import flask
 import rares
+import rare_highlight
+
 
 def gen_list(obj):
     b = ""
@@ -65,41 +66,19 @@ def gen_list(obj):
 # main function for creating a filter
 def main():
     buffer = ""
-    #Show ignoring other catagories
-    buffer += gen_list(special)
 
-    # Always hide these items
-    buffer += gen_list(hide)
-
-    # Currency
-    buffer += gen_list(currency)
-
-    # Gems
-    buffer += gen_list(gems)
-
-    # uniques
-    buffer += gen_list(uniques)
-
-    # maps
-    buffer += gen_list(maps)
-
-    # divination cards
-    buffer += gen_list(divination)
-
-    # Flasks
-    buffer += gen_list(flask)
-
-    # Chance bases
-    buffer += gen_list(chance)
-
-    # rares
-    buffer += gen_list(rares)
-
-    # Always show these items
-    buffer += gen_list(show)
-
-    # chrome vendor items
-    buffer += gen_list(chroma)
+    buffer += gen_list(show)  # Always show these items
+    buffer += gen_list(hide)  # Always hide these items
+    buffer += gen_list(currency)  # Currency
+    buffer += gen_list(gems)  # Gems
+    buffer += gen_list(uniques)  # uniques
+    buffer += gen_list(maps)  # maps
+    buffer += gen_list(divination)  # divination cards
+    buffer += gen_list(flask)  # Flasks
+    buffer += gen_list(rare_highlight)  # rares
+    buffer += gen_list(rares)  # rares
+    buffer += gen_list(chroma)  # chrome vendor items
+    buffer += gen_list(chance)  # Chance bases
 
     with open("xan.show.filter", "w") as f:
         f.write(buffer)
