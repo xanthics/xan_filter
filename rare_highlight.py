@@ -104,6 +104,12 @@ items = {
     "0 Kite Shield": {"base": "Kite Shield", "other": ["DropLevel >= 51"], "class": "Shields", "type": "high"},
     "0 Spiked Shield": {"base": "Spiked Shield", "other": ["DropLevel >= 55"], "class": "Shields", "type": "high"},
 
+    "0 Jewel": {"class": "Jewel", "type": "high"},
+
+    "0 Wand": {"class": "Wand", "type": "high"},
+
+    "0 Quivers": {"class": "Quivers", "type": "high"},
+
     "01 regal amulet": {"class": "Amulets", "type": "regal"},
     "01 regal ring": {"class": "Rings", "type": "regal"},
     "01 regal belt": {"class": "Belts", "type": "regal"},
