@@ -54,5 +54,5 @@ items = {
     "0 Microtransactions": {"class": "Microtransactions","type": "low"},
     "0 Quest": {"class": "Quest", "type": "normal"},
     "0 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "high"},
-    "0 Jewel": {"class": "Jewel", "type": "normal"},
+    "0 Jewel": {"class": "Jewel", "other": ["Rarity <= Magic"], "type": "normal"},
 }

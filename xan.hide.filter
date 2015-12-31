@@ -13,6 +13,7 @@ Show
 #0 Jewel - Always show
 Show
 	Class "Jewel"
+	Rarity <= Magic
 	SetBorderColor 0 255 0
 	SetFontSize 28
 
@@ -500,7 +501,7 @@ Show
 	Class "Maps"
 	SetBorderColor 150 0 0
 	SetFontSize 42
-	PlayAlertSound 6 250
+	PlayAlertSound 6 125
 
 #02 Maps <= 73 - maps
 Show
@@ -510,7 +511,7 @@ Show
 #03 Other maps - maps
 Show
 	Class "Maps"
-	PlayAlertSound 2 200
+	PlayAlertSound 2 100
 	SetFontSize 37
 
 #04 Map Fragments - maps
@@ -931,11 +932,23 @@ Show
 	SetBorderColor 0 255 0
 	SetFontSize 32
 
+#1 Amethyst Flask - Flasks
+Show
+	BaseType "Amethyst Flask"
+	Rarity Normal
+	SetFontSize 28
+
 #1 Colossal Flask - Flasks
 Show
 	Class "Life Flasks" "Mana Flasks"
 	DropLevel = 30
 	ItemLevel <= 36
+	SetFontSize 28
+
+#1 Diamond Flask - Flasks
+Show
+	BaseType "Diamond Flask"
+	Rarity Normal
 	SetFontSize 28
 
 #1 Divine Flask - Flasks
@@ -966,6 +979,12 @@ Show
 	ItemLevel <= 24
 	SetFontSize 28
 
+#1 Granite Flask - Flasks
+Show
+	BaseType "Granite Flask"
+	Rarity Normal
+	SetFontSize 28
+
 #1 Greater Flask - Flasks
 Show
 	Class "Life Flasks" "Mana Flasks"
@@ -978,6 +997,12 @@ Show
 	Class "Life Flasks" "Mana Flasks"
 	DropLevel = 42
 	ItemLevel <= 60
+	SetFontSize 28
+
+#1 Jade Flask - Flasks
+Show
+	BaseType "Jade Flask"
+	Rarity Normal
 	SetFontSize 28
 
 #1 Large Flask - Flasks
@@ -994,6 +1019,12 @@ Show
 	ItemLevel <= 6
 	SetFontSize 28
 
+#1 Ruby Flask - Flasks
+Show
+	BaseType "Ruby Flask"
+	Rarity Normal
+	SetFontSize 28
+
 #1 Sacred Flask - Flasks
 Show
 	Class "Life Flasks" "Mana Flasks"
@@ -1008,6 +1039,12 @@ Show
 	ItemLevel <= 60
 	SetFontSize 28
 
+#1 Sapphire Flask - Flasks
+Show
+	BaseType "Sapphire Flask"
+	Rarity Normal
+	SetFontSize 28
+
 #1 Small Flasks - Flasks
 Show
 	Class "Life Flasks" "Mana Flasks"
@@ -1015,10 +1052,27 @@ Show
 	ItemLevel <= 3
 	SetFontSize 28
 
+#1 Topaz Flask - Flasks
+Show
+	BaseType "Topaz Flask"
+	Rarity Normal
+	SetFontSize 28
+
 #11 Quicksilver Flask <= 25 - Flasks
 Show
 	BaseType "Quicksilver Flask"
 	ItemLevel <= 25
+	SetFontSize 28
+
+#12 Quicksilver Flask - Flasks
+Show
+	BaseType "Quicksilver Flask"
+	Rarity Normal
+	SetFontSize 28
+
+#9 Other Flasks - Flasks
+Show
+	BaseType "Flask"
 	SetFontSize 28
 
 #0 Ambusher - Always show
@@ -1206,6 +1260,13 @@ Show
 	SetBorderColor 255 255 119
 	SetFontSize 34
 
+#0 Jewel - Always show
+Show
+	Class "Jewel"
+	Rarity Rare
+	SetBorderColor 255 255 119
+	SetFontSize 34
+
 #0 Jewelled Foil - Always show
 Show
 	BaseType "Jewelled Foil"
@@ -1251,6 +1312,13 @@ Show
 Show
 	BaseType "Piledriver"
 	Class "Two Hand Maces"
+	Rarity Rare
+	SetBorderColor 255 255 119
+	SetFontSize 34
+
+#0 Quivers - Always show
+Show
+	Class "Quivers"
 	Rarity Rare
 	SetBorderColor 255 255 119
 	SetFontSize 34
@@ -1359,6 +1427,13 @@ Show
 Show
 	BaseType "Void Sceptre"
 	Class "Sceptres"
+	Rarity Rare
+	SetBorderColor 255 255 119
+	SetFontSize 34
+
+#0 Wand - Always show
+Show
+	Class "Wand"
 	Rarity Rare
 	SetBorderColor 255 255 119
 	SetFontSize 34
