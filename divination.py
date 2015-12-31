@@ -89,7 +89,7 @@ items = {
     "0 The Dapper Prodigy": {"base": "The Dapper Prodigy", "type": "high"},
     "0 The Warlord": {"base": "The Warlord", "type": "high"},
     "0 Rats": {"base": "Rats", "type": "high"},
-    "0 Tranquility": {"base": "Tranquility", "type": "high"},
+    "0 Tranquillity": {"base": "Tranquillity", "type": "high"},
     "7 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "type": "hide"},
     "7 The Carrion Crow": {"base": "The Carrion Crow", "type": "hide"},
     "7 The King's Blade": {"base": "The King's Blade", "type": "hide"},
