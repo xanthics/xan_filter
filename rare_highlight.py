@@ -108,7 +108,8 @@ items = {
 
     "0 Wand": {"class": "Wand", "type": "high"},
 
-    "0 Quivers": {"class": "Quivers", "type": "high"},
+    "0 Spike-Point Arrow Quiver": {"base": "Spike-Point Arrow Quiver", "class": "Quivers", "type": "high"},
+    "0 Broadhead Arrow Quiver": {"base": "Broadhead Arrow Quiver", "class": "Quivers", "type": "high"},
 
     "01 regal amulet": {"class": "Amulets", "type": "regal"},
     "01 regal ring": {"class": "Rings", "type": "regal"},
