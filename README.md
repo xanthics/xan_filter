@@ -16,11 +16,11 @@ See template.py
 
 Hide all
 ========
-![Hide unspecified items](images/hide.png "Hide")
+![Hide unspecified items](images/hide.png?raw=true "Hide")
 
 Show all
 ========
-![Show all items](images/show.png "Show")
+![Show all items](images/show.png?raw=true "Show")
 
 
 To-Do
