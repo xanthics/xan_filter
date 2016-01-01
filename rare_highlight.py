@@ -111,12 +111,17 @@ items = {
     "0 Spike-Point Arrow Quiver": {"base": "Spike-Point Arrow Quiver", "class": "Quivers", "type": "high"},
     "0 Broadhead Arrow Quiver": {"base": "Broadhead Arrow Quiver", "class": "Quivers", "type": "high"},
 
+    "1 Quiver": {"class": "Quivers", "type": "normal"},
+
     "01 regal amulet": {"class": "Amulets", "type": "regal"},
     "01 regal ring": {"class": "Rings", "type": "regal"},
     "01 regal belt": {"class": "Belts", "type": "regal"},
     "02 chaos amulet": {"class": "Amulets", "type": "chaos"},
     "02 chaos ring": {"class": "Rings", "type": "chaos"},
     "02 chaos belt": {"class": "Belts", "type": "chaos"},
+    "03 amulet": {"class": "Amulets", "type": "high"},
+    "03 ring": {"class": "Rings", "type": "high"},
+    "03 belt": {"class": "Belts", "type": "high"},
 
     "7 5": {"other": ["DropLevel <= 5", "ItemLevel >= 15"], "type": "low"},
     "7 10": {"other": ["DropLevel <= 10", "ItemLevel >= 20"], "type": "low"},
