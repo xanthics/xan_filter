@@ -79,6 +79,7 @@ def main():
     buffer += gen_list(rares)  # rares
     buffer += gen_list(chroma)  # chrome vendor items
 #    buffer += gen_list(chance)  # Chance bases
+    buffer += "Show\n\tItemLevel <= 5\n\tSetFontSize 28\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100"
 
     with open("xan.show.filter", "w") as f:
         f.write(buffer)
