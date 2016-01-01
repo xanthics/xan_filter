@@ -37,6 +37,8 @@ Expand uniques filtering
 
 Add config processor that created compact output
 
+Filtration compatibility
+
 No ETA: I work on this when I'm bored of releveling toons or farming.
 
 Thanks
