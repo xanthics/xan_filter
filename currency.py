@@ -68,7 +68,7 @@ items = {
     "0 Orb of Alchemy": {"base": "Orb of Alchemy", "type": "normal"},
     "0 Vaal Orb": {"base": "Vaal Orb", "type": "high"},
     "0 Cartographer's Chisel": {"base": "Cartographer's Chisel", "type": "normal"},
-    "0 Glassblower's Bauble": {"base": "Glassblower's Bauble", "type": "normal"},
+    "0 Glassblower's Bauble": {"base": "Glassblower's Bauble", "type": "low"},
     "0 Orb of Chance": {"base": "Orb of Chance", "type": "normal"},
     "0 Jeweller's Orb": {"base": "Jeweller's Orb", "type": "normal"},
     "0 Chromatic Orb": {"base": "Chromatic Orb", "type": "low"},

@@ -185,9 +185,9 @@ Show
 	BaseType "Glassblower's Bauble"
 	Class "Currency"
 	SetTextColor 170 158 130
-	SetBorderColor 170 158 130
+	SetBorderColor 170 158 130 200
 	SetBackgroundColor 0 0 0 255
-	PlayAlertSound 5 25
+	SetFontSize 30
 
 #0 Jeweller's Orb - Currency
 Show
@@ -1070,9 +1070,46 @@ Show
 	Rarity Normal
 	SetFontSize 28
 
-#9 Other Flasks - Flasks
+#2 Colossal Flask - Flasks
 Show
-	BaseType "Flask"
+	Class "Hybrid Flask"
+	DropLevel = 40
+	ItemLevel <= 50
+	SetFontSize 28
+
+#2 Hallowed Flask - Flasks
+Show
+	Class "Hybrid Flask"
+	DropLevel = 60
+	ItemLevel <= 70
+	SetFontSize 28
+
+#2 Sacred Flask - Flasks
+Show
+	Class "Hybrid Flask"
+	DropLevel = 50
+	ItemLevel <= 60
+	SetFontSize 28
+
+#2 Small Flask - Flasks
+Show
+	Class "Hybrid Flask"
+	DropLevel = 10
+	ItemLevel <= 20
+	SetFontSize 28
+
+#2 large Flask - Flasks
+Show
+	Class "Hybrid Flask"
+	DropLevel = 30
+	ItemLevel <= 40
+	SetFontSize 28
+
+#2 medium Flask - Flasks
+Show
+	Class "Hybrid Flask"
+	DropLevel = 20
+	ItemLevel <= 30
 	SetFontSize 28
 
 #0 Ambusher - Always show
@@ -1592,42 +1629,6 @@ Show
 	SocketGroup RGB
 	SetBorderColor 27 162 155
 	SetFontSize 20
-
-#0 Kaom's Heart - Chance Base
-Show
-	BaseType "Glorious Plate"
-	Rarity Normal
-	SetFontSize 28
-	SetBackgroundColor 0 0 0 200
-	SetBorderColor 175 96 37 150
-	SetTextColor 200 200 200
-
-#0 Shavronne's Wrappings - Chance Base
-Show
-	BaseType "Occultist's Vestment"
-	Rarity Normal
-	SetFontSize 28
-	SetBackgroundColor 0 0 0 200
-	SetBorderColor 175 96 37 150
-	SetTextColor 200 200 200
-
-#0 Skyforth - Chance Base
-Show
-	BaseType "Sorcerer Boots"
-	Rarity Normal
-	SetFontSize 28
-	SetBackgroundColor 0 0 0 200
-	SetBorderColor 175 96 37 150
-	SetTextColor 200 200 200
-
-#0 Void Battery - Chance Base
-Show
-	BaseType "Prophecy Wand"
-	Rarity Normal
-	SetFontSize 28
-	SetBackgroundColor 0 0 0 200
-	SetBorderColor 175 96 37 150
-	SetTextColor 200 200 200
 
 Hide
 	SetFontSize 18
