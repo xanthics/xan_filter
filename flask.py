@@ -28,9 +28,10 @@ desc = "Flasks"
 
 # Text settings for various categories
 settings = {
-    "very high": [""],
-    "high": ["SetBorderColor 0 255 0",
-             "SetFontSize 32"],
+    "very high": ["SetBorderColor 0 255 0",
+                  "SetFontSize 35"],
+    "high": ["SetBorderColor 0 150 0",
+             "SetFontSize 30"],
     "normal": ["SetFontSize 28"],
     "low": [""],
     "ignore": [""],
@@ -39,7 +40,8 @@ settings = {
 
 # Base type : settings pair
 items = {
-    "0 Qual Flask": {"base": "Flask", "other": ["Quality >= 5"], "type": "high"},
+    "01 Qual Flask": {"base": "Flask", "other": ["Quality >= 10"], "type": "very high"},
+    "02 Qual Flask": {"base": "Flask", "other": ["Quality >= 5"], "type": "high"},
     "1 Diamond Flask": {"base": "Diamond Flask", "other": ["Rarity Normal"], "type": "normal"},
     "1 Granite Flask": {"base": "Granite Flask", "other": ["Rarity Normal"], "type": "normal"},
     "1 Jade Flask": {"base": "Jade Flask", "other": ["Rarity Normal"], "type": "normal"},
@@ -49,7 +51,7 @@ items = {
     "11 Quicksilver Flask <= 25": {"base": "Quicksilver Flask", "other": ["ItemLevel <= 25"], "type": "normal"},
     "12 Quicksilver Flask": {"base": "Quicksilver Flask", "other": ["Rarity Normal"], "type": "normal"},
     "1 Amethyst Flask": {"base": "Amethyst Flask", "other": ["Rarity Normal"], "type": "normal"},
-    
+
     "1 Small Flasks": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 0", "ItemLevel <= 3"], "type": "normal"},
     "1 Medium Flasks": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 3", "ItemLevel <= 6"], "type": "normal"},
     "1 Large Flask": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 6", "ItemLevel <= 12"], "type": "normal"},
