@@ -2,9 +2,9 @@
 
 This is a simple script to generate a filter file for Path of Exile using the included config files.
 
-[Hide Download](xan.hide.filter)
+[Hide Download](xan.hide.filter?raw=true)
 
-[Show Download](xan.show.filter)
+[Show Download](xan.show.filter?raw=true)
 
 Usage
 =====
@@ -16,11 +16,11 @@ See template.py
 
 Hide all
 ========
-![Hide unspecified items](images/hide.png?raw=true "Hide")
+![Hide unspecified items](images/hide.png "Hide")
 
 Show all
 ========
-![Show all items](images/show.png?raw=true "Show")
+![Show all items](images/show.png "Show")
 
 
 To-Do
