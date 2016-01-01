@@ -35,8 +35,6 @@ Add "best of the zone" highlighting.
 
 Expand uniques filtering
 
-Add rare highlighting based on drop level/item level
-
 Add config processor that created compact output
 
 No ETA: I work on this when I'm bored of releveling toons or farming.
