@@ -78,7 +78,7 @@ def main():
     buffer += gen_list(rare_highlight)  # rares
     buffer += gen_list(rares)  # rares
     buffer += gen_list(chroma)  # chrome vendor items
-    buffer += gen_list(chance)  # Chance bases
+#    buffer += gen_list(chance)  # Chance bases
 
     with open("xan.show.filter", "w") as f:
         f.write(buffer)
