@@ -30,11 +30,11 @@ desc = "Divination Card"
 settings = {
     "very high": ["Class \"Divination Card\""],
     "high": ["Class \"Divination Card\"",
-             "SetBorderColor 175 96 37",
+             "SetBorderColor 30 144 255",
              "SetFontSize 40",
              "PlayAlertSound 6 175"],
     "normal": ["Class \"Divination Card\"",
-               "SetBorderColor 0 186 254",
+               "SetBorderColor 30 144 255",
                "PlayAlertSound 6 75"],
     "low": ["Class \"Divination Card\""],
     "ignore": [""],

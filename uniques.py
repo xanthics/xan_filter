@@ -29,7 +29,7 @@ desc = "Unique"
 # Text settings for various categories
 settings = {
     "very high": ["Rarity Unique",
-                  "SetBorderColor 0 255 150",
+                  "SetBorderColor 175 96 37",
                   "SetFontSize 45",
                   "PlayAlertSound 3 300"],
     "high": ["Rarity Unique",

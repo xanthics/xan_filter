@@ -29,7 +29,7 @@ desc = "Currency"
 # Text settings for various categories
 settings = {
     "very high": ["Class \"Currency\"",
-                  "SetBorderColor 0 255 150",
+                  "SetBorderColor 170 158 130",
                   "SetBackgroundColor 0 0 0 255",
                   "SetFontSize 45",
                   "PlayAlertSound 3 300"],

@@ -31,10 +31,10 @@ settings = {
     "very high": ["SocketGroup RGB"],
     "high": ["SocketGroup RGB"],
     "normal": ["SocketGroup RGB",
-               "SetBorderColor 27 162 155",
+               "SetBorderColor 0 191 0",
                "SetFontSize 28"],
     "low": ["SocketGroup RGB",
-            "SetBorderColor 27 162 155",
+            "SetBorderColor 0 191 0",
             "SetFontSize 20"],
     "ignore": [""],
     "hide": ["SocketGroup RGB"]
