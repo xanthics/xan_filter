@@ -36,6 +36,7 @@ import chroma
 import flask
 import rares
 import rare_highlight
+import crafting_bases
 
 
 def gen_list(obj):
@@ -78,7 +79,8 @@ def main():
     buffer += gen_list(rare_highlight)  # rares
     buffer += gen_list(rares)  # rares
     buffer += gen_list(chroma)  # chrome vendor items
-#    buffer += gen_list(chance)  # Chance bases
+    buffer += gen_list(chance)  # Chance bases
+    buffer += gen_list(crafting_bases)  # Crafting bases
     buffer += "Show\n\tItemLevel <= 5\n\tSetFontSize 28\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100\n\n"
     buffer += "Show\n\tItemLevel <= 25\n\tRarity > Normal\n\tSetFontSize 28\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100\n\n"
 
