@@ -37,6 +37,7 @@ import flask
 import rares
 import rare_highlight
 import crafting_bases
+import recipe_item
 
 
 def gen_list(obj):
@@ -73,6 +74,7 @@ def main():
     buffer += gen_list(currency)  # Currency
     buffer += gen_list(gems)  # Gems
     buffer += gen_list(uniques)  # uniques
+    buffer += gen_list(recipe_item)  # Items for vendor recipe
     buffer += gen_list(maps)  # maps
     buffer += gen_list(divination)  # divination cards
     buffer += gen_list(flask)  # Flasks
