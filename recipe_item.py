@@ -24,35 +24,22 @@ Purpose: Create an item filter based on config files
 Note: Requires Python 3.4.x
 """
 
-desc = "Always show"
+desc = "Recipe Item"
 
 # Text settings for various categories
 settings = {
-    "very high": ["SetBorderColor 0 255 150",
-                  "SetFontSize 45",
-                  "PlayAlertSound 1 175"],
-    "high": ["SetBorderColor 0 255 75",
-             "SetFontSize 37"],
-    "normal": ["SetBorderColor 0 255 0",
+    "very high": [""],
+    "high": [""],
+    "normal": ["SetBorderColor 204 0 154",
                "SetFontSize 28"],
-    "low": ["SetFontSize 20"],
+    "low": [""],
     "ignore": [""],
     "hide": [""]
 }
 
 # Base type : settings pair
 items = {
-    "01 Tabula Exception": {"base": "Simple Robe", "other": ["Rarity Unique", "SocketGroup WWWWWW"], "type": "high"},
-    "02 6L": {"other": ["LinkedSockets 6"], "type": "very high"},
-    "03 5L": {"other": ["LinkedSockets 5", "PlayAlertSound 2 100"], "type": "high"},
-    "04 6S": {"other": ["Sockets 6", "PlayAlertSound 2 100"], "type": "high"},
-    "10 Talisman": {'other': ["Rarity >= Rare"], "base": "Talisman", "type": "high"},
-    "11 Talisman": {'other': ["ItemLevel >= 70"], "base": "Talisman", "type": "high"},
-    "12 Talisman": {"base": "Talisman", "type": "low"},
-    "0 Fishing Rod": {"base": "Fishing Rod", "type": "very high"},
-    "0 Hideout Doodads": {"class": "Hideout Doodads","type": "low"},
-    "0 Microtransactions": {"class": "Microtransactions","type": "low"},
-    "0 Quest": {"class": "Quest", "type": "normal"},
-    "0 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "high"},
-    "0 Jewel": {"class": "Jewel", "other": ["Rarity <= Magic"], "type": "normal"},
+    "0 rare hammers q>=16": {"base": "Stone Hammer\" \"Rock Breaker\" \"Gavel", "other": ["Rarity Rare", "Quality >= 16"], "type": "normal"},
+    "0 magic hammers q>=12": {"base": "Stone Hammer\" \"Rock Breaker\" \"Gavel", "other": ["Rarity Magic", "Quality >= 12"], "type": "normal"},
+    "0 normal hammers": {"base": "Stone Hammer\" \"Rock Breaker\" \"Gavel", "other": ["Rarity Normal"], "type": "normal"}
 }
