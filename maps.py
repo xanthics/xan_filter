@@ -28,23 +28,21 @@ desc = "maps"
 
 # Text settings for various categories
 settings = {
-    "very high": ["Class \"Maps\"",
-                  "SetBorderColor 150 0 0",
+    "very high": ["SetBorderColor 150 0 0",
                   "SetFontSize 42",
                   "PlayAlertSound 6 125"],
-    "high": ["Class \"Maps\"",
-             "PlayAlertSound 2 100",
+    "high": ["PlayAlertSound 2 100",
              "SetFontSize 37"],
-    "normal": ["Class \"Maps\""],
-    "low": ["Class \"Maps\""],
+    "normal": [""],
+    "low": [""],
     "ignore": [""],
-    "hide": ["Class \"Maps\""]
+    "hide": [""]
 }
 
 # Base type : settings pair
 items = {
-    "01 Maps >= 79": {"other": ["DropLevel >= 79"], "type": "very high"},
-    "02 Maps <= 73": {"other": ["DropLevel <= 73"], "type": "normal"},
-    "03 Other maps": {"type": "high"},
-    "04 Map Fragments": {"type": "normal"},
+    "01 Maps >= 79": {"class": "Maps", "other": ["DropLevel >= 79"], "type": "very high"},
+    "02 Maps <= 73": {"class": "Maps", "other": ["DropLevel <= 73"], "type": "normal"},
+    "03 Other maps": {"class": "Maps", "type": "high"},
+    "04 Map Fragments": {"class": "Map Fragments", "type": "normal"},
 }
