@@ -44,5 +44,9 @@ items = {
     "0 Ilvl 75+ Amulet": {"class": "Amulet", "other": ["ItemLevel >= 75"], "type": "normal"},
     "0 Ilvl 75+ Ring": {"class": "Ring", "other": ["ItemLevel >= 75"], "type": "normal"},
     "0 Ilvl 75+ Belt": {"class": "Belt", "other": ["ItemLevel >= 75"], "type": "normal"},
+
+    "0 vaal": {"base": "Vaal Regalia", "other": ["ItemLevel >= 78"], "type": "ignore"},
+    "0 hubris": {"base": "Hubris Circlet", "other": ["ItemLevel >= 78"], "type": "ignore"},
+
     "9 Other bases": {"type": "ignore"}
 }

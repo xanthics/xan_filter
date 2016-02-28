@@ -53,6 +53,6 @@ items = {
     "1 Enhance": {"base": "Enhance", "type": "normal"},
     "1 Enlighten": {"base": "Enlighten", "type": "normal"},
     "1 Added Chaos Damage": {"base": "Added Chaos Damage", "type": "normal"},
-    "1 Vaal Gems": {"base":"Vaal", "type": "normal"},
+    "1 Vaal Gems": {"base": "Vaal", "type": "normal"},
     "9 Other Gems": {"type": "low"}
 }
