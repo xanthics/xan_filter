@@ -44,9 +44,9 @@ settings = {
 items = {
     "01 Tabula Exception": {"base": "Simple Robe", "other": ["Rarity Unique", "SocketGroup WWWWWW"], "type": "high"},
     "02 6L": {"other": ["LinkedSockets 6"], "type": "very high"},
-    "03 5L": {"other": ["LinkedSockets 5", "PlayAlertSound 2 100"], "type": "high"},
-    "04 6S": {"other": ["Sockets 6", "PlayAlertSound 2 100"], "type": "high"},
-    "10 Talisman": {'other': ["Rarity >= Rare"], "base": "Talisman", "type": "high"},
+    "03 5L": {"other": ["LinkedSockets 5", "PlayAlertSound 2 75"], "type": "high"},
+    "04 6S": {"other": ["Sockets 6", "PlayAlertSound 2 50"], "type": "high"},
+    "10 Talisman": {'other': ["Rarity >= Rare","ItemLevel >= 70"], "base": "Talisman", "type": "high"},
     "11 Talisman": {'other': ["ItemLevel >= 70"], "base": "Talisman", "type": "high"},
     "12 Talisman": {"base": "Talisman", "type": "low"},
     "0 Fishing Rod": {"base": "Fishing Rod", "type": "very high"},

@@ -52,14 +52,14 @@ Show
 #03 5L - Always show
 Show
 	LinkedSockets 5
-	PlayAlertSound 2 100
+	PlayAlertSound 2 75
 	SetBorderColor 0 255 75
 	SetFontSize 37
 
 #04 6S - Always show
 Show
 	Sockets 6
-	PlayAlertSound 2 100
+	PlayAlertSound 2 50
 	SetBorderColor 0 255 75
 	SetFontSize 37
 
@@ -67,6 +67,7 @@ Show
 Show
 	BaseType "Talisman"
 	Rarity >= Rare
+	ItemLevel >= 70
 	SetBorderColor 0 255 75
 	SetFontSize 37
 
@@ -490,11 +491,74 @@ Show
 	SetFontSize 45
 	PlayAlertSound 3 300
 
+#0 Vaal Axe - Unique
+Show
+	BaseType "Vaal Axe"
+	Rarity Unique
+	SetBorderColor 175 96 37
+	SetFontSize 45
+	PlayAlertSound 3 300
+
+#1 Champion Kite Shield - Unique
+Show
+	BaseType ""
+	Rarity Unique
+	SetFontSize 37
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
+
+#1 Penetrating Arrow Quiver - Unique
+Show
+	BaseType ""
+	Rarity Unique
+	SetFontSize 37
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
+
+#1 Serpentscale Boots - Unique
+Show
+	BaseType ""
+	Rarity Unique
+	SetFontSize 37
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
+
+#1 Siege Axe - Unique
+Show
+	BaseType ""
+	Rarity Unique
+	SetFontSize 37
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
+
+#1 Slaughter Knife - Unique
+Show
+	BaseType ""
+	Rarity Unique
+	SetFontSize 37
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
+
+#1 Spine Bow - Unique
+Show
+	BaseType ""
+	Rarity Unique
+	SetFontSize 37
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
+
+#1 Trapper Boots - Unique
+Show
+	BaseType ""
+	Rarity Unique
+	SetFontSize 37
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
+
 #9 Other uniques - Unique
 Show
 	Rarity Unique
-	SetFontSize 37
-	PlayAlertSound 3 175
+	PlayAlertSound 3 50
 
 #0 magic hammers q>=12 - Recipe Item
 Show
@@ -832,6 +896,14 @@ Show
 	SetFontSize 40
 	PlayAlertSound 6 175
 
+#0 The Risk - Divination Card
+Show
+	BaseType "The Risk"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	SetFontSize 40
+	PlayAlertSound 6 175
+
 #0 The Road to Power - Divination Card
 Show
 	BaseType "The Road to Power"
@@ -949,7 +1021,7 @@ Hide
 Show
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
+	PlayAlertSound 6 50
 
 #01 Qual Flask - Flasks
 Show
@@ -957,13 +1029,6 @@ Show
 	Quality >= 10
 	SetBorderColor 0 255 0
 	SetFontSize 35
-
-#02 Qual Flask - Flasks
-Show
-	BaseType "Flask"
-	Quality >= 5
-	SetBorderColor 0 150 0
-	SetFontSize 30
 
 #1 Amethyst Flask - Flasks
 Show
@@ -982,20 +1047,6 @@ Show
 Show
 	BaseType "Diamond Flask"
 	Rarity Normal
-	SetFontSize 28
-
-#1 Divine Flask - Flasks
-Show
-	Class "Life Flasks" "Mana Flasks"
-	DropLevel = 60
-	ItemLevel <= 65
-	SetFontSize 28
-
-#1 Eternal Flask - Flasks
-Show
-	Class "Life Flasks" "Mana Flasks"
-	DropLevel = 65
-	ItemLevel <= 70
 	SetFontSize 28
 
 #1 Giant Flask - Flasks
@@ -1065,13 +1116,6 @@ Show
 	ItemLevel <= 42
 	SetFontSize 28
 
-#1 Sanctified Flask - Flasks
-Show
-	Class "Life Flasks" "Mana Flasks"
-	DropLevel = 50
-	ItemLevel <= 60
-	SetFontSize 28
-
 #1 Sapphire Flask - Flasks
 Show
 	BaseType "Sapphire Flask"
@@ -1108,13 +1152,6 @@ Show
 	Class "Hybrid Flask"
 	DropLevel = 40
 	ItemLevel <= 50
-	SetFontSize 28
-
-#2 Hallowed Flask - Flasks
-Show
-	Class "Hybrid Flask"
-	DropLevel = 60
-	ItemLevel <= 70
 	SetFontSize 28
 
 #2 Sacred Flask - Flasks

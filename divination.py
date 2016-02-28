@@ -35,7 +35,7 @@ settings = {
              "PlayAlertSound 6 175"],
     "normal": ["Class \"Divination Card\"",
                "SetBorderColor 30 144 255",
-               "PlayAlertSound 6 75"],
+               "PlayAlertSound 6 50"],
     "low": ["Class \"Divination Card\""],
     "ignore": [""],
     "hide": ["Class \"Divination Card\""]
@@ -90,6 +90,7 @@ items = {
     "0 The Warlord": {"base": "The Warlord", "type": "high"},
     "0 Rats": {"base": "Rats", "type": "high"},
     "0 Tranquillity": {"base": "Tranquillity", "type": "high"},
+    "0 The Risk": {"base": "The Risk", "type": "high"},
     "7 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "type": "hide"},
     "7 The Carrion Crow": {"base": "The Carrion Crow", "type": "hide"},
     "7 The King's Blade": {"base": "The King's Blade", "type": "hide"},
