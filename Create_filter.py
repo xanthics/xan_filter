@@ -48,6 +48,25 @@ import nonrare_two_hand_mace
 import nonrare_two_hand_sword
 import nonrare_wand
 import nonrare_staff
+import rare_armor_dex
+import rare_armor_dex_int
+import rare_armor_int
+import rare_armor_str
+import rare_armor_str_dex
+import rare_armor_str_int
+import rare_bow
+import rare_claw
+import rare_dagger
+import rare_one_hand_axe
+import rare_one_hand_mace
+import rare_one_hand_sword
+import rare_sceptre
+import rare_thrusting_one_hand_sword
+import rare_two_hand_axe
+import rare_two_hand_mace
+import rare_two_hand_sword
+import rare_wand
+import rare_staff
 import show
 import currency
 import gems
@@ -100,8 +119,27 @@ def main():
     buffer += gen_list(maps)  # maps
     buffer += gen_list(divination)  # divination cards
     buffer += gen_list(flask)  # Flasks
-    buffer += gen_list(rare_highlight)  # rares
-    buffer += gen_list(rares)  # rares
+    buffer += gen_list(rare_armor_dex)
+    buffer += gen_list(rare_armor_dex_int)
+    buffer += gen_list(rare_armor_str_dex)
+    buffer += gen_list(rare_armor_str)
+    buffer += gen_list(rare_armor_int)
+    buffer += gen_list(rare_armor_str_int)
+    buffer += gen_list(rare_bow)
+    buffer += gen_list(rare_claw)
+    buffer += gen_list(rare_dagger)
+    buffer += gen_list(rare_one_hand_sword)
+    buffer += gen_list(rare_one_hand_mace)
+    buffer += gen_list(rare_one_hand_axe)
+    buffer += gen_list(rare_sceptre)
+    buffer += gen_list(rare_staff)
+    buffer += gen_list(rare_thrusting_one_hand_sword)
+    buffer += gen_list(rare_two_hand_sword)
+    buffer += gen_list(rare_two_hand_mace)
+    buffer += gen_list(rare_two_hand_axe)
+    buffer += gen_list(rare_wand)
+    buffer += gen_list(rare_highlight)  # rares highlighting + jewelry
+    buffer += gen_list(rares)  # rares catchall
     buffer += gen_list(chroma)  # chrome vendor items
     buffer += gen_list(chance)  # Chance bases
     buffer += gen_list(crafting_bases)  # Crafting bases
