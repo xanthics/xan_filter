@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 """
 * Copyright (c) 2015 Jeremy Parks. All rights reserved.
 *
@@ -26,6 +28,26 @@ Note: Requires Python 3.4.x
 
 import chance
 import hide
+import nonrare_armor_dex
+import nonrare_armor_dex_int
+import nonrare_armor_int
+import nonrare_armor_str
+import nonrare_armor_str_dex
+import nonrare_armor_str_int
+import nonrare_bow
+import nonrare_claw
+import nonrare_dagger
+import nonrare_jewelry
+import nonrare_one_hand_axe
+import nonrare_one_hand_mace
+import nonrare_one_hand_sword
+import nonrare_sceptre
+import nonrare_thrusting_one_hand_sword
+import nonrare_two_hand_axe
+import nonrare_two_hand_mace
+import nonrare_two_hand_sword
+import nonrare_wand
+import nonrare_staff
 import show
 import currency
 import gems
@@ -83,8 +105,28 @@ def main():
     buffer += gen_list(chroma)  # chrome vendor items
     buffer += gen_list(chance)  # Chance bases
     buffer += gen_list(crafting_bases)  # Crafting bases
-    buffer += "Show\n\tItemLevel <= 5\n\tSetFontSize 28\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100\n\n"
-    buffer += "Show\n\tItemLevel <= 25\n\tRarity > Normal\n\tSetFontSize 28\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100\n\n"
+    buffer += gen_list(nonrare_armor_dex)
+    buffer += gen_list(nonrare_armor_dex_int)
+    buffer += gen_list(nonrare_armor_str_dex)
+    buffer += gen_list(nonrare_armor_str)
+    buffer += gen_list(nonrare_armor_int)
+    buffer += gen_list(nonrare_armor_str_int)
+    buffer += gen_list(nonrare_bow)
+    buffer += gen_list(nonrare_claw)
+    buffer += gen_list(nonrare_dagger)
+    buffer += gen_list(nonrare_jewelry)
+    buffer += gen_list(nonrare_one_hand_sword)
+    buffer += gen_list(nonrare_one_hand_mace)
+    buffer += gen_list(nonrare_one_hand_axe)
+    buffer += gen_list(nonrare_sceptre)
+    buffer += gen_list(nonrare_staff)
+    buffer += gen_list(nonrare_thrusting_one_hand_sword)
+    buffer += gen_list(nonrare_two_hand_sword)
+    buffer += gen_list(nonrare_two_hand_mace)
+    buffer += gen_list(nonrare_two_hand_axe)
+    buffer += gen_list(nonrare_wand)
+#    buffer += "Show\n\tItemLevel <= 5\n\tSetFontSize 28\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100\n\n"
+#    buffer += "Show\n\tItemLevel <= 25\n\tRarity > Normal\n\tSetFontSize 28\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100\n\n"
 
     with open("xan.show.filter", "w") as f:
         f.write(buffer)
