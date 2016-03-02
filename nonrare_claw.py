@@ -32,12 +32,15 @@ desc = "Nonrare item for leveling or crafting"
 # ignore and hide have special meaning(see comment) everything else is local to file
 settings = {
 	"very high": ["SetFontSize 28",
+				  "Sockets > 2",
 				  "SetBackgroundColor 0 0 0 100",
 				  "SetBorderColor 255 40 0"],
 	"high": ["SetFontSize 24",
+			 "Sockets > 2",
 			 "SetBackgroundColor 0 0 0 100",
 			 "SetBorderColor 0 100 150"],
 	"normal": ["SetFontSize 18",
+			   "Sockets > 2",
 			   "SetBackgroundColor 0 0 0 100",
 			   "SetBorderColor 100 100 100"],
 	"low": [""],
