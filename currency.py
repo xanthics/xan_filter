@@ -79,5 +79,5 @@ items = {
     "0 Portal Scroll": {"base": "Portal Scroll", "type": "low"},
     "0 Alteration Shard": {"base": "Alteration Shard", "type": "low"},
     "7 Scroll Fragment": {"base": "Scroll Fragment", "type": "hide"},
-    "9 Currency": {"class": "Currency", "type": "normal"}
+    "9 Currency": {"type": "normal"}
 }
