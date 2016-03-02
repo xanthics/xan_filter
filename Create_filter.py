@@ -27,6 +27,7 @@ Note: Requires Python 3.4.x
 """
 
 import chance
+import general_levelling
 import hide
 import nonrare_armor_dex
 import nonrare_armor_dex_int
@@ -141,6 +142,7 @@ def main():
     buffer += gen_list(rare_highlight)  # rares highlighting + jewelry
     buffer += gen_list(rares)  # rares catchall
     buffer += gen_list(chroma)  # chrome vendor items
+    buffer += gen_list(general_levelling)
     buffer += gen_list(chance)  # Chance bases
     buffer += gen_list(crafting_bases)  # Crafting bases
     buffer += gen_list(nonrare_armor_dex)
@@ -163,8 +165,6 @@ def main():
     buffer += gen_list(nonrare_two_hand_mace)
     buffer += gen_list(nonrare_two_hand_axe)
     buffer += gen_list(nonrare_wand)
-#    buffer += "Show\n\tItemLevel <= 5\n\tSetFontSize 28\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100\n\n"
-#    buffer += "Show\n\tItemLevel <= 25\n\tRarity > Normal\n\tSetFontSize 28\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100\n\n"
 
     with open("xan.show.filter", "w") as f:
         f.write(buffer)

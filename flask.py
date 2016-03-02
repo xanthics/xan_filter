@@ -61,16 +61,16 @@ items = {
     "1 Colossal Flask": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 30", "ItemLevel <= 36"], "type": "normal"},
     "1 Sacred Flask": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 36", "ItemLevel <= 42"], "type": "normal"},
     "1 Hallowed Flask": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 42", "ItemLevel <= 60"], "type": "normal"},
-    "1 Sanctified Flask": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 50", "ItemLevel <= 60"], "type": "ignore"},
-    "1 Divine Flask": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 60", "ItemLevel <= 65"], "type": "ignore"},
-    "1 Eternal Flask": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 65", "ItemLevel <= 70"], "type": "ignore"},
+    "1 Sanctified Flask": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 50", "ItemLevel <= 60"], "type": "normal"},
+    "1 Divine Flask": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 60", "ItemLevel <= 65"], "type": "normal"},
+    "1 Eternal Flask": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 65", "ItemLevel <= 70"], "type": "normal"},
 
     "2 Small Flask": {"class": "Hybrid Flask", "other": ["DropLevel = 10", "ItemLevel <= 20"], "type": "normal"},
     "2 medium Flask": {"class": "Hybrid Flask", "other": ["DropLevel = 20", "ItemLevel <= 30"], "type": "normal"},
     "2 large Flask": {"class": "Hybrid Flask", "other": ["DropLevel = 30", "ItemLevel <= 40"], "type": "normal"},
     "2 Colossal Flask": {"class": "Hybrid Flask", "other": ["DropLevel = 40", "ItemLevel <= 50"], "type": "normal"},
     "2 Sacred Flask": {"class": "Hybrid Flask", "other": ["DropLevel = 50", "ItemLevel <= 60"], "type": "normal"},
-    "2 Hallowed Flask": {"class": "Hybrid Flask", "other": ["DropLevel = 60", "ItemLevel <= 70"], "type": "ignore"},
+    "2 Hallowed Flask": {"class": "Hybrid Flask", "other": ["DropLevel = 60", "ItemLevel <= 70"], "type": "normal"},
 
     "9 Other Flasks": {"base": "Flask", "type": "ignore"}
 }
