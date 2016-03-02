@@ -108,7 +108,16 @@ items = {
 
     "0 Jewel": {"class": "Jewel", "type": "high"},
 
+    # Caster bases
     "0 Wand": {"class": "Wand", "type": "high"},
+    "0 Quartz Sceptre": {"base": "Quartz Sceptre", "class": "Sceptres", "type": "high"},
+    "0 Crystal Sceptre": {"base": "Crystal Sceptre", "class": "Sceptres", "type": "high"},
+    "0 Copper Kris": {"base": "Copper Kris", "class": "Dagger", "type": "high"},
+    "0 Imp Dagger": {"base": "Imp Dagger", "class": "Dagger", "type": "high"},
+    "0 Golden Kris": {"base": "Golden Kris", "class": "Dagger", "type": "high"},
+    "0 Fiend Dagger": {"base": "Fiend Dagger", "class": "Dagger", "type": "high"},
+    "0 Platinum Kris": {"base": "Platinum Kris", "class": "Dagger", "type": "high"},
+    "0 Demon Dagger": {"base": "Ambusher", "class": "Dagger", "type": "high"},
 
     "0 Spike-Point Arrow Quiver": {"base": "Spike-Point Arrow Quiver", "class": "Quivers", "type": "high"},
     "0 Broadhead Arrow Quiver": {"base": "Broadhead Arrow Quiver", "class": "Quivers", "type": "high"},
