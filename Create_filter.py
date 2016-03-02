@@ -83,99 +83,99 @@ import recipe_item
 
 
 def gen_list(obj):
-    b = ""
+	b = ""
 
-    # gen our string
-    for i in sorted(obj.items):
-        s = obj.items[i]
-        if s['type'] != "ignore":
-            b += "#{} - {}\n".format(i, obj.desc)
-            if s['type'] == "hide":
-                b += "Hide"
-            else:
-                b += "Show"
-            if 'base' in s:
-                b += "\n\tBaseType \"{}\"".format(s['base'])
-            if 'class' in s:
-                b += "\n\tClass \"{}\"".format(s['class'])
-            if 'other' in s:
-                b += "\n\t{}".format("\n\t".join(s['other']))
-            if obj.settings[s['type']]:
-                b += "\n\t{}".format("\n\t".join(obj.settings[s['type']]))
-            b += "\n\n"
+	# gen our string
+	for i in sorted(obj.items):
+		s = obj.items[i]
+		if s['type'] != "ignore":
+			b += "#{} - {}\n".format(i, obj.desc)
+			if s['type'] == "hide":
+				b += "Hide"
+			else:
+				b += "Show"
+			if 'base' in s:
+				b += "\n\tBaseType \"{}\"".format(s['base'])
+			if 'class' in s:
+				b += "\n\tClass \"{}\"".format(s['class'])
+			if 'other' in s:
+				b += "\n\t{}".format("\n\t".join(s['other']))
+			if obj.settings[s['type']]:
+				b += "\n\t{}".format("\n\t".join(obj.settings[s['type']]))
+			b += "\n\n"
 
-    return b
+	return b
 
 
 # main function for creating a filter
 def main():
-    buffer = ""
+	buffer = ""
 
-    buffer += gen_list(show)  # Always show these items
-    buffer += gen_list(hide)  # Always hide these items
-    buffer += gen_list(currency)  # Currency
-    buffer += gen_list(gems)  # Gems
-    buffer += gen_list(uniques)  # uniques
-    buffer += gen_list(recipe_item)  # Items for vendor recipe
-    buffer += gen_list(maps)  # maps
-    buffer += gen_list(divination)  # divination cards
-    buffer += gen_list(flask)  # Flasks
-    buffer += gen_list(rare_armor_dex)
-    buffer += gen_list(rare_armor_dex_int)
-    buffer += gen_list(rare_armor_str_dex)
-    buffer += gen_list(rare_armor_str)
-    buffer += gen_list(rare_armor_int)
-    buffer += gen_list(rare_armor_str_int)
-    buffer += gen_list(rare_bow)
-    buffer += gen_list(rare_claw)
-    buffer += gen_list(rare_dagger)
-    buffer += gen_list(rare_one_hand_sword)
-    buffer += gen_list(rare_one_hand_mace)
-    buffer += gen_list(rare_one_hand_axe)
-    buffer += gen_list(rare_sceptre)
-    buffer += gen_list(rare_staff)
-    buffer += gen_list(rare_thrusting_one_hand_sword)
-    buffer += gen_list(rare_two_hand_sword)
-    buffer += gen_list(rare_two_hand_mace)
-    buffer += gen_list(rare_two_hand_axe)
-    buffer += gen_list(rare_wand)
-    buffer += gen_list(rare_highlight)  # rares highlighting + jewelry
-    buffer += gen_list(rares)  # rares catchall
-    buffer += gen_list(chroma)  # chrome vendor items
-    buffer += gen_list(general_levelling)
-    buffer += gen_list(chance)  # Chance bases
-    buffer += gen_list(crafting_bases)  # Crafting bases
-    buffer += gen_list(nonrare_armor_dex)
-    buffer += gen_list(nonrare_armor_dex_int)
-    buffer += gen_list(nonrare_armor_str_dex)
-    buffer += gen_list(nonrare_armor_str)
-    buffer += gen_list(nonrare_armor_int)
-    buffer += gen_list(nonrare_armor_str_int)
-    buffer += gen_list(nonrare_bow)
-    buffer += gen_list(nonrare_claw)
-    buffer += gen_list(nonrare_dagger)
-    buffer += gen_list(nonrare_jewelry)
-    buffer += gen_list(nonrare_one_hand_sword)
-    buffer += gen_list(nonrare_one_hand_mace)
-    buffer += gen_list(nonrare_one_hand_axe)
-    buffer += gen_list(nonrare_sceptre)
-    buffer += gen_list(nonrare_staff)
-    buffer += gen_list(nonrare_thrusting_one_hand_sword)
-    buffer += gen_list(nonrare_two_hand_sword)
-    buffer += gen_list(nonrare_two_hand_mace)
-    buffer += gen_list(nonrare_two_hand_axe)
-    buffer += gen_list(nonrare_wand)
+	buffer += gen_list(show)  # Always show these items
+	buffer += gen_list(hide)  # Always hide these items
+	buffer += gen_list(currency)  # Currency
+	buffer += gen_list(gems)  # Gems
+	buffer += gen_list(uniques)  # uniques
+	buffer += gen_list(recipe_item)  # Items for vendor recipe
+	buffer += gen_list(maps)  # maps
+	buffer += gen_list(divination)  # divination cards
+	buffer += gen_list(flask)  # Flasks
+	buffer += gen_list(rare_armor_dex)
+	buffer += gen_list(rare_armor_dex_int)
+	buffer += gen_list(rare_armor_str_dex)
+	buffer += gen_list(rare_armor_str)
+	buffer += gen_list(rare_armor_int)
+	buffer += gen_list(rare_armor_str_int)
+	buffer += gen_list(rare_bow)
+	buffer += gen_list(rare_claw)
+	buffer += gen_list(rare_dagger)
+	buffer += gen_list(rare_one_hand_sword)
+	buffer += gen_list(rare_one_hand_mace)
+	buffer += gen_list(rare_one_hand_axe)
+	buffer += gen_list(rare_sceptre)
+	buffer += gen_list(rare_staff)
+	buffer += gen_list(rare_thrusting_one_hand_sword)
+	buffer += gen_list(rare_two_hand_sword)
+	buffer += gen_list(rare_two_hand_mace)
+	buffer += gen_list(rare_two_hand_axe)
+	buffer += gen_list(rare_wand)
+	buffer += gen_list(rare_highlight)  # rares highlighting + jewelry
+	buffer += gen_list(rares)  # rares catchall
+	buffer += gen_list(chroma)  # chrome vendor items
+	buffer += gen_list(general_levelling)
+	buffer += gen_list(chance)  # Chance bases
+	buffer += gen_list(crafting_bases)  # Crafting bases
+	buffer += gen_list(nonrare_armor_dex)
+	buffer += gen_list(nonrare_armor_dex_int)
+	buffer += gen_list(nonrare_armor_str_dex)
+	buffer += gen_list(nonrare_armor_str)
+	buffer += gen_list(nonrare_armor_int)
+	buffer += gen_list(nonrare_armor_str_int)
+	buffer += gen_list(nonrare_bow)
+	buffer += gen_list(nonrare_claw)
+	buffer += gen_list(nonrare_dagger)
+	buffer += gen_list(nonrare_jewelry)
+	buffer += gen_list(nonrare_one_hand_sword)
+	buffer += gen_list(nonrare_one_hand_mace)
+	buffer += gen_list(nonrare_one_hand_axe)
+	buffer += gen_list(nonrare_sceptre)
+	buffer += gen_list(nonrare_staff)
+	buffer += gen_list(nonrare_thrusting_one_hand_sword)
+	buffer += gen_list(nonrare_two_hand_sword)
+	buffer += gen_list(nonrare_two_hand_mace)
+	buffer += gen_list(nonrare_two_hand_axe)
+	buffer += gen_list(nonrare_wand)
 
-    with open("xan.show.filter", "w") as f:
-        f.write(buffer)
-        # Default for all other items
-        f.write("Show\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
+	with open("xan.show.filter", "w") as f:
+		f.write(buffer)
+		# Default for all other items
+		f.write("Show\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
 
-    with open("xan.hide.filter", "w") as f:
-        f.write(buffer)
-        # Default for all other items
-        f.write("Hide\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
+	with open("xan.hide.filter", "w") as f:
+		f.write(buffer)
+		# Default for all other items
+		f.write("Hide\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
 
 
 if __name__ == "__main__":
-    main()
+	main()
