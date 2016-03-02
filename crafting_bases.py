@@ -28,25 +28,25 @@ desc = "Crafting Bases"
 
 # Text settings for various categories
 settings = {
-    "very high": ["Rarity Normal",
-                  "SetFontSize 35",
-                  "SetBorderColor 200 200 200"],
-    "high": ["Rarity Normal"],
-    "normal": ["Rarity Normal",
-               "SetFontSize 28"],
-    "low": ["Rarity Normal"],
-    "ignore": [""],
-    "hide": ["Rarity Normal"]
+	"very high": ["Rarity Normal",
+				  "SetFontSize 35",
+				  "SetBorderColor 200 200 200"],
+	"high": ["Rarity Normal"],
+	"normal": ["Rarity Normal",
+			   "SetFontSize 28"],
+	"low": ["Rarity Normal"],
+	"ignore": [""],
+	"hide": ["Rarity Normal"]
 }
 
 # Base type : settings pair
 items = {
-    "0 Ilvl 75+ Amulet": {"class": "Amulet", "other": ["ItemLevel >= 75"], "type": "normal"},
-    "0 Ilvl 75+ Ring": {"class": "Ring", "other": ["ItemLevel >= 75"], "type": "normal"},
-    "0 Ilvl 75+ Belt": {"class": "Belt", "other": ["ItemLevel >= 75"], "type": "normal"},
+	"0 Ilvl 75+ Amulet": {"class": "Amulet", "other": ["ItemLevel >= 75"], "type": "normal"},
+	"0 Ilvl 75+ Ring": {"class": "Ring", "other": ["ItemLevel >= 75"], "type": "normal"},
+	"0 Ilvl 75+ Belt": {"class": "Belt", "other": ["ItemLevel >= 75"], "type": "normal"},
 
-    "0 vaal": {"base": "Vaal Regalia", "other": ["ItemLevel >= 78"], "type": "ignore"},
-    "0 hubris": {"base": "Hubris Circlet", "other": ["ItemLevel >= 78"], "type": "ignore"},
+	"0 vaal": {"base": "Vaal Regalia", "other": ["ItemLevel >= 78"], "type": "ignore"},
+	"0 hubris": {"base": "Hubris Circlet", "other": ["ItemLevel >= 78"], "type": "ignore"},
 
-    "9 Other bases": {"type": "ignore"}
+	"9 Other bases": {"type": "ignore"}
 }

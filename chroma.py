@@ -28,22 +28,22 @@ desc = "Chromes"
 
 # Text settings for various categories
 settings = {
-    "very high": ["SocketGroup RGB"],
-    "high": ["SocketGroup RGB"],
-    "normal": ["SocketGroup RGB",
-               "SetBorderColor 0 191 0",
-               "SetFontSize 28"],
-    "low": ["SocketGroup RGB",
-            "SetBorderColor 0 191 0",
-            "SetFontSize 20"],
-    "ignore": [""],
-    "hide": ["SocketGroup RGB"]
+	"very high": ["SocketGroup RGB"],
+	"high": ["SocketGroup RGB"],
+	"normal": ["SocketGroup RGB",
+			   "SetBorderColor 0 191 0",
+			   "SetFontSize 28"],
+	"low": ["SocketGroup RGB",
+			"SetBorderColor 0 191 0",
+			"SetFontSize 20"],
+	"ignore": [""],
+	"hide": ["SocketGroup RGB"]
 }
 
 # Base type : settings pair
 items = {
-    "01 4x1": {"other": ["Height 4", "Width 1"], "type": "normal"},
-    "02 3x1": {"other": ["Height 3", "Width 1"], "type": "normal"},
-    "03 2x2": {"other": ["Height 2", "Width 2"], "type": "normal"},
-    "04 Other Chromes": {"type": "ignore"}
+	"01 4x1": {"other": ["Height 4", "Width 1"], "type": "normal"},
+	"02 3x1": {"other": ["Height 3", "Width 1"], "type": "normal"},
+	"03 2x2": {"other": ["Height 2", "Width 2"], "type": "normal"},
+	"04 Other Chromes": {"type": "ignore"}
 }
