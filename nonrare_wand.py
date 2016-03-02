@@ -64,13 +64,13 @@ items = {
 	"Faun's Horn": {"base": "Faun's Horn", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 40"], "type": "normal"},
 	"Engraved Wand": {"base": "Engraved Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 45"], "type": "normal"},
 	"Crystal Wand": {"base": "Crystal Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 50"], "type": "normal"},
-	"Serpent Wand": {"base": "Serpent Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 54"], "type": "normal"},
-	"Omen Wand": {"base": "Omen Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 58"], "type": "normal"},
-	"Heathen Wand": {"base": "Heathen Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 60"], "type": "normal"},
-	"Demon's Horn": {"base": "Demon's Horn", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 61"], "type": "normal"},
-	"Imbued Wand": {"base": "Imbued Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 64"], "type": "normal"},
-	"Opal Wand": {"base": "Opal Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 67"], "type": "normal"},
-	"Tornado Wand": {"base": "Tornado Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 70"], "type": "normal"},
-	"Prophecy Wand": {"base": "Prophecy Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 73"], "type": "normal"},
-	"Profane Wand": {"base": "Profane Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 75"], "type": "normal"}
+	"Serpent Wand": {"base": "Serpent Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 54"], "type": "ignore"},
+	"Omen Wand": {"base": "Omen Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 58"], "type": "ignore"},
+	"Heathen Wand": {"base": "Heathen Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 60"], "type": "ignore"},
+	"Demon's Horn": {"base": "Demon's Horn", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 61"], "type": "ignore"},
+	"Imbued Wand": {"base": "Imbued Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 64"], "type": "ignore"},
+	"Opal Wand": {"base": "Opal Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 67"], "type": "ignore"},
+	"Tornado Wand": {"base": "Tornado Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 70"], "type": "ignore"},
+	"Prophecy Wand": {"base": "Prophecy Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 73"], "type": "ignore"},
+	"Profane Wand": {"base": "Profane Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 75"], "type": "ignore"}
 }
