@@ -43,4 +43,4 @@ No ETA: I work on this when I'm bored of releveling toons or farming.
 
 Thanks
 ======
-This script is heavily inspired by the discontinued "One Filter to rule them all"
+This script is heavily inspired by "One Filter to rule them all" that can be found at https://www.pathofexile.com/forum/view-thread/1259059
