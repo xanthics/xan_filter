@@ -62,13 +62,13 @@ items = {
     "0 Crusader Gloves": {"base": "Crusader Gloves", "type": "very high"},
     "0 Despot Axe": {"base": "Despot Axe", "type": "very high"},
 
-    "1 Champion Kite Shield": {"base": "", "type": "high"},
-    "1 Penetrating Arrow Quiver": {"base": "", "type": "high"},
-    "1 Serpentscale Boots": {"base": "", "type": "high"},
-    "1 Siege Axe": {"base": "", "type": "high"},
-    "1 Slaughter Knife": {"base": "", "type": "high"},
-    "1 Spine Bow": {"base": "", "type": "high"},
-    "1 Trapper Boots": {"base": "", "type": "high"},
+    "1 Champion Kite Shield": {"base": "Champion Kite Shield", "type": "high"},
+    "1 Penetrating Arrow Quiver": {"base": "Penetrating Arrow Quiver", "type": "high"},
+    "1 Serpentscale Boots": {"base": "Serpentscale Boots", "type": "high"},
+    "1 Siege Axe": {"base": "Siege Axe", "type": "high"},
+    "1 Slaughter Knife": {"base": "Slaughter Knife", "type": "high"},
+    "1 Spine Bow": {"base": "Spine Bow", "type": "high"},
+    "1 Trapper Boots": {"base": "Trapper Boots", "type": "high"},
 
     "9 Other uniques": {"type": "normal"},
 }
