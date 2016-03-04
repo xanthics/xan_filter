@@ -51,6 +51,11 @@ items = {
     "11 Quicksilver Flask <= 25": {"base": "Quicksilver Flask", "other": ["ItemLevel <= 25"], "type": "normal"},
     "12 Quicksilver Flask": {"base": "Quicksilver Flask", "other": ["Rarity Normal"], "type": "normal"},
     "1 Amethyst Flask": {"base": "Amethyst Flask", "other": ["Rarity Normal"], "type": "normal"},
+    "1 Basalt Flask": {"base": "Basalt Flask", "other": ["Rarity Normal"], "type": "normal"},
+    "1 Aquamarine  Flask": {"base": "Aquamarine Flask", "other": ["Rarity Normal"], "type": "normal"},
+    "1 Stibnite  Flask": {"base": "Stibnite Flask", "other": ["Rarity Normal"], "type": "normal"},
+    "1 Sulphur  Flask": {"base": "Sulphur Flask", "other": ["Rarity Normal"], "type": "normal"},
+    "1 Bismuth  Flask": {"base": "Bismuth Flask", "other": ["Rarity Normal"], "type": "normal"},
 
     "1 Small Flasks": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 0", "ItemLevel <= 3"], "type": "normal"},
     "1 Medium Flasks": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 3", "ItemLevel <= 6"], "type": "normal"},
