@@ -78,6 +78,7 @@ items = {
 	"0 Scroll of Wisdom": {"base": "Scroll of Wisdom", "type": "low"},
 	"0 Portal Scroll": {"base": "Portal Scroll", "type": "low"},
 	"0 Alteration Shard": {"base": "Alteration Shard", "type": "low"},
+	"0 Perandus Coin": {"base": "Perandus Coin", "type": "low"},
 	"7 Scroll Fragment": {"base": "Scroll Fragment", "type": "hide"},
 	"9 Currency": {"type": "normal"}
 }
