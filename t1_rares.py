@@ -30,18 +30,17 @@ desc = "Crafting Bases"
 
 # Text settings for various categories
 settings = {
-	"very high": ["Rarity <= Magic",
-				  "SetFontSize 35",
-				  "SetBorderColor 200 200 200"],
-	"high": ["Rarity <= Magic"],
-	"normal": ["Rarity Normal",
-			   "SetFontSize 28"],
-	"low": ["Rarity Normal",
-			"SetFontSize 18",
-			"SetBackgroundColor 0 0 0 100",
-			"SetBorderColor 100 100 100"],
-	"ignore": [""],
-	"hide": ["Rarity Normal"]
+	"very high": ["SetFontSize 38",
+				  "SetBackgroundColor 0 0 0 100",
+				  "SetBorderColor 255 40 0"],
+	"high": ["Rarity Rare",
+			 "SetBorderColor 255 40 0",
+			 "SetFontSize 34"],
+	"normal": ["Rarity Rare",
+			   "SetBorderColor 255 40 0"],
+	"low": [""],
+	"ignore": [""],  # will have no styling applied and will use the default set at the end
+	"hide": [""]  # Will be explicitly hidden with applied styling
 }
 
 # Base type : settings pair
@@ -113,10 +112,6 @@ items = {
 	"0 Jewelled Foil": {"base": "Jewelled Foil", "other": ["ItemLevel >= 83"], "type": "high"},
 	"0 Dragoon Sword": {"base": "Dragoon Sword", "other": ["ItemLevel >= 83"], "type": "high"},
 	"0 Sai": {"base": "Sai", "class": "Dagger", "other": ["ItemLevel >= 83"], "type": "high"},
-
-	"8 Ilvl 75+ Amulet": {"class": "Amulet", "other": ["ItemLevel >= 75"], "type": "low"},
-	"8 Ilvl 75+ Ring": {"class": "Ring", "other": ["ItemLevel >= 75"], "type": "low"},
-	"8 Ilvl 75+ Belt": {"class": "Belt", "other": ["ItemLevel >= 75"], "type": "low"},
 
 	"9 Other bases": {"type": "ignore"}
 }

@@ -80,6 +80,7 @@ import rares
 import rare_highlight
 import crafting_bases
 import recipe_item
+import t1_rares
 
 
 def gen_list(obj):
@@ -120,6 +121,7 @@ def main():
 	buffer += gen_list(maps)  # maps
 	buffer += gen_list(divination)  # divination cards
 	buffer += gen_list(flask)  # Flasks
+	buffer += gen_list(t1_rares)
 	buffer += gen_list(rare_armor_dex)
 	buffer += gen_list(rare_armor_dex_int)
 	buffer += gen_list(rare_armor_str_dex)
@@ -146,34 +148,34 @@ def main():
 	buffer += gen_list(chance)  # Chance bases
 	buffer += gen_list(crafting_bases)  # Crafting bases
 	buffer += gen_list(nonrare_armor_dex)
-#	buffer += gen_list(nonrare_armor_dex_int)
+	buffer += gen_list(nonrare_armor_dex_int)
 	buffer += gen_list(nonrare_armor_str_dex)
 	buffer += gen_list(nonrare_armor_str)
-#	buffer += gen_list(nonrare_armor_int)
-#	buffer += gen_list(nonrare_armor_str_int)
-#	buffer += gen_list(nonrare_bow)
-#	buffer += gen_list(nonrare_claw)
-#	buffer += gen_list(nonrare_dagger)
+	buffer += gen_list(nonrare_armor_int)
+	buffer += gen_list(nonrare_armor_str_int)
+	buffer += gen_list(nonrare_bow)
+	buffer += gen_list(nonrare_claw)
+	buffer += gen_list(nonrare_dagger)
 	buffer += gen_list(nonrare_jewelry)
-#	buffer += gen_list(nonrare_one_hand_sword)
-#	buffer += gen_list(nonrare_one_hand_mace)
-#	buffer += gen_list(nonrare_one_hand_axe)
-#	buffer += gen_list(nonrare_sceptre)
-#	buffer += gen_list(nonrare_staff)
-#	buffer += gen_list(nonrare_thrusting_one_hand_sword)
-#	buffer += gen_list(nonrare_two_hand_sword)
+	buffer += gen_list(nonrare_one_hand_sword)
+	buffer += gen_list(nonrare_one_hand_mace)
+	buffer += gen_list(nonrare_one_hand_axe)
+	buffer += gen_list(nonrare_sceptre)
+	buffer += gen_list(nonrare_staff)
+	buffer += gen_list(nonrare_thrusting_one_hand_sword)
+	buffer += gen_list(nonrare_two_hand_sword)
 	buffer += gen_list(nonrare_two_hand_mace)
 	buffer += gen_list(nonrare_two_hand_axe)
-#	buffer += gen_list(nonrare_wand)
+	buffer += gen_list(nonrare_wand)
 
-	with open("xan.show.filter", "w") as f:
-#	with open(r"C:\Users\Jeremy\Documents\my games\Path of Exile\xan.show.filter", "w") as f:
+#	with open("xan.show.filter", "w") as f:
+	with open(r"C:\Users\Jeremy\Documents\my games\Path of Exile\xan.show.filter", "w") as f:
 		f.write(buffer)
 		# Default for all other items
 		f.write("Show\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
 
-	with open("xan.hide.filter", "w") as f:
-#	with open(r"C:\Users\Jeremy\Documents\my games\Path of Exile\xan.hide.filter", "w") as f:
+#	with open("xan.hide.filter", "w") as f:
+	with open(r"C:\Users\Jeremy\Documents\my games\Path of Exile\xan.hide.filter", "w") as f:
 		f.write(buffer)
 		# Default for all other items
 		f.write("Hide\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
