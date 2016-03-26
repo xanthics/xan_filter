@@ -41,7 +41,7 @@ settings = {
 # Base type : settings pair
 items = {
     "01 Qual Flask": {"base": "Flask", "other": ["Quality >= 10"], "type": "very high"},
-    "02 Qual Flask": {"base": "Flask", "other": ["Quality >= 5"], "type": "ignore"},
+    "02 Qual Flask": {"base": "Flask", "other": ["Quality >= 5"], "type": "normal"},
     "1 Diamond Flask": {"base": "Diamond Flask", "other": ["Rarity Normal"], "type": "normal"},
     "1 Granite Flask": {"base": "Granite Flask", "other": ["Rarity Normal"], "type": "normal"},
     "1 Jade Flask": {"base": "Jade Flask", "other": ["Rarity Normal"], "type": "ignore"},
@@ -55,6 +55,7 @@ items = {
     "1 Aquamarine Flask": {"base": "Aquamarine Flask", "other": ["Rarity Normal"], "type": "normal"},
     "1 Stibnite Flask": {"base": "Stibnite Flask", "other": ["Rarity Normal"], "type": "normal"},
     "1 Sulphur Flask": {"base": "Sulphur Flask", "other": ["Rarity Normal"], "type": "normal"},
+    "1 Silver Flask": {"base": "Silver Flask", "other": ["Rarity Normal"], "type": "normal"},
     "1 Bismuth Flask": {"base": "Bismuth Flask", "other": ["Rarity Normal"], "type": "ignore"},
 
     "1 Small Flasks": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 0", "ItemLevel <= 3"], "type": "normal"},
