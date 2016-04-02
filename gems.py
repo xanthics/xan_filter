@@ -6,7 +6,7 @@
 * to deal in the Software without restriction, including without limitation
 * the rights to use, copy, modify, merge, publish, distribute, sublicense,
 * and/or sell copies of the Software, and to permit persons to whom the
-* Software is furnished to do so, subject to the following conditions:
+* Software is furnished to do so, subject to the folgem lowing conditions:
 *
 * The above copyright notice and this permission notice shall be included in
 * all copies or substantial portions of the Software.
@@ -26,33 +26,16 @@ Note: Requires Python 3.4.x
 
 desc = "gems"
 
-# Text settings for various categories
-settings = {
-    "very high": ["Class \"Gems\"",
-                  "SetBorderColor 27 162 155",
-                  "SetFontSize 35"],
-    "high": ["Class \"Gems\"",
-             "SetBorderColor 27 162 155",
-             "SetFontSize 30"],
-    "normal": ["Class \"Gems\"",
-               "SetBorderColor 27 162 155"],
-    "low": ["Class \"Gems\"",
-            "SetFontSize 24",
-            "SetBackgroundColor 0 0 0 200"],
-    "ignore": [""],
-    "hide": ["Class \"Gems\""]
-}
-
 # Base type : settings pair
 items = {
-    "01 Quality Gem High": {"other": ["Quality >= 10"], "type": "very high"},
-    "02 Quality Gem": {"other": ["Quality >= 1"], "type": "high"},
-    "1 Portal": {"base": "Portal", "type": "normal"},
-    "1 Detonate Mines": {"base": "Detonate Mines", "type": "ignore"},
-    "1 Empower": {"base": "Empower", "type": "normal"},
-    "1 Enhance": {"base": "Enhance", "type": "normal"},
-    "1 Enlighten": {"base": "Enlighten", "type": "normal"},
-    "1 Added Chaos Damage": {"base": "Added Chaos Damage", "type": "normal"},
-    "1 Vaal Gems": {"base": "Vaal", "type": "normal"},
-    "9 Other Gems": {"type": "low"}
+    "01 Quality Gem High": {"class": "Gems", "other": ["Quality >= 10"], "type": "gem very high"},
+    "02 Quality Gem": {"class": "Gems", "other": ["Quality >= 1"], "type": "gem high"},
+    "1 Portal": {"base": "Portal", "class": "Gems", "type": "gem normal"},
+    "1 Detonate Mines": {"base": "Detonate Mines", "class": "Gems", "type": "ignore"},
+    "1 Empower": {"base": "Empower", "class": "Gems", "type": "gem normal"},
+    "1 Enhance": {"base": "Enhance", "class": "Gems", "type": "gem normal"},
+    "1 Enlighten": {"base": "Enlighten", "class": "Gems", "type": "gem normal"},
+    "1 Added Chaos Damage": {"base": "Added Chaos Damage", "class": "Gems", "type": "gem normal"},
+    "1 Vaal Gems": {"base": "Vaal", "class": "Gems", "type": "gem normal"},
+    "9 Other Gems": {"class": "Gems", "type": "gem low"}
 }

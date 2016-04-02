@@ -26,18 +26,7 @@ Note: Requires Python 3.4.x
 
 desc = "template"
 
-# Text settings for various categories
-# This is where you would define general settings for a category, such as PlayAlertSound.
-# Each config should be its own array element.  Parsing will handle tabs/etc.
-# ignore and hide have special meaning(see comment) everything else is local to file
-settings = {
-    "very high": [""],
-    "high": [""],
-    "normal": [""],
-    "low": [""],
-    "ignore": [""],  # will have no styling applied and will use the default set at the end
-    "hide": [""]  # Will be explicitly hidden with applied styling
-}
+# See formatting.py for how to do top level formatting
 
 # Base type : settings pair
 # Base Type is displayed in the comments for the output file. as long as the name is unique it doesn't matter what it is

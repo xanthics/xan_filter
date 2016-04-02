@@ -26,46 +26,24 @@ Note: Requires Python 3.4.x
 
 desc = "Nonrare item for leveling or crafting"
 
-# Text settings for various categories
-# This is where you would define general settings for a category, such as PlayAlertSound.
-# Each config should be its own array element.  Parsing will handle tabs/etc.
-# ignore and hide have special meaning(see comment) everything else is local to file
-settings = {
-	"very high": ["SetFontSize 28",
-				  "Sockets > 2",
-				  "SetBackgroundColor 0 0 0 100",
-				  "SetBorderColor 255 40 0"],
-	"high": ["SetFontSize 24",
-			 "Sockets > 2",
-			 "SetBackgroundColor 0 0 0 100",
-			 "SetBorderColor 0 100 150"],
-	"normal": ["SetFontSize 18",
-			   "Sockets > 2",
-			   "SetBackgroundColor 0 0 0 100",
-			   "SetBorderColor 100 100 100"],
-	"low": [""],
-	"ignore": [""],  # will have no styling applied and will use the default set at the end
-	"hide": [""]  # Will be explicitly hidden with applied styling
-}
-
 # Base type : settings pair
 # Base Type is displayed in the comments for the output file. as long as the name is unique it doesn't matter what it is
 # The resulting filter is sorted by Base Type, character by character; EG "03" < "1" < "100" < "3"
 # settings supports the following: 'base' (BaseType), 'class' (Class), 'other' (settings unique to that item)
 #  'type' (Mandatory, indexes settings)
 items = {
-	"Rusted Spike": {"base": "Rusted Spike", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 8"], "type": "normal"},
-	"Whalebone Rapier": {"base": "Whalebone Rapier", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 12"], "type": "normal"},
-	"Battered Foil": {"base": "Battered Foil", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 17"], "type": "normal"},
-	"Basket Rapier": {"base": "Basket Rapier", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 22"], "type": "normal"},
-	"Jagged Foil": {"base": "Jagged Foil", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 27"], "type": "normal"},
-	"Antique Rapier": {"base": "Antique Rapier", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 31"], "type": "normal"},
-	"Elegant Foil": {"base": "Elegant Foil", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 35"], "type": "normal"},
-	"Thorn Rapier": {"base": "Thorn Rapier", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 39"], "type": "normal"},
-	"Smallsword": {"base": "Smallsword", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 41"], "type": "normal"},
-	"Wyrmbone Rapier": {"base": "Wyrmbone Rapier", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 42"], "type": "normal"},
-	"Burnished Foil": {"base": "Burnished Foil", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 45"], "type": "normal"},
-	"Estoc": {"base": "Estoc", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 48"], "type": "normal"},
+	"Rusted Spike": {"base": "Rusted Spike", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 8"], "type": "leveling low"},
+	"Whalebone Rapier": {"base": "Whalebone Rapier", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 12"], "type": "leveling low"},
+	"Battered Foil": {"base": "Battered Foil", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 17"], "type": "leveling low"},
+	"Basket Rapier": {"base": "Basket Rapier", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 22"], "type": "leveling low"},
+	"Jagged Foil": {"base": "Jagged Foil", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 27"], "type": "leveling low"},
+	"Antique Rapier": {"base": "Antique Rapier", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 31"], "type": "leveling low"},
+	"Elegant Foil": {"base": "Elegant Foil", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 35"], "type": "leveling low"},
+	"Thorn Rapier": {"base": "Thorn Rapier", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 39"], "type": "leveling low"},
+	"Smallsword": {"base": "Smallsword", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 41"], "type": "leveling low"},
+	"Wyrmbone Rapier": {"base": "Wyrmbone Rapier", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 42"], "type": "leveling low"},
+	"Burnished Foil": {"base": "Burnished Foil", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 45"], "type": "leveling low"},
+	"Estoc": {"base": "Estoc", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 48"], "type": "leveling low"},
 	"Serrated Foil": {"base": "Serrated Foil", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 51"], "type": "ignore"},
 	"Primeval Rapier": {"base": "Primeval Rapier", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 54"], "type": "ignore"},
 	"Fancy Foil": {"base": "Fancy Foil", "class": "Thrusting One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 57"], "type": "ignore"},

@@ -26,47 +26,25 @@ Note: Requires Python 3.4.x
 
 desc = "Nonrare item for leveling or crafting"
 
-# Text settings for various categories
-# This is where you would define general settings for a category, such as PlayAlertSound.
-# Each config should be its own array element.  Parsing will handle tabs/etc.
-# ignore and hide have special meaning(see comment) everything else is local to file
-settings = {
-	"very high": ["SetFontSize 28",
-				  "Sockets > 2",
-				  "SetBackgroundColor 0 0 0 100",
-				  "SetBorderColor 255 40 0"],
-	"high": ["SetFontSize 24",
-			 "Sockets > 2",
-			 "SetBackgroundColor 0 0 0 100",
-			 "SetBorderColor 0 100 150"],
-	"normal": ["SetFontSize 18",
-			   "Sockets > 2",
-			   "SetBackgroundColor 0 0 0 100",
-			   "SetBorderColor 100 100 100"],
-	"low": [""],
-	"ignore": [""],  # will have no styling applied and will use the default set at the end
-	"hide": [""]  # Will be explicitly hidden with applied styling
-}
-
 # Base type : settings pair
 # Base Type is displayed in the comments for the output file. as long as the name is unique it doesn't matter what it is
 # The resulting filter is sorted by Base Type, character by character; EG "03" < "1" < "100" < "3"
 # settings supports the following: 'base' (BaseType), 'class' (Class), 'other' (settings unique to that item)
 #  'type' (Mandatory, indexes settings)
 items = {
-	"Rusted Hatchet": {"base": "Rusted Hatchet", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 7"], "type": "normal"},
-	"Jade Hatchet": {"base": "Jade Hatchet", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 11"], "type": "normal"},
-	"Boarding Axe": {"base": "Boarding Axe", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 16"], "type": "normal"},
-	"Cleaver": {"base": "Cleaver", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 21"], "type": "normal"},
-	"Broad Axe": {"base": "Broad Axe", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 26"], "type": "normal"},
-	"Arming Axe": {"base": "Arming Axe", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 30"], "type": "normal"},
-	"Decorative Axe": {"base": "Decorative Axe", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 34"], "type": "normal"},
-	"Spectral Axe": {"base": "Spectral Axe", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 38"], "type": "normal"},
-	"Etched Hatchet": {"base": "Etched Hatchet", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 40"], "type": "normal"},
-	"Jasper Axe": {"base": "Jasper Axe", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 41"], "type": "normal"},
-	"Tomahawk": {"base": "Tomahawk", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 44"], "type": "normal"},
-	"Wrist Chopper": {"base": "Wrist Chopper", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 47"], "type": "normal"},
-	"War Axe": {"base": "War Axe", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 50"], "type": "normal"},
+	"Rusted Hatchet": {"base": "Rusted Hatchet", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 7"], "type": "leveling low"},
+	"Jade Hatchet": {"base": "Jade Hatchet", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 11"], "type": "leveling low"},
+	"Boarding Axe": {"base": "Boarding Axe", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 16"], "type": "leveling low"},
+	"Cleaver": {"base": "Cleaver", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 21"], "type": "leveling low"},
+	"Broad Axe": {"base": "Broad Axe", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 26"], "type": "leveling low"},
+	"Arming Axe": {"base": "Arming Axe", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 30"], "type": "leveling low"},
+	"Decorative Axe": {"base": "Decorative Axe", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 34"], "type": "leveling low"},
+	"Spectral Axe": {"base": "Spectral Axe", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 38"], "type": "leveling low"},
+	"Etched Hatchet": {"base": "Etched Hatchet", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 40"], "type": "leveling low"},
+	"Jasper Axe": {"base": "Jasper Axe", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 41"], "type": "leveling low"},
+	"Tomahawk": {"base": "Tomahawk", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 44"], "type": "leveling low"},
+	"Wrist Chopper": {"base": "Wrist Chopper", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 47"], "type": "leveling low"},
+	"War Axe": {"base": "War Axe", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 50"], "type": "leveling low"},
 	"Chest Splitter": {"base": "Chest Splitter", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 53"], "type": "ignore"},
 	"Ceremonial Axe": {"base": "Ceremonial Axe", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 56"], "type": "ignore"},
 	"Wraith Axe": {"base": "Wraith Axe", "class": "One Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 59"], "type": "ignore"},

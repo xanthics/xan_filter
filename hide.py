@@ -26,16 +26,6 @@ Note: Requires Python 3.4.x
 
 desc = "Always Hide"
 
-# Text settings for various categories
-settings = {
-    "very high": [],
-    "high": [],
-    "normal": [],
-    "low": [],
-    "ignore": [""],
-    "hide": []
-}
-
 # Base type : settings pair
 items = {
 }

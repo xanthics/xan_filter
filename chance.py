@@ -26,33 +26,11 @@ Note: Requires Python 3.4.x
 
 desc = "Chance Base"
 
-# Text settings for various categories
-settings = {
-	"very high": ["Rarity Normal",
-				  "SetFontSize 40",
-				  "SetBackgroundColor 0 0 0 200",
-				  "SetBorderColor 191 91 0 150"],
-	"high": ["Rarity Normal",
-			 "SetFontSize 34",
-			 "SetBackgroundColor 0 0 0 200",
-			 "SetBorderColor 191 91 0 150"],
-	"normal": ["Rarity Normal",
-			   "SetFontSize 28",
-			   "SetBackgroundColor 0 0 0 200",
-			   "SetBorderColor 191 91 0 150"],
-	"low": ["Rarity Normal",
-			"SetFontSize 18",
-			"SetBackgroundColor 0 0 0 200",
-			"SetBorderColor 191 91 0 150"],
-	"ignore": [""],
-	"hide": [""]
-}
-
 # Base type : settings pair
 items = {
 	"0 Shavronne's Wrappings": {"base": "Occultist's Vestment", "type": "ignore"},
 	"0 Kaom's Heart": {"base": "Glorious Plate", "type": "ignore"},
 	"0 Void Battery": {"base": "Prophecy Wand", "type": "ignore"},
 	"0 Soul Taker": {"base": "Siege Axe", "type": "ignore"},
-	"0 Skyforth": {"base": "Sorcerer Boots", "type": "normal"}
+	"0 Skyforth": {"base": "Sorcerer Boots", "type": "chance"}
 }
