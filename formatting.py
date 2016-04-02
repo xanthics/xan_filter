@@ -37,7 +37,7 @@ settings = {
 
 	"t1 ilvl83/84 crafting": ["Rarity <= Magic"],
 
-	"currency very high": ["SetBorderColor 170 158 130", "SetFontSize 45", "PlayAlertSound 3 300"],
+	"currency very high": ["SetBorderColor 170 158 130", "SetFontSize 45", "PlayAlertSound 5 300"],
 	"currency high": ["SetBorderColor 170 158 130", "SetFontSize 37", "PlayAlertSound 5 75"],
 	"currency normal": ["SetBorderColor 170 158 130", "PlayAlertSound 5 25"],
 	"currency low": ["SetBorderColor 170 158 130 200", "SetFontSize 30"],
@@ -56,8 +56,8 @@ settings = {
 	"leveling normal": ["SetFontSize 24", "SetBackgroundColor 0 0 0 100", "SetBorderColor 0 100 150"],
 	"leveling low": ["SetFontSize 18", "Sockets > 2", "SetBackgroundColor 0 0 0 100", "SetBorderColor 100 100 100"],
 
-	"map very high": ["SetBorderColor 150 0 0", "SetFontSize 42", "PlayAlertSound 6 125"],
-	"map high": ["PlayAlertSound 2 100", "SetFontSize 37"],
+	"map very high": ["SetBorderColor 150 0 0", "SetFontSize 42", "PlayAlertSound 2 125"],
+	"map high": ["PlayAlertSound 2 75", "SetFontSize 37"],
 	"map normal": [""],
 
 	"levelling rare high": ["Rarity Rare", "SetBorderColor 255 255 119 150", "SetFontSize 34"],
