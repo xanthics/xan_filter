@@ -26,24 +26,7 @@ Note: Requires Python 3.4.x
 
 desc = "General Rares"
 
-# Text settings for various categories
-settings = {
-    "regal": ["Rarity Rare",
-              "ItemLevel >= 75",
-              "SetBackgroundColor 0 150 0"],
-    "chaos": ["Rarity Rare",
-              "ItemLevel >= 60",
-              "SetBackgroundColor 150 0 0"],
-    "very high": ["Rarity Rare"],
-    "high": ["Rarity Rare"],
-    "normal": ["Rarity Rare",
-               "SetFontSize 28"],
-    "low": ["Rarity Rare"],
-    "ignore": [""],
-    "hide": ["Rarity Rare"]
-}
-
 # Base type : settings pair
 items = {
-    "9 Other rares": {"type": "normal"}
+    "9 Other rares": {"type": "rare low"}
 }

@@ -26,44 +26,22 @@ Note: Requires Python 3.4.x
 
 desc = "Nonrare item for leveling or crafting"
 
-# Text settings for various categories
-# This is where you would define general settings for a category, such as PlayAlertSound.
-# Each config should be its own array element.  Parsing will handle tabs/etc.
-# ignore and hide have special meaning(see comment) everything else is local to file
-settings = {
-	"very high": ["SetFontSize 28",
-				  "Sockets > 2",
-				  "SetBackgroundColor 0 0 0 100",
-				  "SetBorderColor 255 40 0"],
-	"high": ["SetFontSize 24",
-			 "Sockets > 2",
-			 "SetBackgroundColor 0 0 0 100",
-			 "SetBorderColor 0 100 150"],
-	"normal": ["SetFontSize 18",
-			   "Sockets > 2",
-			   "SetBackgroundColor 0 0 0 100",
-			   "SetBorderColor 100 100 100"],
-	"low": [""],
-	"ignore": [""],  # will have no styling applied and will use the default set at the end
-	"hide": [""]  # Will be explicitly hidden with applied styling
-}
-
 # Base type : settings pair
 # Base Type is displayed in the comments for the output file. as long as the name is unique it doesn't matter what it is
 # The resulting filter is sorted by Base Type, character by character; EG "03" < "1" < "100" < "3"
 # settings supports the following: 'base' (BaseType), 'class' (Class), 'other' (settings unique to that item)
 #  'type' (Mandatory, indexes settings)
 items = {
-	"Driftwood Wand": {"base": "Driftwood Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 6"], "type": "normal"},
-	"Goat's Horn": {"base": "Goat's Horn", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 11"], "type": "normal"},
-	"Carved Wand": {"base": "Carved Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 17"], "type": "normal"},
-	"Quartz Wand": {"base": "Quartz Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 23"], "type": "normal"},
-	"Spiraled Wand": {"base": "Spiraled Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 29"], "type": "normal"},
-	"Sage Wand": {"base": "Sage Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 35"], "type": "normal"},
-	"Pagan Wand": {"base": "Pagan Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 39"], "type": "normal"},
-	"Faun's Horn": {"base": "Faun's Horn", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 40"], "type": "normal"},
-	"Engraved Wand": {"base": "Engraved Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 45"], "type": "normal"},
-	"Crystal Wand": {"base": "Crystal Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 50"], "type": "normal"},
+	"Driftwood Wand": {"base": "Driftwood Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 6"], "type": "leveling low"},
+	"Goat's Horn": {"base": "Goat's Horn", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 11"], "type": "leveling low"},
+	"Carved Wand": {"base": "Carved Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 17"], "type": "leveling low"},
+	"Quartz Wand": {"base": "Quartz Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 23"], "type": "leveling low"},
+	"Spiraled Wand": {"base": "Spiraled Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 29"], "type": "leveling low"},
+	"Sage Wand": {"base": "Sage Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 35"], "type": "leveling low"},
+	"Pagan Wand": {"base": "Pagan Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 39"], "type": "leveling low"},
+	"Faun's Horn": {"base": "Faun's Horn", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 40"], "type": "leveling low"},
+	"Engraved Wand": {"base": "Engraved Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 45"], "type": "leveling low"},
+	"Crystal Wand": {"base": "Crystal Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 50"], "type": "leveling low"},
 	"Serpent Wand": {"base": "Serpent Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 54"], "type": "ignore"},
 	"Omen Wand": {"base": "Omen Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 58"], "type": "ignore"},
 	"Heathen Wand": {"base": "Heathen Wand", "class": "Wand", "other": ["Rarity <= Magic", "ItemLevel <= 60"], "type": "ignore"},

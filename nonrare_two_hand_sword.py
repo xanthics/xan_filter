@@ -26,45 +26,23 @@ Note: Requires Python 3.4.x
 
 desc = "Nonrare item for leveling or crafting"
 
-# Text settings for various categories
-# This is where you would define general settings for a category, such as PlayAlertSound.
-# Each config should be its own array element.  Parsing will handle tabs/etc.
-# ignore and hide have special meaning(see comment) everything else is local to file
-settings = {
-	"very high": ["SetFontSize 28",
-				  "Sockets > 2",
-				  "SetBackgroundColor 0 0 0 100",
-				  "SetBorderColor 255 40 0"],
-	"high": ["SetFontSize 24",
-			 "Sockets > 2",
-			 "SetBackgroundColor 0 0 0 100",
-			 "SetBorderColor 0 100 150"],
-	"normal": ["SetFontSize 18",
-			   "Sockets > 2",
-			   "SetBackgroundColor 0 0 0 100",
-			   "SetBorderColor 100 100 100"],
-	"low": [""],
-	"ignore": [""],  # will have no styling applied and will use the default set at the end
-	"hide": [""]  # Will be explicitly hidden with applied styling
-}
-
 # Base type : settings pair
 # Base Type is displayed in the comments for the output file. as long as the name is unique it doesn't matter what it is
 # The resulting filter is sorted by Base Type, character by character; EG "03" < "1" < "100" < "3"
 # settings supports the following: 'base' (BaseType), 'class' (Class), 'other' (settings unique to that item)
 #  'type' (Mandatory, indexes settings)
 items = {
-	"Corroded Blade": {"base": "Corroded Blade", "class": "Two Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 8"], "type": "normal"},
-	"Longsword": {"base": "Longsword", "class": "Two Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 13"], "type": "normal"},
-	"Bastard Sword": {"base": "Bastard Sword", "class": "Two Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 17"], "type": "normal"},
-	"Two-Handed Sword": {"base": "Two-Handed Sword", "class": "Two Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 22"], "type": "normal"},
-	"Etched Greatsword": {"base": "Etched Greatsword", "class": "Two Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 27"], "type": "normal"},
-	"Ornate Sword": {"base": "Ornate Sword", "class": "Two Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 32"], "type": "normal"},
-	"Spectral Sword": {"base": "Spectral Sword", "class": "Two Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 37"], "type": "normal"},
-	"Curved Blade": {"base": "Curved Blade", "class": "Two Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 40"], "type": "normal"},
-	"Butcher Sword": {"base": "Butcher Sword", "class": "Two Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 41"], "type": "normal"},
-	"Footman Sword": {"base": "Footman Sword", "class": "Two Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 45"], "type": "normal"},
-	"Highland Blade": {"base": "Highland Blade", "class": "Two Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 49"], "type": "normal"},
+	"Corroded Blade": {"base": "Corroded Blade", "class": "Two Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 8"], "type": "leveling low"},
+	"Longsword": {"base": "Longsword", "class": "Two Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 13"], "type": "leveling low"},
+	"Bastard Sword": {"base": "Bastard Sword", "class": "Two Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 17"], "type": "leveling low"},
+	"Two-Handed Sword": {"base": "Two-Handed Sword", "class": "Two Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 22"], "type": "leveling low"},
+	"Etched Greatsword": {"base": "Etched Greatsword", "class": "Two Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 27"], "type": "leveling low"},
+	"Ornate Sword": {"base": "Ornate Sword", "class": "Two Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 32"], "type": "leveling low"},
+	"Spectral Sword": {"base": "Spectral Sword", "class": "Two Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 37"], "type": "leveling low"},
+	"Curved Blade": {"base": "Curved Blade", "class": "Two Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 40"], "type": "leveling low"},
+	"Butcher Sword": {"base": "Butcher Sword", "class": "Two Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 41"], "type": "leveling low"},
+	"Footman Sword": {"base": "Footman Sword", "class": "Two Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 45"], "type": "leveling low"},
+	"Highland Blade": {"base": "Highland Blade", "class": "Two Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 49"], "type": "leveling low"},
 	"Engraved Greatsword": {"base": "Engraved Greatsword", "class": "Two Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 53"], "type": "ignore"},
 	"Tiger Sword": {"base": "Tiger Sword", "class": "Two Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 56"], "type": "ignore"},
 	"Wraith Sword": {"base": "Wraith Sword", "class": "Two Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 59"], "type": "ignore"},

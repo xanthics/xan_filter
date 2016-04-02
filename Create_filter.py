@@ -81,9 +81,11 @@ import rare_highlight
 import crafting_bases
 import recipe_item
 import t1_rares
+import formatting
 
 
 def gen_list(obj):
+	print("Starting {}".format(obj))
 	b = ""
 
 	# gen our string
@@ -101,8 +103,10 @@ def gen_list(obj):
 				b += "\n\tClass \"{}\"".format(s['class'])
 			if 'other' in s:
 				b += "\n\t{}".format("\n\t".join(s['other']))
-			if obj.settings[s['type']]:
-				b += "\n\t{}".format("\n\t".join(obj.settings[s['type']]))
+			if formatting.settings[s['type']]:
+				b += "\n\t{}".format("\n\t".join(formatting.settings[s['type']]))
+			else:
+				print("Missing type field {} ** {}".format(obj, i))
 			b += "\n\n"
 
 	return b

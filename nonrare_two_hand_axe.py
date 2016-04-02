@@ -26,45 +26,23 @@ Note: Requires Python 3.4.x
 
 desc = "Nonrare item for leveling or crafting"
 
-# Text settings for various categories
-# This is where you would define general settings for a category, such as PlayAlertSound.
-# Each config should be its own array element.  Parsing will handle tabs/etc.
-# ignore and hide have special meaning(see comment) everything else is local to file
-settings = {
-	"very high": ["SetFontSize 28",
-				  "Sockets > 2",
-				  "SetBackgroundColor 0 0 0 100",
-				  "SetBorderColor 255 40 0"],
-	"high": ["SetFontSize 24",
-			 "Sockets > 2",
-			 "SetBackgroundColor 0 0 0 100",
-			 "SetBorderColor 0 100 150"],
-	"normal": ["SetFontSize 18",
-			   "Sockets > 2",
-			   "SetBackgroundColor 0 0 0 100",
-			   "SetBorderColor 100 100 100"],
-	"low": [""],
-	"ignore": [""],  # will have no styling applied and will use the default set at the end
-	"hide": [""]  # Will be explicitly hidden with applied styling
-}
-
 # Base type : settings pair
 # Base Type is displayed in the comments for the output file. as long as the name is unique it doesn't matter what it is
 # The resulting filter is sorted by Base Type, character by character; EG "03" < "1" < "100" < "3"
 # settings supports the following: 'base' (BaseType), 'class' (Class), 'other' (settings unique to that item)
 #  'type' (Mandatory, indexes settings)
 items = {
-	"Stone Axe": {"base": "Stone Axe", "class": "Two Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 9"], "type": "normal"},
-	"Jade Chopper": {"base": "Jade Chopper", "class": "Two Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 14"], "type": "normal"},
-	"Woodsplitter": {"base": "Woodsplitter", "class": "Two Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 18"], "type": "normal"},
-	"Poleaxe": {"base": "Poleaxe", "class": "Two Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 23"], "type": "normal"},
-	"Double Axe": {"base": "Double Axe", "class": "Two Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 28"], "type": "normal"},
-	"Gilded Axe": {"base": "Gilded Axe", "class": "Two Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 33"], "type": "normal"},
-	"Shadow Axe": {"base": "Shadow Axe", "class": "Two Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 38"], "type": "normal"},
-	"Dagger Axe": {"base": "Dagger Axe", "class": "Two Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 41"], "type": "normal"},
-	"Jasper Chopper": {"base": "Jasper Chopper", "class": "Two Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 42"], "type": "normal"},
-	"Timber Axe": {"base": "Timber Axe", "class": "Two Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 46"], "type": "normal"},
-	"Headsman Axe": {"base": "Headsman Axe", "class": "Two Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 50"], "type": "normal"},
+	"Stone Axe": {"base": "Stone Axe", "class": "Two Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 9"], "type": "leveling low"},
+	"Jade Chopper": {"base": "Jade Chopper", "class": "Two Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 14"], "type": "leveling low"},
+	"Woodsplitter": {"base": "Woodsplitter", "class": "Two Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 18"], "type": "leveling low"},
+	"Poleaxe": {"base": "Poleaxe", "class": "Two Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 23"], "type": "leveling low"},
+	"Double Axe": {"base": "Double Axe", "class": "Two Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 28"], "type": "leveling low"},
+	"Gilded Axe": {"base": "Gilded Axe", "class": "Two Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 33"], "type": "leveling low"},
+	"Shadow Axe": {"base": "Shadow Axe", "class": "Two Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 38"], "type": "leveling low"},
+	"Dagger Axe": {"base": "Dagger Axe", "class": "Two Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 41"], "type": "leveling low"},
+	"Jasper Chopper": {"base": "Jasper Chopper", "class": "Two Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 42"], "type": "leveling low"},
+	"Timber Axe": {"base": "Timber Axe", "class": "Two Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 46"], "type": "leveling low"},
+	"Headsman Axe": {"base": "Headsman Axe", "class": "Two Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 50"], "type": "leveling low"},
 	"Labrys": {"base": "Labrys", "class": "Two Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 54"], "type": "ignore"},
 	"Noble Axe": {"base": "Noble Axe", "class": "Two Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 57"], "type": "ignore"},
 	"Abyssal Axe": {"base": "Abyssal Axe", "class": "Two Hand Axe", "other": ["Rarity <= Magic", "ItemLevel <= 60"], "type": "ignore"},

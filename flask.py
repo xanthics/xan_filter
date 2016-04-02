@@ -26,21 +26,9 @@ Note: Requires Python 3.4.x
 
 desc = "Flasks"
 
-# Text settings for various categories
-settings = {
-    "very high": ["SetBorderColor 0 255 0",
-                  "SetFontSize 35"],
-    "high": ["SetBorderColor 0 150 0",
-             "SetFontSize 30"],
-    "normal": ["SetFontSize 28"],
-    "low": [""],
-    "ignore": [""],
-    "hide": [""]
-}
-
 # Base type : settings pair
 items = {
-    "01 Qual Flask": {"base": "Flask", "other": ["Quality >= 10"], "type": "very high"},
+    "01 Qual Flask": {"base": "Flask", "other": ["Quality >= 10"], "type": "flask high"},
     "02 Qual Flask": {"base": "Flask", "other": ["Quality >= 5"], "type": "normal"},
     "1 Diamond Flask": {"base": "Diamond Flask", "other": ["Rarity Normal"], "type": "normal"},
     "1 Granite Flask": {"base": "Granite Flask", "other": ["Rarity Normal"], "type": "normal"},

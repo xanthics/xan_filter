@@ -28,45 +28,23 @@ Note: Requires Python 3.4.x
 
 desc = "Nonrare item for leveling or crafting"
 
-# Text settings for various categories
-# This is where you would define general settings for a category, such as PlayAlertSound.
-# Each config should be its own array element.  Parsing will handle tabs/etc.
-# ignore and hide have special meaning(see comment) everything else is local to file
-settings = {
-	"very high": ["SetFontSize 28",
-				  "Sockets > 2",
-				  "SetBackgroundColor 0 0 0 100",
-				  "SetBorderColor 255 40 0"],
-	"high": ["SetFontSize 24",
-			 "Sockets > 2",
-			 "SetBackgroundColor 0 0 0 100",
-			 "SetBorderColor 0 100 150"],
-	"normal": ["SetFontSize 18",
-			   "Sockets > 2",
-			   "SetBackgroundColor 0 0 0 100",
-			   "SetBorderColor 100 100 100"],
-	"low": [""],
-	"ignore": [""],  # will have no styling applied and will use the default set at the end
-	"hide": [""]  # Will be explicitly hidden with applied styling
-}
-
 # Base type : settings pair
 # Base Type is displayed in the comments for the output file. as long as the name is unique it doesn't matter what it is
 # The resulting filter is sorted by Base Type, character by character; EG "03" < "1" < "100" < "3"
 # settings supports the following: 'base' (BaseType), 'class' (Class), 'other' (settings unique to that item)
 #  'type' (Mandatory, indexes settings)
 items = {
-	"Gnarled Branch": {"base": "Gnarled Branch", "class": "Staves", "other": ["Rarity <= Magic", "ItemLevel <= 9"], "type": "normal"},
-	"Primitive Staff": {"base": "Primitive Staff", "class": "Staves", "other": ["Rarity <= Magic", "ItemLevel <= 14"], "type": "normal"},
-	"Long Staff": {"base": "Long Staff", "class": "Staves", "other": ["Rarity <= Magic", "ItemLevel <= 18"], "type": "normal"},
-	"Iron Staff": {"base": "Iron Staff", "class": "Staves", "other": ["Rarity <= Magic", "ItemLevel <= 23"], "type": "normal"},
-	"Coiled Staff": {"base": "Coiled Staff", "class": "Staves", "other": ["Rarity <= Magic", "ItemLevel <= 28"], "type": "normal"},
-	"Royal Staff": {"base": "Royal Staff", "class": "Staves", "other": ["Rarity <= Magic", "ItemLevel <= 33"], "type": "normal"},
-	"Vile Staff": {"base": "Vile Staff", "class": "Staves", "other": ["Rarity <= Magic", "ItemLevel <= 38"], "type": "normal"},
-	"Crescent Staff": {"base": "Crescent Staff", "class": "Staves", "other": ["Rarity <= Magic", "ItemLevel <= 41"], "type": "normal"},
-	"Woodful Staff": {"base": "Woodful Staff", "class": "Staves", "other": ["Rarity <= Magic", "ItemLevel <= 42"], "type": "normal"},
-	"Quarterstaff": {"base": "Quarterstaff", "class": "Staves", "other": ["Rarity <= Magic", "ItemLevel <= 46"], "type": "normal"},
-	"Military Staff": {"base": "Military Staff", "class": "Staves", "other": ["Rarity <= Magic", "ItemLevel <= 50"], "type": "normal"},
+	"Gnarled Branch": {"base": "Gnarled Branch", "class": "Staves", "other": ["Rarity <= Magic", "ItemLevel <= 9"], "type": "leveling low"},
+	"Primitive Staff": {"base": "Primitive Staff", "class": "Staves", "other": ["Rarity <= Magic", "ItemLevel <= 14"], "type": "leveling low"},
+	"Long Staff": {"base": "Long Staff", "class": "Staves", "other": ["Rarity <= Magic", "ItemLevel <= 18"], "type": "leveling low"},
+	"Iron Staff": {"base": "Iron Staff", "class": "Staves", "other": ["Rarity <= Magic", "ItemLevel <= 23"], "type": "leveling low"},
+	"Coiled Staff": {"base": "Coiled Staff", "class": "Staves", "other": ["Rarity <= Magic", "ItemLevel <= 28"], "type": "leveling low"},
+	"Royal Staff": {"base": "Royal Staff", "class": "Staves", "other": ["Rarity <= Magic", "ItemLevel <= 33"], "type": "leveling low"},
+	"Vile Staff": {"base": "Vile Staff", "class": "Staves", "other": ["Rarity <= Magic", "ItemLevel <= 38"], "type": "leveling low"},
+	"Crescent Staff": {"base": "Crescent Staff", "class": "Staves", "other": ["Rarity <= Magic", "ItemLevel <= 41"], "type": "leveling low"},
+	"Woodful Staff": {"base": "Woodful Staff", "class": "Staves", "other": ["Rarity <= Magic", "ItemLevel <= 42"], "type": "leveling low"},
+	"Quarterstaff": {"base": "Quarterstaff", "class": "Staves", "other": ["Rarity <= Magic", "ItemLevel <= 46"], "type": "leveling low"},
+	"Military Staff": {"base": "Military Staff", "class": "Staves", "other": ["Rarity <= Magic", "ItemLevel <= 50"], "type": "leveling low"},
 	"Serpentine Staff": {"base": "Serpentine Staff", "class": "Staves", "other": ["Rarity <= Magic", "ItemLevel <= 54"], "type": "ignore"},
 	"Highborn Staff": {"base": "Highborn Staff", "class": "Staves", "other": ["Rarity <= Magic", "ItemLevel <= 57"], "type": "ignore"},
 	"Foul Staff": {"base": "Foul Staff", "class": "Staves", "other": ["Rarity <= Magic", "ItemLevel <= 60"], "type": "ignore"},

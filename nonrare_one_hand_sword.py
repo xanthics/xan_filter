@@ -26,47 +26,25 @@ Note: Requires Python 3.4.x
 
 desc = "Nonrare item for leveling or crafting"
 
-# Text settings for various categories
-# This is where you would define general settings for a category, such as PlayAlertSound.
-# Each config should be its own array element.  Parsing will handle tabs/etc.
-# ignore and hide have special meaning(see comment) everything else is local to file
-settings = {
-	"very high": ["SetFontSize 28",
-				  "Sockets > 2",
-				  "SetBackgroundColor 0 0 0 100",
-				  "SetBorderColor 255 40 0"],
-	"high": ["SetFontSize 24",
-			 "Sockets > 2",
-			 "SetBackgroundColor 0 0 0 100",
-			 "SetBorderColor 0 100 150"],
-	"normal": ["SetFontSize 18",
-			   "Sockets > 2",
-			   "SetBackgroundColor 0 0 0 100",
-			   "SetBorderColor 100 100 100"],
-	"low": [""],
-	"ignore": [""],  # will have no styling applied and will use the default set at the end
-	"hide": [""]  # Will be explicitly hidden with applied styling
-}
-
 # Base type : settings pair
 # Base Type is displayed in the comments for the output file. as long as the name is unique it doesn't matter what it is
 # The resulting filter is sorted by Base Type, character by character; EG "03" < "1" < "100" < "3"
 # settings supports the following: 'base' (BaseType), 'class' (Class), 'other' (settings unique to that item)
 #  'type' (Mandatory, indexes settings)
 items = {
-	"Rusted Sword": {"base": "Rusted Sword", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 6"], "type": "normal"},
-	"Copper Sword": {"base": "Copper Sword", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 10"], "type": "normal"},
-	"Sabre": {"base": "Sabre", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 15"], "type": "normal"},
-	"Broad Sword": {"base": "Broad Sword", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 20"], "type": "normal"},
-	"War Sword": {"base": "War Sword", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 25"], "type": "normal"},
-	"Ancient Sword": {"base": "Ancient Sword", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 29"], "type": "normal"},
-	"Elegant Sword": {"base": "Elegant Sword", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 33"], "type": "normal"},
-	"Dusk Blade": {"base": "Dusk Blade", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 37"], "type": "normal"},
-	"Hook Sword": {"base": "Hook Sword", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 39"], "type": "normal"},
-	"Variscite Blade": {"base": "Variscite Blade", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 40"], "type": "normal"},
-	"Cutlass": {"base": "Cutlass", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 43"], "type": "normal"},
-	"Baselard": {"base": "Baselard", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 46"], "type": "normal"},
-	"Battle Sword": {"base": "Battle Sword", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 49"], "type": "normal"},
+	"Rusted Sword": {"base": "Rusted Sword", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 6"], "type": "leveling low"},
+	"Copper Sword": {"base": "Copper Sword", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 10"], "type": "leveling low"},
+	"Sabre": {"base": "Sabre", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 15"], "type": "leveling low"},
+	"Broad Sword": {"base": "Broad Sword", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 20"], "type": "leveling low"},
+	"War Sword": {"base": "War Sword", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 25"], "type": "leveling low"},
+	"Ancient Sword": {"base": "Ancient Sword", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 29"], "type": "leveling low"},
+	"Elegant Sword": {"base": "Elegant Sword", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 33"], "type": "leveling low"},
+	"Dusk Blade": {"base": "Dusk Blade", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 37"], "type": "leveling low"},
+	"Hook Sword": {"base": "Hook Sword", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 39"], "type": "leveling low"},
+	"Variscite Blade": {"base": "Variscite Blade", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 40"], "type": "leveling low"},
+	"Cutlass": {"base": "Cutlass", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 43"], "type": "leveling low"},
+	"Baselard": {"base": "Baselard", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 46"], "type": "leveling low"},
+	"Battle Sword": {"base": "Battle Sword", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 49"], "type": "leveling low"},
 	"Elder Sword": {"base": "Elder Sword", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 52"], "type": "ignore"},
 	"Graceful Sword": {"base": "Graceful Sword", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 55"], "type": "ignore"},
 	"Twilight Blade": {"base": "Twilight Blade", "class": "One Hand Sword", "other": ["Rarity <= Magic", "ItemLevel <= 58"], "type": "ignore"},

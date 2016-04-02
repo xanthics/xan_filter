@@ -26,47 +26,25 @@ Note: Requires Python 3.4.x
 
 desc = "Nonrare item for leveling or crafting"
 
-# Text settings for various categories
-# This is where you would define general settings for a category, such as PlayAlertSound.
-# Each config should be its own array element.  Parsing will handle tabs/etc.
-# ignore and hide have special meaning(see comment) everything else is local to file
-settings = {
-	"very high": ["SetFontSize 28",
-				  "Sockets > 2",
-				  "SetBackgroundColor 0 0 0 100",
-				  "SetBorderColor 255 40 0"],
-	"high": ["SetFontSize 24",
-			 "Sockets > 2",
-			 "SetBackgroundColor 0 0 0 100",
-			 "SetBorderColor 0 100 150"],
-	"normal": ["SetFontSize 18",
-			   "Sockets > 2",
-			   "SetBackgroundColor 0 0 0 100",
-			   "SetBorderColor 100 100 100"],
-	"low": [""],
-	"ignore": [""],  # will have no styling applied and will use the default set at the end
-	"hide": [""]  # Will be explicitly hidden with applied styling
-}
-
 # Base type : settings pair
 # Base Type is displayed in the comments for the output file. as long as the name is unique it doesn't matter what it is
 # The resulting filter is sorted by Base Type, character by character; EG "03" < "1" < "100" < "3"
 # settings supports the following: 'base' (BaseType), 'class' (Class), 'other' (settings unique to that item)
 #  'type' (Mandatory, indexes settings)
 items = {
-	"Crude Bow": {"base": "Crude Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 6"], "type": "normal"},
-	"Short Bow": {"base": "Short Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 10"], "type": "normal"},
-	"Long Bow": {"base": "Long Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 14"], "type": "normal"},
-	"Composite Bow": {"base": "Composite Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 19"], "type": "normal"},
-	"Recurve Bow": {"base": "Recurve Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 23"], "type": "normal"},
-	"Bone Bow": {"base": "Bone Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 28"], "type": "normal"},
-	"Royal Bow": {"base": "Royal Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 33"], "type": "normal"},
-	"Death Bow": {"base": "Death Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 37"], "type": "high"},
-	"Grove Bow": {"base": "Grove Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 40"], "type": "normal"},
-	"Reflex Bow": {"base": "Reflex Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 41"], "type": "normal"},
-	"Decurve Bow": {"base": "Decurve Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 43"], "type": "normal"},
-	"Compound Bow": {"base": "Compound Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 46"], "type": "normal"},
-	"Sniper Bow": {"base": "Sniper Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 49"], "type": "normal"},
+	"Crude Bow": {"base": "Crude Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 6"], "type": "leveling low"},
+	"Short Bow": {"base": "Short Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 10"], "type": "leveling low"},
+	"Long Bow": {"base": "Long Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 14"], "type": "leveling low"},
+	"Composite Bow": {"base": "Composite Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 19"], "type": "leveling low"},
+	"Recurve Bow": {"base": "Recurve Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 23"], "type": "leveling low"},
+	"Bone Bow": {"base": "Bone Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 28"], "type": "leveling low"},
+	"Royal Bow": {"base": "Royal Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 33"], "type": "leveling low"},
+	"Death Bow": {"base": "Death Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 37"], "type": "leveling high"},
+	"Grove Bow": {"base": "Grove Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 40"], "type": "leveling low"},
+	"Reflex Bow": {"base": "Reflex Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 41"], "type": "leveling low"},
+	"Decurve Bow": {"base": "Decurve Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 43"], "type": "leveling low"},
+	"Compound Bow": {"base": "Compound Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 46"], "type": "leveling low"},
+	"Sniper Bow": {"base": "Sniper Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 49"], "type": "leveling low"},
 	"Ivory Bow": {"base": "Ivory Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 52"], "type": "ignore"},
 	"Highborn Bow": {"base": "Highborn Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 55"], "type": "ignore"},
 	"Decimation Bow": {"base": "Decimation Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 58"], "type": "ignore"},

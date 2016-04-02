@@ -26,47 +26,25 @@ Note: Requires Python 3.4.x
 
 desc = "Nonrare item for leveling or crafting"
 
-# Text settings for various categories
-# This is where you would define general settings for a category, such as PlayAlertSound.
-# Each config should be its own array element.  Parsing will handle tabs/etc.
-# ignore and hide have special meaning(see comment) everything else is local to file
-settings = {
-	"very high": ["SetFontSize 28",
-				  "Sockets > 2",
-				  "SetBackgroundColor 0 0 0 100",
-				  "SetBorderColor 255 40 0"],
-	"high": ["SetFontSize 24",
-			 "Sockets > 2",
-			 "SetBackgroundColor 0 0 0 100",
-			 "SetBorderColor 0 100 150"],
-	"normal": ["SetFontSize 18",
-			   "Sockets > 2",
-			   "SetBackgroundColor 0 0 0 100",
-			   "SetBorderColor 100 100 100"],
-	"low": [""],
-	"ignore": [""],  # will have no styling applied and will use the default set at the end
-	"hide": [""]  # Will be explicitly hidden with applied styling
-}
-
 # Base type : settings pair
 # Base Type is displayed in the comments for the output file. as long as the name is unique it doesn't matter what it is
 # The resulting filter is sorted by Base Type, character by character; EG "03" < "1" < "100" < "3"
 # settings supports the following: 'base' (BaseType), 'class' (Class), 'other' (settings unique to that item)
 #  'type' (Mandatory, indexes settings)
 items = {
-	"Glass Shank": {"base": "Glass Shank", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 6"], "type": "normal"},
-	"Skinning Knife": {"base": "Skinning Knife", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 10"], "type": "normal"},
-	"Carving Knife": {"base": "Carving Knife", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 15"], "type": "normal"},
-	"Stiletto": {"base": "Stiletto", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 20"], "type": "normal"},
-	"Boot Knife": {"base": "Boot Knife", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 25"], "type": "normal"},
-	"Copper Kris": {"base": "Copper Kris", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 29"], "type": "normal"},
-	"Skean": {"base": "Skean", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 33"], "type": "normal"},
-	"Imp Dagger": {"base": "Imp Dagger", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 37"], "type": "normal"},
-	"Flaying Knife": {"base": "Flaying Knife", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 40"], "type": "normal"},
-	"Prong Dagger": {"base": "Prong Dagger", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 41"], "type": "normal"},
-	"Butcher Knife": {"base": "Butcher Knife", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 43"], "type": "normal"},
-	"Poignard": {"base": "Poignard", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 46"], "type": "normal"},
-	"Boot Blade": {"base": "Boot Blade", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 49"], "type": "normal"},
+	"Glass Shank": {"base": "Glass Shank", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 6"], "type": "leveling low"},
+	"Skinning Knife": {"base": "Skinning Knife", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 10"], "type": "leveling low"},
+	"Carving Knife": {"base": "Carving Knife", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 15"], "type": "leveling low"},
+	"Stiletto": {"base": "Stiletto", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 20"], "type": "leveling low"},
+	"Boot Knife": {"base": "Boot Knife", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 25"], "type": "leveling low"},
+	"Copper Kris": {"base": "Copper Kris", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 29"], "type": "leveling low"},
+	"Skean": {"base": "Skean", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 33"], "type": "leveling low"},
+	"Imp Dagger": {"base": "Imp Dagger", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 37"], "type": "leveling low"},
+	"Flaying Knife": {"base": "Flaying Knife", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 40"], "type": "leveling low"},
+	"Prong Dagger": {"base": "Prong Dagger", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 41"], "type": "leveling low"},
+	"Butcher Knife": {"base": "Butcher Knife", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 43"], "type": "leveling low"},
+	"Poignard": {"base": "Poignard", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 46"], "type": "leveling low"},
+	"Boot Blade": {"base": "Boot Blade", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 49"], "type": "leveling low"},
 	"Golden Kris": {"base": "Golden Kris", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 52"], "type": "ignore"},
 	"Royal Skean": {"base": "Royal Skean", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 55"], "type": "ignore"},
 	"Fiend Dagger": {"base": "Fiend Dagger", "class": "Dagger", "other": ["Rarity <= Magic", "ItemLevel <= 58"], "type": "ignore"},

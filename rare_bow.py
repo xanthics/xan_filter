@@ -26,53 +26,35 @@ Note: Requires Python 3.4.x
 
 desc = "Nonrare item for leveling or crafting"
 
-# Text settings for various categories
-# This is where you would define general settings for a category, such as PlayAlertSound.
-# Each config should be its own array element.  Parsing will handle tabs/etc.
-# ignore and hide have special meaning(see comment) everything else is local to file
-settings = {
-	"very high": ["SetFontSize 28",
-				  "SetBackgroundColor 0 0 0 100",
-				  "SetBorderColor 255 40 0"],
-	"high": ["Rarity Rare",
-             "SetBorderColor 255 255 119",
-             "SetFontSize 34"],
-	"normal": ["Rarity Rare",
-             "SetBorderColor 255 255 119"],
-	"low": [""],
-	"ignore": [""],  # will have no styling applied and will use the default set at the end
-	"hide": [""]  # Will be explicitly hidden with applied styling
-}
-
 # Base type : settings pair
 # Base Type is displayed in the comments for the output file. as long as the name is unique it doesn't matter what it is
 # The resulting filter is sorted by Base Type, character by character; EG "03" < "1" < "100" < "3"
 # settings supports the following: 'base' (BaseType), 'class' (Class), 'other' (settings unique to that item)
 #  'type' (Mandatory, indexes settings)
 items = {
-	"Crude Bow": {"base": "Crude Bow", "class": "Bow", "other": ["ItemLevel <= 6"], "type": "normal"},
-	"Short Bow": {"base": "Short Bow", "class": "Bow", "other": ["ItemLevel <= 10"], "type": "normal"},
-	"Long Bow": {"base": "Long Bow", "class": "Bow", "other": ["ItemLevel <= 14"], "type": "normal"},
-	"Composite Bow": {"base": "Composite Bow", "class": "Bow", "other": ["ItemLevel <= 19"], "type": "normal"},
-	"Recurve Bow": {"base": "Recurve Bow", "class": "Bow", "other": ["ItemLevel <= 23"], "type": "normal"},
-	"Bone Bow": {"base": "Bone Bow", "class": "Bow", "other": ["ItemLevel <= 28"], "type": "normal"},
-	"Royal Bow": {"base": "Royal Bow", "class": "Bow", "other": ["ItemLevel <= 33"], "type": "normal"},
-	"Death Bow": {"base": "Death Bow", "class": "Bow", "other": ["ItemLevel <= 37"], "type": "high"},
-	"Grove Bow": {"base": "Grove Bow", "class": "Bow", "other": ["ItemLevel <= 40"], "type": "normal"},
-	"Reflex Bow": {"base": "Reflex Bow", "class": "Bow", "other": ["ItemLevel <= 41"], "type": "normal"},
-	"Decurve Bow": {"base": "Decurve Bow", "class": "Bow", "other": ["ItemLevel <= 43"], "type": "normal"},
-	"Compound Bow": {"base": "Compound Bow", "class": "Bow", "other": ["ItemLevel <= 46"], "type": "normal"},
-	"Sniper Bow": {"base": "Sniper Bow", "class": "Bow", "other": ["ItemLevel <= 49"], "type": "normal"},
-	"Ivory Bow": {"base": "Ivory Bow", "class": "Bow", "other": ["ItemLevel <= 52"], "type": "normal"},
-	"Highborn Bow": {"base": "Highborn Bow", "class": "Bow", "other": ["ItemLevel <= 55"], "type": "normal"},
-	"Decimation Bow": {"base": "Decimation Bow", "class": "Bow", "other": ["ItemLevel <= 58"], "type": "high"},
-	"Thicket Bow": {"base": "Thicket Bow", "class": "Bow", "other": ["ItemLevel <= 61"], "type": "normal"},
-	"Steelwood Bow": {"base": "Steelwood Bow", "class": "Bow", "other": ["ItemLevel <= 62"], "type": "normal"},
-	"Citadel Bow": {"base": "Citadel Bow", "class": "Bow", "other": ["ItemLevel <= 63"], "type": "normal"},
-	"Ranger Bow": {"base": "Ranger Bow", "class": "Bow", "other": ["ItemLevel <= 65"], "type": "normal"},
-	"Assassin Bow": {"base": "Assassin Bow", "class": "Bow", "other": ["ItemLevel <= 67"], "type": "normal"},
-	"Spine Bow": {"base": "Spine Bow", "class": "Bow", "other": ["ItemLevel <= 69"], "type": "normal"},
-	"Imperial Bow": {"base": "Imperial Bow", "class": "Bow", "other": ["ItemLevel <= 71"], "type": "normal"},
-	"Harbinger Bow": {"base": "Harbinger Bow", "class": "Bow", "other": ["ItemLevel <= 73"], "type": "high"},
-	"Maraketh Bow": {"base": "Maraketh Bow", "class": "Bow", "other": ["ItemLevel <= 76"], "type": "normal"}
+	"Crude Bow": {"base": "Crude Bow", "class": "Bow", "other": ["ItemLevel <= 6"], "type": "levelling rare normal"},
+	"Short Bow": {"base": "Short Bow", "class": "Bow", "other": ["ItemLevel <= 10"], "type": "levelling rare normal"},
+	"Long Bow": {"base": "Long Bow", "class": "Bow", "other": ["ItemLevel <= 14"], "type": "levelling rare normal"},
+	"Composite Bow": {"base": "Composite Bow", "class": "Bow", "other": ["ItemLevel <= 19"], "type": "levelling rare normal"},
+	"Recurve Bow": {"base": "Recurve Bow", "class": "Bow", "other": ["ItemLevel <= 23"], "type": "levelling rare normal"},
+	"Bone Bow": {"base": "Bone Bow", "class": "Bow", "other": ["ItemLevel <= 28"], "type": "levelling rare normal"},
+	"Royal Bow": {"base": "Royal Bow", "class": "Bow", "other": ["ItemLevel <= 33"], "type": "levelling rare normal"},
+	"Death Bow": {"base": "Death Bow", "class": "Bow", "other": ["ItemLevel <= 37"], "type": "levelling rare high"},
+	"Grove Bow": {"base": "Grove Bow", "class": "Bow", "other": ["ItemLevel <= 40"], "type": "levelling rare normal"},
+	"Reflex Bow": {"base": "Reflex Bow", "class": "Bow", "other": ["ItemLevel <= 41"], "type": "levelling rare normal"},
+	"Decurve Bow": {"base": "Decurve Bow", "class": "Bow", "other": ["ItemLevel <= 43"], "type": "levelling rare normal"},
+	"Compound Bow": {"base": "Compound Bow", "class": "Bow", "other": ["ItemLevel <= 46"], "type": "levelling rare normal"},
+	"Sniper Bow": {"base": "Sniper Bow", "class": "Bow", "other": ["ItemLevel <= 49"], "type": "levelling rare normal"},
+	"Ivory Bow": {"base": "Ivory Bow", "class": "Bow", "other": ["ItemLevel <= 52"], "type": "levelling rare normal"},
+	"Highborn Bow": {"base": "Highborn Bow", "class": "Bow", "other": ["ItemLevel <= 55"], "type": "levelling rare normal"},
+	"Decimation Bow": {"base": "Decimation Bow", "class": "Bow", "other": ["ItemLevel <= 58"], "type": "levelling rare high"},
+	"Thicket Bow": {"base": "Thicket Bow", "class": "Bow", "other": ["ItemLevel <= 61"], "type": "levelling rare normal"},
+	"Steelwood Bow": {"base": "Steelwood Bow", "class": "Bow", "other": ["ItemLevel <= 62"], "type": "levelling rare normal"},
+	"Citadel Bow": {"base": "Citadel Bow", "class": "Bow", "other": ["ItemLevel <= 63"], "type": "levelling rare normal"},
+	"Ranger Bow": {"base": "Ranger Bow", "class": "Bow", "other": ["ItemLevel <= 65"], "type": "levelling rare normal"},
+	"Assassin Bow": {"base": "Assassin Bow", "class": "Bow", "other": ["ItemLevel <= 67"], "type": "levelling rare normal"},
+	"Spine Bow": {"base": "Spine Bow", "class": "Bow", "other": ["ItemLevel <= 69"], "type": "levelling rare normal"},
+	"Imperial Bow": {"base": "Imperial Bow", "class": "Bow", "other": ["ItemLevel <= 71"], "type": "levelling rare normal"},
+	"Harbinger Bow": {"base": "Harbinger Bow", "class": "Bow", "other": ["ItemLevel <= 73"], "type": "levelling rare high"},
+	"Maraketh Bow": {"base": "Maraketh Bow", "class": "Bow", "other": ["ItemLevel <= 76"], "type": "levelling rare normal"}
 }

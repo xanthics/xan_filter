@@ -26,50 +26,32 @@ Note: Requires Python 3.4.x
 
 desc = "Nonrare item for leveling or crafting"
 
-# Text settings for various categories
-# This is where you would define general settings for a category, such as PlayAlertSound.
-# Each config should be its own array element.  Parsing will handle tabs/etc.
-# ignore and hide have special meaning(see comment) everything else is local to file
-settings = {
-	"very high": ["SetFontSize 28",
-				  "SetBackgroundColor 0 0 0 100",
-				  "SetBorderColor 255 40 0"],
-	"high": ["Rarity Rare",
-             "SetBorderColor 255 255 119",
-             "SetFontSize 34"],
-	"normal": ["Rarity Rare",
-             "SetBorderColor 255 255 119"],
-	"low": [""],
-	"ignore": [""],  # will have no styling applied and will use the default set at the end
-	"hide": [""]  # Will be explicitly hidden with applied styling
-}
-
 # Base type : settings pair
 # Base Type is displayed in the comments for the output file. as long as the name is unique it doesn't matter what it is
 # The resulting filter is sorted by Base Type, character by character; EG "03" < "1" < "100" < "3"
 # settings supports the following: 'base' (BaseType), 'class' (Class), 'other' (settings unique to that item)
 #  'type' (Mandatory, indexes settings)
 items = {
-	"Driftwood Maul": {"base": "Driftwood Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 8"], "type": "normal"},
-	"Tribal Maul": {"base": "Tribal Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 13"], "type": "normal"},
-	"Mallet": {"base": "Mallet", "class": "Two Hand Mace", "other": ["ItemLevel <= 17"], "type": "normal"},
-	"Sledgehammer": {"base": "Sledgehammer", "class": "Two Hand Mace", "other": ["ItemLevel <= 22"], "type": "normal"},
-	"Jagged Maul": {"base": "Jagged Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 27"], "type": "normal"},
-	"Brass Maul": {"base": "Brass Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 32"], "type": "normal"},
-	"Fright Maul": {"base": "Fright Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 37"], "type": "normal"},
-	"Morning Star": {"base": "Morning Star", "class": "Two Hand Mace", "other": ["ItemLevel <= 39"], "type": "normal"},
-	"Totemic Maul": {"base": "Totemic Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 41"], "type": "normal"},
-	"Great Mallet": {"base": "Great Mallet", "class": "Two Hand Mace", "other": ["ItemLevel <= 45"], "type": "normal"},
-	"Steelhead": {"base": "Steelhead", "class": "Two Hand Mace", "other": ["ItemLevel <= 49"], "type": "normal"},
-	"Spiny Maul": {"base": "Spiny Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 53"], "type": "normal"},
-	"Plated Maul": {"base": "Plated Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 56"], "type": "normal"},
-	"Dread Maul": {"base": "Dread Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 59"], "type": "normal"},
-	"Solar Maul": {"base": "Solar Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 61"], "type": "normal"},
-	"Karui Maul": {"base": "Karui Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 62"], "type": "normal"},
-	"Colossus Mallet": {"base": "Colossus Mallet", "class": "Two Hand Mace", "other": ["ItemLevel <= 64"], "type": "normal"},
-	"Piledriver": {"base": "Piledriver", "class": "Two Hand Mace", "other": ["ItemLevel <= 66"], "type": "normal"},
-	"Meatgrinder": {"base": "Meatgrinder", "class": "Two Hand Mace", "other": ["ItemLevel <= 68"], "type": "normal"},
-	"Imperial Maul": {"base": "Imperial Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 70"], "type": "normal"},
-	"Terror Maul": {"base": "Terror Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 72"], "type": "normal"},
-	"Coronal Maul": {"base": "Coronal Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 74"], "type": "normal"}
+	"Driftwood Maul": {"base": "Driftwood Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 8"], "type": "levelling rare normal"},
+	"Tribal Maul": {"base": "Tribal Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 13"], "type": "levelling rare normal"},
+	"Mallet": {"base": "Mallet", "class": "Two Hand Mace", "other": ["ItemLevel <= 17"], "type": "levelling rare normal"},
+	"Sledgehammer": {"base": "Sledgehammer", "class": "Two Hand Mace", "other": ["ItemLevel <= 22"], "type": "levelling rare normal"},
+	"Jagged Maul": {"base": "Jagged Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 27"], "type": "levelling rare normal"},
+	"Brass Maul": {"base": "Brass Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 32"], "type": "levelling rare normal"},
+	"Fright Maul": {"base": "Fright Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 37"], "type": "levelling rare normal"},
+	"Morning Star": {"base": "Morning Star", "class": "Two Hand Mace", "other": ["ItemLevel <= 39"], "type": "levelling rare normal"},
+	"Totemic Maul": {"base": "Totemic Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 41"], "type": "levelling rare normal"},
+	"Great Mallet": {"base": "Great Mallet", "class": "Two Hand Mace", "other": ["ItemLevel <= 45"], "type": "levelling rare normal"},
+	"Steelhead": {"base": "Steelhead", "class": "Two Hand Mace", "other": ["ItemLevel <= 49"], "type": "levelling rare normal"},
+	"Spiny Maul": {"base": "Spiny Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 53"], "type": "levelling rare normal"},
+	"Plated Maul": {"base": "Plated Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 56"], "type": "levelling rare normal"},
+	"Dread Maul": {"base": "Dread Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 59"], "type": "levelling rare normal"},
+	"Solar Maul": {"base": "Solar Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 61"], "type": "levelling rare normal"},
+	"Karui Maul": {"base": "Karui Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 62"], "type": "levelling rare normal"},
+	"Colossus Mallet": {"base": "Colossus Mallet", "class": "Two Hand Mace", "other": ["ItemLevel <= 64"], "type": "levelling rare normal"},
+	"Piledriver": {"base": "Piledriver", "class": "Two Hand Mace", "other": ["ItemLevel <= 66"], "type": "levelling rare normal"},
+	"Meatgrinder": {"base": "Meatgrinder", "class": "Two Hand Mace", "other": ["ItemLevel <= 68"], "type": "levelling rare normal"},
+	"Imperial Maul": {"base": "Imperial Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 70"], "type": "levelling rare normal"},
+	"Terror Maul": {"base": "Terror Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 72"], "type": "levelling rare normal"},
+	"Coronal Maul": {"base": "Coronal Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 74"], "type": "levelling rare normal"}
 }
