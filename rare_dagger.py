@@ -53,8 +53,8 @@ items = {
 	"Slaughter Knife": {"base": "Slaughter Knife", "class": "Dagger", "other": ["ItemLevel <= 63"], "type": "levelling rare normal"},
 	"Ambusher": {"base": "Ambusher", "class": "Dagger", "other": ["ItemLevel <= 65"], "type": "levelling rare normal"},
 	"Ezomyte Dagger": {"base": "Ezomyte Dagger", "class": "Dagger", "other": ["ItemLevel <= 67"], "type": "levelling rare normal"},
-	"Platinum Kris": {"base": "Platinum Kris", "class": "Dagger", "other": ["ItemLevel <= 69"], "type": "levelling rare normal"},
-	"Imperial Skean": {"base": "Imperial Skean", "class": "Dagger", "other": ["ItemLevel <= 71"], "type": "levelling rare normal"},
-	"Demon Dagger": {"base": "Demon Dagger", "class": "Dagger", "other": ["ItemLevel <= 73"], "type": "levelling rare normal"},
-	"Sai": {"base": "Sai", "class": "Dagger", "other": ["ItemLevel <= 75"], "type": "levelling rare normal"}
+	"Platinum Kris": {"base": "Platinum Kris", "class": "Dagger", "other": ["ItemLevel <= 69"], "type": "ignore"},
+	"Imperial Skean": {"base": "Imperial Skean", "class": "Dagger", "other": ["ItemLevel <= 71"], "type": "ignore"},
+	"Demon Dagger": {"base": "Demon Dagger", "class": "Dagger", "other": ["ItemLevel <= 73"], "type": "ignore"},
+	"Sai": {"base": "Sai", "class": "Dagger", "other": ["ItemLevel <= 75"], "type": "ignore"}
 }

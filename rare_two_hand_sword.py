@@ -50,8 +50,8 @@ items = {
 	"Headman's Sword": {"base": "Headman's Sword", "class": "Two Hand Sword", "other": ["ItemLevel <= 62"], "type": "levelling rare normal"},
 	"Reaver Sword": {"base": "Reaver Sword", "class": "Two Hand Sword", "other": ["ItemLevel <= 64"], "type": "levelling rare normal"},
 	"Ezomyte Blade": {"base": "Ezomyte Blade", "class": "Two Hand Sword", "other": ["ItemLevel <= 66"], "type": "levelling rare normal"},
-	"Vaal Greatsword": {"base": "Vaal Greatsword", "class": "Two Hand Sword", "other": ["ItemLevel <= 68"], "type": "levelling rare normal"},
-	"Lion Sword": {"base": "Lion Sword", "class": "Two Hand Sword", "other": ["ItemLevel <= 70"], "type": "levelling rare normal"},
-	"Infernal Sword": {"base": "Infernal Sword", "class": "Two Hand Sword", "other": ["ItemLevel <= 72"], "type": "levelling rare normal"},
-	"Exquisite Blade": {"base": "Exquisite Blade", "class": "Two Hand Sword", "other": ["ItemLevel <= 75"], "type": "levelling rare normal"}
+	"Vaal Greatsword": {"base": "Vaal Greatsword", "class": "Two Hand Sword", "other": ["ItemLevel <= 68"], "type": "ignore"},
+	"Lion Sword": {"base": "Lion Sword", "class": "Two Hand Sword", "other": ["ItemLevel <= 70"], "type": "ignore"},
+	"Infernal Sword": {"base": "Infernal Sword", "class": "Two Hand Sword", "other": ["ItemLevel <= 72"], "type": "ignore"},
+	"Exquisite Blade": {"base": "Exquisite Blade", "class": "Two Hand Sword", "other": ["ItemLevel <= 75"], "type": "ignore"}
 }

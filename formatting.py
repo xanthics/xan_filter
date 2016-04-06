@@ -81,7 +81,7 @@ settings = {
 
 	"normal": ["SetFontSize 28"],
 	"low": ["SetFontSize 18", "SetBackgroundColor 0 0 0 100", "SetBorderColor 100 100 100"],
+
 	"ignore": [""],  # will have no styling applied and will use the default set at the end
 	"hide": [""]  # Will be explicitly hidden with applied styling
-
 }

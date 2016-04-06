@@ -53,8 +53,8 @@ items = {
 	"Citadel Bow": {"base": "Citadel Bow", "class": "Bow", "other": ["ItemLevel <= 63"], "type": "levelling rare normal"},
 	"Ranger Bow": {"base": "Ranger Bow", "class": "Bow", "other": ["ItemLevel <= 65"], "type": "levelling rare normal"},
 	"Assassin Bow": {"base": "Assassin Bow", "class": "Bow", "other": ["ItemLevel <= 67"], "type": "levelling rare normal"},
-	"Spine Bow": {"base": "Spine Bow", "class": "Bow", "other": ["ItemLevel <= 69"], "type": "levelling rare normal"},
-	"Imperial Bow": {"base": "Imperial Bow", "class": "Bow", "other": ["ItemLevel <= 71"], "type": "levelling rare normal"},
-	"Harbinger Bow": {"base": "Harbinger Bow", "class": "Bow", "other": ["ItemLevel <= 73"], "type": "levelling rare high"},
-	"Maraketh Bow": {"base": "Maraketh Bow", "class": "Bow", "other": ["ItemLevel <= 76"], "type": "levelling rare normal"}
+	"Spine Bow": {"base": "Spine Bow", "class": "Bow", "other": ["ItemLevel <= 69"], "type": "ignore"},
+	"Imperial Bow": {"base": "Imperial Bow", "class": "Bow", "other": ["ItemLevel <= 71"], "type": "ignore"},
+	"Harbinger Bow": {"base": "Harbinger Bow", "class": "Bow", "other": ["ItemLevel <= 73"], "type": "ignore"},
+	"Maraketh Bow": {"base": "Maraketh Bow", "class": "Bow", "other": ["ItemLevel <= 76"], "type": "ignore"}
 }
