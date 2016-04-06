@@ -50,8 +50,8 @@ items = {
 	"Talon Axe": {"base": "Talon Axe", "class": "Two Hand Axe", "other": ["ItemLevel <= 64"], "type": "levelling rare normal"},
 	"Sundering Axe": {"base": "Sundering Axe", "class": "Two Hand Axe", "other": ["ItemLevel <= 65"], "type": "levelling rare normal"},
 	"Ezomyte Axe": {"base": "Ezomyte Axe", "class": "Two Hand Axe", "other": ["ItemLevel <= 67"], "type": "levelling rare normal"},
-	"Vaal Axe": {"base": "Vaal Axe", "class": "Two Hand Axe", "other": ["ItemLevel <= 69"], "type": "levelling rare normal"},
-	"Despot Axe": {"base": "Despot Axe", "class": "Two Hand Axe", "other": ["ItemLevel <= 71"], "type": "levelling rare normal"},
-	"Void Axe": {"base": "Void Axe", "class": "Two Hand Axe", "other": ["ItemLevel <= 73"], "type": "levelling rare normal"},
-	"Fleshripper": {"base": "Fleshripper", "class": "Two Hand Axe", "other": ["ItemLevel <= 75"], "type": "levelling rare normal"}
+	"Vaal Axe": {"base": "Vaal Axe", "class": "Two Hand Axe", "other": ["ItemLevel <= 69"], "type": "ignore"},
+	"Despot Axe": {"base": "Despot Axe", "class": "Two Hand Axe", "other": ["ItemLevel <= 71"], "type": "ignore"},
+	"Void Axe": {"base": "Void Axe", "class": "Two Hand Axe", "other": ["ItemLevel <= 73"], "type": "ignore"},
+	"Fleshripper": {"base": "Fleshripper", "class": "Two Hand Axe", "other": ["ItemLevel <= 75"], "type": "ignore"}
 }

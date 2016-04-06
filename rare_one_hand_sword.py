@@ -53,8 +53,8 @@ items = {
 	"Corsair Sword": {"base": "Corsair Sword", "class": "One Hand Sword", "other": ["ItemLevel <= 63"], "type": "levelling rare normal"},
 	"Gladius": {"base": "Gladius", "class": "One Hand Sword", "other": ["ItemLevel <= 65"], "type": "levelling rare normal"},
 	"Legion Sword": {"base": "Legion Sword", "class": "One Hand Sword", "other": ["ItemLevel <= 67"], "type": "levelling rare normal"},
-	"Vaal Blade": {"base": "Vaal Blade", "class": "One Hand Sword", "other": ["ItemLevel <= 69"], "type": "levelling rare normal"},
-	"Eternal Sword": {"base": "Eternal Sword", "class": "One Hand Sword", "other": ["ItemLevel <= 71"], "type": "levelling rare normal"},
-	"Midnight Blade": {"base": "Midnight Blade", "class": "One Hand Sword", "other": ["ItemLevel <= 73"], "type": "levelling rare normal"},
-	"Tiger Hook": {"base": "Tiger Hook", "class": "One Hand Sword", "other": ["ItemLevel <= 75"], "type": "levelling rare normal"}
+	"Vaal Blade": {"base": "Vaal Blade", "class": "One Hand Sword", "other": ["ItemLevel <= 69"], "type": "ignore"},
+	"Eternal Sword": {"base": "Eternal Sword", "class": "One Hand Sword", "other": ["ItemLevel <= 71"], "type": "ignore"},
+	"Midnight Blade": {"base": "Midnight Blade", "class": "One Hand Sword", "other": ["ItemLevel <= 73"], "type": "ignore"},
+	"Tiger Hook": {"base": "Tiger Hook", "class": "One Hand Sword", "other": ["ItemLevel <= 75"], "type": "ignore"}
 }

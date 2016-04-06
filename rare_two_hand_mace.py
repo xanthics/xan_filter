@@ -50,8 +50,8 @@ items = {
 	"Karui Maul": {"base": "Karui Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 62"], "type": "levelling rare normal"},
 	"Colossus Mallet": {"base": "Colossus Mallet", "class": "Two Hand Mace", "other": ["ItemLevel <= 64"], "type": "levelling rare normal"},
 	"Piledriver": {"base": "Piledriver", "class": "Two Hand Mace", "other": ["ItemLevel <= 66"], "type": "levelling rare normal"},
-	"Meatgrinder": {"base": "Meatgrinder", "class": "Two Hand Mace", "other": ["ItemLevel <= 68"], "type": "levelling rare normal"},
-	"Imperial Maul": {"base": "Imperial Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 70"], "type": "levelling rare normal"},
-	"Terror Maul": {"base": "Terror Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 72"], "type": "levelling rare normal"},
-	"Coronal Maul": {"base": "Coronal Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 74"], "type": "levelling rare normal"}
+	"Meatgrinder": {"base": "Meatgrinder", "class": "Two Hand Mace", "other": ["ItemLevel <= 68"], "type": "ignore"},
+	"Imperial Maul": {"base": "Imperial Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 70"], "type": "ignore"},
+	"Terror Maul": {"base": "Terror Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 72"], "type": "ignore"},
+	"Coronal Maul": {"base": "Coronal Maul", "class": "Two Hand Mace", "other": ["ItemLevel <= 74"], "type": "ignore"}
 }

@@ -52,8 +52,8 @@ items = {
 	"Primordial Staff": {"base": "Primordial Staff", "class": "Staves", "other": ["ItemLevel <= 63"], "type": "levelling rare normal"},
 	"Lathi": {"base": "Lathi", "class": "Staves", "other": ["ItemLevel <= 65"], "type": "levelling rare normal"},
 	"Ezomyte Staff": {"base": "Ezomyte Staff", "class": "Staves", "other": ["ItemLevel <= 67"], "type": "levelling rare normal"},
-	"Maelström Staff": {"base": "Maelström Staff", "class": "Staves", "other": ["ItemLevel <= 69"], "type": "levelling rare normal"},
-	"Imperial Staff": {"base": "Imperial Staff", "class": "Staves", "other": ["ItemLevel <= 71"], "type": "levelling rare normal"},
-	"Judgement Staff": {"base": "Judgement Staff", "class": "Staves", "other": ["ItemLevel <= 73"], "type": "levelling rare normal"},
-	"Eclipse Staff": {"base": "Eclipse Staff", "class": "Staves", "other": ["ItemLevel <= 75"], "type": "levelling rare normal"}
+	"Maelström Staff": {"base": "Maelström Staff", "class": "Staves", "other": ["ItemLevel <= 69"], "type": "ignore"},
+	"Imperial Staff": {"base": "Imperial Staff", "class": "Staves", "other": ["ItemLevel <= 71"], "type": "ignore"},
+	"Judgement Staff": {"base": "Judgement Staff", "class": "Staves", "other": ["ItemLevel <= 73"], "type": "ignore"},
+	"Eclipse Staff": {"base": "Eclipse Staff", "class": "Staves", "other": ["ItemLevel <= 75"], "type": "ignore"}
 }
