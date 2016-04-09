@@ -56,8 +56,8 @@ settings = {
 	"leveling normal": ["SetFontSize 24", "SetBackgroundColor 0 0 0 100", "SetBorderColor 0 100 150"],
 	"leveling low": ["SetFontSize 18", "Sockets > 2", "SetBackgroundColor 0 0 0 100", "SetBorderColor 100 100 100"],
 
-	"map very high": ["SetBorderColor 150 0 0", "SetFontSize 42", "PlayAlertSound 2 125"],
-	"map high": ["PlayAlertSound 2 75", "SetFontSize 37"],
+	"map very high": ["SetBorderColor 150 0 0", "SetFontSize 42", "PlayAlertSound 8 125"],
+	"map high": ["PlayAlertSound 8 75", "SetFontSize 37"],
 	"map normal": [""],
 
 	"levelling rare high": ["Rarity Rare", "SetBorderColor 255 255 119 150", "SetFontSize 34"],
