@@ -144,6 +144,7 @@ def main():
 		buffer += gen_list(general_levelling)
 	buffer += gen_list(chance)  # Chance bases
 	buffer += gen_list(crafting_bases)  # Crafting bases
+
 	if leveling:
 		for nonrareitemleveling in [nonrare_armor_dex, nonrare_armor_dex_int, nonrare_armor_str_dex, nonrare_armor_str,
 									nonrare_armor_int, nonrare_armor_str_int, nonrare_bow, nonrare_claw, nonrare_dagger,
@@ -168,7 +169,7 @@ def main():
 		f.write(buffer)
 		# Default for all other items
 		f.write("Hide\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
-	with open(path.expanduser(r"~\Documents\my games\Path of Exile\xan.show.filter"), "w") as f:
+	with open(path.expanduser(r"~\Documents\my games\Path of Exile\xan.hide.filter"), "w") as f:
 		f.write(buffer)
 		# Default for all other items
 		f.write("Hide\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
