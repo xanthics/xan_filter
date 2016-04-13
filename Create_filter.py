@@ -82,6 +82,7 @@ import crafting_bases
 import recipe_item
 import t1_rares
 import formatting
+from os import path
 
 
 def gen_list(obj):
@@ -152,15 +153,22 @@ def main():
 									nonrare_two_hand_axe, nonrare_wand]:
 			buffer += gen_list(nonrareitemleveling)
 
+	print("Writing files to {}".format(path.expanduser("~/my game/Path of Exile/")))
 
 	with open("xan.show.filter", "w") as f:
-#	with open(r"C:\Users\xanthic42\Documents\my games\Path of Exile\xan.show.filter", "w") as f:
+		f.write(buffer)
+		# Default for all other items
+		f.write("Show\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
+	with open(path.expanduser(r"~\Documents\my games\Path of Exile\xan.show.filter"), "w") as f:
 		f.write(buffer)
 		# Default for all other items
 		f.write("Show\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
 
 	with open("xan.hide.filter", "w") as f:
-#	with open(r"C:\Users\xanthic42\Documents\my games\Path of Exile\xan.hide.filter", "w") as f:
+		f.write(buffer)
+		# Default for all other items
+		f.write("Hide\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
+	with open(path.expanduser(r"~\Documents\my games\Path of Exile\xan.show.filter"), "w") as f:
 		f.write(buffer)
 		# Default for all other items
 		f.write("Hide\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
