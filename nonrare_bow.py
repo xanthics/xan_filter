@@ -39,7 +39,7 @@ items = {
 	"Recurve Bow": {"base": "Recurve Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 23"], "type": "leveling low"},
 	"Bone Bow": {"base": "Bone Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 28"], "type": "leveling low"},
 	"Royal Bow": {"base": "Royal Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 33"], "type": "leveling low"},
-	"Death Bow": {"base": "Death Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 37"], "type": "leveling high"},
+	"Death Bow": {"base": "Death Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 37"], "type": "leveling normal"},
 	"Grove Bow": {"base": "Grove Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 40"], "type": "leveling low"},
 	"Reflex Bow": {"base": "Reflex Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 41"], "type": "leveling low"},
 	"Decurve Bow": {"base": "Decurve Bow", "class": "Bow", "other": ["Rarity <= Magic", "ItemLevel <= 43"], "type": "leveling low"},

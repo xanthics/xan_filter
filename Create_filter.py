@@ -114,6 +114,9 @@ def gen_list(obj):
 
 # main function for creating a filter
 def main():
+
+	leveling = False  # toggle to show leveling items
+
 	buffer = ""
 
 	buffer += gen_list(show)  # Always show these items
@@ -121,56 +124,34 @@ def main():
 	buffer += gen_list(currency)  # Currency
 	buffer += gen_list(gems)  # Gems
 	buffer += gen_list(uniques)  # uniques
-#	buffer += gen_list(recipe_item)  # Items for vendor recipe
+	buffer += gen_list(recipe_item)  # Items for vendor recipe
 	buffer += gen_list(maps)  # maps
 	buffer += gen_list(divination)  # divination cards
 	buffer += gen_list(flask)  # Flasks
 	buffer += gen_list(t1_rares)
-	buffer += gen_list(rare_armor_dex)
-	buffer += gen_list(rare_armor_dex_int)
-	buffer += gen_list(rare_armor_str_dex)
-	buffer += gen_list(rare_armor_str)
-	buffer += gen_list(rare_armor_int)
-	buffer += gen_list(rare_armor_str_int)
-	buffer += gen_list(rare_bow)
-	buffer += gen_list(rare_claw)
-	buffer += gen_list(rare_dagger)
-	buffer += gen_list(rare_one_hand_sword)
-	buffer += gen_list(rare_one_hand_mace)
-	buffer += gen_list(rare_one_hand_axe)
-	buffer += gen_list(rare_sceptre)
-	buffer += gen_list(rare_staff)
-	buffer += gen_list(rare_thrusting_one_hand_sword)
-	buffer += gen_list(rare_two_hand_sword)
-	buffer += gen_list(rare_two_hand_mace)
-	buffer += gen_list(rare_two_hand_axe)
-	buffer += gen_list(rare_wand)
+	if leveling:
+		for rareitemleveling in [rare_armor_dex, rare_armor_dex_int, rare_armor_str_dex, rare_armor_str, rare_armor_int,
+						 rare_armor_str_int, rare_bow, rare_claw, rare_dagger, rare_one_hand_sword, rare_one_hand_mace,
+						 rare_one_hand_axe, rare_sceptre, rare_staff, rare_thrusting_one_hand_sword,
+						 rare_two_hand_sword, rare_two_hand_mace, rare_two_hand_axe, rare_wand]:
+			buffer += gen_list(rareitemleveling)
+
 	buffer += gen_list(rare_highlight)  # rares highlighting + jewelry
 	buffer += gen_list(rares)  # rares catchall
 	buffer += gen_list(chroma)  # chrome vendor items
-	buffer += gen_list(general_levelling)
+	if leveling:
+		buffer += gen_list(general_levelling)
 	buffer += gen_list(chance)  # Chance bases
 	buffer += gen_list(crafting_bases)  # Crafting bases
-	buffer += gen_list(nonrare_armor_dex)
-	buffer += gen_list(nonrare_armor_dex_int)
-	buffer += gen_list(nonrare_armor_str_dex)
-	buffer += gen_list(nonrare_armor_str)
-	buffer += gen_list(nonrare_armor_int)
-	buffer += gen_list(nonrare_armor_str_int)
-	buffer += gen_list(nonrare_bow)
-	buffer += gen_list(nonrare_claw)
-	buffer += gen_list(nonrare_dagger)
-	buffer += gen_list(nonrare_jewelry)
-	buffer += gen_list(nonrare_one_hand_sword)
-	buffer += gen_list(nonrare_one_hand_mace)
-	buffer += gen_list(nonrare_one_hand_axe)
-	buffer += gen_list(nonrare_sceptre)
-	buffer += gen_list(nonrare_staff)
-	buffer += gen_list(nonrare_thrusting_one_hand_sword)
-	buffer += gen_list(nonrare_two_hand_sword)
-	buffer += gen_list(nonrare_two_hand_mace)
-	buffer += gen_list(nonrare_two_hand_axe)
-	buffer += gen_list(nonrare_wand)
+	if leveling:
+		for nonrareitemleveling in [nonrare_armor_dex, nonrare_armor_dex_int, nonrare_armor_str_dex, nonrare_armor_str,
+									nonrare_armor_int, nonrare_armor_str_int, nonrare_bow, nonrare_claw, nonrare_dagger,
+									nonrare_jewelry, nonrare_one_hand_sword, nonrare_one_hand_mace,
+									nonrare_one_hand_axe, nonrare_sceptre, nonrare_staff,
+									nonrare_thrusting_one_hand_sword, nonrare_two_hand_sword, nonrare_two_hand_mace,
+									nonrare_two_hand_axe, nonrare_wand]:
+			buffer += gen_list(nonrareitemleveling)
+
 
 	with open("xan.show.filter", "w") as f:
 #	with open(r"C:\Users\xanthic42\Documents\my games\Path of Exile\xan.show.filter", "w") as f:
