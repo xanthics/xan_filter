@@ -26,7 +26,7 @@ Note: Requires Python 3.4.x
 
 desc = "formatting template for all files"
 
-defaultbg = "SetBackgroundColor 0 0 0 175"  # Background for all items  except leveing/low
+defaultbg = "SetBackgroundColor 0 0 0 220"  # Background for all items  except leveing/low
 
 # Text settings for various categories
 # This is where you would define general settings for a category, such as PlayAlertSound.
