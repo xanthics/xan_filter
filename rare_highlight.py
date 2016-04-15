@@ -101,7 +101,7 @@ items = {
     "0 Spike-Point Arrow Quiver": {"base": "Spike-Point Arrow Quiver", "class": "Quivers", "type": "rare high"},
     "0 Broadhead Arrow Quiver": {"base": "Broadhead Arrow Quiver", "class": "Quivers", "type": "rare high"},
 
-    "1 Quiver": {"class": "Quivers", "type": "rare normal"},
+    "1 Quiver": {"class": "Quivers", "type": "rare low"},
 
     "02 60+ amulet": {"class": "Amulets", "other": ["ItemLevel >= 60"], "type": "rare high"},
     "02 60+ ring": {"class": "Rings", "other": ["ItemLevel >= 60"], "type": "rare high"},
