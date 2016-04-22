@@ -52,5 +52,5 @@ items = {
     "0 Portal Shredder": {"base": "Portal Shredder", "type": "show high"},
     "0 Rod of Detonation": {"base": "Rod of Detonation", "type": "show high"},
     "0 Sand of Eternity": {"base": "Sand of Eternity", "type": "show high"},
-    "9 Starter gear": {"other": ["ItemLevel < 2"], "type": "low"}
+    "9 Starter weapon": {"other": ["Class Dagger Wand \"One Hand\" Bow Stave \"Two Hand\" Sceptre Claws", "ItemLevel < 2"], "type": "low"}
 }
