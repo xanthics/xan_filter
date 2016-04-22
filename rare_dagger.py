@@ -24,7 +24,7 @@ Purpose: Create an item filter based on config files
 Note: Requires Python 3.4.x
 """
 
-desc = "Nonrare item for leveling or crafting"
+desc = "Rare item for leveling or crafting"
 
 # Base type : settings pair
 # Base Type is displayed in the comments for the output file. as long as the name is unique it doesn't matter what it is
