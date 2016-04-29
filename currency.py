@@ -32,7 +32,7 @@ items = {
 	"0 Exalted Orb": {"base": "Exalted Orb", "class": "Currency", "type": "currency very high"},
 	"0 Divine Orb": {"base": "Divine Orb", "class": "Currency", "type": "currency very high"},
 	"0 Albino Rhoa Feather": {"base": "Albino Rhoa Feather", "class": "Currency", "type": "currency very high"},
-	"0 Orb of Regret": {"base": "Orb of Regret", "class": "Currency", "type": "currency high"},
+	"0 Orb of Regret": {"base": "Orb of Regret", "class": "Currency", "type": "currency normal"},
 	"0 Gemcutter's Prism": {"base": "Gemcutter's Prism", "class": "Currency", "type": "currency high"},
 	"0 Chaos Orb": {"base": "Chaos Orb", "class": "Currency", "type": "currency high"},
 	"0 Regal Orb": {"base": "Regal Orb", "class": "Currency", "type": "currency high"},
