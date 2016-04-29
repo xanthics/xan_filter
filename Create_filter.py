@@ -142,7 +142,7 @@ def main():
 	buffer += gen_list(chroma)  # chrome vendor items
 	if leveling:
 		buffer += gen_list(general_levelling)
-	buffer += gen_list(chance)  # Chance bases
+#	buffer += gen_list(chance)  # Chance bases
 	buffer += gen_list(crafting_bases)  # Crafting bases
 
 	if leveling:
