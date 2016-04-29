@@ -28,8 +28,9 @@ desc = "Flasks"
 
 # Base type : settings pair
 items = {
-    "01 Qual Flask": {"base": "Flask", "other": ["Quality >= 10"], "type": "flask high"},
-    "02 Qual Flask": {"base": "Flask", "other": ["Quality >= 5"], "type": "normal"},
+    "01 Qual Flask": {"base": "Flask", "other": ["Quality = 20", "Rarity Normal"], "type": "flask high"},
+    "02 Qual Flask": {"base": "Flask", "other": ["Quality >= 10"], "type": "flask normal"},
+    "03 Qual Flask": {"base": "Flask", "other": ["Quality >= 5"], "type": "normal"},
     "1 Diamond Flask": {"base": "Diamond Flask", "other": ["Rarity Normal"], "type": "normal"},
     "1 Granite Flask": {"base": "Granite Flask", "other": ["Rarity Normal"], "type": "normal"},
     "1 Jade Flask": {"base": "Jade Flask", "other": ["Rarity Normal"], "type": "ignore"},

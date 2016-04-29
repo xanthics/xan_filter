@@ -47,7 +47,8 @@ settings = {
 	"divination high": ["SetBorderColor 30 144 255", "SetFontSize 40", "PlayAlertSound 6 175", "{}".format(defaultbg)],
 	"divination normal": ["SetBorderColor 30 144 255", "PlayAlertSound 6 50", "{}".format(defaultbg)],
 
-	"flask high": ["SetBorderColor 0 255 0", "SetFontSize 35", "{}".format(defaultbg)],
+	"flask high": ["SetBorderColor 255 150 0", "SetFontSize 35", "{}".format(defaultbg)],
+	"flask normal": ["SetBorderColor 0 255 0", "SetFontSize 35", "{}".format(defaultbg)],
 
 	"gem very high": ["SetBorderColor 27 162 155", "SetFontSize 35", "{}".format(defaultbg)],
 	"gem high": ["SetBorderColor 27 162 155", "SetFontSize 30", "{}".format(defaultbg)],
