@@ -27,12 +27,6 @@ To-Do
 =====
 No ETA
 
-Add leveling gear
-
-Add crafting bases
-
-Add "best of the zone" highlighting.
-
 Expand uniques filtering
 
 Add config processor that created compact output
