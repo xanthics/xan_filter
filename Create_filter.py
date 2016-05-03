@@ -116,7 +116,7 @@ def gen_list(obj):
 # main function for creating a filter
 def main():
 
-	leveling = False  # toggle to show leveling items
+	leveling = True  # toggle to show leveling items
 
 	buffer = ""
 
