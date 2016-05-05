@@ -116,7 +116,7 @@ def gen_list(obj):
 # main function for creating a filter
 def main():
 
-	leveling = True  # toggle to show leveling items
+	leveling = False  # toggle to show leveling items
 
 	buffer = ""
 
@@ -125,10 +125,10 @@ def main():
 	buffer += gen_list(currency)  # Currency
 	buffer += gen_list(gems)  # Gems
 	buffer += gen_list(uniques)  # uniques
-	buffer += gen_list(recipe_item)  # Items for vendor recipe
+#	buffer += gen_list(recipe_item)  # Items for vendor recipe
 	buffer += gen_list(maps)  # maps
 	buffer += gen_list(divination)  # divination cards
-	buffer += gen_list(flask)  # Flasks
+#	buffer += gen_list(flask)  # Flasks
 	buffer += gen_list(t1_rares)
 	if leveling:
 		for rareitemleveling in [rare_armor_dex, rare_armor_dex_int, rare_armor_str_dex, rare_armor_str, rare_armor_int,
@@ -138,11 +138,11 @@ def main():
 			buffer += gen_list(rareitemleveling)
 
 	buffer += gen_list(rare_highlight)  # rares highlighting + jewelry
-	buffer += gen_list(rares)  # rares catchall
+#	buffer += gen_list(rares)  # rares catchall
 	buffer += gen_list(chroma)  # chrome vendor items
 	if leveling:
 		buffer += gen_list(general_levelling)
-	buffer += gen_list(chance)  # Chance bases
+#	buffer += gen_list(chance)  # Chance bases
 	buffer += gen_list(crafting_bases)  # Crafting bases
 
 	if leveling:
