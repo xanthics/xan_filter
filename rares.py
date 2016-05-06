@@ -28,9 +28,9 @@ desc = "General Rares"
 
 # Base type : settings pair
 items = {
-	"1 Quiver": {"class": "Quivers", "type": "rare low"},
+    "1 Quiver": {"class": "Quivers", "type": "rare low"},
 
-	"7 5": {"other": ["DropLevel <= 5", "ItemLevel >= 15"], "type": "rare low"},
+    "7 5": {"other": ["DropLevel <= 5", "ItemLevel >= 15"], "type": "rare low"},
     "7 10": {"other": ["DropLevel <= 10", "ItemLevel >= 20"], "type": "rare low"},
     "7 15": {"other": ["DropLevel <= 15", "ItemLevel >= 25"], "type": "rare low"},
     "7 20": {"other": ["DropLevel <= 20", "ItemLevel >= 30"], "type": "rare low"},
