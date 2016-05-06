@@ -107,5 +107,4 @@ items = {
     "03 amulet": {"class": "Amulets", "type": "levelling rare high"},
     "03 ring": {"class": "Rings", "type": "levelling rare high"},
     "03 belt": {"class": "Belts", "type": "levelling rare high"},
-
 }
