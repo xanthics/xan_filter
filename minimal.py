@@ -108,7 +108,7 @@ settings = {
 
 	"chromatic": ["SocketGroup RGB", 
 				  "SetBorderColor {}".format(color['premiumgreen']), 
-				  "SetFontSize {}".format(size['small']),
+				  "SetFontSize {}".format(size['normal']),
 				  "SetBackgroundColor {} 220".format(color['black'])],
 
 	"t1 ilvl83/84 crafting": ["Rarity <= Magic", 
@@ -202,14 +202,14 @@ settings = {
 						   "SetFontSize {}".format(size['normal']),
 						   "SetBackgroundColor {} 220".format(color['black'])],
 
-	"show very high": ["SetBorderColor {}".format(color['premiumllime']), 
+	"show very high": ["SetBorderColor {}".format(color['premiumlpurple']),
 					   "SetFontSize {}".format(size['huge']),
 					   "PlayAlertSound 1 175", 
 					   "SetBackgroundColor {} 220".format(color['black'])],
-	"show high": ["SetBorderColor {}".format(color['premiumlime']), 
+	"show high": ["SetBorderColor {}".format(color['premiumpurple']),
 				  "SetFontSize {}".format(size['large']),
 				  "SetBackgroundColor {} 220".format(color['black'])],
-	"show normal": ["SetBorderColor {}".format(color['premiumdlime']), 
+	"show normal": ["SetBorderColor {}".format(color['premiumdpurple']),
 					"SetFontSize {}".format(size['normal']),
 					"SetBackgroundColor {} 220".format(color['black'])],
 	"show low": ["SetFontSize {}".format(size['small']),
