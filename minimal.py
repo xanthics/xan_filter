@@ -159,13 +159,13 @@ settings = {
 
 	"leveling high": ["SetFontSize {}".format(size['normal']),
 					  "SetBackgroundColor {} 100".format(color['black']),
-					  "SetBorderColor 255 40 0"],
+					  "SetBorderColor {}".format(color['nemesisoutline'])],
 	"leveling normal": ["SetFontSize {}".format(size['small']),
 						"SetBackgroundColor {} 100".format(color['black']),
 						"SetBorderColor {}".format(color['tormentoutline'])],
 	"leveling low": ["SetFontSize {}".format(size['minimum']),
 					 "Sockets > 2", 
-					 "SetBackgroundColor 0 0 0 100", 
+					 "SetBackgroundColor {} 100".format(color['black']),
 					 "SetBorderColor {}".format(color['normal'])],
 
 	"map very high": ["SetBorderColor {}".format(color['fire']), 
