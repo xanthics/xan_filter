@@ -36,8 +36,8 @@ items = {
     "11 Talisman": {'other': ["ItemLevel >= 70"], "base": "Talisman", "type": "show high"},
     "12 Talisman": {"base": "Talisman", "type": "show low"},
     "0 Fishing Rod": {"base": "Fishing Rod", "type": "show very high"},
-    "0 Hideout Doodads": {"class": "Hideout Doodads","type": "show low"},
-    "0 Microtransactions": {"class": "Microtransactions","type": "show low"},
+    "0 Hideout Doodads": {"class": "Hideout Doodads", "type": "show low"},
+    "0 Microtransactions": {"class": "Microtransactions", "type": "show low"},
     "0 Quest": {"class": "Quest", "type": "show normal"},
     "0 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "show high"},
     "0 Jewel": {"class": "Jewel", "other": ["Rarity <= Magic"], "type": "show normal"},
@@ -63,5 +63,12 @@ items = {
 	"02 60+ amulet": {"class": "Amulets", "other": ["Rarity Rare", "ItemLevel >= 60"], "type": "high"},
 	"02 60+ ring": {"class": "Rings", "other": ["Rarity Rare", "ItemLevel >= 60"], "type": "high"},
 	"02 60+ belt": {"class": "Belts", "other": ["Rarity Rare", "ItemLevel >= 60"], "type": "high"},
+
+    "9 Starter weapon": {"other": ["Class Dagger Wand \"One Hand\" Bow Stave \"Two Hand\" Sceptre Claws", "ItemLevel < 2"], "type": "low"},
+
+    "0 Brinerot magic item": {"class": "Gloves", "other": ["Rarity Magic"], "type": "ignore"},
+    "0 Mutewind magic item": {"class": "Boots", "other": ["Rarity Magic"], "type": "ignore"},
+    "0 Redblade magic item": {"class": "Helms", "other": ["Rarity Magic"], "type": "ignore"},
+    "0 Renegade magic item": {"other": ["Class Dagger Wand \"One Hand\" Bow Stave \"Two Hand\" Sceptre Claws", "Rarity Magic"], "type": "ignore"},
 
 }
