@@ -64,8 +64,6 @@ items = {
 	"02 60+ ring": {"class": "Rings", "other": ["Rarity Rare", "ItemLevel >= 60"], "type": "high"},
 	"02 60+ belt": {"class": "Belts", "other": ["Rarity Rare", "ItemLevel >= 60"], "type": "high"},
 
-    "9 Starter weapon": {"other": ["Class Dagger Wand \"One Hand\" Bow Stave \"Two Hand\" Sceptre Claws", "ItemLevel < 2"], "type": "low"},
-
     "0 Brinerot magic item": {"class": "Gloves", "other": ["Rarity Magic"], "type": "ignore"},
     "0 Mutewind magic item": {"class": "Boots", "other": ["Rarity Magic"], "type": "ignore"},
     "0 Redblade magic item": {"class": "Helms", "other": ["Rarity Magic"], "type": "ignore"},
