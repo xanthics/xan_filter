@@ -139,10 +139,7 @@ settings = {
 	"divination low": ["SetBorderColor {}".format(color['divinationnew']), 
 					   "SetBackgroundColor {} 220".format(color['black'])],
 
-	"flask high": ["SetBorderColor {}".format(color['premiumdyellow']), 
-				   "SetFontSize {}".format(size['large']),
-				   "SetBackgroundColor {} 220".format(color['black'])],
-	"flask normal": ["SetBorderColor {}".format(color['premiumgreen']), 
+	"flask normal": ["SetBorderColor {}".format(color['premiumgreen']),
 					 "SetFontSize {}".format(size['large']),
 					 "SetBackgroundColor {} 220".format(color['black'])],
 
@@ -234,6 +231,9 @@ settings = {
 					  "PlayAlertSound 3 50", 
 					  "SetBackgroundColor {} 220".format(color['black'])],
 
+	"high": ["SetBorderColor {}".format(color['premiumdyellow']),
+				   "SetFontSize {}".format(size['large']),
+				   "SetBackgroundColor {} 220".format(color['black'])],
 	"normal": ["SetFontSize {}".format(size['normal']),
 			   "SetBackgroundColor {} 220".format(color['black'])],
 	"low": ["SetFontSize {}".format(size['minimum']),
