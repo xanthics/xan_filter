@@ -107,6 +107,10 @@ settings = {
 					  "SetBorderColor {} 200".format(color['premiumlgreen']),
 					  "SetBackgroundColor {} 150".format(color['premiumdgreen'])],
 
+	"quest": ["SetFontSize {}".format(size['normal']),
+			  "SetBorderColor {} 200".format(color['quest']),
+			   "SetBackgroundColor {} 220".format(color['black'])],
+
 	"animate range": ["Rarity Normal",
 					  "SetFontSize {}".format(size['large']),
 					  "SetTextColor {}".format(color['black']),
