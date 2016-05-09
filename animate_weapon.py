@@ -32,7 +32,7 @@ desc = "Animate Weapon target"
 
 # Base type : settings pair
 items = {
-	"0 animate melee white": {"other": ["Class Dagger \"One Hand\" Stave \"Two Hand\" Sceptre Claws", "Rarity Normal"], "type": "ignore"},
+	"0 animate melee white": {"other": ["Class Dagger \"One Hand\" Stave \"Two Hand\" Sceptre Claws", "Rarity Normal"], "type": "animate melee"},
 	"0 animate range white": {"other": ["Class Wand Bow", "Rarity Normal"], "type": "ignore"},
 	"0 animate melee magic": {"other": ["Class Dagger \"One Hand\" Stave \"Two Hand\" Sceptre Claws", "Rarity Magic"], "type": "ignore"},
 	"0 animate range magic": {"other": ["Class Wand Bow", "Rarity Magic"], "type": "ignore"},
