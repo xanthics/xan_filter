@@ -101,12 +101,24 @@ size = {
 # Each config should be its own array element.  Parsing will handle tabs/etc.
 # ignore and hide have special meaning(see comment)
 settings = {
-	"chance": ["Rarity Normal", 
+	"animate melee": ["Rarity Normal",
+					  "SetFontSize {}".format(size['large']),
+					  "SetTextColor {}".format(color['black']),
+					  "SetBorderColor {} 200".format(color['premiumlgreen']),
+					  "SetBackgroundColor {} 150".format(color['premiumdgreen'])],
+
+	"animate range": ["Rarity Normal",
+					  "SetFontSize {}".format(size['large']),
+					  "SetTextColor {}".format(color['black']),
+					  "SetBorderColor {} 200".format(color['premiumtan']),
+					  "SetBackgroundColor {} 150".format(color['premiumbrown'])],
+
+	"chance": ["Rarity Normal",
 			   "SetFontSize {}".format(size['small']),
-			   "SetBorderColor {} 150".format(color['premiumorange']), 
+			   "SetBorderColor {} 150".format(color['premiumorange']),
 			   "SetBackgroundColor {} 220".format(color['black'])],
 
-	"chromatic": ["SocketGroup RGB", 
+	"chromatic": ["SocketGroup RGB",
 				  "SetBorderColor {}".format(color['premiumgreen']), 
 				  "SetFontSize {}".format(size['normal']),
 				  "SetBackgroundColor {} 220".format(color['black'])],

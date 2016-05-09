@@ -25,7 +25,7 @@ Author: Jeremy Parks
 Purpose: Create an item filter based on config files
 Note: Requires Python 3.4.x
 """
-
+import animate_weapon
 import chance
 import general_levelling
 import hide
@@ -144,6 +144,7 @@ def main():
 		buffer += gen_list(general_levelling)
 	buffer += gen_list(chance)  # Chance bases
 	buffer += gen_list(crafting_bases)  # Crafting bases
+	buffer += gen_list(animate_weapon)  # Crafting bases
 
 	if leveling:
 		for nonrareitemleveling in [nonrare_armor_dex, nonrare_armor_dex_int, nonrare_armor_str_dex, nonrare_armor_str,
