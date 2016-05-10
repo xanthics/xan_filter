@@ -54,9 +54,9 @@ items = {
     "0 Sand of Eternity": {"base": "Sand of Eternity", "type": "show high"},
     "9 Starter weapon": {"other": ["Class Dagger Wand \"One Hand\" Bow Stave \"Two Hand\" Sceptre Claws", "ItemLevel < 2"], "type": "low"},
 
-    "0 Brinerot magic item": {"class": "Gloves", "other": ["Rarity Magic"], "type": "ignore"},
-    "0 Mutewind magic item": {"class": "Boots", "other": ["Rarity Magic"], "type": "ignore"},
-    "0 Redblade magic item": {"class": "Helms", "other": ["Rarity Magic"], "type": "ignore"},
-    "0 Renegade magic item": {"other": ["Class Dagger Wand \"One Hand\" Bow Stave \"Two Hand\" Sceptre Claws", "Rarity Magic"], "type": "ignore"},
+    "0 Brinerot magic item": {"class": "Gloves", "other": ["Rarity Magic", "SetBorderColor 255 215 0"], "type": "ignore"},
+    "0 Mutewind magic item": {"class": "Boots", "other": ["Rarity Magic", "SetBorderColor 54 100 146"], "type": "ignore"},
+    "0 Redblade magic item": {"class": "Helms", "other": ["Rarity Magic", "SetBorderColor 150 0 0"], "type": "hide"},
+    "0 Renegade magic item": {"other": ["Class Dagger Wand \"One Hand\" Bow Stave \"Two Hand\" Sceptre Claws", "Rarity Magic", "SetBorderColor 208 32 144"], "type": "ignore"},
 
 }
