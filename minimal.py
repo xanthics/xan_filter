@@ -101,20 +101,29 @@ size = {
 # Each config should be its own array element.  Parsing will handle tabs/etc.
 # ignore and hide have special meaning(see comment)
 settings = {
-	"animate melee": ["Rarity Normal",
+	"animate melee b": ["Rarity Normal",
 					  "SetFontSize {}".format(size['large']),
 					  "SetTextColor {}".format(color['black']),
 					  "SetBorderColor {} 200".format(color['premiumlgreen']),
+					  "SetBackgroundColor {} 150".format(color['premiumdgreen'])],
+	"animate melee": ["Rarity Normal",
+					  "SetFontSize {}".format(size['large']),
+					  "SetTextColor {}".format(color['black']),
 					  "SetBackgroundColor {} 150".format(color['premiumdgreen'])],
 
 	"quest": ["SetFontSize {}".format(size['normal']),
 			  "SetBorderColor {} 200".format(color['quest']),
 			   "SetBackgroundColor {} 220".format(color['black'])],
 
-	"animate range": ["Rarity Normal",
+	"animate range b": ["Rarity Normal",
 					  "SetFontSize {}".format(size['large']),
 					  "SetTextColor {}".format(color['black']),
 					  "SetBorderColor {} 200".format(color['premiumtan']),
+					  "SetBackgroundColor {} 150".format(color['premiumbrown'])],
+
+	"animate range": ["Rarity Normal",
+					  "SetFontSize {}".format(size['large']),
+					  "SetTextColor {}".format(color['black']),
 					  "SetBackgroundColor {} 150".format(color['premiumbrown'])],
 
 	"chance": ["Rarity Normal",
