@@ -56,7 +56,7 @@ items = {
 
     "0 Brinerot magic item": {"class": "Gloves", "other": ["Rarity Magic", "SetBorderColor 255 215 0"], "type": "ignore"},
     "0 Mutewind magic item": {"class": "Boots", "other": ["Rarity Magic", "SetBorderColor 54 100 146"], "type": "ignore"},
-    "0 Redblade magic item": {"class": "Helms", "other": ["Rarity Magic", "SetBorderColor 150 0 0"], "type": "hide"},
+    "0 Redblade magic item": {"class": "Helm", "other": ["Rarity Magic", "SetBorderColor 150 0 0"], "type": "hide"},
     "0 Renegade magic item": {"other": ["Class Dagger Wand \"One Hand\" Bow Stave \"Two Hand\" Sceptre Claws", "Rarity Magic", "SetBorderColor 208 32 144"], "type": "ignore"},
 
 }
