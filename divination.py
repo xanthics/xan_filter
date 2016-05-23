@@ -86,8 +86,10 @@ items = {
 	"0 The Devastator": {"base": "The Devastator", "class": "Divination Card", "type": "divination high"},
 	"0 The Immortal": {"base": "The Immortal", "class": "Divination Card", "type": "divination high"},
 	"0 Heterochromia": {"base": "Heterochromia", "class": "Divination Card", "type": "divination high"},
+
 	"1 Thunderous Skies": {"base": "Thunderous Skies", "class": "Divination Card", "type": "divination low"},
 	"1 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},
+
 	"7 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "hide"},
 	"7 The Carrion Crow": {"base": "The Carrion Crow", "class": "Divination Card", "type": "hide"},
 	"7 The Rabid Rhoa": {"base": "The Rabid Rhoa", "class": "Divination Card", "type": "hide"},

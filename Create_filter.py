@@ -26,6 +26,7 @@ Purpose: Create an item filter based on config files
 Note: Requires Python 3.4.x
 """
 import animate_weapon
+import challenges
 import chance
 import general_levelling
 import hide
@@ -122,6 +123,7 @@ def main():
 
 	buffer += gen_list(show)  # Always show these items
 	buffer += gen_list(hide)  # Always hide these items
+	buffer += gen_list(challenges)
 	buffer += gen_list(currency)  # Currency
 	buffer += gen_list(gems)  # Gems
 	buffer += gen_list(uniques)  # uniques
