@@ -84,7 +84,8 @@ color = {
 	"premiumdgrey": "42 42 42",
 	"premiumgrey": "135 135 135",
 	"premiumlgrey": "221 221 221",
-	"black": "0 0 0"
+	"black": "0 0 0",
+	"prophecy": "128 0 200"
 }
 
 size = {
