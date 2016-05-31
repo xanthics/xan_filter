@@ -30,7 +30,7 @@ desc = "challenge item"
 items = {
 	"0 Desert Map": {"base": "Desert Map", "class": "Maps", "other": ["Rarity Rare"], "type": "challenge"},
 	"0 Dunes Map": {"base": "Dunes Map", "class": "Maps", "other": ["Rarity Rare"], "type": "challenge"},
-	"0 Cemetary Map": {"base": "Cemetary Map", "class": "Maps", "other": ["Rarity Rare"], "type": "challenge"},
+	"0 Cemetery Map": {"base": "Cemetery Map", "class": "Maps", "other": ["Rarity Rare"], "type": "challenge"},
 	"0 Thicket Map": {"base": "Thicket Map", "class": "Maps", "other": ["Rarity Rare"], "type": "challenge"},
 	"0 Mud Geyser Map": {"base": "Mud Geyser Map", "class": "Maps", "other": ["Rarity Rare"], "type": "challenge"},
 	"0 Quarry Map": {"base": "Quarry Map", "class": "Maps", "other": ["Rarity Rare"], "type": "challenge"},
