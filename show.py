@@ -28,7 +28,7 @@ desc = "Always show"
 
 # Base type : settings pair
 items = {
-    "01 Tabula Exception": {"base": "Simple Robe", "other": ["Rarity Unique", "SocketGroup WWWWWW", "PlayAlertSound 3 50"], "type": "unique high"},
+    "01 Tabula Exception": {"base": "Simple Robe", "other": ["Rarity Unique", "SocketGroup WWWWWW"], "type": "unique high"},
     "02 6L": {"other": ["LinkedSockets 6"], "type": "show very high"},
     "03 5L": {"other": ["LinkedSockets 5", "PlayAlertSound 2 75"], "type": "show high"},
     "04 6S": {"other": ["Sockets 6", "PlayAlertSound 2 50"], "type": "show high"},
