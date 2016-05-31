@@ -28,4 +28,28 @@ desc = "challenge item"
 
 # Base type : settings pair
 items = {
+	"0 Desert Map": {"base": "Desert Map", "class": "Maps", "other": ["Rarity Rare"], "type": "challenge"},
+	"0 Dunes Map": {"base": "Dunes Map", "class": "Maps", "other": ["Rarity Rare"], "type": "challenge"},
+	"0 Cemetary Map": {"base": "Cemetary Map", "class": "Maps", "other": ["Rarity Rare"], "type": "challenge"},
+	"0 Thicket Map": {"base": "Thicket Map", "class": "Maps", "other": ["Rarity Rare"], "type": "challenge"},
+	"0 Mud Geyser Map": {"base": "Mud Geyser Map", "class": "Maps", "other": ["Rarity Rare"], "type": "challenge"},
+	"0 Quarry Map": {"base": "Quarry Map", "class": "Maps", "other": ["Rarity Rare"], "type": "challenge"},
+	"0 Phantasmagoria Map": {"base": "Phantasmagoria Map", "class": "Maps", "other": ["Rarity Rare"], "type": "challenge"},
+	"0 Shore Map": {"base": "Shore Map", "class": "Maps", "other": ["Rarity Rare"], "type": "challenge"},
+	"0 Graveyard Map": {"base": "Graveyard Map", "class": "Maps", "other": ["Rarity Rare"], "type": "challenge"},
+	"0 Villa Map": {"base": "Villa Map", "class": "Maps", "other": ["Rarity Rare"], "type": "challenge"},
+
+	"0 Assassin's Favour": {"base": "Assassin's Favour", "class": "Divination Card", "type": "challenge"},
+	"0 Cartographer's Delight": {"base": "Cartographer's Delight", "class": "Divination Card", "type": "challenge"},
+	"0 Humility": {"base": "Humility", "class": "Divination Card", "type": "challenge"},
+	"0 Hunter's Resolve": {"base": "Hunter's Resolve", "class": "Divination Card", "type": "challenge"},
+	"0 Lysah's Respite": {"base": "Lysah's Respite", "class": "Divination Card", "type": "challenge"},
+	"0 The Battle Born": {"base": "The Battle Born", "class": "Divination Card", "type": "challenge"},
+	"0 The Body": {"base": "The Body", "class": "Divination Card", "type": "challenge"},
+	"0 The Brittle Emperor": {"base": "The Brittle Emperor", "class": "Divination Card", "type": "challenge"},
+	"0 The Gentleman": {"base": "The Gentleman", "class": "Divination Card", "type": "challenge"},
+	"0 The Mercenary": {"base": "The Mercenary", "class": "Divination Card", "type": "challenge"},
+	"0 The Trial": {"base": "The Trial", "class": "Divination Card", "type": "challenge"},
+	"0 Volatile Power": {"base": "Volatile Power", "class": "Divination Card", "type": "challenge"},
+
 }
