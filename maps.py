@@ -116,6 +116,7 @@ items = {
 	"0 Conservatory Map": {"base": "Conservatory Map", "class": "Maps", "other": ["ItemLevel <= 67"], "type": "ignore"},
 	"0 Palace Map": {"base": "Palace Map", "class": "Maps", "other": ["ItemLevel <= 67"], "type": "ignore"},
 	"0 Shrine Map": {"base": "Shrine Map", "class": "Maps", "other": ["ItemLevel <= 67"], "type": "ignore"},
+	"0 Plaza Map": {"base": "Plaza Map", "class": "Maps", "other": ["ItemLevel <= 67"], "type": "ignore"},
 	"0 Vaal Temple Map": {"base": "Vaal Temple Map", "class": "Maps", "other": ["ItemLevel <= 67"], "type": "ignore"},
 
 	"0 Abyss Map": {"base": "Abyss Map", "class": "Maps", "other": ["ItemLevel <= 67"], "type": "ignore"},
