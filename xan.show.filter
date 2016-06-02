@@ -142,6 +142,33 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
+#02 60+ amulet - Always show
+Show
+	Class "Amulets"
+	Rarity Rare
+	ItemLevel >= 60
+	SetBorderColor 254 170 0
+	SetFontSize 35
+	SetBackgroundColor 0 0 0 220
+
+#02 60+ belt - Always show
+Show
+	Class "Belts"
+	Rarity Rare
+	ItemLevel >= 60
+	SetBorderColor 254 170 0
+	SetFontSize 35
+	SetBackgroundColor 0 0 0 220
+
+#02 60+ ring - Always show
+Show
+	Class "Rings"
+	Rarity Rare
+	ItemLevel >= 60
+	SetBorderColor 254 170 0
+	SetFontSize 35
+	SetBackgroundColor 0 0 0 220
+
 #02 6L - Always show
 Show
 	LinkedSockets 6
@@ -443,7 +470,7 @@ Show
 	BaseType "Blessed Orb"
 	Class "Currency"
 	SetBorderColor 170 158 130
-	SetFontSize 35
+	SetFontSize 40
 	PlayAlertSound 5 75
 	SetBackgroundColor 0 0 0 220
 
@@ -452,6 +479,7 @@ Show
 	BaseType "Cartographer's Chisel"
 	Class "Currency"
 	SetBorderColor 170 158 130
+	SetFontSize 35
 	PlayAlertSound 5 25
 	SetBackgroundColor 0 0 0 220
 
@@ -460,7 +488,7 @@ Show
 	BaseType "Chaos Orb"
 	Class "Currency"
 	SetBorderColor 170 158 130
-	SetFontSize 35
+	SetFontSize 40
 	PlayAlertSound 5 75
 	SetBackgroundColor 0 0 0 220
 
@@ -495,7 +523,7 @@ Show
 	BaseType "Gemcutter's Prism"
 	Class "Currency"
 	SetBorderColor 170 158 130
-	SetFontSize 35
+	SetFontSize 40
 	PlayAlertSound 5 75
 	SetBackgroundColor 0 0 0 220
 
@@ -512,6 +540,7 @@ Show
 	BaseType "Jeweller's Orb"
 	Class "Currency"
 	SetBorderColor 170 158 130
+	SetFontSize 35
 	PlayAlertSound 5 25
 	SetBackgroundColor 0 0 0 220
 
@@ -529,6 +558,7 @@ Show
 	BaseType "Orb of Alchemy"
 	Class "Currency"
 	SetBorderColor 170 158 130
+	SetFontSize 35
 	PlayAlertSound 5 25
 	SetBackgroundColor 0 0 0 220
 
@@ -553,6 +583,7 @@ Show
 	BaseType "Orb of Chance"
 	Class "Currency"
 	SetBorderColor 170 158 130
+	SetFontSize 35
 	PlayAlertSound 5 25
 	SetBackgroundColor 0 0 0 220
 
@@ -561,6 +592,7 @@ Show
 	BaseType "Orb of Fusing"
 	Class "Currency"
 	SetBorderColor 170 158 130
+	SetFontSize 35
 	PlayAlertSound 5 25
 	SetBackgroundColor 0 0 0 220
 
@@ -569,7 +601,7 @@ Show
 	BaseType "Orb of Regret"
 	Class "Currency"
 	SetBorderColor 170 158 130
-	SetFontSize 35
+	SetFontSize 40
 	PlayAlertSound 5 75
 	SetBackgroundColor 0 0 0 220
 
@@ -578,6 +610,7 @@ Show
 	BaseType "Orb of Scouring"
 	Class "Currency"
 	SetBorderColor 170 158 130
+	SetFontSize 35
 	PlayAlertSound 5 25
 	SetBackgroundColor 0 0 0 220
 
@@ -610,7 +643,7 @@ Show
 	BaseType "Prophecy"
 	Class "Currency"
 	SetBorderColor 170 158 130
-	SetFontSize 35
+	SetFontSize 40
 	PlayAlertSound 5 75
 	SetBackgroundColor 0 0 0 220
 
@@ -619,7 +652,7 @@ Show
 	BaseType "Regal Orb"
 	Class "Currency"
 	SetBorderColor 170 158 130
-	SetFontSize 35
+	SetFontSize 40
 	PlayAlertSound 5 75
 	SetBackgroundColor 0 0 0 220
 
@@ -636,7 +669,7 @@ Show
 	BaseType "Silver Coin"
 	Class "Currency"
 	SetBorderColor 170 158 130
-	SetFontSize 35
+	SetFontSize 40
 	PlayAlertSound 5 75
 	SetBackgroundColor 0 0 0 220
 
@@ -645,7 +678,7 @@ Show
 	BaseType "Vaal Orb"
 	Class "Currency"
 	SetBorderColor 170 158 130
-	SetFontSize 35
+	SetFontSize 40
 	PlayAlertSound 5 75
 	SetBackgroundColor 0 0 0 220
 
@@ -659,6 +692,7 @@ Hide
 Show
 	Class "Currency"
 	SetBorderColor 170 158 130
+	SetFontSize 35
 	PlayAlertSound 5 25
 	SetBackgroundColor 0 0 0 220
 
@@ -919,32 +953,6 @@ Show
 Show
 	Rarity Unique
 	PlayAlertSound 3 50
-	SetBackgroundColor 0 0 0 220
-
-#0 magic hammers q>=12 - Recipe Item
-Show
-	BaseType "Stone Hammer" "Rock Breaker" "Gavel"
-	Rarity Magic
-	Quality >= 12
-	SetBorderColor 204 0 154
-	SetFontSize 30
-	SetBackgroundColor 0 0 0 220
-
-#0 normal hammers - Recipe Item
-Show
-	BaseType "Stone Hammer" "Rock Breaker" "Gavel"
-	Rarity Normal
-	SetBorderColor 204 0 154
-	SetFontSize 30
-	SetBackgroundColor 0 0 0 220
-
-#0 rare hammers q>=16 - Recipe Item
-Show
-	BaseType "Stone Hammer" "Rock Breaker" "Gavel"
-	Rarity Rare
-	Quality >= 16
-	SetBorderColor 204 0 154
-	SetFontSize 30
 	SetBackgroundColor 0 0 0 220
 
 #0 Abandoned Cavern Map - maps
@@ -8592,17 +8600,10 @@ Show
 	SetBackgroundColor 0 0 0 100
 	SetBorderColor 0 100 150
 
-#0 Kaom's Heart - Chance Base
+#0 Headhunter - Chance Base
 Show
-	BaseType "Glorious Plate"
-	Rarity Normal
-	SetFontSize 25
-	SetBorderColor 191 91 0 150
-	SetBackgroundColor 0 0 0 220
-
-#0 Shavronne's Wrappings - Chance Base
-Show
-	BaseType "Occultist's Vestment"
+	BaseType "Leather Belt"
+	ItemLevel >= 74
 	Rarity Normal
 	SetFontSize 25
 	SetBorderColor 191 91 0 150
@@ -8611,14 +8612,6 @@ Show
 #0 Skyforth - Chance Base
 Show
 	BaseType "Sorcerer Boots"
-	Rarity Normal
-	SetFontSize 25
-	SetBorderColor 191 91 0 150
-	SetBackgroundColor 0 0 0 220
-
-#0 Void Battery - Chance Base
-Show
-	BaseType "Prophecy Wand"
 	Rarity Normal
 	SetFontSize 25
 	SetBorderColor 191 91 0 150
