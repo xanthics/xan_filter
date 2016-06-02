@@ -28,7 +28,7 @@ desc = "Always show"
 
 # Base type : settings pair
 items = {
-    "01 Tabula Exception": {"base": "Simple Robe", "other": ["Rarity Unique", "SocketGroup WWWWWW", "PlayAlertSound 3 50"], "type": "unique high"},
+    "01 Tabula Exception": {"base": "Simple Robe", "other": ["Rarity Unique", "SocketGroup WWWWWW"], "type": "unique high"},
     "02 6L": {"other": ["LinkedSockets 6"], "type": "show very high"},
     "03 5L": {"other": ["LinkedSockets 5", "PlayAlertSound 2 75"], "type": "show high"},
     "04 6S": {"other": ["Sockets 6", "PlayAlertSound 2 50"], "type": "show high"},
@@ -52,6 +52,8 @@ items = {
     "0 Portal Shredder": {"base": "Portal Shredder", "type": "show high"},
     "0 Rod of Detonation": {"base": "Rod of Detonation", "type": "show high"},
     "0 Sand of Eternity": {"base": "Sand of Eternity", "type": "show high"},
+    "0 Offering to the Goddess": {"base": "Offering to the Goddess", "type": "show high"},
+
     "9 Starter weapon": {"other": ["Class Dagger Wand \"One Hand\" Bow Stave \"Two Hand\" Sceptre Claws", "ItemLevel < 2"], "type": "low"},
 
     "0 Brinerot magic item": {"class": "Gloves", "other": ["Rarity Magic", "SetBorderColor 255 215 0"], "type": "ignore"},
