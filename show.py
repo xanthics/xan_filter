@@ -41,18 +41,6 @@ items = {
     "0 Quest": {"class": "Quest", "type": "quest"},
     "0 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "show high"},
     "0 Jewel": {"class": "Jewel", "other": ["Rarity <= Magic"], "type": "show normal"},
-    "0 Silver Key": {"base": "Silver Key", "type": "show high"},
-    "0 Golden Key": {"base": "Golden Key", "type": "show high"},
-    "0 Treasure Key": {"base": "Treasure Key", "type": "show high"},
-    "0 Bane of the Loyal": {"base": "Bane of the Loyal", "type": "show high"},
-    "0 Cogs of Disruption": {"base": "Cogs of Disruption", "type": "show high"},
-    "0 Cube of Absorption": {"base": "Cube Of Absorption", "type": "show high"},
-    "0 Heart of the Gargoyle": {"base": "Heart of the Gargoyle", "type": "show high"},
-    "0 Orb of Elemental Essence": {"base": "Orb of Elemental Essence", "type": "show high"},
-    "0 Portal Shredder": {"base": "Portal Shredder", "type": "show high"},
-    "0 Rod of Detonation": {"base": "Rod of Detonation", "type": "show high"},
-    "0 Sand of Eternity": {"base": "Sand of Eternity", "type": "show high"},
-    "0 Offering to the Goddess": {"base": "Offering to the Goddess", "type": "show high"},
 
     "9 Starter weapon": {"other": ["Class Dagger Wand \"One Hand\" Bow Stave \"Two Hand\" Sceptre Claws", "ItemLevel < 2"], "type": "low"},
 
