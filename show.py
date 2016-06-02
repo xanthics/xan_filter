@@ -52,6 +52,8 @@ items = {
     "0 Portal Shredder": {"base": "Portal Shredder", "type": "show high"},
     "0 Rod of Detonation": {"base": "Rod of Detonation", "type": "show high"},
     "0 Sand of Eternity": {"base": "Sand of Eternity", "type": "show high"},
+    "0 Offering to the Goddess": {"base": "Offering to the Goddess", "type": "show high"},
+
     "9 Starter weapon": {"other": ["Class Dagger Wand \"One Hand\" Bow Stave \"Two Hand\" Sceptre Claws", "ItemLevel < 2"], "type": "low"},
 
     "0 Brinerot magic item": {"class": "Gloves", "other": ["Rarity Magic", "SetBorderColor 255 215 0"], "type": "ignore"},
