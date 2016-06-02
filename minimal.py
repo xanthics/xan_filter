@@ -84,7 +84,8 @@ color = {
 	"premiumdgrey": "42 42 42",
 	"premiumgrey": "135 135 135",
 	"premiumlgrey": "221 221 221",
-	"black": "0 0 0"
+	"black": "0 0 0",
+	"prophecy": "128 0 200"
 }
 
 size = {
@@ -101,6 +102,11 @@ size = {
 # Each config should be its own array element.  Parsing will handle tabs/etc.
 # ignore and hide have special meaning(see comment)
 settings = {
+	"challenge": ["SetBorderColor {}".format(color['prophecy']),
+				  "SetFontSize {}".format(size['huge']),
+				  "PlayAlertSound 4 175",
+				  "SetBackgroundColor {} 220".format(color['black'])],
+
 	"animate melee b": ["Rarity Normal",
 					  "SetFontSize {}".format(size['small']),
 					  "SetTextColor {}".format(color['black']),
@@ -189,13 +195,24 @@ settings = {
 
 	"map red": ["SetBorderColor {}".format(color['fire']),
 					  "SetFontSize {}".format(size['huge']),
-					  "PlayAlertSound 8 125", 
+					  "PlayAlertSound 8 125",
 					  "SetBackgroundColor {} 220".format(color['black'])],
 	"map yellow": ["SetBorderColor {}".format(color['lightning']),
-				 "PlayAlertSound 8 75", 
-				 "SetFontSize {}".format(size['large']),
-				 "SetBackgroundColor {} 220".format(color['black'])],
+				   "PlayAlertSound 8 75",
+				   "SetFontSize {}".format(size['large']),
+				   "SetBackgroundColor {} 220".format(color['black'])],
 	"map white": ["SetBackgroundColor {} 220".format(color['black'])],
+
+	"map red good": ["SetBorderColor {}".format(color['fire']),
+					  "SetFontSize {}".format(size['huge']),
+					  "PlayAlertSound 7 125",
+					  "SetBackgroundColor {} 220".format(color['black'])],
+	"map yellow good": ["SetBorderColor {}".format(color['lightning']),
+				   		"PlayAlertSound 7 75",
+				   		"SetFontSize {}".format(size['large']),
+				   		"SetBackgroundColor {} 220".format(color['black'])],
+	"map white good": ["SetBackgroundColor {} 220".format(color['black']),
+					   "PlayAlertSound 7 25"],
 
 	"levelling rare high": ["Rarity Rare", 
 							"SetBorderColor {} 150".format(color['rare']), 
