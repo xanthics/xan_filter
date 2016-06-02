@@ -105,13 +105,13 @@ items = {
 
 	"0 Arsenal Map": {"base": "Arsenal Map", "class": "Maps", "other": ["ItemLevel <= 67"], "type": "ignore"},
 	"0 Overgrown Ruin Map": {"base": "Overgrown Ruin Map", "class": "Maps", "other": ["ItemLevel <= 67"], "type": "ignore"},
-	"0 Shipyard Map": {"base": "Shipyard Map", "class": "Maps", "other": ["ItemLevel <= 67"], "type": "ignore"},
+	"0 Shipyard Map": {"base": "Shipyard Map", "class": "Maps", "other": ["ItemLevel <= 67"], "type": "map red good"},
 	"0 Village Ruin Map": {"base": "Village Ruin Map", "class": "Maps", "other": ["ItemLevel <= 67"], "type": "ignore"},
 
-	"0 Courtyard Map": {"base": "Courtyard Map", "class": "Maps", "other": ["ItemLevel <= 67"], "type": "ignore"},
+	"0 Courtyard Map": {"base": "Courtyard Map", "class": "Maps", "other": ["ItemLevel <= 67"], "type": "map red good"},
 	"0 Excavation Map": {"base": "Excavation Map", "class": "Maps", "other": ["ItemLevel <= 67"], "type": "ignore"},
-	"0 Wasteland Map": {"base": "Wasteland Map", "class": "Maps", "other": ["ItemLevel <= 67"], "type": "ignore"},
-	"0 Waterways Map": {"base": "Waterways Map", "class": "Maps", "other": ["ItemLevel <= 67"], "type": "ignore"},
+	"0 Wasteland Map": {"base": "Wasteland Map", "class": "Maps", "other": ["ItemLevel <= 67"], "type": "map red good"},
+	"0 Waterways Map": {"base": "Waterways Map", "class": "Maps", "other": ["ItemLevel <= 67"], "type": "map red good"},
 
 	"0 Conservatory Map": {"base": "Conservatory Map", "class": "Maps", "other": ["ItemLevel <= 67"], "type": "ignore"},
 	"0 Palace Map": {"base": "Palace Map", "class": "Maps", "other": ["ItemLevel <= 67"], "type": "ignore"},
@@ -119,10 +119,24 @@ items = {
 	"0 Plaza Map": {"base": "Plaza Map", "class": "Maps", "other": ["ItemLevel <= 67"], "type": "ignore"},
 	"0 Vaal Temple Map": {"base": "Vaal Temple Map", "class": "Maps", "other": ["ItemLevel <= 67"], "type": "ignore"},
 
-	"0 Abyss Map": {"base": "Abyss Map", "class": "Maps", "other": ["ItemLevel <= 67"], "type": "ignore"},
+	"0 Abyss Map": {"base": "Abyss Map", "class": "Maps", "other": ["ItemLevel <= 67"], "type": "map red good"},
 	"0 Colosseum Map": {"base": "Colosseum Map", "class": "Maps", "other": ["ItemLevel <= 67"], "type": "ignore"},
 	"0 Core Map": {"base": "Core Map", "class": "Maps", "other": ["ItemLevel <= 67"], "type": "ignore"},
 
+	"0 Sacrifice at Dusk": {"base": "Sacrifice at Dusk", "class": "Map Fragments", "type": "ignore"},
+	"0 Sacrifice at Midnight": {"base": "Sacrifice at Midnight", "class": "Map Fragments", "type": "map white good"},
+	"0 Sacrifice at Dawn": {"base": "Sacrifice at Dawn", "class": "Map Fragments", "type": "ignore"},
+	"0 Sacrifice at Noon": {"base": "Sacrifice at Noon", "class": "Map Fragments", "type": "ignore"},
+
+	"0 Mortal Grief": {"base": "Mortal Grief", "class": "Map Fragments", "type": "map yellow"},
+	"0 Mortal Rage": {"base": "Mortal Rage", "class": "Map Fragments", "type": "map yellow"},
+	"0 Mortal Hope": {"base": "Mortal Hope", "class": "Map Fragments", "type": "map yellow good"},
+	"0 Mortal Ignorance": {"base": "Mortal Ignorance", "class": "Map Fragments", "type": "map yellow"},
+
+	"0 Eber's Key": {"base": "Eber's Key", "class": "Map Fragments", "type": "map red good"},
+	"0 Yriel's Key": {"base": "Yriel's Key", "class": "Map Fragments", "type": "map red good"},
+	"0 Inya's Key": {"base": "Inya's Key", "class": "Map Fragments", "type": "map red good"},
+	"0 Volkuur's Key": {"base": "Volkuur's Key", "class": "Map Fragments", "type": "map red good"},
 
     "71 Maps >= 79": {"class": "Maps", "other": ["DropLevel >= 79"], "type": "map red"},
     "72 Maps <= 73": {"class": "Maps", "other": ["DropLevel <= 73"], "type": "map white"},

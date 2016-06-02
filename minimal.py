@@ -194,7 +194,7 @@ settings = {
 
 	"map red": ["SetBorderColor {}".format(color['fire']),
 					  "SetFontSize {}".format(size['huge']),
-					  "PlayAlertSound 7 125",
+					  "PlayAlertSound 8 125",
 					  "SetBackgroundColor {} 220".format(color['black'])],
 	"map yellow": ["SetBorderColor {}".format(color['lightning']),
 				   "PlayAlertSound 8 75",
@@ -202,6 +202,10 @@ settings = {
 				   "SetBackgroundColor {} 220".format(color['black'])],
 	"map white": ["SetBackgroundColor {} 220".format(color['black'])],
 
+	"map red good": ["SetBorderColor {}".format(color['fire']),
+					  "SetFontSize {}".format(size['huge']),
+					  "PlayAlertSound 7 125",
+					  "SetBackgroundColor {} 220".format(color['black'])],
 	"map yellow good": ["SetBorderColor {}".format(color['lightning']),
 				   		"PlayAlertSound 7 75",
 				   		"SetFontSize {}".format(size['large']),
