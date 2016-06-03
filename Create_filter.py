@@ -157,7 +157,7 @@ def main():
 									nonrare_two_hand_axe, nonrare_wand]:
 			buffer += gen_list(nonrareitemleveling)
 
-	print("Writing files to {}".format(path.expanduser("~/my game/Path of Exile/")))
+	print("Writing files to {}".format(path.expanduser("~\\my game\\Path of Exile\\")))
 
 	with open("xan.show.filter", "w") as f:
 		f.write(buffer)
