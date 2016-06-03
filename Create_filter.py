@@ -30,6 +30,7 @@ import challenges
 import chance
 import general_levelling
 import hide
+import labyrinth
 import nonrare_armor_dex
 import nonrare_armor_dex_int
 import nonrare_armor_int
@@ -124,6 +125,7 @@ def main():
 	buffer += gen_list(show)  # Always show these items
 	buffer += gen_list(hide)  # Always hide these items
 	buffer += gen_list(challenges)
+	buffer += gen_list(labyrinth)
 	buffer += gen_list(currency)  # Currency
 	buffer += gen_list(gems)  # Gems
 	buffer += gen_list(uniques)  # uniques
