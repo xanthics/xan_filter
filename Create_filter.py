@@ -30,6 +30,7 @@ import challenges
 import chance
 import general_levelling
 import hide
+import labyrinth
 import nonrare_armor_dex
 import nonrare_armor_dex_int
 import nonrare_armor_int
@@ -124,6 +125,7 @@ def main():
 	buffer += gen_list(show)  # Always show these items
 	buffer += gen_list(hide)  # Always hide these items
 	buffer += gen_list(challenges)
+	buffer += gen_list(labyrinth)
 	buffer += gen_list(currency)  # Currency
 	buffer += gen_list(gems)  # Gems
 	buffer += gen_list(uniques)  # uniques
@@ -157,7 +159,7 @@ def main():
 									nonrare_two_hand_axe, nonrare_wand]:
 			buffer += gen_list(nonrareitemleveling)
 
-	print("Writing files to {}".format(path.expanduser("~/my game/Path of Exile/")))
+	print("Writing files to {}".format(path.expanduser("~\\my game\\Path of Exile\\")))
 
 	with open("xan.show.filter", "w") as f:
 		f.write(buffer)

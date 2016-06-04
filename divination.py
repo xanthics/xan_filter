@@ -86,6 +86,8 @@ items = {
 	"0 The Devastator": {"base": "The Devastator", "class": "Divination Card", "type": "divination high"},
 	"0 The Immortal": {"base": "The Immortal", "class": "Divination Card", "type": "divination high"},
 	"0 Heterochromia": {"base": "Heterochromia", "class": "Divination Card", "type": "divination high"},
+	"0 The Harvester": {"base": "The Harvester", "class": "Divination Card", "type": "divination high"},
+	"0 The Cursed King": {"base": "The Cursed King", "class": "Divination Card", "type": "divination high"},
 
 	"1 Thunderous Skies": {"base": "Thunderous Skies", "class": "Divination Card", "type": "divination low"},
 	"1 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},
