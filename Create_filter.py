@@ -150,7 +150,7 @@ def main():
 	buffer += gen_list(crafting_bases)  # Crafting bases
 	buffer += gen_list(animate_weapon)  # Crafting bases
 
-	if leveling:
+	if 0:#leveling:
 		for nonrareitemleveling in [nonrare_armor_dex, nonrare_armor_dex_int, nonrare_armor_str_dex, nonrare_armor_str,
 									nonrare_armor_int, nonrare_armor_str_int, nonrare_bow, nonrare_claw, nonrare_dagger,
 									nonrare_jewelry, nonrare_one_hand_sword, nonrare_one_hand_mace,
