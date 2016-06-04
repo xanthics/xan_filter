@@ -32,8 +32,8 @@ desc = "leveling items that are worth seeing"
 # settings supports the following: 'base' (BaseType), 'class' (Class), 'other' (settings unique to that item)
 #  'type' (Mandatory, indexes settings)
 items = {
-	"01 Quartz/Crystal/Opal Sceptre": {"base": "Quartz\" \"Crystal\" \"Opal", "class": "Sceptres", "other": ["ItemLevel <= 20", "Rarity <= Magic", "LinkedSockets >= 3"], "type": "leveling high"},
-	"02 Quartz/Crystal/Opal Sceptre": {"base": "Quartz\" \"Crystal\" \"Opal", "class": "Sceptres", "other": ["ItemLevel <= 50", "Rarity <= Magic", "LinkedSockets >= 3"], "type": "leveling high"},
+	"01 Quartz/Crystal/Opal Sceptre": {"base": "Quartz", "class": "Sceptres", "other": ["ItemLevel <= 20", "Rarity <= Magic", "LinkedSockets >= 3"], "type": "leveling high"},
+	"02 Quartz/Crystal/Opal Sceptre": {"base": "Quartz", "class": "Sceptres", "other": ["ItemLevel <= 50", "Rarity <= Magic", "LinkedSockets >= 3"], "type": "leveling high"},
 
 	"0 Boots (Movespeed)": {"class": "Boots", "other": ["Rarity Magic"], "type": "ignore"},
 
