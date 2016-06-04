@@ -55,7 +55,7 @@ items = {
 	"0 Portal Scroll": {"base": "Portal Scroll", "class": "Currency", "type": "currency low"},
 	"0 Alteration Shard": {"base": "Alteration Shard", "class": "Currency", "type": "currency low"},
 	"0 Perandus Coin": {"base": "Perandus Coin", "class": "Currency", "type": "currency low"},
-	"0 Silver Coin": {"base": "Silver Coin", "class": "Currency", "type": "currency high"},
+	"0 Silver Coin": {"base": "Silver Coin", "class": "Currency", "type": "currency normal"},
 	"0 Prophecy": {"base": "Prophecy", "class": "Currency", "type": "currency high"},
 	"7 Scroll Fragment": {"base": "Scroll Fragment", "class": "Currency", "type": "hide"},
 	"9 Currency": {"class": "Currency", "type": "currency normal"}
