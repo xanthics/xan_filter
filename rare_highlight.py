@@ -70,9 +70,6 @@ items = {
     "0 Piledriver": {"base": "Piledriver", "class": "Two Hand Maces", "type": "rare high"},
     "0 Coronal Maul": {"base": "Coronal Maul", "class": "Two Hand Maces", "type": "rare high"},
 
-    "0 Opal Sceptre": {"base": "Opal Sceptre", "class": "Sceptres", "type": "rare high"},
-    "0 Void Sceptre": {"base": "Void Sceptre", "class": "Sceptres", "type": "rare high"},
-
     "0 Gloves": {"other": ["DropLevel >= 53"], "class": "Gloves", "type": "rare high"},
     "0 Boots": {"other": ["DropLevel >= 53"], "class": "Boots", "type": "rare high"},
     "0 Body Armours": {"other": ["DropLevel >= 62"], "class": "Body Armours", "type": "rare high"},
@@ -88,9 +85,17 @@ items = {
     "0 Jewel": {"class": "Jewel", "type": "rare high"},
 
     # Caster bases
-    "0 Wand": {"class": "Wand", "type": "rare high"},
-    "0 Quartz Sceptre": {"base": "Quartz Sceptre", "class": "Sceptres", "type": "rare high"},
-    "0 Crystal Sceptre": {"base": "Crystal Sceptre", "class": "Sceptres", "type": "rare high"},
+    "0 Imbued Wand": {"base": "Imbued Wand", "class": "Wand", "type": "rare high"},
+    "0 Opal Wand": {"base": "Opal Wand", "class": "Wand", "type": "rare high"},
+    "0 Tornado Wand": {"base": "Tornado Wand", "class": "Wand", "type": "rare high"},
+    "0 Prophecy Wand": {"base": "Prophecy Wand", "class": "Wand", "type": "rare high"},
+    "0 Profane Wand": {"base": "Profane Wand", "class": "Wand", "type": "rare high"},
+    "0 Opal Sceptre": {"base": "Opal Sceptre", "class": "Sceptres", "type": "rare high"},
+    "0 Vaal Sceptre": {"base": "Vaal Sceptre", "class": "Sceptres", "type": "rare high"},
+    "0 Carnal Sceptre": {"base": "Carnal Sceptre", "class": "Sceptres", "type": "rare high"},
+    "0 Void Sceptre": {"base": "Void Sceptre", "class": "Sceptres", "type": "rare high"},
+    "0 Sambar Sceptre": {"base": "Sambar Sceptre", "class": "Sceptres", "type": "rare high"},
+
     "0 Copper Kris": {"base": "Copper Kris", "class": "Dagger", "type": "rare high"},
     "0 Imp Dagger": {"base": "Imp Dagger", "class": "Dagger", "type": "rare high"},
     "0 Golden Kris": {"base": "Golden Kris", "class": "Dagger", "type": "rare high"},
