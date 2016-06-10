@@ -33,7 +33,6 @@ from item_config import chance
 from item_config import chroma
 from item_config import crafting_bases
 from item_config import currency
-from item_config import divination
 from item_config import flask
 from item_config import gems
 from item_config import general_levelling
@@ -84,8 +83,12 @@ from item_config import rares
 from item_config import recipe_item
 from item_config import show
 from item_config import t1_rares
-from item_config import uniques
 from theme_config import formatting
+
+# from item_config import uniques
+from autogen import uniques
+# from item_config import divination
+from autogen import divination
 
 
 def gen_list(obj):
