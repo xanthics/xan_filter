@@ -161,14 +161,14 @@ settings = {
 					 "SetFontSize {}".format(size['normal']),
 					 "SetBackgroundColor {} 220".format(color['black'])],
 
-	"divination high": ["SetBorderColor {}".format(color['divinationnew']), 
+	"divination high": ["SetBorderColor {}".format(color['divinationnew']),
 						"SetFontSize {}".format(size['vlarge']),
 						"PlayAlertSound 6 175", 
 						"SetBackgroundColor {} 220".format(color['black'])],
-	"divination normal": ["SetBorderColor {}".format(color['divinationnew']), 
+	"divination normal": ["SetBorderColor {}".format(color['divinationnew']),
 						  "PlayAlertSound 6 50", 
 						  "SetBackgroundColor {} 220".format(color['black'])],
-	"divination low": ["SetBorderColor {}".format(color['divinationnew']), 
+	"divination low": ["SetBorderColor {}".format(color['divinationnew']),
 					   "SetBackgroundColor {} 220".format(color['black'])],
 
 	"gem very high": ["SetBorderColor {}".format(color['gem']),
