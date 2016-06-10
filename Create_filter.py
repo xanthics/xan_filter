@@ -25,66 +25,67 @@ Author: Jeremy Parks
 Purpose: Create an item filter based on config files
 Note: Requires Python 3.4.x
 """
-import animate_weapon
-import challenges
-import chance
-import general_levelling
-import hide
-import labyrinth
-import nonrare_armor_dex
-import nonrare_armor_dex_int
-import nonrare_armor_int
-import nonrare_armor_str
-import nonrare_armor_str_dex
-import nonrare_armor_str_int
-import nonrare_bow
-import nonrare_claw
-import nonrare_dagger
-import nonrare_jewelry
-import nonrare_one_hand_axe
-import nonrare_one_hand_mace
-import nonrare_one_hand_sword
-import nonrare_sceptre
-import nonrare_thrusting_one_hand_sword
-import nonrare_two_hand_axe
-import nonrare_two_hand_mace
-import nonrare_two_hand_sword
-import nonrare_wand
-import nonrare_staff
-import rare_armor_dex
-import rare_armor_dex_int
-import rare_armor_int
-import rare_armor_str
-import rare_armor_str_dex
-import rare_armor_str_int
-import rare_bow
-import rare_claw
-import rare_dagger
-import rare_one_hand_axe
-import rare_one_hand_mace
-import rare_one_hand_sword
-import rare_sceptre
-import rare_thrusting_one_hand_sword
-import rare_two_hand_axe
-import rare_two_hand_mace
-import rare_two_hand_sword
-import rare_wand
-import rare_staff
-import show
-import currency
-import gems
-import uniques
-import maps
-import divination
-import chroma
-import flask
-import rares
-import rare_highlight
-import crafting_bases
-import recipe_item
-import t1_rares
-import formatting
 from os import path
+
+from item_config import animate_weapon
+from item_config import challenges
+from item_config import chance
+from item_config import chroma
+from item_config import crafting_bases
+from item_config import currency
+from item_config import divination
+from item_config import flask
+from item_config import gems
+from item_config import general_levelling
+from item_config import hide
+from item_config import labyrinth
+from item_config import maps
+from item_config import nonrare_armor_dex
+from item_config import nonrare_armor_dex_int
+from item_config import nonrare_armor_int
+from item_config import nonrare_armor_str
+from item_config import nonrare_armor_str_dex
+from item_config import nonrare_armor_str_int
+from item_config import nonrare_bow
+from item_config import nonrare_claw
+from item_config import nonrare_dagger
+from item_config import nonrare_jewelry
+from item_config import nonrare_one_hand_axe
+from item_config import nonrare_one_hand_mace
+from item_config import nonrare_one_hand_sword
+from item_config import nonrare_sceptre
+from item_config import nonrare_staff
+from item_config import nonrare_thrusting_one_hand_sword
+from item_config import nonrare_two_hand_axe
+from item_config import nonrare_two_hand_mace
+from item_config import nonrare_two_hand_sword
+from item_config import nonrare_wand
+from item_config import rare_armor_dex
+from item_config import rare_armor_dex_int
+from item_config import rare_armor_int
+from item_config import rare_armor_str
+from item_config import rare_armor_str_dex
+from item_config import rare_armor_str_int
+from item_config import rare_bow
+from item_config import rare_claw
+from item_config import rare_dagger
+from item_config import rare_highlight
+from item_config import rare_one_hand_axe
+from item_config import rare_one_hand_mace
+from item_config import rare_one_hand_sword
+from item_config import rare_sceptre
+from item_config import rare_staff
+from item_config import rare_thrusting_one_hand_sword
+from item_config import rare_two_hand_axe
+from item_config import rare_two_hand_mace
+from item_config import rare_two_hand_sword
+from item_config import rare_wand
+from item_config import rares
+from item_config import recipe_item
+from item_config import show
+from item_config import t1_rares
+from item_config import uniques
+from theme_config import formatting
 
 
 def gen_list(obj):
@@ -136,9 +137,10 @@ def main():
 	buffer += gen_list(t1_rares)
 	if leveling:
 		for rareitemleveling in [rare_armor_dex, rare_armor_dex_int, rare_armor_str_dex, rare_armor_str, rare_armor_int,
-						 rare_armor_str_int, rare_bow, rare_claw, rare_dagger, rare_one_hand_sword, rare_one_hand_mace,
-						 rare_one_hand_axe, rare_sceptre, rare_staff, rare_thrusting_one_hand_sword,
-						 rare_two_hand_sword, rare_two_hand_mace, rare_two_hand_axe, rare_wand]:
+								 rare_armor_str_int, rare_bow, rare_claw, rare_dagger, rare_one_hand_sword,
+								 rare_one_hand_mace,
+								 rare_one_hand_axe, rare_sceptre, rare_staff, rare_thrusting_one_hand_sword,
+								 rare_two_hand_sword, rare_two_hand_mace, rare_two_hand_axe, rare_wand]:
 			buffer += gen_list(rareitemleveling)
 
 	buffer += gen_list(rare_highlight)  # rares highlighting + jewelry
