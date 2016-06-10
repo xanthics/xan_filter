@@ -58,6 +58,33 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
+#02 60+ amulet - Always show
+Show
+	Class "Amulets"
+	Rarity Rare
+	ItemLevel >= 60
+	SetBorderColor 254 170 0
+	SetFontSize 35
+	SetBackgroundColor 0 0 0 220
+
+#02 60+ belt - Always show
+Show
+	Class "Belts"
+	Rarity Rare
+	ItemLevel >= 60
+	SetBorderColor 254 170 0
+	SetFontSize 35
+	SetBackgroundColor 0 0 0 220
+
+#02 60+ ring - Always show
+Show
+	Class "Rings"
+	Rarity Rare
+	ItemLevel >= 60
+	SetBorderColor 254 170 0
+	SetFontSize 35
+	SetBackgroundColor 0 0 0 220
+
 #02 6L - Always show
 Show
 	LinkedSockets 6
@@ -443,7 +470,7 @@ Show
 	BaseType "Blessed Orb"
 	Class "Currency"
 	SetBorderColor 170 158 130
-	SetFontSize 35
+	SetFontSize 40
 	PlayAlertSound 5 75
 	SetBackgroundColor 0 0 0 220
 
@@ -452,6 +479,7 @@ Show
 	BaseType "Cartographer's Chisel"
 	Class "Currency"
 	SetBorderColor 170 158 130
+	SetFontSize 35
 	PlayAlertSound 5 25
 	SetBackgroundColor 0 0 0 220
 
@@ -460,7 +488,7 @@ Show
 	BaseType "Chaos Orb"
 	Class "Currency"
 	SetBorderColor 170 158 130
-	SetFontSize 35
+	SetFontSize 40
 	PlayAlertSound 5 75
 	SetBackgroundColor 0 0 0 220
 
@@ -495,7 +523,7 @@ Show
 	BaseType "Gemcutter's Prism"
 	Class "Currency"
 	SetBorderColor 170 158 130
-	SetFontSize 35
+	SetFontSize 40
 	PlayAlertSound 5 75
 	SetBackgroundColor 0 0 0 220
 
@@ -512,6 +540,7 @@ Show
 	BaseType "Jeweller's Orb"
 	Class "Currency"
 	SetBorderColor 170 158 130
+	SetFontSize 35
 	PlayAlertSound 5 25
 	SetBackgroundColor 0 0 0 220
 
@@ -529,6 +558,7 @@ Show
 	BaseType "Orb of Alchemy"
 	Class "Currency"
 	SetBorderColor 170 158 130
+	SetFontSize 35
 	PlayAlertSound 5 25
 	SetBackgroundColor 0 0 0 220
 
@@ -553,6 +583,7 @@ Show
 	BaseType "Orb of Chance"
 	Class "Currency"
 	SetBorderColor 170 158 130
+	SetFontSize 35
 	PlayAlertSound 5 25
 	SetBackgroundColor 0 0 0 220
 
@@ -561,6 +592,7 @@ Show
 	BaseType "Orb of Fusing"
 	Class "Currency"
 	SetBorderColor 170 158 130
+	SetFontSize 35
 	PlayAlertSound 5 25
 	SetBackgroundColor 0 0 0 220
 
@@ -569,7 +601,7 @@ Show
 	BaseType "Orb of Regret"
 	Class "Currency"
 	SetBorderColor 170 158 130
-	SetFontSize 35
+	SetFontSize 40
 	PlayAlertSound 5 75
 	SetBackgroundColor 0 0 0 220
 
@@ -578,6 +610,7 @@ Show
 	BaseType "Orb of Scouring"
 	Class "Currency"
 	SetBorderColor 170 158 130
+	SetFontSize 35
 	PlayAlertSound 5 25
 	SetBackgroundColor 0 0 0 220
 
@@ -610,7 +643,7 @@ Show
 	BaseType "Prophecy"
 	Class "Currency"
 	SetBorderColor 170 158 130
-	SetFontSize 35
+	SetFontSize 40
 	PlayAlertSound 5 75
 	SetBackgroundColor 0 0 0 220
 
@@ -619,7 +652,7 @@ Show
 	BaseType "Regal Orb"
 	Class "Currency"
 	SetBorderColor 170 158 130
-	SetFontSize 35
+	SetFontSize 40
 	PlayAlertSound 5 75
 	SetBackgroundColor 0 0 0 220
 
@@ -636,6 +669,7 @@ Show
 	BaseType "Silver Coin"
 	Class "Currency"
 	SetBorderColor 170 158 130
+	SetFontSize 35
 	PlayAlertSound 5 25
 	SetBackgroundColor 0 0 0 220
 
@@ -644,7 +678,7 @@ Show
 	BaseType "Vaal Orb"
 	Class "Currency"
 	SetBorderColor 170 158 130
-	SetFontSize 35
+	SetFontSize 40
 	PlayAlertSound 5 75
 	SetBackgroundColor 0 0 0 220
 
@@ -658,6 +692,7 @@ Hide
 Show
 	Class "Currency"
 	SetBorderColor 170 158 130
+	SetFontSize 35
 	PlayAlertSound 5 25
 	SetBackgroundColor 0 0 0 220
 
@@ -691,13 +726,6 @@ Show
 	SetBorderColor 27 162 155
 	SetBackgroundColor 0 0 0 220
 
-#1 Enhance - gems
-Show
-	BaseType "Enhance"
-	Class "Gems"
-	SetBorderColor 27 162 155
-	SetBackgroundColor 0 0 0 220
-
 #1 Enlighten - gems
 Show
 	BaseType "Enlighten"
@@ -719,12 +747,6 @@ Show
 	SetBorderColor 27 162 155
 	SetBackgroundColor 0 0 0 220
 
-#9 Other Gems - gems
-Show
-	Class "Gems"
-	SetFontSize 25
-	SetBackgroundColor 0 0 0 220
-
 #0 Assassin's Garb - Unique
 Show
 	BaseType "Assassin's Garb"
@@ -734,36 +756,18 @@ Show
 	PlayAlertSound 3 300
 	SetBackgroundColor 0 0 0 220
 
+#0 Carnal Sceptre - Unique
+Show
+	BaseType "Carnal Sceptre"
+	Rarity Unique
+	SetBorderColor 175 96 37
+	SetFontSize 45
+	PlayAlertSound 3 300
+	SetBackgroundColor 0 0 0 220
+
 #0 Champion Kite Shield - Unique
 Show
 	BaseType "Champion Kite Shield"
-	Rarity Unique
-	SetBorderColor 175 96 37
-	SetFontSize 45
-	PlayAlertSound 3 300
-	SetBackgroundColor 0 0 0 220
-
-#0 Clasped Mitts - Unique
-Show
-	BaseType "Clasped Mitts"
-	Rarity Unique
-	SetBorderColor 175 96 37
-	SetFontSize 45
-	PlayAlertSound 3 300
-	SetBackgroundColor 0 0 0 220
-
-#0 Courtyard Map - Unique
-Show
-	BaseType "Courtyard Map"
-	Rarity Unique
-	SetBorderColor 175 96 37
-	SetFontSize 45
-	PlayAlertSound 3 300
-	SetBackgroundColor 0 0 0 220
-
-#0 Crusader Boots - Unique
-Show
-	BaseType "Crusader Boots"
 	Rarity Unique
 	SetBorderColor 175 96 37
 	SetFontSize 45
@@ -806,15 +810,6 @@ Show
 	PlayAlertSound 3 300
 	SetBackgroundColor 0 0 0 220
 
-#0 Hubris Circlet - Unique
-Show
-	BaseType "Hubris Circlet"
-	Rarity Unique
-	SetBorderColor 175 96 37
-	SetFontSize 45
-	PlayAlertSound 3 300
-	SetBackgroundColor 0 0 0 220
-
 #0 Imperial Skean - Unique
 Show
 	BaseType "Imperial Skean"
@@ -833,15 +828,6 @@ Show
 	PlayAlertSound 3 300
 	SetBackgroundColor 0 0 0 220
 
-#0 Prismatic Jewel - Unique
-Show
-	BaseType "Prismatic Jewel"
-	Rarity Unique
-	SetBorderColor 175 96 37
-	SetFontSize 45
-	PlayAlertSound 3 300
-	SetBackgroundColor 0 0 0 220
-
 #0 Prophecy Wand - Unique
 Show
 	BaseType "Prophecy Wand"
@@ -851,18 +837,18 @@ Show
 	PlayAlertSound 3 300
 	SetBackgroundColor 0 0 0 220
 
-#0 Raven Mask - Unique
+#0 Regicide Mask - Unique
 Show
-	BaseType "Raven Mask"
+	BaseType "Regicide Mask"
 	Rarity Unique
 	SetBorderColor 175 96 37
 	SetFontSize 45
 	PlayAlertSound 3 300
 	SetBackgroundColor 0 0 0 220
 
-#0 Sanctified Life Flask - Unique
+#0 Sacrificial Garb - Unique
 Show
-	BaseType "Sanctified Life Flask"
+	BaseType "Sacrificial Garb"
 	Rarity Unique
 	SetBorderColor 175 96 37
 	SetFontSize 45
@@ -887,15 +873,6 @@ Show
 	PlayAlertSound 3 300
 	SetBackgroundColor 0 0 0 220
 
-#0 Sorcerer Boots - Unique
-Show
-	BaseType "Sorcerer Boots"
-	Rarity Unique
-	SetBorderColor 175 96 37
-	SetFontSize 45
-	PlayAlertSound 3 300
-	SetBackgroundColor 0 0 0 220
-
 #0 Titanium Spirit Shield - Unique
 Show
 	BaseType "Titanium Spirit Shield"
@@ -914,18 +891,9 @@ Show
 	PlayAlertSound 3 300
 	SetBackgroundColor 0 0 0 220
 
-#0 Two-Stone Ring - Unique
+#0 Vaal Mask - Unique
 Show
-	BaseType "Two-Stone Ring"
-	Rarity Unique
-	SetBorderColor 175 96 37
-	SetFontSize 45
-	PlayAlertSound 3 300
-	SetBackgroundColor 0 0 0 220
-
-#0 Ursine Pelt - Unique
-Show
-	BaseType "Ursine Pelt"
+	BaseType "Vaal Mask"
 	Rarity Unique
 	SetBorderColor 175 96 37
 	SetFontSize 45
@@ -941,15 +909,6 @@ Show
 	PlayAlertSound 3 300
 	SetBackgroundColor 0 0 0 220
 
-#0 Vaal Sceptre - Unique
-Show
-	BaseType "Vaal Sceptre"
-	Rarity Unique
-	SetBorderColor 175 96 37
-	SetFontSize 45
-	PlayAlertSound 3 300
-	SetBackgroundColor 0 0 0 220
-
 #0 Varnished Coat - Unique
 Show
 	BaseType "Varnished Coat"
@@ -959,18 +918,18 @@ Show
 	PlayAlertSound 3 300
 	SetBackgroundColor 0 0 0 220
 
-#0 Wereclaw Talisman - Unique
+#1 Arcanist Gloves - Unique
 Show
-	BaseType "Wereclaw Talisman"
+	BaseType "Arcanist Gloves"
 	Rarity Unique
+	SetFontSize 40
 	SetBorderColor 175 96 37
-	SetFontSize 45
-	PlayAlertSound 3 300
+	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
-#1 Carnal Sceptre - Unique
+#1 Cedar Tower Shield - Unique
 Show
-	BaseType "Carnal Sceptre"
+	BaseType "Cedar Tower Shield"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
@@ -995,9 +954,9 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
-#1 Etched Greatsword - Unique
+#1 Exquisite Leather - Unique
 Show
-	BaseType "Etched Greatsword"
+	BaseType "Exquisite Leather"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
@@ -1022,6 +981,15 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
+#1 Full Wyrmscale - Unique
+Show
+	BaseType "Full Wyrmscale"
+	Rarity Unique
+	SetFontSize 40
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
+	SetBackgroundColor 0 0 0 220
+
 #1 Gold Ring - Unique
 Show
 	BaseType "Gold Ring"
@@ -1040,18 +1008,36 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
-#1 Imperial Staff - Unique
+#1 Harlequin Mask - Unique
 Show
-	BaseType "Imperial Staff"
+	BaseType "Harlequin Mask"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
-#1 Ironscale Gauntlets - Unique
+#1 Hubris Circlet - Unique
 Show
-	BaseType "Ironscale Gauntlets"
+	BaseType "Hubris Circlet"
+	Rarity Unique
+	SetFontSize 40
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
+	SetBackgroundColor 0 0 0 220
+
+#1 Judgement Staff - Unique
+Show
+	BaseType "Judgement Staff"
+	Rarity Unique
+	SetFontSize 40
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
+	SetBackgroundColor 0 0 0 220
+
+#1 Karui Maul - Unique
+Show
+	BaseType "Karui Maul"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
@@ -1067,63 +1053,36 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
-#1 Nubuck Boots - Unique
+#1 Laminated Kite Shield - Unique
 Show
-	BaseType "Nubuck Boots"
+	BaseType "Laminated Kite Shield"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
-#1 Reef Map - Unique
+#1 Lathi - Unique
 Show
-	BaseType "Reef Map"
+	BaseType "Lathi"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
-#1 Regicide Mask - Unique
+#1 Nightmare Bascinet - Unique
 Show
-	BaseType "Regicide Mask"
+	BaseType "Nightmare Bascinet"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
-#1 Ruby Amulet - Unique
+#1 Ruby Flask - Unique
 Show
-	BaseType "Ruby Amulet"
-	Rarity Unique
-	SetFontSize 40
-	SetBorderColor 175 96 37
-	PlayAlertSound 3 75
-	SetBackgroundColor 0 0 0 220
-
-#1 Sacrificial Garb - Unique
-Show
-	BaseType "Sacrificial Garb"
-	Rarity Unique
-	SetFontSize 40
-	SetBorderColor 175 96 37
-	PlayAlertSound 3 75
-	SetBackgroundColor 0 0 0 220
-
-#1 Sharkskin Boots - Unique
-Show
-	BaseType "Sharkskin Boots"
-	Rarity Unique
-	SetFontSize 40
-	SetBorderColor 175 96 37
-	PlayAlertSound 3 75
-	SetBackgroundColor 0 0 0 220
-
-#1 Sharkskin Tunic - Unique
-Show
-	BaseType "Sharkskin Tunic"
+	BaseType "Ruby Flask"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
@@ -1166,9 +1125,9 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
-#1 Spine Bow - Unique
+#1 Sorcerer Boots - Unique
 Show
-	BaseType "Spine Bow"
+	BaseType "Sorcerer Boots"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
@@ -1184,6 +1143,15 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
+#1 Two-Stone Ring - Unique
+Show
+	BaseType "Two-Stone Ring"
+	Rarity Unique
+	SetFontSize 40
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
+	SetBackgroundColor 0 0 0 220
+
 #1 Unset Ring - Unique
 Show
 	BaseType "Unset Ring"
@@ -1193,9 +1161,27 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
-#1 Vaal Mask - Unique
+#1 Ursine Pelt - Unique
 Show
-	BaseType "Vaal Mask"
+	BaseType "Ursine Pelt"
+	Rarity Unique
+	SetFontSize 40
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
+	SetBackgroundColor 0 0 0 220
+
+#1 Vaal Hatchet - Unique
+Show
+	BaseType "Vaal Hatchet"
+	Rarity Unique
+	SetFontSize 40
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
+	SetBackgroundColor 0 0 0 220
+
+#1 Vaal Sceptre - Unique
+Show
+	BaseType "Vaal Sceptre"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
@@ -1532,7 +1518,8 @@ Show
 	BaseType "Abandoned Wealth"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
+	SetFontSize 40
+	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
 #0 Bowyer's Dream - Divination Card
@@ -1540,15 +1527,8 @@ Show
 	BaseType "Bowyer's Dream"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
-	SetBackgroundColor 0 0 0 220
-
-#0 Emperor of Purity - Divination Card
-Show
-	BaseType "Emperor of Purity"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
+	SetFontSize 40
+	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
 #0 Heterochromia - Divination Card
@@ -1556,7 +1536,8 @@ Show
 	BaseType "Heterochromia"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
+	SetFontSize 40
+	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
 #0 Hope - Divination Card
@@ -1564,7 +1545,8 @@ Show
 	BaseType "Hope"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
+	SetFontSize 40
+	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
 #0 Last Hope - Divination Card
@@ -1572,23 +1554,8 @@ Show
 	BaseType "Last Hope"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
-	SetBackgroundColor 0 0 0 220
-
-#0 Lysah's Respite - Divination Card
-Show
-	BaseType "Lysah's Respite"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
-	SetBackgroundColor 0 0 0 220
-
-#0 Merciless Armament - Divination Card
-Show
-	BaseType "Merciless Armament"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
+	SetFontSize 40
+	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
 #0 Pride Before the Fall - Divination Card
@@ -1596,15 +1563,8 @@ Show
 	BaseType "Pride Before the Fall"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
-	SetBackgroundColor 0 0 0 220
-
-#0 The Aesthete - Divination Card
-Show
-	BaseType "The Aesthete"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
+	SetFontSize 40
+	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
 #0 The Artist - Divination Card
@@ -1612,7 +1572,17 @@ Show
 	BaseType "The Artist"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
+	SetFontSize 40
+	PlayAlertSound 6 175
+	SetBackgroundColor 0 0 0 220
+
+#0 The Avenger - Divination Card
+Show
+	BaseType "The Avenger"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	SetFontSize 40
+	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
 #0 The Brittle Emperor - Divination Card
@@ -1620,7 +1590,8 @@ Show
 	BaseType "The Brittle Emperor"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
+	SetFontSize 40
+	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
 #0 The Celestial Justicar - Divination Card
@@ -1628,15 +1599,8 @@ Show
 	BaseType "The Celestial Justicar"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
-	SetBackgroundColor 0 0 0 220
-
-#0 The Chains that Bind - Divination Card
-Show
-	BaseType "The Chains that Bind"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
+	SetFontSize 40
+	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
 #0 The Cursed King - Divination Card
@@ -1644,7 +1608,8 @@ Show
 	BaseType "The Cursed King"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
+	SetFontSize 40
+	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
 #0 The Dapper Prodigy - Divination Card
@@ -1652,7 +1617,8 @@ Show
 	BaseType "The Dapper Prodigy"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
+	SetFontSize 40
+	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
 #0 The Dark Mage - Divination Card
@@ -1660,7 +1626,8 @@ Show
 	BaseType "The Dark Mage"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
+	SetFontSize 40
+	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
 #0 The Doctor - Divination Card
@@ -1668,7 +1635,17 @@ Show
 	BaseType "The Doctor"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
+	SetFontSize 40
+	PlayAlertSound 6 175
+	SetBackgroundColor 0 0 0 220
+
+#0 The Dragon's Heart - Divination Card
+Show
+	BaseType "The Dragon's Heart"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	SetFontSize 40
+	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
 #0 The Enlightened - Divination Card
@@ -1676,7 +1653,8 @@ Show
 	BaseType "The Enlightened"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
+	SetFontSize 40
+	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
 #0 The Ethereal - Divination Card
@@ -1684,15 +1662,8 @@ Show
 	BaseType "The Ethereal"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
-	SetBackgroundColor 0 0 0 220
-
-#0 The Fiend - Divination Card
-Show
-	BaseType "The Fiend"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
+	SetFontSize 40
+	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
 #0 The Harvester - Divination Card
@@ -1700,7 +1671,8 @@ Show
 	BaseType "The Harvester"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
+	SetFontSize 40
+	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
 #0 The Hunger - Divination Card
@@ -1708,7 +1680,8 @@ Show
 	BaseType "The Hunger"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
+	SetFontSize 40
+	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
 #0 The King's Heart - Divination Card
@@ -1716,7 +1689,8 @@ Show
 	BaseType "The King's Heart"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
+	SetFontSize 40
+	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
 #0 The Last One Standing - Divination Card
@@ -1724,15 +1698,8 @@ Show
 	BaseType "The Last One Standing"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
-	SetBackgroundColor 0 0 0 220
-
-#0 The Mercenary - Divination Card
-Show
-	BaseType "The Mercenary"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
+	SetFontSize 40
+	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
 #0 The Offering - Divination Card
@@ -1740,7 +1707,8 @@ Show
 	BaseType "The Offering"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
+	SetFontSize 40
+	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
 #0 The Queen - Divination Card
@@ -1748,7 +1716,8 @@ Show
 	BaseType "The Queen"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
+	SetFontSize 40
+	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
 #0 The Road to Power - Divination Card
@@ -1756,23 +1725,35 @@ Show
 	BaseType "The Road to Power"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
+	SetFontSize 40
+	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
-#0 The Thaumaturgist - Divination Card
+#0 The Spoiled Prince - Divination Card
 Show
-	BaseType "The Thaumaturgist"
+	BaseType "The Spoiled Prince"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
+	SetFontSize 40
+	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
-#0 The Vast - Divination Card
+#0 The Surveyor - Divination Card
 Show
-	BaseType "The Vast"
+	BaseType "The Surveyor"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
+	SetFontSize 40
+	PlayAlertSound 6 175
+	SetBackgroundColor 0 0 0 220
+
+#0 The Trial - Divination Card
+Show
+	BaseType "The Trial"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	SetFontSize 40
+	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
 #0 The Warlord - Divination Card
@@ -1780,23 +1761,8 @@ Show
 	BaseType "The Warlord"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
-	SetBackgroundColor 0 0 0 220
-
-#0 Time-Lost Relic - Divination Card
-Show
-	BaseType "Time-Lost Relic"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
-	SetBackgroundColor 0 0 0 220
-
-#0 Wealth and Power - Divination Card
-Show
-	BaseType "Wealth and Power"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
+	SetFontSize 40
+	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
 #1 Anarchy's Price - Divination Card
@@ -1804,7 +1770,7 @@ Show
 	BaseType "Anarchy's Price"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Assassin's Favour - Divination Card
@@ -1812,15 +1778,7 @@ Show
 	BaseType "Assassin's Favour"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
-	SetBackgroundColor 0 0 0 220
-
-#1 Audacity - Divination Card
-Show
-	BaseType "Audacity"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Birth of the Three - Divination Card
@@ -1828,23 +1786,7 @@ Show
 	BaseType "Birth of the Three"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
-	SetBackgroundColor 0 0 0 220
-
-#1 Blind Venture - Divination Card
-Show
-	BaseType "Blind Venture"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
-	SetBackgroundColor 0 0 0 220
-
-#1 Boundless Realms - Divination Card
-Show
-	BaseType "Boundless Realms"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Cartographer's Delight - Divination Card
@@ -1852,7 +1794,7 @@ Show
 	BaseType "Cartographer's Delight"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Coveted Possession - Divination Card
@@ -1860,7 +1802,15 @@ Show
 	BaseType "Coveted Possession"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
+	SetBackgroundColor 0 0 0 220
+
+#1 Death - Divination Card
+Show
+	BaseType "Death"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Destined to Crumble - Divination Card
@@ -1868,7 +1818,7 @@ Show
 	BaseType "Destined to Crumble"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Doedre's Madness - Divination Card
@@ -1876,7 +1826,7 @@ Show
 	BaseType "Doedre's Madness"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Dying Anguish - Divination Card
@@ -1884,7 +1834,7 @@ Show
 	BaseType "Dying Anguish"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Earth Drinker - Divination Card
@@ -1892,7 +1842,15 @@ Show
 	BaseType "Earth Drinker"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
+	SetBackgroundColor 0 0 0 220
+
+#1 Emperor of Purity - Divination Card
+Show
+	BaseType "Emperor of Purity"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Emperor's Luck - Divination Card
@@ -1900,7 +1858,7 @@ Show
 	BaseType "Emperor's Luck"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Gemcutter's Promise - Divination Card
@@ -1908,7 +1866,7 @@ Show
 	BaseType "Gemcutter's Promise"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Gift of the Gemling Queen - Divination Card
@@ -1916,7 +1874,15 @@ Show
 	BaseType "Gift of the Gemling Queen"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
+	SetBackgroundColor 0 0 0 220
+
+#1 Glimmer of Hope - Divination Card
+Show
+	BaseType "Glimmer of Hope"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Grave Knowledge - Divination Card
@@ -1924,7 +1890,7 @@ Show
 	BaseType "Grave Knowledge"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Her Mask - Divination Card
@@ -1932,7 +1898,7 @@ Show
 	BaseType "Her Mask"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Hubris - Divination Card
@@ -1940,7 +1906,7 @@ Show
 	BaseType "Hubris"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Humility - Divination Card
@@ -1948,7 +1914,7 @@ Show
 	BaseType "Humility"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Hunter's Resolve - Divination Card
@@ -1956,7 +1922,7 @@ Show
 	BaseType "Hunter's Resolve"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Jack in the Box - Divination Card
@@ -1964,7 +1930,7 @@ Show
 	BaseType "Jack in the Box"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Lost Worlds - Divination Card
@@ -1972,7 +1938,7 @@ Show
 	BaseType "Lost Worlds"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Lucky Connections - Divination Card
@@ -1980,15 +1946,23 @@ Show
 	BaseType "Lucky Connections"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
-#1 Prosperity - Divination Card
+#1 Lysah's Respite - Divination Card
 Show
-	BaseType "Prosperity"
+	BaseType "Lysah's Respite"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
+	SetBackgroundColor 0 0 0 220
+
+#1 Merciless Armament - Divination Card
+Show
+	BaseType "Merciless Armament"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Rain Tempter - Divination Card
@@ -1996,7 +1970,7 @@ Show
 	BaseType "Rain Tempter"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Rain of Chaos - Divination Card
@@ -2004,7 +1978,7 @@ Show
 	BaseType "Rain of Chaos"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Rats - Divination Card
@@ -2012,7 +1986,7 @@ Show
 	BaseType "Rats"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Scholar of the Seas - Divination Card
@@ -2020,7 +1994,7 @@ Show
 	BaseType "Scholar of the Seas"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Shard of Fate - Divination Card
@@ -2028,7 +2002,7 @@ Show
 	BaseType "Shard of Fate"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Arena Champion - Divination Card
@@ -2036,15 +2010,7 @@ Show
 	BaseType "The Arena Champion"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
-	SetBackgroundColor 0 0 0 220
-
-#1 The Avenger - Divination Card
-Show
-	BaseType "The Avenger"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Battle Born - Divination Card
@@ -2052,7 +2018,7 @@ Show
 	BaseType "The Battle Born"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Betrayal - Divination Card
@@ -2060,7 +2026,7 @@ Show
 	BaseType "The Betrayal"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Body - Divination Card
@@ -2068,7 +2034,7 @@ Show
 	BaseType "The Body"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Cartographer - Divination Card
@@ -2076,7 +2042,7 @@ Show
 	BaseType "The Cartographer"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Cataclysm - Divination Card
@@ -2084,7 +2050,7 @@ Show
 	BaseType "The Cataclysm"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Catalyst - Divination Card
@@ -2092,15 +2058,15 @@ Show
 	BaseType "The Catalyst"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
-#1 The Conduit - Divination Card
+#1 The Chains that Bind - Divination Card
 Show
-	BaseType "The Conduit"
+	BaseType "The Chains that Bind"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Demoness - Divination Card
@@ -2108,7 +2074,7 @@ Show
 	BaseType "The Demoness"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Doppelganger - Divination Card
@@ -2116,7 +2082,7 @@ Show
 	BaseType "The Doppelganger"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Dragon - Divination Card
@@ -2124,7 +2090,7 @@ Show
 	BaseType "The Dragon"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Drunken Aristocrat - Divination Card
@@ -2132,7 +2098,7 @@ Show
 	BaseType "The Drunken Aristocrat"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Encroaching Darkness - Divination Card
@@ -2140,7 +2106,7 @@ Show
 	BaseType "The Encroaching Darkness"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Feast - Divination Card
@@ -2148,7 +2114,7 @@ Show
 	BaseType "The Feast"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Fletcher - Divination Card
@@ -2156,7 +2122,7 @@ Show
 	BaseType "The Fletcher"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Flora's Gift - Divination Card
@@ -2164,7 +2130,7 @@ Show
 	BaseType "The Flora's Gift"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Fox - Divination Card
@@ -2172,7 +2138,7 @@ Show
 	BaseType "The Fox"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Gambler - Divination Card
@@ -2180,7 +2146,7 @@ Show
 	BaseType "The Gambler"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Gemcutter - Divination Card
@@ -2188,7 +2154,7 @@ Show
 	BaseType "The Gemcutter"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Gentleman - Divination Card
@@ -2196,7 +2162,7 @@ Show
 	BaseType "The Gentleman"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Gladiator - Divination Card
@@ -2204,7 +2170,7 @@ Show
 	BaseType "The Gladiator"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Hoarder - Divination Card
@@ -2212,7 +2178,7 @@ Show
 	BaseType "The Hoarder"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Incantation - Divination Card
@@ -2220,7 +2186,7 @@ Show
 	BaseType "The Incantation"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Inventor - Divination Card
@@ -2228,7 +2194,7 @@ Show
 	BaseType "The Inventor"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Lich - Divination Card
@@ -2236,7 +2202,7 @@ Show
 	BaseType "The Lich"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Lion - Divination Card
@@ -2244,15 +2210,7 @@ Show
 	BaseType "The Lion"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
-	SetBackgroundColor 0 0 0 220
-
-#1 The Lord in Black - Divination Card
-Show
-	BaseType "The Lord in Black"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Lover - Divination Card
@@ -2260,7 +2218,7 @@ Show
 	BaseType "The Lover"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Lunaris Priestess - Divination Card
@@ -2268,7 +2226,15 @@ Show
 	BaseType "The Lunaris Priestess"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
+	SetBackgroundColor 0 0 0 220
+
+#1 The Mercenary - Divination Card
+Show
+	BaseType "The Mercenary"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The One With All - Divination Card
@@ -2276,7 +2242,7 @@ Show
 	BaseType "The One With All"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Pack Leader - Divination Card
@@ -2284,7 +2250,7 @@ Show
 	BaseType "The Pack Leader"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Pact - Divination Card
@@ -2292,7 +2258,7 @@ Show
 	BaseType "The Pact"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Poet - Divination Card
@@ -2300,7 +2266,7 @@ Show
 	BaseType "The Poet"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Risk - Divination Card
@@ -2308,23 +2274,7 @@ Show
 	BaseType "The Risk"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
-	SetBackgroundColor 0 0 0 220
-
-#1 The Scarred Meadow - Divination Card
-Show
-	BaseType "The Scarred Meadow"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
-	SetBackgroundColor 0 0 0 220
-
-#1 The Scholar - Divination Card
-Show
-	BaseType "The Scholar"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Sigil - Divination Card
@@ -2332,31 +2282,7 @@ Show
 	BaseType "The Sigil"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
-	SetBackgroundColor 0 0 0 220
-
-#1 The Siren - Divination Card
-Show
-	BaseType "The Siren"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
-	SetBackgroundColor 0 0 0 220
-
-#1 The Spoiled Prince - Divination Card
-Show
-	BaseType "The Spoiled Prince"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
-	SetBackgroundColor 0 0 0 220
-
-#1 The Stormcaller - Divination Card
-Show
-	BaseType "The Stormcaller"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Summoner - Divination Card
@@ -2364,7 +2290,7 @@ Show
 	BaseType "The Summoner"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Sun - Divination Card
@@ -2372,23 +2298,7 @@ Show
 	BaseType "The Sun"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
-	SetBackgroundColor 0 0 0 220
-
-#1 The Surgeon - Divination Card
-Show
-	BaseType "The Surgeon"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
-	SetBackgroundColor 0 0 0 220
-
-#1 The Surveyor - Divination Card
-Show
-	BaseType "The Surveyor"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Survivalist - Divination Card
@@ -2396,7 +2306,7 @@ Show
 	BaseType "The Survivalist"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Throne - Divination Card
@@ -2404,7 +2314,7 @@ Show
 	BaseType "The Throne"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Tower - Divination Card
@@ -2412,7 +2322,7 @@ Show
 	BaseType "The Tower"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Traitor - Divination Card
@@ -2420,23 +2330,7 @@ Show
 	BaseType "The Traitor"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
-	SetBackgroundColor 0 0 0 220
-
-#1 The Trial - Divination Card
-Show
-	BaseType "The Trial"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
-	SetBackgroundColor 0 0 0 220
-
-#1 The Twins - Divination Card
-Show
-	BaseType "The Twins"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Union - Divination Card
@@ -2444,7 +2338,7 @@ Show
 	BaseType "The Union"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Warden - Divination Card
@@ -2452,7 +2346,7 @@ Show
 	BaseType "The Warden"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Watcher - Divination Card
@@ -2460,7 +2354,7 @@ Show
 	BaseType "The Watcher"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Web - Divination Card
@@ -2468,7 +2362,7 @@ Show
 	BaseType "The Web"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Wind - Divination Card
@@ -2476,7 +2370,7 @@ Show
 	BaseType "The Wind"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Wolf's Shadow - Divination Card
@@ -2484,7 +2378,7 @@ Show
 	BaseType "The Wolf's Shadow"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 The Wrath - Divination Card
@@ -2492,15 +2386,7 @@ Show
 	BaseType "The Wrath"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
-	SetBackgroundColor 0 0 0 220
-
-#1 Three Faces in the Dark - Divination Card
-Show
-	BaseType "Three Faces in the Dark"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Tranquillity - Divination Card
@@ -2508,15 +2394,7 @@ Show
 	BaseType "Tranquillity"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
-	SetBackgroundColor 0 0 0 220
-
-#1 Treasure Hunter - Divination Card
-Show
-	BaseType "Treasure Hunter"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Vinia's Token - Divination Card
@@ -2524,7 +2402,7 @@ Show
 	BaseType "Vinia's Token"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Volatile Power - Divination Card
@@ -2532,7 +2410,21 @@ Show
 	BaseType "Volatile Power"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
+	PlayAlertSound 6 75
+	SetBackgroundColor 0 0 0 220
+
+#2 The Scholar - Divination Card
+Show
+	BaseType "The Scholar"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	SetBackgroundColor 0 0 0 220
+
+#2 Thunderous Skies - Divination Card
+Show
+	BaseType "Thunderous Skies"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
 	SetBackgroundColor 0 0 0 220
 
 #7 A Mother's Parting Gift - Divination Card
@@ -2575,6 +2467,7 @@ Hide
 Show
 	Class "Divination Card"
 	SetBorderColor 30 144 255
+	PlayAlertSound 6 25
 	SetBackgroundColor 0 0 0 220
 
 #01 Qual Flask - Flasks
@@ -2591,13 +2484,6 @@ Show
 	BaseType "Flask"
 	Quality >= 10
 	SetBorderColor 192 128 254
-	SetFontSize 30
-	SetBackgroundColor 0 0 0 220
-
-#03 Qual Flask - Flasks
-Show
-	BaseType "Flask"
-	Quality >= 5
 	SetFontSize 30
 	SetBackgroundColor 0 0 0 220
 
@@ -8670,7 +8556,25 @@ Show
 	SetFontSize 30
 	SetBackgroundColor 0 0 0 220
 
-#0 Ambusher - Always show
+#0 2h Axe - Endgame Rare Bases
+Show
+	Class "Two Hand Axes"
+	DropLevel >= 62
+	Rarity Rare
+	SetBorderColor 255 255 119
+	SetFontSize 35
+	SetBackgroundColor 0 0 0 220
+
+#0 2h Mace - Endgame Rare Bases
+Show
+	Class "Two Hand Maces"
+	DropLevel >= 61
+	Rarity Rare
+	SetBorderColor 255 255 119
+	SetFontSize 35
+	SetBackgroundColor 0 0 0 220
+
+#0 Ambusher - Endgame Rare Bases
 Show
 	BaseType "Ambusher"
 	Class "Dagger"
@@ -8679,7 +8583,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Body Armours - Always show
+#0 Body Armours - Endgame Rare Bases
 Show
 	Class "Body Armours"
 	DropLevel >= 62
@@ -8688,7 +8592,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Boots - Always show
+#0 Boots - Endgame Rare Bases
 Show
 	Class "Boots"
 	DropLevel >= 53
@@ -8697,7 +8601,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Broadhead Arrow Quiver - Always show
+#0 Broadhead Arrow Quiver - Endgame Rare Bases
 Show
 	BaseType "Broadhead Arrow Quiver"
 	Class "Quivers"
@@ -8706,7 +8610,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Buckler - Always show
+#0 Buckler - Endgame Rare Bases
 Show
 	BaseType "Buckler"
 	Class "Shields"
@@ -8716,7 +8620,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Carnal Sceptre - Always show
+#0 Carnal Sceptre - Endgame Rare Bases
 Show
 	BaseType "Carnal Sceptre"
 	Class "Sceptres"
@@ -8725,16 +8629,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Colossus Mallet - Always show
-Show
-	BaseType "Colossus Mallet"
-	Class "Two Hand Maces"
-	Rarity Rare
-	SetBorderColor 255 255 119
-	SetFontSize 35
-	SetBackgroundColor 0 0 0 220
-
-#0 Copper Kris - Always show
+#0 Copper Kris - Endgame Rare Bases
 Show
 	BaseType "Copper Kris"
 	Class "Dagger"
@@ -8743,16 +8638,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Coronal Maul - Always show
-Show
-	BaseType "Coronal Maul"
-	Class "Two Hand Maces"
-	Rarity Rare
-	SetBorderColor 255 255 119
-	SetFontSize 35
-	SetBackgroundColor 0 0 0 220
-
-#0 Corsair Sword - Always show
+#0 Corsair Sword - Endgame Rare Bases
 Show
 	BaseType "Corsair Sword"
 	Class "One Hand Sword"
@@ -8761,7 +8647,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Decimation Bow - Always show
+#0 Decimation Bow - Endgame Rare Bases
 Show
 	BaseType "Decimation Bow"
 	Class "Bow"
@@ -8770,7 +8656,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Demon Dagger - Always show
+#0 Demon Dagger - Endgame Rare Bases
 Show
 	BaseType "Ambusher"
 	Class "Dagger"
@@ -8779,7 +8665,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Dragoon Sword - Always show
+#0 Dragoon Sword - Endgame Rare Bases
 Show
 	BaseType "Dragoon Sword"
 	Class "Thrusting One Hand Sword"
@@ -8788,7 +8674,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Eclipse Staff - Always show
+#0 Eclipse Staff - Endgame Rare Bases
 Show
 	BaseType "Eclipse Staff"
 	Class "Staves"
@@ -8797,7 +8683,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Exquisite Blade - Always show
+#0 Exquisite Blade - Endgame Rare Bases
 Show
 	BaseType "Exquisite Blade"
 	Class "Two Hand Swords"
@@ -8806,7 +8692,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Eye Gouger - Always show
+#0 Eye Gouger - Endgame Rare Bases
 Show
 	BaseType "Eye Gouger"
 	Class "Claw"
@@ -8815,7 +8701,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Ezomyte Dagger - Always show
+#0 Ezomyte Dagger - Endgame Rare Bases
 Show
 	BaseType "Ezomyte Dagger"
 	Class "Dagger"
@@ -8824,7 +8710,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Fiend Dagger - Always show
+#0 Fiend Dagger - Endgame Rare Bases
 Show
 	BaseType "Fiend Dagger"
 	Class "Dagger"
@@ -8833,16 +8719,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Fleshripper - Always show
-Show
-	BaseType "Fleshripper"
-	Class "Two Hand Axes"
-	Rarity Rare
-	SetBorderColor 255 255 119
-	SetFontSize 35
-	SetBackgroundColor 0 0 0 220
-
-#0 Gemini Claw - Always show
+#0 Gemini Claw - Endgame Rare Bases
 Show
 	BaseType "Gemini Claw"
 	Class "Claw"
@@ -8851,7 +8728,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Gloves - Always show
+#0 Gloves - Endgame Rare Bases
 Show
 	Class "Gloves"
 	DropLevel >= 53
@@ -8860,7 +8737,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Golden Kris - Always show
+#0 Golden Kris - Endgame Rare Bases
 Show
 	BaseType "Golden Kris"
 	Class "Dagger"
@@ -8869,7 +8746,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Great White Claw - Always show
+#0 Great White Claw - Endgame Rare Bases
 Show
 	BaseType "Great White Claw"
 	Class "Claw"
@@ -8878,7 +8755,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Harbinger Bow - Always show
+#0 Harbinger Bow - Endgame Rare Bases
 Show
 	BaseType "Harbinger Bow"
 	Class "Bow"
@@ -8887,7 +8764,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Harpy Rapier - Always show
+#0 Harpy Rapier - Endgame Rare Bases
 Show
 	BaseType "Harpy Rapier"
 	Class "Thrusting One Hand Sword"
@@ -8896,7 +8773,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Helmets - Always show
+#0 Helmets - Endgame Rare Bases
 Show
 	Class "Helmets"
 	DropLevel >= 53
@@ -8905,7 +8782,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Imbued Wand - Always show
+#0 Imbued Wand - Endgame Rare Bases
 Show
 	BaseType "Imbued Wand"
 	Class "Wand"
@@ -8914,7 +8791,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Imp Dagger - Always show
+#0 Imp Dagger - Endgame Rare Bases
 Show
 	BaseType "Imp Dagger"
 	Class "Dagger"
@@ -8923,7 +8800,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Imperial Claw - Always show
+#0 Imperial Claw - Endgame Rare Bases
 Show
 	BaseType "Imperial Claw"
 	Class "Claw"
@@ -8932,7 +8809,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Imperial Skean - Always show
+#0 Imperial Skean - Endgame Rare Bases
 Show
 	BaseType "Imperial Skean"
 	Class "Dagger"
@@ -8941,7 +8818,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Imperial Staff - Always show
+#0 Imperial Staff - Endgame Rare Bases
 Show
 	BaseType "Imperial Staff"
 	Class "Staves"
@@ -8950,7 +8827,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Jewel - Always show
+#0 Jewel - Endgame Rare Bases
 Show
 	Class "Jewel"
 	Rarity Rare
@@ -8958,7 +8835,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Jewelled Foil - Always show
+#0 Jewelled Foil - Endgame Rare Bases
 Show
 	BaseType "Jewelled Foil"
 	Class "Thrusting One Hand Sword"
@@ -8967,16 +8844,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Karui Maul - Always show
-Show
-	BaseType "Karui Maul"
-	Class "Two Hand Maces"
-	Rarity Rare
-	SetBorderColor 255 255 119
-	SetFontSize 35
-	SetBackgroundColor 0 0 0 220
-
-#0 Kite Shield - Always show
+#0 Kite Shield - Endgame Rare Bases
 Show
 	BaseType "Kite Shield"
 	Class "Shields"
@@ -8986,7 +8854,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Maelström Staff - Always show
+#0 Maelström Staff - Endgame Rare Bases
 Show
 	BaseType "Maelström Staff"
 	Class "Staves"
@@ -8995,7 +8863,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Opal Sceptre - Always show
+#0 Opal Sceptre - Endgame Rare Bases
 Show
 	BaseType "Opal Sceptre"
 	Class "Sceptres"
@@ -9004,7 +8872,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Opal Wand - Always show
+#0 Opal Wand - Endgame Rare Bases
 Show
 	BaseType "Opal Wand"
 	Class "Wand"
@@ -9013,16 +8881,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Piledriver - Always show
-Show
-	BaseType "Piledriver"
-	Class "Two Hand Maces"
-	Rarity Rare
-	SetBorderColor 255 255 119
-	SetFontSize 35
-	SetBackgroundColor 0 0 0 220
-
-#0 Platinum Kris - Always show
+#0 Platinum Kris - Endgame Rare Bases
 Show
 	BaseType "Platinum Kris"
 	Class "Dagger"
@@ -9031,7 +8890,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Profane Wand - Always show
+#0 Profane Wand - Endgame Rare Bases
 Show
 	BaseType "Profane Wand"
 	Class "Wand"
@@ -9040,7 +8899,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Prophecy Wand - Always show
+#0 Prophecy Wand - Endgame Rare Bases
 Show
 	BaseType "Prophecy Wand"
 	Class "Wand"
@@ -9049,7 +8908,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Reaver Sword - Always show
+#0 Reaver Sword - Endgame Rare Bases
 Show
 	BaseType "Reaver Sword"
 	Class "Two Hand Swords"
@@ -9058,7 +8917,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Round Shield - Always show
+#0 Round Shield - Endgame Rare Bases
 Show
 	BaseType "Round Shield"
 	Class "Shields"
@@ -9068,7 +8927,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Runic Hatchet - Always show
+#0 Runic Hatchet - Endgame Rare Bases
 Show
 	BaseType "Runic Hatchet"
 	Class "One Hand Axe"
@@ -9077,7 +8936,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Sambar Sceptre - Always show
+#0 Sambar Sceptre - Endgame Rare Bases
 Show
 	BaseType "Sambar Sceptre"
 	Class "Sceptres"
@@ -9086,7 +8945,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Siege Axe - Always show
+#0 Siege Axe - Endgame Rare Bases
 Show
 	BaseType "Siege Axe"
 	Class "One Hand Axe"
@@ -9095,7 +8954,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Spike-Point Arrow Quiver - Always show
+#0 Spike-Point Arrow Quiver - Endgame Rare Bases
 Show
 	BaseType "Spike-Point Arrow Quiver"
 	Class "Quivers"
@@ -9104,7 +8963,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Spiked Shield - Always show
+#0 Spiked Shield - Endgame Rare Bases
 Show
 	BaseType "Spiked Shield"
 	Class "Shields"
@@ -9114,7 +8973,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Spiraled Foil - Always show
+#0 Spiraled Foil - Endgame Rare Bases
 Show
 	BaseType "Spiraled Foil"
 	Class "Thrusting One Hand Sword"
@@ -9123,7 +8982,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Spirit Shield - Always show
+#0 Spirit Shield - Endgame Rare Bases
 Show
 	BaseType "Spirit Shield"
 	Class "Shields"
@@ -9133,7 +8992,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Tiger Hook - Always show
+#0 Tiger Hook - Endgame Rare Bases
 Show
 	BaseType "Tiger Hook"
 	Class "One Hand Sword"
@@ -9142,7 +9001,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Tornado Wand - Always show
+#0 Tornado Wand - Endgame Rare Bases
 Show
 	BaseType "Tornado Wand"
 	Class "Wand"
@@ -9151,7 +9010,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Tower Shield - Always show
+#0 Tower Shield - Endgame Rare Bases
 Show
 	BaseType "Tower Shield"
 	Class "Shields"
@@ -9161,7 +9020,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Vaal Hatchet - Always show
+#0 Vaal Hatchet - Endgame Rare Bases
 Show
 	BaseType "Vaal Hatchet"
 	Class "One Hand Axe"
@@ -9170,7 +9029,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Vaal Rapier - Always show
+#0 Vaal Rapier - Endgame Rare Bases
 Show
 	BaseType "Vaal Rapier"
 	Class "Thrusting One Hand Sword"
@@ -9179,7 +9038,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Vaal Sceptre - Always show
+#0 Vaal Sceptre - Endgame Rare Bases
 Show
 	BaseType "Vaal Sceptre"
 	Class "Sceptres"
@@ -9188,16 +9047,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#0 Void Axe - Always show
-Show
-	BaseType "Void Axe"
-	Class "Two Hand Axes"
-	Rarity Rare
-	SetBorderColor 255 255 119
-	SetFontSize 35
-	SetBackgroundColor 0 0 0 220
-
-#0 Void Sceptre - Always show
+#0 Void Sceptre - Endgame Rare Bases
 Show
 	BaseType "Void Sceptre"
 	Class "Sceptres"
@@ -9206,7 +9056,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#02 60+ amulet - Always show
+#02 60+ amulet - Endgame Rare Bases
 Show
 	Class "Amulets"
 	ItemLevel >= 60
@@ -9215,7 +9065,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#02 60+ belt - Always show
+#02 60+ belt - Endgame Rare Bases
 Show
 	Class "Belts"
 	ItemLevel >= 60
@@ -9224,7 +9074,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#02 60+ ring - Always show
+#02 60+ ring - Endgame Rare Bases
 Show
 	Class "Rings"
 	ItemLevel >= 60
@@ -9233,7 +9083,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#03 amulet - Always show
+#03 amulet - Endgame Rare Bases
 Show
 	Class "Amulets"
 	Rarity Rare
@@ -9241,7 +9091,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#03 belt - Always show
+#03 belt - Endgame Rare Bases
 Show
 	Class "Belts"
 	Rarity Rare
@@ -9249,7 +9099,7 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#03 ring - Always show
+#03 ring - Endgame Rare Bases
 Show
 	Class "Rings"
 	Rarity Rare
@@ -9369,28 +9219,6 @@ Show
 	SetFontSize 30
 	SetBackgroundColor 0 0 0 220
 
-#01 Quartz/Crystal/Opal Sceptre - leveling items that are worth seeing
-Show
-	BaseType "Quartz"
-	Class "Sceptres"
-	ItemLevel <= 20
-	Rarity <= Magic
-	LinkedSockets >= 3
-	SetFontSize 30
-	SetBackgroundColor 0 0 0 100
-	SetBorderColor 255 40 0
-
-#02 Quartz/Crystal/Opal Sceptre - leveling items that are worth seeing
-Show
-	BaseType "Quartz"
-	Class "Sceptres"
-	ItemLevel <= 50
-	Rarity <= Magic
-	LinkedSockets >= 3
-	SetFontSize 30
-	SetBackgroundColor 0 0 0 100
-	SetBorderColor 255 40 0
-
 #1 linked 0-20 - leveling items that are worth seeing
 Show
 	Rarity <= Magic
@@ -9431,17 +9259,10 @@ Show
 	SetBackgroundColor 0 0 0 100
 	SetBorderColor 0 100 150
 
-#0 Kaom's Heart - Chance Base
+#0 Headhunter - Chance Base
 Show
-	BaseType "Glorious Plate"
-	Rarity Normal
-	SetFontSize 25
-	SetBorderColor 191 91 0 150
-	SetBackgroundColor 0 0 0 220
-
-#0 Shavronne's Wrappings - Chance Base
-Show
-	BaseType "Occultist's Vestment"
+	BaseType "Leather Belt"
+	ItemLevel >= 74
 	Rarity Normal
 	SetFontSize 25
 	SetBorderColor 191 91 0 150
@@ -9450,14 +9271,6 @@ Show
 #0 Skyforth - Chance Base
 Show
 	BaseType "Sorcerer Boots"
-	Rarity Normal
-	SetFontSize 25
-	SetBorderColor 191 91 0 150
-	SetBackgroundColor 0 0 0 220
-
-#0 Void Battery - Chance Base
-Show
-	BaseType "Prophecy Wand"
 	Rarity Normal
 	SetFontSize 25
 	SetBorderColor 191 91 0 150
