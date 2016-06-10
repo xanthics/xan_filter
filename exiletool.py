@@ -152,8 +152,8 @@ def gen_divination(league):
 
 
 if __name__ == '__main__':
-	league = "Prophecy"
-	#league = "Hardcore Prophecy"
+	#league = "Prophecy"
+	league = "Hardcore Prophecy"
 	# Change which gen is commented out to generate that list.  Due to session caching, they can't be ran back to back
-	gen_uniques(league)
-	#gen_divination(league)
+	#gen_uniques(league)
+	gen_divination(league)
