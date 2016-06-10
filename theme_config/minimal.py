@@ -270,6 +270,8 @@ settings = {
 	"unique normal": ["Rarity Unique", 
 					  "PlayAlertSound 3 50", 
 					  "SetBackgroundColor {} 220".format(color['black'])],
+	"unique low": ["Rarity Unique",
+				   "SetBackgroundColor {} 220".format(color['black'])],
 
 	"high": ["SetBorderColor {}".format(color['premiumdyellow']),
 			 "SetFontSize {}".format(size['large']),
