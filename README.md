@@ -29,8 +29,6 @@ To-Do
 =====
 No ETA
 
-Expand uniques filtering
-
 Add config processor that created compact output
 
 Filtration compatibility
