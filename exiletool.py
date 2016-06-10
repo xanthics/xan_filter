@@ -76,20 +76,18 @@ def gen_uniques(league):
 
 	url = 'http://api.exiletools.com/index/_search?pretty'
 
-	req = requests.get(url, data=query, auth=(user, password))
+	req = requests.get(url, headers={'Connection': 'close'}, data=query, auth=(user, password))
 
 	data = req.json(encoding='utf-8')
 
 	if 'aggregations' in data and 'uniqueNames' in data['aggregations'] and 'buckets' in data['aggregations']['uniqueNames'] and data['aggregations']['uniqueNames']['buckets']:
-		items = {'very high': [], 'high': [], 'normal': [], 'low': []}
+		items = {'very high': [], 'high': []}
 
 		for i in data['aggregations']['uniqueNames']['buckets']:
 			if i['avgPrice']['values']['50.0'] >= 50:
 				items['very high'].append(i[u'key'])
 			elif i['avgPrice']['values']['50.0'] >= 10:
 				items['high'].append(i[u'key'])
-			elif i['avgPrice']['values']['50.0'] > 1:
-				items['normal'].append(i[u'key'])
 
 		with open('autogen\\uniques.py', 'w', 'utf-8') as f:
 			f.write(u'''{}\ndesc = "Unique"\n\n# Base type : settings pair\nitems = {{\n'''.format(header))
@@ -97,9 +95,7 @@ def gen_uniques(league):
 				f.write(u'\t"0 {0}": {{"base": "{0}", "type": "unique very high"}},\n'.format(ii))
 			for ii in items['high']:
 				f.write(u'\t"1 {0}": {{"base": "{0}", "type": "unique high"}},\n'.format(ii))
-			for ii in items['normal']:
-				f.write(u'\t"2 {0}": {{"base": "{0}", "type": "unique normal"}},\n'.format(ii))
-			f.write(u'\t"9 Other uniques": {"type": "unique low"}\n}\n')
+			f.write(u'\t"9 Other uniques": {"type": "unique normal"}\n}\n')
 	else:
 		print(req.text)
 
@@ -120,7 +116,7 @@ def gen_divination(league):
 
 	url = 'http://api.exiletools.com/index/_search?pretty'
 
-	req = requests.get(url, data=query, auth=(user, password))
+	req = requests.get(url, headers={'Connection': 'close'}, data=query, auth=(user, password))
 
 	data = req.json(encoding='utf-8')
 
@@ -157,8 +153,7 @@ def gen_divination(league):
 
 if __name__ == '__main__':
 	league = "Prophecy"
+	#league = "Hardcore Prophecy"
+	# Change which gen is commented out to generate that list.  Due to session caching, they can't be ran back to back
 	gen_uniques(league)
-	print("Starting sleep due to caching")
-	sleep(60)
-	print("Sleep ended")
-	gen_divination(league)
+	#gen_divination(league)
