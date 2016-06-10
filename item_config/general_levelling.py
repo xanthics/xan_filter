@@ -32,8 +32,8 @@ desc = "leveling items that are worth seeing"
 # settings supports the following: 'base' (BaseType), 'class' (Class), 'other' (settings unique to that item)
 #  'type' (Mandatory, indexes settings)
 items = {
-	"01 Quartz/Crystal/Opal Sceptre": {"base": "Quartz", "class": "Sceptres", "other": ["ItemLevel <= 20", "Rarity <= Magic", "LinkedSockets >= 3"], "type": "leveling high"},
-	"02 Quartz/Crystal/Opal Sceptre": {"base": "Quartz", "class": "Sceptres", "other": ["ItemLevel <= 50", "Rarity <= Magic", "LinkedSockets >= 3"], "type": "leveling high"},
+	"01 Quartz/Crystal/Opal Sceptre": {"base": "Quartz", "class": "Sceptres", "other": ["ItemLevel <= 20", "Rarity <= Magic", "LinkedSockets >= 3"], "type": "leveling normal"},
+	"02 Quartz/Crystal/Opal Sceptre": {"base": "Quartz", "class": "Sceptres", "other": ["ItemLevel <= 50", "Rarity <= Magic", "LinkedSockets >= 3"], "type": "leveling normal"},
 
 	"0 Boots (Movespeed)": {"class": "Boots", "other": ["Rarity Magic"], "type": "ignore"},
 
@@ -41,4 +41,8 @@ items = {
 	"1 linked 15-40": {"other": ["Rarity <= Magic", "DropLevel >= 15", "ItemLevel <= 40", "LinkedSockets > 3"], "type": "leveling normal"},
 	"1 linked 25-50": {"other": ["Rarity <= Magic", "DropLevel >= 25", "ItemLevel <= 50", "LinkedSockets > 3"], "type": "leveling normal"},
 	"1 linked 40-65": {"other": ["Rarity <= Magic", "DropLevel >= 40", "ItemLevel <= 65", "LinkedSockets > 3"], "type": "leveling normal"},
+
+	"1 Sceptre linked 15-40": {"class": "Sceptres\" \"Wands", "other": ["Rarity <= Magic", "DropLevel >= 15", "ItemLevel <= 40", "LinkedSockets > 3"], "type": "leveling normal"},
+	"1 Sceptre linked 25-50": {"class": "Sceptres\" \"Wands", "other": ["Rarity <= Magic", "DropLevel >= 25", "ItemLevel <= 50", "LinkedSockets > 3"], "type": "leveling normal"},
+	"1 Sceptre linked 40-65": {"class": "Sceptres\" \"Wands", "other": ["Rarity <= Magic", "DropLevel >= 40", "ItemLevel <= 65", "LinkedSockets > 3"], "type": "leveling normal"},
 }
