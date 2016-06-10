@@ -127,11 +127,14 @@ def gen_divination(league):
 				"The Inoculated",
 				"Turn the Other Cheek"]
 
+	lowcards = ["Thunderous Skies",
+				"The Scholar"]
+
 	if 'aggregations' in data and 'CardNames' in data['aggregations'] and 'buckets' in data['aggregations']['CardNames'] and data['aggregations']['CardNames']['buckets']:
 		items = {'high': [], 'normal': [], 'low': []}
 
 		for i in data['aggregations']['CardNames']['buckets']:
-			if i['key'] in badcards:
+			if i['key'] in badcards or i['key'] in lowcards:
 				pass
 			elif i['avgPrice']['values']['50.0'] >= 6:
 				items['high'].append(i[u'key'])
@@ -141,12 +144,14 @@ def gen_divination(league):
 		with open('autogen\\divination.py', 'w', 'utf-8') as f:
 			f.write(u'''{}\ndesc = "Divination Card"\n\n# Base type : settings pair\nitems = {{\n'''.format(header))
 			for ii in items['high']:
-				f.write(u'\t"0 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination high"}},\n'.format(ii))
+				f.write(u'\t"0 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination very high"}},\n'.format(ii))
 			for ii in items['normal']:
-				f.write(u'\t"1 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination normal"}},\n'.format(ii))
+				f.write(u'\t"1 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination high"}},\n'.format(ii))
+			for ii in lowcards:
+				f.write(u'\t"2 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination low"}},\n'.format(ii))
 			for ii in badcards:
 				f.write(u'\t"7 {0}": {{"base": "{0}", "class": "Divination Card", "type": "hide"}},\n'.format(ii))
-			f.write(u'\t"9 Other uniques": {"class": "Divination Card", "type": "divination low"}\n}\n')
+			f.write(u'\t"9 Other uniques": {"class": "Divination Card", "type": "divination normal"}\n}\n')
 	else:
 		print(req.text)
 
