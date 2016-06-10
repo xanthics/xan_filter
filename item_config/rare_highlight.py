@@ -62,15 +62,15 @@ items = {
     "0 Exquisite Blade": {"base": "Exquisite Blade", "class": "Two Hand Swords", "type": "rare high"},
     "0 Reaver Sword": {"base": "Reaver Sword", "class": "Two Hand Swords", "type": "rare high"},
 
-    "0 2h Axe": {"class": "Two Hand Axes", "other": ["DropLevel >= 62"], "type": "rare high"},
-    "0 2h Mace": {"class": "Two Hand Maces", "other": ["DropLevel >= 61"], "type": "rare high"},
-    # "0 Void Axe": {"base": "Void Axe", "class": "Two Hand Axes", "type": "rare high"},
-    # "0 Fleshripper": {"base": "Fleshripper", "class": "Two Hand Axes", "type": "rare high"},
+    #"0 2h Axe": {"class": "Two Hand Axes", "other": ["DropLevel >= 62"], "type": "rare high"},
+    #"0 2h Mace": {"class": "Two Hand Maces", "other": ["DropLevel >= 61"], "type": "rare high"},
+    "0 Void Axe": {"base": "Void Axe", "class": "Two Hand Axes", "type": "rare high"},
+    "0 Fleshripper": {"base": "Fleshripper", "class": "Two Hand Axes", "type": "rare high"},
 
-    # "0 Karui Maul": {"base": "Karui Maul", "class": "Two Hand Maces", "type": "rare high"},
-    # "0 Colossus Mallet": {"base": "Colossus Mallet", "class": "Two Hand Maces", "type": "rare high"},
-    # "0 Piledriver": {"base": "Piledriver", "class": "Two Hand Maces", "type": "rare high"},
-    # "0 Coronal Maul": {"base": "Coronal Maul", "class": "Two Hand Maces", "type": "rare high"},
+    "0 Karui Maul": {"base": "Karui Maul", "class": "Two Hand Maces", "type": "rare high"},
+    "0 Colossus Mallet": {"base": "Colossus Mallet", "class": "Two Hand Maces", "type": "rare high"},
+    "0 Piledriver": {"base": "Piledriver", "class": "Two Hand Maces", "type": "rare high"},
+    "0 Coronal Maul": {"base": "Coronal Maul", "class": "Two Hand Maces", "type": "rare high"},
 
     "0 Gloves": {"other": ["DropLevel >= 53"], "class": "Gloves", "type": "rare high"},
     "0 Boots": {"other": ["DropLevel >= 53"], "class": "Boots", "type": "rare high"},
