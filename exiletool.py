@@ -23,16 +23,18 @@
 
 Author: Jeremy Parks
 Purpose: Create price lists for uniques and divination cards from exiletools api data
+         This file creates updated priority lists for uniques and divination cards
 Note: Requires Python 3.4.x
 """
 
 import requests
 from codecs import open
 from api_key import user, password
-from time import sleep
+from datetime import datetime
 
 header = '''#!/usr/bin/python
 # -*- coding: utf-8 -*-
+# Created: {} PST from "{}" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -90,7 +92,7 @@ def gen_uniques(league):
 				items['high'].append(i[u'key'])
 
 		with open('autogen\\uniques.py', 'w', 'utf-8') as f:
-			f.write(u'''{}\ndesc = "Unique"\n\n# Base type : settings pair\nitems = {{\n'''.format(header))
+			f.write(u'''{}\ndesc = "Unique"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.now().strftime('%Y-%m-%dT%H:%M:%S'),league)))
 			for ii in items['very high']:
 				f.write(u'\t"0 {0}": {{"base": "{0}", "type": "unique very high"}},\n'.format(ii))
 			for ii in items['high']:
@@ -142,7 +144,7 @@ def gen_divination(league):
 				items['normal'].append(i[u'key'])
 
 		with open('autogen\\divination.py', 'w', 'utf-8') as f:
-			f.write(u'''{}\ndesc = "Divination Card"\n\n# Base type : settings pair\nitems = {{\n'''.format(header))
+			f.write(u'''{}\ndesc = "Divination Card"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.now().strftime('%Y-%m-%dT%H:%M:%S'),league)))
 			for ii in items['high']:
 				f.write(u'\t"0 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination very high"}},\n'.format(ii))
 			for ii in items['normal']:
@@ -157,8 +159,12 @@ def gen_divination(league):
 
 
 if __name__ == '__main__':
-	#league = "Prophecy"
-	league = "Hardcore Prophecy"
+	league = "Prophecy"
+	#league = "Hardcore Prophecy"
+
+	#league = "Standard"
+	#league = "Hardcore"
+
 	# Change which gen is commented out to generate that list.  Due to session caching, they can't be ran back to back
-	#gen_uniques(league)
-	gen_divination(league)
+	gen_uniques(league)
+	#gen_divination(league)
