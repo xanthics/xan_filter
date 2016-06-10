@@ -33,9 +33,9 @@ items = {
     "1 Portal": {"base": "Portal", "class": "Gems", "type": "gem normal"},
     "1 Detonate Mines": {"base": "Detonate Mines", "class": "Gems", "type": "ignore"},
     "1 Empower": {"base": "Empower", "class": "Gems", "type": "gem normal"},
-    "1 Enhance": {"base": "Enhance", "class": "Gems", "type": "gem normal"},
+    "1 Enhance": {"base": "Enhance", "class": "Gems", "type": "ignore"},
     "1 Enlighten": {"base": "Enlighten", "class": "Gems", "type": "gem normal"},
     "1 Added Chaos Damage": {"base": "Added Chaos Damage", "class": "Gems", "type": "gem normal"},
     "1 Vaal Gems": {"base": "Vaal", "class": "Gems", "type": "gem normal"},
-    "9 Other Gems": {"class": "Gems", "type": "gem low"}
+    "9 Other Gems": {"class": "Gems", "type": "ignore"}
 }

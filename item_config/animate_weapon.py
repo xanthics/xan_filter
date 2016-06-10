@@ -28,7 +28,7 @@ Note: Requires Python 3.4.x
 
 desc = "Animate Weapon target"
 
-# types intended for this is "animate melee", "animate range", "animate melee b" and "animate range b"
+# types intended for this is "animate melee" and "animate range"
 
 # Base type : settings pair
 items = {
