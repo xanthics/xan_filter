@@ -153,7 +153,7 @@ def main():
 		buffer += gen_list(general_levelling)
 	buffer += gen_list(chance)  # Chance bases
 	buffer += gen_list(crafting_bases)  # Crafting bases
-	buffer += gen_list(animate_weapon)  # Crafting bases
+	buffer += gen_list(animate_weapon)  # Animate Weapon bases
 
 	if leveling:
 		for nonrareitemleveling in [nonrare_armor_dex, nonrare_armor_dex_int, nonrare_armor_str_dex, nonrare_armor_str,
