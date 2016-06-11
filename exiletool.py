@@ -62,63 +62,28 @@ Note: Requires Python 3.4.x
 """
 '''
 
-def gen_uniques(league):
-	query = '''
-	{{
-	  "query": {{"bool": {{"must": [{{"term": {{"attributes.league": {{"value": "{}"}}}}}},
-								  {{"term": {{"attributes.rarity": {{"value": "Unique"}}}}}},
-								  {{"term": {{"shop.hasPrice": {{"value": "true"}}}}}}
-								 ]}}}},
-	  "aggs": {{"uniqueNames": {{"terms": {{"field": "info.typeLine","size": 1000,"order" : {{"avgPrice[50.0]" : "desc"}}}},
-										 "aggs": {{"avgPrice": {{"percentiles": {{"field": "shop.chaosEquiv","percents": [50]}}}}}}}}
-			  }},
-	  size:0
-	}}
-	'''.format(league)
 
-	url = 'http://api.exiletools.com/index/_search?pretty'
+def gen_lists():
+	league1 = "Prophecy"
+	league2 = "Hardcore Prophecy"
+	league3 = "Standard"
+	league4 = "Hardcore"
 
-	req = requests.get(url, headers={'Connection': 'close'}, data=query, auth=(user, password))
+	league1queryunique = '''{{"query":{{"bool":{{"must":[{{"term":{{"attributes.league":{{"value":"{0}"}}}}}},{{"term":{{"attributes.rarity":{{"value":"Unique"}}}}}},{{"term":{{"shop.hasPrice":{{"value":"true"}}}}}}]}}}},"aggs":{{"{0} Uniques":{{"terms":{{"field":"info.typeLine","size":1000,"order":{{"avgPrice[50.0]":"desc"}}}},"aggs":{{"avgPrice":{{"percentiles":{{"field":"shop.chaosEquiv","percents":[50]}}}}}}}}}},size:0}}'''.format(league1)
+	league1querycard = '''{{"query": {{"bool": {{"must": [{{"term": {{"attributes.league": {{"value": "{0}"}}}}}},{{"term": {{"attributes.baseItemType": {{"value": "Card"}}}}}},{{"term": {{"shop.hasPrice": {{"value": "true"}}}}}}]}}}},"aggs": {{"{0} Cards": {{"terms": {{"field": "info.typeLine","size": 1000,"order" : {{"avgPrice[50.0]" : "desc"}}}},"aggs": {{"avgPrice": {{"percentiles": {{"field": "shop.chaosEquiv","percents": [50]}}}}}}}}}},size:0}}'''.format(league1)
 
-	data = req.json(encoding='utf-8')
+	league2queryunique = '''{{"query":{{"bool":{{"must":[{{"term":{{"attributes.league":{{"value":"{0}"}}}}}},{{"term":{{"attributes.rarity":{{"value":"Unique"}}}}}},{{"term":{{"shop.hasPrice":{{"value":"true"}}}}}}]}}}},"aggs":{{"{0} Uniques":{{"terms":{{"field":"info.typeLine","size":1000,"order":{{"avgPrice[50.0]":"desc"}}}},"aggs":{{"avgPrice":{{"percentiles":{{"field":"shop.chaosEquiv","percents":[50]}}}}}}}}}},size:0}}'''.format(league2)
+	league2querycard = '''{{"query": {{"bool": {{"must": [{{"term": {{"attributes.league": {{"value": "{0}"}}}}}},{{"term": {{"attributes.baseItemType": {{"value": "Card"}}}}}},{{"term": {{"shop.hasPrice": {{"value": "true"}}}}}}]}}}},"aggs": {{"{0} Cards": {{"terms": {{"field": "info.typeLine","size": 1000,"order" : {{"avgPrice[50.0]" : "desc"}}}},"aggs": {{"avgPrice": {{"percentiles": {{"field": "shop.chaosEquiv","percents": [50]}}}}}}}}}},size:0}}'''.format(league2)
 
-	if 'aggregations' in data and 'uniqueNames' in data['aggregations'] and 'buckets' in data['aggregations']['uniqueNames'] and data['aggregations']['uniqueNames']['buckets']:
-		items = {'very high': [], 'high': []}
+	league3queryunique = '''{{"query":{{"bool":{{"must":[{{"term":{{"attributes.league":{{"value":"{0}"}}}}}},{{"term":{{"attributes.rarity":{{"value":"Unique"}}}}}},{{"term":{{"shop.hasPrice":{{"value":"true"}}}}}}]}}}},"aggs":{{"{0} Uniques":{{"terms":{{"field":"info.typeLine","size":1000,"order":{{"avgPrice[50.0]":"desc"}}}},"aggs":{{"avgPrice":{{"percentiles":{{"field":"shop.chaosEquiv","percents":[50]}}}}}}}}}},size:0}}'''.format(league3)
+	league3querycard = '''{{"query": {{"bool": {{"must": [{{"term": {{"attributes.league": {{"value": "{0}"}}}}}},{{"term": {{"attributes.baseItemType": {{"value": "Card"}}}}}},{{"term": {{"shop.hasPrice": {{"value": "true"}}}}}}]}}}},"aggs": {{"{0} Cards": {{"terms": {{"field": "info.typeLine","size": 1000,"order" : {{"avgPrice[50.0]" : "desc"}}}},"aggs": {{"avgPrice": {{"percentiles": {{"field": "shop.chaosEquiv","percents": [50]}}}}}}}}}},size:0}}'''.format(league3)
 
-		for i in data['aggregations']['uniqueNames']['buckets']:
-			if i['avgPrice']['values']['50.0'] >= 50:
-				items['very high'].append(i[u'key'])
-			elif i['avgPrice']['values']['50.0'] >= 10:
-				items['high'].append(i[u'key'])
+	league4queryunique = '''{{"query":{{"bool":{{"must":[{{"term":{{"attributes.league":{{"value":"{0}"}}}}}},{{"term":{{"attributes.rarity":{{"value":"Unique"}}}}}},{{"term":{{"shop.hasPrice":{{"value":"true"}}}}}}]}}}},"aggs":{{"{0} Uniques":{{"terms":{{"field":"info.typeLine","size":1000,"order":{{"avgPrice[50.0]":"desc"}}}},"aggs":{{"avgPrice":{{"percentiles":{{"field":"shop.chaosEquiv","percents":[50]}}}}}}}}}},size:0}}'''.format(league4)
+	league4querycard = '''{{"query": {{"bool": {{"must": [{{"term": {{"attributes.league": {{"value": "{0}"}}}}}},{{"term": {{"attributes.baseItemType": {{"value": "Card"}}}}}},{{"term": {{"shop.hasPrice": {{"value": "true"}}}}}}]}}}},"aggs": {{"{0} Cards": {{"terms": {{"field": "info.typeLine","size": 1000,"order" : {{"avgPrice[50.0]" : "desc"}}}},"aggs": {{"avgPrice": {{"percentiles": {{"field": "shop.chaosEquiv","percents": [50]}}}}}}}}}},size:0}}'''.format(league4)
 
-		with open('autogen\\uniques.py', 'w', 'utf-8') as f:
-			f.write(u'''{}\ndesc = "Unique"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.now().strftime('%Y-%m-%dT%H:%M:%S'),league)))
-			for ii in items['very high']:
-				f.write(u'\t"0 {0}": {{"base": "{0}", "type": "unique very high"}},\n'.format(ii))
-			for ii in items['high']:
-				f.write(u'\t"1 {0}": {{"base": "{0}", "type": "unique high"}},\n'.format(ii))
-			f.write(u'\t"9 Other uniques": {"type": "unique normal"}\n}\n')
-	else:
-		print(req.text)
+	url = 'http://api.exiletools.com/index/_msearch?pretty'
 
-
-def gen_divination(league):
-	query = '''
-	{{
-	  "query": {{"bool": {{"must": [{{"term": {{"attributes.league": {{"value": "{}"}}}}}},
-								  {{"term": {{"attributes.baseItemType": {{"value": "Card"}}}}}},
-								  {{"term": {{"shop.hasPrice": {{"value": "true"}}}}}}
-								 ]}}}},
-	  "aggs": {{"CardNames": {{"terms": {{"field": "info.typeLine","size": 1000,"order" : {{"avgPrice[50.0]" : "desc"}}}},
-					  			       "aggs": {{"avgPrice": {{"percentiles": {{"field": "shop.chaosEquiv","percents": [50]}}}}}}}}
-			  }},
-	  size:0
-	}}
-	'''.format(league)
-
-	url = 'http://api.exiletools.com/index/_search?pretty'
-
-	req = requests.get(url, headers={'Connection': 'close'}, data=query, auth=(user, password))
+	req = requests.get(url, data="{{}}\n{}\n{{}}\n{}\n{{}}\n{}\n{{}}\n{}\n{{}}\n{}\n{{}}\n{}\n{{}}\n{}\n{{}}\n{}\n".format(league1queryunique, league1querycard, league2queryunique, league2querycard, league3queryunique, league3querycard, league4queryunique, league4querycard), auth=(user, password))
 
 	data = req.json(encoding='utf-8')
 
@@ -132,39 +97,68 @@ def gen_divination(league):
 	lowcards = ["Thunderous Skies",
 				"The Scholar"]
 
-	if 'aggregations' in data and 'CardNames' in data['aggregations'] and 'buckets' in data['aggregations']['CardNames'] and data['aggregations']['CardNames']['buckets']:
-		items = {'high': [], 'normal': [], 'low': []}
+	if 'responses' in data:
+		for l in data['responses']:
+			curkey = list(l['aggregations'].keys())[0]
+			if "Uniques" in curkey:
+				name = ""
+				if curkey == "{} Uniques".format(league1):
+					name = "p"
+				elif curkey == "{} Uniques".format(league2):
+					name = "phc"
+				elif curkey == "{} Uniques".format(league3):
+					name = ""
+				elif curkey == "{} Uniques".format(league4):
+					name = "hc"
+				items = {'very high': [], 'high': []}
 
-		for i in data['aggregations']['CardNames']['buckets']:
-			if i['key'] in badcards or i['key'] in lowcards:
-				pass
-			elif i['avgPrice']['values']['50.0'] >= 6:
-				items['high'].append(i[u'key'])
-			elif i['avgPrice']['values']['50.0'] >= 1:
-				items['normal'].append(i[u'key'])
+				for i in l['aggregations'][curkey]['buckets']:
+					if i['avgPrice']['values']['50.0'] >= 50:
+						items['very high'].append(i[u'key'])
+					elif i['avgPrice']['values']['50.0'] >= 10:
+						items['high'].append(i[u'key'])
 
-		with open('autogen\\divination.py', 'w', 'utf-8') as f:
-			f.write(u'''{}\ndesc = "Divination Card"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.now().strftime('%Y-%m-%dT%H:%M:%S'),league)))
-			for ii in items['high']:
-				f.write(u'\t"0 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination very high"}},\n'.format(ii))
-			for ii in items['normal']:
-				f.write(u'\t"1 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination high"}},\n'.format(ii))
-			for ii in lowcards:
-				f.write(u'\t"2 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination low"}},\n'.format(ii))
-			for ii in badcards:
-				f.write(u'\t"7 {0}": {{"base": "{0}", "class": "Divination Card", "type": "hide"}},\n'.format(ii))
-			f.write(u'\t"9 Other uniques": {"class": "Divination Card", "type": "divination normal"}\n}\n')
-	else:
-		print(req.text)
+				with open('autogen\\{}uniques.py'.format(name), 'w', 'utf-8') as f:
+					f.write(u'''{}\ndesc = "Unique"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.now().strftime('%Y-%m-%dT%H:%M:%S'), curkey)))
+					for ii in items['very high']:
+						f.write(u'\t"0 {0}": {{"base": "{0}", "type": "unique very high"}},\n'.format(ii))
+					for ii in items['high']:
+						f.write(u'\t"1 {0}": {{"base": "{0}", "type": "unique high"}},\n'.format(ii))
+					f.write(u'\t"9 Other uniques": {"type": "unique normal"}\n}\n')
+
+			elif "Cards" in curkey:
+				name = ""
+				if curkey == "{} Cards".format(league1):
+					name = "p"
+				elif curkey == "{} Cards".format(league2):
+					name = "phc"
+				elif curkey == "{} Cards".format(league3):
+					name = ""
+				elif curkey == "{} Cards".format(league4):
+					name = "hc"
+				items = {'high': [], 'normal': [], 'low': []}
+
+				for i in l['aggregations'][curkey]['buckets']:
+					if i['key'] in badcards or i['key'] in lowcards:
+						pass
+					elif i['avgPrice']['values']['50.0'] >= 6:
+						items['high'].append(i[u'key'])
+					elif i['avgPrice']['values']['50.0'] >= 1:
+						items['normal'].append(i[u'key'])
+
+				with open('autogen\\{}divination.py'.format(name), 'w', 'utf-8') as f:
+					f.write(u'''{}\ndesc = "Divination Card"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.now().strftime('%Y-%m-%dT%H:%M:%S'),curkey)))
+					for ii in items['high']:
+						f.write(u'\t"0 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination very high"}},\n'.format(ii))
+					for ii in items['normal']:
+						f.write(u'\t"1 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination high"}},\n'.format(ii))
+					for ii in lowcards:
+						f.write(u'\t"2 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination low"}},\n'.format(ii))
+					for ii in badcards:
+						f.write(u'\t"7 {0}": {{"base": "{0}", "class": "Divination Card", "type": "hide"}},\n'.format(ii))
+					f.write(u'\t"9 Other uniques": {"class": "Divination Card", "type": "divination normal"}\n}\n')
 
 
 if __name__ == '__main__':
-	league = "Prophecy"
-	#league = "Hardcore Prophecy"
 
-	#league = "Standard"
-	#league = "Hardcore"
-
-	# Change which gen is commented out to generate that list.  Due to session caching, they can't be ran back to back
-	gen_uniques(league)
-	#gen_divination(league)
+	gen_lists()
