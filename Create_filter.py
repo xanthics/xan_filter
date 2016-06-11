@@ -85,10 +85,14 @@ from item_config import show
 from item_config import t1_rares
 from theme_config import formatting
 
-# from item_config import uniques
 from autogen import uniques
-# from item_config import divination
 from autogen import divination
+from autogen import hcuniques
+from autogen import hcdivination
+from autogen import phcuniques
+from autogen import phcdivination
+from autogen import puniques
+from autogen import pdivination
 
 
 def gen_list(obj):
@@ -121,68 +125,75 @@ def gen_list(obj):
 
 # main function for creating a filter
 def main():
+	leaguesets = [("standard", uniques, divination),
+				  ("hardcore", hcuniques, hcdivination),
+				  ("prophecy", puniques, pdivination),
+				  ("prophecyhc", phcuniques, phcdivination)]
 
 	leveling = True  # toggle to show leveling items
 
-	buffer = ""
+	for i in leaguesets:
 
-	buffer += gen_list(show)  # Always show these items
-	buffer += gen_list(hide)  # Always hide these items
-	buffer += gen_list(challenges)
-	buffer += gen_list(labyrinth)
-	buffer += gen_list(currency)  # Currency
-	buffer += gen_list(gems)  # Gems
-	buffer += gen_list(uniques)  # uniques
-	buffer += gen_list(recipe_item)  # Items for vendor recipe
-	buffer += gen_list(maps)  # maps
-	buffer += gen_list(divination)  # divination cards
-	buffer += gen_list(flask)  # Flasks
-	buffer += gen_list(t1_rares)
-	if leveling:
-		for rareitemleveling in [rare_armor_dex, rare_armor_dex_int, rare_armor_str_dex, rare_armor_str, rare_armor_int,
-								 rare_armor_str_int, rare_bow, rare_claw, rare_dagger, rare_one_hand_sword,
-								 rare_one_hand_mace,
-								 rare_one_hand_axe, rare_sceptre, rare_staff, rare_thrusting_one_hand_sword,
-								 rare_two_hand_sword, rare_two_hand_mace, rare_two_hand_axe, rare_wand]:
-			buffer += gen_list(rareitemleveling)
+		buffer = ""
 
-	buffer += gen_list(rare_highlight)  # rares highlighting + jewelry
-	buffer += gen_list(rares)  # rares catchall
-	buffer += gen_list(chroma)  # chrome vendor items
-	if leveling:
-		buffer += gen_list(general_levelling)
-	buffer += gen_list(chance)  # Chance bases
-	buffer += gen_list(crafting_bases)  # Crafting bases
-	buffer += gen_list(animate_weapon)  # Animate Weapon bases
+		buffer += gen_list(show)  # Always show these items
+		buffer += gen_list(hide)  # Always hide these items
+		if i[0] not in ['standard', 'hardcore']:
+			buffer += gen_list(challenges)
+		buffer += gen_list(labyrinth)
+		buffer += gen_list(currency)  # Currency
+		buffer += gen_list(gems)  # Gems
+		buffer += gen_list(i[1])  # uniques
+		buffer += gen_list(recipe_item)  # Items for vendor recipe
+		buffer += gen_list(maps)  # maps
+		buffer += gen_list(i[2])  # divination cards
+		buffer += gen_list(flask)  # Flasks
+		buffer += gen_list(t1_rares)
+		if leveling:
+			for rareitemleveling in [rare_armor_dex, rare_armor_dex_int, rare_armor_str_dex, rare_armor_str, rare_armor_int,
+									 rare_armor_str_int, rare_bow, rare_claw, rare_dagger, rare_one_hand_sword,
+									 rare_one_hand_mace,
+									 rare_one_hand_axe, rare_sceptre, rare_staff, rare_thrusting_one_hand_sword,
+									 rare_two_hand_sword, rare_two_hand_mace, rare_two_hand_axe, rare_wand]:
+				buffer += gen_list(rareitemleveling)
 
-	if leveling:
-		for nonrareitemleveling in [nonrare_armor_dex, nonrare_armor_dex_int, nonrare_armor_str_dex, nonrare_armor_str,
-									nonrare_armor_int, nonrare_armor_str_int, nonrare_bow, nonrare_claw, nonrare_dagger,
-									nonrare_jewelry, nonrare_one_hand_sword, nonrare_one_hand_mace,
-									nonrare_one_hand_axe, nonrare_sceptre, nonrare_staff,
-									nonrare_thrusting_one_hand_sword, nonrare_two_hand_sword, nonrare_two_hand_mace,
-									nonrare_two_hand_axe, nonrare_wand]:
-			buffer += gen_list(nonrareitemleveling)
+		buffer += gen_list(rare_highlight)  # rares highlighting + jewelry
+		buffer += gen_list(rares)  # rares catchall
+		buffer += gen_list(chroma)  # chrome vendor items
+		if leveling:
+			buffer += gen_list(general_levelling)
+		buffer += gen_list(chance)  # Chance bases
+		buffer += gen_list(crafting_bases)  # Crafting bases
+		buffer += gen_list(animate_weapon)  # Animate Weapon bases
 
-	print("Writing files to {}".format(path.expanduser("~\\my game\\Path of Exile\\")))
+		if leveling:
+			for nonrareitemleveling in [nonrare_armor_dex, nonrare_armor_dex_int, nonrare_armor_str_dex, nonrare_armor_str,
+										nonrare_armor_int, nonrare_armor_str_int, nonrare_bow, nonrare_claw, nonrare_dagger,
+										nonrare_jewelry, nonrare_one_hand_sword, nonrare_one_hand_mace,
+										nonrare_one_hand_axe, nonrare_sceptre, nonrare_staff,
+										nonrare_thrusting_one_hand_sword, nonrare_two_hand_sword, nonrare_two_hand_mace,
+										nonrare_two_hand_axe, nonrare_wand]:
+				buffer += gen_list(nonrareitemleveling)
 
-	with open("xan.show.filter", "w") as f:
-		f.write(buffer)
-		# Default for all other items
-		f.write("Show\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
-	with open(path.expanduser(r"~\Documents\my games\Path of Exile\xan.show.filter"), "w") as f:
-		f.write(buffer)
-		# Default for all other items
-		f.write("Show\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
+		print("Writing files to {}".format(path.expanduser("~\\my game\\Path of Exile\\")))
 
-	with open("xan.hide.filter", "w") as f:
-		f.write(buffer)
-		# Default for all other items
-		f.write("Hide\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
-	with open(path.expanduser(r"~\Documents\my games\Path of Exile\xan.hide.filter"), "w") as f:
-		f.write(buffer)
-		# Default for all other items
-		f.write("Hide\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
+		with open("xan.{}.show.filter".format(i[0]), "w") as f:
+			f.write(buffer)
+			# Default for all other items
+			f.write("Show\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
+		with open(path.expanduser(r"~\Documents\my games\Path of Exile\xan.{}.show.filter".format(i[0])), "w") as f:
+			f.write(buffer)
+			# Default for all other items
+			f.write("Show\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
+
+		with open("xan.{}.hide.filter".format(i[0]), "w") as f:
+			f.write(buffer)
+			# Default for all other items
+			f.write("Hide\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
+		with open(path.expanduser(r"~\Documents\my games\Path of Exile\xan.{}.hide.filter".format(i[0])), "w") as f:
+			f.write(buffer)
+			# Default for all other items
+			f.write("Hide\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
 
 
 if __name__ == "__main__":
