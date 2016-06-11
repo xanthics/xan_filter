@@ -133,7 +133,7 @@ def main():
 	buffer += gen_list(currency)  # Currency
 	buffer += gen_list(gems)  # Gems
 	buffer += gen_list(uniques)  # uniques
-	buffer += gen_list(recipe_item)  # Items for vendor recipe
+#	buffer += gen_list(recipe_item)  # Items for vendor recipe
 	buffer += gen_list(maps)  # maps
 	buffer += gen_list(divination)  # divination cards
 	buffer += gen_list(flask)  # Flasks
@@ -155,7 +155,7 @@ def main():
 	buffer += gen_list(crafting_bases)  # Crafting bases
 	buffer += gen_list(animate_weapon)  # Animate Weapon bases
 
-	if leveling:
+	if 0:
 		for nonrareitemleveling in [nonrare_armor_dex, nonrare_armor_dex_int, nonrare_armor_str_dex, nonrare_armor_str,
 									nonrare_armor_int, nonrare_armor_str_int, nonrare_bow, nonrare_claw, nonrare_dagger,
 									nonrare_jewelry, nonrare_one_hand_sword, nonrare_one_hand_mace,
