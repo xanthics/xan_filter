@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 2016-06-11T14:53:44 PST from "Prophecy Uniques" data
+# Created: 2016-06-11T21:04:40 PST from "Prophecy Uniques" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -41,25 +41,26 @@ items = {
 	"0 Deicide Mask": {"base": "Deicide Mask", "type": "unique very high"},
 	"0 Glorious Plate": {"base": "Glorious Plate", "type": "unique very high"},
 	"0 Assassin's Garb": {"base": "Assassin's Garb", "type": "unique very high"},
+	"0 Citrine Amulet": {"base": "Citrine Amulet", "type": "unique very high"},
 	"0 Sapphire Flask": {"base": "Sapphire Flask", "type": "unique very high"},
 	"0 Varnished Coat": {"base": "Varnished Coat", "type": "unique very high"},
 	"0 Champion Kite Shield": {"base": "Champion Kite Shield", "type": "unique very high"},
 	"0 Crusader Boots": {"base": "Crusader Boots", "type": "unique very high"},
 	"0 Raven Mask": {"base": "Raven Mask", "type": "unique very high"},
+	"0 Ruby Amulet": {"base": "Ruby Amulet", "type": "unique very high"},
 	"0 Vaal Regalia": {"base": "Vaal Regalia", "type": "unique very high"},
 	"0 Ezomyte Burgonet": {"base": "Ezomyte Burgonet", "type": "unique very high"},
-	"0 Ruby Amulet": {"base": "Ruby Amulet", "type": "unique very high"},
 	"0 Hubris Circlet": {"base": "Hubris Circlet", "type": "unique very high"},
-	"0 Siege Axe": {"base": "Siege Axe", "type": "unique very high"},
 	"0 Imperial Skean": {"base": "Imperial Skean", "type": "unique very high"},
+	"0 Siege Axe": {"base": "Siege Axe", "type": "unique very high"},
 	"0 Sorcerer Boots": {"base": "Sorcerer Boots", "type": "unique very high"},
 	"0 Titanium Spirit Shield": {"base": "Titanium Spirit Shield", "type": "unique very high"},
 	"0 Cedar Tower Shield": {"base": "Cedar Tower Shield", "type": "unique very high"},
 	"0 Desert Brigandine": {"base": "Desert Brigandine", "type": "unique very high"},
 	"0 Courtyard Map": {"base": "Courtyard Map", "type": "unique very high"},
 	"0 Ursine Pelt": {"base": "Ursine Pelt", "type": "unique very high"},
-	"0 Vaal Sceptre": {"base": "Vaal Sceptre", "type": "unique very high"},
 	"0 Two-Stone Ring": {"base": "Two-Stone Ring", "type": "unique very high"},
+	"0 Vaal Sceptre": {"base": "Vaal Sceptre", "type": "unique very high"},
 	"1 Topaz Flask": {"base": "Topaz Flask", "type": "unique high"},
 	"1 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "unique high"},
 	"1 Vaal Mask": {"base": "Vaal Mask", "type": "unique high"},

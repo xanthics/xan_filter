@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 2016-06-11T14:53:44 PST from "Hardcore Uniques" data
+# Created: 2016-06-11T21:04:40 PST from "Hardcore Uniques" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -73,6 +73,7 @@ items = {
 	"0 Cedar Tower Shield": {"base": "Cedar Tower Shield", "type": "unique very high"},
 	"0 Deerskin Gloves": {"base": "Deerskin Gloves", "type": "unique very high"},
 	"0 Etched Greatsword": {"base": "Etched Greatsword", "type": "unique very high"},
+	"0 Gavel": {"base": "Gavel", "type": "unique very high"},
 	"0 Granite Flask": {"base": "Granite Flask", "type": "unique very high"},
 	"0 Penetrating Arrow Quiver": {"base": "Penetrating Arrow Quiver", "type": "unique very high"},
 	"0 Regicide Mask": {"base": "Regicide Mask", "type": "unique very high"},
@@ -84,14 +85,13 @@ items = {
 	"0 Trapper Boots": {"base": "Trapper Boots", "type": "unique very high"},
 	"0 Sanctified Life Flask": {"base": "Sanctified Life Flask", "type": "unique very high"},
 	"0 Diamond Ring": {"base": "Diamond Ring", "type": "unique very high"},
-	"0 Gavel": {"base": "Gavel", "type": "unique very high"},
 	"0 Great Mallet": {"base": "Great Mallet", "type": "unique very high"},
 	"0 Hubris Circlet": {"base": "Hubris Circlet", "type": "unique very high"},
 	"0 Imperial Skean": {"base": "Imperial Skean", "type": "unique very high"},
 	"0 Sanctified Mana Flask": {"base": "Sanctified Mana Flask", "type": "unique very high"},
+	"0 Titanium Spirit Shield": {"base": "Titanium Spirit Shield", "type": "unique very high"},
 	"0 Two-Stone Ring": {"base": "Two-Stone Ring", "type": "unique very high"},
 	"0 Varnished Coat": {"base": "Varnished Coat", "type": "unique very high"},
-	"0 Titanium Spirit Shield": {"base": "Titanium Spirit Shield", "type": "unique very high"},
 	"0 Crusader Plate": {"base": "Crusader Plate", "type": "unique very high"},
 	"0 Ruby Flask": {"base": "Ruby Flask", "type": "unique very high"},
 	"0 Platinum Sceptre": {"base": "Platinum Sceptre", "type": "unique very high"},
