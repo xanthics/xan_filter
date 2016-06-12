@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 2016-06-11T14:53:44 PST from "Hardcore Prophecy Uniques" data
+# Created: 2016-06-11T21:04:40 PST from "Hardcore Prophecy Uniques" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -31,6 +31,7 @@ desc = "Unique"
 
 # Base type : settings pair
 items = {
+	"0 Savant's Robe": {"base": "Savant's Robe", "type": "unique very high"},
 	"0 Champion Kite Shield": {"base": "Champion Kite Shield", "type": "unique very high"},
 	"0 Occultist's Vestment": {"base": "Occultist's Vestment", "type": "unique very high"},
 	"0 Glorious Plate": {"base": "Glorious Plate", "type": "unique very high"},
@@ -49,26 +50,26 @@ items = {
 	"0 Ezomyte Burgonet": {"base": "Ezomyte Burgonet", "type": "unique very high"},
 	"0 Courtyard Map": {"base": "Courtyard Map", "type": "unique very high"},
 	"0 Carnal Sceptre": {"base": "Carnal Sceptre", "type": "unique very high"},
-	"0 Vaal Regalia": {"base": "Vaal Regalia", "type": "unique very high"},
+	"1 Vaal Regalia": {"base": "Vaal Regalia", "type": "unique high"},
 	"1 Imperial Skean": {"base": "Imperial Skean", "type": "unique high"},
-	"1 Vaal Sceptre": {"base": "Vaal Sceptre", "type": "unique high"},
 	"1 Two-Stone Ring": {"base": "Two-Stone Ring", "type": "unique high"},
+	"1 Vaal Sceptre": {"base": "Vaal Sceptre", "type": "unique high"},
 	"1 Sorcerer Boots": {"base": "Sorcerer Boots", "type": "unique high"},
 	"1 Unset Ring": {"base": "Unset Ring", "type": "unique high"},
 	"1 Cedar Tower Shield": {"base": "Cedar Tower Shield", "type": "unique high"},
 	"1 Conjurer Gloves": {"base": "Conjurer Gloves", "type": "unique high"},
-	"1 Slaughter Knife": {"base": "Slaughter Knife", "type": "unique high"},
 	"1 Ursine Pelt": {"base": "Ursine Pelt", "type": "unique high"},
 	"1 Corrugated Buckler": {"base": "Corrugated Buckler", "type": "unique high"},
+	"1 Slaughter Knife": {"base": "Slaughter Knife", "type": "unique high"},
 	"1 Fishing Rod": {"base": "Fishing Rod", "type": "unique high"},
 	"1 Hubris Circlet": {"base": "Hubris Circlet", "type": "unique high"},
 	"1 Terror Maul": {"base": "Terror Maul", "type": "unique high"},
 	"1 Granite Flask": {"base": "Granite Flask", "type": "unique high"},
 	"1 Nightmare Bascinet": {"base": "Nightmare Bascinet", "type": "unique high"},
-	"1 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique high"},
-	"1 Exquisite Leather": {"base": "Exquisite Leather", "type": "unique high"},
 	"1 Karui Maul": {"base": "Karui Maul", "type": "unique high"},
+	"1 Exquisite Leather": {"base": "Exquisite Leather", "type": "unique high"},
 	"1 Simple Robe": {"base": "Simple Robe", "type": "unique high"},
+	"1 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique high"},
 	"1 Full Wyrmscale": {"base": "Full Wyrmscale", "type": "unique high"},
 	"1 Gold Ring": {"base": "Gold Ring", "type": "unique high"},
 	"1 Judgement Staff": {"base": "Judgement Staff", "type": "unique high"},
