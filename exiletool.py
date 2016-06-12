@@ -87,15 +87,53 @@ def gen_lists():
 
 	data = req.json(encoding='utf-8')
 
+	verygoodcard = ["Abandoned Wealth",  # 3x Exalted Orbs
+					"Bowyer's Dream",  # 6l ilvl 91 Harbinger
+					"Chaotic Disposition",  # 5x Chaos
+					"Emperor of Purity",  # 6l ilvl 60 Holy Chainmail
+					"Heterochromia",  # Two-Stone Ring
+					"House of Mirrors",  # Mirror of Kalandra
+					"Hunter's Reward",  # The Taming
+					"Last Hope",  # Mortal Hope
+					"Pride Before the Fall",  # Kaom's Heart (corrupted)
+					"The Artist",  # Enhance level 4
+					"The Brittle Emperor",  # Voll's Devotion (corrupted)
+					"The Celestial Justicar",  # 6l Astral
+					"The Cursed King",  # Rigwald's Curse
+					"The Dark Mage",  # 6l ilvl 55 staff
+					"The Doctor",  # Headhunter
+					"The Dragon's Heart",  # Empower level 4
+					"The Enlightened",  # Enlighten level 3
+					"The Harvester",  # The Harvest
+					"The Hunger",  # Taste of Hate
+					"The Immortal",  # House of Mirrors
+					"The King's Heart",  # Kaom's Heart
+					"The Last One Standing",  # Atziri's Disfavour
+					"The Offering",  # Shavronne's Wrapping
+					"The Queen",  # Atziri's Acuity
+					"The Thaumaturgist",  # Shavronne's Revelation (corrupted)
+					"The Warlord",  # 6l ilvl 83 Coronal Maul
+					"Time-Lost Relic",  # League Specific item
+					"Wealth and Power"]  # Enlighten level 4
+
+	# Cards that will never be displayed
 	badcards = ["A Mother's Parting Gift",
 				"The Carrion Crow",
-				"The Rabid Rhoa",
 				"The King's Blade",
 				"The Inoculated",
 				"Turn the Other Cheek"]
 
+	# Cards that won't make a drop noise
 	lowcards = ["Thunderous Skies",
-				"The Scholar"]
+				"The Rabid Rhoa",
+				"The Surgeon",
+				"The Twins",
+				"The Scholar",
+				"Destined to Crumble"]
+
+	predefinedcards = badcards + lowcards + verygoodcard
+
+#	cardtracker = {}
 
 	if 'responses' in data:
 		for l in data['responses']:
@@ -136,27 +174,36 @@ def gen_lists():
 					name = ""
 				elif curkey == "{} Cards".format(league4):
 					name = "hc"
-				items = {'high': [], 'normal': [], 'low': []}
-
+				items = {'high': verygoodcard[:], 'normal': [], 'low': lowcards[:]}
 				for i in l['aggregations'][curkey]['buckets']:
-					if i['key'] in badcards or i['key'] in lowcards:
+					if i['key'] in predefinedcards:
 						pass
 					elif i['avgPrice']['values']['50.0'] >= 6:
+#						if i[u'key'] in cardtracker:
+#							cardtracker[i[u'key']].append("vh {}".format(name))
+#						else:
+#							cardtracker[i[u'key']] = ["vh {}".format(name)]
 						items['high'].append(i[u'key'])
 					elif i['avgPrice']['values']['50.0'] >= 1:
+#						if i[u'key'] in cardtracker:
+#							cardtracker[i[u'key']].append("h {}".format(name))
+#						else:
+#							cardtracker[i[u'key']] = ["h {}".format(name)]
 						items['normal'].append(i[u'key'])
-
 				with open('autogen\\{}divination.py'.format(name), 'w', encoding='utf-8') as f:
 					f.write(u'''{}\ndesc = "Divination Card"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.now().strftime('%Y-%m-%dT%H:%M:%S'),curkey)))
 					for ii in items['high']:
 						f.write(u'\t"0 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination very high"}},\n'.format(ii))
 					for ii in items['normal']:
 						f.write(u'\t"1 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination high"}},\n'.format(ii))
-					for ii in lowcards:
+					for ii in items['low']:
 						f.write(u'\t"2 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination low"}},\n'.format(ii))
 					for ii in badcards:
 						f.write(u'\t"7 {0}": {{"base": "{0}", "class": "Divination Card", "type": "hide"}},\n'.format(ii))
 					f.write(u'\t"9 Other uniques": {"class": "Divination Card", "type": "divination normal"}\n}\n')
+
+#	for card in sorted(cardtracker.keys()):
+#		print("{}: {}, {}".format(card, len(cardtracker[card]), cardtracker[card]))
 
 
 if __name__ == '__main__':
