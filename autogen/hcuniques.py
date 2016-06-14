@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 2016-06-11T21:04:40 PST from "Hardcore Uniques" data
+# Created: 2016-06-14T02:01:51 PST from "Hardcore Uniques" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -61,7 +61,6 @@ items = {
 	"0 Clasped Mitts": {"base": "Clasped Mitts", "type": "unique very high"},
 	"0 Desert Brigandine": {"base": "Desert Brigandine", "type": "unique very high"},
 	"0 Spine Bow": {"base": "Spine Bow", "type": "unique very high"},
-	"0 Vaal Mask": {"base": "Vaal Mask", "type": "unique very high"},
 	"0 Ancient Greaves": {"base": "Ancient Greaves", "type": "unique very high"},
 	"0 Siege Axe": {"base": "Siege Axe", "type": "unique very high"},
 	"0 Despot Axe": {"base": "Despot Axe", "type": "unique very high"},
@@ -70,12 +69,12 @@ items = {
 	"0 Jet Amulet": {"base": "Jet Amulet", "type": "unique very high"},
 	"0 Judgement Staff": {"base": "Judgement Staff", "type": "unique very high"},
 	"0 Serpentscale Boots": {"base": "Serpentscale Boots", "type": "unique very high"},
+	"0 Vaal Mask": {"base": "Vaal Mask", "type": "unique very high"},
+	"0 Penetrating Arrow Quiver": {"base": "Penetrating Arrow Quiver", "type": "unique very high"},
 	"0 Cedar Tower Shield": {"base": "Cedar Tower Shield", "type": "unique very high"},
 	"0 Deerskin Gloves": {"base": "Deerskin Gloves", "type": "unique very high"},
-	"0 Etched Greatsword": {"base": "Etched Greatsword", "type": "unique very high"},
 	"0 Gavel": {"base": "Gavel", "type": "unique very high"},
 	"0 Granite Flask": {"base": "Granite Flask", "type": "unique very high"},
-	"0 Penetrating Arrow Quiver": {"base": "Penetrating Arrow Quiver", "type": "unique very high"},
 	"0 Regicide Mask": {"base": "Regicide Mask", "type": "unique very high"},
 	"0 Sharkskin Boots": {"base": "Sharkskin Boots", "type": "unique very high"},
 	"0 Sharkskin Tunic": {"base": "Sharkskin Tunic", "type": "unique very high"},
@@ -84,6 +83,7 @@ items = {
 	"0 Titan Gauntlets": {"base": "Titan Gauntlets", "type": "unique very high"},
 	"0 Trapper Boots": {"base": "Trapper Boots", "type": "unique very high"},
 	"0 Sanctified Life Flask": {"base": "Sanctified Life Flask", "type": "unique very high"},
+	"0 Etched Greatsword": {"base": "Etched Greatsword", "type": "unique very high"},
 	"0 Diamond Ring": {"base": "Diamond Ring", "type": "unique very high"},
 	"0 Great Mallet": {"base": "Great Mallet", "type": "unique very high"},
 	"0 Hubris Circlet": {"base": "Hubris Circlet", "type": "unique very high"},
@@ -91,12 +91,12 @@ items = {
 	"0 Sanctified Mana Flask": {"base": "Sanctified Mana Flask", "type": "unique very high"},
 	"0 Titanium Spirit Shield": {"base": "Titanium Spirit Shield", "type": "unique very high"},
 	"0 Two-Stone Ring": {"base": "Two-Stone Ring", "type": "unique very high"},
+	"0 Vaal Sceptre": {"base": "Vaal Sceptre", "type": "unique very high"},
 	"0 Varnished Coat": {"base": "Varnished Coat", "type": "unique very high"},
 	"0 Crusader Plate": {"base": "Crusader Plate", "type": "unique very high"},
 	"0 Ruby Flask": {"base": "Ruby Flask", "type": "unique very high"},
 	"0 Platinum Sceptre": {"base": "Platinum Sceptre", "type": "unique very high"},
 	"0 Unset Ring": {"base": "Unset Ring", "type": "unique very high"},
-	"0 Imperial Bow": {"base": "Imperial Bow", "type": "unique very high"},
 	"0 Amethyst Ring": {"base": "Amethyst Ring", "type": "unique very high"},
 	"0 Ancient Gauntlets": {"base": "Ancient Gauntlets", "type": "unique very high"},
 	"0 Black Maw Talisman": {"base": "Black Maw Talisman", "type": "unique very high"},
@@ -104,7 +104,7 @@ items = {
 	"0 Conjurer Boots": {"base": "Conjurer Boots", "type": "unique very high"},
 	"0 Conjurer Gloves": {"base": "Conjurer Gloves", "type": "unique very high"},
 	"0 Eye Gouger": {"base": "Eye Gouger", "type": "unique very high"},
-	"0 Gold Ring": {"base": "Gold Ring", "type": "unique very high"},
+	"0 Imperial Bow": {"base": "Imperial Bow", "type": "unique very high"},
 	"0 Karui Maul": {"base": "Karui Maul", "type": "unique very high"},
 	"0 Large Hybrid Flask": {"base": "Large Hybrid Flask", "type": "unique very high"},
 	"0 Lathi": {"base": "Lathi", "type": "unique very high"},
@@ -122,9 +122,9 @@ items = {
 	"0 Vaal Axe": {"base": "Vaal Axe", "type": "unique very high"},
 	"0 Vaal Gauntlets": {"base": "Vaal Gauntlets", "type": "unique very high"},
 	"0 Vaal Pyramid Map": {"base": "Vaal Pyramid Map", "type": "unique very high"},
-	"0 Vaal Sceptre": {"base": "Vaal Sceptre", "type": "unique very high"},
 	"0 Vile Staff": {"base": "Vile Staff", "type": "unique very high"},
 	"0 Zodiac Leather": {"base": "Zodiac Leather", "type": "unique very high"},
+	"0 Broadhead Arrow Quiver": {"base": "Broadhead Arrow Quiver", "type": "unique very high"},
 	"0 Harbinger Bow": {"base": "Harbinger Bow", "type": "unique very high"},
 	"0 Enameled Buckler": {"base": "Enameled Buckler", "type": "unique very high"},
 	"0 Hallowed Hybrid Flask": {"base": "Hallowed Hybrid Flask", "type": "unique very high"},
@@ -132,7 +132,8 @@ items = {
 	"0 Paua Ring": {"base": "Paua Ring", "type": "unique very high"},
 	"1 Terror Maul": {"base": "Terror Maul", "type": "unique high"},
 	"1 Karui Sceptre": {"base": "Karui Sceptre", "type": "unique high"},
-	"1 Broadhead Arrow Quiver": {"base": "Broadhead Arrow Quiver", "type": "unique high"},
+	"1 Full Scale Armour": {"base": "Full Scale Armour", "type": "unique high"},
+	"1 Gold Ring": {"base": "Gold Ring", "type": "unique high"},
 	"1 Goliath Gauntlets": {"base": "Goliath Gauntlets", "type": "unique high"},
 	"1 Reinforced Greaves": {"base": "Reinforced Greaves", "type": "unique high"},
 	"1 Steelscale Gauntlets": {"base": "Steelscale Gauntlets", "type": "unique high"},
@@ -168,6 +169,7 @@ items = {
 	"1 Soldier Gloves": {"base": "Soldier Gloves", "type": "unique high"},
 	"1 Titan Greaves": {"base": "Titan Greaves", "type": "unique high"},
 	"1 Triumphant Lamellar": {"base": "Triumphant Lamellar", "type": "unique high"},
+	"1 Vaal Blade": {"base": "Vaal Blade", "type": "unique high"},
 	"1 Vaal Hatchet": {"base": "Vaal Hatchet", "type": "unique high"},
 	"9 Other uniques": {"type": "unique normal"}
 }
