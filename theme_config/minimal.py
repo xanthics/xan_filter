@@ -102,9 +102,16 @@ size = {
 # Each config should be its own array element.  Parsing will handle tabs/etc.
 # ignore and hide have special meaning(see comment)
 settings = {
-	"challenge": ["SetBorderColor {}".format(color['prophecy']),
+	"challenge high": ["SetBorderColor {}".format(color['prophecy']),
 				  "SetFontSize {}".format(size['huge']),
 				  "PlayAlertSound 4 175",
+				  "SetBackgroundColor {} 220".format(color['black'])],
+	"challenge normal": ["SetBorderColor {}".format(color['prophecy']),
+				  "SetFontSize {}".format(size['large']),
+				  "PlayAlertSound 4 25",
+				  "SetBackgroundColor {} 220".format(color['black'])],
+	"challenge low": ["SetBorderColor {}".format(color['prophecy']),
+				  "SetFontSize {}".format(size['small']),
 				  "SetBackgroundColor {} 220".format(color['black'])],
 
 	"animate melee b": ["Rarity Normal",
