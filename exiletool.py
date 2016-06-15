@@ -178,13 +178,13 @@ def gen_lists():
 				for i in l['aggregations'][curkey]['buckets']:
 					if i['key'] in predefinedcards:
 						pass
-					elif i['avgPrice']['values']['50.0'] >= 6:
+					elif i['avgPrice']['values']['50.0'] > 6:
 #						if i[u'key'] in cardtracker:
 #							cardtracker[i[u'key']].append("vh {}".format(name))
 #						else:
 #							cardtracker[i[u'key']] = ["vh {}".format(name)]
 						items['high'].append(i[u'key'])
-					elif i['avgPrice']['values']['50.0'] >= 1:
+					elif i['avgPrice']['values']['50.0'] > 1:
 #						if i[u'key'] in cardtracker:
 #							cardtracker[i[u'key']].append("h {}".format(name))
 #						else:
