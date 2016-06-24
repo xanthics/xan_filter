@@ -1,6 +1,6 @@
 # poe_filter
 
-This is a simple script to generate a filter file for Path of Exile using the included config files.
+This is a script to generate a filter file for Path of Exile using the included config files.
 
 **HIDE**
 * [Hide Download Prophecy](xan.prophecy.hide.filter?raw=true)
@@ -22,7 +22,7 @@ Run Create_filter with necessary config files to generate xan.filter.  Note that
 
 Config
 ======
-See template.py
+See item_config.template.py and theme_config.minimal.py
 
 Hide all
 ========
@@ -31,17 +31,6 @@ Hide all
 Show all
 ========
 ![Show all items](https://i.imgur.com/AeFb9UM.jpg "Show")
-
-
-To-Do
-=====
-No ETA
-
-Add config processor that created compact output
-
-Filtration compatibility
-
-No ETA: I work on this when I'm bored of releveling toons or farming.
 
 Thanks
 ======
