@@ -24,22 +24,12 @@ Purpose: Create an item filter based on config files
 Note: Requires Python 3.4.x
 """
 
-desc = "Chance Base"
+desc = "Warbands"
 
 # Base type : settings pair
 items = {
-	"0 Aegis Aurora": {"base": "Champion Kite Shield", "type": "chance"},
-	"0 Heretic's Veil": {"base": "Deicide Mask", "type": "chance"},
-	"0 Taste of Hate": {"base": "Sapphire Flask", "type": "ignore"},
-	"0 Lightning Coil": {"base": "Desert Brigandine", "type": "ignore"},
-	"0 Cospri's Will": {"base": "Assassin's Garb", "type": "chance"},
-	"0 Rathpith Globe": {"base": "Titanium Spirit Shield", "type": "ignore"},
-	"0 Carcass Jack": {"base": "Varnished Coat", "type": "ignore"},
-
-	"0 Shavronne's Wrappings": {"base": "Occultist's Vestment", "type": "chance"},
-	"0 Kaom's Heart": {"base": "Glorious Plate", "type": "chance"},
-	"0 Void Battery": {"base": "Prophecy Wand", "type": "chance"},
-	"0 Soul Taker": {"base": "Siege Axe", "type": "ignore"},
-	"0 Skyforth": {"base": "Sorcerer Boots", "type": "chance"},
-	"0 Headhunter": {"base": "Leather Belt", "other": ["ItemLevel >= 74"], "type": "ignore"}
+    "0 Brinerot magic item": {"class": "Gloves", "other": ["Rarity Magic", "SetBorderColor 255 215 0"], "type": "ignore"},
+    "0 Mutewind magic item": {"class": "Boots", "other": ["Rarity Magic", "SetBorderColor 54 100 146"], "type": "ignore"},
+    "0 Redblade magic item": {"class": "Helm", "other": ["Rarity Magic", "SetBorderColor 150 0 0"], "type": "hide"},
+    "0 Renegade magic item": {"other": ["Class Dagger Wand \"One Hand\" Bow Stave \"Two Hand\" Sceptre Claws", "Rarity Magic", "SetBorderColor 208 32 144"], "type": "ignore"},
 }
