@@ -5,18 +5,18 @@
 *
 * Permission is hereby granted, free of charge, to any person obtaining a
 * copy of this software and associated documentation files (the "Software"),
-* to deal in the Software without restriction, including without limitation
-* the rights to use, copy, modify, merge, publish, distribute, sublicense,
+* to deal in the Software without restrion, including without limitation
+* the rights to use, copy, modify, merge, publish, distribute, sublnse,
 * and/or sell copies of the Software, and to permit persons to whom the
 * Software is furnished to do so, subject to the following conditions:
 *
-* The above copyright notice and this permission notice shall be included in
+* The above copyright not and this permission not shall be included in
 * all copies or substantial portions of the Software.
 *
 * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* FITNESS FOR A PARTLAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMS OR OTHER
 * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 * DEALINGS IN THE SOFTWARE.
@@ -26,6 +26,15 @@ Purpose: Create an item filter based on config files
 Note: Requires Python 3.4.x
 """
 from os import path
+
+from auto_gen import divination
+from auto_gen import hcdivination
+from auto_gen import pdivination
+from auto_gen import phcdivination
+from auto_gen import uniques
+from auto_gen import hcuniques
+from auto_gen import puniques
+from auto_gen import phcuniques
 
 from item_config import animate_weapon
 from item_config import challenges
@@ -83,16 +92,9 @@ from item_config import rares
 from item_config import recipe_item
 from item_config import show
 from item_config import t1_rares
-from theme_config import formatting
+from item_config import warbands
 
-from autogen import uniques
-from autogen import divination
-from autogen import hcuniques
-from autogen import hcdivination
-from autogen import phcuniques
-from autogen import phcdivination
-from autogen import puniques
-from autogen import pdivination
+from theme_config import formatting
 
 
 def gen_list(obj):
@@ -125,14 +127,14 @@ def gen_list(obj):
 
 # main function for creating a filter
 def main():
-	leaguesets = [("standard", uniques, divination),
+	leagues = [("standard", uniques, divination),
 				  ("hardcore", hcuniques, hcdivination),
 				  ("prophecy", puniques, pdivination),
 				  ("prophecyhc", phcuniques, phcdivination)]
 
 	leveling = True  # toggle to show leveling items
 
-	for i in leaguesets:
+	for i in leagues:
 
 		buffer = ""
 
@@ -150,11 +152,8 @@ def main():
 		buffer += gen_list(flask)  # Flasks
 		buffer += gen_list(t1_rares)
 		if leveling:
-			for rareitemleveling in [rare_armor_dex, rare_armor_dex_int, rare_armor_str_dex, rare_armor_str, rare_armor_int,
-									 rare_armor_str_int, rare_bow, rare_claw, rare_dagger, rare_one_hand_sword,
-									 rare_one_hand_mace,
-									 rare_one_hand_axe, rare_sceptre, rare_staff, rare_thrusting_one_hand_sword,
-									 rare_two_hand_sword, rare_two_hand_mace, rare_two_hand_axe, rare_wand]:
+			for rareitemleveling in [rare_armor_dex, rare_armor_dex_int, rare_armor_str_dex, rare_armor_str, rare_armor_int, rare_armor_str_int, rare_bow, rare_claw, rare_dagger, rare_one_hand_sword,
+									 rare_one_hand_mace, rare_one_hand_axe, rare_sceptre, rare_staff, rare_thrusting_one_hand_sword, rare_two_hand_sword, rare_two_hand_mace, rare_two_hand_axe, rare_wand]:
 				buffer += gen_list(rareitemleveling)
 
 		buffer += gen_list(rare_highlight)  # rares highlighting + jewelry
@@ -167,13 +166,12 @@ def main():
 		buffer += gen_list(animate_weapon)  # Animate Weapon bases
 
 		if leveling:
-			for nonrareitemleveling in [nonrare_armor_dex, nonrare_armor_dex_int, nonrare_armor_str_dex, nonrare_armor_str,
-										nonrare_armor_int, nonrare_armor_str_int, nonrare_bow, nonrare_claw, nonrare_dagger,
-										nonrare_jewelry, nonrare_one_hand_sword, nonrare_one_hand_mace,
-										nonrare_one_hand_axe, nonrare_sceptre, nonrare_staff,
-										nonrare_thrusting_one_hand_sword, nonrare_two_hand_sword, nonrare_two_hand_mace,
-										nonrare_two_hand_axe, nonrare_wand]:
+			for nonrareitemleveling in [nonrare_armor_dex, nonrare_armor_dex_int, nonrare_armor_str_dex, nonrare_armor_str, nonrare_armor_int, nonrare_armor_str_int, nonrare_bow, nonrare_claw, nonrare_dagger,
+										nonrare_jewelry, nonrare_one_hand_sword, nonrare_one_hand_mace, nonrare_one_hand_axe, nonrare_sceptre, nonrare_staff,
+										nonrare_thrusting_one_hand_sword, nonrare_two_hand_sword, nonrare_two_hand_mace, nonrare_two_hand_axe, nonrare_wand]:
 				buffer += gen_list(nonrareitemleveling)
+
+		buffer += gen_list(warbands)  # Warband base type highlighting
 
 		print("Writing files to {}".format(path.expanduser("~\\my game\\Path of Exile\\")))
 

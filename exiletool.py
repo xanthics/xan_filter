@@ -156,7 +156,7 @@ def gen_lists():
 					elif i['avgPrice']['values']['50.0'] >= 10:
 						items['high'].append(i[u'key'])
 
-				with open('autogen\\{}uniques.py'.format(name), 'w', encoding='utf-8') as f:
+				with open('auto_gen\\{}uniques.py'.format(name), 'w', encoding='utf-8') as f:
 					f.write(u'''{}\ndesc = "Unique"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.now().strftime('%Y-%m-%dT%H:%M:%S'), curkey)))
 					for ii in items['very high']:
 						f.write(u'\t"0 {0}": {{"base": "{0}", "type": "unique very high"}},\n'.format(ii))
@@ -190,7 +190,7 @@ def gen_lists():
 #						else:
 #							cardtracker[i[u'key']] = ["h {}".format(name)]
 						items['normal'].append(i[u'key'])
-				with open('autogen\\{}divination.py'.format(name), 'w', encoding='utf-8') as f:
+				with open('auto_gen\\{}divination.py'.format(name), 'w', encoding='utf-8') as f:
 					f.write(u'''{}\ndesc = "Divination Card"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.now().strftime('%Y-%m-%dT%H:%M:%S'),curkey)))
 					for ii in items['high']:
 						f.write(u'\t"0 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination very high"}},\n'.format(ii))
