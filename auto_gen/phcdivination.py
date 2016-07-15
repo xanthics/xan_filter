@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 2016-07-12T12:06:02 PST from "Hardcore Prophecy Cards" data
+# Created: 2016-07-15T14:18:01 PST from "Hardcore Prophecy Cards" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -111,7 +111,6 @@ items = {
 	"2 The Twins": {"base": "The Twins", "class": "Divination Card", "type": "divination low"},
 	"2 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},
 	"2 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "divination low"},
-	"7 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "hide"},
 	"7 The Carrion Crow": {"base": "The Carrion Crow", "class": "Divination Card", "type": "hide"},
 	"7 The King's Blade": {"base": "The King's Blade", "class": "Divination Card", "type": "hide"},
 	"7 The Inoculated": {"base": "The Inoculated", "class": "Divination Card", "type": "hide"},

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 2016-07-12T12:06:02 PST from "Hardcore Cards" data
+# Created: 2016-07-15T14:18:01 PST from "Hardcore Cards" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -132,6 +132,7 @@ items = {
 	"1 The Pact": {"base": "The Pact", "class": "Divination Card", "type": "divination high"},
 	"1 Rain of Chaos": {"base": "Rain of Chaos", "class": "Divination Card", "type": "divination high"},
 	"1 The Betrayal": {"base": "The Betrayal", "class": "Divination Card", "type": "divination high"},
+	"1 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "divination high"},
 	"1 Emperor's Luck": {"base": "Emperor's Luck", "class": "Divination Card", "type": "divination high"},
 	"1 Three Faces in the Dark": {"base": "Three Faces in the Dark", "class": "Divination Card", "type": "divination high"},
 	"2 Thunderous Skies": {"base": "Thunderous Skies", "class": "Divination Card", "type": "divination low"},
@@ -140,7 +141,6 @@ items = {
 	"2 The Twins": {"base": "The Twins", "class": "Divination Card", "type": "divination low"},
 	"2 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},
 	"2 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "divination low"},
-	"7 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "hide"},
 	"7 The Carrion Crow": {"base": "The Carrion Crow", "class": "Divination Card", "type": "hide"},
 	"7 The King's Blade": {"base": "The King's Blade", "class": "Divination Card", "type": "hide"},
 	"7 The Inoculated": {"base": "The Inoculated", "class": "Divination Card", "type": "hide"},
