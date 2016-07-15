@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 2016-07-12T12:06:02 PST from "Prophecy Uniques" data
+# Created: 2016-07-15T14:18:01 PST from "Prophecy Uniques" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -58,7 +58,7 @@ items = {
 	"0 Sorcerer Boots": {"base": "Sorcerer Boots", "type": "unique very high"},
 	"0 Ruby Amulet": {"base": "Ruby Amulet", "type": "unique very high"},
 	"0 Sanctified Life Flask": {"base": "Sanctified Life Flask", "type": "unique very high"},
-	"1 Siege Axe": {"base": "Siege Axe", "type": "unique high"},
+	"0 Siege Axe": {"base": "Siege Axe", "type": "unique very high"},
 	"1 Courtyard Map": {"base": "Courtyard Map", "type": "unique high"},
 	"1 Topaz Flask": {"base": "Topaz Flask", "type": "unique high"},
 	"1 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "unique high"},

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 2016-07-12T12:06:02 PST from "Hardcore Prophecy Uniques" data
+# Created: 2016-07-15T14:18:01 PST from "Hardcore Prophecy Uniques" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -60,8 +60,8 @@ items = {
 	"1 Imperial Skean": {"base": "Imperial Skean", "type": "unique high"},
 	"1 Vaal Regalia": {"base": "Vaal Regalia", "type": "unique high"},
 	"1 Courtyard Map": {"base": "Courtyard Map", "type": "unique high"},
-	"1 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "unique high"},
 	"1 Granite Flask": {"base": "Granite Flask", "type": "unique high"},
+	"1 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "unique high"},
 	"1 Vaal Sceptre": {"base": "Vaal Sceptre", "type": "unique high"},
 	"1 Ruby Amulet": {"base": "Ruby Amulet", "type": "unique high"},
 	"1 Vaal Mask": {"base": "Vaal Mask", "type": "unique high"},

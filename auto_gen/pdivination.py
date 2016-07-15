@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 2016-07-12T12:06:02 PST from "Prophecy Cards" data
+# Created: 2016-07-15T14:18:01 PST from "Prophecy Cards" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -66,8 +66,8 @@ items = {
 	"0 The Dapper Prodigy": {"base": "The Dapper Prodigy", "class": "Divination Card", "type": "divination very high"},
 	"0 The Aesthete": {"base": "The Aesthete", "class": "Divination Card", "type": "divination very high"},
 	"0 The Mercenary": {"base": "The Mercenary", "class": "Divination Card", "type": "divination very high"},
-	"1 The Trial": {"base": "The Trial", "class": "Divination Card", "type": "divination high"},
 	"1 The Body": {"base": "The Body", "class": "Divination Card", "type": "divination high"},
+	"1 The Trial": {"base": "The Trial", "class": "Divination Card", "type": "divination high"},
 	"1 Assassin's Favour": {"base": "Assassin's Favour", "class": "Divination Card", "type": "divination high"},
 	"1 Cartographer's Delight": {"base": "Cartographer's Delight", "class": "Divination Card", "type": "divination high"},
 	"1 Hunter's Resolve": {"base": "Hunter's Resolve", "class": "Divination Card", "type": "divination high"},
@@ -79,13 +79,13 @@ items = {
 	"1 The Cartographer": {"base": "The Cartographer", "class": "Divination Card", "type": "divination high"},
 	"1 The Chains that Bind": {"base": "The Chains that Bind", "class": "Divination Card", "type": "divination high"},
 	"1 Volatile Power": {"base": "Volatile Power", "class": "Divination Card", "type": "divination high"},
-	"1 The Arena Champion": {"base": "The Arena Champion", "class": "Divination Card", "type": "divination high"},
 	"1 Earth Drinker": {"base": "Earth Drinker", "class": "Divination Card", "type": "divination high"},
 	"1 Merciless Armament": {"base": "Merciless Armament", "class": "Divination Card", "type": "divination high"},
+	"1 Rats": {"base": "Rats", "class": "Divination Card", "type": "divination high"},
+	"1 The Arena Champion": {"base": "The Arena Champion", "class": "Divination Card", "type": "divination high"},
 	"1 The Fletcher": {"base": "The Fletcher", "class": "Divination Card", "type": "divination high"},
 	"1 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
 	"1 The Surveyor": {"base": "The Surveyor", "class": "Divination Card", "type": "divination high"},
-	"1 Rats": {"base": "Rats", "class": "Divination Card", "type": "divination high"},
 	"1 The Gentleman": {"base": "The Gentleman", "class": "Divination Card", "type": "divination high"},
 	"1 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination high"},
 	"1 The Road to Power": {"base": "The Road to Power", "class": "Divination Card", "type": "divination high"},
@@ -108,7 +108,6 @@ items = {
 	"2 The Twins": {"base": "The Twins", "class": "Divination Card", "type": "divination low"},
 	"2 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},
 	"2 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "divination low"},
-	"7 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "hide"},
 	"7 The Carrion Crow": {"base": "The Carrion Crow", "class": "Divination Card", "type": "hide"},
 	"7 The King's Blade": {"base": "The King's Blade", "class": "Divination Card", "type": "hide"},
 	"7 The Inoculated": {"base": "The Inoculated", "class": "Divination Card", "type": "hide"},
