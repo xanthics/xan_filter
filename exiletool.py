@@ -117,8 +117,7 @@ def gen_lists():
 					"Wealth and Power"]  # Enlighten level 4
 
 	# Cards that will never be displayed
-	badcards = ["A Mother's Parting Gift",
-				"The Carrion Crow",
+	badcards = ["The Carrion Crow",
 				"The King's Blade",
 				"The Inoculated",
 				"Turn the Other Cheek"]
