@@ -99,7 +99,7 @@ from theme_config import formatting
 
 
 def gen_list(obj):
-	print("Starting {}".format(obj))
+#	print("Starting {}".format(obj))
 	b = ""
 
 	# gen our string
