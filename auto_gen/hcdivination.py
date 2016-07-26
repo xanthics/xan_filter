@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 2016-07-20T08:09:42 PST from "Hardcore Cards" data
+# Created: 2016-07-26T09:45:42 PST from "Hardcore Cards" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
