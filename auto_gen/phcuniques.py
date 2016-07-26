@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 2016-07-26T09:45:42 PST from "Hardcore Prophecy Uniques" data
+# Created: 07/26/2016(m/d/y) 17:04:20 UTC from "Hardcore Prophecy Uniques" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -74,8 +74,8 @@ items = {
 	"1 Silver Flask": {"base": "Silver Flask", "type": "unique high"},
 	"1 Carnal Sceptre": {"base": "Carnal Sceptre", "type": "unique high"},
 	"1 Karui Maul": {"base": "Karui Maul", "type": "unique high"},
-	"1 Full Wyrmscale": {"base": "Full Wyrmscale", "type": "unique high"},
 	"1 Unset Ring": {"base": "Unset Ring", "type": "unique high"},
+	"1 Full Wyrmscale": {"base": "Full Wyrmscale", "type": "unique high"},
 	"1 Spine Bow": {"base": "Spine Bow", "type": "unique high"},
 	"1 Corrugated Buckler": {"base": "Corrugated Buckler", "type": "unique high"},
 	"1 Terror Maul": {"base": "Terror Maul", "type": "unique high"},

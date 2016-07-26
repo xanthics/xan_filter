@@ -25,7 +25,7 @@ Author: Jeremy Parks
 Purpose: Create an item filter based on config files
 Note: Requires Python 3.4.x
 """
-
+from datetime import datetime
 from os import path
 
 from auto_gen import divination
@@ -137,7 +137,13 @@ def main():
 
 	for i in leagues:
 
-		buffer = ""
+		buffer = """#**************************************************************
+# Welcome to xan.filter, a Python generated loot filter for PoE
+# This filter was generated for {} on {} UTC
+# The most current version of code can always be found at https://github.com/xanthics/poe_filter
+#**************************************************************
+
+""".format(i[0], datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'))
 
 		buffer += gen_list(show)  # Always show these items
 		buffer += gen_list(hide)  # Always hide these items

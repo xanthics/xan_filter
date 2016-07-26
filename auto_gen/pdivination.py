@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 2016-07-26T09:45:42 PST from "Prophecy Cards" data
+# Created: 07/26/2016(m/d/y) 17:04:20 UTC from "Prophecy Cards" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -95,9 +95,9 @@ items = {
 	"1 Rats": {"base": "Rats", "class": "Divination Card", "type": "divination high"},
 	"1 The Arena Champion": {"base": "The Arena Champion", "class": "Divination Card", "type": "divination high"},
 	"1 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination high"},
-	"1 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
 	"1 The Road to Power": {"base": "The Road to Power", "class": "Divination Card", "type": "divination high"},
 	"1 The Soul": {"base": "The Soul", "class": "Divination Card", "type": "divination high"},
+	"1 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
 	"1 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination high"},
 	"1 The Surveyor": {"base": "The Surveyor", "class": "Divination Card", "type": "divination high"},
 	"1 Jack in the Box": {"base": "Jack in the Box", "class": "Divination Card", "type": "divination high"},
