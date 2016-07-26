@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 2016-07-26T09:45:42 PST from "Standard Uniques" data
+# Created: 07/26/2016(m/d/y) 17:04:20 UTC from "Standard Uniques" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -118,11 +118,11 @@ items = {
 	"1 Imperial Bow": {"base": "Imperial Bow", "type": "unique high"},
 	"1 Sharkskin Tunic": {"base": "Sharkskin Tunic", "type": "unique high"},
 	"1 Diamond Ring": {"base": "Diamond Ring", "type": "unique high"},
-	"1 Nubuck Boots": {"base": "Nubuck Boots", "type": "unique high"},
-	"1 Granite Flask": {"base": "Granite Flask", "type": "unique high"},
 	"1 Conjurer Boots": {"base": "Conjurer Boots", "type": "unique high"},
 	"1 Enameled Buckler": {"base": "Enameled Buckler", "type": "unique high"},
+	"1 Granite Flask": {"base": "Granite Flask", "type": "unique high"},
 	"1 Raven Mask": {"base": "Raven Mask", "type": "unique high"},
+	"1 Nubuck Boots": {"base": "Nubuck Boots", "type": "unique high"},
 	"1 Titanium Spirit Shield": {"base": "Titanium Spirit Shield", "type": "unique high"},
 	"1 Black Maw Talisman": {"base": "Black Maw Talisman", "type": "unique high"},
 	"1 Simple Robe": {"base": "Simple Robe", "type": "unique high"},
@@ -150,7 +150,6 @@ items = {
 	"1 Goliath Gauntlets": {"base": "Goliath Gauntlets", "type": "unique high"},
 	"1 Necromancer Silks": {"base": "Necromancer Silks", "type": "unique high"},
 	"1 Full Dragonscale": {"base": "Full Dragonscale", "type": "unique high"},
-	"1 Heavy Belt": {"base": "Heavy Belt", "type": "unique high"},
 	"1 Karui Maul": {"base": "Karui Maul", "type": "unique high"},
 	"1 Mind Cage": {"base": "Mind Cage", "type": "unique high"},
 	"1 Opal Wand": {"base": "Opal Wand", "type": "unique high"},

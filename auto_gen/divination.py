@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 2016-07-26T09:45:42 PST from "Standard Cards" data
+# Created: 07/26/2016(m/d/y) 17:04:20 UTC from "Standard Cards" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *

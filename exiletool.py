@@ -34,7 +34,7 @@ from datetime import datetime
 
 header = '''#!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: {} PST from "{}" data
+# Created: {} UTC from "{}" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -156,7 +156,7 @@ def gen_lists():
 						items['high'].append(i[u'key'])
 
 				with open('auto_gen\\{}uniques.py'.format(name), 'w', encoding='utf-8') as f:
-					f.write(u'''{}\ndesc = "Unique"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.now().strftime('%Y-%m-%dT%H:%M:%S'), curkey)))
+					f.write(u'''{}\ndesc = "Unique"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), curkey)))
 					for ii in items['very high']:
 						f.write(u'\t"0 {0}": {{"base": "{0}", "type": "unique very high"}},\n'.format(ii))
 					for ii in items['high']:
@@ -190,7 +190,7 @@ def gen_lists():
 #							cardtracker[i[u'key']] = ["h {}".format(name)]
 						items['normal'].append(i[u'key'])
 				with open('auto_gen\\{}divination.py'.format(name), 'w', encoding='utf-8') as f:
-					f.write(u'''{}\ndesc = "Divination Card"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.now().strftime('%Y-%m-%dT%H:%M:%S'),curkey)))
+					f.write(u'''{}\ndesc = "Divination Card"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'),curkey)))
 					for ii in items['high']:
 						f.write(u'\t"0 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination very high"}},\n'.format(ii))
 					for ii in items['normal']:

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 2016-07-26T09:45:42 PST from "Prophecy Uniques" data
+# Created: 07/26/2016(m/d/y) 17:04:20 UTC from "Prophecy Uniques" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -83,7 +83,6 @@ items = {
 	"1 Simple Robe": {"base": "Simple Robe", "type": "unique high"},
 	"1 Corrugated Buckler": {"base": "Corrugated Buckler", "type": "unique high"},
 	"1 Full Wyrmscale": {"base": "Full Wyrmscale", "type": "unique high"},
-	"1 Judgement Staff": {"base": "Judgement Staff", "type": "unique high"},
 	"1 Penetrating Arrow Quiver": {"base": "Penetrating Arrow Quiver", "type": "unique high"},
 	"1 Reef Map": {"base": "Reef Map", "type": "unique high"},
 	"9 Other uniques": {"type": "unique normal"}
