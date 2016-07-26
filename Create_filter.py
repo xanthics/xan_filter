@@ -129,9 +129,9 @@ def gen_list(obj):
 # main function for creating a filter
 def main():
 	leagues = [("standard", uniques, divination),
-				  ("hardcore", hcuniques, hcdivination),
-				  ("prophecy", puniques, pdivination),
-				  ("prophecyhc", phcuniques, phcdivination)]
+			   ("hardcore", hcuniques, hcdivination),
+			   ("prophecy", puniques, pdivination),
+			   ("prophecyhc", phcuniques, phcdivination)]
 
 	leveling = True  # toggle to show leveling items
 
