@@ -157,9 +157,9 @@ def gen_lists():
 
 				with open('auto_gen\\{}uniques.py'.format(name), 'w', encoding='utf-8') as f:
 					f.write(u'''{}\ndesc = "Unique"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), curkey)))
-					for ii in items['very high']:
+					for ii in sorted(items['very high']):
 						f.write(u'\t"0 {0}": {{"base": "{0}", "type": "unique very high"}},\n'.format(ii))
-					for ii in items['high']:
+					for ii in sorted(items['high']):
 						f.write(u'\t"1 {0}": {{"base": "{0}", "type": "unique high"}},\n'.format(ii))
 					f.write(u'\t"9 Other uniques": {"type": "unique normal"}\n}\n')
 
@@ -191,13 +191,13 @@ def gen_lists():
 						items['normal'].append(i[u'key'])
 				with open('auto_gen\\{}divination.py'.format(name), 'w', encoding='utf-8') as f:
 					f.write(u'''{}\ndesc = "Divination Card"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'),curkey)))
-					for ii in items['high']:
+					for ii in sorted(items['high']):
 						f.write(u'\t"0 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination very high"}},\n'.format(ii))
-					for ii in items['normal']:
+					for ii in sorted(items['normal']):
 						f.write(u'\t"1 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination high"}},\n'.format(ii))
-					for ii in items['low']:
+					for ii in sorted(items['low']):
 						f.write(u'\t"2 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination low"}},\n'.format(ii))
-					for ii in badcards:
+					for ii in sorted(badcards):
 						f.write(u'\t"7 {0}": {{"base": "{0}", "class": "Divination Card", "type": "hide"}},\n'.format(ii))
 					f.write(u'\t"9 Other uniques": {"class": "Divination Card", "type": "divination normal"}\n}\n')
 
