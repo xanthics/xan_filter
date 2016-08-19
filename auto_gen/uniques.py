@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 08/06/2016(m/d/y) 06:00:03 UTC from "Standard Uniques" data
+# Created: 08/19/2016(m/d/y) 20:03:17 UTC from "Standard Uniques" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -119,6 +119,7 @@ items = {
 	"1 Granite Flask": {"base": "Granite Flask", "type": "unique high"},
 	"1 Greater Mana Flask": {"base": "Greater Mana Flask", "type": "unique high"},
 	"1 Heavy Quiver": {"base": "Heavy Quiver", "type": "unique high"},
+	"1 Holy Chainmail": {"base": "Holy Chainmail", "type": "unique high"},
 	"1 Imperial Bow": {"base": "Imperial Bow", "type": "unique high"},
 	"1 Imperial Skean": {"base": "Imperial Skean", "type": "unique high"},
 	"1 Imperial Staff": {"base": "Imperial Staff", "type": "unique high"},
@@ -136,7 +137,6 @@ items = {
 	"1 Ranger Bow": {"base": "Ranger Bow", "type": "unique high"},
 	"1 Raven Mask": {"base": "Raven Mask", "type": "unique high"},
 	"1 Reef Map": {"base": "Reef Map", "type": "unique high"},
-	"1 Reinforced Greaves": {"base": "Reinforced Greaves", "type": "unique high"},
 	"1 Ritual Sceptre": {"base": "Ritual Sceptre", "type": "unique high"},
 	"1 Savant's Robe": {"base": "Savant's Robe", "type": "unique high"},
 	"1 Serpentine Staff": {"base": "Serpentine Staff", "type": "unique high"},
@@ -146,11 +146,9 @@ items = {
 	"1 Simple Robe": {"base": "Simple Robe", "type": "unique high"},
 	"1 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique high"},
 	"1 Slaughter Knife": {"base": "Slaughter Knife", "type": "unique high"},
-	"1 Steelscale Gauntlets": {"base": "Steelscale Gauntlets", "type": "unique high"},
 	"1 Strapped Mitts": {"base": "Strapped Mitts", "type": "unique high"},
 	"1 Terror Maul": {"base": "Terror Maul", "type": "unique high"},
 	"1 Titanium Spirit Shield": {"base": "Titanium Spirit Shield", "type": "unique high"},
-	"1 Triumphant Lamellar": {"base": "Triumphant Lamellar", "type": "unique high"},
 	"1 Two-Stone Ring": {"base": "Two-Stone Ring", "type": "unique high"},
 	"1 Unset Ring": {"base": "Unset Ring", "type": "unique high"},
 	"1 Vaal Gauntlets": {"base": "Vaal Gauntlets", "type": "unique high"},

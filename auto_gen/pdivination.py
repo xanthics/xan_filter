@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 08/06/2016(m/d/y) 06:00:03 UTC from "Prophecy Cards" data
+# Created: 08/19/2016(m/d/y) 20:03:17 UTC from "Prophecy Cards" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -93,7 +93,6 @@ items = {
 	"1 The Calling": {"base": "The Calling", "class": "Divination Card", "type": "divination high"},
 	"1 The Cartographer": {"base": "The Cartographer", "class": "Divination Card", "type": "divination high"},
 	"1 The Chains that Bind": {"base": "The Chains that Bind", "class": "Divination Card", "type": "divination high"},
-	"1 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination high"},
 	"1 The Fletcher": {"base": "The Fletcher", "class": "Divination Card", "type": "divination high"},
 	"1 The Gentleman": {"base": "The Gentleman", "class": "Divination Card", "type": "divination high"},
 	"1 The Gladiator": {"base": "The Gladiator", "class": "Divination Card", "type": "divination high"},

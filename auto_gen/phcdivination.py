@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 08/06/2016(m/d/y) 06:00:03 UTC from "Hardcore Prophecy Cards" data
+# Created: 08/19/2016(m/d/y) 20:03:17 UTC from "Hardcore Prophecy Cards" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -34,7 +34,6 @@ items = {
 	"0 Abandoned Wealth": {"base": "Abandoned Wealth", "class": "Divination Card", "type": "divination very high"},
 	"0 Bowyer's Dream": {"base": "Bowyer's Dream", "class": "Divination Card", "type": "divination very high"},
 	"0 Chaotic Disposition": {"base": "Chaotic Disposition", "class": "Divination Card", "type": "divination very high"},
-	"0 Dialla's Subjugation": {"base": "Dialla's Subjugation", "class": "Divination Card", "type": "divination very high"},
 	"0 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination very high"},
 	"0 Heterochromia": {"base": "Heterochromia", "class": "Divination Card", "type": "divination very high"},
 	"0 House of Mirrors": {"base": "House of Mirrors", "class": "Divination Card", "type": "divination very high"},
@@ -65,6 +64,7 @@ items = {
 	"0 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination very high"},
 	"0 The Offering": {"base": "The Offering", "class": "Divination Card", "type": "divination very high"},
 	"0 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
+	"0 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination very high"},
 	"0 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination very high"},
 	"0 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination very high"},
 	"0 The Vast": {"base": "The Vast", "class": "Divination Card", "type": "divination very high"},
@@ -77,6 +77,7 @@ items = {
 	"1 Blind Venture": {"base": "Blind Venture", "class": "Divination Card", "type": "divination high"},
 	"1 Boundless Realms": {"base": "Boundless Realms", "class": "Divination Card", "type": "divination high"},
 	"1 Cartographer's Delight": {"base": "Cartographer's Delight", "class": "Divination Card", "type": "divination high"},
+	"1 Dialla's Subjugation": {"base": "Dialla's Subjugation", "class": "Divination Card", "type": "divination high"},
 	"1 Earth Drinker": {"base": "Earth Drinker", "class": "Divination Card", "type": "divination high"},
 	"1 Gift of the Gemling Queen": {"base": "Gift of the Gemling Queen", "class": "Divination Card", "type": "divination high"},
 	"1 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination high"},
@@ -105,13 +106,13 @@ items = {
 	"1 The Penitent": {"base": "The Penitent", "class": "Divination Card", "type": "divination high"},
 	"1 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
 	"1 The Road to Power": {"base": "The Road to Power", "class": "Divination Card", "type": "divination high"},
-	"1 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination high"},
 	"1 The Soul": {"base": "The Soul", "class": "Divination Card", "type": "divination high"},
 	"1 The Spoiled Prince": {"base": "The Spoiled Prince", "class": "Divination Card", "type": "divination high"},
 	"1 The Stormcaller": {"base": "The Stormcaller", "class": "Divination Card", "type": "divination high"},
 	"1 The Surveyor": {"base": "The Surveyor", "class": "Divination Card", "type": "divination high"},
 	"1 The Trial": {"base": "The Trial", "class": "Divination Card", "type": "divination high"},
 	"1 The Union": {"base": "The Union", "class": "Divination Card", "type": "divination high"},
+	"1 The Visionary": {"base": "The Visionary", "class": "Divination Card", "type": "divination high"},
 	"1 The Watcher": {"base": "The Watcher", "class": "Divination Card", "type": "divination high"},
 	"1 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination high"},
 	"1 Vinia's Token": {"base": "Vinia's Token", "class": "Divination Card", "type": "divination high"},

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 08/06/2016(m/d/y) 06:00:03 UTC from "Hardcore Prophecy Uniques" data
+# Created: 08/19/2016(m/d/y) 20:03:17 UTC from "Hardcore Prophecy Uniques" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -32,7 +32,6 @@ desc = "Unique"
 # Base type : settings pair
 items = {
 	"0 Assassin's Garb": {"base": "Assassin's Garb", "type": "unique very high"},
-	"0 Black Maw Talisman": {"base": "Black Maw Talisman", "type": "unique very high"},
 	"0 Champion Kite Shield": {"base": "Champion Kite Shield", "type": "unique very high"},
 	"0 Citrine Amulet": {"base": "Citrine Amulet", "type": "unique very high"},
 	"0 Clasped Mitts": {"base": "Clasped Mitts", "type": "unique very high"},
@@ -47,12 +46,14 @@ items = {
 	"0 Occultist's Vestment": {"base": "Occultist's Vestment", "type": "unique very high"},
 	"0 Prismatic Jewel": {"base": "Prismatic Jewel", "type": "unique very high"},
 	"0 Prophecy Wand": {"base": "Prophecy Wand", "type": "unique very high"},
+	"0 Rotfeather Talisman": {"base": "Rotfeather Talisman", "type": "unique very high"},
 	"0 Sanctified Mana Flask": {"base": "Sanctified Mana Flask", "type": "unique very high"},
 	"0 Sapphire Flask": {"base": "Sapphire Flask", "type": "unique very high"},
 	"0 Savant's Robe": {"base": "Savant's Robe", "type": "unique very high"},
 	"0 Steelhead": {"base": "Steelhead", "type": "unique very high"},
 	"0 Varnished Coat": {"base": "Varnished Coat", "type": "unique very high"},
 	"0 Wereclaw Talisman": {"base": "Wereclaw Talisman", "type": "unique very high"},
+	"1 Black Maw Talisman": {"base": "Black Maw Talisman", "type": "unique high"},
 	"1 Broadhead Arrow Quiver": {"base": "Broadhead Arrow Quiver", "type": "unique high"},
 	"1 Carnal Sceptre": {"base": "Carnal Sceptre", "type": "unique high"},
 	"1 Cedar Tower Shield": {"base": "Cedar Tower Shield", "type": "unique high"},
@@ -62,6 +63,7 @@ items = {
 	"1 Ezomyte Burgonet": {"base": "Ezomyte Burgonet", "type": "unique high"},
 	"1 Fishing Rod": {"base": "Fishing Rod", "type": "unique high"},
 	"1 Full Wyrmscale": {"base": "Full Wyrmscale", "type": "unique high"},
+	"1 Gold Ring": {"base": "Gold Ring", "type": "unique high"},
 	"1 Granite Flask": {"base": "Granite Flask", "type": "unique high"},
 	"1 Hubris Circlet": {"base": "Hubris Circlet", "type": "unique high"},
 	"1 Imperial Skean": {"base": "Imperial Skean", "type": "unique high"},
