@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 08/06/2016(m/d/y) 06:00:03 UTC from "Hardcore Cards" data
+# Created: 08/19/2016(m/d/y) 20:03:17 UTC from "Hardcore Cards" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -79,7 +79,6 @@ items = {
 	"0 The Fletcher": {"base": "The Fletcher", "class": "Divination Card", "type": "divination very high"},
 	"0 The Fox": {"base": "The Fox", "class": "Divination Card", "type": "divination very high"},
 	"0 The Gambler": {"base": "The Gambler", "class": "Divination Card", "type": "divination very high"},
-	"0 The Gemcutter": {"base": "The Gemcutter", "class": "Divination Card", "type": "divination very high"},
 	"0 The Harvester": {"base": "The Harvester", "class": "Divination Card", "type": "divination very high"},
 	"0 The Hunger": {"base": "The Hunger", "class": "Divination Card", "type": "divination very high"},
 	"0 The Immortal": {"base": "The Immortal", "class": "Divination Card", "type": "divination very high"},
@@ -125,12 +124,15 @@ items = {
 	"1 Lost Worlds": {"base": "Lost Worlds", "class": "Divination Card", "type": "divination high"},
 	"1 Prosperity": {"base": "Prosperity", "class": "Divination Card", "type": "divination high"},
 	"1 Rain of Chaos": {"base": "Rain of Chaos", "class": "Divination Card", "type": "divination high"},
+	"1 Rats": {"base": "Rats", "class": "Divination Card", "type": "divination high"},
 	"1 The Betrayal": {"base": "The Betrayal", "class": "Divination Card", "type": "divination high"},
 	"1 The Cataclysm": {"base": "The Cataclysm", "class": "Divination Card", "type": "divination high"},
 	"1 The Chains that Bind": {"base": "The Chains that Bind", "class": "Divination Card", "type": "divination high"},
 	"1 The Demoness": {"base": "The Demoness", "class": "Divination Card", "type": "divination high"},
 	"1 The Encroaching Darkness": {"base": "The Encroaching Darkness", "class": "Divination Card", "type": "divination high"},
 	"1 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination high"},
+	"1 The Flora's Gift": {"base": "The Flora's Gift", "class": "Divination Card", "type": "divination high"},
+	"1 The Gemcutter": {"base": "The Gemcutter", "class": "Divination Card", "type": "divination high"},
 	"1 The Gentleman": {"base": "The Gentleman", "class": "Divination Card", "type": "divination high"},
 	"1 The Gladiator": {"base": "The Gladiator", "class": "Divination Card", "type": "divination high"},
 	"1 The Hermit": {"base": "The Hermit", "class": "Divination Card", "type": "divination high"},

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 08/06/2016(m/d/y) 06:00:03 UTC from "Prophecy Uniques" data
+# Created: 08/19/2016(m/d/y) 20:03:17 UTC from "Prophecy Uniques" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -32,7 +32,6 @@ desc = "Unique"
 # Base type : settings pair
 items = {
 	"0 Assassin's Garb": {"base": "Assassin's Garb", "type": "unique very high"},
-	"0 Black Maw Talisman": {"base": "Black Maw Talisman", "type": "unique very high"},
 	"0 Champion Kite Shield": {"base": "Champion Kite Shield", "type": "unique very high"},
 	"0 Citrine Amulet": {"base": "Citrine Amulet", "type": "unique very high"},
 	"0 Clasped Mitts": {"base": "Clasped Mitts", "type": "unique very high"},
@@ -57,6 +56,7 @@ items = {
 	"0 Vaal Regalia": {"base": "Vaal Regalia", "type": "unique very high"},
 	"0 Varnished Coat": {"base": "Varnished Coat", "type": "unique very high"},
 	"0 Wereclaw Talisman": {"base": "Wereclaw Talisman", "type": "unique very high"},
+	"1 Black Maw Talisman": {"base": "Black Maw Talisman", "type": "unique high"},
 	"1 Cedar Tower Shield": {"base": "Cedar Tower Shield", "type": "unique high"},
 	"1 Corrugated Buckler": {"base": "Corrugated Buckler", "type": "unique high"},
 	"1 Courtyard Map": {"base": "Courtyard Map", "type": "unique high"},
