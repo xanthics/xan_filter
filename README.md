@@ -18,7 +18,7 @@ Usage
 =====
 Run Create_filter with necessary config files to generate xan.filter.  Note that this will automatically put xan.show.filter and xan.hide.filter in <relative path>\Documents\My Games\Path of Exile
 
-(Optional) Run Exiletool to update divination and unique tiers.  You will need to create "api_key.py" first with user and password.  See [Exile Tool API](http://api.exiletools.com/info/) for an API key(password).
+~~(Optional) Run Exiletool to update divination and unique tiers.  You will need to create "api_key.py" first with user and password.  See [Exile Tool API](http://api.exiletools.com/info/) for an API key(password).~~
 
 Config
 ======
