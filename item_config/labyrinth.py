@@ -35,7 +35,7 @@ items = {
 	"0 Cogs of Disruption": {"base": "Cogs of Disruption", "type": "show high"},
 	"0 Cube of Absorption": {"base": "Cube Of Absorption", "type": "show high"},
 	"0 Heart of the Gargoyle": {"base": "Heart of the Gargoyle", "type": "show high"},
-	"0 Orb of Elemental Essence": {"base": "Orb of Elemental Essence", "type": "show high"},
+	"0 Orb of Elemental Dispersion": {"base": "Orb of Elemental Dispersion", "type": "show high"},
 	"0 Portal Shredder": {"base": "Portal Shredder", "type": "show high"},
 	"0 Rod of Detonation": {"base": "Rod of Detonation", "type": "show high"},
 	"0 Sand of Eternity": {"base": "Sand of Eternity", "type": "show high"},
