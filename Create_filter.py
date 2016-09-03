@@ -130,8 +130,8 @@ def gen_list(obj):
 def main():
 	leagues = [("standard", uniques, divination),
 			   ("hardcore", hcuniques, hcdivination),
-			   ("prophecy", puniques, pdivination),
-			   ("prophecyhc", phcuniques, phcdivination)]
+			   ("essence", puniques, pdivination),
+			   ("essencehc", phcuniques, phcdivination)]
 
 	leveling = True  # toggle to show leveling items
 

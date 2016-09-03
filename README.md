@@ -3,14 +3,14 @@
 This is a script to generate a filter file for Path of Exile using the included config files.
 
 **HIDE**
-* [Hide Download Prophecy](xan.prophecy.hide.filter?raw=true)
-* [Hide Download Prophecy Hardcore](xan.prophecyhc.hide.filter?raw=true)
+* [Hide Download Essence](xan.essence.hide.filter?raw=true)
+* [Hide Download Essence Hardcore](xan.essencehc.hide.filter?raw=true)
 * [Hide Download Standard](xan.standard.hide.filter?raw=true)
 * [Hide Download Hardcore](xan.hardcore.hide.filter?raw=true)
 
 **SHOW**
-* [Show Download Prophecy](xan.prophecy.show.filter?raw=true)
-* [Show Download Prophecy Hardcore](xan.prophecyhc.show.filter?raw=true)
+* [Show Download Essence](xan.essence.show.filter?raw=true)
+* [Show Download Essence Hardcore](xan.essencehc.show.filter?raw=true)
 * [Show Download Standard](xan.standard.show.filter?raw=true)
 * [Show Download Hardcore](xan.hardcore.show.filter?raw=true)
 
