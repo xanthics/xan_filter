@@ -22,15 +22,18 @@
 * DEALINGS IN THE SOFTWARE.
 
 Author: Jeremy Parks
-Purpose: Create price lists for uniques and divination cards from exiletools api data
+Purpose: Create price lists for uniques and divination cards from ggg api data
          This file creates updated priority lists for uniques and divination cards
 Note: Requires Python 3.4.x
+      Database opens a new connection and writes after each page is retrieved as
+      TinyDB documentation doesn't indicated when the data is written to disk
 """
 
 import requests
 from io import open
-from api_key import user, password
 from datetime import datetime
+from tinydb import TinyDB, Query
+import re
 
 header = '''#!/usr/bin/python
 # -*- coding: utf-8 -*-
@@ -62,30 +65,107 @@ Note: Requires Python 3.4.x
 """
 '''
 
+#  Print all leagues in database
+def leagues():
+	with TinyDB('database/stashcache.json') as db:
+		q = Query()
+		#  Print Leagues
+		league = []
+		while True:
+			if league:
+				val = db.get(~ q.league.matches('|'.join(league)) & q.league.exists())
+			else:
+				val = db.get(q.league.exists())
+			if not val:
+				break
+			league.append(val['league'])
+		print(league)
+
+
+# Add current data to the db
+def adddata(nextchange, remove, add):
+	with TinyDB('database/stashcache.json') as db:
+		q = Query()
+
+		# Update Next ID
+		if db.search(q.key.exists()):
+			db.update({'next': nextchange}, q.key == 'nextid')
+		else:
+			db.insert({'key': 'nextid', 'next': nextchange})
+
+		# Remove items that have a stash tab that matches this update
+		for i in remove:
+			db.remove(q.tabid == i)
+
+		# Insert our new data
+		for i in add:
+			db.insert(i)
+
+#  Retrive Stash Tab API data from GGG
+def get_stashes(start=None):
+	if not start:
+		with TinyDB('database/stashcache.json') as db:
+			q = Query()
+			if db.search(q.key.exists()):
+				start = db.get(q.key.exists())['next']
+
+	if start:
+		url = 'https://www.pathofexile.com/api/public-stash-tabs?id={}'.format(start)
+	else:
+		url = 'https://www.pathofexile.com/api/public-stash-tabs'
+
+	print("Starting {}".format(url))
+	req = requests.get(url)
+
+	data = req.json(encoding='utf-8')
+
+	nextchange = ""
+	remove = []
+	add = []
+	keys = {}
+	for i in data:
+		if 'stashes' == i:
+			for ii in data[i]:
+				if 'items' in ii and ii['items']:
+					for iii in ii['items']:
+						if iii['frameType'] in [3, 6]:
+							note = ""
+							if 'note' in iii and ('~b/o' in iii['note'] or '~price' in iii['note']):
+								note = iii['note']
+							elif 'stash' in ii and ('~b/o' in ii['stash'] or '~price' in ii['stash']):
+								note = ii['stash']
+								keys[ii['stash']] = True
+							if note:
+								if ii['id'] not in remove:
+									remove.append(ii['id'])
+								price = re.match(r'(~b/o|~price) (-?\d*(\.\d+)?) (vaal|jew|chrom|alt|jewel|chance|chisel|cartographer|fuse|fusing|alch|scour|blessed|chaos|regret|regal|gcp|gemcutter|divine|exalted|exa|ex|mirror)', note.lower())
+								if price:
+									if float(price.group(2)) > 0:
+										unit = price.group(4)
+										if unit in ['exalted', 'exa', 'ex']:
+											unit = 'exa'
+										elif unit in ['fuse', 'fusing']:
+											unit = 'fuse'
+										add.append({'type': iii['frameType'], 'league': iii['league'], 'base': iii['typeLine'], 'cost': price.group(2), 'unit': unit, 'tabid': ii['id'], 'ids': iii['id']})
+								else:
+									with open('database/erroritems.txt', 'a') as f:
+										f.write("{} *** {}\n".format(note, {'type': iii['frameType'], 'league': iii['league'], 'base': iii['typeLine'], 'tabid': ii['id'], 'ids': iii['id']}))
+		else:
+			nextchange = data[i]
+
+	adddata(nextchange, remove, add)
+	return nextchange
+
 
 def gen_lists():
-	league1 = "Prophecy"
-	league2 = "Hardcore Prophecy"
+	league1 = "Essence"
+	league2 = "Hardcore Essence"
 	league3 = "Standard"
 	league4 = "Hardcore"
 
-	league1queryunique = '''{{"query":{{"bool":{{"must":[{{"term":{{"attributes.league":{{"value":"{0}"}}}}}},{{"term":{{"attributes.rarity":{{"value":"Unique"}}}}}},{{"term":{{"shop.hasPrice":{{"value":"true"}}}}}}]}}}},"aggs":{{"{0} Uniques":{{"terms":{{"field":"info.typeLine","size":1000,"order":{{"avgPrice[50.0]":"desc"}}}},"aggs":{{"avgPrice":{{"percentiles":{{"field":"shop.chaosEquiv","percents":[50]}}}}}}}}}},size:0}}'''.format(league1)
-	league1querycard = '''{{"query": {{"bool": {{"must": [{{"term": {{"attributes.league": {{"value": "{0}"}}}}}},{{"term": {{"attributes.baseItemType": {{"value": "Card"}}}}}},{{"term": {{"shop.hasPrice": {{"value": "true"}}}}}}]}}}},"aggs": {{"{0} Cards": {{"terms": {{"field": "info.typeLine","size": 1000,"order" : {{"avgPrice[50.0]" : "desc"}}}},"aggs": {{"avgPrice": {{"percentiles": {{"field": "shop.chaosEquiv","percents": [50]}}}}}}}}}},size:0}}'''.format(league1)
-
-	league2queryunique = '''{{"query":{{"bool":{{"must":[{{"term":{{"attributes.league":{{"value":"{0}"}}}}}},{{"term":{{"attributes.rarity":{{"value":"Unique"}}}}}},{{"term":{{"shop.hasPrice":{{"value":"true"}}}}}}]}}}},"aggs":{{"{0} Uniques":{{"terms":{{"field":"info.typeLine","size":1000,"order":{{"avgPrice[50.0]":"desc"}}}},"aggs":{{"avgPrice":{{"percentiles":{{"field":"shop.chaosEquiv","percents":[50]}}}}}}}}}},size:0}}'''.format(league2)
-	league2querycard = '''{{"query": {{"bool": {{"must": [{{"term": {{"attributes.league": {{"value": "{0}"}}}}}},{{"term": {{"attributes.baseItemType": {{"value": "Card"}}}}}},{{"term": {{"shop.hasPrice": {{"value": "true"}}}}}}]}}}},"aggs": {{"{0} Cards": {{"terms": {{"field": "info.typeLine","size": 1000,"order" : {{"avgPrice[50.0]" : "desc"}}}},"aggs": {{"avgPrice": {{"percentiles": {{"field": "shop.chaosEquiv","percents": [50]}}}}}}}}}},size:0}}'''.format(league2)
-
-	league3queryunique = '''{{"query":{{"bool":{{"must":[{{"term":{{"attributes.league":{{"value":"{0}"}}}}}},{{"term":{{"attributes.rarity":{{"value":"Unique"}}}}}},{{"term":{{"shop.hasPrice":{{"value":"true"}}}}}}]}}}},"aggs":{{"{0} Uniques":{{"terms":{{"field":"info.typeLine","size":1000,"order":{{"avgPrice[50.0]":"desc"}}}},"aggs":{{"avgPrice":{{"percentiles":{{"field":"shop.chaosEquiv","percents":[50]}}}}}}}}}},size:0}}'''.format(league3)
-	league3querycard = '''{{"query": {{"bool": {{"must": [{{"term": {{"attributes.league": {{"value": "{0}"}}}}}},{{"term": {{"attributes.baseItemType": {{"value": "Card"}}}}}},{{"term": {{"shop.hasPrice": {{"value": "true"}}}}}}]}}}},"aggs": {{"{0} Cards": {{"terms": {{"field": "info.typeLine","size": 1000,"order" : {{"avgPrice[50.0]" : "desc"}}}},"aggs": {{"avgPrice": {{"percentiles": {{"field": "shop.chaosEquiv","percents": [50]}}}}}}}}}},size:0}}'''.format(league3)
-
-	league4queryunique = '''{{"query":{{"bool":{{"must":[{{"term":{{"attributes.league":{{"value":"{0}"}}}}}},{{"term":{{"attributes.rarity":{{"value":"Unique"}}}}}},{{"term":{{"shop.hasPrice":{{"value":"true"}}}}}}]}}}},"aggs":{{"{0} Uniques":{{"terms":{{"field":"info.typeLine","size":1000,"order":{{"avgPrice[50.0]":"desc"}}}},"aggs":{{"avgPrice":{{"percentiles":{{"field":"shop.chaosEquiv","percents":[50]}}}}}}}}}},size:0}}'''.format(league4)
-	league4querycard = '''{{"query": {{"bool": {{"must": [{{"term": {{"attributes.league": {{"value": "{0}"}}}}}},{{"term": {{"attributes.baseItemType": {{"value": "Card"}}}}}},{{"term": {{"shop.hasPrice": {{"value": "true"}}}}}}]}}}},"aggs": {{"{0} Cards": {{"terms": {{"field": "info.typeLine","size": 1000,"order" : {{"avgPrice[50.0]" : "desc"}}}},"aggs": {{"avgPrice": {{"percentiles": {{"field": "shop.chaosEquiv","percents": [50]}}}}}}}}}},size:0}}'''.format(league4)
-
-	url = 'http://api.exiletools.com/index/_msearch?pretty'
-
-	req = requests.get(url, data="{{}}\n{}\n{{}}\n{}\n{{}}\n{}\n{{}}\n{}\n{{}}\n{}\n{{}}\n{}\n{{}}\n{}\n{{}}\n{}\n".format(league1queryunique, league1querycard, league2queryunique, league2querycard, league3queryunique, league3querycard, league4queryunique, league4querycard), auth=(user, password))
-
-	data = req.json(encoding='utf-8')
+	#  TODO: extract price data from database
+	data = []
+	#  TODO: end
 
 	verygoodcard = ["Abandoned Wealth",  # 3x Exalted Orbs
 					"Bowyer's Dream",  # 6l ilvl 91 Harbinger
@@ -206,5 +286,15 @@ def gen_lists():
 
 
 if __name__ == '__main__':
+	nc = get_stashes()
+
+	oldnc = nc
+	while True:
+		nc = get_stashes(nc)
+		if oldnc == nc:
+			break
+		oldnc = nc
+
+	leagues()
 
 	gen_lists()
