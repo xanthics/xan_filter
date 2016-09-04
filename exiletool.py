@@ -32,8 +32,8 @@ Note: Requires Python 3.4.x
 import requests
 from io import open
 from datetime import datetime
-from tinydb import TinyDB, Query
 import re
+from pymongo import MongoClient
 
 header = '''#!/usr/bin/python
 # -*- coding: utf-8 -*-
@@ -65,49 +65,33 @@ Note: Requires Python 3.4.x
 """
 '''
 
+
 #  Print all leagues in database
-def leagues():
-	with TinyDB('database/stashcache.json') as db:
-		q = Query()
-		#  Print Leagues
-		league = []
-		while True:
-			if league:
-				val = db.get(~ q.league.matches('|'.join(league)) & q.league.exists())
-			else:
-				val = db.get(q.league.exists())
-			if not val:
-				break
-			league.append(val['league'])
-		print(league)
+def leagues(ldb):
+	#  Print Leagues
+	league = ldb.items.distinct('league')
+	print(league)
 
 
-# Add current data to the db
-def adddata(nextchange, remove, add):
-	with TinyDB('database/stashcache.json') as db:
-		q = Query()
+# Add current data to the ldb
+def adddata(nextchange, remove, add, ldb):
+	print("Adding {} items.  Updating {} tabs.".format(len(add), len(remove)))
+	# Update Next ID
+	ldb.key.update_one({}, {'$set': {'next': nextchange}}, True)
 
-		# Update Next ID
-		if db.search(q.key.exists()):
-			db.update({'next': nextchange}, q.key == 'nextid')
-		else:
-			db.insert({'key': 'nextid', 'next': nextchange})
+	# Remove items that have a stash tab that matches this update
+	for i in remove:
+		ldb.items.delete_many({'tabid': i})
 
-		# Remove items that have a stash tab that matches this update
-		for i in remove:
-			db.remove(q.tabid == i)
+	# Insert our new data
+	ldb.items.insert_many(add)
 
-		# Insert our new data
-		for i in add:
-			db.insert(i)
 
-#  Retrive Stash Tab API data from GGG
-def get_stashes(start=None):
+#  Retrieve Stash Tab API data from GGG
+def get_stashes(ldb, start=None):
 	if not start:
-		with TinyDB('database/stashcache.json') as db:
-			q = Query()
-			if db.search(q.key.exists()):
-				start = db.get(q.key.exists())['next']
+		if 'key' in ldb.collection_names():
+			start = ldb.key.find_one()['next']
 
 	if start:
 		url = 'https://www.pathofexile.com/api/public-stash-tabs?id={}'.format(start)
@@ -153,7 +137,7 @@ def get_stashes(start=None):
 		else:
 			nextchange = data[i]
 
-	adddata(nextchange, remove, add)
+	adddata(nextchange, remove, add, ldb)
 	return nextchange
 
 
@@ -286,15 +270,18 @@ def gen_lists():
 
 
 if __name__ == '__main__':
-	nc = get_stashes()
+	with MongoClient() as client:
+		#client.drop_database('stashdata')
+		ldb = client.stashdata
+		nc = get_stashes(ldb)
 
-	oldnc = nc
-	while True:
-		nc = get_stashes(nc)
-		if oldnc == nc:
-			break
 		oldnc = nc
+		while True:
+			nc = get_stashes(ldb, nc)
+			if oldnc == nc:
+				break
+			oldnc = nc
 
-	leagues()
+		leagues(ldb)
 
-	gen_lists()
+		gen_lists()
