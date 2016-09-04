@@ -3,22 +3,22 @@
 This is a script to generate a filter file for Path of Exile using the included config files.
 
 **HIDE**
-* [Hide Download Essence](xan.essence.hide.filter?raw=true)
-* [Hide Download Essence Hardcore](xan.essencehc.hide.filter?raw=true)
-* [Hide Download Standard](xan.standard.hide.filter?raw=true)
-* [Hide Download Hardcore](xan.hardcore.hide.filter?raw=true)
+* [Hide Download Essence](xan.e.hide.filter?raw=true)
+* [Hide Download Essence Hardcore](xan.ehc.hide.filter?raw=true)
+* [Hide Download Standard](xan.st.hide.filter?raw=true)
+* [Hide Download Hardcore](xan.hc.hide.filter?raw=true)
 
 **SHOW**
-* [Show Download Essence](xan.essence.show.filter?raw=true)
-* [Show Download Essence Hardcore](xan.essencehc.show.filter?raw=true)
-* [Show Download Standard](xan.standard.show.filter?raw=true)
-* [Show Download Hardcore](xan.hardcore.show.filter?raw=true)
+* [Show Download Essence](xan.e.show.filter?raw=true)
+* [Show Download Essence Hardcore](xan.ehc.show.filter?raw=true)
+* [Show Download Standard](xan.s.show.filter?raw=true)
+* [Show Download Hardcore](xan.hc.show.filter?raw=true)
 
 Usage
 =====
 Run Create_filter with necessary config files to generate xan.filter.  Note that this will automatically put xan.show.filter and xan.hide.filter in <relative path>\Documents\My Games\Path of Exile
 
-~~(Optional) Run Exiletool to update divination and unique tiers.  You will need to create "api_key.py" first with user and password.  See [Exile Tool API](http://api.exiletools.com/info/) for an API key(password).~~
+(Optional) Run pricetool to update divination and unique tiers.  This may take some time depending on how much data is pending in ggg stash river.  Requires a running MongoDB instance.
 
 Config
 ======
