@@ -97,6 +97,8 @@ from item_config import warbands
 
 from theme_config import formatting
 
+import pricetool
+
 
 def gen_list(obj):
 #	print("Starting {}".format(obj))
@@ -128,10 +130,10 @@ def gen_list(obj):
 
 # main function for creating a filter
 def main():
-	leagues = [("standard", uniques, divination),
-			   ("hardcore", hcuniques, hcdivination),
-			   ("essence", puniques, pdivination),
-			   ("essencehc", phcuniques, phcdivination)]
+	leagues = [("st", "Standard", uniques, divination),
+			   ("hc", "Hardcore", hcuniques, hcdivination),
+			   ("e", "Essence", puniques, pdivination),
+			   ("ehc", "Hardcore Essence", phcuniques, phcdivination)]
 
 	leveling = True  # toggle to show leveling items
 
@@ -143,19 +145,19 @@ def main():
 # The most current version of code can always be found at https://github.com/xanthics/poe_filter
 #**************************************************************
 
-""".format(i[0], datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'))
+""".format(i[1], datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'))
 
 		buffer += gen_list(show)  # Always show these items
 		buffer += gen_list(hide)  # Always hide these items
-		if i[0] not in ['standard', 'hardcore']:
+		if i[0] not in ['st', 'hc']:
 			buffer += gen_list(challenges)
 		buffer += gen_list(labyrinth)
 		buffer += gen_list(currency)  # Currency
 		buffer += gen_list(gems)  # Gems
-		buffer += gen_list(i[1])  # uniques
+		buffer += gen_list(i[2])  # uniques
 		buffer += gen_list(recipe_item)  # Items for vendor recipe
 		buffer += gen_list(maps)  # maps
-		buffer += gen_list(i[2])  # divination cards
+		buffer += gen_list(i[3])  # divination cards
 		buffer += gen_list(flask)  # Flasks
 		buffer += gen_list(t1_rares)
 		if leveling:
@@ -202,4 +204,6 @@ def main():
 
 
 if __name__ == "__main__":
+	# Price updates can take some time.  Uncomment to get most current data before updating filter
+	pricetool.divuniqueupdate()
 	main()
