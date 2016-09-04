@@ -27,7 +27,6 @@ Purpose: Create price lists for uniques and divination cards from ggg api data
 Note: Requires Python 3.4.x
 """
 
-# mongod.exe --dbpath "Z:\poe_filter\database"
 from collections import defaultdict
 
 import requests
