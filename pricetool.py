@@ -157,7 +157,7 @@ def get_stashes(ldb, start=None):
 										add.append({'type': iii['frameType'], 'league': iii['league'], 'base': iii['typeLine'].replace("Superior ", ""), 'cost': float(price.group(2)), 'unit': unit, 'tabid': ii['id'], 'ids': iii['id'], 'chaosequiv': chaosequiv(float(price.group(2)), unit, iii['league'])})
 
 								else:
-									with open('database/erroritems.txt', 'a', encoding='utf-8') as f:
+									with open('erroritems.txt', 'a', encoding='utf-8') as f:
 										f.write(u"{} *** {}\n".format(note, {'type': iii['frameType'], 'league': iii['league'], 'base': iii['typeLine'], 'tabid': ii['id'], 'ids': iii['id']}))
 		else:
 			nextchange = data[i]
@@ -287,8 +287,13 @@ def gen_lists(ldb):
 
 
 def divuniqueupdate():
+	# Make sure error file exists for invalid tab data
+	from os.path import exists
+	if not exists('erroritems.txt'):
+		open('erroritems.txt', 'w')
+
+	# TODO: error handling for unreachable api(down, too many requests, etc)
 	with MongoClient() as client:
-		#client.drop_database('stashdata')
 		ldb = client.stashdata
 
 		nc = get_stashes(ldb)
