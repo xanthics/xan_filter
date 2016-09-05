@@ -25,6 +25,7 @@ Author: Jeremy Parks
 Purpose: Create price lists for uniques and divination cards from ggg api data
          This file creates updated priority lists for uniques and divination cards
 Note: Requires Python 3.4.x
+      Requires a local MongoDB 3.2.x instance
 """
 
 from collections import defaultdict
@@ -159,12 +160,14 @@ def get_stashes(ldb, start=None):
 								else:
 									with open('erroritems.txt', 'a', encoding='utf-8') as f:
 										f.write(u"{} *** {}\n".format(note, {'type': iii['frameType'], 'league': iii['league'], 'base': iii['typeLine'], 'tabid': ii['id'], 'ids': iii['id']}))
-		else:
+		elif 'next_change_id' == i:
 			nextchange = data[i]
+		else:
+			raise ValueError("Invalid JSON data returned")
 
 	adddata(nextchange, remove, add, ldb)
 
-	# Stop updating if we get less than 100 new tabs as we don't need the absolute most current data
+	# Stop updating if we get less than 50 new tabs as we don't need the absolute most current data
 	if len(remove) > 50:
 		return nextchange
 	else:
@@ -174,6 +177,8 @@ def get_stashes(ldb, start=None):
 def gen_lists(ldb):
 	league = ldb.items.distinct('league')
 
+	# Notice that this median is an approximation.  Reduce may only occur on a subset of the data at a time
+	# Setup to ignore prices that are less than 3 alt or more than 1000 chaos
 	mapper = Code('''function map() {
 	var key = {base: this.base, league: this.league, type: this.type};
 	if(this.chaosequiv > 0.187 && this.chaosequiv < 1000)
