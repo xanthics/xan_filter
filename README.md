@@ -2,17 +2,19 @@
 
 This is a script to generate a filter file for Path of Exile using the included config files.
 
+[GGG Forum thread](https://www.pathofexile.com/forum/view-thread/1721195) with more information about the filter.
+
 **HIDE**
-* [Hide Download Essence](xan.e.hide.filter?raw=true)
-* [Hide Download Essence Hardcore](xan.ehc.hide.filter?raw=true)
-* [Hide Download Standard](xan.st.hide.filter?raw=true)
-* [Hide Download Hardcore](xan.hc.hide.filter?raw=true)
+* [Download Essence](xan.e.hide.filter?raw=true)
+* [Download Essence Hardcore](xan.ehc.hide.filter?raw=true)
+* [Download Standard](xan.st.hide.filter?raw=true)
+* [Download Hardcore](xan.hc.hide.filter?raw=true)
 
 **SHOW**
-* [Show Download Essence](xan.e.show.filter?raw=true)
-* [Show Download Essence Hardcore](xan.ehc.show.filter?raw=true)
-* [Show Download Standard](xan.s.show.filter?raw=true)
-* [Show Download Hardcore](xan.hc.show.filter?raw=true)
+* [Download Essence](xan.e.show.filter?raw=true)
+* [Download Essence Hardcore](xan.ehc.show.filter?raw=true)
+* [Download Standard](xan.s.show.filter?raw=true)
+* [Download Hardcore](xan.hc.show.filter?raw=true)
 
 Usage
 =====
