@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/05/2016(m/d/y) 00:16:15 UTC from "Hardcore Essence" data
+# Created: 09/05/2016(m/d/y) 13:54:23 UTC from "Hardcore Essence" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -40,7 +40,6 @@ items = {
 	"0 House of Mirrors": {"base": "House of Mirrors", "class": "Divination Card", "type": "divination very high"},
 	"0 Hunter's Reward": {"base": "Hunter's Reward", "class": "Divination Card", "type": "divination very high"},
 	"0 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination very high"},
-	"0 Merciless Armament": {"base": "Merciless Armament", "class": "Divination Card", "type": "divination very high"},
 	"0 Pride Before the Fall": {"base": "Pride Before the Fall", "class": "Divination Card", "type": "divination very high"},
 	"0 The Artist": {"base": "The Artist", "class": "Divination Card", "type": "divination very high"},
 	"0 The Brittle Emperor": {"base": "The Brittle Emperor", "class": "Divination Card", "type": "divination very high"},
@@ -60,7 +59,7 @@ items = {
 	"0 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination very high"},
 	"0 The Offering": {"base": "The Offering", "class": "Divination Card", "type": "divination very high"},
 	"0 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
-	"0 The Soul": {"base": "The Soul", "class": "Divination Card", "type": "divination very high"},
+	"0 The Scavenger": {"base": "The Scavenger", "class": "Divination Card", "type": "divination very high"},
 	"0 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination very high"},
 	"0 The Void": {"base": "The Void", "class": "Divination Card", "type": "divination very high"},
 	"0 The Warlord": {"base": "The Warlord", "class": "Divination Card", "type": "divination very high"},
@@ -70,8 +69,6 @@ items = {
 	"1 Dialla's Subjugation": {"base": "Dialla's Subjugation", "class": "Divination Card", "type": "divination high"},
 	"1 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
 	"1 Lost Worlds": {"base": "Lost Worlds", "class": "Divination Card", "type": "divination high"},
-	"1 Lysah's Respite": {"base": "Lysah's Respite", "class": "Divination Card", "type": "divination high"},
-	"1 Rain Tempter": {"base": "Rain Tempter", "class": "Divination Card", "type": "divination high"},
 	"1 Scholar of the Seas": {"base": "Scholar of the Seas", "class": "Divination Card", "type": "divination high"},
 	"1 The Aesthete": {"base": "The Aesthete", "class": "Divination Card", "type": "divination high"},
 	"1 The Avenger": {"base": "The Avenger", "class": "Divination Card", "type": "divination high"},
@@ -86,14 +83,13 @@ items = {
 	"1 The Fletcher": {"base": "The Fletcher", "class": "Divination Card", "type": "divination high"},
 	"1 The Gladiator": {"base": "The Gladiator", "class": "Divination Card", "type": "divination high"},
 	"1 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination high"},
-	"1 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination high"},
-	"1 The Oath": {"base": "The Oath", "class": "Divination Card", "type": "divination high"},
 	"1 The Pack Leader": {"base": "The Pack Leader", "class": "Divination Card", "type": "divination high"},
 	"1 The Pact": {"base": "The Pact", "class": "Divination Card", "type": "divination high"},
 	"1 The Penitent": {"base": "The Penitent", "class": "Divination Card", "type": "divination high"},
+	"1 The Poet": {"base": "The Poet", "class": "Divination Card", "type": "divination high"},
 	"1 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
-	"1 The Scavenger": {"base": "The Scavenger", "class": "Divination Card", "type": "divination high"},
 	"1 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination high"},
+	"1 The Soul": {"base": "The Soul", "class": "Divination Card", "type": "divination high"},
 	"1 The Surveyor": {"base": "The Surveyor", "class": "Divination Card", "type": "divination high"},
 	"1 The Union": {"base": "The Union", "class": "Divination Card", "type": "divination high"},
 	"1 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination high"},
@@ -101,7 +97,6 @@ items = {
 	"1 The Wolf": {"base": "The Wolf", "class": "Divination Card", "type": "divination high"},
 	"1 The Wrath": {"base": "The Wrath", "class": "Divination Card", "type": "divination high"},
 	"1 Tranquillity": {"base": "Tranquillity", "class": "Divination Card", "type": "divination high"},
-	"1 Treasure Hunter": {"base": "Treasure Hunter", "class": "Divination Card", "type": "divination high"},
 	"1 Vinia's Token": {"base": "Vinia's Token", "class": "Divination Card", "type": "divination high"},
 	"2 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "divination low"},
 	"2 The Rabid Rhoa": {"base": "The Rabid Rhoa", "class": "Divination Card", "type": "divination low"},
