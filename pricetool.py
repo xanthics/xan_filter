@@ -187,7 +187,7 @@ def gen_lists(ldb):
 
 	reducer = Code('''function reduce(key, vals) {
 		vals.sort();
-		return vals[Math.floor(vals.length*.5)];
+		return vals[Math.floor(vals.length*.4)];
 	    }
 		''')
 
@@ -273,9 +273,9 @@ def gen_lists(ldb):
 		for c in data[l][6]:
 			if c in predefinedcards:
 				pass
-			elif data[l][6][c] > 6:
+			elif data[l][6][c] > 10:
 				items['high'].append(c)
-			elif data[l][6][c] > 1:
+			elif data[l][6][c] > 1.5:
 				items['normal'].append(c)
 		with open('auto_gen\\{}divination.py'.format(name), 'w', encoding='utf-8') as f:
 			f.write(u'''{}\ndesc = "Divination Card"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), l)))
