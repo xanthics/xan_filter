@@ -25,9 +25,9 @@ Author: Jeremy Parks
 Purpose: Create price lists for uniques and divination cards from ggg api data
          This file creates updated priority lists for uniques and divination cards
 Note: Requires Python 3.4.x
+      Requires a local MongoDB 3.2.x instance
 """
 
-# mongod.exe --dbpath "Z:\poe_filter\database"
 from collections import defaultdict
 
 import requests
@@ -158,14 +158,16 @@ def get_stashes(ldb, start=None):
 										add.append({'type': iii['frameType'], 'league': iii['league'], 'base': iii['typeLine'].replace("Superior ", ""), 'cost': float(price.group(2)), 'unit': unit, 'tabid': ii['id'], 'ids': iii['id'], 'chaosequiv': chaosequiv(float(price.group(2)), unit, iii['league'])})
 
 								else:
-									with open('database/erroritems.txt', 'a', encoding='utf-8') as f:
+									with open('erroritems.txt', 'a', encoding='utf-8') as f:
 										f.write(u"{} *** {}\n".format(note, {'type': iii['frameType'], 'league': iii['league'], 'base': iii['typeLine'], 'tabid': ii['id'], 'ids': iii['id']}))
-		else:
+		elif 'next_change_id' == i:
 			nextchange = data[i]
+		else:
+			raise ValueError("Invalid JSON data returned")
 
 	adddata(nextchange, remove, add, ldb)
 
-	# Stop updating if we get less than 100 new tabs as we don't need the absolute most current data
+	# Stop updating if we get less than 50 new tabs as we don't need the absolute most current data
 	if len(remove) > 50:
 		return nextchange
 	else:
@@ -175,6 +177,8 @@ def get_stashes(ldb, start=None):
 def gen_lists(ldb):
 	league = ldb.items.distinct('league')
 
+	# Notice that this median is an approximation.  Reduce may only occur on a subset of the data at a time
+	# Setup to ignore prices that are less than 3 alt or more than 1000 chaos
 	mapper = Code('''function map() {
 	var key = {base: this.base, league: this.league, type: this.type};
 	if(this.chaosequiv > 0.187 && this.chaosequiv < 1000)
@@ -183,7 +187,7 @@ def gen_lists(ldb):
 
 	reducer = Code('''function reduce(key, vals) {
 		vals.sort();
-		return vals[Math.floor(vals.length*.5)];
+		return vals[Math.floor(vals.length*.4)];
 	    }
 		''')
 
@@ -269,9 +273,9 @@ def gen_lists(ldb):
 		for c in data[l][6]:
 			if c in predefinedcards:
 				pass
-			elif data[l][6][c] > 6:
+			elif data[l][6][c] > 10:
 				items['high'].append(c)
-			elif data[l][6][c] > 1:
+			elif data[l][6][c] > 1.5:
 				items['normal'].append(c)
 		with open('auto_gen\\{}divination.py'.format(name), 'w', encoding='utf-8') as f:
 			f.write(u'''{}\ndesc = "Divination Card"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), l)))
@@ -288,8 +292,13 @@ def gen_lists(ldb):
 
 
 def divuniqueupdate():
+	# Make sure error file exists for invalid tab data
+	from os.path import exists
+	if not exists('erroritems.txt'):
+		open('erroritems.txt', 'w')
+
+	# TODO: error handling for unreachable api(down, too many requests, etc)
 	with MongoClient() as client:
-		#client.drop_database('stashdata')
 		ldb = client.stashdata
 
 		nc = get_stashes(ldb)
