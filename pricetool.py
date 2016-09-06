@@ -29,10 +29,9 @@ Note: Requires Python 3.4.x
 """
 
 from collections import defaultdict
-
 import requests
 from io import open
-from datetime import datetime
+from datetime import datetime, time
 import re
 from pymongo import MongoClient
 from bson import Code
@@ -71,16 +70,16 @@ Note: Requires Python 3.4.x
 def chaosequiv(cost, unit, league):
 	standard = {"exa": 80, "chaos": 1, "fuse": .333, "regal": 1, "alt": 0.1875, "alch": .333, "jew": 0.1, "gcp": 1,
 				"divine": 35, "scour": 0.5, "blessed": 0.5, "vaal": 0.666, "chance": 0.10, "regret": 0.75, "chrom": 0.1875,
-				"mirror": 20000, "chisel": 0.25}
+				"mirror": 20000, "chisel": 0.25, "silver": 0.333}
 	hardcore = {"exa": 40, "chaos": 1, "fuse": .333, "regal": 1, "alt": 0.1875, "alch": .333, "jew": 0.1, "gcp": 1,
 				"divine": 10, "scour": 0.5, "blessed": 0.5, "vaal": 0.666, "chance": 0.10, "regret": 0.75, "chrom": 0.1875,
-				"mirror": 10000, "chisel": 0.25}
+				"mirror": 10000, "chisel": 0.25, "silver": 0.333}
 	challenge = {"exa": 60, "chaos": 1, "fuse": .333, "regal": 1, "alt": 0.1875, "alch": .333, "jew": 0.1, "gcp": 1,
 				"divine": 7, "scour": 0.5, "blessed": 0.5, "vaal": 0.666, "chance": 0.10, "regret": 0.75, "chrom": 0.1875,
-				"mirror": 15000, "chisel": 0.25}
+				"mirror": 15000, "chisel": 0.25, "silver": 0.333}
 	challengehc = {"exa": 30, "chaos": 1, "fuse": .333, "regal": 1, "alt": 0.1875, "alch": .333, "jew": 0.1, "gcp": 1,
 				"divine": 6, "scour": 0.5, "blessed": 0.5, "vaal": 0.666, "chance": 0.10, "regret": 0.75, "chrom": 0.1875,
-				"mirror": 8100, "chisel": 0.25}
+				"mirror": 8100, "chisel": 0.25, "silver": 0.333}
 	if league == 'Standard':
 		return cost * standard[unit]
 	elif league == 'Hardcore':
@@ -147,7 +146,7 @@ def get_stashes(ldb, start=None):
 								note = ii['stash']
 								keys[ii['stash']] = True
 							if note:
-								price = re.search(r'(~b/o|~price) (-?\d*(\.\d+)?) (vaal|jew|chrom|alt|jewel|chance|chisel|cartographer|fuse|fusing|alch|scour|blessed|chaos|regret|regal|gcp|gemcutter|divine|exalted|exa|ex|mirror)', note.lower())
+								price = re.search(r'(~b/o|~price) (-?\d*(\.\d+)?) (silver|vaal|jew|chrom|alt|jewel|chance|chisel|cartographer|fuse|fusing|alch|scour|blessed|chaos|regret|regal|gcp|gemcutter|divine|exalted|exa|ex|mirror)', note.lower())
 								if price and price.group(2):
 									if float(price.group(2)) > 0:
 										unit = price.group(4)
@@ -163,7 +162,7 @@ def get_stashes(ldb, start=None):
 		elif 'next_change_id' == i:
 			nextchange = data[i]
 		else:
-			raise ValueError("Invalid JSON data returned")
+			raise ValueError("Invalid JSON data returned: {}".format(i))
 
 	adddata(nextchange, remove, add, ldb)
 
@@ -277,6 +276,8 @@ def gen_lists(ldb):
 				items['high'].append(c)
 			elif data[l][6][c] > 1.5:
 				items['normal'].append(c)
+			elif data[l][6][c] < 0.25:
+				items['low'].append(c)
 		with open('auto_gen\\{}divination.py'.format(name), 'w', encoding='utf-8') as f:
 			f.write(u'''{}\ndesc = "Divination Card"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), l)))
 			for ii in sorted(items['high']):
@@ -297,18 +298,24 @@ def divuniqueupdate():
 	if not exists('erroritems.txt'):
 		open('erroritems.txt', 'w')
 
-	# TODO: error handling for unreachable api(down, too many requests, etc)
 	with MongoClient() as client:
 		ldb = client.stashdata
 
-		nc = get_stashes(ldb)
-
+		nc = None
 		oldnc = nc
+
 		while True:
-			nc = get_stashes(ldb, nc)
-			if oldnc == nc:
+			try:
+				nc = get_stashes(ldb, nc)
+				if oldnc == nc:
+					break
+				oldnc = nc
+			except ValueError as ve:
+				print("ValueError: {}".format(ve))
 				break
-			oldnc = nc
+			except TypeError as te:
+				print("TypeError: {}".format(te))
+				time.sleep(120)
 
 		gen_lists(ldb)
 
