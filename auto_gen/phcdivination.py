@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/06/2016(m/d/y) 02:34:11 UTC from "Hardcore Essence" data
+# Created: 09/06/2016(m/d/y) 02:46:50 UTC from "Hardcore Essence" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -58,7 +58,6 @@ items = {
 	"0 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination very high"},
 	"0 The Offering": {"base": "The Offering", "class": "Divination Card", "type": "divination very high"},
 	"0 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
-	"0 The Scavenger": {"base": "The Scavenger", "class": "Divination Card", "type": "divination very high"},
 	"0 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination very high"},
 	"0 The Vast": {"base": "The Vast", "class": "Divination Card", "type": "divination very high"},
 	"0 The Void": {"base": "The Void", "class": "Divination Card", "type": "divination very high"},
@@ -90,6 +89,7 @@ items = {
 	"1 The Poet": {"base": "The Poet", "class": "Divination Card", "type": "divination high"},
 	"1 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
 	"1 The Road to Power": {"base": "The Road to Power", "class": "Divination Card", "type": "divination high"},
+	"1 The Scavenger": {"base": "The Scavenger", "class": "Divination Card", "type": "divination high"},
 	"1 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination high"},
 	"1 The Soul": {"base": "The Soul", "class": "Divination Card", "type": "divination high"},
 	"1 The Stormcaller": {"base": "The Stormcaller", "class": "Divination Card", "type": "divination high"},
@@ -99,6 +99,7 @@ items = {
 	"1 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination high"},
 	"1 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination high"},
 	"1 The Wolf": {"base": "The Wolf", "class": "Divination Card", "type": "divination high"},
+	"1 The Wrath": {"base": "The Wrath", "class": "Divination Card", "type": "divination high"},
 	"1 Tranquillity": {"base": "Tranquillity", "class": "Divination Card", "type": "divination high"},
 	"1 Treasure Hunter": {"base": "Treasure Hunter", "class": "Divination Card", "type": "divination high"},
 	"1 Vinia's Token": {"base": "Vinia's Token", "class": "Divination Card", "type": "divination high"},

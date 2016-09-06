@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/06/2016(m/d/y) 02:34:11 UTC from "Essence" data
+# Created: 09/06/2016(m/d/y) 02:46:50 UTC from "Essence" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -40,6 +40,7 @@ items = {
 	"0 Hunter's Reward": {"base": "Hunter's Reward", "class": "Divination Card", "type": "divination very high"},
 	"0 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination very high"},
 	"0 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination very high"},
+	"0 Lysah's Respite": {"base": "Lysah's Respite", "class": "Divination Card", "type": "divination very high"},
 	"0 Merciless Armament": {"base": "Merciless Armament", "class": "Divination Card", "type": "divination very high"},
 	"0 Pride Before the Fall": {"base": "Pride Before the Fall", "class": "Divination Card", "type": "divination very high"},
 	"0 The Artist": {"base": "The Artist", "class": "Divination Card", "type": "divination very high"},
@@ -60,6 +61,7 @@ items = {
 	"0 The King's Heart": {"base": "The King's Heart", "class": "Divination Card", "type": "divination very high"},
 	"0 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination very high"},
 	"0 The Offering": {"base": "The Offering", "class": "Divination Card", "type": "divination very high"},
+	"0 The Penitent": {"base": "The Penitent", "class": "Divination Card", "type": "divination very high"},
 	"0 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
 	"0 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination very high"},
 	"0 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination very high"},
@@ -69,14 +71,12 @@ items = {
 	"0 The Warlord": {"base": "The Warlord", "class": "Divination Card", "type": "divination very high"},
 	"0 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination very high"},
 	"0 Wealth and Power": {"base": "Wealth and Power", "class": "Divination Card", "type": "divination very high"},
-	"1 Anarchy's Price": {"base": "Anarchy's Price", "class": "Divination Card", "type": "divination high"},
 	"1 Blind Venture": {"base": "Blind Venture", "class": "Divination Card", "type": "divination high"},
 	"1 Dialla's Subjugation": {"base": "Dialla's Subjugation", "class": "Divination Card", "type": "divination high"},
 	"1 Earth Drinker": {"base": "Earth Drinker", "class": "Divination Card", "type": "divination high"},
 	"1 Grave Knowledge": {"base": "Grave Knowledge", "class": "Divination Card", "type": "divination high"},
 	"1 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
 	"1 Lost Worlds": {"base": "Lost Worlds", "class": "Divination Card", "type": "divination high"},
-	"1 Lysah's Respite": {"base": "Lysah's Respite", "class": "Divination Card", "type": "divination high"},
 	"1 Rats": {"base": "Rats", "class": "Divination Card", "type": "divination high"},
 	"1 Scholar of the Seas": {"base": "Scholar of the Seas", "class": "Divination Card", "type": "divination high"},
 	"1 The Aesthete": {"base": "The Aesthete", "class": "Divination Card", "type": "divination high"},
@@ -93,7 +93,6 @@ items = {
 	"1 The Jester": {"base": "The Jester", "class": "Divination Card", "type": "divination high"},
 	"1 The Pack Leader": {"base": "The Pack Leader", "class": "Divination Card", "type": "divination high"},
 	"1 The Pact": {"base": "The Pact", "class": "Divination Card", "type": "divination high"},
-	"1 The Penitent": {"base": "The Penitent", "class": "Divination Card", "type": "divination high"},
 	"1 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
 	"1 The Road to Power": {"base": "The Road to Power", "class": "Divination Card", "type": "divination high"},
 	"1 The Scavenger": {"base": "The Scavenger", "class": "Divination Card", "type": "divination high"},

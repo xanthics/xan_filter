@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/06/2016(m/d/y) 02:34:11 UTC from "Hardcore Essence" data
+# Created: 09/06/2016(m/d/y) 02:46:50 UTC from "Hardcore Essence" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -40,21 +40,21 @@ items = {
 	"0 Desert Brigandine": {"base": "Desert Brigandine", "type": "unique very high"},
 	"0 Exquisite Leather": {"base": "Exquisite Leather", "type": "unique very high"},
 	"0 Glorious Plate": {"base": "Glorious Plate", "type": "unique very high"},
+	"0 Granite Flask": {"base": "Granite Flask", "type": "unique very high"},
 	"0 Imperial Skean": {"base": "Imperial Skean", "type": "unique very high"},
 	"0 Jewelled Foil": {"base": "Jewelled Foil", "type": "unique very high"},
 	"0 Occultist's Vestment": {"base": "Occultist's Vestment", "type": "unique very high"},
+	"0 Onyx Amulet": {"base": "Onyx Amulet", "type": "unique very high"},
 	"0 Rawhide Boots": {"base": "Rawhide Boots", "type": "unique very high"},
 	"0 Sapphire Flask": {"base": "Sapphire Flask", "type": "unique very high"},
 	"0 Siege Axe": {"base": "Siege Axe", "type": "unique very high"},
 	"0 Titanium Spirit Shield": {"base": "Titanium Spirit Shield", "type": "unique very high"},
 	"0 Topaz Flask": {"base": "Topaz Flask", "type": "unique very high"},
-	"0 Vaal Regalia": {"base": "Vaal Regalia", "type": "unique very high"},
 	"0 Vaal Sceptre": {"base": "Vaal Sceptre", "type": "unique very high"},
 	"0 Varnished Coat": {"base": "Varnished Coat", "type": "unique very high"},
 	"0 Wereclaw Talisman": {"base": "Wereclaw Talisman", "type": "unique very high"},
 	"1 Amethyst Flask": {"base": "Amethyst Flask", "type": "unique high"},
 	"1 Ancient Gauntlets": {"base": "Ancient Gauntlets", "type": "unique high"},
-	"1 Archon Kite Shield": {"base": "Archon Kite Shield", "type": "unique high"},
 	"1 Atoll Map": {"base": "Atoll Map", "type": "unique high"},
 	"1 Broadhead Arrow Quiver": {"base": "Broadhead Arrow Quiver", "type": "unique high"},
 	"1 Catacombs Map": {"base": "Catacombs Map", "type": "unique high"},
@@ -66,19 +66,16 @@ items = {
 	"1 Fiend Dagger": {"base": "Fiend Dagger", "type": "unique high"},
 	"1 Full Wyrmscale": {"base": "Full Wyrmscale", "type": "unique high"},
 	"1 Golden Plate": {"base": "Golden Plate", "type": "unique high"},
-	"1 Granite Flask": {"base": "Granite Flask", "type": "unique high"},
 	"1 Graveyard Map": {"base": "Graveyard Map", "type": "unique high"},
 	"1 Hubris Circlet": {"base": "Hubris Circlet", "type": "unique high"},
 	"1 Imperial Staff": {"base": "Imperial Staff", "type": "unique high"},
+	"1 Iron Ring": {"base": "Iron Ring", "type": "unique high"},
 	"1 Judgement Staff": {"base": "Judgement Staff", "type": "unique high"},
-	"1 Karui Chopper": {"base": "Karui Chopper", "type": "unique high"},
 	"1 Karui Maul": {"base": "Karui Maul", "type": "unique high"},
 	"1 Karui Sceptre": {"base": "Karui Sceptre", "type": "unique high"},
-	"1 Laminated Kite Shield": {"base": "Laminated Kite Shield", "type": "unique high"},
 	"1 Nightmare Bascinet": {"base": "Nightmare Bascinet", "type": "unique high"},
 	"1 Penetrating Arrow Quiver": {"base": "Penetrating Arrow Quiver", "type": "unique high"},
 	"1 Promenade Map": {"base": "Promenade Map", "type": "unique high"},
-	"1 Reinforced Greaves": {"base": "Reinforced Greaves", "type": "unique high"},
 	"1 Sharkskin Boots": {"base": "Sharkskin Boots", "type": "unique high"},
 	"1 Silver Flask": {"base": "Silver Flask", "type": "unique high"},
 	"1 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique high"},
@@ -95,5 +92,6 @@ items = {
 	"1 Ursine Pelt": {"base": "Ursine Pelt", "type": "unique high"},
 	"1 Vaal Axe": {"base": "Vaal Axe", "type": "unique high"},
 	"1 Vaal Pyramid Map": {"base": "Vaal Pyramid Map", "type": "unique high"},
+	"1 Vaal Regalia": {"base": "Vaal Regalia", "type": "unique high"},
 	"9 Other uniques": {"type": "unique normal"}
 }
