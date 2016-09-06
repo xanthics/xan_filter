@@ -205,5 +205,5 @@ def main():
 
 if __name__ == "__main__":
 	# Price updates can take some time.  Uncomment to get most current data before updating filter
-	pricetool.divuniqueupdate()
+	#pricetool.divuniqueupdate()
 	main()
