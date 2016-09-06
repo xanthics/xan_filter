@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/06/2016(m/d/y) 02:46:50 UTC from "Essence" data
+# Created: 09/06/2016(m/d/y) 22:19:06 UTC from "Essence" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -39,8 +39,6 @@ items = {
 	"0 House of Mirrors": {"base": "House of Mirrors", "class": "Divination Card", "type": "divination very high"},
 	"0 Hunter's Reward": {"base": "Hunter's Reward", "class": "Divination Card", "type": "divination very high"},
 	"0 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination very high"},
-	"0 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination very high"},
-	"0 Lysah's Respite": {"base": "Lysah's Respite", "class": "Divination Card", "type": "divination very high"},
 	"0 Merciless Armament": {"base": "Merciless Armament", "class": "Divination Card", "type": "divination very high"},
 	"0 Pride Before the Fall": {"base": "Pride Before the Fall", "class": "Divination Card", "type": "divination very high"},
 	"0 The Artist": {"base": "The Artist", "class": "Divination Card", "type": "divination very high"},
@@ -63,7 +61,6 @@ items = {
 	"0 The Offering": {"base": "The Offering", "class": "Divination Card", "type": "divination very high"},
 	"0 The Penitent": {"base": "The Penitent", "class": "Divination Card", "type": "divination very high"},
 	"0 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
-	"0 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination very high"},
 	"0 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination very high"},
 	"0 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination very high"},
 	"0 The Vast": {"base": "The Vast", "class": "Divination Card", "type": "divination very high"},
@@ -77,6 +74,8 @@ items = {
 	"1 Grave Knowledge": {"base": "Grave Knowledge", "class": "Divination Card", "type": "divination high"},
 	"1 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
 	"1 Lost Worlds": {"base": "Lost Worlds", "class": "Divination Card", "type": "divination high"},
+	"1 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination high"},
+	"1 Lysah's Respite": {"base": "Lysah's Respite", "class": "Divination Card", "type": "divination high"},
 	"1 Rats": {"base": "Rats", "class": "Divination Card", "type": "divination high"},
 	"1 Scholar of the Seas": {"base": "Scholar of the Seas", "class": "Divination Card", "type": "divination high"},
 	"1 The Aesthete": {"base": "The Aesthete", "class": "Divination Card", "type": "divination high"},
@@ -90,16 +89,19 @@ items = {
 	"1 The Fox": {"base": "The Fox", "class": "Divination Card", "type": "divination high"},
 	"1 The Gladiator": {"base": "The Gladiator", "class": "Divination Card", "type": "divination high"},
 	"1 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination high"},
+	"1 The Inventor": {"base": "The Inventor", "class": "Divination Card", "type": "divination high"},
 	"1 The Jester": {"base": "The Jester", "class": "Divination Card", "type": "divination high"},
 	"1 The Pack Leader": {"base": "The Pack Leader", "class": "Divination Card", "type": "divination high"},
 	"1 The Pact": {"base": "The Pact", "class": "Divination Card", "type": "divination high"},
 	"1 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
 	"1 The Road to Power": {"base": "The Road to Power", "class": "Divination Card", "type": "divination high"},
 	"1 The Scavenger": {"base": "The Scavenger", "class": "Divination Card", "type": "divination high"},
+	"1 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination high"},
 	"1 The Soul": {"base": "The Soul", "class": "Divination Card", "type": "divination high"},
 	"1 The Stormcaller": {"base": "The Stormcaller", "class": "Divination Card", "type": "divination high"},
 	"1 The Surveyor": {"base": "The Surveyor", "class": "Divination Card", "type": "divination high"},
 	"1 The Trial": {"base": "The Trial", "class": "Divination Card", "type": "divination high"},
+	"1 The Union": {"base": "The Union", "class": "Divination Card", "type": "divination high"},
 	"1 The Watcher": {"base": "The Watcher", "class": "Divination Card", "type": "divination high"},
 	"1 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination high"},
 	"1 The Wolf": {"base": "The Wolf", "class": "Divination Card", "type": "divination high"},
