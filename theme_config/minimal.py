@@ -164,8 +164,7 @@ settings = {
 						"SetFontSize {}".format(size['large']),
 						"PlayAlertSound 5 25", 
 						"SetBackgroundColor {} 220".format(color['black'])],
-	"currency low": ["SetBorderColor {}".format(color['currency']), 
-					 "SetFontSize {}".format(size['normal']),
+	"currency low": ["SetFontSize {}".format(size['normal']),
 					 "SetBackgroundColor {} 220".format(color['black'])],
 
 	"divination very high": ["SetBorderColor {}".format(color['divinationnew']),
@@ -178,8 +177,7 @@ settings = {
 	"divination normal": ["SetBorderColor {}".format(color['divinationnew']),
 					   "PlayAlertSound 6 25",
 					   "SetBackgroundColor {} 220".format(color['black'])],
-	"divination low": ["SetBorderColor {}".format(color['divinationnew']),
-					   "SetBackgroundColor {} 220".format(color['black'])],
+	"divination low": ["SetBackgroundColor {} 220".format(color['black'])],
 
 	"gem very high": ["SetBorderColor {}".format(color['gem']),
 					  "SetFontSize {}".format(size['large']),

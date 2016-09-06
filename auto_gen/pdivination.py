@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/06/2016(m/d/y) 22:19:06 UTC from "Essence" data
+# Created: 09/06/2016(m/d/y) 23:05:33 UTC from "Essence" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -89,6 +89,7 @@ items = {
 	"1 The Fox": {"base": "The Fox", "class": "Divination Card", "type": "divination high"},
 	"1 The Gladiator": {"base": "The Gladiator", "class": "Divination Card", "type": "divination high"},
 	"1 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination high"},
+	"1 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination high"},
 	"1 The Inventor": {"base": "The Inventor", "class": "Divination Card", "type": "divination high"},
 	"1 The Jester": {"base": "The Jester", "class": "Divination Card", "type": "divination high"},
 	"1 The Pack Leader": {"base": "The Pack Leader", "class": "Divination Card", "type": "divination high"},
@@ -109,11 +110,29 @@ items = {
 	"1 Tranquillity": {"base": "Tranquillity", "class": "Divination Card", "type": "divination high"},
 	"1 Treasure Hunter": {"base": "Treasure Hunter", "class": "Divination Card", "type": "divination high"},
 	"1 Vinia's Token": {"base": "Vinia's Token", "class": "Divination Card", "type": "divination high"},
+	"2 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "divination low"},
+	"2 Birth of the Three": {"base": "Birth of the Three", "class": "Divination Card", "type": "divination low"},
 	"2 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "divination low"},
+	"2 Doedre's Madness": {"base": "Doedre's Madness", "class": "Divination Card", "type": "divination low"},
+	"2 Dying Anguish": {"base": "Dying Anguish", "class": "Divination Card", "type": "divination low"},
+	"2 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination low"},
+	"2 Her Mask": {"base": "Her Mask", "class": "Divination Card", "type": "divination low"},
+	"2 Lantador's Lost Love": {"base": "Lantador's Lost Love", "class": "Divination Card", "type": "divination low"},
+	"2 Loyalty": {"base": "Loyalty", "class": "Divination Card", "type": "divination low"},
+	"2 Rain of Chaos": {"base": "Rain of Chaos", "class": "Divination Card", "type": "divination low"},
+	"2 The Catalyst": {"base": "The Catalyst", "class": "Divination Card", "type": "divination low"},
+	"2 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
+	"2 The Feast": {"base": "The Feast", "class": "Divination Card", "type": "divination low"},
+	"2 The Hermit": {"base": "The Hermit", "class": "Divination Card", "type": "divination low"},
+	"2 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination low"},
+	"2 The Metalsmith's Gift": {"base": "The Metalsmith's Gift", "class": "Divination Card", "type": "divination low"},
 	"2 The Rabid Rhoa": {"base": "The Rabid Rhoa", "class": "Divination Card", "type": "divination low"},
 	"2 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},
 	"2 The Surgeon": {"base": "The Surgeon", "class": "Divination Card", "type": "divination low"},
+	"2 The Throne": {"base": "The Throne", "class": "Divination Card", "type": "divination low"},
 	"2 The Twins": {"base": "The Twins", "class": "Divination Card", "type": "divination low"},
+	"2 The Warden": {"base": "The Warden", "class": "Divination Card", "type": "divination low"},
+	"2 The Web": {"base": "The Web", "class": "Divination Card", "type": "divination low"},
 	"2 Thunderous Skies": {"base": "Thunderous Skies", "class": "Divination Card", "type": "divination low"},
 	"7 The Carrion Crow": {"base": "The Carrion Crow", "class": "Divination Card", "type": "hide"},
 	"7 The Inoculated": {"base": "The Inoculated", "class": "Divination Card", "type": "hide"},

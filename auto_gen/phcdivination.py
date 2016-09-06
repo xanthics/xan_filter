@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/06/2016(m/d/y) 22:19:06 UTC from "Hardcore Essence" data
+# Created: 09/06/2016(m/d/y) 23:05:33 UTC from "Hardcore Essence" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -65,7 +65,6 @@ items = {
 	"0 The Warlord": {"base": "The Warlord", "class": "Divination Card", "type": "divination very high"},
 	"0 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination very high"},
 	"0 Wealth and Power": {"base": "Wealth and Power", "class": "Divination Card", "type": "divination very high"},
-	"1 Assassin's Favour": {"base": "Assassin's Favour", "class": "Divination Card", "type": "divination high"},
 	"1 Dialla's Subjugation": {"base": "Dialla's Subjugation", "class": "Divination Card", "type": "divination high"},
 	"1 Earth Drinker": {"base": "Earth Drinker", "class": "Divination Card", "type": "divination high"},
 	"1 Grave Knowledge": {"base": "Grave Knowledge", "class": "Divination Card", "type": "divination high"},
@@ -96,7 +95,6 @@ items = {
 	"1 The Soul": {"base": "The Soul", "class": "Divination Card", "type": "divination high"},
 	"1 The Surveyor": {"base": "The Surveyor", "class": "Divination Card", "type": "divination high"},
 	"1 The Trial": {"base": "The Trial", "class": "Divination Card", "type": "divination high"},
-	"1 The Union": {"base": "The Union", "class": "Divination Card", "type": "divination high"},
 	"1 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination high"},
 	"1 The Void": {"base": "The Void", "class": "Divination Card", "type": "divination high"},
 	"1 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination high"},
@@ -104,11 +102,21 @@ items = {
 	"1 Tranquillity": {"base": "Tranquillity", "class": "Divination Card", "type": "divination high"},
 	"1 Treasure Hunter": {"base": "Treasure Hunter", "class": "Divination Card", "type": "divination high"},
 	"1 Vinia's Token": {"base": "Vinia's Token", "class": "Divination Card", "type": "divination high"},
+	"2 Boundless Realms": {"base": "Boundless Realms", "class": "Divination Card", "type": "divination low"},
 	"2 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "divination low"},
+	"2 Lantador's Lost Love": {"base": "Lantador's Lost Love", "class": "Divination Card", "type": "divination low"},
+	"2 The Cartographer": {"base": "The Cartographer", "class": "Divination Card", "type": "divination low"},
+	"2 The Catalyst": {"base": "The Catalyst", "class": "Divination Card", "type": "divination low"},
+	"2 The Gambler": {"base": "The Gambler", "class": "Divination Card", "type": "divination low"},
+	"2 The Gemcutter": {"base": "The Gemcutter", "class": "Divination Card", "type": "divination low"},
+	"2 The Hermit": {"base": "The Hermit", "class": "Divination Card", "type": "divination low"},
+	"2 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination low"},
+	"2 The Lion": {"base": "The Lion", "class": "Divination Card", "type": "divination low"},
 	"2 The Rabid Rhoa": {"base": "The Rabid Rhoa", "class": "Divination Card", "type": "divination low"},
 	"2 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},
 	"2 The Surgeon": {"base": "The Surgeon", "class": "Divination Card", "type": "divination low"},
 	"2 The Twins": {"base": "The Twins", "class": "Divination Card", "type": "divination low"},
+	"2 The Warden": {"base": "The Warden", "class": "Divination Card", "type": "divination low"},
 	"2 Thunderous Skies": {"base": "Thunderous Skies", "class": "Divination Card", "type": "divination low"},
 	"7 The Carrion Crow": {"base": "The Carrion Crow", "class": "Divination Card", "type": "hide"},
 	"7 The Inoculated": {"base": "The Inoculated", "class": "Divination Card", "type": "hide"},
