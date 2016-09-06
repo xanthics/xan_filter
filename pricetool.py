@@ -29,10 +29,9 @@ Note: Requires Python 3.4.x
 """
 
 from collections import defaultdict
-
 import requests
 from io import open
-from datetime import datetime
+from datetime import datetime, time
 import re
 from pymongo import MongoClient
 from bson import Code
@@ -163,7 +162,7 @@ def get_stashes(ldb, start=None):
 		elif 'next_change_id' == i:
 			nextchange = data[i]
 		else:
-			raise ValueError("Invalid JSON data returned")
+			raise ValueError("Invalid JSON data returned: {}".format(i))
 
 	adddata(nextchange, remove, add, ldb)
 
@@ -277,6 +276,8 @@ def gen_lists(ldb):
 				items['high'].append(c)
 			elif data[l][6][c] > 1.5:
 				items['normal'].append(c)
+			elif data[l][6][c] < 0.25:
+				items['low'].append(c)
 		with open('auto_gen\\{}divination.py'.format(name), 'w', encoding='utf-8') as f:
 			f.write(u'''{}\ndesc = "Divination Card"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), l)))
 			for ii in sorted(items['high']):
@@ -297,18 +298,24 @@ def divuniqueupdate():
 	if not exists('erroritems.txt'):
 		open('erroritems.txt', 'w')
 
-	# TODO: error handling for unreachable api(down, too many requests, etc)
 	with MongoClient() as client:
 		ldb = client.stashdata
 
-		nc = get_stashes(ldb)
-
+		nc = None
 		oldnc = nc
+
 		while True:
-			nc = get_stashes(ldb, nc)
-			if oldnc == nc:
+			try:
+				nc = get_stashes(ldb, nc)
+				if oldnc == nc:
+					break
+				oldnc = nc
+			except ValueError as ve:
+				print("ValueError: {}".format(ve))
 				break
-			oldnc = nc
+			except TypeError as te:
+				print("TypeError: {}".format(te))
+				time.sleep(120)
 
 		gen_lists(ldb)
 
