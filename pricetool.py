@@ -278,7 +278,7 @@ def gen_lists(ldb):
 				items['high'].append(c)
 			elif data[l][6][c] > 1.5:
 				items['normal'].append(c)
-			elif data[l][6][c] < 0.25:
+			elif data[l][6][c] < 0.5:
 				items['low'].append(c)
 		with open('auto_gen\\{}divination.py'.format(name), 'w', encoding='utf-8') as f:
 			f.write(u'''{}\ndesc = "Divination Card"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), l)))
