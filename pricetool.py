@@ -148,7 +148,7 @@ def get_stashes(ldb, start=None):
 							if note:
 								price = re.search(r'(~b/o|~price) (-?\d*(\.\d+)?) (silver|vaal|jew|chrom|alt|jewel|chance|chisel|cartographer|fuse|fusing|alch|scour|blessed|chaos|regret|regal|gcp|gemcutter|divine|exalted|exa|ex|mirror)', note.lower())
 								if price and price.group(2):
-									if float(price.group(2)) > 0:
+									if float(price.group(2)) >= 0:
 										unit = price.group(4)
 										if unit in ['exalted', 'ex']:
 											unit = 'exa'
@@ -180,7 +180,9 @@ def gen_lists(ldb):
 	# Setup to ignore prices that are less than 3 alt or more than 1000 chaos
 	mapper = Code('''function map() {
 	var key = {base: this.base, league: this.league, type: this.type};
-	if(this.chaosequiv > 0.187 && this.chaosequiv < 1000)
+	if(this.chaosequiv > 0.187 && this.chaosequiv < 3000 && this.type == 3)
+		emit(key, this.chaosequiv);
+	if(this.chaosequiv > 0.187 && this.chaosequiv < 1000 && this.type == 6)
 		emit(key, this.chaosequiv);
 	}''')
 
