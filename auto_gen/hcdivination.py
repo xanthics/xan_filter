@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/06/2016(m/d/y) 22:19:06 UTC from "Hardcore" data
+# Created: 09/06/2016(m/d/y) 23:05:33 UTC from "Hardcore" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -93,6 +93,7 @@ items = {
 	"1 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination high"},
 	"1 Volatile Power": {"base": "Volatile Power", "class": "Divination Card", "type": "divination high"},
 	"2 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "divination low"},
+	"2 Prosperity": {"base": "Prosperity", "class": "Divination Card", "type": "divination low"},
 	"2 The Rabid Rhoa": {"base": "The Rabid Rhoa", "class": "Divination Card", "type": "divination low"},
 	"2 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},
 	"2 The Surgeon": {"base": "The Surgeon", "class": "Divination Card", "type": "divination low"},
