@@ -28,11 +28,11 @@ See item_config.template.py and theme_config.minimal.py
 
 Hide all
 ========
-![Hide unspecified items](https://i.imgur.com/4787erv.jpg "Hide")
+![Hide unspecified items](https://i.imgur.com/7Y8tzsz.jpg "Hide")
 
 Show all
 ========
-![Show all items](https://i.imgur.com/AeFb9UM.jpg "Show")
+![Show all items](https://i.imgur.com/HP8IT0p.jpg "Show")
 
 Thanks
 ======
