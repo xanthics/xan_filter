@@ -187,13 +187,19 @@ def gen_lists(ldb):
 			},
 			'value': {'$push': '$chaosequiv'}
 		}},
-	])
+		{'$unwind': '$value'},
+		{'$sort': {'value': 1}},
+		{'$group': {'_id': '$_id', 'value': {'$push': '$value'}}},
+		{'$project': {
+			'_id': 1,
+			'value': {'$arrayElemAt': ['$value', {'$floor': {'$multiply': [0.25, {'$size': '$value'}]}}]}
+		}}
+	], allowDiskUse=True)
 
 	data = {league[0]: defaultdict(dict), league[1]: defaultdict(dict), league[2]: defaultdict(dict), league[3]: defaultdict(dict)}
 
 	for i in res:
-		p = sorted(i['value'])
-		data[i['_id']['league']][i['_id']['type']][i['_id']['base']] = p[math.floor(len(p)*0.25)]
+		data[i['_id']['league']][i['_id']['type']][i['_id']['base']] = i['value']
 
 	verygoodcard = ["Abandoned Wealth",  # 3x Exalted Orbs
 					"Bowyer's Dream",  # 6l ilvl 91 Harbinger
