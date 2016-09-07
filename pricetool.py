@@ -29,6 +29,8 @@ Note: Requires Python 3.4.x
 """
 
 from collections import defaultdict
+
+import math
 import requests
 from io import open
 from datetime import datetime, time
@@ -176,28 +178,22 @@ def get_stashes(ldb, start=None):
 def gen_lists(ldb):
 	league = ldb.items.distinct('league')
 
-	# Notice that this median is an approximation.  Reduce may only occur on a subset of the data at a time
-	# Setup to ignore prices that are less than 3 alt or more than 1000 chaos
-	mapper = Code('''function map() {
-	var key = {base: this.base, league: this.league, type: this.type};
-	if(this.chaosequiv > 0.187 && this.chaosequiv < 3000 && this.type == 3)
-		emit(key, this.chaosequiv);
-	if(this.chaosequiv > 0.187 && this.chaosequiv < 1000 && this.type == 6)
-		emit(key, this.chaosequiv);
-	}''')
-
-	reducer = Code('''function reduce(key, vals) {
-		vals.sort();
-		return vals[Math.floor(vals.length*.4)];
-	    }
-		''')
-
-	res = ldb.items.map_reduce(mapper, reducer, 'myresults')
+	res = ldb.items.aggregate([
+		{'$group': {
+			'_id': {
+				'league': '$league',
+				'base': '$base',
+				'type': '$type'
+			},
+			'value': {'$push': '$chaosequiv'}
+		}},
+	])
 
 	data = {league[0]: defaultdict(dict), league[1]: defaultdict(dict), league[2]: defaultdict(dict), league[3]: defaultdict(dict)}
 
-	for i in res.find():
-		data[i['_id']['league']][i['_id']['type']][i['_id']['base']] = i['value']
+	for i in res:
+		p = sorted(i['value'])
+		data[i['_id']['league']][i['_id']['type']][i['_id']['base']] = p[math.floor(len(p)*0.25)]
 
 	verygoodcard = ["Abandoned Wealth",  # 3x Exalted Orbs
 					"Bowyer's Dream",  # 6l ilvl 91 Harbinger
