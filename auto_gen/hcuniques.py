@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/07/2016(m/d/y) 00:26:31 UTC from "Hardcore" data
+# Created: 09/10/2016(m/d/y) 08:58:35 UTC from "Hardcore" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -63,7 +63,7 @@ items = {
 	"0 Legion Gloves": {"base": "Legion Gloves", "type": "unique very high"},
 	"0 Midnight Blade": {"base": "Midnight Blade", "type": "unique very high"},
 	"0 Mind Cage": {"base": "Mind Cage", "type": "unique very high"},
-	"0 Penetrating Arrow Quiver": {"base": "Penetrating Arrow Quiver", "type": "unique very high"},
+	"0 Occultist's Vestment": {"base": "Occultist's Vestment", "type": "unique very high"},
 	"0 Prismatic Jewel": {"base": "Prismatic Jewel", "type": "unique very high"},
 	"0 Prophecy Wand": {"base": "Prophecy Wand", "type": "unique very high"},
 	"0 Rawhide Boots": {"base": "Rawhide Boots", "type": "unique very high"},
@@ -72,6 +72,7 @@ items = {
 	"0 Royal Axe": {"base": "Royal Axe", "type": "unique very high"},
 	"0 Ruby Amulet": {"base": "Ruby Amulet", "type": "unique very high"},
 	"0 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "unique very high"},
+	"0 Sanctified Mana Flask": {"base": "Sanctified Mana Flask", "type": "unique very high"},
 	"0 Sapphire Flask": {"base": "Sapphire Flask", "type": "unique very high"},
 	"0 Siege Axe": {"base": "Siege Axe", "type": "unique very high"},
 	"0 Silver Flask": {"base": "Silver Flask", "type": "unique very high"},
@@ -79,6 +80,7 @@ items = {
 	"0 Sorcerer Boots": {"base": "Sorcerer Boots", "type": "unique very high"},
 	"0 Spine Bow": {"base": "Spine Bow", "type": "unique very high"},
 	"0 Steelhead": {"base": "Steelhead", "type": "unique very high"},
+	"0 Titanium Spirit Shield": {"base": "Titanium Spirit Shield", "type": "unique very high"},
 	"0 Topaz Flask": {"base": "Topaz Flask", "type": "unique very high"},
 	"0 Trapper Boots": {"base": "Trapper Boots", "type": "unique very high"},
 	"0 Vaal Mask": {"base": "Vaal Mask", "type": "unique very high"},
@@ -111,13 +113,12 @@ items = {
 	"1 Mosaic Kite Shield": {"base": "Mosaic Kite Shield", "type": "unique high"},
 	"1 Necromancer Silks": {"base": "Necromancer Silks", "type": "unique high"},
 	"1 Nightmare Bascinet": {"base": "Nightmare Bascinet", "type": "unique high"},
-	"1 Occultist's Vestment": {"base": "Occultist's Vestment", "type": "unique high"},
 	"1 Opal Wand": {"base": "Opal Wand", "type": "unique high"},
+	"1 Penetrating Arrow Quiver": {"base": "Penetrating Arrow Quiver", "type": "unique high"},
 	"1 Ranger Bow": {"base": "Ranger Bow", "type": "unique high"},
 	"1 Ruby Flask": {"base": "Ruby Flask", "type": "unique high"},
 	"1 Saintly Chainmail": {"base": "Saintly Chainmail", "type": "unique high"},
 	"1 Sanctified Life Flask": {"base": "Sanctified Life Flask", "type": "unique high"},
-	"1 Sanctified Mana Flask": {"base": "Sanctified Mana Flask", "type": "unique high"},
 	"1 Savant's Robe": {"base": "Savant's Robe", "type": "unique high"},
 	"1 Serpentine Staff": {"base": "Serpentine Staff", "type": "unique high"},
 	"1 Serpentscale Boots": {"base": "Serpentscale Boots", "type": "unique high"},
@@ -126,7 +127,6 @@ items = {
 	"1 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique high"},
 	"1 Slink Boots": {"base": "Slink Boots", "type": "unique high"},
 	"1 Terror Maul": {"base": "Terror Maul", "type": "unique high"},
-	"1 Titanium Spirit Shield": {"base": "Titanium Spirit Shield", "type": "unique high"},
 	"1 Two-Stone Ring": {"base": "Two-Stone Ring", "type": "unique high"},
 	"1 Ursine Pelt": {"base": "Ursine Pelt", "type": "unique high"},
 	"1 Vaal Axe": {"base": "Vaal Axe", "type": "unique high"},
