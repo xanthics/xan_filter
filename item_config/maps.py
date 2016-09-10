@@ -145,7 +145,7 @@ items = {
 	"1 Courtyard Map": {"base": "Courtyard Map", "class": "Maps", "other": ["ItemLevel <= 77"], "type": "map yellow good"},
 	"1 Malformation Map": {"base": "Malformation Map", "class": "Maps", "other": ["ItemLevel <= 77"], "type": "map yellow good"},
 	"1 Quay Map": {"base": "Quay Map", "class": "Maps", "other": ["ItemLevel <= 77"], "type": "map yellow good"},
-	"1 Terrace Map": {"base": "Terrace Map", "class": "Maps", "other": ["ItemLevel <= 77"], "type": "map yellow good"},i
+	"1 Terrace Map": {"base": "Terrace Map", "class": "Maps", "other": ["ItemLevel <= 77"], "type": "map yellow good"},
 	"1 Underground River Map": {"base": "Underground River Map", "class": "Maps", "other": ["ItemLevel <= 77"], "type": "map yellow good"},
 
 	#  Tier 11
