@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/07/2016(m/d/y) 00:26:31 UTC from "Standard" data
+# Created: 09/10/2016(m/d/y) 08:58:36 UTC from "Standard" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -61,10 +61,9 @@ items = {
 	"0 Jewelled Foil": {"base": "Jewelled Foil", "type": "unique very high"},
 	"0 Legion Gloves": {"base": "Legion Gloves", "type": "unique very high"},
 	"0 Lion Pelt": {"base": "Lion Pelt", "type": "unique very high"},
-	"0 Meatgrinder": {"base": "Meatgrinder", "type": "unique very high"},
 	"0 Midnight Blade": {"base": "Midnight Blade", "type": "unique very high"},
 	"0 Murder Boots": {"base": "Murder Boots", "type": "unique very high"},
-	"0 Occultist's Vestment": {"base": "Occultist's Vestment", "type": "unique very high"},
+	"0 Museum Map": {"base": "Museum Map", "type": "unique very high"},
 	"0 Prismatic Jewel": {"base": "Prismatic Jewel", "type": "unique very high"},
 	"0 Prophecy Wand": {"base": "Prophecy Wand", "type": "unique very high"},
 	"0 Rawhide Boots": {"base": "Rawhide Boots", "type": "unique very high"},
@@ -119,8 +118,10 @@ items = {
 	"1 Judgement Staff": {"base": "Judgement Staff", "type": "unique high"},
 	"1 Karui Sceptre": {"base": "Karui Sceptre", "type": "unique high"},
 	"1 Large Hybrid Flask": {"base": "Large Hybrid Flask", "type": "unique high"},
+	"1 Meatgrinder": {"base": "Meatgrinder", "type": "unique high"},
 	"1 Nightmare Bascinet": {"base": "Nightmare Bascinet", "type": "unique high"},
 	"1 Nubuck Boots": {"base": "Nubuck Boots", "type": "unique high"},
+	"1 Occultist's Vestment": {"base": "Occultist's Vestment", "type": "unique high"},
 	"1 Painted Tower Shield": {"base": "Painted Tower Shield", "type": "unique high"},
 	"1 Paua Ring": {"base": "Paua Ring", "type": "unique high"},
 	"1 Penetrating Arrow Quiver": {"base": "Penetrating Arrow Quiver", "type": "unique high"},
