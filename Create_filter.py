@@ -155,7 +155,7 @@ def main():
 		buffer += gen_list(currency)  # Currency
 		buffer += gen_list(gems)  # Gems
 		buffer += gen_list(i[2])  # uniques
-		# buffer += gen_list(recipe_item)  # Items for vendor recipe
+		buffer += gen_list(recipe_item)  # Items for vendor recipe
 		buffer += gen_list(maps)  # maps
 		buffer += gen_list(i[3])  # divination cards
 		buffer += gen_list(flask)  # Flasks
