@@ -75,7 +75,7 @@ items = {
 	"0 Essence of Delirium": {"base": "Essence of Delirium", "class": "Currency", "type": "challenge normal"},
 	"0 Essence of Horror": {"base": "Essence of Horror", "class": "Currency", "type": "challenge normal"},
 	"0 Essence of Hysteria": {"base": "Essence of Hysteria", "class": "Currency", "type": "challenge normal"},
-	"0 Essence of Insanity": {"base of Insanity": "Essence", "class": "Currency", "type": "challenge normal"},
+	"0 Essence of Insanity": {"base": "Essence of Insanity", "class": "Currency", "type": "challenge normal"},
 	"0 Prophecy": {"base": "Prophecy", "class": "Currency", "type": "currency high"},
 	"7 Scroll Fragment": {"base": "Scroll Fragment", "class": "Currency", "type": "hide"},
 	"9 Currency": {"class": "Currency", "type": "currency normal"}
