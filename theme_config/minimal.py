@@ -206,7 +206,7 @@ settings = {
 				"PlayAlertSound 8 125",
 				"SetBackgroundColor {} 220".format(color['black'])],
 	"map yellow": ["SetBorderColor {} 150".format(color['lightning']),
-				   "PlayAlertSound 8 75",
+#45				   "PlayAlertSound 8 75",
 				   "SetFontSize {}".format(size['large']),
 				   "SetBackgroundColor {} 220".format(color['black'])],
 	"map white": ["SetBorderColor {} 150".format(color['normal']),
