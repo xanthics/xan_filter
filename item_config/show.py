@@ -55,4 +55,12 @@ items = {
 	"02 60+ ring": {"class": "Rings", "other": ["Rarity Rare", "ItemLevel >= 60"], "type": "ignore"},
 	"02 60+ belt": {"class": "Belts", "other": ["Rarity Rare", "ItemLevel >= 60"], "type": "ignore"},
 
+#    "0 Trisula": {"base": "Trisula", "class": "Dagger", "type": "show high"},
+#    "0 Prong Dagger": {"base": "Prong Dagger", "class": "Dagger", "type": "show high"},
+#    "0 Sai": {"base": "Sai", "class": "Dagger", "type": "show high"},
+    "0 Kris": {"base": "Kris", "class": "Dagger", "other": ["ItemLevel >= 83"], "type": "t1 ilvl83/84 crafting"},
+    "0 Imp": {"base": "Imp", "class": "Dagger", "other": ["ItemLevel >= 83"], "type": "t1 ilvl83/84 crafting"},
+    "0 Fiend": {"base": "Fiend", "class": "Dagger", "other": ["ItemLevel >= 83"], "type": "t1 ilvl83/84 crafting"},
+    "0 Demon": {"base": "Demon", "class": "Dagger", "other": ["ItemLevel >= 83"], "type": "t1 ilvl83/84 crafting"},
+
 }

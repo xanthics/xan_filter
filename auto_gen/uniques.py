@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/10/2016(m/d/y) 08:58:36 UTC from "Standard" data
+# Created: 09/12/2016(m/d/y) 17:45:25 UTC from "Standard" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -42,7 +42,6 @@ items = {
 	"0 Crusader Boots": {"base": "Crusader Boots", "type": "unique very high"},
 	"0 Deicide Mask": {"base": "Deicide Mask", "type": "unique very high"},
 	"0 Exquisite Leather": {"base": "Exquisite Leather", "type": "unique very high"},
-	"0 Fiend Dagger": {"base": "Fiend Dagger", "type": "unique very high"},
 	"0 Fishing Rod": {"base": "Fishing Rod", "type": "unique very high"},
 	"0 Gladiator Plate": {"base": "Gladiator Plate", "type": "unique very high"},
 	"0 Glorious Plate": {"base": "Glorious Plate", "type": "unique very high"},
@@ -85,7 +84,6 @@ items = {
 	"0 Ursine Pelt": {"base": "Ursine Pelt", "type": "unique very high"},
 	"0 Vaal Regalia": {"base": "Vaal Regalia", "type": "unique very high"},
 	"0 Wereclaw Talisman": {"base": "Wereclaw Talisman", "type": "unique very high"},
-	"0 Zealot Helmet": {"base": "Zealot Helmet", "type": "unique very high"},
 	"1 Amethyst Ring": {"base": "Amethyst Ring", "type": "unique high"},
 	"1 Ancient Gauntlets": {"base": "Ancient Gauntlets", "type": "unique high"},
 	"1 Ancient Greaves": {"base": "Ancient Greaves", "type": "unique high"},
@@ -102,10 +100,10 @@ items = {
 	"1 Desert Brigandine": {"base": "Desert Brigandine", "type": "unique high"},
 	"1 Despot Axe": {"base": "Despot Axe", "type": "unique high"},
 	"1 Diamond Ring": {"base": "Diamond Ring", "type": "unique high"},
-	"1 Engraved Wand": {"base": "Engraved Wand", "type": "unique high"},
 	"1 Etched Greatsword": {"base": "Etched Greatsword", "type": "unique high"},
 	"1 Eternal Sword": {"base": "Eternal Sword", "type": "unique high"},
 	"1 Ezomyte Burgonet": {"base": "Ezomyte Burgonet", "type": "unique high"},
+	"1 Fiend Dagger": {"base": "Fiend Dagger", "type": "unique high"},
 	"1 Full Wyrmscale": {"base": "Full Wyrmscale", "type": "unique high"},
 	"1 Gold Ring": {"base": "Gold Ring", "type": "unique high"},
 	"1 Golden Plate": {"base": "Golden Plate", "type": "unique high"},
@@ -144,5 +142,6 @@ items = {
 	"1 Vaal Pyramid Map": {"base": "Vaal Pyramid Map", "type": "unique high"},
 	"1 Vaal Sceptre": {"base": "Vaal Sceptre", "type": "unique high"},
 	"1 Varnished Coat": {"base": "Varnished Coat", "type": "unique high"},
+	"1 Zealot Helmet": {"base": "Zealot Helmet", "type": "unique high"},
 	"9 Other uniques": {"type": "unique normal"}
 }

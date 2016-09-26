@@ -1,8 +1,24 @@
 #**************************************************************
 # Welcome to xan.filter, a Python generated loot filter for PoE
-# This filter was generated for Hardcore on 09/12/2016(m/d/y) 00:09:22 UTC
+# This filter was generated for Hardcore on 09/13/2016(m/d/y) 01:40:46 UTC
 # The most current version of code can always be found at https://github.com/xanthics/poe_filter
 #**************************************************************
+
+#0 Demon - Always show
+Show
+	BaseType "Demon"
+	Class "Dagger"
+	ItemLevel >= 83
+	Rarity <= Magic
+	SetBackgroundColor 0 0 0 220
+
+#0 Fiend - Always show
+Show
+	BaseType "Fiend"
+	Class "Dagger"
+	ItemLevel >= 83
+	Rarity <= Magic
+	SetBackgroundColor 0 0 0 220
 
 #0 Fishing Rod - Always show
 Show
@@ -18,12 +34,28 @@ Show
 	SetFontSize 25
 	SetBackgroundColor 0 0 0 220
 
+#0 Imp - Always show
+Show
+	BaseType "Imp"
+	Class "Dagger"
+	ItemLevel >= 83
+	Rarity <= Magic
+	SetBackgroundColor 0 0 0 220
+
 #0 Jewel - Always show
 Show
 	Class "Jewel"
 	Rarity <= Magic
 	SetBorderColor 192 128 254
 	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#0 Kris - Always show
+Show
+	BaseType "Kris"
+	Class "Dagger"
+	ItemLevel >= 83
+	Rarity <= Magic
 	SetBackgroundColor 0 0 0 220
 
 #0 Microtransactions - Always show
@@ -241,6 +273,7 @@ Show
 Show
 	BaseType "Blacksmith's Whetstone"
 	Class "Currency"
+	SetBorderColor 204 0 154
 	SetFontSize 30
 	SetBackgroundColor 0 0 0 220
 
@@ -995,6 +1028,15 @@ Show
 	PlayAlertSound 3 300
 	SetBackgroundColor 0 0 0 220
 
+#0 Penetrating Arrow Quiver - Unique
+Show
+	BaseType "Penetrating Arrow Quiver"
+	Rarity Unique
+	SetBorderColor 175 96 37
+	SetFontSize 45
+	PlayAlertSound 3 300
+	SetBackgroundColor 0 0 0 220
+
 #0 Prismatic Jewel - Unique
 Show
 	BaseType "Prismatic Jewel"
@@ -1328,6 +1370,15 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
+#1 Golden Plate - Unique
+Show
+	BaseType "Golden Plate"
+	Rarity Unique
+	SetFontSize 40
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
+	SetBackgroundColor 0 0 0 220
+
 #1 Goliath Gauntlets - Unique
 Show
 	BaseType "Goliath Gauntlets"
@@ -1445,27 +1496,9 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
-#1 Penetrating Arrow Quiver - Unique
-Show
-	BaseType "Penetrating Arrow Quiver"
-	Rarity Unique
-	SetFontSize 40
-	SetBorderColor 175 96 37
-	PlayAlertSound 3 75
-	SetBackgroundColor 0 0 0 220
-
 #1 Ranger Bow - Unique
 Show
 	BaseType "Ranger Bow"
-	Rarity Unique
-	SetFontSize 40
-	SetBorderColor 175 96 37
-	PlayAlertSound 3 75
-	SetBackgroundColor 0 0 0 220
-
-#1 Ruby Flask - Unique
-Show
-	BaseType "Ruby Flask"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
@@ -1734,7 +1767,6 @@ Show
 	BaseType "Mortal Grief"
 	Class "Map Fragments"
 	SetBorderColor 255 215 0 150
-	PlayAlertSound 8 75
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
@@ -1752,7 +1784,6 @@ Show
 	BaseType "Mortal Ignorance"
 	Class "Map Fragments"
 	SetBorderColor 255 215 0 150
-	PlayAlertSound 8 75
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
@@ -1761,7 +1792,6 @@ Show
 	BaseType "Mortal Rage"
 	Class "Map Fragments"
 	SetBorderColor 255 215 0 150
-	PlayAlertSound 8 75
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
@@ -3561,7 +3591,6 @@ Show
 Show
 	Class "Maps"
 	SetBorderColor 255 215 0 150
-	PlayAlertSound 8 75
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 

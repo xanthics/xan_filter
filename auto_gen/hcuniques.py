@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/10/2016(m/d/y) 08:58:35 UTC from "Hardcore" data
+# Created: 09/12/2016(m/d/y) 17:45:25 UTC from "Hardcore" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -64,6 +64,7 @@ items = {
 	"0 Midnight Blade": {"base": "Midnight Blade", "type": "unique very high"},
 	"0 Mind Cage": {"base": "Mind Cage", "type": "unique very high"},
 	"0 Occultist's Vestment": {"base": "Occultist's Vestment", "type": "unique very high"},
+	"0 Penetrating Arrow Quiver": {"base": "Penetrating Arrow Quiver", "type": "unique very high"},
 	"0 Prismatic Jewel": {"base": "Prismatic Jewel", "type": "unique very high"},
 	"0 Prophecy Wand": {"base": "Prophecy Wand", "type": "unique very high"},
 	"0 Rawhide Boots": {"base": "Rawhide Boots", "type": "unique very high"},
@@ -101,6 +102,7 @@ items = {
 	"1 Etched Greatsword": {"base": "Etched Greatsword", "type": "unique high"},
 	"1 Gladius": {"base": "Gladius", "type": "unique high"},
 	"1 Gold Ring": {"base": "Gold Ring", "type": "unique high"},
+	"1 Golden Plate": {"base": "Golden Plate", "type": "unique high"},
 	"1 Goliath Gauntlets": {"base": "Goliath Gauntlets", "type": "unique high"},
 	"1 Granite Flask": {"base": "Granite Flask", "type": "unique high"},
 	"1 Harbinger Bow": {"base": "Harbinger Bow", "type": "unique high"},
@@ -114,9 +116,7 @@ items = {
 	"1 Necromancer Silks": {"base": "Necromancer Silks", "type": "unique high"},
 	"1 Nightmare Bascinet": {"base": "Nightmare Bascinet", "type": "unique high"},
 	"1 Opal Wand": {"base": "Opal Wand", "type": "unique high"},
-	"1 Penetrating Arrow Quiver": {"base": "Penetrating Arrow Quiver", "type": "unique high"},
 	"1 Ranger Bow": {"base": "Ranger Bow", "type": "unique high"},
-	"1 Ruby Flask": {"base": "Ruby Flask", "type": "unique high"},
 	"1 Saintly Chainmail": {"base": "Saintly Chainmail", "type": "unique high"},
 	"1 Sanctified Life Flask": {"base": "Sanctified Life Flask", "type": "unique high"},
 	"1 Savant's Robe": {"base": "Savant's Robe", "type": "unique high"},

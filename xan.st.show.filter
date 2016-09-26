@@ -1,8 +1,24 @@
 #**************************************************************
 # Welcome to xan.filter, a Python generated loot filter for PoE
-# This filter was generated for Standard on 09/12/2016(m/d/y) 00:09:21 UTC
+# This filter was generated for Standard on 09/13/2016(m/d/y) 01:40:46 UTC
 # The most current version of code can always be found at https://github.com/xanthics/poe_filter
 #**************************************************************
+
+#0 Demon - Always show
+Show
+	BaseType "Demon"
+	Class "Dagger"
+	ItemLevel >= 83
+	Rarity <= Magic
+	SetBackgroundColor 0 0 0 220
+
+#0 Fiend - Always show
+Show
+	BaseType "Fiend"
+	Class "Dagger"
+	ItemLevel >= 83
+	Rarity <= Magic
+	SetBackgroundColor 0 0 0 220
 
 #0 Fishing Rod - Always show
 Show
@@ -18,12 +34,28 @@ Show
 	SetFontSize 25
 	SetBackgroundColor 0 0 0 220
 
+#0 Imp - Always show
+Show
+	BaseType "Imp"
+	Class "Dagger"
+	ItemLevel >= 83
+	Rarity <= Magic
+	SetBackgroundColor 0 0 0 220
+
 #0 Jewel - Always show
 Show
 	Class "Jewel"
 	Rarity <= Magic
 	SetBorderColor 192 128 254
 	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#0 Kris - Always show
+Show
+	BaseType "Kris"
+	Class "Dagger"
+	ItemLevel >= 83
+	Rarity <= Magic
 	SetBackgroundColor 0 0 0 220
 
 #0 Microtransactions - Always show
@@ -241,6 +273,7 @@ Show
 Show
 	BaseType "Blacksmith's Whetstone"
 	Class "Currency"
+	SetBorderColor 204 0 154
 	SetFontSize 30
 	SetBackgroundColor 0 0 0 220
 
@@ -797,15 +830,6 @@ Show
 	PlayAlertSound 3 300
 	SetBackgroundColor 0 0 0 220
 
-#0 Fiend Dagger - Unique
-Show
-	BaseType "Fiend Dagger"
-	Rarity Unique
-	SetBorderColor 175 96 37
-	SetFontSize 45
-	PlayAlertSound 3 300
-	SetBackgroundColor 0 0 0 220
-
 #0 Fishing Rod - Unique
 Show
 	BaseType "Fishing Rod"
@@ -1184,15 +1208,6 @@ Show
 	PlayAlertSound 3 300
 	SetBackgroundColor 0 0 0 220
 
-#0 Zealot Helmet - Unique
-Show
-	BaseType "Zealot Helmet"
-	Rarity Unique
-	SetBorderColor 175 96 37
-	SetFontSize 45
-	PlayAlertSound 3 300
-	SetBackgroundColor 0 0 0 220
-
 #1 Amethyst Ring - Unique
 Show
 	BaseType "Amethyst Ring"
@@ -1337,15 +1352,6 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
-#1 Engraved Wand - Unique
-Show
-	BaseType "Engraved Wand"
-	Rarity Unique
-	SetFontSize 40
-	SetBorderColor 175 96 37
-	PlayAlertSound 3 75
-	SetBackgroundColor 0 0 0 220
-
 #1 Etched Greatsword - Unique
 Show
 	BaseType "Etched Greatsword"
@@ -1367,6 +1373,15 @@ Show
 #1 Ezomyte Burgonet - Unique
 Show
 	BaseType "Ezomyte Burgonet"
+	Rarity Unique
+	SetFontSize 40
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
+	SetBackgroundColor 0 0 0 220
+
+#1 Fiend Dagger - Unique
+Show
+	BaseType "Fiend Dagger"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
@@ -1715,6 +1730,15 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
+#1 Zealot Helmet - Unique
+Show
+	BaseType "Zealot Helmet"
+	Rarity Unique
+	SetFontSize 40
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
+	SetBackgroundColor 0 0 0 220
+
 #9 Other uniques - Unique
 Show
 	Rarity Unique
@@ -1806,7 +1830,6 @@ Show
 	BaseType "Mortal Grief"
 	Class "Map Fragments"
 	SetBorderColor 255 215 0 150
-	PlayAlertSound 8 75
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
@@ -1824,7 +1847,6 @@ Show
 	BaseType "Mortal Ignorance"
 	Class "Map Fragments"
 	SetBorderColor 255 215 0 150
-	PlayAlertSound 8 75
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
@@ -1833,7 +1855,6 @@ Show
 	BaseType "Mortal Rage"
 	Class "Map Fragments"
 	SetBorderColor 255 215 0 150
-	PlayAlertSound 8 75
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
@@ -3633,7 +3654,6 @@ Show
 Show
 	Class "Maps"
 	SetBorderColor 255 215 0 150
-	PlayAlertSound 8 75
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
@@ -3682,6 +3702,15 @@ Show
 #0 Heterochromia - Divination Card
 Show
 	BaseType "Heterochromia"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	SetFontSize 40
+	PlayAlertSound 6 175
+	SetBackgroundColor 0 0 0 220
+
+#0 Hope - Divination Card
+Show
+	BaseType "Hope"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
 	SetFontSize 40
@@ -3850,15 +3879,6 @@ Show
 	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
-#0 The Formless Sea - Divination Card
-Show
-	BaseType "The Formless Sea"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	SetFontSize 40
-	PlayAlertSound 6 175
-	SetBackgroundColor 0 0 0 220
-
 #0 The Harvester - Divination Card
 Show
 	BaseType "The Harvester"
@@ -3958,15 +3978,6 @@ Show
 	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
-#0 The Visionary - Divination Card
-Show
-	BaseType "The Visionary"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	SetFontSize 40
-	PlayAlertSound 6 175
-	SetBackgroundColor 0 0 0 220
-
 #0 The Void - Divination Card
 Show
 	BaseType "The Void"
@@ -4028,6 +4039,14 @@ Show
 	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
+#1 Blind Venture - Divination Card
+Show
+	BaseType "Blind Venture"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	PlayAlertSound 6 75
+	SetBackgroundColor 0 0 0 220
+
 #1 Dialla's Subjugation - Divination Card
 Show
 	BaseType "Dialla's Subjugation"
@@ -4060,14 +4079,6 @@ Show
 	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
-#1 Hope - Divination Card
-Show
-	BaseType "Hope"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
-	SetBackgroundColor 0 0 0 220
-
 #1 Hubris - Divination Card
 Show
 	BaseType "Hubris"
@@ -4095,6 +4106,14 @@ Show
 #1 Jack in the Box - Divination Card
 Show
 	BaseType "Jack in the Box"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	PlayAlertSound 6 75
+	SetBackgroundColor 0 0 0 220
+
+#1 Light and Truth - Divination Card
+Show
+	BaseType "Light and Truth"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
 	PlayAlertSound 6 75
@@ -4220,6 +4239,14 @@ Show
 	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
+#1 The Formless Sea - Divination Card
+Show
+	BaseType "The Formless Sea"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	PlayAlertSound 6 75
+	SetBackgroundColor 0 0 0 220
+
 #1 The Gladiator - Divination Card
 Show
 	BaseType "The Gladiator"
@@ -4247,6 +4274,22 @@ Show
 #1 The Jester - Divination Card
 Show
 	BaseType "The Jester"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	PlayAlertSound 6 75
+	SetBackgroundColor 0 0 0 220
+
+#1 The Oath - Divination Card
+Show
+	BaseType "The Oath"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	PlayAlertSound 6 75
+	SetBackgroundColor 0 0 0 220
+
+#1 The Pact - Divination Card
+Show
+	BaseType "The Pact"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
 	PlayAlertSound 6 75
@@ -4348,17 +4391,17 @@ Show
 	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
-#1 The Watcher - Divination Card
+#1 The Visionary - Divination Card
 Show
-	BaseType "The Watcher"
+	BaseType "The Visionary"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
 	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
-#1 The Web - Divination Card
+#1 The Watcher - Divination Card
 Show
-	BaseType "The Web"
+	BaseType "The Watcher"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
 	PlayAlertSound 6 75
@@ -4426,21 +4469,21 @@ Show
 	Class "Divination Card"
 	SetBackgroundColor 0 0 0 220
 
-#2 The Oath - Divination Card
+#2 The Metalsmith's Gift - Divination Card
 Show
-	BaseType "The Oath"
+	BaseType "The Metalsmith's Gift"
+	Class "Divination Card"
+	SetBackgroundColor 0 0 0 220
+
+#2 The Penitent - Divination Card
+Show
+	BaseType "The Penitent"
 	Class "Divination Card"
 	SetBackgroundColor 0 0 0 220
 
 #2 The Rabid Rhoa - Divination Card
 Show
 	BaseType "The Rabid Rhoa"
-	Class "Divination Card"
-	SetBackgroundColor 0 0 0 220
-
-#2 The Scarred Meadow - Divination Card
-Show
-	BaseType "The Scarred Meadow"
 	Class "Divination Card"
 	SetBackgroundColor 0 0 0 220
 
