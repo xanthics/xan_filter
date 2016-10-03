@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/27/2016(m/d/y) 02:19:18 UTC from "Hardcore Essence" data
+# Created: 10/03/2016(m/d/y) 21:43:16 UTC from "Hardcore Essence" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -67,7 +67,6 @@ items = {
 	"1 Dialla's Subjugation": {"base": "Dialla's Subjugation", "class": "Divination Card", "type": "divination high"},
 	"1 Earth Drinker": {"base": "Earth Drinker", "class": "Divination Card", "type": "divination high"},
 	"1 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination high"},
-	"1 Grave Knowledge": {"base": "Grave Knowledge", "class": "Divination Card", "type": "divination high"},
 	"1 Hope": {"base": "Hope", "class": "Divination Card", "type": "divination high"},
 	"1 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
 	"1 Jack in the Box": {"base": "Jack in the Box", "class": "Divination Card", "type": "divination high"},
@@ -114,7 +113,6 @@ items = {
 	"2 Loyalty": {"base": "Loyalty", "class": "Divination Card", "type": "divination low"},
 	"2 Prosperity": {"base": "Prosperity", "class": "Divination Card", "type": "divination low"},
 	"2 Rain of Chaos": {"base": "Rain of Chaos", "class": "Divination Card", "type": "divination low"},
-	"2 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},
 	"2 The Betrayal": {"base": "The Betrayal", "class": "Divination Card", "type": "divination low"},
 	"2 The Catalyst": {"base": "The Catalyst", "class": "Divination Card", "type": "divination low"},
 	"2 The Dragon": {"base": "The Dragon", "class": "Divination Card", "type": "divination low"},
@@ -126,7 +124,6 @@ items = {
 	"2 The Hermit": {"base": "The Hermit", "class": "Divination Card", "type": "divination low"},
 	"2 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination low"},
 	"2 The Lion": {"base": "The Lion", "class": "Divination Card", "type": "divination low"},
-	"2 The Lover": {"base": "The Lover", "class": "Divination Card", "type": "divination low"},
 	"2 The Lunaris Priestess": {"base": "The Lunaris Priestess", "class": "Divination Card", "type": "divination low"},
 	"2 The Metalsmith's Gift": {"base": "The Metalsmith's Gift", "class": "Divination Card", "type": "divination low"},
 	"2 The Oath": {"base": "The Oath", "class": "Divination Card", "type": "divination low"},
@@ -135,7 +132,6 @@ items = {
 	"2 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},
 	"2 The Sun": {"base": "The Sun", "class": "Divination Card", "type": "divination low"},
 	"2 The Surgeon": {"base": "The Surgeon", "class": "Divination Card", "type": "divination low"},
-	"2 The Survivalist": {"base": "The Survivalist", "class": "Divination Card", "type": "divination low"},
 	"2 The Twins": {"base": "The Twins", "class": "Divination Card", "type": "divination low"},
 	"2 The Warden": {"base": "The Warden", "class": "Divination Card", "type": "divination low"},
 	"2 The Web": {"base": "The Web", "class": "Divination Card", "type": "divination low"},

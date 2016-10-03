@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/27/2016(m/d/y) 02:19:18 UTC from "Standard" data
+# Created: 10/03/2016(m/d/y) 21:43:16 UTC from "Standard" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -40,6 +40,8 @@ items = {
 	"0 Hunter's Reward": {"base": "Hunter's Reward", "class": "Divination Card", "type": "divination very high"},
 	"0 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination very high"},
 	"0 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination very high"},
+	"0 Lysah's Respite": {"base": "Lysah's Respite", "class": "Divination Card", "type": "divination very high"},
+	"0 Mawr Blaidd": {"base": "Mawr Blaidd", "class": "Divination Card", "type": "divination very high"},
 	"0 Pride Before the Fall": {"base": "Pride Before the Fall", "class": "Divination Card", "type": "divination very high"},
 	"0 The Artist": {"base": "The Artist", "class": "Divination Card", "type": "divination very high"},
 	"0 The Brittle Emperor": {"base": "The Brittle Emperor", "class": "Divination Card", "type": "divination very high"},
@@ -76,19 +78,18 @@ items = {
 	"1 Gemcutter's Promise": {"base": "Gemcutter's Promise", "class": "Divination Card", "type": "divination high"},
 	"1 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination high"},
 	"1 Hope": {"base": "Hope", "class": "Divination Card", "type": "divination high"},
-	"1 Hubris": {"base": "Hubris", "class": "Divination Card", "type": "divination high"},
 	"1 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
 	"1 Hunter's Resolve": {"base": "Hunter's Resolve", "class": "Divination Card", "type": "divination high"},
 	"1 Jack in the Box": {"base": "Jack in the Box", "class": "Divination Card", "type": "divination high"},
 	"1 Light and Truth": {"base": "Light and Truth", "class": "Divination Card", "type": "divination high"},
 	"1 Lost Worlds": {"base": "Lost Worlds", "class": "Divination Card", "type": "divination high"},
-	"1 Lysah's Respite": {"base": "Lysah's Respite", "class": "Divination Card", "type": "divination high"},
 	"1 Merciless Armament": {"base": "Merciless Armament", "class": "Divination Card", "type": "divination high"},
 	"1 Rats": {"base": "Rats", "class": "Divination Card", "type": "divination high"},
 	"1 Scholar of the Seas": {"base": "Scholar of the Seas", "class": "Divination Card", "type": "divination high"},
 	"1 The Aesthete": {"base": "The Aesthete", "class": "Divination Card", "type": "divination high"},
 	"1 The Arena Champion": {"base": "The Arena Champion", "class": "Divination Card", "type": "divination high"},
 	"1 The Avenger": {"base": "The Avenger", "class": "Divination Card", "type": "divination high"},
+	"1 The Battle Born": {"base": "The Battle Born", "class": "Divination Card", "type": "divination high"},
 	"1 The Betrayal": {"base": "The Betrayal", "class": "Divination Card", "type": "divination high"},
 	"1 The Body": {"base": "The Body", "class": "Divination Card", "type": "divination high"},
 	"1 The Calling": {"base": "The Calling", "class": "Divination Card", "type": "divination high"},
@@ -98,7 +99,6 @@ items = {
 	"1 The Encroaching Darkness": {"base": "The Encroaching Darkness", "class": "Divination Card", "type": "divination high"},
 	"1 The Explorer": {"base": "The Explorer", "class": "Divination Card", "type": "divination high"},
 	"1 The Fletcher": {"base": "The Fletcher", "class": "Divination Card", "type": "divination high"},
-	"1 The Gladiator": {"base": "The Gladiator", "class": "Divination Card", "type": "divination high"},
 	"1 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination high"},
 	"1 The Inventor": {"base": "The Inventor", "class": "Divination Card", "type": "divination high"},
 	"1 The Jester": {"base": "The Jester", "class": "Divination Card", "type": "divination high"},
@@ -107,7 +107,6 @@ items = {
 	"1 The Poet": {"base": "The Poet", "class": "Divination Card", "type": "divination high"},
 	"1 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
 	"1 The Road to Power": {"base": "The Road to Power", "class": "Divination Card", "type": "divination high"},
-	"1 The Scavenger": {"base": "The Scavenger", "class": "Divination Card", "type": "divination high"},
 	"1 The Siren": {"base": "The Siren", "class": "Divination Card", "type": "divination high"},
 	"1 The Soul": {"base": "The Soul", "class": "Divination Card", "type": "divination high"},
 	"1 The Spoiled Prince": {"base": "The Spoiled Prince", "class": "Divination Card", "type": "divination high"},
@@ -126,6 +125,7 @@ items = {
 	"2 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "divination low"},
 	"2 Lantador's Lost Love": {"base": "Lantador's Lost Love", "class": "Divination Card", "type": "divination low"},
 	"2 Loyalty": {"base": "Loyalty", "class": "Divination Card", "type": "divination low"},
+	"2 Rain Tempter": {"base": "Rain Tempter", "class": "Divination Card", "type": "divination low"},
 	"2 Rain of Chaos": {"base": "Rain of Chaos", "class": "Divination Card", "type": "divination low"},
 	"2 The Hermit": {"base": "The Hermit", "class": "Divination Card", "type": "divination low"},
 	"2 The Metalsmith's Gift": {"base": "The Metalsmith's Gift", "class": "Divination Card", "type": "divination low"},

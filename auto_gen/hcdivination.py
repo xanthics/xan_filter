@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/27/2016(m/d/y) 02:19:18 UTC from "Hardcore" data
+# Created: 10/03/2016(m/d/y) 21:43:16 UTC from "Hardcore" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -56,7 +56,6 @@ items = {
 	"0 The Fiend": {"base": "The Fiend", "class": "Divination Card", "type": "divination very high"},
 	"0 The Fletcher": {"base": "The Fletcher", "class": "Divination Card", "type": "divination very high"},
 	"0 The Fox": {"base": "The Fox", "class": "Divination Card", "type": "divination very high"},
-	"0 The Gemcutter": {"base": "The Gemcutter", "class": "Divination Card", "type": "divination very high"},
 	"0 The Harvester": {"base": "The Harvester", "class": "Divination Card", "type": "divination very high"},
 	"0 The Hunger": {"base": "The Hunger", "class": "Divination Card", "type": "divination very high"},
 	"0 The Immortal": {"base": "The Immortal", "class": "Divination Card", "type": "divination very high"},
@@ -71,7 +70,6 @@ items = {
 	"0 The Surveyor": {"base": "The Surveyor", "class": "Divination Card", "type": "divination very high"},
 	"0 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination very high"},
 	"0 The Union": {"base": "The Union", "class": "Divination Card", "type": "divination very high"},
-	"0 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination very high"},
 	"0 The Warlord": {"base": "The Warlord", "class": "Divination Card", "type": "divination very high"},
 	"0 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination very high"},
 	"0 The Wrath": {"base": "The Wrath", "class": "Divination Card", "type": "divination very high"},
@@ -107,6 +105,7 @@ items = {
 	"1 The Summoner": {"base": "The Summoner", "class": "Divination Card", "type": "divination high"},
 	"1 The Throne": {"base": "The Throne", "class": "Divination Card", "type": "divination high"},
 	"1 The Trial": {"base": "The Trial", "class": "Divination Card", "type": "divination high"},
+	"1 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination high"},
 	"1 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination high"},
 	"1 Volatile Power": {"base": "Volatile Power", "class": "Divination Card", "type": "divination high"},
 	"2 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "divination low"},
