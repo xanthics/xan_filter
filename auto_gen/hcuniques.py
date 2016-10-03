@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/27/2016(m/d/y) 02:19:18 UTC from "Hardcore" data
+# Created: 10/03/2016(m/d/y) 21:43:16 UTC from "Hardcore" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -37,7 +37,6 @@ items = {
 	"0 Citrine Amulet": {"base": "Citrine Amulet", "type": "unique very high"},
 	"0 Clasped Mitts": {"base": "Clasped Mitts", "type": "unique very high"},
 	"0 Clutching Talisman": {"base": "Clutching Talisman", "type": "unique very high"},
-	"0 Courtyard Map": {"base": "Courtyard Map", "type": "unique very high"},
 	"0 Crusader Boots": {"base": "Crusader Boots", "type": "unique very high"},
 	"0 Deicide Mask": {"base": "Deicide Mask", "type": "unique very high"},
 	"0 Desert Brigandine": {"base": "Desert Brigandine", "type": "unique very high"},
@@ -81,12 +80,13 @@ items = {
 	"0 Sorcerer Boots": {"base": "Sorcerer Boots", "type": "unique very high"},
 	"0 Spine Bow": {"base": "Spine Bow", "type": "unique very high"},
 	"0 Steelhead": {"base": "Steelhead", "type": "unique very high"},
-	"0 Stibnite Flask": {"base": "Stibnite Flask", "type": "unique very high"},
 	"0 Titanium Spirit Shield": {"base": "Titanium Spirit Shield", "type": "unique very high"},
 	"0 Topaz Flask": {"base": "Topaz Flask", "type": "unique very high"},
 	"0 Trapper Boots": {"base": "Trapper Boots", "type": "unique very high"},
+	"0 Vaal Blade": {"base": "Vaal Blade", "type": "unique very high"},
 	"0 Vaal Mask": {"base": "Vaal Mask", "type": "unique very high"},
 	"0 Vaal Regalia": {"base": "Vaal Regalia", "type": "unique very high"},
+	"0 Zealot Helmet": {"base": "Zealot Helmet", "type": "unique very high"},
 	"1 Amethyst Ring": {"base": "Amethyst Ring", "type": "unique high"},
 	"1 Ancient Gauntlets": {"base": "Ancient Gauntlets", "type": "unique high"},
 	"1 Ancient Greaves": {"base": "Ancient Greaves", "type": "unique high"},
@@ -96,7 +96,6 @@ items = {
 	"1 Broadhead Arrow Quiver": {"base": "Broadhead Arrow Quiver", "type": "unique high"},
 	"1 Carnal Sceptre": {"base": "Carnal Sceptre", "type": "unique high"},
 	"1 Cedar Tower Shield": {"base": "Cedar Tower Shield", "type": "unique high"},
-	"1 Chain Belt": {"base": "Chain Belt", "type": "unique high"},
 	"1 Conjurer Boots": {"base": "Conjurer Boots", "type": "unique high"},
 	"1 Conjurer Gloves": {"base": "Conjurer Gloves", "type": "unique high"},
 	"1 Deerskin Gloves": {"base": "Deerskin Gloves", "type": "unique high"},
@@ -108,7 +107,6 @@ items = {
 	"1 Golden Plate": {"base": "Golden Plate", "type": "unique high"},
 	"1 Goliath Gauntlets": {"base": "Goliath Gauntlets", "type": "unique high"},
 	"1 Granite Flask": {"base": "Granite Flask", "type": "unique high"},
-	"1 Harbinger Bow": {"base": "Harbinger Bow", "type": "unique high"},
 	"1 Hubris Circlet": {"base": "Hubris Circlet", "type": "unique high"},
 	"1 Imperial Staff": {"base": "Imperial Staff", "type": "unique high"},
 	"1 Karui Maul": {"base": "Karui Maul", "type": "unique high"},
@@ -131,16 +129,15 @@ items = {
 	"1 Slaughter Knife": {"base": "Slaughter Knife", "type": "unique high"},
 	"1 Slink Boots": {"base": "Slink Boots", "type": "unique high"},
 	"1 Steelscale Gauntlets": {"base": "Steelscale Gauntlets", "type": "unique high"},
+	"1 Stibnite Flask": {"base": "Stibnite Flask", "type": "unique high"},
 	"1 Terror Maul": {"base": "Terror Maul", "type": "unique high"},
 	"1 Two-Stone Ring": {"base": "Two-Stone Ring", "type": "unique high"},
 	"1 Ursine Pelt": {"base": "Ursine Pelt", "type": "unique high"},
 	"1 Vaal Axe": {"base": "Vaal Axe", "type": "unique high"},
-	"1 Vaal Blade": {"base": "Vaal Blade", "type": "unique high"},
 	"1 Vaal Gauntlets": {"base": "Vaal Gauntlets", "type": "unique high"},
 	"1 Vaal Hatchet": {"base": "Vaal Hatchet", "type": "unique high"},
 	"1 Vaal Pyramid Map": {"base": "Vaal Pyramid Map", "type": "unique high"},
 	"1 Vaal Sceptre": {"base": "Vaal Sceptre", "type": "unique high"},
 	"1 Varnished Coat": {"base": "Varnished Coat", "type": "unique high"},
-	"1 Vile Staff": {"base": "Vile Staff", "type": "unique high"},
 	"9 Other uniques": {"type": "unique normal"}
 }

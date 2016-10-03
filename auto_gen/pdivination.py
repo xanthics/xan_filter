@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/27/2016(m/d/y) 02:19:18 UTC from "Essence" data
+# Created: 10/03/2016(m/d/y) 21:43:16 UTC from "Essence" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -52,7 +52,6 @@ items = {
 	"0 The Enlightened": {"base": "The Enlightened", "class": "Divination Card", "type": "divination very high"},
 	"0 The Ethereal": {"base": "The Ethereal", "class": "Divination Card", "type": "divination very high"},
 	"0 The Fiend": {"base": "The Fiend", "class": "Divination Card", "type": "divination very high"},
-	"0 The Formless Sea": {"base": "The Formless Sea", "class": "Divination Card", "type": "divination very high"},
 	"0 The Harvester": {"base": "The Harvester", "class": "Divination Card", "type": "divination very high"},
 	"0 The Hunger": {"base": "The Hunger", "class": "Divination Card", "type": "divination very high"},
 	"0 The Immortal": {"base": "The Immortal", "class": "Divination Card", "type": "divination very high"},
@@ -69,7 +68,6 @@ items = {
 	"0 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination very high"},
 	"0 Wealth and Power": {"base": "Wealth and Power", "class": "Divination Card", "type": "divination very high"},
 	"1 Dialla's Subjugation": {"base": "Dialla's Subjugation", "class": "Divination Card", "type": "divination high"},
-	"1 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination high"},
 	"1 Hope": {"base": "Hope", "class": "Divination Card", "type": "divination high"},
 	"1 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
 	"1 Jack in the Box": {"base": "Jack in the Box", "class": "Divination Card", "type": "divination high"},
@@ -80,8 +78,6 @@ items = {
 	"1 Rats": {"base": "Rats", "class": "Divination Card", "type": "divination high"},
 	"1 Scholar of the Seas": {"base": "Scholar of the Seas", "class": "Divination Card", "type": "divination high"},
 	"1 The Aesthete": {"base": "The Aesthete", "class": "Divination Card", "type": "divination high"},
-	"1 The Arena Champion": {"base": "The Arena Champion", "class": "Divination Card", "type": "divination high"},
-	"1 The Avenger": {"base": "The Avenger", "class": "Divination Card", "type": "divination high"},
 	"1 The Body": {"base": "The Body", "class": "Divination Card", "type": "divination high"},
 	"1 The Calling": {"base": "The Calling", "class": "Divination Card", "type": "divination high"},
 	"1 The Cartographer": {"base": "The Cartographer", "class": "Divination Card", "type": "divination high"},
@@ -89,6 +85,7 @@ items = {
 	"1 The Dapper Prodigy": {"base": "The Dapper Prodigy", "class": "Divination Card", "type": "divination high"},
 	"1 The Encroaching Darkness": {"base": "The Encroaching Darkness", "class": "Divination Card", "type": "divination high"},
 	"1 The Fletcher": {"base": "The Fletcher", "class": "Divination Card", "type": "divination high"},
+	"1 The Formless Sea": {"base": "The Formless Sea", "class": "Divination Card", "type": "divination high"},
 	"1 The Fox": {"base": "The Fox", "class": "Divination Card", "type": "divination high"},
 	"1 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination high"},
 	"1 The Inventor": {"base": "The Inventor", "class": "Divination Card", "type": "divination high"},
@@ -121,10 +118,10 @@ items = {
 	"2 Rain of Chaos": {"base": "Rain of Chaos", "class": "Divination Card", "type": "divination low"},
 	"2 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},
 	"2 The Catalyst": {"base": "The Catalyst", "class": "Divination Card", "type": "divination low"},
-	"2 The Demoness": {"base": "The Demoness", "class": "Divination Card", "type": "divination low"},
 	"2 The Dragon": {"base": "The Dragon", "class": "Divination Card", "type": "divination low"},
 	"2 The Drunken Aristocrat": {"base": "The Drunken Aristocrat", "class": "Divination Card", "type": "divination low"},
 	"2 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
+	"2 The Explorer": {"base": "The Explorer", "class": "Divination Card", "type": "divination low"},
 	"2 The Feast": {"base": "The Feast", "class": "Divination Card", "type": "divination low"},
 	"2 The Flora's Gift": {"base": "The Flora's Gift", "class": "Divination Card", "type": "divination low"},
 	"2 The Gambler": {"base": "The Gambler", "class": "Divination Card", "type": "divination low"},
@@ -154,7 +151,6 @@ items = {
 	"2 The Watcher": {"base": "The Watcher", "class": "Divination Card", "type": "divination low"},
 	"2 The Web": {"base": "The Web", "class": "Divination Card", "type": "divination low"},
 	"2 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination low"},
-	"2 Three Faces in the Dark": {"base": "Three Faces in the Dark", "class": "Divination Card", "type": "divination low"},
 	"2 Thunderous Skies": {"base": "Thunderous Skies", "class": "Divination Card", "type": "divination low"},
 	"2 Volatile Power": {"base": "Volatile Power", "class": "Divination Card", "type": "divination low"},
 	"7 The Carrion Crow": {"base": "The Carrion Crow", "class": "Divination Card", "type": "hide"},

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/27/2016(m/d/y) 02:19:18 UTC from "Standard" data
+# Created: 10/03/2016(m/d/y) 21:43:16 UTC from "Standard" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -58,8 +58,6 @@ items = {
 	"0 Jet Amulet": {"base": "Jet Amulet", "type": "unique very high"},
 	"0 Jewelled Foil": {"base": "Jewelled Foil", "type": "unique very high"},
 	"0 Legion Gloves": {"base": "Legion Gloves", "type": "unique very high"},
-	"0 Lion Pelt": {"base": "Lion Pelt", "type": "unique very high"},
-	"0 Midnight Blade": {"base": "Midnight Blade", "type": "unique very high"},
 	"0 Museum Map": {"base": "Museum Map", "type": "unique very high"},
 	"0 Occultist's Vestment": {"base": "Occultist's Vestment", "type": "unique very high"},
 	"0 Prismatic Jewel": {"base": "Prismatic Jewel", "type": "unique very high"},
@@ -68,7 +66,6 @@ items = {
 	"0 Rotfeather Talisman": {"base": "Rotfeather Talisman", "type": "unique very high"},
 	"0 Royal Axe": {"base": "Royal Axe", "type": "unique very high"},
 	"0 Ruby Amulet": {"base": "Ruby Amulet", "type": "unique very high"},
-	"0 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "unique very high"},
 	"0 Sanctified Life Flask": {"base": "Sanctified Life Flask", "type": "unique very high"},
 	"0 Sanctified Mana Flask": {"base": "Sanctified Mana Flask", "type": "unique very high"},
 	"0 Sapphire Flask": {"base": "Sapphire Flask", "type": "unique very high"},
@@ -82,7 +79,6 @@ items = {
 	"0 Ursine Pelt": {"base": "Ursine Pelt", "type": "unique very high"},
 	"0 Vaal Regalia": {"base": "Vaal Regalia", "type": "unique very high"},
 	"0 Wereclaw Talisman": {"base": "Wereclaw Talisman", "type": "unique very high"},
-	"1 Amethyst Ring": {"base": "Amethyst Ring", "type": "unique high"},
 	"1 Ancient Gauntlets": {"base": "Ancient Gauntlets", "type": "unique high"},
 	"1 Ancient Greaves": {"base": "Ancient Greaves", "type": "unique high"},
 	"1 Arcanist Gloves": {"base": "Arcanist Gloves", "type": "unique high"},
@@ -97,8 +93,6 @@ items = {
 	"1 Desert Brigandine": {"base": "Desert Brigandine", "type": "unique high"},
 	"1 Despot Axe": {"base": "Despot Axe", "type": "unique high"},
 	"1 Diamond Ring": {"base": "Diamond Ring", "type": "unique high"},
-	"1 Engraved Wand": {"base": "Engraved Wand", "type": "unique high"},
-	"1 Etched Greatsword": {"base": "Etched Greatsword", "type": "unique high"},
 	"1 Eternal Sword": {"base": "Eternal Sword", "type": "unique high"},
 	"1 Ezomyte Burgonet": {"base": "Ezomyte Burgonet", "type": "unique high"},
 	"1 Fiend Dagger": {"base": "Fiend Dagger", "type": "unique high"},
@@ -109,15 +103,18 @@ items = {
 	"1 Granite Flask": {"base": "Granite Flask", "type": "unique high"},
 	"1 Graveyard Map": {"base": "Graveyard Map", "type": "unique high"},
 	"1 Greater Mana Flask": {"base": "Greater Mana Flask", "type": "unique high"},
+	"1 Hallowed Hybrid Flask": {"base": "Hallowed Hybrid Flask", "type": "unique high"},
 	"1 Heavy Quiver": {"base": "Heavy Quiver", "type": "unique high"},
 	"1 Imperial Skean": {"base": "Imperial Skean", "type": "unique high"},
 	"1 Imperial Staff": {"base": "Imperial Staff", "type": "unique high"},
 	"1 Ironscale Gauntlets": {"base": "Ironscale Gauntlets", "type": "unique high"},
 	"1 Judgement Staff": {"base": "Judgement Staff", "type": "unique high"},
 	"1 Large Hybrid Flask": {"base": "Large Hybrid Flask", "type": "unique high"},
+	"1 Lion Pelt": {"base": "Lion Pelt", "type": "unique high"},
+	"1 Midnight Blade": {"base": "Midnight Blade", "type": "unique high"},
 	"1 Murder Boots": {"base": "Murder Boots", "type": "unique high"},
+	"1 Necropolis Map": {"base": "Necropolis Map", "type": "unique high"},
 	"1 Nightmare Bascinet": {"base": "Nightmare Bascinet", "type": "unique high"},
-	"1 Nubuck Boots": {"base": "Nubuck Boots", "type": "unique high"},
 	"1 Painted Tower Shield": {"base": "Painted Tower Shield", "type": "unique high"},
 	"1 Paua Ring": {"base": "Paua Ring", "type": "unique high"},
 	"1 Penetrating Arrow Quiver": {"base": "Penetrating Arrow Quiver", "type": "unique high"},
@@ -127,6 +124,7 @@ items = {
 	"1 Reef Map": {"base": "Reef Map", "type": "unique high"},
 	"1 Regicide Mask": {"base": "Regicide Mask", "type": "unique high"},
 	"1 Ritual Sceptre": {"base": "Ritual Sceptre", "type": "unique high"},
+	"1 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "unique high"},
 	"1 Savant's Robe": {"base": "Savant's Robe", "type": "unique high"},
 	"1 Sharkskin Boots": {"base": "Sharkskin Boots", "type": "unique high"},
 	"1 Sharkskin Tunic": {"base": "Sharkskin Tunic", "type": "unique high"},
