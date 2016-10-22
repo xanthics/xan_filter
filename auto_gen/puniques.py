@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/03/2016(m/d/y) 21:43:16 UTC from "Essence" data
+# Created: 10/21/2016(m/d/y) 23:52:43 UTC from "Essence" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -35,6 +35,7 @@ items = {
 	"0 Chateau Map": {"base": "Chateau Map", "type": "unique very high"},
 	"0 Clasped Mitts": {"base": "Clasped Mitts", "type": "unique very high"},
 	"0 Courtyard Map": {"base": "Courtyard Map", "type": "unique very high"},
+	"0 Crusader Boots": {"base": "Crusader Boots", "type": "unique very high"},
 	"0 Deicide Mask": {"base": "Deicide Mask", "type": "unique very high"},
 	"0 Gladiator Plate": {"base": "Gladiator Plate", "type": "unique very high"},
 	"0 Glorious Plate": {"base": "Glorious Plate", "type": "unique very high"},
@@ -51,7 +52,7 @@ items = {
 	"0 Rawhide Boots": {"base": "Rawhide Boots", "type": "unique very high"},
 	"0 Rotfeather Talisman": {"base": "Rotfeather Talisman", "type": "unique very high"},
 	"0 Sapphire Flask": {"base": "Sapphire Flask", "type": "unique very high"},
-	"0 Savant's Robe": {"base": "Savant's Robe", "type": "unique very high"},
+	"0 Sharkskin Tunic": {"base": "Sharkskin Tunic", "type": "unique very high"},
 	"0 Silver Flask": {"base": "Silver Flask", "type": "unique very high"},
 	"0 Topaz Flask": {"base": "Topaz Flask", "type": "unique very high"},
 	"0 Vaal Regalia": {"base": "Vaal Regalia", "type": "unique very high"},
@@ -60,13 +61,11 @@ items = {
 	"1 Champion Kite Shield": {"base": "Champion Kite Shield", "type": "unique high"},
 	"1 Citrine Amulet": {"base": "Citrine Amulet", "type": "unique high"},
 	"1 Corrugated Buckler": {"base": "Corrugated Buckler", "type": "unique high"},
-	"1 Crusader Boots": {"base": "Crusader Boots", "type": "unique high"},
-	"1 Deerskin Gloves": {"base": "Deerskin Gloves", "type": "unique high"},
 	"1 Despot Axe": {"base": "Despot Axe", "type": "unique high"},
+	"1 Eternal Sword": {"base": "Eternal Sword", "type": "unique high"},
 	"1 Exquisite Leather": {"base": "Exquisite Leather", "type": "unique high"},
 	"1 Ezomyte Burgonet": {"base": "Ezomyte Burgonet", "type": "unique high"},
 	"1 Fishing Rod": {"base": "Fishing Rod", "type": "unique high"},
-	"1 Full Wyrmscale": {"base": "Full Wyrmscale", "type": "unique high"},
 	"1 Grand Mana Flask": {"base": "Grand Mana Flask", "type": "unique high"},
 	"1 Granite Flask": {"base": "Granite Flask", "type": "unique high"},
 	"1 Graveyard Map": {"base": "Graveyard Map", "type": "unique high"},
@@ -75,13 +74,12 @@ items = {
 	"1 Ironscale Gauntlets": {"base": "Ironscale Gauntlets", "type": "unique high"},
 	"1 Necropolis Map": {"base": "Necropolis Map", "type": "unique high"},
 	"1 Nightmare Bascinet": {"base": "Nightmare Bascinet", "type": "unique high"},
-	"1 Penetrating Arrow Quiver": {"base": "Penetrating Arrow Quiver", "type": "unique high"},
 	"1 Promenade Map": {"base": "Promenade Map", "type": "unique high"},
 	"1 Reef Map": {"base": "Reef Map", "type": "unique high"},
 	"1 Ruby Amulet": {"base": "Ruby Amulet", "type": "unique high"},
 	"1 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "unique high"},
 	"1 Sanctified Mana Flask": {"base": "Sanctified Mana Flask", "type": "unique high"},
-	"1 Sharkskin Tunic": {"base": "Sharkskin Tunic", "type": "unique high"},
+	"1 Savant's Robe": {"base": "Savant's Robe", "type": "unique high"},
 	"1 Siege Axe": {"base": "Siege Axe", "type": "unique high"},
 	"1 Sorcerer Boots": {"base": "Sorcerer Boots", "type": "unique high"},
 	"1 Steelhead": {"base": "Steelhead", "type": "unique high"},

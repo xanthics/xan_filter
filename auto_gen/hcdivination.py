@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/03/2016(m/d/y) 21:43:16 UTC from "Hardcore" data
+# Created: 10/21/2016(m/d/y) 23:52:43 UTC from "Hardcore" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -34,6 +34,7 @@ items = {
 	"0 Abandoned Wealth": {"base": "Abandoned Wealth", "class": "Divination Card", "type": "divination very high"},
 	"0 Bowyer's Dream": {"base": "Bowyer's Dream", "class": "Divination Card", "type": "divination very high"},
 	"0 Chaotic Disposition": {"base": "Chaotic Disposition", "class": "Divination Card", "type": "divination very high"},
+	"0 Coveted Possession": {"base": "Coveted Possession", "class": "Divination Card", "type": "divination very high"},
 	"0 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination very high"},
 	"0 Heterochromia": {"base": "Heterochromia", "class": "Divination Card", "type": "divination very high"},
 	"0 House of Mirrors": {"base": "House of Mirrors", "class": "Divination Card", "type": "divination very high"},
@@ -67,6 +68,7 @@ items = {
 	"0 The One With All": {"base": "The One With All", "class": "Divination Card", "type": "divination very high"},
 	"0 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
 	"0 The Scarred Meadow": {"base": "The Scarred Meadow", "class": "Divination Card", "type": "divination very high"},
+	"0 The Summoner": {"base": "The Summoner", "class": "Divination Card", "type": "divination very high"},
 	"0 The Surveyor": {"base": "The Surveyor", "class": "Divination Card", "type": "divination very high"},
 	"0 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination very high"},
 	"0 The Union": {"base": "The Union", "class": "Divination Card", "type": "divination very high"},
@@ -102,7 +104,6 @@ items = {
 	"1 The Inventor": {"base": "The Inventor", "class": "Divination Card", "type": "divination high"},
 	"1 The Siren": {"base": "The Siren", "class": "Divination Card", "type": "divination high"},
 	"1 The Spoiled Prince": {"base": "The Spoiled Prince", "class": "Divination Card", "type": "divination high"},
-	"1 The Summoner": {"base": "The Summoner", "class": "Divination Card", "type": "divination high"},
 	"1 The Throne": {"base": "The Throne", "class": "Divination Card", "type": "divination high"},
 	"1 The Trial": {"base": "The Trial", "class": "Divination Card", "type": "divination high"},
 	"1 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination high"},

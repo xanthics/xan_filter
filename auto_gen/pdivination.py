@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/03/2016(m/d/y) 21:43:16 UTC from "Essence" data
+# Created: 10/21/2016(m/d/y) 23:52:43 UTC from "Essence" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -40,6 +40,7 @@ items = {
 	"0 House of Mirrors": {"base": "House of Mirrors", "class": "Divination Card", "type": "divination very high"},
 	"0 Hunter's Reward": {"base": "Hunter's Reward", "class": "Divination Card", "type": "divination very high"},
 	"0 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination very high"},
+	"0 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination very high"},
 	"0 Mawr Blaidd": {"base": "Mawr Blaidd", "class": "Divination Card", "type": "divination very high"},
 	"0 Pride Before the Fall": {"base": "Pride Before the Fall", "class": "Divination Card", "type": "divination very high"},
 	"0 The Artist": {"base": "The Artist", "class": "Divination Card", "type": "divination very high"},
@@ -58,6 +59,7 @@ items = {
 	"0 The King's Heart": {"base": "The King's Heart", "class": "Divination Card", "type": "divination very high"},
 	"0 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination very high"},
 	"0 The Offering": {"base": "The Offering", "class": "Divination Card", "type": "divination very high"},
+	"0 The Penitent": {"base": "The Penitent", "class": "Divination Card", "type": "divination very high"},
 	"0 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
 	"0 The Stormcaller": {"base": "The Stormcaller", "class": "Divination Card", "type": "divination very high"},
 	"0 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination very high"},
@@ -72,13 +74,10 @@ items = {
 	"1 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
 	"1 Jack in the Box": {"base": "Jack in the Box", "class": "Divination Card", "type": "divination high"},
 	"1 Lost Worlds": {"base": "Lost Worlds", "class": "Divination Card", "type": "divination high"},
-	"1 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination high"},
 	"1 Lysah's Respite": {"base": "Lysah's Respite", "class": "Divination Card", "type": "divination high"},
-	"1 Merciless Armament": {"base": "Merciless Armament", "class": "Divination Card", "type": "divination high"},
 	"1 Rats": {"base": "Rats", "class": "Divination Card", "type": "divination high"},
 	"1 Scholar of the Seas": {"base": "Scholar of the Seas", "class": "Divination Card", "type": "divination high"},
 	"1 The Aesthete": {"base": "The Aesthete", "class": "Divination Card", "type": "divination high"},
-	"1 The Body": {"base": "The Body", "class": "Divination Card", "type": "divination high"},
 	"1 The Calling": {"base": "The Calling", "class": "Divination Card", "type": "divination high"},
 	"1 The Cartographer": {"base": "The Cartographer", "class": "Divination Card", "type": "divination high"},
 	"1 The Chains that Bind": {"base": "The Chains that Bind", "class": "Divination Card", "type": "divination high"},
@@ -89,9 +88,7 @@ items = {
 	"1 The Fox": {"base": "The Fox", "class": "Divination Card", "type": "divination high"},
 	"1 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination high"},
 	"1 The Inventor": {"base": "The Inventor", "class": "Divination Card", "type": "divination high"},
-	"1 The Penitent": {"base": "The Penitent", "class": "Divination Card", "type": "divination high"},
 	"1 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
-	"1 The Scavenger": {"base": "The Scavenger", "class": "Divination Card", "type": "divination high"},
 	"1 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination high"},
 	"1 The Soul": {"base": "The Soul", "class": "Divination Card", "type": "divination high"},
 	"1 The Surveyor": {"base": "The Surveyor", "class": "Divination Card", "type": "divination high"},
@@ -127,6 +124,7 @@ items = {
 	"2 The Gambler": {"base": "The Gambler", "class": "Divination Card", "type": "divination low"},
 	"2 The Gemcutter": {"base": "The Gemcutter", "class": "Divination Card", "type": "divination low"},
 	"2 The Hermit": {"base": "The Hermit", "class": "Divination Card", "type": "divination low"},
+	"2 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination low"},
 	"2 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination low"},
 	"2 The Lion": {"base": "The Lion", "class": "Divination Card", "type": "divination low"},
 	"2 The Lord in Black": {"base": "The Lord in Black", "class": "Divination Card", "type": "divination low"},

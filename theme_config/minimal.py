@@ -149,7 +149,8 @@ settings = {
 				  "SetFontSize {}".format(size['normal']),
 				  "SetBackgroundColor {} 220".format(color['black'])],
 
-	"t1 ilvl83/84 crafting": ["Rarity <= Magic", 
+	"t1 ilvl83/84 crafting": ["Rarity <= Magic",
+							  "SetFontSize {}".format(size['small']),
 							  "SetBackgroundColor {} 220".format(color['black'])],
 
 	"currency very high": ["SetBorderColor {}".format(color['currency']), 
