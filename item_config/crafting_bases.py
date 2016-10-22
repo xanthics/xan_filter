@@ -109,7 +109,7 @@ items = {
 	"0 Dragoon Sword": {"base": "Dragoon Sword", "other": ["ItemLevel >= 83"], "type": "t1 ilvl83/84 crafting"},
 	"0 Sai": {"base": "Sai", "class": "Dagger", "other": ["ItemLevel >= 83"], "type": "t1 ilvl83/84 crafting"},
 
-	"8 Ilvl 75+ Amulet": {"class": "Amulet", "other": ["ItemLevel >= 75"], "type": "ignore"},
+	"8 Ilvl 75+ Amulet": {"class": "Amulet", "other": ["Rarity Normal", "ItemLevel >= 77"], "type": "ignore"},
 	"8 Ilvl 75+ Ring": {"class": "Ring", "other": ["ItemLevel >= 75"], "type": "ignore"},
 	"8 Ilvl 75+ Belt": {"class": "Belt", "other": ["ItemLevel >= 75"], "type": "ignore"},
 

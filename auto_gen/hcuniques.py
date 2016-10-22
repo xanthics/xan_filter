@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/03/2016(m/d/y) 21:43:16 UTC from "Hardcore" data
+# Created: 10/21/2016(m/d/y) 23:52:43 UTC from "Hardcore" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -32,6 +32,7 @@ desc = "Unique"
 # Base type : settings pair
 items = {
 	"0 Assassin's Garb": {"base": "Assassin's Garb", "type": "unique very high"},
+	"0 Carnal Sceptre": {"base": "Carnal Sceptre", "type": "unique very high"},
 	"0 Champion Kite Shield": {"base": "Champion Kite Shield", "type": "unique very high"},
 	"0 Chateau Map": {"base": "Chateau Map", "type": "unique very high"},
 	"0 Citrine Amulet": {"base": "Citrine Amulet", "type": "unique very high"},
@@ -46,13 +47,11 @@ items = {
 	"0 Fishing Rod": {"base": "Fishing Rod", "type": "unique very high"},
 	"0 Full Wyrmscale": {"base": "Full Wyrmscale", "type": "unique very high"},
 	"0 Glorious Plate": {"base": "Glorious Plate", "type": "unique very high"},
-	"0 Golden Bracers": {"base": "Golden Bracers", "type": "unique very high"},
 	"0 Golden Flame": {"base": "Golden Flame", "type": "unique very high"},
 	"0 Golden Hoop": {"base": "Golden Hoop", "type": "unique very high"},
 	"0 Golden Mantle": {"base": "Golden Mantle", "type": "unique very high"},
 	"0 Golden Obi": {"base": "Golden Obi", "type": "unique very high"},
 	"0 Golden Wreath": {"base": "Golden Wreath", "type": "unique very high"},
-	"0 Graveyard Map": {"base": "Graveyard Map", "type": "unique very high"},
 	"0 Greatwolf Talisman": {"base": "Greatwolf Talisman", "type": "unique very high"},
 	"0 Imperial Skean": {"base": "Imperial Skean", "type": "unique very high"},
 	"0 Ironscale Gauntlets": {"base": "Ironscale Gauntlets", "type": "unique very high"},
@@ -68,7 +67,6 @@ items = {
 	"0 Prophecy Wand": {"base": "Prophecy Wand", "type": "unique very high"},
 	"0 Rawhide Boots": {"base": "Rawhide Boots", "type": "unique very high"},
 	"0 Regicide Mask": {"base": "Regicide Mask", "type": "unique very high"},
-	"0 Ritual Sceptre": {"base": "Ritual Sceptre", "type": "unique very high"},
 	"0 Rotfeather Talisman": {"base": "Rotfeather Talisman", "type": "unique very high"},
 	"0 Royal Axe": {"base": "Royal Axe", "type": "unique very high"},
 	"0 Ruby Amulet": {"base": "Ruby Amulet", "type": "unique very high"},
@@ -94,19 +92,23 @@ items = {
 	"1 Archon Kite Shield": {"base": "Archon Kite Shield", "type": "unique high"},
 	"1 Black Maw Talisman": {"base": "Black Maw Talisman", "type": "unique high"},
 	"1 Broadhead Arrow Quiver": {"base": "Broadhead Arrow Quiver", "type": "unique high"},
-	"1 Carnal Sceptre": {"base": "Carnal Sceptre", "type": "unique high"},
 	"1 Cedar Tower Shield": {"base": "Cedar Tower Shield", "type": "unique high"},
 	"1 Conjurer Boots": {"base": "Conjurer Boots", "type": "unique high"},
 	"1 Conjurer Gloves": {"base": "Conjurer Gloves", "type": "unique high"},
+	"1 Corrugated Buckler": {"base": "Corrugated Buckler", "type": "unique high"},
+	"1 Crusader Gloves": {"base": "Crusader Gloves", "type": "unique high"},
 	"1 Deerskin Gloves": {"base": "Deerskin Gloves", "type": "unique high"},
 	"1 Diamond Ring": {"base": "Diamond Ring", "type": "unique high"},
 	"1 Enameled Buckler": {"base": "Enameled Buckler", "type": "unique high"},
 	"1 Etched Greatsword": {"base": "Etched Greatsword", "type": "unique high"},
+	"1 Ezomyte Burgonet": {"base": "Ezomyte Burgonet", "type": "unique high"},
+	"1 Full Dragonscale": {"base": "Full Dragonscale", "type": "unique high"},
 	"1 Gladius": {"base": "Gladius", "type": "unique high"},
 	"1 Gold Ring": {"base": "Gold Ring", "type": "unique high"},
 	"1 Golden Plate": {"base": "Golden Plate", "type": "unique high"},
 	"1 Goliath Gauntlets": {"base": "Goliath Gauntlets", "type": "unique high"},
 	"1 Granite Flask": {"base": "Granite Flask", "type": "unique high"},
+	"1 Harbinger Bow": {"base": "Harbinger Bow", "type": "unique high"},
 	"1 Hubris Circlet": {"base": "Hubris Circlet", "type": "unique high"},
 	"1 Imperial Staff": {"base": "Imperial Staff", "type": "unique high"},
 	"1 Karui Maul": {"base": "Karui Maul", "type": "unique high"},
@@ -114,10 +116,13 @@ items = {
 	"1 Large Hybrid Flask": {"base": "Large Hybrid Flask", "type": "unique high"},
 	"1 Lathi": {"base": "Lathi", "type": "unique high"},
 	"1 Mosaic Kite Shield": {"base": "Mosaic Kite Shield", "type": "unique high"},
+	"1 Museum Map": {"base": "Museum Map", "type": "unique high"},
 	"1 Necromancer Silks": {"base": "Necromancer Silks", "type": "unique high"},
 	"1 Nightmare Bascinet": {"base": "Nightmare Bascinet", "type": "unique high"},
 	"1 Opal Wand": {"base": "Opal Wand", "type": "unique high"},
+	"1 Painted Tower Shield": {"base": "Painted Tower Shield", "type": "unique high"},
 	"1 Ranger Bow": {"base": "Ranger Bow", "type": "unique high"},
+	"1 Ritual Sceptre": {"base": "Ritual Sceptre", "type": "unique high"},
 	"1 Saintly Chainmail": {"base": "Saintly Chainmail", "type": "unique high"},
 	"1 Sanctified Life Flask": {"base": "Sanctified Life Flask", "type": "unique high"},
 	"1 Savant's Robe": {"base": "Savant's Robe", "type": "unique high"},
@@ -131,6 +136,7 @@ items = {
 	"1 Steelscale Gauntlets": {"base": "Steelscale Gauntlets", "type": "unique high"},
 	"1 Stibnite Flask": {"base": "Stibnite Flask", "type": "unique high"},
 	"1 Terror Maul": {"base": "Terror Maul", "type": "unique high"},
+	"1 Triumphant Lamellar": {"base": "Triumphant Lamellar", "type": "unique high"},
 	"1 Two-Stone Ring": {"base": "Two-Stone Ring", "type": "unique high"},
 	"1 Ursine Pelt": {"base": "Ursine Pelt", "type": "unique high"},
 	"1 Vaal Axe": {"base": "Vaal Axe", "type": "unique high"},
@@ -139,5 +145,7 @@ items = {
 	"1 Vaal Pyramid Map": {"base": "Vaal Pyramid Map", "type": "unique high"},
 	"1 Vaal Sceptre": {"base": "Vaal Sceptre", "type": "unique high"},
 	"1 Varnished Coat": {"base": "Varnished Coat", "type": "unique high"},
+	"1 Vile Staff": {"base": "Vile Staff", "type": "unique high"},
+	"1 Zodiac Leather": {"base": "Zodiac Leather", "type": "unique high"},
 	"9 Other uniques": {"type": "unique normal"}
 }

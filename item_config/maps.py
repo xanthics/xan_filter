@@ -29,10 +29,10 @@ desc = "maps"
 # Base type : settings pair
 items = {
 	# Tier 1
-	"1 Arcade Map": {"base": "Arcade Map", "class": "Maps", "other": ["ItemLevel <= 70", "DropLevel 68"], "type": "map white good"},
-	"1 Crystal Ore Map": {"base": "Crystal Ore Map", "class": "Maps", "other": ["ItemLevel <= 70", "DropLevel 68"], "type": "map white good"},
-	"1 Desert Map": {"base": "Desert Map", "class": "Maps", "other": ["ItemLevel <= 70", "DropLevel 68"], "type": "map white good"},
-	"1 Jungle Valley Map": {"base": "Jungle Valley Map", "class": "Maps", "other": ["ItemLevel <= 70", "DropLevel 68"], "type": "map white good"},
+	"1 Arcade Map": {"base": "Arcade Map", "class": "Maps", "other": ["ItemLevel <= 70"], "type": "map white good"},
+	"1 Crystal Ore Map": {"base": "Crystal Ore Map", "class": "Maps", "other": ["ItemLevel <= 70"], "type": "map white good"},
+	"1 Desert Map": {"base": "Desert Map", "class": "Maps", "other": ["ItemLevel <= 70"], "type": "map white good"},
+	"1 Jungle Valley Map": {"base": "Jungle Valley Map", "class": "Maps", "other": ["ItemLevel <= 70"], "type": "map white good"},
 
 	# Tier 2
 	"1 Beach Map": {"base": "Beach Map", "class": "Maps", "other": ["ItemLevel <= 71", "DropLevel 69"], "type": "map white good"},
