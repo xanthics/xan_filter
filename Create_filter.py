@@ -27,6 +27,7 @@ Note: Requires Python 3.4.x
 """
 from datetime import datetime
 from os import path
+from io import open
 
 from auto_gen import divination
 from auto_gen import hcdivination
@@ -135,7 +136,7 @@ def main():
 			   ("e", "Essence", puniques, pdivination),
 			   ("ehc", "Hardcore Essence", phcuniques, phcdivination)]
 
-	leveling = True  # toggle to show leveling items
+	leveling = False  # toggle to show leveling items
 
 	for i in leagues:
 
@@ -155,7 +156,7 @@ def main():
 		buffer += gen_list(currency)  # Currency
 		buffer += gen_list(gems)  # Gems
 		buffer += gen_list(i[2])  # uniques
-		buffer += gen_list(recipe_item)  # Items for vendor recipe
+		#buffer += gen_list(recipe_item)  # Items for vendor recipe
 		buffer += gen_list(maps)  # maps
 		buffer += gen_list(i[3])  # divination cards
 		buffer += gen_list(flask)  # Flasks
@@ -166,13 +167,13 @@ def main():
 				buffer += gen_list(rareitemleveling)
 
 		buffer += gen_list(rare_highlight)  # rares highlighting + jewelry
-		buffer += gen_list(rares)  # rares catchall
-		buffer += gen_list(chroma)  # chrome vendor items
+		#buffer += gen_list(rares)  # rares catchall
+		#buffer += gen_list(chroma)  # chrome vendor items
 		if leveling:
 			buffer += gen_list(general_levelling)
 		buffer += gen_list(chance)  # Chance bases
 		buffer += gen_list(crafting_bases)  # Crafting bases
-		buffer += gen_list(animate_weapon)  # Animate Weapon bases
+		#buffer += gen_list(animate_weapon)  # Animate Weapon bases
 
 		if 0:
 			for nonrareitemleveling in [nonrare_armor_dex, nonrare_armor_dex_int, nonrare_armor_str_dex, nonrare_armor_str, nonrare_armor_int, nonrare_armor_str_int, nonrare_bow, nonrare_claw, nonrare_dagger,
@@ -184,20 +185,20 @@ def main():
 
 		print("Writing files to {}".format(path.expanduser("~\\my game\\Path of Exile\\")))
 
-		with open("xan.{}.show.filter".format(i[0]), "w") as f:
+		with open("xan.{}.show.filter".format(i[0]), "w", encoding='utf-8') as f:
 			f.write(buffer)
 			# Default for all other items
 			f.write("Show\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
-		with open(path.expanduser(r"~\Documents\my games\Path of Exile\xan.{}.show.filter".format(i[0])), "w") as f:
+		with open(path.expanduser(r"~\Documents\my games\Path of Exile\xan.{}.show.filter".format(i[0])), "w", encoding='utf-8') as f:
 			f.write(buffer)
 			# Default for all other items
 			f.write("Show\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
 
-		with open("xan.{}.hide.filter".format(i[0]), "w") as f:
+		with open("xan.{}.hide.filter".format(i[0]), "w", encoding='utf-8') as f:
 			f.write(buffer)
 			# Default for all other items
 			f.write("Hide\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
-		with open(path.expanduser(r"~\Documents\my games\Path of Exile\xan.{}.hide.filter".format(i[0])), "w") as f:
+		with open(path.expanduser(r"~\Documents\my games\Path of Exile\xan.{}.hide.filter".format(i[0])), "w", encoding='utf-8') as f:
 			f.write(buffer)
 			# Default for all other items
 			f.write("Hide\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
@@ -205,5 +206,5 @@ def main():
 
 if __name__ == "__main__":
 	# Price updates can take some time.  Uncomment to get most current data before updating filter
-	pricetool.divuniqueupdate()
+	#pricetool.divuniqueupdate()
 	main()
