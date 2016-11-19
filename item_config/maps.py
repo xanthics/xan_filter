@@ -29,10 +29,10 @@ desc = "maps"
 # Base type : settings pair
 items = {
 	# Tier 1
-	"1 Arcade Map": {"base": "Arcade Map", "class": "Maps", "other": ["ItemLevel <= 70", "DropLevel 68"], "type": "map white good"},
-	"1 Crystal Ore Map": {"base": "Crystal Ore Map", "class": "Maps", "other": ["ItemLevel <= 70", "DropLevel 68"], "type": "map white good"},
-	"1 Desert Map": {"base": "Desert Map", "class": "Maps", "other": ["ItemLevel <= 70", "DropLevel 68"], "type": "map white good"},
-	"1 Jungle Valley Map": {"base": "Jungle Valley Map", "class": "Maps", "other": ["ItemLevel <= 70", "DropLevel 68"], "type": "map white good"},
+	"1 Arcade Map": {"base": "Arcade Map", "class": "Maps", "other": ["ItemLevel <= 70"], "type": "map white good"},
+	"1 Crystal Ore Map": {"base": "Crystal Ore Map", "class": "Maps", "other": ["ItemLevel <= 70"], "type": "map white good"},
+	"1 Desert Map": {"base": "Desert Map", "class": "Maps", "other": ["ItemLevel <= 70"], "type": "map white good"},
+	"1 Jungle Valley Map": {"base": "Jungle Valley Map", "class": "Maps", "other": ["ItemLevel <= 70"], "type": "map white good"},
 
 	# Tier 2
 	"1 Beach Map": {"base": "Beach Map", "class": "Maps", "other": ["ItemLevel <= 71", "DropLevel 69"], "type": "map white good"},
@@ -92,7 +92,7 @@ items = {
 	"1 Castle Ruins Map": {"base": "Castle Ruins Map", "class": "Maps", "other": ["ItemLevel <= 76", "DropLevel 74"], "type": "map yellow good"},
 	"1 Catacombs Map": {"base": "Catacombs Map", "class": "Maps", "other": ["ItemLevel <= 76", "DropLevel 74"], "type": "map yellow good"},
 	"1 Cells Map": {"base": "Cells Map", "class": "Maps", "other": ["ItemLevel <= 76", "DropLevel 74"], "type": "map yellow good"},
-	"1 Armory Map": {"base": "Armory Map", "class": "Maps", "other": ["ItemLevel <= 76", "DropLevel 74"], "type": "map yellow good"},
+	"1 Armoury Map": {"base": "Armoury Map", "class": "Maps", "other": ["ItemLevel <= 76", "DropLevel 74"], "type": "map yellow good"},
 	"1 Ashen Wood Map": {"base": "Ashen Wood Map", "class": "Maps", "other": ["ItemLevel <= 76", "DropLevel 74"], "type": "map yellow good"},
 	"1 Mud Geyser Map": {"base": "Mud Geyser Map", "class": "Maps", "other": ["ItemLevel <= 76", "DropLevel 74"], "type": "map yellow good"},
 
@@ -171,7 +171,7 @@ items = {
 	"0 Shaped Castle Ruins Map": {"base": "Shaped Castle Ruins Map", "class": "Maps", "other": ["ItemLevel <= 81", "DropLevel 79"], "type": "map red good"},
 	"0 Shaped Catacombs Map": {"base": "Shaped Catacombs Map", "class": "Maps", "other": ["ItemLevel <= 81", "DropLevel 79"], "type": "map red good"},
 	"0 Shaped Cells Map": {"base": "Shaped Cells Map", "class": "Maps", "other": ["ItemLevel <= 81", "DropLevel 79"], "type": "map red good"},
-	"0 Shaped Armory Map": {"base": "Shaped Armory Map", "class": "Maps", "other": ["ItemLevel <= 81", "DropLevel 79"], "type": "map red good"},
+	"0 Shaped Armoury Map": {"base": "Shaped Armoury Map", "class": "Maps", "other": ["ItemLevel <= 81", "DropLevel 79"], "type": "map red good"},
 	"0 Shaped Ashen Wood Map": {"base": "Shaped Ashen Wood Map", "class": "Maps", "other": ["ItemLevel <= 81", "DropLevel 79"], "type": "map red good"},
 	"0 Shaped Mud Geyser Map": {"base": "Shaped Mud Geyser Map", "class": "Maps", "other": ["ItemLevel <= 81", "DropLevel 79"], "type": "map red good"},
 	"1 Crematorium Map": {"base": "Crematorium Map", "class": "Maps", "other": ["ItemLevel <= 81", "DropLevel 79"], "type": "map red good"},
