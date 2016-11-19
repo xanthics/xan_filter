@@ -30,13 +30,13 @@ Note: Requires Python 3.4.x
 
 from collections import defaultdict
 
-import math
 import requests
 from io import open
-from datetime import datetime, time
+from datetime import datetime
+import time
 import re
 from pymongo import MongoClient
-from bson import Code
+
 
 header = '''#!/usr/bin/python
 # -*- coding: utf-8 -*-
@@ -144,7 +144,7 @@ def get_stashes(ldb, start=None):
 							note = ""
 							if 'note' in iii and ('~b/o' in iii['note'] or '~price' in iii['note']):
 								note = iii['note']
-							elif 'stash' in ii and ('~b/o' in ii['stash'] or '~price' in ii['stash']):
+							elif 'stash' in ii and ii['stash'] and ('~b/o' in ii['stash'] or '~price' in ii['stash']):
 								note = ii['stash']
 								keys[ii['stash']] = True
 							if note:
@@ -192,7 +192,7 @@ def gen_lists(ldb):
 		{'$group': {'_id': '$_id', 'value': {'$push': '$value'}}},
 		{'$project': {
 			'_id': 1,
-			'value': {'$arrayElemAt': ['$value', {'$floor': {'$multiply': [0.25, {'$size': '$value'}]}}]}
+			'value': {'$arrayElemAt': ['$value', {'$floor': {'$multiply': [0.1, {'$size': '$value'}]}}]}
 		}}
 	], allowDiskUse=True)
 
@@ -200,6 +200,8 @@ def gen_lists(ldb):
 
 	for i in res:
 		data[i['_id']['league']][i['_id']['type']][i['_id']['base']] = i['value']
+
+	substringcards = find_substrings(ldb)
 
 	verygoodcard = ["Abandoned Wealth",  # 3x Exalted Orbs
 					"Bowyer's Dream",  # 6l ilvl 91 Harbinger
@@ -244,9 +246,18 @@ def gen_lists(ldb):
 				"The Scholar",
 				"Destined to Crumble"]
 
-	predefinedcards = badcards + lowcards + verygoodcard
+	for card in substringcards:
+		if card in verygoodcard:
+			verygoodcard.remove(card)
+
+	for card in substringcards:
+		if card in lowcards:
+			lowcards.remove(card)
+
+	predefinedcards = badcards + lowcards + verygoodcard + substringcards
 
 	for l in data.keys():
+		bcards = badcards[:]
 		if l == 'Standard':
 			name = ""
 		elif l == 'Hardcore':
@@ -284,13 +295,33 @@ def gen_lists(ldb):
 				items['low'].append(c)
 		with open('auto_gen\\{}divination.py'.format(name), 'w', encoding='utf-8') as f:
 			f.write(u'''{}\ndesc = "Divination Card"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), l)))
+			for c, ii in enumerate(substringcards):
+				if ii in data[l][6]:
+					if ii in bcards:
+						lvl = 'hide'
+						bcards.remove(ii)
+					elif data[l][6][ii] > 10:
+						lvl = 'divination very high'
+					elif data[l][6][ii] > 1.5:
+						lvl = 'divination high'
+					elif data[l][6][ii] < 0.5:
+						lvl = 'divination low'
+					else:
+						lvl = 'divination normal'
+				else:
+					if ii in bcards:
+						lvl = 'hide'
+						bcards.remove(ii)
+					else:
+						lvl = 'divination normal'
+				f.write(u'\t"{0:03d} {1}": {{"base": "{1}", "class": "Divination Card", "type": "{2}"}},\n'.format(c, ii, lvl))
 			for ii in sorted(items['high']):
-				f.write(u'\t"0 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination very high"}},\n'.format(ii))
+				f.write(u'\t"1 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination very high"}},\n'.format(ii))
 			for ii in sorted(items['normal']):
-				f.write(u'\t"1 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination high"}},\n'.format(ii))
+				f.write(u'\t"2 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination high"}},\n'.format(ii))
 			for ii in sorted(items['low']):
-				f.write(u'\t"2 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination low"}},\n'.format(ii))
-			for ii in sorted(badcards):
+				f.write(u'\t"3 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination low"}},\n'.format(ii))
+			for ii in sorted(bcards):
 				f.write(u'\t"7 {0}": {{"base": "{0}", "class": "Divination Card", "type": "hide"}},\n'.format(ii))
 			f.write(u'\t"9 Other uniques": {"class": "Divination Card", "type": "divination normal"}\n}\n')
 
@@ -305,7 +336,10 @@ def divuniqueupdate():
 	with MongoClient() as client:
 		ldb = client.stashdata
 
-		nc = None
+
+		gen_lists(ldb)
+
+'''		nc = None
 		oldnc = nc
 
 		while True:
@@ -320,8 +354,32 @@ def divuniqueupdate():
 			except TypeError as te:
 				print("TypeError: {}".format(te))
 				time.sleep(120)
+'''
 
-		gen_lists(ldb)
+
+#  Find all divination cards that have cards which are substrings
+
+def find_substrings(ldb):
+	z = ldb.items.distinct('base', {'type': 6})
+
+	a = {}
+	for r in range(len(z)):
+		for e in z[r+1:]:
+			if z[r] in e or e in z[r]:
+				if e in z[r]:
+					s, l = e, z[r]
+				else:
+					s, l = z[r], e
+				if s not in a:
+					a[s] = [l]
+				else:
+					a[s].append(l)
+
+	b = [b for g in a for b in a[g]]
+	# distinct values by convertint to a set
+	# reverse sort in case any names such as "a", "ab", "abc" exist due to how Python sorts
+	return sorted(set(b), reverse=True)
+
 
 if __name__ == '__main__':
 	divuniqueupdate()
