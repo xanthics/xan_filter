@@ -214,7 +214,6 @@ def gen_lists(ldb):
 		for ind in other:
 			if unique not in data[ind][3]:
 				data[ind][3][unique] = data['Standard'][3][unique]
-				print(unique, data['Standard'][3][unique], ind)
 
 
 
@@ -341,27 +340,26 @@ def divuniqueupdate():
 
 
 #  Find all divination cards that have cards which are substrings
-
 def find_substrings(ldb):
-	z = ldb.items.distinct('base', {'type': 6})
+	cardnames = ldb.items.distinct('base', {'type': 6})
 
-	a = {}
-	for r in range(len(z)):
-		for e in z[r+1:]:
-			if z[r] in e or e in z[r]:
-				if e in z[r]:
-					s, l = e, z[r]
+	substringmatches = {}
+	for index in range(len(cardnames)-1):
+		for card in cardnames[index+1:]:
+			if cardnames[index] in card or card in cardnames[index]:
+				if card in cardnames[index]:
+					sub, full = card, cardnames[index]
 				else:
-					s, l = z[r], e
-				if s not in a:
-					a[s] = [l]
+					sub, full = cardnames[index], card
+				if sub not in substringmatches:
+					substringmatches[sub] = [full]
 				else:
-					a[s].append(l)
+					substringmatches[sub].append(full)
 
-	b = [b for g in a for b in a[g]]
-	# distinct values by convertint to a set
+	badcards = [badcards for substring in substringmatches for badcards in substringmatches[substring]]
+	# distinct values by converting to a set
 	# reverse sort in case any names such as "a", "ab", "abc" exist due to how Python sorts
-	return sorted(set(b), reverse=True)
+	return sorted(set(badcards), reverse=True)
 
 
 if __name__ == '__main__':
