@@ -192,7 +192,7 @@ def gen_lists(ldb):
 		{'$group': {'_id': '$_id', 'value': {'$push': '$value'}}},
 		{'$project': {
 			'_id': 1,
-			'value': {'$arrayElemAt': ['$value', {'$floor': {'$multiply': [0.1, {'$size': '$value'}]}}]}
+			'value': {'$arrayElemAt': ['$value', {'$floor': {'$multiply': [0.25, {'$size': '$value'}]}}]}
 		}}
 	], allowDiskUse=True)
 
@@ -201,36 +201,24 @@ def gen_lists(ldb):
 	for i in res:
 		data[i['_id']['league']][i['_id']['type']][i['_id']['base']] = i['value']
 
-	substringcards = find_substrings(ldb)
+	# If Div card doesn't exist in league market copy from Standard league
+	# This is mostly for fresh leagues
+	other = league[:]
+	other.remove('Standard')
+	for card in data['Standard'][6]:
+		for ind in other:
+			if card not in data[ind][6]:
+				data[ind][6][card] = data['Standard'][6][card]
+	# Same thing as cards but for uniques
+	for unique in data['Standard'][3]:
+		for ind in other:
+			if unique not in data[ind][3]:
+				data[ind][3][unique] = data['Standard'][3][unique]
+				print(unique, data['Standard'][3][unique], ind)
 
-	verygoodcard = ["Abandoned Wealth",  # 3x Exalted Orbs
-					"Bowyer's Dream",  # 6l ilvl 91 Harbinger
-					"Chaotic Disposition",  # 5x Chaos
-					"Emperor of Purity",  # 6l ilvl 60 Holy Chainmail
-					"Heterochromia",  # Two-Stone Ring
-					"House of Mirrors",  # Mirror of Kalandra
-					"Hunter's Reward",  # The Taming
-					"Last Hope",  # Mortal Hope
-					"Pride Before the Fall",  # Kaom's Heart (corrupted)
-					"The Artist",  # Enhance level 4
-					"The Brittle Emperor",  # Voll's Devotion (corrupted)
-					"The Celestial Justicar",  # 6l Astral
-					"The Cursed King",  # Rigwald's Curse
-					"The Dark Mage",  # 6l ilvl 55 staff
-					"The Doctor",  # Headhunter
-					"The Dragon's Heart",  # Empower level 4
-					"The Enlightened",  # Enlighten level 3
-					"The Harvester",  # The Harvest
-					"The Hunger",  # Taste of Hate
-					"The Immortal",  # House of Mirrors
-					"The King's Heart",  # Kaom's Heart
-					"The Last One Standing",  # Atziri's Disfavour
-					"The Offering",  # Shavronne's Wrapping
-					"The Queen",  # Atziri's Acuity
-					"The Thaumaturgist",  # Shavronne's Revelation (corrupted)
-					"The Warlord",  # 6l ilvl 83 Coronal Maul
-					"Time-Lost Relic",  # League Specific item
-					"Wealth and Power"]  # Enlighten level 4
+
+
+	substringcards = find_substrings(ldb)
 
 	# Cards that will never be displayed
 	badcards = ["The Carrion Crow",
@@ -246,15 +234,7 @@ def gen_lists(ldb):
 				"The Scholar",
 				"Destined to Crumble"]
 
-	for card in substringcards:
-		if card in verygoodcard:
-			verygoodcard.remove(card)
-
-	for card in substringcards:
-		if card in lowcards:
-			lowcards.remove(card)
-
-	predefinedcards = badcards + lowcards + verygoodcard + substringcards
+	predefinedcards = badcards + lowcards + substringcards
 
 	for l in data.keys():
 		bcards = badcards[:]
@@ -283,7 +263,10 @@ def gen_lists(ldb):
 				f.write(u'\t"1 {0}": {{"base": "{0}", "type": "unique high"}},\n'.format(ii))
 			f.write(u'\t"9 Other uniques": {"type": "unique normal"}\n}\n')
 
-		items = {'high': verygoodcard[:], 'normal': [], 'low': lowcards[:]}
+		items = {'high': [], 'normal': [], 'low': lowcards[:]}
+		for card in substringcards:
+			if card in items['low']:
+				items['low'].remove(card)
 		for c in data[l][6]:
 			if c in predefinedcards:
 				pass
@@ -312,6 +295,8 @@ def gen_lists(ldb):
 					if ii in bcards:
 						lvl = 'hide'
 						bcards.remove(ii)
+					elif ii in lowcards:
+						lvl = 'divination low'
 					else:
 						lvl = 'divination normal'
 				f.write(u'\t"{0:03d} {1}": {{"base": "{1}", "class": "Divination Card", "type": "{2}"}},\n'.format(c, ii, lvl))
@@ -336,10 +321,7 @@ def divuniqueupdate():
 	with MongoClient() as client:
 		ldb = client.stashdata
 
-
-		gen_lists(ldb)
-
-'''		nc = None
+		nc = None
 		oldnc = nc
 
 		while True:
@@ -354,7 +336,8 @@ def divuniqueupdate():
 			except TypeError as te:
 				print("TypeError: {}".format(te))
 				time.sleep(120)
-'''
+
+		gen_lists(ldb)
 
 
 #  Find all divination cards that have cards which are substrings
