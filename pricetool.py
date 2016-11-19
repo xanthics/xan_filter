@@ -30,13 +30,13 @@ Note: Requires Python 3.4.x
 
 from collections import defaultdict
 
-import math
 import requests
 from io import open
-from datetime import datetime, time
+from datetime import datetime
+import time
 import re
 from pymongo import MongoClient
-from bson import Code
+
 
 header = '''#!/usr/bin/python
 # -*- coding: utf-8 -*-
@@ -144,7 +144,7 @@ def get_stashes(ldb, start=None):
 							note = ""
 							if 'note' in iii and ('~b/o' in iii['note'] or '~price' in iii['note']):
 								note = iii['note']
-							elif 'stash' in ii and ('~b/o' in ii['stash'] or '~price' in ii['stash']):
+							elif 'stash' in ii and ii['stash'] and ('~b/o' in ii['stash'] or '~price' in ii['stash']):
 								note = ii['stash']
 								keys[ii['stash']] = True
 							if note:
@@ -201,34 +201,24 @@ def gen_lists(ldb):
 	for i in res:
 		data[i['_id']['league']][i['_id']['type']][i['_id']['base']] = i['value']
 
-	verygoodcard = ["Abandoned Wealth",  # 3x Exalted Orbs
-					"Bowyer's Dream",  # 6l ilvl 91 Harbinger
-					"Chaotic Disposition",  # 5x Chaos
-					"Emperor of Purity",  # 6l ilvl 60 Holy Chainmail
-					"Heterochromia",  # Two-Stone Ring
-					"House of Mirrors",  # Mirror of Kalandra
-					"Hunter's Reward",  # The Taming
-					"Last Hope",  # Mortal Hope
-					"Pride Before the Fall",  # Kaom's Heart (corrupted)
-					"The Artist",  # Enhance level 4
-					"The Brittle Emperor",  # Voll's Devotion (corrupted)
-					"The Celestial Justicar",  # 6l Astral
-					"The Cursed King",  # Rigwald's Curse
-					"The Dark Mage",  # 6l ilvl 55 staff
-					"The Doctor",  # Headhunter
-					"The Dragon's Heart",  # Empower level 4
-					"The Enlightened",  # Enlighten level 3
-					"The Harvester",  # The Harvest
-					"The Hunger",  # Taste of Hate
-					"The Immortal",  # House of Mirrors
-					"The King's Heart",  # Kaom's Heart
-					"The Last One Standing",  # Atziri's Disfavour
-					"The Offering",  # Shavronne's Wrapping
-					"The Queen",  # Atziri's Acuity
-					"The Thaumaturgist",  # Shavronne's Revelation (corrupted)
-					"The Warlord",  # 6l ilvl 83 Coronal Maul
-					"Time-Lost Relic",  # League Specific item
-					"Wealth and Power"]  # Enlighten level 4
+	# If Div card doesn't exist in league market copy from Standard league
+	# This is mostly for fresh leagues
+	other = league[:]
+	other.remove('Standard')
+	for card in data['Standard'][6]:
+		for ind in other:
+			if card not in data[ind][6]:
+				data[ind][6][card] = data['Standard'][6][card]
+	# Same thing as cards but for uniques
+	for unique in data['Standard'][3]:
+		for ind in other:
+			if unique not in data[ind][3]:
+				data[ind][3][unique] = data['Standard'][3][unique]
+				print(unique, data['Standard'][3][unique], ind)
+
+
+
+	substringcards = find_substrings(ldb)
 
 	# Cards that will never be displayed
 	badcards = ["The Carrion Crow",
@@ -244,9 +234,10 @@ def gen_lists(ldb):
 				"The Scholar",
 				"Destined to Crumble"]
 
-	predefinedcards = badcards + lowcards + verygoodcard
+	predefinedcards = badcards + lowcards + substringcards
 
 	for l in data.keys():
+		bcards = badcards[:]
 		if l == 'Standard':
 			name = ""
 		elif l == 'Hardcore':
@@ -272,7 +263,10 @@ def gen_lists(ldb):
 				f.write(u'\t"1 {0}": {{"base": "{0}", "type": "unique high"}},\n'.format(ii))
 			f.write(u'\t"9 Other uniques": {"type": "unique normal"}\n}\n')
 
-		items = {'high': verygoodcard[:], 'normal': [], 'low': lowcards[:]}
+		items = {'high': [], 'normal': [], 'low': lowcards[:]}
+		for card in substringcards:
+			if card in items['low']:
+				items['low'].remove(card)
 		for c in data[l][6]:
 			if c in predefinedcards:
 				pass
@@ -284,13 +278,35 @@ def gen_lists(ldb):
 				items['low'].append(c)
 		with open('auto_gen\\{}divination.py'.format(name), 'w', encoding='utf-8') as f:
 			f.write(u'''{}\ndesc = "Divination Card"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), l)))
+			for c, ii in enumerate(substringcards):
+				if ii in data[l][6]:
+					if ii in bcards:
+						lvl = 'hide'
+						bcards.remove(ii)
+					elif data[l][6][ii] > 10:
+						lvl = 'divination very high'
+					elif data[l][6][ii] > 1.5:
+						lvl = 'divination high'
+					elif data[l][6][ii] < 0.5:
+						lvl = 'divination low'
+					else:
+						lvl = 'divination normal'
+				else:
+					if ii in bcards:
+						lvl = 'hide'
+						bcards.remove(ii)
+					elif ii in lowcards:
+						lvl = 'divination low'
+					else:
+						lvl = 'divination normal'
+				f.write(u'\t"{0:03d} {1}": {{"base": "{1}", "class": "Divination Card", "type": "{2}"}},\n'.format(c, ii, lvl))
 			for ii in sorted(items['high']):
-				f.write(u'\t"0 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination very high"}},\n'.format(ii))
+				f.write(u'\t"1 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination very high"}},\n'.format(ii))
 			for ii in sorted(items['normal']):
-				f.write(u'\t"1 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination high"}},\n'.format(ii))
+				f.write(u'\t"2 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination high"}},\n'.format(ii))
 			for ii in sorted(items['low']):
-				f.write(u'\t"2 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination low"}},\n'.format(ii))
-			for ii in sorted(badcards):
+				f.write(u'\t"3 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination low"}},\n'.format(ii))
+			for ii in sorted(bcards):
 				f.write(u'\t"7 {0}": {{"base": "{0}", "class": "Divination Card", "type": "hide"}},\n'.format(ii))
 			f.write(u'\t"9 Other uniques": {"class": "Divination Card", "type": "divination normal"}\n}\n')
 
@@ -322,6 +338,31 @@ def divuniqueupdate():
 				time.sleep(120)
 
 		gen_lists(ldb)
+
+
+#  Find all divination cards that have cards which are substrings
+
+def find_substrings(ldb):
+	z = ldb.items.distinct('base', {'type': 6})
+
+	a = {}
+	for r in range(len(z)):
+		for e in z[r+1:]:
+			if z[r] in e or e in z[r]:
+				if e in z[r]:
+					s, l = e, z[r]
+				else:
+					s, l = z[r], e
+				if s not in a:
+					a[s] = [l]
+				else:
+					a[s].append(l)
+
+	b = [b for g in a for b in a[g]]
+	# distinct values by convertint to a set
+	# reverse sort in case any names such as "a", "ab", "abc" exist due to how Python sorts
+	return sorted(set(b), reverse=True)
+
 
 if __name__ == '__main__':
 	divuniqueupdate()
