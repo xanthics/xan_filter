@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 11/19/2016(m/d/y) 08:33:39 UTC from "Hardcore" data
+# Created: 11/20/2016(m/d/y) 00:45:22 UTC from "Hardcore" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -38,11 +38,14 @@ items = {
 	"1 Abandoned Wealth": {"base": "Abandoned Wealth", "class": "Divination Card", "type": "divination very high"},
 	"1 Bowyer's Dream": {"base": "Bowyer's Dream", "class": "Divination Card", "type": "divination very high"},
 	"1 Coveted Possession": {"base": "Coveted Possession", "class": "Divination Card", "type": "divination very high"},
+	"1 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination very high"},
 	"1 Heterochromia": {"base": "Heterochromia", "class": "Divination Card", "type": "divination very high"},
 	"1 House of Mirrors": {"base": "House of Mirrors", "class": "Divination Card", "type": "divination very high"},
 	"1 Hunter's Resolve": {"base": "Hunter's Resolve", "class": "Divination Card", "type": "divination very high"},
 	"1 Hunter's Reward": {"base": "Hunter's Reward", "class": "Divination Card", "type": "divination very high"},
 	"1 Lucky Connections": {"base": "Lucky Connections", "class": "Divination Card", "type": "divination very high"},
+	"1 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination very high"},
+	"1 Lysah's Respite": {"base": "Lysah's Respite", "class": "Divination Card", "type": "divination very high"},
 	"1 Mawr Blaidd": {"base": "Mawr Blaidd", "class": "Divination Card", "type": "divination very high"},
 	"1 Pride Before the Fall": {"base": "Pride Before the Fall", "class": "Divination Card", "type": "divination very high"},
 	"1 The Aesthete": {"base": "The Aesthete", "class": "Divination Card", "type": "divination very high"},
@@ -62,6 +65,7 @@ items = {
 	"1 The Harvester": {"base": "The Harvester", "class": "Divination Card", "type": "divination very high"},
 	"1 The Hunger": {"base": "The Hunger", "class": "Divination Card", "type": "divination very high"},
 	"1 The Immortal": {"base": "The Immortal", "class": "Divination Card", "type": "divination very high"},
+	"1 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination very high"},
 	"1 The King's Heart": {"base": "The King's Heart", "class": "Divination Card", "type": "divination very high"},
 	"1 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination very high"},
 	"1 The Lion": {"base": "The Lion", "class": "Divination Card", "type": "divination very high"},
@@ -89,13 +93,10 @@ items = {
 	"2 Dialla's Subjugation": {"base": "Dialla's Subjugation", "class": "Divination Card", "type": "divination high"},
 	"2 Dying Anguish": {"base": "Dying Anguish", "class": "Divination Card", "type": "divination high"},
 	"2 Earth Drinker": {"base": "Earth Drinker", "class": "Divination Card", "type": "divination high"},
-	"2 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination high"},
 	"2 Hope": {"base": "Hope", "class": "Divination Card", "type": "divination high"},
 	"2 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
 	"2 Jack in the Box": {"base": "Jack in the Box", "class": "Divination Card", "type": "divination high"},
 	"2 Lost Worlds": {"base": "Lost Worlds", "class": "Divination Card", "type": "divination high"},
-	"2 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination high"},
-	"2 Lysah's Respite": {"base": "Lysah's Respite", "class": "Divination Card", "type": "divination high"},
 	"2 Merciless Armament": {"base": "Merciless Armament", "class": "Divination Card", "type": "divination high"},
 	"2 The Arena Champion": {"base": "The Arena Champion", "class": "Divination Card", "type": "divination high"},
 	"2 The Calling": {"base": "The Calling", "class": "Divination Card", "type": "divination high"},
@@ -111,7 +112,6 @@ items = {
 	"2 The Gladiator": {"base": "The Gladiator", "class": "Divination Card", "type": "divination high"},
 	"2 The Hermit": {"base": "The Hermit", "class": "Divination Card", "type": "divination high"},
 	"2 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination high"},
-	"2 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination high"},
 	"2 The Inventor": {"base": "The Inventor", "class": "Divination Card", "type": "divination high"},
 	"2 The Jester": {"base": "The Jester", "class": "Divination Card", "type": "divination high"},
 	"2 The Penitent": {"base": "The Penitent", "class": "Divination Card", "type": "divination high"},
