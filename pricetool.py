@@ -247,9 +247,9 @@ def gen_lists(ldb):
 
 		for u in data[l][3].keys():
 
-			if data[l][3][u] >= 50:
+			if data[l][3][u] >= chaosequiv(1, 'exa', l):
 				items['very high'].append(u)
-			elif data[l][3][u] >= 10:
+			elif data[l][3][u] >= chaosequiv(.2, 'exa', l):
 				items['high'].append(u)
 
 		with open('auto_gen\\{}uniques.py'.format(name), 'w', encoding='utf-8') as f:
@@ -267,35 +267,26 @@ def gen_lists(ldb):
 		for c in data[l][6]:
 			if c in predefinedcards:
 				pass
-			elif data[l][6][c] > 10:
+			elif data[l][6][c] > chaosequiv(.2, 'exa', l):
 				items['high'].append(c)
-			elif data[l][6][c] > 1.5:
+			elif data[l][6][c] > chaosequiv(.035, 'exa', l):
 				items['normal'].append(c)
 			elif data[l][6][c] < 0.5:
 				items['low'].append(c)
 		with open('auto_gen\\{}divination.py'.format(name), 'w', encoding='utf-8') as f:
 			f.write(u'''{}\ndesc = "Divination Card"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), l)))
 			for c, ii in enumerate(substringcards):
-				if ii in data[l][6]:
-					if ii in bcards:
-						lvl = 'hide'
-						bcards.remove(ii)
-					elif data[l][6][ii] > 10:
-						lvl = 'divination very high'
-					elif data[l][6][ii] > 1.5:
-						lvl = 'divination high'
-					elif data[l][6][ii] < 0.5:
-						lvl = 'divination low'
-					else:
-						lvl = 'divination normal'
+				if ii in bcards:
+					lvl = 'hide'
+					bcards.remove(ii)
+				elif data[l][6][ii] > chaosequiv(.2, 'exa', l):
+					lvl = 'divination very high'
+				elif data[l][6][ii] > chaosequiv(.035, 'exa', l):
+					lvl = 'divination high'
+				elif data[l][6][ii] < 0.5:
+					lvl = 'divination low'
 				else:
-					if ii in bcards:
-						lvl = 'hide'
-						bcards.remove(ii)
-					elif ii in lowcards:
-						lvl = 'divination low'
-					else:
-						lvl = 'divination normal'
+					lvl = 'divination normal'
 				f.write(u'\t"{0:03d} {1}": {{"base": "{1}", "class": "Divination Card", "type": "{2}"}},\n'.format(c, ii, lvl))
 			for ii in sorted(items['high']):
 				f.write(u'\t"1 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination very high"}},\n'.format(ii))
