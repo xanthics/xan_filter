@@ -37,6 +37,10 @@ import time
 import re
 from pymongo import MongoClient
 
+from auto_gen import currencyrates
+from auto_gen import hccurrencyrates
+from auto_gen import pcurrencyrates
+from auto_gen import phccurrencyrates
 
 header = '''#!/usr/bin/python
 # -*- coding: utf-8 -*-
@@ -68,34 +72,30 @@ Note: Requires Python 3.4.x
 """
 '''
 
+
 #  Calculate chaos equiv based on league
 def chaosequiv(cost, unit, league):
-	standard = {"exa": 80, "chaos": 1, "fuse": .333, "regal": 1, "alt": 0.1875, "alch": .333, "jew": 0.1, "gcp": 1,
-				"divine": 35, "scour": 0.5, "blessed": 0.5, "vaal": 0.666, "chance": 0.10, "regret": 0.75, "chrom": 0.1875,
-				"mirror": 20000, "chisel": 0.25, "silver": 0.333}
-	hardcore = {"exa": 40, "chaos": 1, "fuse": .333, "regal": 1, "alt": 0.1875, "alch": .333, "jew": 0.1, "gcp": 1,
-				"divine": 10, "scour": 0.5, "blessed": 0.5, "vaal": 0.666, "chance": 0.10, "regret": 0.75, "chrom": 0.1875,
-				"mirror": 10000, "chisel": 0.25, "silver": 0.333}
-	challenge = {"exa": 60, "chaos": 1, "fuse": .333, "regal": 1, "alt": 0.1875, "alch": .333, "jew": 0.1, "gcp": 1,
-				"divine": 7, "scour": 0.5, "blessed": 0.5, "vaal": 0.666, "chance": 0.10, "regret": 0.75, "chrom": 0.1875,
-				"mirror": 15000, "chisel": 0.25, "silver": 0.333}
-	challengehc = {"exa": 30, "chaos": 1, "fuse": .333, "regal": 1, "alt": 0.1875, "alch": .333, "jew": 0.1, "gcp": 1,
-				"divine": 6, "scour": 0.5, "blessed": 0.5, "vaal": 0.666, "chance": 0.10, "regret": 0.75, "chrom": 0.1875,
-				"mirror": 8100, "chisel": 0.25, "silver": 0.333}
 	if league == 'Standard':
-		return cost * standard[unit]
+		return cost * currencyrates.items[unit]
 	elif league == 'Hardcore':
-		return cost * hardcore[unit]
+		return cost * hccurrencyrates.items[unit]
 	elif 'Hardcore' in league:
-		return cost * challenge[unit]
+		return cost * pcurrencyrates.items[unit]
 	else:
-		return cost * challengehc[unit]
+		return cost * phccurrencyrates.items[unit]
 
 
-#  Update chaos equiv on items based on league
+# Update chaos equiv on items based on league
 def updatechaosequiv(ldb):
-	for i in ldb.items.find():
+	print('Starting update of existing data')
+	count = ldb.items.count()
+	steps = 100
+	thresholds = [i*count//steps for i in range(steps)]
+	for c, i in enumerate(ldb.items.find()):
+		if c in thresholds:
+			print('{:.2f}% done'.format(c/count*100))
 		ldb.items.update({'_id': i['_id']}, {'$set': {'chaosequiv': chaosequiv(i['cost'], i['unit'], i['league'])}})
+	print('Finished updating existing data')
 
 
 # Add current data to the ldb
@@ -215,8 +215,6 @@ def gen_lists(ldb):
 			if unique not in data[ind][3]:
 				data[ind][3][unique] = data['Standard'][3][unique]
 
-
-
 	substringcards = find_substrings(ldb)
 
 	# Cards that will never be displayed
@@ -310,7 +308,6 @@ def gen_lists(ldb):
 			f.write(u'\t"9 Other uniques": {"class": "Divination Card", "type": "divination normal"}\n}\n')
 
 
-
 def divuniqueupdate():
 	# Make sure error file exists for invalid tab data
 	from os.path import exists
@@ -339,13 +336,13 @@ def divuniqueupdate():
 		gen_lists(ldb)
 
 
-#  Find all divination cards that have cards which are substrings
+# Find all divination cards that have cards which are substrings
 def find_substrings(ldb):
 	cardnames = ldb.items.distinct('base', {'type': 6})
 
 	substringmatches = {}
-	for index in range(len(cardnames)-1):
-		for card in cardnames[index+1:]:
+	for index in range(len(cardnames) - 1):
+		for card in cardnames[index + 1:]:
 			if cardnames[index] in card or card in cardnames[index]:
 				if card in cardnames[index]:
 					sub, full = card, cardnames[index]
@@ -362,5 +359,73 @@ def find_substrings(ldb):
 	return sorted(set(badcards), reverse=True)
 
 
+# scrape poe.trade for currency exchange rates
+def poetrade_getcurrencyrates():
+	currencies = {"exa": 6, "fuse": 2, "regal": 14, "alt": 1, "alch": 3, "jew": 8, "gcp": 5,
+				  "divine": 15, "scour": 11, "blessed": 12, "vaal": 16, "chance": 9, "regret": 13, "chrom": 7,
+				  "chisel": 10, "silver": 35}
+
+	chaos = 4
+
+	defaults = {"exa": 80, "chaos": 1, "fuse": .333, "regal": 1, "alt": 0.1875, "alch": .333, "jew": 0.1, "gcp": 1,
+				"divine": 35, "scour": 0.5, "blessed": 0.5, "vaal": 0.666, "chance": 0.10, "regret": 0.75, "chrom": 0.1875,
+				"mirror": 20000, "chisel": 0.25, "silver": 0.333}
+
+	with MongoClient() as client:
+		ldb = client.stashdata
+		league = ldb.items.distinct('league')
+
+		for l in league:
+			if l == 'Standard':
+				name = ""
+			elif l == 'Hardcore':
+				name = "hc"
+			elif 'Hardcore' in l:
+				name = "phc"
+			else:
+				name = "p"
+
+			# Populate ratios with amount currency is being bought for chaos
+			ratios = [[] for i in range(max(currencies.values()) + 1)]
+			url = "http://currency.poe.trade/search?league={}&online=x&want={}&have={}".format(l, chaos, '-'.join([str(currencies[d]) for d in currencies]))
+			req = requests.get(url).text
+			for i in (req.split('\n')):
+				if 'data-sellcurrency="4"' in i:
+					crate = float(re.search(r'data-sellvalue="(-?\d*(\.\d+)?)"', i.lower()).group(1))
+					rtype = int(re.search(r'data-buycurrency="(-?\d*(\.\d+)?)"', i.lower()).group(1))
+					rrate = float(re.search(r'data-buyvalue="(-?\d*(\.\d+)?)"', i.lower()).group(1))
+					ratios[rtype].append(crate / rrate)
+
+			# Populate ratios with amount of currency you can buy for a chaos
+			url = "http://currency.poe.trade/search?league={}&online=x&want={}&have={}".format(l, '-'.join([str(currencies[d]) for d in currencies]), chaos)
+			req = requests.get(url).text
+			for i in (req.split('\n')):
+				if 'data-buycurrency="4"' in i:
+					crate = float(re.search(r'data-buyvalue="(-?\d*(\.\d+)?)"', i.lower()).group(1))
+					rtype = int(re.search(r'data-sellcurrency="(-?\d*(\.\d+)?)"', i.lower()).group(1))
+					rrate = float(re.search(r'data-sellvalue="(-?\d*(\.\d+)?)"', i.lower()).group(1))
+					ratios[rtype].append(crate / rrate)
+
+			with open('auto_gen\\{}currencyrates.py'.format(name), 'w', encoding='utf-8') as f:
+				f.write(u'''{}\ndesc = "Currency Rates"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), l)))
+				for cur in sorted(defaults.keys()):
+					if cur in currencies and ratios[currencies[cur]] and len(ratios[currencies[cur]]) > 5:
+						f.write(u'\t"{}": {},\n'.format(cur, ratios[currencies[cur]][len(ratios[currencies[cur]]) // 4]))
+					else:
+						if cur in currencies:
+							# print the currencies that didn't have enough data
+							print(cur, l, ratios[currencies[cur]], len(ratios[currencies[cur]]))
+						f.write(u'\t"{}": {},\n'.format(cur, defaults[cur]))
+				f.write(u'}\n')
+
+		updatechaosequiv(ldb)
+		gen_lists(ldb)
+
 if __name__ == '__main__':
+	# poetrade_getcurrencyrates()
 	divuniqueupdate()
+
+	# with MongoClient() as client:
+		# ldb = client.stashdata
+		# gen_lists(ldb)
+
