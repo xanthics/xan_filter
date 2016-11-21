@@ -140,9 +140,9 @@ settings = {
 			   "SetBackgroundColor {} 220".format(color['black'])],
 
 	"chance": ["Rarity Normal",
-			   "SetFontSize {}".format(size['small']),
+			   "SetFontSize {}".format(size['large']),
 			   "SetBorderColor {} 150".format(color['premiumorange']),
-			   "SetBackgroundColor {} 220".format(color['black'])],
+			   "SetBackgroundColor {} 220".format(color['premiumdpurple'])],
 
 	"chromatic": ["SocketGroup RGB",
 				  "SetBorderColor {}".format(color['premiumgreen']), 
