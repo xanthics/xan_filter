@@ -208,6 +208,7 @@ def gen_lists(ldb):
 	for card in data['Standard'][6]:
 		for ind in other:
 			if card not in data[ind][6]:
+				print("{}: {}".format(ind, card))
 				data[ind][6][card] = data['Standard'][6][card]
 	# Same thing as cards but for uniques
 	for unique in data['Standard'][3]:
@@ -216,6 +217,9 @@ def gen_lists(ldb):
 				data[ind][3][unique] = data['Standard'][3][unique]
 
 	substringcards = find_substrings(ldb)
+
+	# Cards that are so rare they may not even be on Standard
+	verygoodcards = ['House of Mirrors']
 
 	# Cards that will never be displayed
 	badcards = ["The Carrion Crow",
@@ -231,7 +235,7 @@ def gen_lists(ldb):
 				"The Scholar",
 				"Destined to Crumble"]
 
-	predefinedcards = badcards + lowcards + substringcards
+	predefinedcards = badcards + lowcards + substringcards + verygoodcards
 
 	for l in data.keys():
 		bcards = badcards[:]
@@ -260,7 +264,7 @@ def gen_lists(ldb):
 				f.write(u'\t"1 {0}": {{"base": "{0}", "type": "unique high"}},\n'.format(ii))
 			f.write(u'\t"9 Other uniques": {"type": "unique normal"}\n}\n')
 
-		items = {'high': [], 'normal': [], 'low': lowcards[:]}
+		items = {'high': verygoodcards[:], 'normal': [], 'low': lowcards[:]}
 		for card in substringcards:
 			if card in items['low']:
 				items['low'].remove(card)
@@ -358,9 +362,9 @@ def poetrade_getcurrencyrates():
 
 	chaos = 4
 
-	defaults = {"exa": 80, "chaos": 1, "fuse": .333, "regal": 1, "alt": 0.1875, "alch": .333, "jew": 0.1, "gcp": 1,
-				"divine": 35, "scour": 0.5, "blessed": 0.5, "vaal": 0.666, "chance": 0.10, "regret": 0.75, "chrom": 0.1875,
-				"mirror": 20000, "chisel": 0.25, "silver": 0.333}
+	defaults = {"exa": 60.0, "chaos": 1.0, "fuse": 0.5, "regal": 1, "alt": 1/16, "alch": 1/3, "jew": 1/8, "gcp": 1,
+				"divine": 15.0, "scour": 0.5, "blessed": 0.5, "vaal": 1, "chance": 1/14, "regret": 1.0, "chrom": 1/15,
+				"mirror": 20000.0, "chisel": 0.25, "silver": 0.333}
 
 	with MongoClient() as client:
 		ldb = client.stashdata
@@ -401,7 +405,8 @@ def poetrade_getcurrencyrates():
 				f.write(u'''{}\ndesc = "Currency Rates"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), l)))
 				for cur in sorted(defaults.keys()):
 					if cur in currencies and ratios[currencies[cur]] and len(ratios[currencies[cur]]) > 5:
-						f.write(u'\t"{}": {},\n'.format(cur, ratios[currencies[cur]][len(ratios[currencies[cur]]) // 4]))
+						ratios[currencies[cur]].sort()
+						f.write(u'\t"{}": {},\n'.format(cur, ratios[currencies[cur]][(len(ratios[currencies[cur]]) * 3) // 4]))
 					else:
 						if cur in currencies:
 							# print the currencies that didn't have enough data
