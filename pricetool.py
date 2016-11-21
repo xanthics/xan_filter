@@ -205,8 +205,8 @@ def gen_lists(ldb):
 	# This is mostly for fresh leagues
 	other = league[:]
 	other.remove('Standard')
-	for card in data['Standard'][6]:
-		for ind in other:
+	for ind in other:
+		for card in data['Standard'][6]:
 			if card not in data[ind][6]:
 				print("{}: {}".format(ind, card))
 				data[ind][6][card] = data['Standard'][6][card]
