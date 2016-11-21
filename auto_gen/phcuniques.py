@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 11/20/2016(m/d/y) 00:45:22 UTC from "Hardcore Essence" data
+# Created: 11/21/2016(m/d/y) 01:26:19 UTC from "Hardcore Essence" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -77,7 +77,6 @@ items = {
 	"1 Imperial Skean": {"base": "Imperial Skean", "type": "unique high"},
 	"1 Imperial Staff": {"base": "Imperial Staff", "type": "unique high"},
 	"1 Lion Pelt": {"base": "Lion Pelt", "type": "unique high"},
-	"1 Midnight Blade": {"base": "Midnight Blade", "type": "unique high"},
 	"1 Museum Map": {"base": "Museum Map", "type": "unique high"},
 	"1 Penetrating Arrow Quiver": {"base": "Penetrating Arrow Quiver", "type": "unique high"},
 	"1 Ruby Amulet": {"base": "Ruby Amulet", "type": "unique high"},
