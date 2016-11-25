@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 11/21/2016(m/d/y) 01:36:00 UTC from "Hardcore Essence" data
+# Created: 11/21/2016(m/d/y) 23:00:20 UTC from "Hardcore Essence" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -93,5 +93,31 @@ items = {
 	"1 Vaal Sceptre": {"base": "Vaal Sceptre", "type": "unique high"},
 	"1 Varnished Coat": {"base": "Varnished Coat", "type": "unique high"},
 	"1 Wereclaw Talisman": {"base": "Wereclaw Talisman", "type": "unique high"},
+	"7 Aventail Helmet": {"base": "Aventail Helmet", "type": "unique low"},
+	"7 Awl": {"base": "Awl", "type": "unique low"},
+	"7 Buckskin Tunic": {"base": "Buckskin Tunic", "type": "unique low"},
+	"7 Chain Gloves": {"base": "Chain Gloves", "type": "unique low"},
+	"7 Compound Spiked Shield": {"base": "Compound Spiked Shield", "type": "unique low"},
+	"7 Dragonscale Gauntlets": {"base": "Dragonscale Gauntlets", "type": "unique low"},
+	"7 Dread Maul": {"base": "Dread Maul", "type": "unique low"},
+	"7 Dream Mace": {"base": "Dream Mace", "type": "unique low"},
+	"7 Golden Buckler": {"base": "Golden Buckler", "type": "unique low"},
+	"7 Great Helmet": {"base": "Great Helmet", "type": "unique low"},
+	"7 Iron Mask": {"base": "Iron Mask", "type": "unique low"},
+	"7 Ironscale Boots": {"base": "Ironscale Boots", "type": "unique low"},
+	"7 Leather Hood": {"base": "Leather Hood", "type": "unique low"},
+	"7 Necromancer Circlet": {"base": "Necromancer Circlet", "type": "unique low"},
+	"7 Ornate Mace": {"base": "Ornate Mace", "type": "unique low"},
+	"7 Ornate Ringmail": {"base": "Ornate Ringmail", "type": "unique low"},
+	"7 Platinum Kris": {"base": "Platinum Kris", "type": "unique low"},
+	"7 Prophet Crown": {"base": "Prophet Crown", "type": "unique low"},
+	"7 Quartz Flask": {"base": "Quartz Flask", "type": "unique low"},
+	"7 Secutor Helm": {"base": "Secutor Helm", "type": "unique low"},
+	"7 Shagreen Boots": {"base": "Shagreen Boots", "type": "unique low"},
+	"7 Spidersilk Robe": {"base": "Spidersilk Robe", "type": "unique low"},
+	"7 Timeworn Claw": {"base": "Timeworn Claw", "type": "unique low"},
+	"7 Tricorne": {"base": "Tricorne", "type": "unique low"},
+	"7 Vaal Buckler": {"base": "Vaal Buckler", "type": "unique low"},
+	"7 War Buckler": {"base": "War Buckler", "type": "unique low"},
 	"9 Other uniques": {"type": "unique normal"}
 }

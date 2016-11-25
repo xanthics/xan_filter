@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 11/21/2016(m/d/y) 01:36:00 UTC from "Standard" data
+# Created: 11/21/2016(m/d/y) 23:00:20 UTC from "Standard" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -115,5 +115,37 @@ items = {
 	"1 Vaal Regalia": {"base": "Vaal Regalia", "type": "unique high"},
 	"1 Vaal Sceptre": {"base": "Vaal Sceptre", "type": "unique high"},
 	"1 Varnished Coat": {"base": "Varnished Coat", "type": "unique high"},
+	"7 Aventail Helmet": {"base": "Aventail Helmet", "type": "unique low"},
+	"7 Awl": {"base": "Awl", "type": "unique low"},
+	"7 Bastard Sword": {"base": "Bastard Sword", "type": "unique low"},
+	"7 Buckskin Tunic": {"base": "Buckskin Tunic", "type": "unique low"},
+	"7 Chain Gloves": {"base": "Chain Gloves", "type": "unique low"},
+	"7 Cleaver": {"base": "Cleaver", "type": "unique low"},
+	"7 Compound Spiked Shield": {"base": "Compound Spiked Shield", "type": "unique low"},
+	"7 Dread Maul": {"base": "Dread Maul", "type": "unique low"},
+	"7 Dream Mace": {"base": "Dream Mace", "type": "unique low"},
+	"7 Gilded Sallet": {"base": "Gilded Sallet", "type": "unique low"},
+	"7 Gnarled Branch": {"base": "Gnarled Branch", "type": "unique low"},
+	"7 Great Helmet": {"base": "Great Helmet", "type": "unique low"},
+	"7 Iron Hat": {"base": "Iron Hat", "type": "unique low"},
+	"7 Ironscale Boots": {"base": "Ironscale Boots", "type": "unique low"},
+	"7 Jagged Maul": {"base": "Jagged Maul", "type": "unique low"},
+	"7 Leather Hood": {"base": "Leather Hood", "type": "unique low"},
+	"7 Nailed Fist": {"base": "Nailed Fist", "type": "unique low"},
+	"7 Ornate Mace": {"base": "Ornate Mace", "type": "unique low"},
+	"7 Ornate Ringmail": {"base": "Ornate Ringmail", "type": "unique low"},
+	"7 Reinforced Tower Shield": {"base": "Reinforced Tower Shield", "type": "unique low"},
+	"7 Royal Staff": {"base": "Royal Staff", "type": "unique low"},
+	"7 Shagreen Boots": {"base": "Shagreen Boots", "type": "unique low"},
+	"7 Soldier Helmet": {"base": "Soldier Helmet", "type": "unique low"},
+	"7 Spiked Club": {"base": "Spiked Club", "type": "unique low"},
+	"7 Stiletto": {"base": "Stiletto", "type": "unique low"},
+	"7 Strapped Leather": {"base": "Strapped Leather", "type": "unique low"},
+	"7 Timeworn Claw": {"base": "Timeworn Claw", "type": "unique low"},
+	"7 Tricorne": {"base": "Tricorne", "type": "unique low"},
+	"7 Vaal Buckler": {"base": "Vaal Buckler", "type": "unique low"},
+	"7 War Buckler": {"base": "War Buckler", "type": "unique low"},
+	"7 Wild Leather": {"base": "Wild Leather", "type": "unique low"},
+	"7 Wrapped Mitts": {"base": "Wrapped Mitts", "type": "unique low"},
 	"9 Other uniques": {"type": "unique normal"}
 }

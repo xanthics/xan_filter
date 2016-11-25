@@ -1,6 +1,6 @@
 #**************************************************************
 # Welcome to xan.filter, a Python generated loot filter for PoE
-# This filter was generated for Hardcore on 11/21/2016(m/d/y) 02:53:08 UTC
+# This filter was generated for Hardcore on 11/22/2016(m/d/y) 00:24:01 UTC
 # The most current version of code can always be found at https://github.com/xanthics/poe_filter
 #**************************************************************
 
@@ -1617,6 +1617,22 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
+#7 Leatherscale Boots - Unique
+Show
+	BaseType "Leatherscale Boots"
+	Rarity Unique
+	PlayAlertSound 3 25
+	SetFontSize 25
+	SetBackgroundColor 0 0 0 220
+
+#7 Serrated Arrow Quiver - Unique
+Show
+	BaseType "Serrated Arrow Quiver"
+	Rarity Unique
+	PlayAlertSound 3 25
+	SetFontSize 25
+	SetBackgroundColor 0 0 0 220
+
 #9 Other uniques - Unique
 Show
 	Rarity Unique
@@ -2029,6 +2045,7 @@ Show
 Show
 	BaseType "Shaped Dunes Map"
 	Class "Maps"
+	ItemLevel <= 79
 	DropLevel 77
 	SetBorderColor 255 215 0
 	PlayAlertSound 7 75
@@ -2192,6 +2209,7 @@ Show
 Show
 	BaseType "Shaped Peninsula Map"
 	Class "Maps"
+	ItemLevel <= 79
 	DropLevel 77
 	SetBorderColor 255 215 0
 	PlayAlertSound 7 75
@@ -3039,6 +3057,7 @@ Show
 Show
 	BaseType "Malformation Map"
 	Class "Maps"
+	ItemLevel <= 79
 	DropLevel 77
 	SetBorderColor 255 215 0
 	PlayAlertSound 7 75
@@ -3479,6 +3498,7 @@ Show
 Show
 	BaseType "Terrace Map"
 	Class "Maps"
+	ItemLevel <= 79
 	DropLevel 77
 	SetBorderColor 255 215 0
 	PlayAlertSound 7 75
@@ -3532,6 +3552,7 @@ Show
 Show
 	BaseType "Underground River Map"
 	Class "Maps"
+	ItemLevel <= 79
 	DropLevel 77
 	SetBorderColor 255 215 0
 	PlayAlertSound 7 75
@@ -5732,6 +5753,42 @@ Show
 	ItemLevel >= 84
 	Rarity <= Magic
 	SetFontSize 25
+	SetBackgroundColor 0 0 0 220
+
+#0 Brinerot magic item - Warbands
+Show
+	Class "Gloves"
+	Rarity Magic
+	SetBorderColor 255 215 0
+	Identified True
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#0 Mutewind magic item - Warbands
+Show
+	Class "Boots"
+	Rarity Magic
+	SetBorderColor 54 100 146
+	Identified True
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#0 Redblade magic item - Warbands
+Show
+	Class "Helm"
+	Rarity Magic
+	SetBorderColor 150 0 0
+	Identified True
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#0 Renegade magic item - Warbands
+Show
+	Class Dagger Wand "One Hand" Bow Stave "Two Hand" Sceptre Claws
+	Rarity Magic
+	SetBorderColor 208 32 144
+	Identified True
+	SetFontSize 30
 	SetBackgroundColor 0 0 0 220
 
 Show
