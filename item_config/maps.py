@@ -133,8 +133,8 @@ items = {
 
 	# Tier 10
 	"0 Shaped Burial Chambers Map": {"base": "Shaped Burial Chambers Map", "class": "Maps", "other": ["DropLevel 77"], "type": "map yellow good"},
-	"0 Shaped Peninsula Map": {"base": "Shaped Peninsula Map", "class": "Maps", "other": ["DropLevel 77"], "type": "map yellow good"},
-	"0 Shaped Dunes Map": {"base": "Shaped Dunes Map", "class": "Maps", "other": ["DropLevel 77"], "type": "map yellow good"},
+	"0 Shaped Peninsula Map": {"base": "Shaped Peninsula Map", "class": "Maps", "other": ["ItemLevel <= 79", "DropLevel 77"], "type": "map yellow good"},
+	"0 Shaped Dunes Map": {"base": "Shaped Dunes Map", "class": "Maps", "other": ["ItemLevel <= 79", "DropLevel 77"], "type": "map yellow good"},
 	"0 Shaped Mesa Map": {"base": "Shaped Mesa Map", "class": "Maps", "other": ["DropLevel 77"], "type": "map yellow good"},
 	"0 Shaped Pit Map": {"base": "Shaped Pit Map", "class": "Maps", "other": ["DropLevel 77"], "type": "map yellow good"},
 	"0 Shaped Primordial Pool Map": {"base": "Shaped Primordial Pool Map", "class": "Maps", "other": ["DropLevel 77"], "type": "map yellow good"},
@@ -143,10 +143,10 @@ items = {
 	"1 Colonnade Map": {"base": "Colonnade Map", "class": "Maps", "other": ["DropLevel 77"], "type": "map yellow good"},
 	"1 Arsenal Map": {"base": "Arsenal Map", "class": "Maps", "other": ["DropLevel 77"], "type": "map yellow good"},
 	"1 Courtyard Map": {"base": "Courtyard Map", "class": "Maps", "other": ["DropLevel 77"], "type": "map yellow good"},
-	"1 Malformation Map": {"base": "Malformation Map", "class": "Maps", "other": ["DropLevel 77"], "type": "map yellow good"},
+	"1 Malformation Map": {"base": "Malformation Map", "class": "Maps", "other": ["ItemLevel <= 79", "DropLevel 77"], "type": "map yellow good"},
 	"1 Quay Map": {"base": "Quay Map", "class": "Maps", "other": ["DropLevel 77"], "type": "map yellow good"},
-	"1 Terrace Map": {"base": "Terrace Map", "class": "Maps", "other": ["DropLevel 77"], "type": "map yellow good"},
-	"1 Underground River Map": {"base": "Underground River Map", "class": "Maps", "other": ["DropLevel 77"], "type": "map yellow good"},
+	"1 Terrace Map": {"base": "Terrace Map", "class": "Maps", "other": ["ItemLevel <= 79", "DropLevel 77"], "type": "map yellow good"},
+	"1 Underground River Map": {"base": "Underground River Map", "class": "Maps", "other": ["ItemLevel <= 79", "DropLevel 77"], "type": "map yellow good"},
 
 	# Tier 11
 	"0 Shaped Canyon Map": {"base": "Shaped Canyon Map", "class": "Maps", "other": ["ItemLevel <= 80", "DropLevel 78"], "type": "map red good"},

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 11/21/2016(m/d/y) 01:36:00 UTC from "Hardcore" data
+# Created: 11/21/2016(m/d/y) 23:00:20 UTC from "Hardcore" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -133,5 +133,7 @@ items = {
 	"1 Vaal Sceptre": {"base": "Vaal Sceptre", "type": "unique high"},
 	"1 Varnished Coat": {"base": "Varnished Coat", "type": "unique high"},
 	"1 Zealot Helmet": {"base": "Zealot Helmet", "type": "unique high"},
+	"7 Leatherscale Boots": {"base": "Leatherscale Boots", "type": "unique low"},
+	"7 Serrated Arrow Quiver": {"base": "Serrated Arrow Quiver", "type": "unique low"},
 	"9 Other uniques": {"type": "unique normal"}
 }

@@ -247,7 +247,7 @@ def gen_lists(ldb):
 			name = "phc"
 		else:
 			name = "p"
-		items = {'very high': [], 'high': []}
+		items = {'very high': [], 'high': [], 'low': []}
 
 		for u in data[l][3].keys():
 
@@ -255,6 +255,8 @@ def gen_lists(ldb):
 				items['very high'].append(u)
 			elif data[l][3][u] >= chaosequiv(.2, 'exa', l):
 				items['high'].append(u)
+			elif data[l][3][u] < 0.5:
+				items['low'].append(u)
 
 		with open('auto_gen\\{}uniques.py'.format(name), 'w', encoding='utf-8') as f:
 			f.write(u'''{}\ndesc = "Unique"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), l)))
@@ -262,6 +264,8 @@ def gen_lists(ldb):
 				f.write(u'\t"0 {0}": {{"base": "{0}", "type": "unique very high"}},\n'.format(ii))
 			for ii in sorted(items['high']):
 				f.write(u'\t"1 {0}": {{"base": "{0}", "type": "unique high"}},\n'.format(ii))
+			for ii in sorted(items['low']):
+				f.write(u'\t"7 {0}": {{"base": "{0}", "type": "unique low"}},\n'.format(ii))
 			f.write(u'\t"9 Other uniques": {"type": "unique normal"}\n}\n')
 
 		items = {'high': verygoodcards[:], 'normal': [], 'low': lowcards[:]}
@@ -419,9 +423,10 @@ def poetrade_getcurrencyrates():
 
 if __name__ == '__main__':
 	# poetrade_getcurrencyrates()
-	divuniqueupdate()
+	# divuniqueupdate()
 
-	# with MongoClient() as client:
-		# ldb = client.stashdata
-		# gen_lists(ldb)
+	if True:
+		with MongoClient() as client:
+			ldb = client.stashdata
+			gen_lists(ldb)
 
