@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 11/21/2016(m/d/y) 23:00:20 UTC from "Hardcore Essence" data
+# Created: 11/26/2016(m/d/y) 01:53:42 UTC from "Hardcore Essence" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -65,7 +65,6 @@ items = {
 	"2 Earth Drinker": {"base": "Earth Drinker", "class": "Divination Card", "type": "divination high"},
 	"2 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination high"},
 	"2 Heterochromia": {"base": "Heterochromia", "class": "Divination Card", "type": "divination high"},
-	"2 Hope": {"base": "Hope", "class": "Divination Card", "type": "divination high"},
 	"2 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination high"},
 	"2 The Aesthete": {"base": "The Aesthete", "class": "Divination Card", "type": "divination high"},
 	"2 The Avenger": {"base": "The Avenger", "class": "Divination Card", "type": "divination high"},
@@ -101,14 +100,17 @@ items = {
 	"3 The Feast": {"base": "The Feast", "class": "Divination Card", "type": "divination low"},
 	"3 The Flora's Gift": {"base": "The Flora's Gift", "class": "Divination Card", "type": "divination low"},
 	"3 The Gemcutter": {"base": "The Gemcutter", "class": "Divination Card", "type": "divination low"},
+	"3 The Hermit": {"base": "The Hermit", "class": "Divination Card", "type": "divination low"},
 	"3 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination low"},
 	"3 The Lunaris Priestess": {"base": "The Lunaris Priestess", "class": "Divination Card", "type": "divination low"},
 	"3 The Metalsmith's Gift": {"base": "The Metalsmith's Gift", "class": "Divination Card", "type": "divination low"},
+	"3 The Oath": {"base": "The Oath", "class": "Divination Card", "type": "divination low"},
 	"3 The Rabid Rhoa": {"base": "The Rabid Rhoa", "class": "Divination Card", "type": "divination low"},
 	"3 The Scarred Meadow": {"base": "The Scarred Meadow", "class": "Divination Card", "type": "divination low"},
 	"3 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},
 	"3 The Surgeon": {"base": "The Surgeon", "class": "Divination Card", "type": "divination low"},
 	"3 The Twins": {"base": "The Twins", "class": "Divination Card", "type": "divination low"},
+	"3 The Visionary": {"base": "The Visionary", "class": "Divination Card", "type": "divination low"},
 	"3 The Warden": {"base": "The Warden", "class": "Divination Card", "type": "divination low"},
 	"3 Thunderous Skies": {"base": "Thunderous Skies", "class": "Divination Card", "type": "divination low"},
 	"7 The Carrion Crow": {"base": "The Carrion Crow", "class": "Divination Card", "type": "hide"},

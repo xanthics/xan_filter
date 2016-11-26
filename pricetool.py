@@ -423,10 +423,9 @@ def poetrade_getcurrencyrates():
 
 if __name__ == '__main__':
 	# poetrade_getcurrencyrates()
-	# divuniqueupdate()
+	divuniqueupdate()
 
-	if True:
+	if False: # toggle True/False to run this section
 		with MongoClient() as client:
 			ldb = client.stashdata
 			gen_lists(ldb)
-

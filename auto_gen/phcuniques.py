@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 11/21/2016(m/d/y) 23:00:20 UTC from "Hardcore Essence" data
+# Created: 11/26/2016(m/d/y) 01:53:42 UTC from "Hardcore Essence" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -101,8 +101,10 @@ items = {
 	"7 Dragonscale Gauntlets": {"base": "Dragonscale Gauntlets", "type": "unique low"},
 	"7 Dread Maul": {"base": "Dread Maul", "type": "unique low"},
 	"7 Dream Mace": {"base": "Dream Mace", "type": "unique low"},
+	"7 Fright Claw": {"base": "Fright Claw", "type": "unique low"},
 	"7 Golden Buckler": {"base": "Golden Buckler", "type": "unique low"},
 	"7 Great Helmet": {"base": "Great Helmet", "type": "unique low"},
+	"7 Great Mallet": {"base": "Great Mallet", "type": "unique low"},
 	"7 Iron Mask": {"base": "Iron Mask", "type": "unique low"},
 	"7 Ironscale Boots": {"base": "Ironscale Boots", "type": "unique low"},
 	"7 Leather Hood": {"base": "Leather Hood", "type": "unique low"},
@@ -115,9 +117,12 @@ items = {
 	"7 Secutor Helm": {"base": "Secutor Helm", "type": "unique low"},
 	"7 Shagreen Boots": {"base": "Shagreen Boots", "type": "unique low"},
 	"7 Spidersilk Robe": {"base": "Spidersilk Robe", "type": "unique low"},
+	"7 Stiletto": {"base": "Stiletto", "type": "unique low"},
 	"7 Timeworn Claw": {"base": "Timeworn Claw", "type": "unique low"},
 	"7 Tricorne": {"base": "Tricorne", "type": "unique low"},
+	"7 Vaal Blade": {"base": "Vaal Blade", "type": "unique low"},
 	"7 Vaal Buckler": {"base": "Vaal Buckler", "type": "unique low"},
+	"7 Velvet Slippers": {"base": "Velvet Slippers", "type": "unique low"},
 	"7 War Buckler": {"base": "War Buckler", "type": "unique low"},
 	"9 Other uniques": {"type": "unique normal"}
 }
