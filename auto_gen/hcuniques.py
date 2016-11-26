@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 11/20/2016(m/d/y) 00:45:22 UTC from "Hardcore" data
+# Created: 11/26/2016(m/d/y) 01:53:42 UTC from "Hardcore" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -68,7 +68,6 @@ items = {
 	"0 Judgement Staff": {"base": "Judgement Staff", "type": "unique very high"},
 	"0 Legion Gloves": {"base": "Legion Gloves", "type": "unique very high"},
 	"0 Midnight Blade": {"base": "Midnight Blade", "type": "unique very high"},
-	"0 Mind Cage": {"base": "Mind Cage", "type": "unique very high"},
 	"0 Museum Map": {"base": "Museum Map", "type": "unique very high"},
 	"0 Nightmare Bascinet": {"base": "Nightmare Bascinet", "type": "unique very high"},
 	"0 Occultist's Vestment": {"base": "Occultist's Vestment", "type": "unique very high"},
@@ -87,6 +86,7 @@ items = {
 	"0 Sanctified Mana Flask": {"base": "Sanctified Mana Flask", "type": "unique very high"},
 	"0 Sapphire Flask": {"base": "Sapphire Flask", "type": "unique very high"},
 	"0 Sharkskin Boots": {"base": "Sharkskin Boots", "type": "unique very high"},
+	"0 Sharkskin Tunic": {"base": "Sharkskin Tunic", "type": "unique very high"},
 	"0 Siege Axe": {"base": "Siege Axe", "type": "unique very high"},
 	"0 Silver Flask": {"base": "Silver Flask", "type": "unique very high"},
 	"0 Slaughter Knife": {"base": "Slaughter Knife", "type": "unique very high"},
@@ -118,31 +118,32 @@ items = {
 	"1 Deerskin Gloves": {"base": "Deerskin Gloves", "type": "unique high"},
 	"1 Diamond Ring": {"base": "Diamond Ring", "type": "unique high"},
 	"1 Enameled Buckler": {"base": "Enameled Buckler", "type": "unique high"},
+	"1 Eternal Sword": {"base": "Eternal Sword", "type": "unique high"},
+	"1 Ezomyte Blade": {"base": "Ezomyte Blade", "type": "unique high"},
 	"1 Ezomyte Burgonet": {"base": "Ezomyte Burgonet", "type": "unique high"},
-	"1 Full Dragonscale": {"base": "Full Dragonscale", "type": "unique high"},
 	"1 Gladius": {"base": "Gladius", "type": "unique high"},
+	"1 Gold Ring": {"base": "Gold Ring", "type": "unique high"},
 	"1 Golden Plate": {"base": "Golden Plate", "type": "unique high"},
 	"1 Goliath Gauntlets": {"base": "Goliath Gauntlets", "type": "unique high"},
 	"1 Granite Flask": {"base": "Granite Flask", "type": "unique high"},
 	"1 Graveyard Map": {"base": "Graveyard Map", "type": "unique high"},
-	"1 Harbinger Bow": {"base": "Harbinger Bow", "type": "unique high"},
-	"1 Harmonic Spirit Shield": {"base": "Harmonic Spirit Shield", "type": "unique high"},
 	"1 Imperial Staff": {"base": "Imperial Staff", "type": "unique high"},
 	"1 Karui Maul": {"base": "Karui Maul", "type": "unique high"},
 	"1 Karui Sceptre": {"base": "Karui Sceptre", "type": "unique high"},
 	"1 Large Hybrid Flask": {"base": "Large Hybrid Flask", "type": "unique high"},
+	"1 Lathi": {"base": "Lathi", "type": "unique high"},
 	"1 Lion Pelt": {"base": "Lion Pelt", "type": "unique high"},
+	"1 Maelström Staff": {"base": "Maelström Staff", "type": "unique high"},
+	"1 Mind Cage": {"base": "Mind Cage", "type": "unique high"},
 	"1 Mosaic Kite Shield": {"base": "Mosaic Kite Shield", "type": "unique high"},
 	"1 Murder Boots": {"base": "Murder Boots", "type": "unique high"},
 	"1 Necromancer Silks": {"base": "Necromancer Silks", "type": "unique high"},
 	"1 Opal Wand": {"base": "Opal Wand", "type": "unique high"},
-	"1 Ranger Bow": {"base": "Ranger Bow", "type": "unique high"},
 	"1 Saintly Chainmail": {"base": "Saintly Chainmail", "type": "unique high"},
 	"1 Savant's Robe": {"base": "Savant's Robe", "type": "unique high"},
 	"1 Serpentscale Boots": {"base": "Serpentscale Boots", "type": "unique high"},
 	"1 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique high"},
 	"1 Slink Boots": {"base": "Slink Boots", "type": "unique high"},
-	"1 Spike-Point Arrow Quiver": {"base": "Spike-Point Arrow Quiver", "type": "unique high"},
 	"1 Steelscale Gauntlets": {"base": "Steelscale Gauntlets", "type": "unique high"},
 	"1 Stibnite Flask": {"base": "Stibnite Flask", "type": "unique high"},
 	"1 Terror Maul": {"base": "Terror Maul", "type": "unique high"},
@@ -153,5 +154,7 @@ items = {
 	"1 Vaal Pyramid Map": {"base": "Vaal Pyramid Map", "type": "unique high"},
 	"1 Vile Staff": {"base": "Vile Staff", "type": "unique high"},
 	"1 Zealot Helmet": {"base": "Zealot Helmet", "type": "unique high"},
+	"1 Zodiac Leather": {"base": "Zodiac Leather", "type": "unique high"},
+	"7 Leatherscale Boots": {"base": "Leatherscale Boots", "type": "unique low"},
 	"9 Other uniques": {"type": "unique normal"}
 }
