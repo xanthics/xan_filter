@@ -29,7 +29,7 @@ desc = "Chance Base"
 # Base type : settings pair
 items = {
 	"0 Aegis Aurora": {"base": "Champion Kite Shield", "type": "ignore"},
-	"0 Heretic's Veil": {"base": "Deicide Mask", "type": "ignore"},
+	"0 Heretic's Veil": {"base": "Deicide Mask", "type": "chance"},
 	"0 Taste of Hate": {"base": "Sapphire Flask", "type": "ignore"},
 	"0 Lightning Coil": {"base": "Desert Brigandine", "type": "ignore"},
 	"0 Cospri's Will": {"base": "Assassin's Garb", "type": "ignore"},

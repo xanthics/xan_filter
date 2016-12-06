@@ -28,11 +28,11 @@ desc = "challenge item"
 
 # Base type : settings pair
 items = {
-	"0 Splinter of Xoph": {"base": "Splinter of Xoph", "class": "Currency", "type": "challenge low"},
-	"0 Splinter of Tul": {"base": "Splinter of Tul", "class": "Currency", "type": "challenge low"},
-	"0 Splinter of Esh": {"base": "Splinter of Esh", "class": "Currency", "type": "challenge low"},
-	"0 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", "class": "Currency", "type": "challenge low"},
-	"0 Splinter of Chayula": {"base": "Splinter of Chayula", "class": "Currency", "type": "challenge low"},
+	"0 Splinter of Xoph": {"base": "Splinter of Xoph", "class": "Currency", "type": "chance"},
+	"0 Splinter of Tul": {"base": "Splinter of Tul", "class": "Currency", "type": "chance"},
+	"0 Splinter of Esh": {"base": "Splinter of Esh", "class": "Currency", "type": "chance"},
+	"0 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", "class": "Currency", "type": "chance"},
+	"0 Splinter of Chayula": {"base": "Splinter of Chayula", "class": "Currency", "type": "chance"},
 	"0 Blessing of Xoph": {"base": "Blessing of Xoph", "class": "Currency", "type": "challenge normal"},
 	"0 Blessing of Tul": {"base": "Blessing of Tul", "class": "Currency", "type": "challenge normal"},
 	"0 Blessing of Esh": {"base": "Blessing of Esh", "class": "Currency", "type": "challenge normal"},

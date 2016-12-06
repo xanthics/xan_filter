@@ -136,7 +136,7 @@ def main():
 			   ("b", "Breach", puniques, pdivination),
 			   ("bhc", "Hardcore Breach", phcuniques, phcdivination)]
 
-	leveling = False  # toggle to show leveling items
+	leveling = True  # toggle to show leveling items
 
 	for i in leagues:
 
@@ -171,7 +171,7 @@ def main():
 		#buffer += gen_list(chroma)  # chrome vendor items
 		if leveling:
 			buffer += gen_list(general_levelling)
-		buffer += gen_list(chance)  # Chance bases
+		#buffer += gen_list(chance)  # Chance bases
 		buffer += gen_list(crafting_bases)  # Crafting bases
 		#buffer += gen_list(animate_weapon)  # Animate Weapon bases
 

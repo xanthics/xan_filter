@@ -260,7 +260,7 @@ items = {
 	"0 Fragment of the Hydra": {"base": "Fragment of the Hydra", "class": "Map Fragments", "type": "map red good"},
 
 	"71 Maps >= 78": {"class": "Maps", "other": ["DropLevel >= 78"], "type": "map red"},
-	"72 Maps <= 72": {"class": "Maps", "other": ["DropLevel <= 72"], "type": "ignore"},
-	"73 Other maps": {"class": "Maps", "type": "ignore"},
+	"72 Maps <= 72": {"class": "Maps", "other": ["DropLevel <= 72"], "type": "map white"},
+	"73 Other maps": {"class": "Maps", "type": "map yellow"},
 	"74 Map Fragments": {"class": "Map Fragments", "type": "map white"},
 }

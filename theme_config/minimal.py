@@ -166,7 +166,7 @@ settings = {
 						"PlayAlertSound 5 25",
 						"SetBackgroundColor {} 220".format(color['black'])],
 	"currency low": ["SetFontSize {}".format(size['normal']),
-					 "SetBackgroundColor {} 220".format(color['black'])],
+					 "SetBackgroundColor {} 0".format(color['black'])],
 
 	"divination very high": ["SetBorderColor {}".format(color['divinationnew']),
 							 "SetFontSize {}".format(size['vlarge']),

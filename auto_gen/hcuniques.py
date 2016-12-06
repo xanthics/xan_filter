@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/03/2016(m/d/y) 05:32:24 UTC from "Hardcore" data
+# Created: 12/04/2016(m/d/y) 23:40:37 UTC from "Hardcore" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -83,10 +83,12 @@ items = {
 	"0 Topaz Flask": {"base": "Topaz Flask", "type": "unique very high"},
 	"0 Vaal Mask": {"base": "Vaal Mask", "type": "unique very high"},
 	"0 Vaal Regalia": {"base": "Vaal Regalia", "type": "unique very high"},
+	"0 Vaal Sceptre": {"base": "Vaal Sceptre", "type": "unique very high"},
+	"0 Vanguard Belt": {"base": "Vanguard Belt", "type": "unique very high"},
 	"0 Wereclaw Talisman": {"base": "Wereclaw Talisman", "type": "unique very high"},
 	"1 Ancient Gauntlets": {"base": "Ancient Gauntlets", "type": "unique high"},
-	"1 Antique Rapier": {"base": "Antique Rapier", "type": "unique high"},
 	"1 Arcanist Gloves": {"base": "Arcanist Gloves", "type": "unique high"},
+	"1 Archon Kite Shield": {"base": "Archon Kite Shield", "type": "unique high"},
 	"1 Black Maw Talisman": {"base": "Black Maw Talisman", "type": "unique high"},
 	"1 Broadhead Arrow Quiver": {"base": "Broadhead Arrow Quiver", "type": "unique high"},
 	"1 Conjurer Boots": {"base": "Conjurer Boots", "type": "unique high"},
@@ -108,7 +110,6 @@ items = {
 	"1 Karui Maul": {"base": "Karui Maul", "type": "unique high"},
 	"1 Karui Sceptre": {"base": "Karui Sceptre", "type": "unique high"},
 	"1 Large Hybrid Flask": {"base": "Large Hybrid Flask", "type": "unique high"},
-	"1 Lathi": {"base": "Lathi", "type": "unique high"},
 	"1 Lion Pelt": {"base": "Lion Pelt", "type": "unique high"},
 	"1 Meatgrinder": {"base": "Meatgrinder", "type": "unique high"},
 	"1 Museum Map": {"base": "Museum Map", "type": "unique high"},
@@ -116,6 +117,7 @@ items = {
 	"1 Occultist's Vestment": {"base": "Occultist's Vestment", "type": "unique high"},
 	"1 Opal Wand": {"base": "Opal Wand", "type": "unique high"},
 	"1 Penetrating Arrow Quiver": {"base": "Penetrating Arrow Quiver", "type": "unique high"},
+	"1 Praetor Crown": {"base": "Praetor Crown", "type": "unique high"},
 	"1 Ranger Bow": {"base": "Ranger Bow", "type": "unique high"},
 	"1 Raven Mask": {"base": "Raven Mask", "type": "unique high"},
 	"1 Rawhide Tower Shield": {"base": "Rawhide Tower Shield", "type": "unique high"},
@@ -129,7 +131,6 @@ items = {
 	"1 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique high"},
 	"1 Slink Boots": {"base": "Slink Boots", "type": "unique high"},
 	"1 Stibnite Flask": {"base": "Stibnite Flask", "type": "unique high"},
-	"1 Terror Maul": {"base": "Terror Maul", "type": "unique high"},
 	"1 Titanium Spirit Shield": {"base": "Titanium Spirit Shield", "type": "unique high"},
 	"1 Trapper Boots": {"base": "Trapper Boots", "type": "unique high"},
 	"1 Two-Stone Ring": {"base": "Two-Stone Ring", "type": "unique high"},
@@ -137,14 +138,11 @@ items = {
 	"1 Vaal Axe": {"base": "Vaal Axe", "type": "unique high"},
 	"1 Vaal Gauntlets": {"base": "Vaal Gauntlets", "type": "unique high"},
 	"1 Vaal Pyramid Map": {"base": "Vaal Pyramid Map", "type": "unique high"},
-	"1 Vaal Sceptre": {"base": "Vaal Sceptre", "type": "unique high"},
 	"1 Varnished Coat": {"base": "Varnished Coat", "type": "unique high"},
+	"1 Void Axe": {"base": "Void Axe", "type": "unique high"},
 	"1 Zealot Helmet": {"base": "Zealot Helmet", "type": "unique high"},
 	"7 Great Helmet": {"base": "Great Helmet", "type": "unique low"},
-	"7 Ironscale Boots": {"base": "Ironscale Boots", "type": "unique low"},
-	"7 Leatherscale Boots": {"base": "Leatherscale Boots", "type": "unique low"},
 	"7 Legion Boots": {"base": "Legion Boots", "type": "unique low"},
 	"7 Plate Vest": {"base": "Plate Vest", "type": "unique low"},
-	"7 Quartz Wand": {"base": "Quartz Wand", "type": "unique low"},
 	"9 Other uniques": {"type": "unique normal"}
 }
