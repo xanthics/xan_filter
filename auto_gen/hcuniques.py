@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/03/2016(m/d/y) 00:14:40 UTC from "Hardcore" data
+# Created: 12/06/2016(m/d/y) 06:02:15 UTC from "Hardcore" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -32,10 +32,13 @@ desc = "Unique"
 # Base type : settings pair
 items = {
 	"0 Abyssal Axe": {"base": "Abyssal Axe", "type": "unique very high"},
+	"0 Arcanist Gloves": {"base": "Arcanist Gloves", "type": "unique very high"},
 	"0 Assassin's Garb": {"base": "Assassin's Garb", "type": "unique very high"},
+	"0 Blinder": {"base": "Blinder", "type": "unique very high"},
 	"0 Carnal Sceptre": {"base": "Carnal Sceptre", "type": "unique very high"},
 	"0 Champion Kite Shield": {"base": "Champion Kite Shield", "type": "unique very high"},
 	"0 Chateau Map": {"base": "Chateau Map", "type": "unique very high"},
+	"0 Citadel Bow": {"base": "Citadel Bow", "type": "unique very high"},
 	"0 Citrine Amulet": {"base": "Citrine Amulet", "type": "unique very high"},
 	"0 Clasped Mitts": {"base": "Clasped Mitts", "type": "unique very high"},
 	"0 Clutching Talisman": {"base": "Clutching Talisman", "type": "unique very high"},
@@ -75,6 +78,7 @@ items = {
 	"0 Nightmare Bascinet": {"base": "Nightmare Bascinet", "type": "unique very high"},
 	"0 Occultist's Vestment": {"base": "Occultist's Vestment", "type": "unique very high"},
 	"0 Penetrating Arrow Quiver": {"base": "Penetrating Arrow Quiver", "type": "unique very high"},
+	"0 Praetor Crown": {"base": "Praetor Crown", "type": "unique very high"},
 	"0 Prismatic Jewel": {"base": "Prismatic Jewel", "type": "unique very high"},
 	"0 Prophecy Wand": {"base": "Prophecy Wand", "type": "unique very high"},
 	"0 Raven Mask": {"base": "Raven Mask", "type": "unique very high"},
@@ -92,6 +96,7 @@ items = {
 	"0 Sharkskin Boots": {"base": "Sharkskin Boots", "type": "unique very high"},
 	"0 Sharkskin Tunic": {"base": "Sharkskin Tunic", "type": "unique very high"},
 	"0 Siege Axe": {"base": "Siege Axe", "type": "unique very high"},
+	"0 Siege Helmet": {"base": "Siege Helmet", "type": "unique very high"},
 	"0 Silver Flask": {"base": "Silver Flask", "type": "unique very high"},
 	"0 Slaughter Knife": {"base": "Slaughter Knife", "type": "unique very high"},
 	"0 Sorcerer Boots": {"base": "Sorcerer Boots", "type": "unique very high"},
@@ -100,19 +105,19 @@ items = {
 	"0 Stibnite Flask": {"base": "Stibnite Flask", "type": "unique very high"},
 	"0 Titanium Spirit Shield": {"base": "Titanium Spirit Shield", "type": "unique very high"},
 	"0 Topaz Flask": {"base": "Topaz Flask", "type": "unique very high"},
-	"0 Trapper Boots": {"base": "Trapper Boots", "type": "unique very high"},
 	"0 Two-Stone Ring": {"base": "Two-Stone Ring", "type": "unique very high"},
 	"0 Vaal Axe": {"base": "Vaal Axe", "type": "unique very high"},
 	"0 Vaal Mask": {"base": "Vaal Mask", "type": "unique very high"},
 	"0 Vaal Regalia": {"base": "Vaal Regalia", "type": "unique very high"},
 	"0 Vaal Sceptre": {"base": "Vaal Sceptre", "type": "unique very high"},
+	"0 Vanguard Belt": {"base": "Vanguard Belt", "type": "unique very high"},
 	"0 Varnished Coat": {"base": "Varnished Coat", "type": "unique very high"},
+	"0 Void Axe": {"base": "Void Axe", "type": "unique very high"},
 	"0 Wereclaw Talisman": {"base": "Wereclaw Talisman", "type": "unique very high"},
 	"1 Amethyst Ring": {"base": "Amethyst Ring", "type": "unique high"},
 	"1 Ancient Gauntlets": {"base": "Ancient Gauntlets", "type": "unique high"},
 	"1 Ancient Greaves": {"base": "Ancient Greaves", "type": "unique high"},
 	"1 Antique Rapier": {"base": "Antique Rapier", "type": "unique high"},
-	"1 Arcanist Gloves": {"base": "Arcanist Gloves", "type": "unique high"},
 	"1 Archon Kite Shield": {"base": "Archon Kite Shield", "type": "unique high"},
 	"1 Black Maw Talisman": {"base": "Black Maw Talisman", "type": "unique high"},
 	"1 Broadhead Arrow Quiver": {"base": "Broadhead Arrow Quiver", "type": "unique high"},
@@ -127,7 +132,6 @@ items = {
 	"1 Eternal Sword": {"base": "Eternal Sword", "type": "unique high"},
 	"1 Full Dragonscale": {"base": "Full Dragonscale", "type": "unique high"},
 	"1 Gladius": {"base": "Gladius", "type": "unique high"},
-	"1 Gold Ring": {"base": "Gold Ring", "type": "unique high"},
 	"1 Goliath Gauntlets": {"base": "Goliath Gauntlets", "type": "unique high"},
 	"1 Granite Flask": {"base": "Granite Flask", "type": "unique high"},
 	"1 Graveyard Map": {"base": "Graveyard Map", "type": "unique high"},
@@ -142,15 +146,16 @@ items = {
 	"1 Necromancer Silks": {"base": "Necromancer Silks", "type": "unique high"},
 	"1 Opal Wand": {"base": "Opal Wand", "type": "unique high"},
 	"1 Ranger Bow": {"base": "Ranger Bow", "type": "unique high"},
+	"1 Rawhide Tower Shield": {"base": "Rawhide Tower Shield", "type": "unique high"},
 	"1 Ruby Flask": {"base": "Ruby Flask", "type": "unique high"},
 	"1 Saintly Chainmail": {"base": "Saintly Chainmail", "type": "unique high"},
 	"1 Savant's Robe": {"base": "Savant's Robe", "type": "unique high"},
 	"1 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique high"},
 	"1 Slink Boots": {"base": "Slink Boots", "type": "unique high"},
-	"1 Steelscale Gauntlets": {"base": "Steelscale Gauntlets", "type": "unique high"},
 	"1 Strapped Mitts": {"base": "Strapped Mitts", "type": "unique high"},
 	"1 Terror Maul": {"base": "Terror Maul", "type": "unique high"},
 	"1 Titan Gauntlets": {"base": "Titan Gauntlets", "type": "unique high"},
+	"1 Trapper Boots": {"base": "Trapper Boots", "type": "unique high"},
 	"1 Triumphant Lamellar": {"base": "Triumphant Lamellar", "type": "unique high"},
 	"1 Ursine Pelt": {"base": "Ursine Pelt", "type": "unique high"},
 	"1 Vaal Gauntlets": {"base": "Vaal Gauntlets", "type": "unique high"},
@@ -158,10 +163,8 @@ items = {
 	"1 Vaal Pyramid Map": {"base": "Vaal Pyramid Map", "type": "unique high"},
 	"1 Zealot Helmet": {"base": "Zealot Helmet", "type": "unique high"},
 	"7 Great Helmet": {"base": "Great Helmet", "type": "unique low"},
-	"7 Ironscale Boots": {"base": "Ironscale Boots", "type": "unique low"},
-	"7 Leatherscale Boots": {"base": "Leatherscale Boots", "type": "unique low"},
 	"7 Legion Boots": {"base": "Legion Boots", "type": "unique low"},
+	"7 Nailed Fist": {"base": "Nailed Fist", "type": "unique low"},
 	"7 Plate Vest": {"base": "Plate Vest", "type": "unique low"},
-	"7 Quartz Wand": {"base": "Quartz Wand", "type": "unique low"},
 	"9 Other uniques": {"type": "unique normal"}
 }
