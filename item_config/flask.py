@@ -45,6 +45,7 @@ items = {
     "1 Stibnite Flask": {"base": "Stibnite Flask", "other": ["Rarity Normal"], "type": "normal"},
     "1 Sulphur Flask": {"base": "Sulphur Flask", "other": ["Rarity Normal"], "type": "normal"},
     "1 Silver Flask": {"base": "Silver Flask", "other": ["Rarity Normal"], "type": "normal"},
+    "1 Quartz Flask": {"base": "Quartz Flask", "other": ["Rarity Normal"], "type": "normal"},
     "1 Bismuth Flask": {"base": "Bismuth Flask", "other": ["Rarity Normal"], "type": "ignore"},
 
     "1 Small Flasks": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 0", "ItemLevel <= 3"], "type": "normal"},
