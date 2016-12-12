@@ -36,6 +36,7 @@ from datetime import datetime
 import time
 import re
 from pymongo import MongoClient
+from statistics import mean
 
 from auto_gen import currencyrates
 from auto_gen import hccurrencyrates
@@ -80,16 +81,16 @@ def chaosequiv(cost, unit, league):
 	elif league == 'Hardcore':
 		return cost * hccurrencyrates.items[unit]
 	elif 'Hardcore' in league:
-		return cost * pcurrencyrates.items[unit]
-	else:
 		return cost * phccurrencyrates.items[unit]
+	else:
+		return cost * pcurrencyrates.items[unit]
 
 
 # Update chaos equiv on items based on league
 def updatechaosequiv(ldb):
 	print('Starting update of existing data')
 	count = ldb.items.count()
-	steps = 100
+	steps = 199
 	thresholds = [i*count//steps for i in range(steps)]
 	for c, i in enumerate(ldb.items.find()):
 		if c in thresholds:
@@ -385,7 +386,8 @@ def poetrade_getcurrencyrates():
 				name = "p"
 
 			# Populate ratios with amount currency is being bought for chaos
-			ratios = [[] for i in range(max(currencies.values()) + 1)]
+			buyratios = [[] for _ in range(max(currencies.values()) + 1)]
+			sellratios = [[] for _ in range(max(currencies.values()) + 1)]
 			url = "http://currency.poe.trade/search?league={}&online=x&want={}&have={}".format(l, chaos, '-'.join([str(currencies[d]) for d in currencies]))
 			req = requests.get(url).text
 			for i in (req.split('\n')):
@@ -393,7 +395,7 @@ def poetrade_getcurrencyrates():
 					crate = float(re.search(r'data-sellvalue="(-?\d*(\.\d+)?)"', i.lower()).group(1))
 					rtype = int(re.search(r'data-buycurrency="(-?\d*(\.\d+)?)"', i.lower()).group(1))
 					rrate = float(re.search(r'data-buyvalue="(-?\d*(\.\d+)?)"', i.lower()).group(1))
-					ratios[rtype].append(crate / rrate)
+					sellratios[rtype].append(crate / rrate)
 
 			# Populate ratios with amount of currency you can buy for a chaos
 			url = "http://currency.poe.trade/search?league={}&online=x&want={}&have={}".format(l, '-'.join([str(currencies[d]) for d in currencies]), chaos)
@@ -403,14 +405,21 @@ def poetrade_getcurrencyrates():
 					crate = float(re.search(r'data-buyvalue="(-?\d*(\.\d+)?)"', i.lower()).group(1))
 					rtype = int(re.search(r'data-sellcurrency="(-?\d*(\.\d+)?)"', i.lower()).group(1))
 					rrate = float(re.search(r'data-sellvalue="(-?\d*(\.\d+)?)"', i.lower()).group(1))
-					ratios[rtype].append(crate / rrate)
+					buyratios[rtype].append(crate / rrate)
+
+			# Generate our average prices shortlist
+			ratios = [[] for _ in range(max(currencies.values()) + 1)]
+			for currency in currencies:
+				# ensure there is enough price data to generate a meaningful average
+				if len(sellratios[currencies[currency]]) + len(buyratios[currencies[currency]]) > 8:
+					# slice the highest someone will buy an orb from you and the lowest you would have to pay for an orb
+					ratios[currencies[currency]] = mean(sorted(sellratios[currencies[currency]], reverse=True)[:5] + sorted(buyratios[currencies[currency]])[:5])
 
 			with open('auto_gen\\{}currencyrates.py'.format(name), 'w', encoding='utf-8') as f:
 				f.write(u'''{}\ndesc = "Currency Rates"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), l)))
 				for cur in sorted(defaults.keys()):
-					if cur in currencies and ratios[currencies[cur]] and len(ratios[currencies[cur]]) > 5:
-						ratios[currencies[cur]].sort()
-						f.write(u'\t"{}": {},\n'.format(cur, ratios[currencies[cur]][(len(ratios[currencies[cur]]) * 3) // 4]))
+					if cur in currencies and ratios[currencies[cur]]:
+						f.write(u'\t"{}": {},\n'.format(cur, ratios[currencies[cur]]))
 					else:
 						if cur in currencies:
 							# print the currencies that didn't have enough data
@@ -422,7 +431,7 @@ def poetrade_getcurrencyrates():
 		gen_lists(ldb)
 
 if __name__ == '__main__':
-	# poetrade_getcurrencyrates()
+	poetrade_getcurrencyrates()
 	divuniqueupdate()
 
 	if False: # toggle True/False to run this section
