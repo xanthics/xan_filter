@@ -108,9 +108,9 @@ items = {
     "0 Spike-Point Arrow Quiver": {"base": "Spike-Point Arrow Quiver", "class": "Quivers", "type": "rare high"},
     "0 Broadhead Arrow Quiver": {"base": "Broadhead Arrow Quiver", "class": "Quivers", "type": "rare high"},
 
-    "02 60+ amulet": {"class": "Amulets", "other": ["ItemLevel >= 60"], "type": "rare high"},
-    "02 60+ ring": {"class": "Rings", "other": ["ItemLevel >= 60"], "type": "rare high"},
-    "02 60+ belt": {"class": "Belts", "other": ["ItemLevel >= 60"], "type": "rare high"},
+    "02 60+ amulet": {"class": "Amulets", "other": ["ItemLevel >= 60"], "type": "chance rare"},
+    "02 60+ ring": {"class": "Rings", "other": ["ItemLevel >= 60"], "type": "chance rare"},
+    "02 60+ belt": {"class": "Belts", "other": ["ItemLevel >= 60"], "type": "chance rare"},
     "03 amulet": {"class": "Amulets", "type": "levelling rare high"},
     "03 ring": {"class": "Rings", "type": "levelling rare high"},
     "03 belt": {"class": "Belts", "type": "levelling rare high"},
