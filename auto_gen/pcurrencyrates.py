@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 11/20/2016(m/d/y) 00:32:51 UTC from "Essence" data
+# Created: 12/12/2016(m/d/y) 03:37:16 UTC from "Breach" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -31,22 +31,22 @@ desc = "Currency Rates"
 
 # Base type : settings pair
 items = {
-	"alch": 0.2222222222222222,
-	"alt": 0.05,
-	"blessed": 0.4,
-	"chance": 0.15384615384615385,
-	"chaos": 1,
-	"chisel": 0.3125,
-	"chrom": 0.07142857142857142,
-	"divine": 13.5,
-	"exa": 62.0,
-	"fuse": 0.3333333333333333,
-	"gcp": 0.8,
-	"jew": 0.07692307692307693,
-	"mirror": 20000,
-	"regal": 0.625,
-	"regret": 1.2,
-	"scour": 0.5,
-	"silver": 0.125,
-	"vaal": 1.0,
+	"alch": 0.22974011290385019,
+	"alt": 0.054274138412573475,
+	"blessed": 0.4217948717948718,
+	"chance": 0.12128449844255679,
+	"chaos": 1.0,
+	"chisel": 0.20922212363206152,
+	"chrom": 0.0834468036666781,
+	"divine": 7.96,
+	"exa": 66.25,
+	"fuse": 0.4393073993536528,
+	"gcp": 1.4122857142857144,
+	"jew": 0.1067002472743454,
+	"mirror": 20000.0,
+	"regal": 1.18,
+	"regret": 0.8533333333333334,
+	"scour": 0.47294685990338164,
+	"silver": 0.34523809523809523,
+	"vaal": 0.9698086124401913,
 }
