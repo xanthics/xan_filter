@@ -144,6 +144,11 @@ settings = {
 			   "SetBorderColor {} 150".format(color['premiumorange']),
 			   "SetBackgroundColor {} 220".format(color['premiumdpurple'])],
 
+	"chance rare": ["Rarity Rare",
+			   "SetFontSize {}".format(size['large']),
+			   "SetBorderColor {} 150".format(color['premiumorange']),
+			   "SetBackgroundColor {} 220".format(color['premiumdpurple'])],
+
 	"chromatic": ["SocketGroup RGB",
 				  "SetBorderColor {}".format(color['premiumgreen']),
 				  "SetFontSize {}".format(size['normal']),
@@ -166,7 +171,7 @@ settings = {
 						"PlayAlertSound 5 25",
 						"SetBackgroundColor {} 220".format(color['black'])],
 	"currency low": ["SetFontSize {}".format(size['normal']),
-					 "SetBackgroundColor {} 0".format(color['black'])],
+					 "SetBackgroundColor {} 220".format(color['black'])],
 
 	"currency very low": ["SetFontSize {}".format(size['normal']),
 						  "SetBackgroundColor {} 100".format(color['black'])],
