@@ -41,5 +41,5 @@ items = {
 	"0 Void Battery": {"base": "Prophecy Wand", "type": "ignore"},
 	"0 Soul Taker": {"base": "Siege Axe", "type": "ignore"},
 	"0 Skyforth": {"base": "Sorcerer Boots", "type": "chance"},
-	"0 Headhunter": {"base": "Leather Belt", "other": ["ItemLevel >= 74"], "type": "ignore"}
+	"0 Headhunter": {"base": "Leather Belt", "other": ["ItemLevel >= 74"], "type": "chance"}
 }

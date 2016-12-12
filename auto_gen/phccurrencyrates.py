@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 11/21/2016(m/d/y) 00:31:58 UTC from "Hardcore Essence" data
+# Created: 12/12/2016(m/d/y) 03:37:14 UTC from "Hardcore Breach" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -31,22 +31,22 @@ desc = "Currency Rates"
 
 # Base type : settings pair
 items = {
-	"alch": 0.25,
-	"alt": 0.07692307692307693,
-	"blessed": 1.0,
-	"chance": 0.2,
+	"alch": 0.2077572472694424,
+	"alt": 0.057176124022259495,
+	"blessed": 0.5166666666666666,
+	"chance": 0.1104255776384628,
 	"chaos": 1.0,
-	"chisel": 0.5,
-	"chrom": 0.125,
-	"divine": 16.0,
-	"exa": 55.0,
-	"fuse": 0.5,
-	"gcp": 2.0,
-	"jew": 0.15151515151515152,
+	"chisel": 0.16587930775827517,
+	"chrom": 0.07603064546510577,
+	"divine": 5.8,
+	"exa": 20.9,
+	"fuse": 0.3452183280290335,
+	"gcp": 1.013095238095238,
+	"jew": 0.08304907934105696,
 	"mirror": 20000.0,
-	"regal": 1.5,
-	"regret": 2.0,
-	"scour": 1.0,
-	"silver": 0.5,
-	"vaal": 1.0,
+	"regal": 1.5356410256410256,
+	"regret": 0.6310704929745178,
+	"scour": 0.460620418380118,
+	"silver": 0.18998559991880132,
+	"vaal": 0.601297514619883,
 }
