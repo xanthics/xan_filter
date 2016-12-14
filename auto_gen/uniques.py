@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/12/2016(m/d/y) 04:30:33 UTC from "Standard" data
+# Created: 12/14/2016(m/d/y) 10:36:54 UTC from "Standard" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -43,6 +43,7 @@ items = {
 	"0 Coronal Leather": {"base": "Coronal Leather", "type": "unique very high"},
 	"0 Courtyard Map": {"base": "Courtyard Map", "type": "unique very high"},
 	"0 Crusader Boots": {"base": "Crusader Boots", "type": "unique very high"},
+	"0 Cutlass": {"base": "Cutlass", "type": "unique very high"},
 	"0 Deicide Mask": {"base": "Deicide Mask", "type": "unique very high"},
 	"0 Ezomyte Tower Shield": {"base": "Ezomyte Tower Shield", "type": "unique very high"},
 	"0 Gladiator Plate": {"base": "Gladiator Plate", "type": "unique very high"},
@@ -67,8 +68,6 @@ items = {
 	"0 Rawhide Boots": {"base": "Rawhide Boots", "type": "unique very high"},
 	"0 Rotfeather Talisman": {"base": "Rotfeather Talisman", "type": "unique very high"},
 	"0 Royal Axe": {"base": "Royal Axe", "type": "unique very high"},
-	"0 Royal Burgonet": {"base": "Royal Burgonet", "type": "unique very high"},
-	"0 Ruby Amulet": {"base": "Ruby Amulet", "type": "unique very high"},
 	"0 Sanctified Mana Flask": {"base": "Sanctified Mana Flask", "type": "unique very high"},
 	"0 Sapphire Flask": {"base": "Sapphire Flask", "type": "unique very high"},
 	"0 Siege Axe": {"base": "Siege Axe", "type": "unique very high"},
@@ -104,8 +103,8 @@ items = {
 	"1 Karui Sceptre": {"base": "Karui Sceptre", "type": "unique high"},
 	"1 Nightmare Bascinet": {"base": "Nightmare Bascinet", "type": "unique high"},
 	"1 Penetrating Arrow Quiver": {"base": "Penetrating Arrow Quiver", "type": "unique high"},
-	"1 Praetor Crown": {"base": "Praetor Crown", "type": "unique high"},
 	"1 Regicide Mask": {"base": "Regicide Mask", "type": "unique high"},
+	"1 Ruby Amulet": {"base": "Ruby Amulet", "type": "unique high"},
 	"1 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "unique high"},
 	"1 Sanctified Life Flask": {"base": "Sanctified Life Flask", "type": "unique high"},
 	"1 Sharkskin Boots": {"base": "Sharkskin Boots", "type": "unique high"},
@@ -115,6 +114,7 @@ items = {
 	"1 Stibnite Flask": {"base": "Stibnite Flask", "type": "unique high"},
 	"1 Strapped Mitts": {"base": "Strapped Mitts", "type": "unique high"},
 	"1 Temple Map": {"base": "Temple Map", "type": "unique high"},
+	"1 Terror Claw": {"base": "Terror Claw", "type": "unique high"},
 	"1 Two-Stone Ring": {"base": "Two-Stone Ring", "type": "unique high"},
 	"1 Ursine Pelt": {"base": "Ursine Pelt", "type": "unique high"},
 	"1 Vaal Mask": {"base": "Vaal Mask", "type": "unique high"},
@@ -128,6 +128,7 @@ items = {
 	"7 Brass Maul": {"base": "Brass Maul", "type": "unique low"},
 	"7 Bronzescale Gauntlets": {"base": "Bronzescale Gauntlets", "type": "unique low"},
 	"7 Buckskin Tunic": {"base": "Buckskin Tunic", "type": "unique low"},
+	"7 Carnal Armour": {"base": "Carnal Armour", "type": "unique low"},
 	"7 Carved Wand": {"base": "Carved Wand", "type": "unique low"},
 	"7 Chain Gloves": {"base": "Chain Gloves", "type": "unique low"},
 	"7 Cleaver": {"base": "Cleaver", "type": "unique low"},
@@ -140,6 +141,7 @@ items = {
 	"7 Deerskin Boots": {"base": "Deerskin Boots", "type": "unique low"},
 	"7 Dread Maul": {"base": "Dread Maul", "type": "unique low"},
 	"7 Dream Mace": {"base": "Dream Mace", "type": "unique low"},
+	"7 Fright Claw": {"base": "Fright Claw", "type": "unique low"},
 	"7 Gilded Sallet": {"base": "Gilded Sallet", "type": "unique low"},
 	"7 Gnarled Branch": {"base": "Gnarled Branch", "type": "unique low"},
 	"7 Goat's Horn": {"base": "Goat's Horn", "type": "unique low"},
@@ -148,7 +150,6 @@ items = {
 	"7 Golden Buckler": {"base": "Golden Buckler", "type": "unique low"},
 	"7 Great Helmet": {"base": "Great Helmet", "type": "unique low"},
 	"7 Great Mallet": {"base": "Great Mallet", "type": "unique low"},
-	"7 Headsman Axe": {"base": "Headsman Axe", "type": "unique low"},
 	"7 Highland Blade": {"base": "Highland Blade", "type": "unique low"},
 	"7 Iron Hat": {"base": "Iron Hat", "type": "unique low"},
 	"7 Iron Mask": {"base": "Iron Mask", "type": "unique low"},
