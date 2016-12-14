@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/12/2016(m/d/y) 04:30:33 UTC from "Hardcore Breach" data
+# Created: 12/14/2016(m/d/y) 10:36:54 UTC from "Hardcore Breach" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -60,7 +60,6 @@ items = {
 	"1 The Immortal": {"base": "The Immortal", "class": "Divination Card", "type": "divination very high"},
 	"1 The King's Heart": {"base": "The King's Heart", "class": "Divination Card", "type": "divination very high"},
 	"1 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination very high"},
-	"1 The Lord in Black": {"base": "The Lord in Black", "class": "Divination Card", "type": "divination very high"},
 	"1 The Offering": {"base": "The Offering", "class": "Divination Card", "type": "divination very high"},
 	"1 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
 	"1 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination very high"},
@@ -115,9 +114,9 @@ items = {
 	"2 The Cursed King": {"base": "The Cursed King", "class": "Divination Card", "type": "divination high"},
 	"2 The Demoness": {"base": "The Demoness", "class": "Divination Card", "type": "divination high"},
 	"2 The Doppelganger": {"base": "The Doppelganger", "class": "Divination Card", "type": "divination high"},
-	"2 The Dragon": {"base": "The Dragon", "class": "Divination Card", "type": "divination high"},
 	"2 The Drunken Aristocrat": {"base": "The Drunken Aristocrat", "class": "Divination Card", "type": "divination high"},
 	"2 The Encroaching Darkness": {"base": "The Encroaching Darkness", "class": "Divination Card", "type": "divination high"},
+	"2 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination high"},
 	"2 The Explorer": {"base": "The Explorer", "class": "Divination Card", "type": "divination high"},
 	"2 The Fletcher": {"base": "The Fletcher", "class": "Divination Card", "type": "divination high"},
 	"2 The Fox": {"base": "The Fox", "class": "Divination Card", "type": "divination high"},
@@ -126,9 +125,11 @@ items = {
 	"2 The Hermit": {"base": "The Hermit", "class": "Divination Card", "type": "divination high"},
 	"2 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination high"},
 	"2 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination high"},
+	"2 The Inventor": {"base": "The Inventor", "class": "Divination Card", "type": "divination high"},
 	"2 The Jester": {"base": "The Jester", "class": "Divination Card", "type": "divination high"},
 	"2 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination high"},
 	"2 The Lion": {"base": "The Lion", "class": "Divination Card", "type": "divination high"},
+	"2 The Lord in Black": {"base": "The Lord in Black", "class": "Divination Card", "type": "divination high"},
 	"2 The Lover": {"base": "The Lover", "class": "Divination Card", "type": "divination high"},
 	"2 The Mercenary": {"base": "The Mercenary", "class": "Divination Card", "type": "divination high"},
 	"2 The Oath": {"base": "The Oath", "class": "Divination Card", "type": "divination high"},
@@ -148,8 +149,10 @@ items = {
 	"2 The Summoner": {"base": "The Summoner", "class": "Divination Card", "type": "divination high"},
 	"2 The Sun": {"base": "The Sun", "class": "Divination Card", "type": "divination high"},
 	"2 The Surveyor": {"base": "The Surveyor", "class": "Divination Card", "type": "divination high"},
+	"2 The Survivalist": {"base": "The Survivalist", "class": "Divination Card", "type": "divination high"},
 	"2 The Throne": {"base": "The Throne", "class": "Divination Card", "type": "divination high"},
 	"2 The Tower": {"base": "The Tower", "class": "Divination Card", "type": "divination high"},
+	"2 The Traitor": {"base": "The Traitor", "class": "Divination Card", "type": "divination high"},
 	"2 The Trial": {"base": "The Trial", "class": "Divination Card", "type": "divination high"},
 	"2 The Tyrant": {"base": "The Tyrant", "class": "Divination Card", "type": "divination high"},
 	"2 The Union": {"base": "The Union", "class": "Divination Card", "type": "divination high"},
@@ -161,8 +164,7 @@ items = {
 	"2 Tranquillity": {"base": "Tranquillity", "class": "Divination Card", "type": "divination high"},
 	"2 Treasure Hunter": {"base": "Treasure Hunter", "class": "Divination Card", "type": "divination high"},
 	"2 Vinia's Token": {"base": "Vinia's Token", "class": "Divination Card", "type": "divination high"},
-	"3 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "divination low"},
-	"3 Birth of the Three": {"base": "Birth of the Three", "class": "Divination Card", "type": "divination low"},
+	"2 Volatile Power": {"base": "Volatile Power", "class": "Divination Card", "type": "divination high"},
 	"3 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "divination low"},
 	"3 Dying Anguish": {"base": "Dying Anguish", "class": "Divination Card", "type": "divination low"},
 	"3 Her Mask": {"base": "Her Mask", "class": "Divination Card", "type": "divination low"},
@@ -172,7 +174,6 @@ items = {
 	"3 The Catalyst": {"base": "The Catalyst", "class": "Divination Card", "type": "divination low"},
 	"3 The Feast": {"base": "The Feast", "class": "Divination Card", "type": "divination low"},
 	"3 The Flora's Gift": {"base": "The Flora's Gift", "class": "Divination Card", "type": "divination low"},
-	"3 The Gambler": {"base": "The Gambler", "class": "Divination Card", "type": "divination low"},
 	"3 The Gemcutter": {"base": "The Gemcutter", "class": "Divination Card", "type": "divination low"},
 	"3 The Lunaris Priestess": {"base": "The Lunaris Priestess", "class": "Divination Card", "type": "divination low"},
 	"3 The Metalsmith's Gift": {"base": "The Metalsmith's Gift", "class": "Divination Card", "type": "divination low"},
@@ -180,9 +181,9 @@ items = {
 	"3 The Scarred Meadow": {"base": "The Scarred Meadow", "class": "Divination Card", "type": "divination low"},
 	"3 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},
 	"3 The Surgeon": {"base": "The Surgeon", "class": "Divination Card", "type": "divination low"},
-	"3 The Traitor": {"base": "The Traitor", "class": "Divination Card", "type": "divination low"},
 	"3 The Twins": {"base": "The Twins", "class": "Divination Card", "type": "divination low"},
 	"3 The Warden": {"base": "The Warden", "class": "Divination Card", "type": "divination low"},
+	"3 The Web": {"base": "The Web", "class": "Divination Card", "type": "divination low"},
 	"3 Thunderous Skies": {"base": "Thunderous Skies", "class": "Divination Card", "type": "divination low"},
 	"7 The Carrion Crow": {"base": "The Carrion Crow", "class": "Divination Card", "type": "hide"},
 	"7 The Inoculated": {"base": "The Inoculated", "class": "Divination Card", "type": "hide"},
