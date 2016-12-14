@@ -153,9 +153,13 @@ settings = {
 							  "SetFontSize {}".format(size['small']),
 							  "SetBackgroundColor {} 220".format(color['black'])],
 
+	"currency extremely high": ["SetBorderColor {}".format(color['currency']),
+								"SetFontSize {}".format(size['huge']),
+								"PlayAlertSound 5 300",
+								"SetBackgroundColor {} 220".format(color['black'])],
 	"currency very high": ["SetBorderColor {}".format(color['currency']),
 						   "SetFontSize {}".format(size['huge']),
-						   "PlayAlertSound 5 300",
+						   "PlayAlertSound 5 150",
 						   "SetBackgroundColor {} 220".format(color['black'])],
 	"currency high": ["SetBorderColor {}".format(color['currency']),
 					  "SetFontSize {}".format(size['vlarge']),
@@ -167,7 +171,6 @@ settings = {
 						"SetBackgroundColor {} 220".format(color['black'])],
 	"currency low": ["SetFontSize {}".format(size['normal']),
 					 "SetBackgroundColor {} 220".format(color['black'])],
-
 	"currency very low": ["SetFontSize {}".format(size['normal']),
 						  "SetBackgroundColor {} 100".format(color['black'])],
 

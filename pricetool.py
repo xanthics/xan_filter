@@ -359,17 +359,86 @@ def find_substrings(ldb):
 	return sorted(set(badcards), reverse=True)
 
 
+# Convert a currency value to a priority tier
+
+# Convert a currency shorthand to full name.  returns a string
+def convertshorttolongstr(cur, val, l):
+	if val >= chaosequiv(.5, 'exa', l):
+		tier = 'currency extremely high'
+	elif val >= 4:
+		tier = 'currency very high'
+	elif val >= 1:
+		tier = 'currency high'
+	elif val >= 1/8:
+		tier = 'currency normal'
+	else:
+		tier = 'currency low'
+	
+	if cur == 'divine':
+		return "0 Divine Orb\": {{\"base\": \"Divine Orb\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
+	elif cur == 'regret':
+		return "0 Orb of Regret\": {{\"base\": \"Orb of Regret\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
+	elif cur == 'gcp':
+		return "0 Gemcutter's Prism\": {{\"base\": \"Gemcutter's Prism\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
+	elif cur == 'chaos':
+		return "0 Chaos Orb\": {{\"base\": \"Chaos Orb\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
+	elif cur == 'regal':
+		return "0 Regal Orb\": {{\"base\": \"Regal Orb\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
+	elif cur == 'fuse':
+		return "0 Orb of Fusing\": {{\"base\": \"Orb of Fusing\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
+	elif cur == 'blessed':
+		return "0 Blessed Orb\": {{\"base\": \"Blessed Orb\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
+	elif cur == 'scour':
+		return "0 Orb of Scouring\": {{\"base\": \"Orb of Scouring\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
+	elif cur == 'alch':
+		return "0 Orb of Alchemy\": {{\"base\": \"Orb of Alchemy\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
+	elif cur == 'vaal':
+		return "0 Vaal Orb\": {{\"base\": \"Vaal Orb\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
+	elif cur == 'chisel':
+		return "0 Cartographer's Chisel\": {{\"base\": \"Cartographer's Chisel\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
+	elif cur == 'bauble':
+		return "0 Glassblower's Bauble\": {{\"base\": \"Glassblower's Bauble\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
+	elif cur == 'chance':
+		return "0 Orb of Chance\": {{\"base\": \"Orb of Chance\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
+	elif cur == 'jew':
+		return "0 Jeweller's Orb\": {{\"base\": \"Jeweller's Orb\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
+	elif cur == 'chrom':
+		return "0 Chromatic Orb\": {{\"base\": \"Chromatic Orb\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
+	elif cur == 'alt':
+		return "0 Orb of Alteration\": {{\"base\": \"Orb of Alteration\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
+	elif cur == 'aug':
+		return "0 Orb of Augmentation\": {{\"base\": \"Orb of Augmentation\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
+	elif cur == 'transmute':
+		return "0 Orb of Transmutation\": {{\"base\": \"Orb of Transmutation\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
+	elif cur == 'perandus':
+		return "0 Perandus Coin\": {{\"base\": \"Perandus Coin\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
+	elif cur == 'silver':
+		return "0 Silver Coin\": {{\"base\": \"Silver Coin\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
+	elif cur == 'apprenticecartosextant':
+		return "0 Apprentice Cartographer's Sextant\": {{\"base\": \"Apprentice Cartographer's Sextant\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
+	elif cur == 'journeycartosextant':
+		return "0 Journeyman Cartographer's Sextant\": {{\"base\": \"Journeyman Cartographer's Sextant\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
+	elif cur == 'mastercartosextant':
+		return "0 Master Cartographer's Sextant\": {{\"base\": \"Master Cartographer's Sextant\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
+	else:
+		print("invalid input: {}, {}".format(cur, l))
+		return None
+
+
 # scrape poe.trade for currency exchange rates
 def poetrade_getcurrencyrates():
 	currencies = {"exa": 6, "fuse": 2, "regal": 14, "alt": 1, "alch": 3, "jew": 8, "gcp": 5,
 				  "divine": 15, "scour": 11, "blessed": 12, "vaal": 16, "chance": 9, "regret": 13, "chrom": 7,
-				  "chisel": 10, "silver": 35}
+				  "chisel": 10, "silver": 35, "bauble": 21, "aug": 23, "transmute": 22, "perandus": 26,
+				  "apprenticecartosextant": 45, "journeycartosextant": 46, "mastercartosextant": 47}
+
 
 	chaos = 4
 
 	defaults = {"exa": 60.0, "chaos": 1.0, "fuse": 0.5, "regal": 1, "alt": 1/16, "alch": 1/3, "jew": 1/8, "gcp": 1,
 				"divine": 15.0, "scour": 0.5, "blessed": 0.5, "vaal": 1, "chance": 1/14, "regret": 1.0, "chrom": 1/15,
-				"mirror": 20000.0, "chisel": 0.25, "silver": 0.333}
+				"mirror": 20000.0, "chisel": 0.25, "silver": 0.333, "bauble": 1/16, "aug": 1/32, "transmute": 1/64, "perandus": 1/45,
+				"apprenticecartosextant": .5, "journeycartosextant": 2, "mastercartosextant": 5}
 
 	with MongoClient() as client:
 		ldb = client.stashdata
@@ -415,24 +484,43 @@ def poetrade_getcurrencyrates():
 					# slice the highest someone will buy an orb from you and the lowest you would have to pay for an orb
 					ratios[currencies[currency]] = mean(sorted(sellratios[currencies[currency]], reverse=True)[:5] + sorted(buyratios[currencies[currency]])[:5])
 
-			with open('auto_gen\\{}currencyrates.py'.format(name), 'w', encoding='utf-8') as f:
-				f.write(u'''{}\ndesc = "Currency Rates"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), l)))
-				for cur in sorted(defaults.keys()):
-					if cur in currencies and ratios[currencies[cur]]:
-						f.write(u'\t"{}": {},\n'.format(cur, ratios[currencies[cur]]))
-					else:
-						if cur in currencies:
-							# print the currencies that didn't have enough data
-							print(cur, l, ratios[currencies[cur]], len(ratios[currencies[cur]]))
-						f.write(u'\t"{}": {},\n'.format(cur, defaults[cur]))
-				f.write(u'}\n')
 
+			rates = u'''{}\ndesc = "Currency Rates"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), l))
+			for cur in sorted(defaults.keys()):
+				if cur in currencies and ratios[currencies[cur]]:
+					rates += u'\t"{}": {},\n'.format(cur, ratios[currencies[cur]])
+				else:
+					if cur in currencies:
+						# print the currencies that didn't have enough data
+						print(cur, l, ratios[currencies[cur]], len(ratios[currencies[cur]]))
+					rates += u'\t"{}": {},\n'.format(cur, defaults[cur])
+			rates += u'}\n'
+
+			with open('auto_gen\\{}currencyrates.py'.format(name), 'w', encoding='utf-8') as f:
+				f.write(rates)
+
+			# This needs its own codeblack as the currency py files need to be written first
+			curval = u'''{}\ndesc = "Currency Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), l))
+			for cur in sorted(defaults.keys()):
+				if cur in currencies and ratios[currencies[cur]]:
+					retstr = convertshorttolongstr(cur, ratios[currencies[cur]], l)
+					if retstr:
+						curval += u'\t"{},\n'.format(retstr)
+				else:
+					retstr = convertshorttolongstr(cur, defaults[cur], l)
+					if retstr:
+						curval += u'\t"{},\n'.format(retstr)
+			curval += u'}\n'
+
+			with open('auto_gen\\{}currency.py'.format(name), 'w', encoding='utf-8') as f:
+				f.write(curval)
 		updatechaosequiv(ldb)
-		gen_lists(ldb)
+
 
 if __name__ == '__main__':
 	poetrade_getcurrencyrates()
 	divuniqueupdate()
+
 
 	if False: # toggle True/False to run this section
 		with MongoClient() as client:
