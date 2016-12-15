@@ -141,7 +141,7 @@ def main():
 			   ("b", "Breach", puniques, pdivination, pcurrency),
 			   ("bhc", "Hardcore Breach", phcuniques, phcdivination, phccurrency)]
 
-	leveling = True  # toggle to show leveling items
+	leveling = False  # toggle to show leveling items
 
 	for i in leagues:
 
@@ -174,7 +174,7 @@ def main():
 				buffer += gen_list(rareitemleveling)
 
 		buffer += gen_list(rare_highlight)  # rares highlighting + jewelry
-		buffer += gen_list(rares)  # rares catchall
+		#buffer += gen_list(rares)  # rares catchall
 		#buffer += gen_list(chroma)  # chrome vendor items
 		if leveling:
 			buffer += gen_list(general_levelling)
