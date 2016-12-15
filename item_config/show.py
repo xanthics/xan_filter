@@ -32,7 +32,10 @@ items = {
     "02 6L": {"other": ["LinkedSockets 6"], "type": "show very high"},
     "03 5L": {"other": ["LinkedSockets 5", "PlayAlertSound 2 75"], "type": "show high"},
     "04 6S": {"other": ["Sockets 6", "PlayAlertSound 2 50"], "type": "show high"},
+    # High value atlas bases.  Show and make noise at any rarity
     "04 Steel Ring": {"base": "Steel Ring", "type": "show high"},
+    "04 Crystal Belt": {"base": "Crystal Belt", "type": "show high"},
+    "04 Opal Ring": {"base": "Opal Ring", "type": "show high"},
     "10 Talisman": {'other': ["Rarity >= Rare", "ItemLevel >= 70"], "base": "Talisman", "type": "show high"},
     "11 Talisman": {'other': ["ItemLevel >= 70"], "base": "Talisman", "type": "show high"},
     "12 Talisman": {"base": "Talisman", "type": "show low"},
