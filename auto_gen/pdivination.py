@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/14/2016(m/d/y) 10:36:54 UTC from "Breach" data
+# Created: 12/19/2016(m/d/y) 02:25:41 UTC from "Breach" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -31,7 +31,7 @@ desc = "Divination Card"
 
 # Base type : settings pair
 items = {
-	"000 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination normal"},
+	"000 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination low"},
 	"001 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
 	"002 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination very high"},
 	"003 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination high"},
@@ -51,11 +51,11 @@ items = {
 	"1 The Formless Sea": {"base": "The Formless Sea", "class": "Divination Card", "type": "divination very high"},
 	"1 The Hunger": {"base": "The Hunger", "class": "Divination Card", "type": "divination very high"},
 	"1 The Immortal": {"base": "The Immortal", "class": "Divination Card", "type": "divination very high"},
-	"1 The King's Heart": {"base": "The King's Heart", "class": "Divination Card", "type": "divination very high"},
 	"1 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination very high"},
 	"1 The Offering": {"base": "The Offering", "class": "Divination Card", "type": "divination very high"},
 	"1 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
 	"1 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination very high"},
+	"1 The Wolf": {"base": "The Wolf", "class": "Divination Card", "type": "divination very high"},
 	"1 Wealth and Power": {"base": "Wealth and Power", "class": "Divination Card", "type": "divination very high"},
 	"2 Chaotic Disposition": {"base": "Chaotic Disposition", "class": "Divination Card", "type": "divination high"},
 	"2 Earth Drinker": {"base": "Earth Drinker", "class": "Divination Card", "type": "divination high"},
@@ -68,13 +68,13 @@ items = {
 	"2 The Cartographer": {"base": "The Cartographer", "class": "Divination Card", "type": "divination high"},
 	"2 The Celestial Justicar": {"base": "The Celestial Justicar", "class": "Divination Card", "type": "divination high"},
 	"2 The Chains that Bind": {"base": "The Chains that Bind", "class": "Divination Card", "type": "divination high"},
-	"2 The Cursed King": {"base": "The Cursed King", "class": "Divination Card", "type": "divination high"},
 	"2 The Dapper Prodigy": {"base": "The Dapper Prodigy", "class": "Divination Card", "type": "divination high"},
 	"2 The Dark Mage": {"base": "The Dark Mage", "class": "Divination Card", "type": "divination high"},
 	"2 The Demoness": {"base": "The Demoness", "class": "Divination Card", "type": "divination high"},
 	"2 The Fletcher": {"base": "The Fletcher", "class": "Divination Card", "type": "divination high"},
 	"2 The Harvester": {"base": "The Harvester", "class": "Divination Card", "type": "divination high"},
 	"2 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination high"},
+	"2 The King's Heart": {"base": "The King's Heart", "class": "Divination Card", "type": "divination high"},
 	"2 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination high"},
 	"2 The Soul": {"base": "The Soul", "class": "Divination Card", "type": "divination high"},
 	"2 The Stormcaller": {"base": "The Stormcaller", "class": "Divination Card", "type": "divination high"},
@@ -82,7 +82,6 @@ items = {
 	"2 The Vast": {"base": "The Vast", "class": "Divination Card", "type": "divination high"},
 	"2 The Void": {"base": "The Void", "class": "Divination Card", "type": "divination high"},
 	"2 The Warlord": {"base": "The Warlord", "class": "Divination Card", "type": "divination high"},
-	"2 The Wolf": {"base": "The Wolf", "class": "Divination Card", "type": "divination high"},
 	"2 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination high"},
 	"3 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "divination low"},
 	"3 Anarchy's Price": {"base": "Anarchy's Price", "class": "Divination Card", "type": "divination low"},
@@ -96,7 +95,6 @@ items = {
 	"3 Rain of Chaos": {"base": "Rain of Chaos", "class": "Divination Card", "type": "divination low"},
 	"3 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},
 	"3 The Catalyst": {"base": "The Catalyst", "class": "Divination Card", "type": "divination low"},
-	"3 The Drunken Aristocrat": {"base": "The Drunken Aristocrat", "class": "Divination Card", "type": "divination low"},
 	"3 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
 	"3 The Feast": {"base": "The Feast", "class": "Divination Card", "type": "divination low"},
 	"3 The Flora's Gift": {"base": "The Flora's Gift", "class": "Divination Card", "type": "divination low"},
