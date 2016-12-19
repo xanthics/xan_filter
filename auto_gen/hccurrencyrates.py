@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/16/2016(m/d/y) 06:08:43 UTC from "Hardcore" data
+# Created: 12/19/2016(m/d/y) 02:16:00 UTC from "Hardcore" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -31,7 +31,7 @@ desc = "Currency Rates"
 
 # Base type : settings pair
 items = {
-	"alch": 0.3333333333333333,
+	"alch": 0.27573696145124715,
 	"alt": 0.0625,
 	"apprenticecartosextant": 0.5,
 	"aug": 0.03125,
@@ -39,10 +39,10 @@ items = {
 	"blessed": 0.5,
 	"chance": 0.07142857142857142,
 	"chaos": 1.0,
-	"chisel": 0.25,
+	"chisel": 0.2796585300786981,
 	"chrom": 0.06666666666666667,
 	"divine": 15.0,
-	"exa": 45.0,
+	"exa": 47.25,
 	"fuse": 0.5,
 	"gcp": 1,
 	"jew": 0.125,

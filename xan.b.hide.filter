@@ -1,6 +1,6 @@
 #**************************************************************
 # Welcome to xan.filter, a Python generated loot filter for PoE
-# This filter was generated for Breach on 12/15/2016(m/d/y) 01:25:31 UTC
+# This filter was generated for Breach on 12/19/2016(m/d/y) 02:30:07 UTC
 # The most current version of code can always be found at https://github.com/xanthics/poe_filter
 #**************************************************************
 
@@ -469,7 +469,9 @@ Show
 Show
 	BaseType "Orb of Chance"
 	Class "Currency"
-	SetFontSize 30
+	SetBorderColor 170 158 130
+	SetFontSize 35
+	PlayAlertSound 5 25
 	SetBackgroundColor 0 0 0 220
 
 #0 Orb of Fusing - Currency Autogen
@@ -536,8 +538,8 @@ Show
 	BaseType "Vaal Orb"
 	Class "Currency"
 	SetBorderColor 170 158 130
-	SetFontSize 40
-	PlayAlertSound 5 75
+	SetFontSize 35
+	PlayAlertSound 5 25
 	SetBackgroundColor 0 0 0 220
 
 #0 Deafening Essence - Essences
@@ -852,6 +854,15 @@ Show
 	SetFontSize 25
 	SetBackgroundColor 0 0 0 220
 
+#0 Abyssal Axe - Unique
+Show
+	BaseType "Abyssal Axe"
+	Rarity Unique
+	SetBorderColor 175 96 37
+	SetFontSize 45
+	PlayAlertSound 3 300
+	SetBackgroundColor 0 0 0 220
+
 #0 Assassin's Garb - Unique
 Show
 	BaseType "Assassin's Garb"
@@ -864,15 +875,6 @@ Show
 #0 Chateau Map - Unique
 Show
 	BaseType "Chateau Map"
-	Rarity Unique
-	SetBorderColor 175 96 37
-	SetFontSize 45
-	PlayAlertSound 3 300
-	SetBackgroundColor 0 0 0 220
-
-#0 Citrine Amulet - Unique
-Show
-	BaseType "Citrine Amulet"
 	Rarity Unique
 	SetBorderColor 175 96 37
 	SetFontSize 45
@@ -900,15 +902,6 @@ Show
 #0 Crusader Boots - Unique
 Show
 	BaseType "Crusader Boots"
-	Rarity Unique
-	SetBorderColor 175 96 37
-	SetFontSize 45
-	PlayAlertSound 3 300
-	SetBackgroundColor 0 0 0 220
-
-#0 Cutlass - Unique
-Show
-	BaseType "Cutlass"
 	Rarity Unique
 	SetBorderColor 175 96 37
 	SetFontSize 45
@@ -1014,15 +1007,6 @@ Show
 	PlayAlertSound 3 300
 	SetBackgroundColor 0 0 0 220
 
-#0 Grand Mana Flask - Unique
-Show
-	BaseType "Grand Mana Flask"
-	Rarity Unique
-	SetBorderColor 175 96 37
-	SetFontSize 45
-	PlayAlertSound 3 300
-	SetBackgroundColor 0 0 0 220
-
 #0 Greatwolf Talisman - Unique
 Show
 	BaseType "Greatwolf Talisman"
@@ -1044,15 +1028,6 @@ Show
 #0 Jewelled Foil - Unique
 Show
 	BaseType "Jewelled Foil"
-	Rarity Unique
-	SetBorderColor 175 96 37
-	SetFontSize 45
-	PlayAlertSound 3 300
-	SetBackgroundColor 0 0 0 220
-
-#0 Karui Sceptre - Unique
-Show
-	BaseType "Karui Sceptre"
 	Rarity Unique
 	SetBorderColor 175 96 37
 	SetFontSize 45
@@ -1131,6 +1106,15 @@ Show
 	PlayAlertSound 3 300
 	SetBackgroundColor 0 0 0 220
 
+#0 Savant's Robe - Unique
+Show
+	BaseType "Savant's Robe"
+	Rarity Unique
+	SetBorderColor 175 96 37
+	SetFontSize 45
+	PlayAlertSound 3 300
+	SetBackgroundColor 0 0 0 220
+
 #0 Silver Flask - Unique
 Show
 	BaseType "Silver Flask"
@@ -1140,18 +1124,9 @@ Show
 	PlayAlertSound 3 300
 	SetBackgroundColor 0 0 0 220
 
-#0 Slaughter Knife - Unique
+#0 Topaz Flask - Unique
 Show
-	BaseType "Slaughter Knife"
-	Rarity Unique
-	SetBorderColor 175 96 37
-	SetFontSize 45
-	PlayAlertSound 3 300
-	SetBackgroundColor 0 0 0 220
-
-#0 Steelhead - Unique
-Show
-	BaseType "Steelhead"
+	BaseType "Topaz Flask"
 	Rarity Unique
 	SetBorderColor 175 96 37
 	SetFontSize 45
@@ -1185,6 +1160,15 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
+#1 Citrine Amulet - Unique
+Show
+	BaseType "Citrine Amulet"
+	Rarity Unique
+	SetFontSize 40
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
+	SetBackgroundColor 0 0 0 220
+
 #1 Courtyard Map - Unique
 Show
 	BaseType "Courtyard Map"
@@ -1194,18 +1178,18 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
-#1 Despot Axe - Unique
+#1 Cutlass - Unique
 Show
-	BaseType "Despot Axe"
+	BaseType "Cutlass"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
-#1 Exquisite Leather - Unique
+#1 Despot Axe - Unique
 Show
-	BaseType "Exquisite Leather"
+	BaseType "Despot Axe"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
@@ -1239,9 +1223,18 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
-#1 Granite Flask - Unique
+#1 Grand Mana Flask - Unique
 Show
-	BaseType "Granite Flask"
+	BaseType "Grand Mana Flask"
+	Rarity Unique
+	SetFontSize 40
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
+	SetBackgroundColor 0 0 0 220
+
+#1 Imperial Staff - Unique
+Show
+	BaseType "Imperial Staff"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
@@ -1266,9 +1259,9 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
-#1 Murder Boots - Unique
+#1 Karui Sceptre - Unique
 Show
-	BaseType "Murder Boots"
+	BaseType "Karui Sceptre"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
@@ -1278,24 +1271,6 @@ Show
 #1 Museum Map - Unique
 Show
 	BaseType "Museum Map"
-	Rarity Unique
-	SetFontSize 40
-	SetBorderColor 175 96 37
-	PlayAlertSound 3 75
-	SetBackgroundColor 0 0 0 220
-
-#1 Necropolis Map - Unique
-Show
-	BaseType "Necropolis Map"
-	Rarity Unique
-	SetFontSize 40
-	SetBorderColor 175 96 37
-	PlayAlertSound 3 75
-	SetBackgroundColor 0 0 0 220
-
-#1 Nightmare Bascinet - Unique
-Show
-	BaseType "Nightmare Bascinet"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
@@ -1347,9 +1322,27 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
+#1 Slaughter Knife - Unique
+Show
+	BaseType "Slaughter Knife"
+	Rarity Unique
+	SetFontSize 40
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
+	SetBackgroundColor 0 0 0 220
+
 #1 Sorcerer Boots - Unique
 Show
 	BaseType "Sorcerer Boots"
+	Rarity Unique
+	SetFontSize 40
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
+	SetBackgroundColor 0 0 0 220
+
+#1 Steelhead - Unique
+Show
+	BaseType "Steelhead"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
@@ -1374,27 +1367,18 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
-#1 Titanium Spirit Shield - Unique
-Show
-	BaseType "Titanium Spirit Shield"
-	Rarity Unique
-	SetFontSize 40
-	SetBorderColor 175 96 37
-	PlayAlertSound 3 75
-	SetBackgroundColor 0 0 0 220
-
-#1 Topaz Flask - Unique
-Show
-	BaseType "Topaz Flask"
-	Rarity Unique
-	SetFontSize 40
-	SetBorderColor 175 96 37
-	PlayAlertSound 3 75
-	SetBackgroundColor 0 0 0 220
-
 #1 Torture Chamber Map - Unique
 Show
 	BaseType "Torture Chamber Map"
+	Rarity Unique
+	SetFontSize 40
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
+	SetBackgroundColor 0 0 0 220
+
+#1 Two-Stone Ring - Unique
+Show
+	BaseType "Two-Stone Ring"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
@@ -1812,6 +1796,14 @@ Show
 	SetFontSize 25
 	SetBackgroundColor 0 0 0 220
 
+#7 Enameled Buckler - Unique
+Show
+	BaseType "Enameled Buckler"
+	Rarity Unique
+	PlayAlertSound 3 25
+	SetFontSize 25
+	SetBackgroundColor 0 0 0 220
+
 #7 Estoc - Unique
 Show
 	BaseType "Estoc"
@@ -2068,25 +2060,17 @@ Show
 	SetFontSize 25
 	SetBackgroundColor 0 0 0 220
 
-#7 Jade Hatchet - Unique
-Show
-	BaseType "Jade Hatchet"
-	Rarity Unique
-	PlayAlertSound 3 25
-	SetFontSize 25
-	SetBackgroundColor 0 0 0 220
-
-#7 Jagged Foil - Unique
-Show
-	BaseType "Jagged Foil"
-	Rarity Unique
-	PlayAlertSound 3 25
-	SetFontSize 25
-	SetBackgroundColor 0 0 0 220
-
 #7 Jagged Maul - Unique
 Show
 	BaseType "Jagged Maul"
+	Rarity Unique
+	PlayAlertSound 3 25
+	SetFontSize 25
+	SetBackgroundColor 0 0 0 220
+
+#7 Lacquered Garb - Unique
+Show
+	BaseType "Lacquered Garb"
 	Rarity Unique
 	PlayAlertSound 3 25
 	SetFontSize 25
@@ -2119,6 +2103,14 @@ Show
 #7 Leatherscale Boots - Unique
 Show
 	BaseType "Leatherscale Boots"
+	Rarity Unique
+	PlayAlertSound 3 25
+	SetFontSize 25
+	SetBackgroundColor 0 0 0 220
+
+#7 Lion Sword - Unique
+Show
+	BaseType "Lion Sword"
 	Rarity Unique
 	PlayAlertSound 3 25
 	SetFontSize 25
@@ -2260,6 +2252,14 @@ Show
 	SetFontSize 25
 	SetBackgroundColor 0 0 0 220
 
+#7 Pinnacle Tower Shield - Unique
+Show
+	BaseType "Pinnacle Tower Shield"
+	Rarity Unique
+	PlayAlertSound 3 25
+	SetFontSize 25
+	SetBackgroundColor 0 0 0 220
+
 #7 Plank Kite Shield - Unique
 Show
 	BaseType "Plank Kite Shield"
@@ -2271,6 +2271,14 @@ Show
 #7 Plate Vest - Unique
 Show
 	BaseType "Plate Vest"
+	Rarity Unique
+	PlayAlertSound 3 25
+	SetFontSize 25
+	SetBackgroundColor 0 0 0 220
+
+#7 Platinum Kris - Unique
+Show
+	BaseType "Platinum Kris"
 	Rarity Unique
 	PlayAlertSound 3 25
 	SetFontSize 25
@@ -2524,14 +2532,6 @@ Show
 	SetFontSize 25
 	SetBackgroundColor 0 0 0 220
 
-#7 Simple Robe - Unique
-Show
-	BaseType "Simple Robe"
-	Rarity Unique
-	PlayAlertSound 3 25
-	SetFontSize 25
-	SetBackgroundColor 0 0 0 220
-
 #7 Skinning Knife - Unique
 Show
 	BaseType "Skinning Knife"
@@ -2567,14 +2567,6 @@ Show
 #7 Spidersilk Robe - Unique
 Show
 	BaseType "Spidersilk Robe"
-	Rarity Unique
-	PlayAlertSound 3 25
-	SetFontSize 25
-	SetBackgroundColor 0 0 0 220
-
-#7 Spike-Point Arrow Quiver - Unique
-Show
-	BaseType "Spike-Point Arrow Quiver"
 	Rarity Unique
 	PlayAlertSound 3 25
 	SetFontSize 25
@@ -2772,14 +2764,6 @@ Show
 	SetFontSize 25
 	SetBackgroundColor 0 0 0 220
 
-#7 Unset Ring - Unique
-Show
-	BaseType "Unset Ring"
-	Rarity Unique
-	PlayAlertSound 3 25
-	SetFontSize 25
-	SetBackgroundColor 0 0 0 220
-
 #7 Vaal Blade - Unique
 Show
 	BaseType "Vaal Blade"
@@ -2863,14 +2847,6 @@ Show
 #7 Wild Leather - Unique
 Show
 	BaseType "Wild Leather"
-	Rarity Unique
-	PlayAlertSound 3 25
-	SetFontSize 25
-	SetBackgroundColor 0 0 0 220
-
-#7 Woodsplitter - Unique
-Show
-	BaseType "Woodsplitter"
 	Rarity Unique
 	PlayAlertSound 3 25
 	SetFontSize 25
@@ -5017,8 +4993,6 @@ Show
 Show
 	BaseType "The Wolf's Shadow"
 	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 25
 	SetBackgroundColor 0 0 0 220
 
 #001 The Dragon's Heart - Divination Card
@@ -5191,15 +5165,6 @@ Show
 	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
-#1 The King's Heart - Divination Card
-Show
-	BaseType "The King's Heart"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	SetFontSize 40
-	PlayAlertSound 6 175
-	SetBackgroundColor 0 0 0 220
-
 #1 The Last One Standing - Divination Card
 Show
 	BaseType "The Last One Standing"
@@ -5230,6 +5195,15 @@ Show
 #1 The Thaumaturgist - Divination Card
 Show
 	BaseType "The Thaumaturgist"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	SetFontSize 40
+	PlayAlertSound 6 175
+	SetBackgroundColor 0 0 0 220
+
+#1 The Wolf - Divination Card
+Show
+	BaseType "The Wolf"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
 	SetFontSize 40
@@ -5333,14 +5307,6 @@ Show
 	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
-#2 The Cursed King - Divination Card
-Show
-	BaseType "The Cursed King"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
-	SetBackgroundColor 0 0 0 220
-
 #2 The Dapper Prodigy - Divination Card
 Show
 	BaseType "The Dapper Prodigy"
@@ -5384,6 +5350,14 @@ Show
 #2 The Hoarder - Divination Card
 Show
 	BaseType "The Hoarder"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	PlayAlertSound 6 75
+	SetBackgroundColor 0 0 0 220
+
+#2 The King's Heart - Divination Card
+Show
+	BaseType "The King's Heart"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
 	PlayAlertSound 6 75
@@ -5440,14 +5414,6 @@ Show
 #2 The Warlord - Divination Card
 Show
 	BaseType "The Warlord"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
-	SetBackgroundColor 0 0 0 220
-
-#2 The Wolf - Divination Card
-Show
-	BaseType "The Wolf"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
 	PlayAlertSound 6 75
@@ -5530,12 +5496,6 @@ Show
 #3 The Catalyst - Divination Card
 Show
 	BaseType "The Catalyst"
-	Class "Divination Card"
-	SetBackgroundColor 0 0 0 220
-
-#3 The Drunken Aristocrat - Divination Card
-Show
-	BaseType "The Drunken Aristocrat"
 	Class "Divination Card"
 	SetBackgroundColor 0 0 0 220
 

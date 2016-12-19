@@ -128,6 +128,8 @@ def get_stashes(ldb, start=None):
 
 	print("Starting {}".format(url))
 	req = requests.get(url)
+	mybytes = len(req.content)/1000000  # Assume digital storage 1mB=1000kB=1000000B
+	print("{:.2f} MegaBytes received".format(mybytes))
 
 	data = req.json(encoding='utf-8')
 
@@ -171,9 +173,9 @@ def get_stashes(ldb, start=None):
 
 	# Stop updating if we get less than 50 new tabs as we don't need the absolute most current data
 	if len(remove) > 50:
-		return nextchange
+		return nextchange, mybytes
 	else:
-		return start
+		return start, mybytes
 
 
 def gen_lists(ldb):
@@ -319,10 +321,13 @@ def divuniqueupdate():
 
 		nc = None
 		oldnc = nc
+		mybytes = 0
 
 		while True:
 			try:
-				nc = get_stashes(ldb, nc)
+				nc, nmybytes = get_stashes(ldb, nc)
+				mybytes += nmybytes
+				print("{:.2f} Megabytes recieved so far(total)".format(mybytes))
 				if oldnc == nc:
 					break
 				oldnc = nc
@@ -362,8 +367,8 @@ def find_substrings(ldb):
 # Convert a currency value to a priority tier
 
 # Convert a currency shorthand to full name.  returns a string
-def convertshorttolongstr(cur, val, l):
-	if val >= chaosequiv(.5, 'exa', l):
+def convertshorttolongstr(cur, val, l, exa):
+	if val >= exa * .5:
 		tier = 'currency extremely high'
 	elif val >= 4:
 		tier = 'currency very high'
@@ -435,7 +440,7 @@ def poetrade_getcurrencyrates():
 
 	chaos = 4
 
-	defaults = {"exa": 60.0, "chaos": 1.0, "fuse": 0.5, "regal": 1, "alt": 1/16, "alch": 1/3, "jew": 1/8, "gcp": 1,
+	defaults = {"exa": 45.0, "chaos": 1.0, "fuse": 0.5, "regal": 1, "alt": 1/16, "alch": 1/3, "jew": 1/8, "gcp": 1,
 				"divine": 15.0, "scour": 0.5, "blessed": 0.5, "vaal": 1, "chance": 1/14, "regret": 1.0, "chrom": 1/15,
 				"mirror": 20000.0, "chisel": 0.25, "silver": 0.333, "bauble": 1/16, "aug": 1/32, "transmute": 1/64, "perandus": 1/45,
 				"apprenticecartosextant": .5, "journeycartosextant": 2, "mastercartosextant": 5}
@@ -486,32 +491,30 @@ def poetrade_getcurrencyrates():
 
 
 			rates = u'''{}\ndesc = "Currency Rates"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), l))
+			curval = u'''{}\ndesc = "Currency Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), l))
+			if ratios[currencies['exa']]:
+				exalt = ratios[currencies['exa']]
+			else:
+				exalt = defaults['exa']
 			for cur in sorted(defaults.keys()):
 				if cur in currencies and ratios[currencies[cur]]:
 					rates += u'\t"{}": {},\n'.format(cur, ratios[currencies[cur]])
+					retstr = convertshorttolongstr(cur, ratios[currencies[cur]], l, exalt)
+					if retstr:
+						curval += u'\t"{},\n'.format(retstr)
 				else:
+					retstr = convertshorttolongstr(cur, defaults[cur], l, exalt)
+					if retstr:
+						curval += u'\t"{},\n'.format(retstr)
 					if cur in currencies:
 						# print the currencies that didn't have enough data
 						print(cur, l, ratios[currencies[cur]], len(ratios[currencies[cur]]))
 					rates += u'\t"{}": {},\n'.format(cur, defaults[cur])
 			rates += u'}\n'
+			curval += u'}\n'
 
 			with open('auto_gen\\{}currencyrates.py'.format(name), 'w', encoding='utf-8') as f:
 				f.write(rates)
-
-			# This needs its own codeblack as the currency py files need to be written first
-			curval = u'''{}\ndesc = "Currency Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), l))
-			for cur in sorted(defaults.keys()):
-				if cur in currencies and ratios[currencies[cur]]:
-					retstr = convertshorttolongstr(cur, ratios[currencies[cur]], l)
-					if retstr:
-						curval += u'\t"{},\n'.format(retstr)
-				else:
-					retstr = convertshorttolongstr(cur, defaults[cur], l)
-					if retstr:
-						curval += u'\t"{},\n'.format(retstr)
-			curval += u'}\n'
-
 			with open('auto_gen\\{}currency.py'.format(name), 'w', encoding='utf-8') as f:
 				f.write(curval)
 		updatechaosequiv(ldb)
