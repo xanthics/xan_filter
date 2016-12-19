@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/16/2016(m/d/y) 07:17:49 UTC from "Hardcore" data
+# Created: 12/19/2016(m/d/y) 02:25:41 UTC from "Hardcore" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -32,7 +32,6 @@ desc = "Unique"
 # Base type : settings pair
 items = {
 	"0 Abyssal Axe": {"base": "Abyssal Axe", "type": "unique very high"},
-	"0 Arcanist Gloves": {"base": "Arcanist Gloves", "type": "unique very high"},
 	"0 Assassin's Garb": {"base": "Assassin's Garb", "type": "unique very high"},
 	"0 Blinder": {"base": "Blinder", "type": "unique very high"},
 	"0 Bone Bow": {"base": "Bone Bow", "type": "unique very high"},
@@ -43,10 +42,10 @@ items = {
 	"0 Citrine Amulet": {"base": "Citrine Amulet", "type": "unique very high"},
 	"0 Clasped Mitts": {"base": "Clasped Mitts", "type": "unique very high"},
 	"0 Clutching Talisman": {"base": "Clutching Talisman", "type": "unique very high"},
-	"0 Conjurer Boots": {"base": "Conjurer Boots", "type": "unique very high"},
 	"0 Coronal Leather": {"base": "Coronal Leather", "type": "unique very high"},
 	"0 Courtyard Map": {"base": "Courtyard Map", "type": "unique very high"},
 	"0 Crusader Boots": {"base": "Crusader Boots", "type": "unique very high"},
+	"0 Crusader Gloves": {"base": "Crusader Gloves", "type": "unique very high"},
 	"0 Cutlass": {"base": "Cutlass", "type": "unique very high"},
 	"0 Deicide Mask": {"base": "Deicide Mask", "type": "unique very high"},
 	"0 Desert Brigandine": {"base": "Desert Brigandine", "type": "unique very high"},
@@ -122,19 +121,19 @@ items = {
 	"1 Amethyst Ring": {"base": "Amethyst Ring", "type": "unique high"},
 	"1 Ancient Gauntlets": {"base": "Ancient Gauntlets", "type": "unique high"},
 	"1 Ancient Greaves": {"base": "Ancient Greaves", "type": "unique high"},
+	"1 Arcanist Gloves": {"base": "Arcanist Gloves", "type": "unique high"},
 	"1 Archon Kite Shield": {"base": "Archon Kite Shield", "type": "unique high"},
 	"1 Black Maw Talisman": {"base": "Black Maw Talisman", "type": "unique high"},
 	"1 Broadhead Arrow Quiver": {"base": "Broadhead Arrow Quiver", "type": "unique high"},
 	"1 Cedar Tower Shield": {"base": "Cedar Tower Shield", "type": "unique high"},
+	"1 Conjurer Boots": {"base": "Conjurer Boots", "type": "unique high"},
 	"1 Conjurer Gloves": {"base": "Conjurer Gloves", "type": "unique high"},
 	"1 Corrugated Buckler": {"base": "Corrugated Buckler", "type": "unique high"},
-	"1 Crusader Gloves": {"base": "Crusader Gloves", "type": "unique high"},
 	"1 Crusader Plate": {"base": "Crusader Plate", "type": "unique high"},
 	"1 Deerskin Gloves": {"base": "Deerskin Gloves", "type": "unique high"},
 	"1 Diamond Ring": {"base": "Diamond Ring", "type": "unique high"},
 	"1 Etched Greatsword": {"base": "Etched Greatsword", "type": "unique high"},
 	"1 Eternal Sword": {"base": "Eternal Sword", "type": "unique high"},
-	"1 Full Dragonscale": {"base": "Full Dragonscale", "type": "unique high"},
 	"1 Gladius": {"base": "Gladius", "type": "unique high"},
 	"1 Goliath Gauntlets": {"base": "Goliath Gauntlets", "type": "unique high"},
 	"1 Granite Flask": {"base": "Granite Flask", "type": "unique high"},
@@ -154,9 +153,9 @@ items = {
 	"1 Ruby Flask": {"base": "Ruby Flask", "type": "unique high"},
 	"1 Saintly Chainmail": {"base": "Saintly Chainmail", "type": "unique high"},
 	"1 Savant's Robe": {"base": "Savant's Robe", "type": "unique high"},
+	"1 Simple Robe": {"base": "Simple Robe", "type": "unique high"},
 	"1 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique high"},
 	"1 Slink Boots": {"base": "Slink Boots", "type": "unique high"},
-	"1 Steelscale Gauntlets": {"base": "Steelscale Gauntlets", "type": "unique high"},
 	"1 Strapped Mitts": {"base": "Strapped Mitts", "type": "unique high"},
 	"1 Terror Maul": {"base": "Terror Maul", "type": "unique high"},
 	"1 Trapper Boots": {"base": "Trapper Boots", "type": "unique high"},
@@ -166,6 +165,7 @@ items = {
 	"1 Vaal Gauntlets": {"base": "Vaal Gauntlets", "type": "unique high"},
 	"1 Vaal Hatchet": {"base": "Vaal Hatchet", "type": "unique high"},
 	"1 Vaal Pyramid Map": {"base": "Vaal Pyramid Map", "type": "unique high"},
+	"1 Vile Staff": {"base": "Vile Staff", "type": "unique high"},
 	"1 Zealot Helmet": {"base": "Zealot Helmet", "type": "unique high"},
 	"7 Great Helmet": {"base": "Great Helmet", "type": "unique low"},
 	"7 Leatherscale Boots": {"base": "Leatherscale Boots", "type": "unique low"},
