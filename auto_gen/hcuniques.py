@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/14/2016(m/d/y) 10:36:54 UTC from "Hardcore" data
+# Created: 12/16/2016(m/d/y) 07:17:49 UTC from "Hardcore" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -91,6 +91,7 @@ items = {
 	"0 Ritual Sceptre": {"base": "Ritual Sceptre", "type": "unique very high"},
 	"0 Rotfeather Talisman": {"base": "Rotfeather Talisman", "type": "unique very high"},
 	"0 Royal Axe": {"base": "Royal Axe", "type": "unique very high"},
+	"0 Royal Burgonet": {"base": "Royal Burgonet", "type": "unique very high"},
 	"0 Ruby Amulet": {"base": "Ruby Amulet", "type": "unique very high"},
 	"0 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "unique very high"},
 	"0 Sanctified Life Flask": {"base": "Sanctified Life Flask", "type": "unique very high"},
@@ -155,6 +156,7 @@ items = {
 	"1 Savant's Robe": {"base": "Savant's Robe", "type": "unique high"},
 	"1 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique high"},
 	"1 Slink Boots": {"base": "Slink Boots", "type": "unique high"},
+	"1 Steelscale Gauntlets": {"base": "Steelscale Gauntlets", "type": "unique high"},
 	"1 Strapped Mitts": {"base": "Strapped Mitts", "type": "unique high"},
 	"1 Terror Maul": {"base": "Terror Maul", "type": "unique high"},
 	"1 Trapper Boots": {"base": "Trapper Boots", "type": "unique high"},
@@ -166,5 +168,6 @@ items = {
 	"1 Vaal Pyramid Map": {"base": "Vaal Pyramid Map", "type": "unique high"},
 	"1 Zealot Helmet": {"base": "Zealot Helmet", "type": "unique high"},
 	"7 Great Helmet": {"base": "Great Helmet", "type": "unique low"},
+	"7 Leatherscale Boots": {"base": "Leatherscale Boots", "type": "unique low"},
 	"9 Other uniques": {"type": "unique normal"}
 }
