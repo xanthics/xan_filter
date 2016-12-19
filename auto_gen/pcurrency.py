@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/16/2016(m/d/y) 06:15:20 UTC from "Breach" data
+# Created: 12/19/2016(m/d/y) 02:16:06 UTC from "Breach" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -44,7 +44,7 @@ items = {
 	"0 Divine Orb": {"base": "Divine Orb", "class": "Currency", "type": "currency very high"},
 	"0 Orb of Fusing": {"base": "Orb of Fusing", "class": "Currency", "type": "currency normal"},
 	"0 Gemcutter's Prism": {"base": "Gemcutter's Prism", "class": "Currency", "type": "currency high"},
-	"0 Jeweller's Orb": {"base": "Jeweller's Orb", "class": "Currency", "type": "currency normal"},
+	"0 Jeweller's Orb": {"base": "Jeweller's Orb", "class": "Currency", "type": "currency low"},
 	"0 Journeyman Cartographer's Sextant": {"base": "Journeyman Cartographer's Sextant", "class": "Currency", "type": "currency high"},
 	"0 Master Cartographer's Sextant": {"base": "Master Cartographer's Sextant", "class": "Currency", "type": "currency very high"},
 	"0 Perandus Coin": {"base": "Perandus Coin", "class": "Currency", "type": "currency low"},
@@ -53,5 +53,5 @@ items = {
 	"0 Orb of Scouring": {"base": "Orb of Scouring", "class": "Currency", "type": "currency normal"},
 	"0 Silver Coin": {"base": "Silver Coin", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Transmutation": {"base": "Orb of Transmutation", "class": "Currency", "type": "currency low"},
-	"0 Vaal Orb": {"base": "Vaal Orb", "class": "Currency", "type": "currency high"},
+	"0 Vaal Orb": {"base": "Vaal Orb", "class": "Currency", "type": "currency normal"},
 }

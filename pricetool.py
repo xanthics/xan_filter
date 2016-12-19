@@ -128,6 +128,8 @@ def get_stashes(ldb, start=None):
 
 	print("Starting {}".format(url))
 	req = requests.get(url)
+	mybytes = len(req.content)/1000000  # Assume digital storage 1mB=1000kB=1000000B
+	print("{:.2f} MegaBytes received".format(mybytes))
 
 	data = req.json(encoding='utf-8')
 
@@ -171,9 +173,9 @@ def get_stashes(ldb, start=None):
 
 	# Stop updating if we get less than 50 new tabs as we don't need the absolute most current data
 	if len(remove) > 50:
-		return nextchange
+		return nextchange, mybytes
 	else:
-		return start
+		return start, mybytes
 
 
 def gen_lists(ldb):
@@ -319,10 +321,13 @@ def divuniqueupdate():
 
 		nc = None
 		oldnc = nc
+		mybytes = 0
 
 		while True:
 			try:
-				nc = get_stashes(ldb, nc)
+				nc, nmybytes = get_stashes(ldb, nc)
+				mybytes += nmybytes
+				print("{:.2f} Megabytes recieved so far(total)".format(mybytes))
 				if oldnc == nc:
 					break
 				oldnc = nc
