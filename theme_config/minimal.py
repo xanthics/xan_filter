@@ -85,7 +85,8 @@ color = {
 	"premiumgrey": "135 135 135",
 	"premiumlgrey": "221 221 221",
 	"black": "0 0 0",
-	"prophecy": "128 0 200"
+	"prophecy": "128 0 200",
+	"highlight": "62 70 90"
 }
 
 size = {
@@ -161,19 +162,19 @@ settings = {
 	"currency extremely high": ["SetBorderColor {}".format(color['currency']),
 								"SetFontSize {}".format(size['huge']),
 								"PlayAlertSound 5 300",
-								"SetBackgroundColor {} 220".format(color['premiumdpurple'])],
+								"SetBackgroundColor {} 220".format(color['highlight'])],
 	"currency very high": ["SetBorderColor {}".format(color['currency']),
 						   "SetFontSize {}".format(size['huge']),
 						   "PlayAlertSound 5 150",
-						   "SetBackgroundColor {} 220".format(color['premiumdpurple'])],
+						   "SetBackgroundColor {} 220".format(color['highlight'])],
 	"currency high": ["SetBorderColor {}".format(color['currency']),
 					  "SetFontSize {}".format(size['vlarge']),
 					  "PlayAlertSound 5 75",
-					  "SetBackgroundColor {} 220".format(color['premiumdpurple'])],
+					  "SetBackgroundColor {} 220".format(color['highlight'])],
 	"currency normal": ["SetBorderColor {}".format(color['currency']),
 						"SetFontSize {}".format(size['large']),
 						"PlayAlertSound 5 25",
-						"SetBackgroundColor {} 220".format(color['premiumdpurple'])],
+						"SetBackgroundColor {} 220".format(color['highlight'])],
 	"currency low": ["SetFontSize {}".format(size['normal']),
 					 "SetBackgroundColor {} 220".format(color['black'])],
 	"currency very low": ["SetFontSize {}".format(size['normal']),
