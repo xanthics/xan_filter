@@ -85,7 +85,8 @@ color = {
 	"premiumgrey": "135 135 135",
 	"premiumlgrey": "221 221 221",
 	"black": "0 0 0",
-	"prophecy": "128 0 200"
+	"prophecy": "128 0 200",
+	"highlight": "51 58 75"
 }
 
 size = {
@@ -144,6 +145,11 @@ settings = {
 			   "SetBorderColor {} 150".format(color['premiumorange']),
 			   "SetBackgroundColor {} 220".format(color['premiumdpurple'])],
 
+	"rare highlight": ["Rarity Rare",
+			   "SetFontSize {}".format(size['large']),
+			   "SetBorderColor {} 150".format(color['premiumorange']),
+			   "SetBackgroundColor {} 220".format(color['premiumdpurple'])],
+
 	"chromatic": ["SocketGroup RGB",
 				  "SetBorderColor {}".format(color['premiumgreen']),
 				  "SetFontSize {}".format(size['normal']),
@@ -156,19 +162,19 @@ settings = {
 	"currency extremely high": ["SetBorderColor {}".format(color['currency']),
 								"SetFontSize {}".format(size['huge']),
 								"PlayAlertSound 5 300",
-								"SetBackgroundColor {} 220".format(color['black'])],
+								"SetBackgroundColor {} 220".format(color['highlight'])],
 	"currency very high": ["SetBorderColor {}".format(color['currency']),
 						   "SetFontSize {}".format(size['huge']),
 						   "PlayAlertSound 5 150",
-						   "SetBackgroundColor {} 220".format(color['black'])],
+						   "SetBackgroundColor {} 220".format(color['highlight'])],
 	"currency high": ["SetBorderColor {}".format(color['currency']),
 					  "SetFontSize {}".format(size['vlarge']),
 					  "PlayAlertSound 5 75",
-					  "SetBackgroundColor {} 220".format(color['black'])],
+					  "SetBackgroundColor {} 220".format(color['highlight'])],
 	"currency normal": ["SetBorderColor {}".format(color['currency']),
 						"SetFontSize {}".format(size['large']),
 						"PlayAlertSound 5 25",
-						"SetBackgroundColor {} 220".format(color['black'])],
+						"SetBackgroundColor {} 220".format(color['highlight'])],
 	"currency low": ["SetFontSize {}".format(size['normal']),
 					 "SetBackgroundColor {} 220".format(color['black'])],
 	"currency very low": ["SetFontSize {}".format(size['normal']),
@@ -213,7 +219,7 @@ settings = {
 				"PlayAlertSound 8 125",
 				"SetBackgroundColor {} 220".format(color['black'])],
 	"map yellow": ["SetBorderColor {} 150".format(color['lightning']),
-				   "PlayAlertSound 8 75",
+				   # 45				   "PlayAlertSound 8 75",
 				   "SetFontSize {}".format(size['large']),
 				   "SetBackgroundColor {} 220".format(color['black'])],
 	"map white": ["SetBorderColor {} 150".format(color['normal']),
@@ -235,12 +241,6 @@ settings = {
 							"SetBorderColor {} 150".format(color['rare']),
 							"SetFontSize {}".format(size['large']),
 							"SetBackgroundColor {} 220".format(color['black'])],
-
-	"rare highlight": ["Rarity Rare",
-			   		   "SetFontSize {}".format(size['large']),
-					   "SetBorderColor {}".format(color['premiumorange']),
-					   "SetBackgroundColor {} 220".format(color['black'])],
-
 	"rare high": ["Rarity Rare",
 				  "SetBorderColor {}".format(color['rare']),
 				  "SetFontSize {}".format(size['large']),
