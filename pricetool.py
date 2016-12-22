@@ -38,6 +38,7 @@ import re
 from pymongo import MongoClient
 from statistics import mean
 
+import cloudflarebypass
 from auto_gen import currencyrates
 from auto_gen import hccurrencyrates
 from auto_gen import pcurrencyrates
@@ -463,7 +464,12 @@ def poetrade_getcurrencyrates():
 			buyratios = [[] for _ in range(max(currencies.values()) + 1)]
 			sellratios = [[] for _ in range(max(currencies.values()) + 1)]
 			url = "http://currency.poe.trade/search?league={}&online=x&want={}&have={}".format(l, chaos, '-'.join([str(currencies[d]) for d in currencies]))
-			req = requests.get(url).text
+			headers = {'User-Agent': cloudflarebypass.useragent}
+			jar = {'__cfduid': '{}'.format(cloudflarebypass.cfduid),
+				   'cf_clearance': '{}'.format(cloudflarebypass.cfclearance)}
+
+			req = requests.get(url, headers=headers, cookies=jar).text
+
 			for i in (req.split('\n')):
 				if 'data-sellcurrency="4"' in i:
 					crate = float(re.search(r'data-sellvalue="(-?\d*(\.\d+)?)"', i.lower()).group(1))

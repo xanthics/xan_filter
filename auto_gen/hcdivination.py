@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/22/2016(m/d/y) 00:52:24 UTC from "Hardcore" data
+# Created: 12/22/2016(m/d/y) 01:45:13 UTC from "Hardcore" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -37,6 +37,7 @@ items = {
 	"003 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination high"},
 	"1 Abandoned Wealth": {"base": "Abandoned Wealth", "class": "Divination Card", "type": "divination very high"},
 	"1 Bowyer's Dream": {"base": "Bowyer's Dream", "class": "Divination Card", "type": "divination very high"},
+	"1 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination very high"},
 	"1 Heterochromia": {"base": "Heterochromia", "class": "Divination Card", "type": "divination very high"},
 	"1 House of Mirrors": {"base": "House of Mirrors", "class": "Divination Card", "type": "divination very high"},
 	"1 Hunter's Reward": {"base": "Hunter's Reward", "class": "Divination Card", "type": "divination very high"},
@@ -67,6 +68,7 @@ items = {
 	"1 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
 	"1 The Saint's Treasure": {"base": "The Saint's Treasure", "class": "Divination Card", "type": "divination very high"},
 	"1 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination very high"},
+	"1 The Spark and the Flame": {"base": "The Spark and the Flame", "class": "Divination Card", "type": "divination very high"},
 	"1 The Stormcaller": {"base": "The Stormcaller", "class": "Divination Card", "type": "divination very high"},
 	"1 The Surveyor": {"base": "The Surveyor", "class": "Divination Card", "type": "divination very high"},
 	"1 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination very high"},
@@ -82,7 +84,6 @@ items = {
 	"2 Dialla's Subjugation": {"base": "Dialla's Subjugation", "class": "Divination Card", "type": "divination high"},
 	"2 Dying Anguish": {"base": "Dying Anguish", "class": "Divination Card", "type": "divination high"},
 	"2 Earth Drinker": {"base": "Earth Drinker", "class": "Divination Card", "type": "divination high"},
-	"2 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination high"},
 	"2 Hope": {"base": "Hope", "class": "Divination Card", "type": "divination high"},
 	"2 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
 	"2 Jack in the Box": {"base": "Jack in the Box", "class": "Divination Card", "type": "divination high"},
@@ -120,8 +121,10 @@ items = {
 	"3 Cartographer's Delight": {"base": "Cartographer's Delight", "class": "Divination Card", "type": "divination low"},
 	"3 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "divination low"},
 	"3 Rain of Chaos": {"base": "Rain of Chaos", "class": "Divination Card", "type": "divination low"},
+	"3 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},
 	"3 The Catalyst": {"base": "The Catalyst", "class": "Divination Card", "type": "divination low"},
 	"3 The Fletcher": {"base": "The Fletcher", "class": "Divination Card", "type": "divination low"},
+	"3 The Oath": {"base": "The Oath", "class": "Divination Card", "type": "divination low"},
 	"3 The Rabid Rhoa": {"base": "The Rabid Rhoa", "class": "Divination Card", "type": "divination low"},
 	"3 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},
 	"3 The Surgeon": {"base": "The Surgeon", "class": "Divination Card", "type": "divination low"},
