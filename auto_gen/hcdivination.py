@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/19/2016(m/d/y) 02:25:41 UTC from "Hardcore" data
+# Created: 12/22/2016(m/d/y) 00:52:24 UTC from "Hardcore" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -40,6 +40,7 @@ items = {
 	"1 Heterochromia": {"base": "Heterochromia", "class": "Divination Card", "type": "divination very high"},
 	"1 House of Mirrors": {"base": "House of Mirrors", "class": "Divination Card", "type": "divination very high"},
 	"1 Hunter's Reward": {"base": "Hunter's Reward", "class": "Divination Card", "type": "divination very high"},
+	"1 Lingering Remnants": {"base": "Lingering Remnants", "class": "Divination Card", "type": "divination very high"},
 	"1 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination very high"},
 	"1 Lysah's Respite": {"base": "Lysah's Respite", "class": "Divination Card", "type": "divination very high"},
 	"1 Mawr Blaidd": {"base": "Mawr Blaidd", "class": "Divination Card", "type": "divination very high"},
@@ -63,14 +64,12 @@ items = {
 	"1 The King's Heart": {"base": "The King's Heart", "class": "Divination Card", "type": "divination very high"},
 	"1 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination very high"},
 	"1 The Offering": {"base": "The Offering", "class": "Divination Card", "type": "divination very high"},
-	"1 The One With All": {"base": "The One With All", "class": "Divination Card", "type": "divination very high"},
 	"1 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
-	"1 The Scavenger": {"base": "The Scavenger", "class": "Divination Card", "type": "divination very high"},
+	"1 The Saint's Treasure": {"base": "The Saint's Treasure", "class": "Divination Card", "type": "divination very high"},
 	"1 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination very high"},
 	"1 The Stormcaller": {"base": "The Stormcaller", "class": "Divination Card", "type": "divination very high"},
 	"1 The Surveyor": {"base": "The Surveyor", "class": "Divination Card", "type": "divination very high"},
 	"1 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination very high"},
-	"1 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination very high"},
 	"1 The Vast": {"base": "The Vast", "class": "Divination Card", "type": "divination very high"},
 	"1 The Void": {"base": "The Void", "class": "Divination Card", "type": "divination very high"},
 	"1 The Warlord": {"base": "The Warlord", "class": "Divination Card", "type": "divination very high"},
@@ -107,6 +106,7 @@ items = {
 	"2 The Penitent": {"base": "The Penitent", "class": "Divination Card", "type": "divination high"},
 	"2 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
 	"2 The Road to Power": {"base": "The Road to Power", "class": "Divination Card", "type": "divination high"},
+	"2 The Scavenger": {"base": "The Scavenger", "class": "Divination Card", "type": "divination high"},
 	"2 The Siren": {"base": "The Siren", "class": "Divination Card", "type": "divination high"},
 	"2 The Soul": {"base": "The Soul", "class": "Divination Card", "type": "divination high"},
 	"2 The Spoiled Prince": {"base": "The Spoiled Prince", "class": "Divination Card", "type": "divination high"},
@@ -114,13 +114,14 @@ items = {
 	"2 The Trial": {"base": "The Trial", "class": "Divination Card", "type": "divination high"},
 	"2 The Tyrant": {"base": "The Tyrant", "class": "Divination Card", "type": "divination high"},
 	"2 The Union": {"base": "The Union", "class": "Divination Card", "type": "divination high"},
+	"2 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination high"},
+	"2 The Valley of Steel Boxes": {"base": "The Valley of Steel Boxes", "class": "Divination Card", "type": "divination high"},
 	"2 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination high"},
 	"3 Cartographer's Delight": {"base": "Cartographer's Delight", "class": "Divination Card", "type": "divination low"},
 	"3 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "divination low"},
 	"3 Rain of Chaos": {"base": "Rain of Chaos", "class": "Divination Card", "type": "divination low"},
 	"3 The Catalyst": {"base": "The Catalyst", "class": "Divination Card", "type": "divination low"},
 	"3 The Fletcher": {"base": "The Fletcher", "class": "Divination Card", "type": "divination low"},
-	"3 The Oath": {"base": "The Oath", "class": "Divination Card", "type": "divination low"},
 	"3 The Rabid Rhoa": {"base": "The Rabid Rhoa", "class": "Divination Card", "type": "divination low"},
 	"3 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},
 	"3 The Surgeon": {"base": "The Surgeon", "class": "Divination Card", "type": "divination low"},
