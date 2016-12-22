@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/19/2016(m/d/y) 02:25:41 UTC from "Hardcore" data
+# Created: 12/22/2016(m/d/y) 00:52:24 UTC from "Hardcore" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -42,7 +42,7 @@ items = {
 	"0 Citrine Amulet": {"base": "Citrine Amulet", "type": "unique very high"},
 	"0 Clasped Mitts": {"base": "Clasped Mitts", "type": "unique very high"},
 	"0 Clutching Talisman": {"base": "Clutching Talisman", "type": "unique very high"},
-	"0 Coronal Leather": {"base": "Coronal Leather", "type": "unique very high"},
+	"0 Corrugated Buckler": {"base": "Corrugated Buckler", "type": "unique very high"},
 	"0 Courtyard Map": {"base": "Courtyard Map", "type": "unique very high"},
 	"0 Crusader Boots": {"base": "Crusader Boots", "type": "unique very high"},
 	"0 Crusader Gloves": {"base": "Crusader Gloves", "type": "unique very high"},
@@ -90,7 +90,6 @@ items = {
 	"0 Ritual Sceptre": {"base": "Ritual Sceptre", "type": "unique very high"},
 	"0 Rotfeather Talisman": {"base": "Rotfeather Talisman", "type": "unique very high"},
 	"0 Royal Axe": {"base": "Royal Axe", "type": "unique very high"},
-	"0 Royal Burgonet": {"base": "Royal Burgonet", "type": "unique very high"},
 	"0 Ruby Amulet": {"base": "Ruby Amulet", "type": "unique very high"},
 	"0 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "unique very high"},
 	"0 Sanctified Life Flask": {"base": "Sanctified Life Flask", "type": "unique very high"},
@@ -128,7 +127,6 @@ items = {
 	"1 Cedar Tower Shield": {"base": "Cedar Tower Shield", "type": "unique high"},
 	"1 Conjurer Boots": {"base": "Conjurer Boots", "type": "unique high"},
 	"1 Conjurer Gloves": {"base": "Conjurer Gloves", "type": "unique high"},
-	"1 Corrugated Buckler": {"base": "Corrugated Buckler", "type": "unique high"},
 	"1 Crusader Plate": {"base": "Crusader Plate", "type": "unique high"},
 	"1 Deerskin Gloves": {"base": "Deerskin Gloves", "type": "unique high"},
 	"1 Diamond Ring": {"base": "Diamond Ring", "type": "unique high"},
@@ -156,7 +154,7 @@ items = {
 	"1 Simple Robe": {"base": "Simple Robe", "type": "unique high"},
 	"1 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique high"},
 	"1 Slink Boots": {"base": "Slink Boots", "type": "unique high"},
-	"1 Strapped Mitts": {"base": "Strapped Mitts", "type": "unique high"},
+	"1 Steelscale Gauntlets": {"base": "Steelscale Gauntlets", "type": "unique high"},
 	"1 Terror Maul": {"base": "Terror Maul", "type": "unique high"},
 	"1 Trapper Boots": {"base": "Trapper Boots", "type": "unique high"},
 	"1 Triumphant Lamellar": {"base": "Triumphant Lamellar", "type": "unique high"},
@@ -165,7 +163,6 @@ items = {
 	"1 Vaal Gauntlets": {"base": "Vaal Gauntlets", "type": "unique high"},
 	"1 Vaal Hatchet": {"base": "Vaal Hatchet", "type": "unique high"},
 	"1 Vaal Pyramid Map": {"base": "Vaal Pyramid Map", "type": "unique high"},
-	"1 Vile Staff": {"base": "Vile Staff", "type": "unique high"},
 	"1 Zealot Helmet": {"base": "Zealot Helmet", "type": "unique high"},
 	"7 Great Helmet": {"base": "Great Helmet", "type": "unique low"},
 	"7 Leatherscale Boots": {"base": "Leatherscale Boots", "type": "unique low"},
