@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/22/2016(m/d/y) 02:01:14 UTC from "Hardcore" data
+# Created: 12/22/2016(m/d/y) 15:28:06 UTC from "Hardcore" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
