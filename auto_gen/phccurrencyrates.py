@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/21/2016(m/d/y) 23:05:58 UTC from "Hardcore Breach" data
+# Created: 12/22/2016(m/d/y) 01:25:05 UTC from "Hardcore Breach" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -31,29 +31,29 @@ desc = "Currency Rates"
 
 # Base type : settings pair
 items = {
-	"alch": 0.3333333333333333,
-	"alt": 0.0625,
+	"alch": 0.17243430024506035,
+	"alt": 0.05753770513587137,
 	"apprenticecartosextant": 0.5,
-	"aug": 0.03125,
-	"bauble": 0.0625,
-	"blessed": 0.5,
-	"chance": 0.07142857142857142,
+	"aug": 0.012508794386763382,
+	"bauble": 0.16550003668647736,
+	"blessed": 0.3227750410509031,
+	"chance": 0.11367241482905725,
 	"chaos": 1.0,
-	"chisel": 0.25,
-	"chrom": 0.06666666666666667,
-	"divine": 15.0,
-	"exa": 45.0,
-	"fuse": 0.5,
-	"gcp": 1,
-	"jew": 0.125,
+	"chisel": 0.1631686560565871,
+	"chrom": 0.07341286450775501,
+	"divine": 6.233333333333333,
+	"exa": 19.12,
+	"fuse": 0.3206989247311828,
+	"gcp": 0.7971794871794872,
+	"jew": 0.07740198270721527,
 	"journeycartosextant": 2,
-	"mastercartosextant": 5,
+	"mastercartosextant": 2.45,
 	"mirror": 20000.0,
 	"perandus": 0.022222222222222223,
-	"regal": 1,
-	"regret": 1.0,
-	"scour": 0.5,
-	"silver": 0.333,
-	"transmute": 0.015625,
-	"vaal": 1,
+	"regal": 1.22,
+	"regret": 0.5380116959064327,
+	"scour": 0.48138528138528136,
+	"silver": 0.14971379856290343,
+	"transmute": 0.01535064935064935,
+	"vaal": 0.543859649122807,
 }

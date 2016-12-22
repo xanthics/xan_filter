@@ -24,8 +24,8 @@ Purpose: Create an item filter based on config files
 Note: Requires Python 3.4.x
 """
 
-from theme_config.minimal import settings
+#from theme_config.minimal import settings
 
-#from theme_config.min_w_highlight import settings
+from theme_config.min_w_highlight import settings
 
 desc = "formatting template for all files"
