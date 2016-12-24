@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/23/2016(m/d/y) 14:14:21 UTC from "Breach" data
+# Created: 12/24/2016(m/d/y) 03:25:37 UTC from "Breach" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -63,7 +63,6 @@ items = {
 	"0 Topaz Flask": {"base": "Topaz Flask", "type": "unique very high"},
 	"0 Void Axe": {"base": "Void Axe", "type": "unique very high"},
 	"1 Abyssal Axe": {"base": "Abyssal Axe", "type": "unique high"},
-	"1 Cedar Tower Shield": {"base": "Cedar Tower Shield", "type": "unique high"},
 	"1 Champion Kite Shield": {"base": "Champion Kite Shield", "type": "unique high"},
 	"1 Citrine Amulet": {"base": "Citrine Amulet", "type": "unique high"},
 	"1 Courtyard Map": {"base": "Courtyard Map", "type": "unique high"},
@@ -132,7 +131,6 @@ items = {
 	"7 Decimation Bow": {"base": "Decimation Bow", "type": "unique low"},
 	"7 Decorative Axe": {"base": "Decorative Axe", "type": "unique low"},
 	"7 Deerskin Boots": {"base": "Deerskin Boots", "type": "unique low"},
-	"7 Demon's Horn": {"base": "Demon's Horn", "type": "unique low"},
 	"7 Dragonscale Gauntlets": {"base": "Dragonscale Gauntlets", "type": "unique low"},
 	"7 Dread Maul": {"base": "Dread Maul", "type": "unique low"},
 	"7 Dream Mace": {"base": "Dream Mace", "type": "unique low"},
@@ -140,6 +138,7 @@ items = {
 	"7 Ebony Tower Shield": {"base": "Ebony Tower Shield", "type": "unique low"},
 	"7 Elegant Ringmail": {"base": "Elegant Ringmail", "type": "unique low"},
 	"7 Elegant Sword": {"base": "Elegant Sword", "type": "unique low"},
+	"7 Enameled Buckler": {"base": "Enameled Buckler", "type": "unique low"},
 	"7 Estoc": {"base": "Estoc", "type": "unique low"},
 	"7 Ezomyte Blade": {"base": "Ezomyte Blade", "type": "unique low"},
 	"7 Fire Arrow Quiver": {"base": "Fire Arrow Quiver", "type": "unique low"},

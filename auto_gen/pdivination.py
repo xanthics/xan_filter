@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/23/2016(m/d/y) 14:14:21 UTC from "Breach" data
+# Created: 12/24/2016(m/d/y) 03:25:37 UTC from "Breach" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -113,8 +113,10 @@ items = {
 	"3 The Flora's Gift": {"base": "The Flora's Gift", "class": "Divination Card", "type": "divination low"},
 	"3 The Gambler": {"base": "The Gambler", "class": "Divination Card", "type": "divination low"},
 	"3 The Gemcutter": {"base": "The Gemcutter", "class": "Divination Card", "type": "divination low"},
+	"3 The Lion": {"base": "The Lion", "class": "Divination Card", "type": "divination low"},
 	"3 The Lover": {"base": "The Lover", "class": "Divination Card", "type": "divination low"},
 	"3 The Lunaris Priestess": {"base": "The Lunaris Priestess", "class": "Divination Card", "type": "divination low"},
+	"3 The Metalsmith's Gift": {"base": "The Metalsmith's Gift", "class": "Divination Card", "type": "divination low"},
 	"3 The Oath": {"base": "The Oath", "class": "Divination Card", "type": "divination low"},
 	"3 The Rabid Rhoa": {"base": "The Rabid Rhoa", "class": "Divination Card", "type": "divination low"},
 	"3 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},

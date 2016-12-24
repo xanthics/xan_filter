@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/23/2016(m/d/y) 14:14:21 UTC from "Hardcore" data
+# Created: 12/24/2016(m/d/y) 03:25:37 UTC from "Hardcore" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -150,6 +150,7 @@ items = {
 	"1 Ruby Flask": {"base": "Ruby Flask", "type": "unique high"},
 	"1 Saintly Chainmail": {"base": "Saintly Chainmail", "type": "unique high"},
 	"1 Savant's Robe": {"base": "Savant's Robe", "type": "unique high"},
+	"1 Simple Robe": {"base": "Simple Robe", "type": "unique high"},
 	"1 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique high"},
 	"1 Slink Boots": {"base": "Slink Boots", "type": "unique high"},
 	"1 Terror Maul": {"base": "Terror Maul", "type": "unique high"},

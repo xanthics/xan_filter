@@ -375,7 +375,7 @@ def convertshorttolongstr(cur, val, l, exa):
 		tier = 'currency very high'
 	elif val >= 1:
 		tier = 'currency high'
-	elif val >= 1/10:
+	elif val >= 1/8:
 		tier = 'currency normal'
 	else:
 		tier = 'currency low'
@@ -469,7 +469,6 @@ def poetrade_getcurrencyrates():
 			cfreq = cfscrape.create_scraper()
 
 			req = cfreq.get(url).text
-			# print(req)
 			for i in (req.split('\n')):
 				if 'data-sellcurrency="4"' in i:
 					crate = float(re.search(r'data-sellvalue="(-?\d*(\.\d+)?)"', i.lower()).group(1))
@@ -479,7 +478,7 @@ def poetrade_getcurrencyrates():
 
 			# Populate ratios with amount of currency you can buy for a chaos
 			url = "http://currency.poe.trade/search?league={}&online=x&want={}&have={}".format(l, '-'.join([str(currencies[d]) for d in currencies]), chaos)
-			req = requests.get(url).text
+			req = cfreq.get(url).text
 			for i in (req.split('\n')):
 				if 'data-buycurrency="4"' in i:
 					crate = float(re.search(r'data-buyvalue="(-?\d*(\.\d+)?)"', i.lower()).group(1))
