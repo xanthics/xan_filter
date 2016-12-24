@@ -94,7 +94,7 @@ items = {
     "0 Kite Shield": {"base": "Kite Shield", "other": ["DropLevel >= 51"], "class": "Shields", "type": "rare high"},
     "0 Spiked Shield": {"base": "Spiked Shield", "other": ["DropLevel >= 55"], "class": "Shields", "type": "rare high"},
 
-    "0 Jewel": {"class": "Jewel", "type": "rare high"},
+    "0 Jewel": {"class": "Jewel", "type": "rare highlight"},
 
     # Caster bases
     "0 Imbued Wand": {"base": "Imbued Wand", "class": "Wand", "type": "rare high"},

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/22/2016(m/d/y) 01:45:13 UTC from "Standard" data
+# Created: 12/23/2016(m/d/y) 14:14:21 UTC from "Standard" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -31,22 +31,23 @@ desc = "Divination Card"
 
 # Base type : settings pair
 items = {
-	"000 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination low"},
+	"000 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination normal"},
 	"001 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
 	"002 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination very high"},
 	"003 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination normal"},
 	"1 Abandoned Wealth": {"base": "Abandoned Wealth", "class": "Divination Card", "type": "divination very high"},
 	"1 Bowyer's Dream": {"base": "Bowyer's Dream", "class": "Divination Card", "type": "divination very high"},
+	"1 Call to the First Ones": {"base": "Call to the First Ones", "class": "Divination Card", "type": "divination very high"},
 	"1 Heterochromia": {"base": "Heterochromia", "class": "Divination Card", "type": "divination very high"},
 	"1 House of Mirrors": {"base": "House of Mirrors", "class": "Divination Card", "type": "divination very high"},
 	"1 Hunter's Reward": {"base": "Hunter's Reward", "class": "Divination Card", "type": "divination very high"},
-	"1 Lingering Remnants": {"base": "Lingering Remnants", "class": "Divination Card", "type": "divination very high"},
 	"1 Mawr Blaidd": {"base": "Mawr Blaidd", "class": "Divination Card", "type": "divination very high"},
 	"1 The Artist": {"base": "The Artist", "class": "Divination Card", "type": "divination very high"},
 	"1 The Brittle Emperor": {"base": "The Brittle Emperor", "class": "Divination Card", "type": "divination very high"},
 	"1 The Doctor": {"base": "The Doctor", "class": "Divination Card", "type": "divination very high"},
 	"1 The Ethereal": {"base": "The Ethereal", "class": "Divination Card", "type": "divination very high"},
 	"1 The Fiend": {"base": "The Fiend", "class": "Divination Card", "type": "divination very high"},
+	"1 The Garish Power": {"base": "The Garish Power", "class": "Divination Card", "type": "divination very high"},
 	"1 The Harvester": {"base": "The Harvester", "class": "Divination Card", "type": "divination very high"},
 	"1 The Hunger": {"base": "The Hunger", "class": "Divination Card", "type": "divination very high"},
 	"1 The Immortal": {"base": "The Immortal", "class": "Divination Card", "type": "divination very high"},
@@ -55,12 +56,16 @@ items = {
 	"1 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
 	"1 The Saint's Treasure": {"base": "The Saint's Treasure", "class": "Divination Card", "type": "divination very high"},
 	"1 The Spark and the Flame": {"base": "The Spark and the Flame", "class": "Divination Card", "type": "divination very high"},
+	"1 The Standoff": {"base": "The Standoff", "class": "Divination Card", "type": "divination very high"},
 	"1 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination very high"},
 	"1 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination very high"},
 	"1 The Vast": {"base": "The Vast", "class": "Divination Card", "type": "divination very high"},
+	"1 The Wolf": {"base": "The Wolf", "class": "Divination Card", "type": "divination very high"},
+	"1 The Wretched": {"base": "The Wretched", "class": "Divination Card", "type": "divination very high"},
 	"1 Wealth and Power": {"base": "Wealth and Power", "class": "Divination Card", "type": "divination very high"},
 	"2 Chaotic Disposition": {"base": "Chaotic Disposition", "class": "Divination Card", "type": "divination high"},
 	"2 Hope": {"base": "Hope", "class": "Divination Card", "type": "divination high"},
+	"2 Lingering Remnants": {"base": "Lingering Remnants", "class": "Divination Card", "type": "divination high"},
 	"2 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination high"},
 	"2 Lysah's Respite": {"base": "Lysah's Respite", "class": "Divination Card", "type": "divination high"},
 	"2 Merciless Armament": {"base": "Merciless Armament", "class": "Divination Card", "type": "divination high"},
@@ -87,7 +92,7 @@ items = {
 	"2 The Valley of Steel Boxes": {"base": "The Valley of Steel Boxes", "class": "Divination Card", "type": "divination high"},
 	"2 The Void": {"base": "The Void", "class": "Divination Card", "type": "divination high"},
 	"2 The Warlord": {"base": "The Warlord", "class": "Divination Card", "type": "divination high"},
-	"2 The Wolf": {"base": "The Wolf", "class": "Divination Card", "type": "divination high"},
+	"2 The Wolverine": {"base": "The Wolverine", "class": "Divination Card", "type": "divination high"},
 	"2 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination high"},
 	"3 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "divination low"},
 	"3 Cartographer's Delight": {"base": "Cartographer's Delight", "class": "Divination Card", "type": "divination low"},
