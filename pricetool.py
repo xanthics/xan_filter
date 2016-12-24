@@ -469,7 +469,7 @@ def poetrade_getcurrencyrates():
 			cfreq = cfscrape.create_scraper()
 
 			req = cfreq.get(url).text
-
+			# print(req)
 			for i in (req.split('\n')):
 				if 'data-sellcurrency="4"' in i:
 					crate = float(re.search(r'data-sellvalue="(-?\d*(\.\d+)?)"', i.lower()).group(1))

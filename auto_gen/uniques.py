@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/22/2016(m/d/y) 01:45:13 UTC from "Standard" data
+# Created: 12/23/2016(m/d/y) 14:14:21 UTC from "Standard" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -67,7 +67,6 @@ items = {
 	"0 Rawhide Boots": {"base": "Rawhide Boots", "type": "unique very high"},
 	"0 Rotfeather Talisman": {"base": "Rotfeather Talisman", "type": "unique very high"},
 	"0 Royal Axe": {"base": "Royal Axe", "type": "unique very high"},
-	"0 Ruby Amulet": {"base": "Ruby Amulet", "type": "unique very high"},
 	"0 Sapphire Flask": {"base": "Sapphire Flask", "type": "unique very high"},
 	"0 Siege Axe": {"base": "Siege Axe", "type": "unique very high"},
 	"0 Siege Helmet": {"base": "Siege Helmet", "type": "unique very high"},
@@ -98,6 +97,7 @@ items = {
 	"1 Karui Sceptre": {"base": "Karui Sceptre", "type": "unique high"},
 	"1 Nightmare Bascinet": {"base": "Nightmare Bascinet", "type": "unique high"},
 	"1 Regicide Mask": {"base": "Regicide Mask", "type": "unique high"},
+	"1 Ruby Amulet": {"base": "Ruby Amulet", "type": "unique high"},
 	"1 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "unique high"},
 	"1 Sanctified Life Flask": {"base": "Sanctified Life Flask", "type": "unique high"},
 	"1 Sanctified Mana Flask": {"base": "Sanctified Mana Flask", "type": "unique high"},
@@ -120,7 +120,6 @@ items = {
 	"7 Brass Maul": {"base": "Brass Maul", "type": "unique low"},
 	"7 Bronzescale Gauntlets": {"base": "Bronzescale Gauntlets", "type": "unique low"},
 	"7 Buckskin Tunic": {"base": "Buckskin Tunic", "type": "unique low"},
-	"7 Carnal Armour": {"base": "Carnal Armour", "type": "unique low"},
 	"7 Carved Wand": {"base": "Carved Wand", "type": "unique low"},
 	"7 Chain Gloves": {"base": "Chain Gloves", "type": "unique low"},
 	"7 Cleaver": {"base": "Cleaver", "type": "unique low"},
@@ -150,6 +149,7 @@ items = {
 	"7 Jagged Maul": {"base": "Jagged Maul", "type": "unique low"},
 	"7 Latticed Ringmail": {"base": "Latticed Ringmail", "type": "unique low"},
 	"7 Leather Hood": {"base": "Leather Hood", "type": "unique low"},
+	"7 Lunaris Circlet": {"base": "Lunaris Circlet", "type": "unique low"},
 	"7 Military Staff": {"base": "Military Staff", "type": "unique low"},
 	"7 Nailed Fist": {"base": "Nailed Fist", "type": "unique low"},
 	"7 Necromancer Circlet": {"base": "Necromancer Circlet", "type": "unique low"},
@@ -184,7 +184,6 @@ items = {
 	"7 Strapped Boots": {"base": "Strapped Boots", "type": "unique low"},
 	"7 Strapped Leather": {"base": "Strapped Leather", "type": "unique low"},
 	"7 Studded Round Shield": {"base": "Studded Round Shield", "type": "unique low"},
-	"7 Tarnished Spirit Shield": {"base": "Tarnished Spirit Shield", "type": "unique low"},
 	"7 Timeworn Claw": {"base": "Timeworn Claw", "type": "unique low"},
 	"7 Tomahawk": {"base": "Tomahawk", "type": "unique low"},
 	"7 Tricorne": {"base": "Tricorne", "type": "unique low"},
@@ -195,7 +194,6 @@ items = {
 	"7 Visored Sallet": {"base": "Visored Sallet", "type": "unique low"},
 	"7 War Buckler": {"base": "War Buckler", "type": "unique low"},
 	"7 Wild Leather": {"base": "Wild Leather", "type": "unique low"},
-	"7 Woodsplitter": {"base": "Woodsplitter", "type": "unique low"},
 	"7 Wrapped Mitts": {"base": "Wrapped Mitts", "type": "unique low"},
 	"9 Other uniques": {"type": "unique normal"}
 }

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/22/2016(m/d/y) 01:45:13 UTC from "Breach" data
+# Created: 12/23/2016(m/d/y) 14:14:21 UTC from "Breach" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -104,6 +104,7 @@ items = {
 	"7 Boot Blade": {"base": "Boot Blade", "type": "unique low"},
 	"7 Boot Knife": {"base": "Boot Knife", "type": "unique low"},
 	"7 Branded Kite Shield": {"base": "Branded Kite Shield", "type": "unique low"},
+	"7 Brass Maul": {"base": "Brass Maul", "type": "unique low"},
 	"7 Brass Spirit Shield": {"base": "Brass Spirit Shield", "type": "unique low"},
 	"7 Bronzescale Boots": {"base": "Bronzescale Boots", "type": "unique low"},
 	"7 Bronzescale Gauntlets": {"base": "Bronzescale Gauntlets", "type": "unique low"},
@@ -115,6 +116,7 @@ items = {
 	"7 Clasped Boots": {"base": "Clasped Boots", "type": "unique low"},
 	"7 Cleaver": {"base": "Cleaver", "type": "unique low"},
 	"7 Cloth Belt": {"base": "Cloth Belt", "type": "unique low"},
+	"7 Cobalt Jewel": {"base": "Cobalt Jewel", "type": "unique low"},
 	"7 Compound Spiked Shield": {"base": "Compound Spiked Shield", "type": "unique low"},
 	"7 Conquest Chainmail": {"base": "Conquest Chainmail", "type": "unique low"},
 	"7 Copper Plate": {"base": "Copper Plate", "type": "unique low"},
@@ -130,9 +132,11 @@ items = {
 	"7 Decimation Bow": {"base": "Decimation Bow", "type": "unique low"},
 	"7 Decorative Axe": {"base": "Decorative Axe", "type": "unique low"},
 	"7 Deerskin Boots": {"base": "Deerskin Boots", "type": "unique low"},
+	"7 Demon's Horn": {"base": "Demon's Horn", "type": "unique low"},
 	"7 Dragonscale Gauntlets": {"base": "Dragonscale Gauntlets", "type": "unique low"},
 	"7 Dread Maul": {"base": "Dread Maul", "type": "unique low"},
 	"7 Dream Mace": {"base": "Dream Mace", "type": "unique low"},
+	"7 Dusk Blade": {"base": "Dusk Blade", "type": "unique low"},
 	"7 Ebony Tower Shield": {"base": "Ebony Tower Shield", "type": "unique low"},
 	"7 Elegant Ringmail": {"base": "Elegant Ringmail", "type": "unique low"},
 	"7 Elegant Sword": {"base": "Elegant Sword", "type": "unique low"},
@@ -160,6 +164,7 @@ items = {
 	"7 Holy Chainmail": {"base": "Holy Chainmail", "type": "unique low"},
 	"7 Imbued Wand": {"base": "Imbued Wand", "type": "unique low"},
 	"7 Infernal Axe": {"base": "Infernal Axe", "type": "unique low"},
+	"7 Iron Gauntlets": {"base": "Iron Gauntlets", "type": "unique low"},
 	"7 Iron Hat": {"base": "Iron Hat", "type": "unique low"},
 	"7 Iron Mask": {"base": "Iron Mask", "type": "unique low"},
 	"7 Iron Sceptre": {"base": "Iron Sceptre", "type": "unique low"},
@@ -188,8 +193,11 @@ items = {
 	"7 Ornate Sword": {"base": "Ornate Sword", "type": "unique low"},
 	"7 Painted Buckler": {"base": "Painted Buckler", "type": "unique low"},
 	"7 Paua Amulet": {"base": "Paua Amulet", "type": "unique low"},
+	"7 Pine Buckler": {"base": "Pine Buckler", "type": "unique low"},
+	"7 Pinnacle Tower Shield": {"base": "Pinnacle Tower Shield", "type": "unique low"},
 	"7 Plank Kite Shield": {"base": "Plank Kite Shield", "type": "unique low"},
 	"7 Plate Vest": {"base": "Plate Vest", "type": "unique low"},
+	"7 Platinum Kris": {"base": "Platinum Kris", "type": "unique low"},
 	"7 Poleaxe": {"base": "Poleaxe", "type": "unique low"},
 	"7 Primordial Staff": {"base": "Primordial Staff", "type": "unique low"},
 	"7 Prismatic Ring": {"base": "Prismatic Ring", "type": "unique low"},
@@ -219,6 +227,7 @@ items = {
 	"7 Shadow Sceptre": {"base": "Shadow Sceptre", "type": "unique low"},
 	"7 Shagreen Boots": {"base": "Shagreen Boots", "type": "unique low"},
 	"7 Sharktooth Arrow Quiver": {"base": "Sharktooth Arrow Quiver", "type": "unique low"},
+	"7 Silk Gloves": {"base": "Silk Gloves", "type": "unique low"},
 	"7 Silk Slippers": {"base": "Silk Slippers", "type": "unique low"},
 	"7 Skinning Knife": {"base": "Skinning Knife", "type": "unique low"},
 	"7 Sledgehammer": {"base": "Sledgehammer", "type": "unique low"},
@@ -226,6 +235,7 @@ items = {
 	"7 Soldier Helmet": {"base": "Soldier Helmet", "type": "unique low"},
 	"7 Spidersilk Robe": {"base": "Spidersilk Robe", "type": "unique low"},
 	"7 Spiked Club": {"base": "Spiked Club", "type": "unique low"},
+	"7 Spiraled Wand": {"base": "Spiraled Wand", "type": "unique low"},
 	"7 Stealth Boots": {"base": "Stealth Boots", "type": "unique low"},
 	"7 Steel Gauntlets": {"base": "Steel Gauntlets", "type": "unique low"},
 	"7 Stiletto": {"base": "Stiletto", "type": "unique low"},
@@ -240,6 +250,7 @@ items = {
 	"7 Thresher Claw": {"base": "Thresher Claw", "type": "unique low"},
 	"7 Tiger Sword": {"base": "Tiger Sword", "type": "unique low"},
 	"7 Timeworn Claw": {"base": "Timeworn Claw", "type": "unique low"},
+	"7 Titan Greaves": {"base": "Titan Greaves", "type": "unique low"},
 	"7 Tomahawk": {"base": "Tomahawk", "type": "unique low"},
 	"7 Topaz Ring": {"base": "Topaz Ring", "type": "unique low"},
 	"7 Tornado Wand": {"base": "Tornado Wand", "type": "unique low"},
@@ -249,6 +260,7 @@ items = {
 	"7 Two-Point Arrow Quiver": {"base": "Two-Point Arrow Quiver", "type": "unique low"},
 	"7 Vaal Blade": {"base": "Vaal Blade", "type": "unique low"},
 	"7 Vaal Buckler": {"base": "Vaal Buckler", "type": "unique low"},
+	"7 Vaal Gauntlets": {"base": "Vaal Gauntlets", "type": "unique low"},
 	"7 Velvet Gloves": {"base": "Velvet Gloves", "type": "unique low"},
 	"7 Velvet Slippers": {"base": "Velvet Slippers", "type": "unique low"},
 	"7 Vine Circlet": {"base": "Vine Circlet", "type": "unique low"},
