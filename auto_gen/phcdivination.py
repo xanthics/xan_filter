@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/24/2016(m/d/y) 03:25:37 UTC from "Hardcore Breach" data
+# Created: 12/25/2016(m/d/y) 00:40:54 UTC from "Hardcore Breach" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -37,6 +37,7 @@ items = {
 	"003 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination high"},
 	"1 Abandoned Wealth": {"base": "Abandoned Wealth", "class": "Divination Card", "type": "divination very high"},
 	"1 Bowyer's Dream": {"base": "Bowyer's Dream", "class": "Divination Card", "type": "divination very high"},
+	"1 Call to the First Ones": {"base": "Call to the First Ones", "class": "Divination Card", "type": "divination very high"},
 	"1 Chaotic Disposition": {"base": "Chaotic Disposition", "class": "Divination Card", "type": "divination very high"},
 	"1 Earth Drinker": {"base": "Earth Drinker", "class": "Divination Card", "type": "divination very high"},
 	"1 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination very high"},
@@ -46,6 +47,7 @@ items = {
 	"1 Lingering Remnants": {"base": "Lingering Remnants", "class": "Divination Card", "type": "divination very high"},
 	"1 Lysah's Respite": {"base": "Lysah's Respite", "class": "Divination Card", "type": "divination very high"},
 	"1 Mawr Blaidd": {"base": "Mawr Blaidd", "class": "Divination Card", "type": "divination very high"},
+	"1 Mitts": {"base": "Mitts", "class": "Divination Card", "type": "divination very high"},
 	"1 Pride Before the Fall": {"base": "Pride Before the Fall", "class": "Divination Card", "type": "divination very high"},
 	"1 The Artist": {"base": "The Artist", "class": "Divination Card", "type": "divination very high"},
 	"1 The Brittle Emperor": {"base": "The Brittle Emperor", "class": "Divination Card", "type": "divination very high"},
@@ -82,14 +84,13 @@ items = {
 	"1 The Warlord": {"base": "The Warlord", "class": "Divination Card", "type": "divination very high"},
 	"1 The Wolf": {"base": "The Wolf", "class": "Divination Card", "type": "divination very high"},
 	"1 The Wolven King's Bite": {"base": "The Wolven King's Bite", "class": "Divination Card", "type": "divination very high"},
+	"1 The Wretched": {"base": "The Wretched", "class": "Divination Card", "type": "divination very high"},
 	"1 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination very high"},
 	"1 Wealth and Power": {"base": "Wealth and Power", "class": "Divination Card", "type": "divination very high"},
 	"2 Assassin's Favour": {"base": "Assassin's Favour", "class": "Divination Card", "type": "divination high"},
 	"2 Audacity": {"base": "Audacity", "class": "Divination Card", "type": "divination high"},
 	"2 Blind Venture": {"base": "Blind Venture", "class": "Divination Card", "type": "divination high"},
 	"2 Boundless Realms": {"base": "Boundless Realms", "class": "Divination Card", "type": "divination high"},
-	"2 Call to the First Ones": {"base": "Call to the First Ones", "class": "Divination Card", "type": "divination high"},
-	"2 Cartographer's Delight": {"base": "Cartographer's Delight", "class": "Divination Card", "type": "divination high"},
 	"2 Coveted Possession": {"base": "Coveted Possession", "class": "Divination Card", "type": "divination high"},
 	"2 Dialla's Subjugation": {"base": "Dialla's Subjugation", "class": "Divination Card", "type": "divination high"},
 	"2 Doedre's Madness": {"base": "Doedre's Madness", "class": "Divination Card", "type": "divination high"},
@@ -107,10 +108,8 @@ items = {
 	"2 Lucky Connections": {"base": "Lucky Connections", "class": "Divination Card", "type": "divination high"},
 	"2 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination high"},
 	"2 Merciless Armament": {"base": "Merciless Armament", "class": "Divination Card", "type": "divination high"},
-	"2 Mitts": {"base": "Mitts", "class": "Divination Card", "type": "divination high"},
 	"2 Prosperity": {"base": "Prosperity", "class": "Divination Card", "type": "divination high"},
 	"2 Rain Tempter": {"base": "Rain Tempter", "class": "Divination Card", "type": "divination high"},
-	"2 Rats": {"base": "Rats", "class": "Divination Card", "type": "divination high"},
 	"2 Scholar of the Seas": {"base": "Scholar of the Seas", "class": "Divination Card", "type": "divination high"},
 	"2 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination high"},
 	"2 The Aesthete": {"base": "The Aesthete", "class": "Divination Card", "type": "divination high"},
@@ -153,6 +152,7 @@ items = {
 	"2 The Poet": {"base": "The Poet", "class": "Divination Card", "type": "divination high"},
 	"2 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
 	"2 The Road to Power": {"base": "The Road to Power", "class": "Divination Card", "type": "divination high"},
+	"2 The Scarred Meadow": {"base": "The Scarred Meadow", "class": "Divination Card", "type": "divination high"},
 	"2 The Scavenger": {"base": "The Scavenger", "class": "Divination Card", "type": "divination high"},
 	"2 The Sigil": {"base": "The Sigil", "class": "Divination Card", "type": "divination high"},
 	"2 The Siren": {"base": "The Siren", "class": "Divination Card", "type": "divination high"},
@@ -174,7 +174,6 @@ items = {
 	"2 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination high"},
 	"2 The Wolverine": {"base": "The Wolverine", "class": "Divination Card", "type": "divination high"},
 	"2 The Wrath": {"base": "The Wrath", "class": "Divination Card", "type": "divination high"},
-	"2 The Wretched": {"base": "The Wretched", "class": "Divination Card", "type": "divination high"},
 	"2 Three Faces in the Dark": {"base": "Three Faces in the Dark", "class": "Divination Card", "type": "divination high"},
 	"2 Tranquillity": {"base": "Tranquillity", "class": "Divination Card", "type": "divination high"},
 	"2 Treasure Hunter": {"base": "Treasure Hunter", "class": "Divination Card", "type": "divination high"},

@@ -1,6 +1,6 @@
 #**************************************************************
 # Welcome to xan.filter, a Python generated loot filter for PoE
-# This filter was generated for Breach on 12/24/2016(m/d/y) 03:45:46 UTC
+# This filter was generated for Breach on 12/25/2016(m/d/y) 00:46:21 UTC
 # The most current version of code can always be found at https://github.com/xanthics/poe_filter
 #**************************************************************
 
@@ -426,10 +426,8 @@ Show
 Show
 	BaseType "Jeweller's Orb"
 	Class "Currency"
-	SetBorderColor 170 158 130
-	SetFontSize 35
-	PlayAlertSound 5 25
-	SetBackgroundColor 51 58 75 220
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
 
 #0 Journeyman Cartographer's Sextant - Currency Autogen
 Show
@@ -897,6 +895,15 @@ Show
 	PlayAlertSound 3 300
 	SetBackgroundColor 0 0 0 220
 
+#0 Courtyard Map - Unique
+Show
+	BaseType "Courtyard Map"
+	Rarity Unique
+	SetBorderColor 175 96 37
+	SetFontSize 45
+	PlayAlertSound 3 300
+	SetBackgroundColor 0 0 0 220
+
 #0 Crusader Boots - Unique
 Show
 	BaseType "Crusader Boots"
@@ -1161,15 +1168,6 @@ Show
 #1 Citrine Amulet - Unique
 Show
 	BaseType "Citrine Amulet"
-	Rarity Unique
-	SetFontSize 40
-	SetBorderColor 175 96 37
-	PlayAlertSound 3 75
-	SetBackgroundColor 0 0 0 220
-
-#1 Courtyard Map - Unique
-Show
-	BaseType "Courtyard Map"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
@@ -1971,14 +1969,6 @@ Show
 #7 Infernal Axe - Unique
 Show
 	BaseType "Infernal Axe"
-	Rarity Unique
-	PlayAlertSound 3 25
-	SetFontSize 25
-	SetBackgroundColor 0 0 0 220
-
-#7 Iron Gauntlets - Unique
-Show
-	BaseType "Iron Gauntlets"
 	Rarity Unique
 	PlayAlertSound 3 25
 	SetFontSize 25
@@ -5125,6 +5115,15 @@ Show
 	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
+#1 The Standoff - Divination Card
+Show
+	BaseType "The Standoff"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	SetFontSize 40
+	PlayAlertSound 6 175
+	SetBackgroundColor 0 0 0 220
+
 #1 The Thaumaturgist - Divination Card
 Show
 	BaseType "The Thaumaturgist"
@@ -5305,22 +5304,6 @@ Show
 	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
-#2 The Forsaken - Divination Card
-Show
-	BaseType "The Forsaken"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
-	SetBackgroundColor 0 0 0 220
-
-#2 The Garish Power - Divination Card
-Show
-	BaseType "The Garish Power"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
-	SetBackgroundColor 0 0 0 220
-
 #2 The Harvester - Divination Card
 Show
 	BaseType "The Harvester"
@@ -5380,14 +5363,6 @@ Show
 #2 The Soul - Divination Card
 Show
 	BaseType "The Soul"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
-	SetBackgroundColor 0 0 0 220
-
-#2 The Standoff - Divination Card
-Show
-	BaseType "The Standoff"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
 	PlayAlertSound 6 75
@@ -5555,18 +5530,6 @@ Show
 	Class "Divination Card"
 	SetBackgroundColor 0 0 0 220
 
-#3 The Gemcutter - Divination Card
-Show
-	BaseType "The Gemcutter"
-	Class "Divination Card"
-	SetBackgroundColor 0 0 0 220
-
-#3 The Lion - Divination Card
-Show
-	BaseType "The Lion"
-	Class "Divination Card"
-	SetBackgroundColor 0 0 0 220
-
 #3 The Lover - Divination Card
 Show
 	BaseType "The Lover"
@@ -5576,12 +5539,6 @@ Show
 #3 The Lunaris Priestess - Divination Card
 Show
 	BaseType "The Lunaris Priestess"
-	Class "Divination Card"
-	SetBackgroundColor 0 0 0 220
-
-#3 The Metalsmith's Gift - Divination Card
-Show
-	BaseType "The Metalsmith's Gift"
 	Class "Divination Card"
 	SetBackgroundColor 0 0 0 220
 
@@ -7185,6 +7142,22 @@ Show
 #0 Hubris Circlet - Crafting Bases
 Show
 	BaseType "Hubris Circlet"
+	ItemLevel >= 84
+	Rarity <= Magic
+	SetFontSize 25
+	SetBackgroundColor 0 0 0 220
+
+#0 Prophet Crown - Crafting Bases
+Show
+	BaseType "Prophet Crown"
+	ItemLevel >= 84
+	Rarity <= Magic
+	SetFontSize 25
+	SetBackgroundColor 0 0 0 220
+
+#0 Void Sceptre - Crafting Bases
+Show
+	BaseType "Void Sceptre"
 	ItemLevel >= 84
 	Rarity <= Magic
 	SetFontSize 25

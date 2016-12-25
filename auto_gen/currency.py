@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/24/2016(m/d/y) 02:14:43 UTC from "Standard" data
+# Created: 12/24/2016(m/d/y) 23:20:06 UTC from "Standard" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -51,7 +51,7 @@ items = {
 	"0 Regal Orb": {"base": "Regal Orb", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Regret": {"base": "Orb of Regret", "class": "Currency", "type": "currency high"},
 	"0 Orb of Scouring": {"base": "Orb of Scouring", "class": "Currency", "type": "currency normal"},
-	"0 Silver Coin": {"base": "Silver Coin", "class": "Currency", "type": "currency normal"},
+	"0 Silver Coin": {"base": "Silver Coin", "class": "Currency", "type": "currency low"},
 	"0 Orb of Transmutation": {"base": "Orb of Transmutation", "class": "Currency", "type": "currency low"},
 	"0 Vaal Orb": {"base": "Vaal Orb", "class": "Currency", "type": "currency high"},
 }

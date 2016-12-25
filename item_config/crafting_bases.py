@@ -30,7 +30,7 @@ desc = "Crafting Bases"
 
 # Base type : settings pair
 items = {
-	"0 Void Sceptre": {"base": "Void Sceptre", "other": ["ItemLevel >= 84"], "type": "ignore"},
+	"0 Void Sceptre": {"base": "Void Sceptre", "other": ["ItemLevel >= 84"], "type": "t1 ilvl83/84 crafting"},
 	"0 Opal Sceptre": {"base": "Opal Sceptre", "other": ["ItemLevel >= 84"], "type": "ignore"},
 	"0 Profane Wand": {"base": "Profane Wand", "other": ["ItemLevel >= 84"], "type": "ignore"},
 	"0 Prophecy Wand": {"base": "Prophecy Wand", "other": ["ItemLevel >= 84"], "type": "ignore"},
@@ -47,6 +47,7 @@ items = {
 	"0 Fossilised Spirit Shield": {"base": "Fossilised Spirit Shield", "other": ["ItemLevel >= 84"], "type": "ignore"},
 	"0 Titan Gauntlets": {"base": "Titan Gauntlets", "other": ["ItemLevel >= 84"], "type": "ignore"},
 	"0 Slink Gloves": {"base": "Slink Gloves", "other": ["ItemLevel >= 84"], "type": "ignore"},
+	"0 Prophet Crown": {"base": "Prophet Crown", "other": ["ItemLevel >= 84"], "type": "t1 ilvl83/84 crafting"},
 	"0 Eternal Burgonet": {"base": "Eternal Burgonet", "other": ["ItemLevel >= 84"], "type": "t1 ilvl83/84 crafting"},
 	"0 Lion Pelt": {"base": "Lion Pelt", "other": ["ItemLevel >= 84"], "type": "ignore"},
 	"0 Titan Greaves": {"base": "Titan Greaves", "other": ["ItemLevel >= 84"], "type": "ignore"},
