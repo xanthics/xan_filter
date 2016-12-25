@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/24/2016(m/d/y) 03:25:37 UTC from "Standard" data
+# Created: 12/25/2016(m/d/y) 00:40:54 UTC from "Standard" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -66,8 +66,8 @@ items = {
 	"0 Rawhide Boots": {"base": "Rawhide Boots", "type": "unique very high"},
 	"0 Rotfeather Talisman": {"base": "Rotfeather Talisman", "type": "unique very high"},
 	"0 Royal Axe": {"base": "Royal Axe", "type": "unique very high"},
+	"0 Sanctified Mana Flask": {"base": "Sanctified Mana Flask", "type": "unique very high"},
 	"0 Sapphire Flask": {"base": "Sapphire Flask", "type": "unique very high"},
-	"0 Siege Axe": {"base": "Siege Axe", "type": "unique very high"},
 	"0 Siege Helmet": {"base": "Siege Helmet", "type": "unique very high"},
 	"0 Silver Flask": {"base": "Silver Flask", "type": "unique very high"},
 	"0 Sorcerer Boots": {"base": "Sorcerer Boots", "type": "unique very high"},
@@ -81,7 +81,6 @@ items = {
 	"1 Bone Bow": {"base": "Bone Bow", "type": "unique high"},
 	"1 Carnal Sceptre": {"base": "Carnal Sceptre", "type": "unique high"},
 	"1 Cedar Tower Shield": {"base": "Cedar Tower Shield", "type": "unique high"},
-	"1 Deerskin Gloves": {"base": "Deerskin Gloves", "type": "unique high"},
 	"1 Despot Axe": {"base": "Despot Axe", "type": "unique high"},
 	"1 Exquisite Leather": {"base": "Exquisite Leather", "type": "unique high"},
 	"1 Ezomyte Burgonet": {"base": "Ezomyte Burgonet", "type": "unique high"},
@@ -90,6 +89,7 @@ items = {
 	"1 Full Wyrmscale": {"base": "Full Wyrmscale", "type": "unique high"},
 	"1 Grand Mana Flask": {"base": "Grand Mana Flask", "type": "unique high"},
 	"1 Granite Flask": {"base": "Granite Flask", "type": "unique high"},
+	"1 Graveyard Map": {"base": "Graveyard Map", "type": "unique high"},
 	"1 Hubris Circlet": {"base": "Hubris Circlet", "type": "unique high"},
 	"1 Imperial Staff": {"base": "Imperial Staff", "type": "unique high"},
 	"1 Ironscale Gauntlets": {"base": "Ironscale Gauntlets", "type": "unique high"},
@@ -100,8 +100,8 @@ items = {
 	"1 Ruby Amulet": {"base": "Ruby Amulet", "type": "unique high"},
 	"1 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "unique high"},
 	"1 Sanctified Life Flask": {"base": "Sanctified Life Flask", "type": "unique high"},
-	"1 Sanctified Mana Flask": {"base": "Sanctified Mana Flask", "type": "unique high"},
 	"1 Sharkskin Tunic": {"base": "Sharkskin Tunic", "type": "unique high"},
+	"1 Siege Axe": {"base": "Siege Axe", "type": "unique high"},
 	"1 Slaughter Knife": {"base": "Slaughter Knife", "type": "unique high"},
 	"1 Spine Bow": {"base": "Spine Bow", "type": "unique high"},
 	"1 Stibnite Flask": {"base": "Stibnite Flask", "type": "unique high"},
@@ -132,8 +132,6 @@ items = {
 	"7 Deerskin Boots": {"base": "Deerskin Boots", "type": "unique low"},
 	"7 Dread Maul": {"base": "Dread Maul", "type": "unique low"},
 	"7 Dream Mace": {"base": "Dream Mace", "type": "unique low"},
-	"7 Elegant Sword": {"base": "Elegant Sword", "type": "unique low"},
-	"7 Fright Claw": {"base": "Fright Claw", "type": "unique low"},
 	"7 Gilded Sallet": {"base": "Gilded Sallet", "type": "unique low"},
 	"7 Gnarled Branch": {"base": "Gnarled Branch", "type": "unique low"},
 	"7 Goat's Horn": {"base": "Goat's Horn", "type": "unique low"},
@@ -143,7 +141,6 @@ items = {
 	"7 Great Helmet": {"base": "Great Helmet", "type": "unique low"},
 	"7 Great Mallet": {"base": "Great Mallet", "type": "unique low"},
 	"7 Highland Blade": {"base": "Highland Blade", "type": "unique low"},
-	"7 Imbued Wand": {"base": "Imbued Wand", "type": "unique low"},
 	"7 Iron Hat": {"base": "Iron Hat", "type": "unique low"},
 	"7 Iron Mask": {"base": "Iron Mask", "type": "unique low"},
 	"7 Ironscale Boots": {"base": "Ironscale Boots", "type": "unique low"},
@@ -155,7 +152,6 @@ items = {
 	"7 Necromancer Circlet": {"base": "Necromancer Circlet", "type": "unique low"},
 	"7 Ornate Mace": {"base": "Ornate Mace", "type": "unique low"},
 	"7 Ornate Ringmail": {"base": "Ornate Ringmail", "type": "unique low"},
-	"7 Ornate Sword": {"base": "Ornate Sword", "type": "unique low"},
 	"7 Painted Buckler": {"base": "Painted Buckler", "type": "unique low"},
 	"7 Plank Kite Shield": {"base": "Plank Kite Shield", "type": "unique low"},
 	"7 Plate Vest": {"base": "Plate Vest", "type": "unique low"},
@@ -165,7 +161,6 @@ items = {
 	"7 Quartz Wand": {"base": "Quartz Wand", "type": "unique low"},
 	"7 Recurve Bow": {"base": "Recurve Bow", "type": "unique low"},
 	"7 Reinforced Tower Shield": {"base": "Reinforced Tower Shield", "type": "unique low"},
-	"7 Rotted Round Shield": {"base": "Rotted Round Shield", "type": "unique low"},
 	"7 Royal Staff": {"base": "Royal Staff", "type": "unique low"},
 	"7 Rusted Sword": {"base": "Rusted Sword", "type": "unique low"},
 	"7 Sabre": {"base": "Sabre", "type": "unique low"},
@@ -174,7 +169,6 @@ items = {
 	"7 Secutor Helm": {"base": "Secutor Helm", "type": "unique low"},
 	"7 Serrated Arrow Quiver": {"base": "Serrated Arrow Quiver", "type": "unique low"},
 	"7 Shagreen Boots": {"base": "Shagreen Boots", "type": "unique low"},
-	"7 Sharktooth Arrow Quiver": {"base": "Sharktooth Arrow Quiver", "type": "unique low"},
 	"7 Sledgehammer": {"base": "Sledgehammer", "type": "unique low"},
 	"7 Soldier Helmet": {"base": "Soldier Helmet", "type": "unique low"},
 	"7 Spidersilk Robe": {"base": "Spidersilk Robe", "type": "unique low"},
@@ -190,7 +184,6 @@ items = {
 	"7 Vaal Buckler": {"base": "Vaal Buckler", "type": "unique low"},
 	"7 Velvet Gloves": {"base": "Velvet Gloves", "type": "unique low"},
 	"7 Velvet Slippers": {"base": "Velvet Slippers", "type": "unique low"},
-	"7 Vine Circlet": {"base": "Vine Circlet", "type": "unique low"},
 	"7 Visored Sallet": {"base": "Visored Sallet", "type": "unique low"},
 	"7 War Buckler": {"base": "War Buckler", "type": "unique low"},
 	"7 Wild Leather": {"base": "Wild Leather", "type": "unique low"},
