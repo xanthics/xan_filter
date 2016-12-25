@@ -274,6 +274,11 @@ settings = {
 	"show low": ["SetFontSize {}".format(size['small']),
 				 "SetBackgroundColor {} 220".format(color['black'])],
 
+	"t1 83/84 rare highlight": ["Rarity Rare",
+						   "SetBorderColor {}".format(color['nemesisoutline']),
+						   "SetFontSize {}".format(size['large']),
+						   "SetBackgroundColor {} 220".format(color['black'])],
+
 	"t1 83/84 rare high": ["Rarity Rare",
 						   "SetBorderColor {}".format(color['nemesisoutline']),
 						   "SetFontSize {}".format(size['large']),
