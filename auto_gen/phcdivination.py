@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/25/2016(m/d/y) 00:40:54 UTC from "Hardcore Breach" data
+# Created: 12/25/2016(m/d/y) 01:02:46 UTC from "Hardcore Breach" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -84,7 +84,6 @@ items = {
 	"1 The Warlord": {"base": "The Warlord", "class": "Divination Card", "type": "divination very high"},
 	"1 The Wolf": {"base": "The Wolf", "class": "Divination Card", "type": "divination very high"},
 	"1 The Wolven King's Bite": {"base": "The Wolven King's Bite", "class": "Divination Card", "type": "divination very high"},
-	"1 The Wretched": {"base": "The Wretched", "class": "Divination Card", "type": "divination very high"},
 	"1 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination very high"},
 	"1 Wealth and Power": {"base": "Wealth and Power", "class": "Divination Card", "type": "divination very high"},
 	"2 Assassin's Favour": {"base": "Assassin's Favour", "class": "Divination Card", "type": "divination high"},
@@ -174,6 +173,7 @@ items = {
 	"2 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination high"},
 	"2 The Wolverine": {"base": "The Wolverine", "class": "Divination Card", "type": "divination high"},
 	"2 The Wrath": {"base": "The Wrath", "class": "Divination Card", "type": "divination high"},
+	"2 The Wretched": {"base": "The Wretched", "class": "Divination Card", "type": "divination high"},
 	"2 Three Faces in the Dark": {"base": "Three Faces in the Dark", "class": "Divination Card", "type": "divination high"},
 	"2 Tranquillity": {"base": "Tranquillity", "class": "Divination Card", "type": "divination high"},
 	"2 Treasure Hunter": {"base": "Treasure Hunter", "class": "Divination Card", "type": "divination high"},
@@ -181,6 +181,7 @@ items = {
 	"2 Volatile Power": {"base": "Volatile Power", "class": "Divination Card", "type": "divination high"},
 	"3 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "divination low"},
 	"3 Anarchy's Price": {"base": "Anarchy's Price", "class": "Divination Card", "type": "divination low"},
+	"3 Cartographer's Delight": {"base": "Cartographer's Delight", "class": "Divination Card", "type": "divination low"},
 	"3 Death": {"base": "Death", "class": "Divination Card", "type": "divination low"},
 	"3 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "divination low"},
 	"3 Dying Anguish": {"base": "Dying Anguish", "class": "Divination Card", "type": "divination low"},
