@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/25/2016(m/d/y) 00:40:54 UTC from "Breach" data
+# Created: 12/25/2016(m/d/y) 01:02:46 UTC from "Breach" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -57,6 +57,7 @@ items = {
 	"1 The Spark and the Flame": {"base": "The Spark and the Flame", "class": "Divination Card", "type": "divination very high"},
 	"1 The Standoff": {"base": "The Standoff", "class": "Divination Card", "type": "divination very high"},
 	"1 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination very high"},
+	"1 The Vast": {"base": "The Vast", "class": "Divination Card", "type": "divination very high"},
 	"1 The Wolf": {"base": "The Wolf", "class": "Divination Card", "type": "divination very high"},
 	"1 The Wolven King's Bite": {"base": "The Wolven King's Bite", "class": "Divination Card", "type": "divination very high"},
 	"1 Wealth and Power": {"base": "Wealth and Power", "class": "Divination Card", "type": "divination very high"},
@@ -89,10 +90,8 @@ items = {
 	"2 The Stormcaller": {"base": "The Stormcaller", "class": "Divination Card", "type": "divination high"},
 	"2 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination high"},
 	"2 The Valley of Steel Boxes": {"base": "The Valley of Steel Boxes", "class": "Divination Card", "type": "divination high"},
-	"2 The Vast": {"base": "The Vast", "class": "Divination Card", "type": "divination high"},
 	"2 The Void": {"base": "The Void", "class": "Divination Card", "type": "divination high"},
 	"2 The Warlord": {"base": "The Warlord", "class": "Divination Card", "type": "divination high"},
-	"2 The Wolverine": {"base": "The Wolverine", "class": "Divination Card", "type": "divination high"},
 	"2 The Wretched": {"base": "The Wretched", "class": "Divination Card", "type": "divination high"},
 	"2 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination high"},
 	"3 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "divination low"},

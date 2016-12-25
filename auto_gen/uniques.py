@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/25/2016(m/d/y) 00:40:54 UTC from "Standard" data
+# Created: 12/25/2016(m/d/y) 01:02:46 UTC from "Standard" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -169,6 +169,7 @@ items = {
 	"7 Secutor Helm": {"base": "Secutor Helm", "type": "unique low"},
 	"7 Serrated Arrow Quiver": {"base": "Serrated Arrow Quiver", "type": "unique low"},
 	"7 Shagreen Boots": {"base": "Shagreen Boots", "type": "unique low"},
+	"7 Sharktooth Arrow Quiver": {"base": "Sharktooth Arrow Quiver", "type": "unique low"},
 	"7 Sledgehammer": {"base": "Sledgehammer", "type": "unique low"},
 	"7 Soldier Helmet": {"base": "Soldier Helmet", "type": "unique low"},
 	"7 Spidersilk Robe": {"base": "Spidersilk Robe", "type": "unique low"},

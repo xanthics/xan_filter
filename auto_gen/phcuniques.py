@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/25/2016(m/d/y) 00:40:54 UTC from "Hardcore Breach" data
+# Created: 12/25/2016(m/d/y) 01:02:46 UTC from "Hardcore Breach" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -112,7 +112,6 @@ items = {
 	"1 Maze Map": {"base": "Maze Map", "type": "unique high"},
 	"1 Meatgrinder": {"base": "Meatgrinder", "type": "unique high"},
 	"1 Midnight Blade": {"base": "Midnight Blade", "type": "unique high"},
-	"1 Necropolis Map": {"base": "Necropolis Map", "type": "unique high"},
 	"1 Nightmare Bascinet": {"base": "Nightmare Bascinet", "type": "unique high"},
 	"1 Penetrating Arrow Quiver": {"base": "Penetrating Arrow Quiver", "type": "unique high"},
 	"1 Reef Map": {"base": "Reef Map", "type": "unique high"},
@@ -219,6 +218,7 @@ items = {
 	"7 Stiletto": {"base": "Stiletto", "type": "unique low"},
 	"7 Strapped Boots": {"base": "Strapped Boots", "type": "unique low"},
 	"7 Strapped Leather": {"base": "Strapped Leather", "type": "unique low"},
+	"7 Studded Belt": {"base": "Studded Belt", "type": "unique low"},
 	"7 Sulphur Flask": {"base": "Sulphur Flask", "type": "unique low"},
 	"7 Supreme Spiked Shield": {"base": "Supreme Spiked Shield", "type": "unique low"},
 	"7 Thresher Claw": {"base": "Thresher Claw", "type": "unique low"},
