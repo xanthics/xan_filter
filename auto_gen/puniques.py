@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/24/2016(m/d/y) 03:25:37 UTC from "Breach" data
+# Created: 12/25/2016(m/d/y) 01:02:46 UTC from "Breach" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -35,6 +35,7 @@ items = {
 	"0 Chateau Map": {"base": "Chateau Map", "type": "unique very high"},
 	"0 Clasped Mitts": {"base": "Clasped Mitts", "type": "unique very high"},
 	"0 Clutching Talisman": {"base": "Clutching Talisman", "type": "unique very high"},
+	"0 Courtyard Map": {"base": "Courtyard Map", "type": "unique very high"},
 	"0 Crusader Boots": {"base": "Crusader Boots", "type": "unique very high"},
 	"0 Deicide Mask": {"base": "Deicide Mask", "type": "unique very high"},
 	"0 Ezomyte Tower Shield": {"base": "Ezomyte Tower Shield", "type": "unique very high"},
@@ -65,7 +66,6 @@ items = {
 	"1 Abyssal Axe": {"base": "Abyssal Axe", "type": "unique high"},
 	"1 Champion Kite Shield": {"base": "Champion Kite Shield", "type": "unique high"},
 	"1 Citrine Amulet": {"base": "Citrine Amulet", "type": "unique high"},
-	"1 Courtyard Map": {"base": "Courtyard Map", "type": "unique high"},
 	"1 Cutlass": {"base": "Cutlass", "type": "unique high"},
 	"1 Despot Axe": {"base": "Despot Axe", "type": "unique high"},
 	"1 Ezomyte Burgonet": {"base": "Ezomyte Burgonet", "type": "unique high"},
@@ -163,7 +163,6 @@ items = {
 	"7 Holy Chainmail": {"base": "Holy Chainmail", "type": "unique low"},
 	"7 Imbued Wand": {"base": "Imbued Wand", "type": "unique low"},
 	"7 Infernal Axe": {"base": "Infernal Axe", "type": "unique low"},
-	"7 Iron Gauntlets": {"base": "Iron Gauntlets", "type": "unique low"},
 	"7 Iron Hat": {"base": "Iron Hat", "type": "unique low"},
 	"7 Iron Mask": {"base": "Iron Mask", "type": "unique low"},
 	"7 Iron Sceptre": {"base": "Iron Sceptre", "type": "unique low"},
