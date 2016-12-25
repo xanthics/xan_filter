@@ -145,11 +145,6 @@ settings = {
 			   "SetBorderColor {} 150".format(color['premiumorange']),
 			   "SetBackgroundColor {} 220".format(color['premiumdpurple'])],
 
-	"rare highlight": ["Rarity Rare",
-			   "SetFontSize {}".format(size['large']),
-			   "SetBorderColor {} 150".format(color['premiumorange']),
-			   "SetBackgroundColor {} 220".format(color['premiumdpurple'])],
-
 	"chromatic": ["SocketGroup RGB",
 				  "SetBorderColor {}".format(color['premiumgreen']),
 				  "SetFontSize {}".format(size['normal']),
@@ -241,6 +236,10 @@ settings = {
 							"SetBorderColor {} 150".format(color['rare']),
 							"SetFontSize {}".format(size['large']),
 							"SetBackgroundColor {} 220".format(color['black'])],
+	"rare highlight": ["Rarity Rare",
+			   "SetFontSize {}".format(size['large']),
+			   "SetBorderColor {} 150".format(color['premiumorange']),
+			   "SetBackgroundColor {} 220".format(color['premiumdpurple'])],
 	"rare high": ["Rarity Rare",
 				  "SetBorderColor {}".format(color['rare']),
 				  "SetFontSize {}".format(size['large']),
@@ -277,7 +276,7 @@ settings = {
 	"t1 83/84 rare high": ["Rarity Rare",
 						   "SetBorderColor {}".format(color['nemesisoutline']),
 						   "SetFontSize {}".format(size['large']),
-						   "SetBackgroundColor {} 220".format(color['black'])],
+						   "SetBackgroundColor {} 220".format(color['premiumdpurple'])],
 
 	"unique very high": ["Rarity Unique",
 						 "SetBorderColor {}".format(color['unique']),

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/24/2016(m/d/y) 03:25:37 UTC from "Hardcore Breach" data
+# Created: 12/25/2016(m/d/y) 01:02:46 UTC from "Hardcore Breach" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -59,7 +59,6 @@ items = {
 	"0 Grand Mana Flask": {"base": "Grand Mana Flask", "type": "unique very high"},
 	"0 Granite Flask": {"base": "Granite Flask", "type": "unique very high"},
 	"0 Greatwolf Talisman": {"base": "Greatwolf Talisman", "type": "unique very high"},
-	"0 Ironscale Gauntlets": {"base": "Ironscale Gauntlets", "type": "unique very high"},
 	"0 Jasper Chopper": {"base": "Jasper Chopper", "type": "unique very high"},
 	"0 Jet Amulet": {"base": "Jet Amulet", "type": "unique very high"},
 	"0 Jewelled Foil": {"base": "Jewelled Foil", "type": "unique very high"},
@@ -104,6 +103,7 @@ items = {
 	"1 Heavy Quiver": {"base": "Heavy Quiver", "type": "unique high"},
 	"1 Imperial Skean": {"base": "Imperial Skean", "type": "unique high"},
 	"1 Imperial Staff": {"base": "Imperial Staff", "type": "unique high"},
+	"1 Ironscale Gauntlets": {"base": "Ironscale Gauntlets", "type": "unique high"},
 	"1 Jingling Spirit Shield": {"base": "Jingling Spirit Shield", "type": "unique high"},
 	"1 Karui Sceptre": {"base": "Karui Sceptre", "type": "unique high"},
 	"1 Labrys": {"base": "Labrys", "type": "unique high"},
@@ -129,12 +129,12 @@ items = {
 	"1 Underground River Map": {"base": "Underground River Map", "type": "unique high"},
 	"1 Vaal Axe": {"base": "Vaal Axe", "type": "unique high"},
 	"1 Vaal Pyramid Map": {"base": "Vaal Pyramid Map", "type": "unique high"},
+	"1 Vaal Spirit Shield": {"base": "Vaal Spirit Shield", "type": "unique high"},
 	"1 Vanguard Belt": {"base": "Vanguard Belt", "type": "unique high"},
 	"1 Varnished Coat": {"base": "Varnished Coat", "type": "unique high"},
 	"1 Wereclaw Talisman": {"base": "Wereclaw Talisman", "type": "unique high"},
 	"7 Agate Amulet": {"base": "Agate Amulet", "type": "unique low"},
 	"7 Antique Rapier": {"base": "Antique Rapier", "type": "unique low"},
-	"7 Assassin Bow": {"base": "Assassin Bow", "type": "unique low"},
 	"7 Aventail Helmet": {"base": "Aventail Helmet", "type": "unique low"},
 	"7 Awl": {"base": "Awl", "type": "unique low"},
 	"7 Baroque Round Shield": {"base": "Baroque Round Shield", "type": "unique low"},
@@ -161,7 +161,6 @@ items = {
 	"7 Dread Maul": {"base": "Dread Maul", "type": "unique low"},
 	"7 Dream Mace": {"base": "Dream Mace", "type": "unique low"},
 	"7 Ebony Tower Shield": {"base": "Ebony Tower Shield", "type": "unique low"},
-	"7 Elegant Ringmail": {"base": "Elegant Ringmail", "type": "unique low"},
 	"7 Fire Arrow Quiver": {"base": "Fire Arrow Quiver", "type": "unique low"},
 	"7 Gavel": {"base": "Gavel", "type": "unique low"},
 	"7 Gilded Sallet": {"base": "Gilded Sallet", "type": "unique low"},
@@ -194,7 +193,6 @@ items = {
 	"7 Ornate Sword": {"base": "Ornate Sword", "type": "unique low"},
 	"7 Painted Buckler": {"base": "Painted Buckler", "type": "unique low"},
 	"7 Plank Kite Shield": {"base": "Plank Kite Shield", "type": "unique low"},
-	"7 Plate Vest": {"base": "Plate Vest", "type": "unique low"},
 	"7 Platinum Kris": {"base": "Platinum Kris", "type": "unique low"},
 	"7 Primordial Staff": {"base": "Primordial Staff", "type": "unique low"},
 	"7 Prophet Crown": {"base": "Prophet Crown", "type": "unique low"},
@@ -202,7 +200,6 @@ items = {
 	"7 Quicksilver Flask": {"base": "Quicksilver Flask", "type": "unique low"},
 	"7 Ranger Bow": {"base": "Ranger Bow", "type": "unique low"},
 	"7 Reaver Sword": {"base": "Reaver Sword", "type": "unique low"},
-	"7 Reinforced Tower Shield": {"base": "Reinforced Tower Shield", "type": "unique low"},
 	"7 Rotted Round Shield": {"base": "Rotted Round Shield", "type": "unique low"},
 	"7 Royal Staff": {"base": "Royal Staff", "type": "unique low"},
 	"7 Sabre": {"base": "Sabre", "type": "unique low"},
@@ -221,10 +218,12 @@ items = {
 	"7 Stiletto": {"base": "Stiletto", "type": "unique low"},
 	"7 Strapped Boots": {"base": "Strapped Boots", "type": "unique low"},
 	"7 Strapped Leather": {"base": "Strapped Leather", "type": "unique low"},
+	"7 Studded Belt": {"base": "Studded Belt", "type": "unique low"},
 	"7 Sulphur Flask": {"base": "Sulphur Flask", "type": "unique low"},
 	"7 Supreme Spiked Shield": {"base": "Supreme Spiked Shield", "type": "unique low"},
 	"7 Thresher Claw": {"base": "Thresher Claw", "type": "unique low"},
 	"7 Timeworn Claw": {"base": "Timeworn Claw", "type": "unique low"},
+	"7 Tomahawk": {"base": "Tomahawk", "type": "unique low"},
 	"7 Tricorne": {"base": "Tricorne", "type": "unique low"},
 	"7 Turquoise Amulet": {"base": "Turquoise Amulet", "type": "unique low"},
 	"7 Vaal Blade": {"base": "Vaal Blade", "type": "unique low"},
