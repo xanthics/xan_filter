@@ -31,7 +31,7 @@ desc = "Crafting Bases"
 # Base type : settings pair
 items = {
 	"0 Void Sceptre": {"base": "Void Sceptre", "other": ["ItemLevel >= 84"], "type": "t1 ilvl83/84 crafting"},
-	"0 Opal Sceptre": {"base": "Opal Sceptre", "other": ["ItemLevel >= 84"], "type": "ignore"},
+	"0 Opal Sceptre": {"base": "Opal Sceptre", "other": ["ItemLevel >= 84"], "type": "t1 ilvl83/84 crafting"},
 	"0 Profane Wand": {"base": "Profane Wand", "other": ["ItemLevel >= 84"], "type": "ignore"},
 	"0 Prophecy Wand": {"base": "Prophecy Wand", "other": ["ItemLevel >= 84"], "type": "ignore"},
 	"0 Opal Wand": {"base": "Opal Wand", "other": ["ItemLevel >= 84"], "type": "ignore"},
