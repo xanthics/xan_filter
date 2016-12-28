@@ -117,7 +117,7 @@ def adddata(nextchange, remove, add, ldb):
 
 
 #  Retrieve Stash Tab API data from GGG
-def get_stashes(ldb, start=None):
+def get_stashes(ldb, requester,start=None):
 	if not start:
 		if 'key' in ldb.collection_names():
 			start = ldb.key.find_one()['next']
@@ -128,7 +128,7 @@ def get_stashes(ldb, start=None):
 		url = 'https://www.pathofexile.com/api/public-stash-tabs'
 
 	print("Starting {}".format(url))
-	req = requests.get(url)
+	req = requester.get(url)
 	mybytes = len(req.content)/1000000  # Assume digital storage 1mB=1000kB=1000000B
 	print("{:.2f} MegaBytes received".format(mybytes))
 
@@ -319,6 +319,7 @@ def divuniqueupdate():
 
 	with MongoClient() as client:
 		ldb = client.stashdata
+		requester = requests.session()
 
 		nc = None
 		oldnc = nc
@@ -326,7 +327,7 @@ def divuniqueupdate():
 
 		while True:
 			try:
-				nc, nmybytes = get_stashes(ldb, nc)
+				nc, nmybytes = get_stashes(ldb, requester, nc)
 				mybytes += nmybytes
 				print("{:.2f} Megabytes recieved so far(total)".format(mybytes))
 				if oldnc == nc:
@@ -371,61 +372,25 @@ def find_substrings(ldb):
 def convertshorttolongstr(cur, val, l, exa):
 	if val >= exa * .5:
 		tier = 'currency extremely high'
-	elif val >= 4:
+	elif val >= 3:
 		tier = 'currency very high'
-	elif val >= 1:
+	elif val >= 0.95:
 		tier = 'currency high'
 	elif val >= 1/8:
 		tier = 'currency normal'
 	else:
 		tier = 'currency low'
 	
-	if cur == 'divine':
-		return "0 Divine Orb\": {{\"base\": \"Divine Orb\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
-	elif cur == 'regret':
-		return "0 Orb of Regret\": {{\"base\": \"Orb of Regret\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
-	elif cur == 'gcp':
-		return "0 Gemcutter's Prism\": {{\"base\": \"Gemcutter's Prism\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
-	elif cur == 'chaos':
-		return "0 Chaos Orb\": {{\"base\": \"Chaos Orb\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
-	elif cur == 'regal':
-		return "0 Regal Orb\": {{\"base\": \"Regal Orb\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
-	elif cur == 'fuse':
-		return "0 Orb of Fusing\": {{\"base\": \"Orb of Fusing\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
-	elif cur == 'blessed':
-		return "0 Blessed Orb\": {{\"base\": \"Blessed Orb\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
-	elif cur == 'scour':
-		return "0 Orb of Scouring\": {{\"base\": \"Orb of Scouring\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
-	elif cur == 'alch':
-		return "0 Orb of Alchemy\": {{\"base\": \"Orb of Alchemy\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
-	elif cur == 'vaal':
-		return "0 Vaal Orb\": {{\"base\": \"Vaal Orb\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
-	elif cur == 'chisel':
-		return "0 Cartographer's Chisel\": {{\"base\": \"Cartographer's Chisel\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
-	elif cur == 'bauble':
-		return "0 Glassblower's Bauble\": {{\"base\": \"Glassblower's Bauble\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
-	elif cur == 'chance':
-		return "0 Orb of Chance\": {{\"base\": \"Orb of Chance\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
-	elif cur == 'jew':
-		return "0 Jeweller's Orb\": {{\"base\": \"Jeweller's Orb\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
-	elif cur == 'chrom':
-		return "0 Chromatic Orb\": {{\"base\": \"Chromatic Orb\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
-	elif cur == 'alt':
-		return "0 Orb of Alteration\": {{\"base\": \"Orb of Alteration\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
-	elif cur == 'aug':
-		return "0 Orb of Augmentation\": {{\"base\": \"Orb of Augmentation\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
-	elif cur == 'transmute':
-		return "0 Orb of Transmutation\": {{\"base\": \"Orb of Transmutation\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
-	elif cur == 'perandus':
-		return "0 Perandus Coin\": {{\"base\": \"Perandus Coin\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
-	elif cur == 'silver':
-		return "0 Silver Coin\": {{\"base\": \"Silver Coin\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
-	elif cur == 'apprenticecartosextant':
-		return "0 Apprentice Cartographer's Sextant\": {{\"base\": \"Apprentice Cartographer's Sextant\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
-	elif cur == 'journeycartosextant':
-		return "0 Journeyman Cartographer's Sextant\": {{\"base\": \"Journeyman Cartographer's Sextant\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
-	elif cur == 'mastercartosextant':
-		return "0 Master Cartographer's Sextant\": {{\"base\": \"Master Cartographer's Sextant\", \"class\": \"Currency\", \"type\": \"{}\"}}".format(tier)
+	currency = {'divine': 'Divine Orb', 'regret': 'Orb of Regret', 'gcp': 'Gemcutter\'s Prism', 'chaos': '0 Chaos Orb', 'regal': 'Regal Orb',
+			   'fuse': 'Orb of Fusing', 'blessed': 'Blessed Orb', 'scour': 'Orb of Scouring', 'alch': 'Orb of Alchemy', 'vaal': 'Vaal Orb',
+			   'chisel': 'Cartographer\'s Chisel', 'bauble': 'Glassblower\'s Bauble', 'chance': 'Orb of Chanc', 'jew': 'Jeweller\'s Orb',
+			   'chrom': 'Chromatic Orb', 'alt': 'Orb of Alteration', 'aug': 'Orb of Augmentation', 'transmute': 'Orb of Transmutation',
+			   'perandus': 'Perandus Coin', 'silver': 'Silver Coin', 'apprenticecartosextant': 'Apprentice Cartographer\'s Sextant',
+			   'journeycartosextant': 'Journeyman Cartographer\'s Sextant', 'mastercartosextant': 'Master Cartographer\'s Sextant'}
+
+
+	if cur in currency:
+		return "0 {0}\": {{\"base\": \"{0}\", \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier)
 	else:
 		print("invalid input: {}, {}".format(cur, l))
 		return None
@@ -499,8 +464,7 @@ def poetrade_getcurrencyrates():
 				# ensure there is enough price data to generate a meaningful average
 				if len(sellratios[currencies[currency]]) + len(buyratios[currencies[currency]]) > 8:
 					vals = sellratios[currencies[currency]] + buyratios[currencies[currency]]
-					ratios[currencies[currency]] = median([i for i in vals if stddevcheck(i, median(vals), stdev(vals))])
-					# ratios[currencies[currency]] = mean([i for i in vals if stddevcheck(i, mean(vals), stdev(vals))])
+					ratios[currencies[currency]] = mean([i for i in vals if stddevcheck(i, median(vals), stdev(vals))])
 
 			# slice the highest someone will buy an orb from you and the lowest you would have to pay for an orb
 					# ratios[currencies[currency]] = mean(sorted(sellratios[currencies[currency]], reverse=True)[:5] + sorted(buyratios[currencies[currency]])[:5])
@@ -537,7 +501,7 @@ def poetrade_getcurrencyrates():
 
 
 if __name__ == '__main__':
-	poetrade_getcurrencyrates()
+#	poetrade_getcurrencyrates()
 	divuniqueupdate()
 
 
