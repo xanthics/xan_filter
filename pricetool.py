@@ -37,7 +37,7 @@ from datetime import datetime
 import time
 import re
 from pymongo import MongoClient
-from statistics import mean
+from statistics import mean, stdev, median
 
 from auto_gen import currencyrates
 from auto_gen import hccurrencyrates
@@ -431,6 +431,13 @@ def convertshorttolongstr(cur, val, l, exa):
 		return None
 
 
+# Helper function to remove spurious data
+def stddevcheck(duration, mean_calc, stdev_calc):
+	if abs(duration - mean_calc) <= stdev_calc:
+		return True
+	return False
+
+
 # scrape poe.trade for currency exchange rates
 def poetrade_getcurrencyrates():
 	currencies = {"exa": 6, "fuse": 2, "regal": 14, "alt": 1, "alch": 3, "jew": 8, "gcp": 5,
@@ -486,13 +493,17 @@ def poetrade_getcurrencyrates():
 					rrate = float(re.search(r'data-sellvalue="(-?\d*(\.\d+)?)"', i.lower()).group(1))
 					buyratios[rtype].append(crate / rrate)
 
+
 			# Generate our average prices shortlist
 			ratios = [[] for _ in range(max(currencies.values()) + 1)]
 			for currency in currencies:
 				# ensure there is enough price data to generate a meaningful average
 				if len(sellratios[currencies[currency]]) + len(buyratios[currencies[currency]]) > 8:
+					vals = sellratios[currencies[currency]] + buyratios[currencies[currency]]
+					ratios[currencies[currency]] = median([i for i in vals if stddevcheck(i, median(vals), stdev(vals))])
+
 					# slice the highest someone will buy an orb from you and the lowest you would have to pay for an orb
-					ratios[currencies[currency]] = mean(sorted(sellratios[currencies[currency]], reverse=True)[:5] + sorted(buyratios[currencies[currency]])[:5])
+					# ratios[currencies[currency]] = mean(sorted(sellratios[currencies[currency]], reverse=True)[:5] + sorted(buyratios[currencies[currency]])[:5])
 
 
 			rates = u'''{}\ndesc = "Currency Rates"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), l))
