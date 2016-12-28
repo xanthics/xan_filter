@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/25/2016(m/d/y) 01:02:46 UTC from "Hardcore" data
+# Created: 12/28/2016(m/d/y) 01:25:17 UTC from "Hardcore" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -87,6 +87,7 @@ items = {
 	"0 Ritual Sceptre": {"base": "Ritual Sceptre", "type": "unique very high"},
 	"0 Rotfeather Talisman": {"base": "Rotfeather Talisman", "type": "unique very high"},
 	"0 Royal Axe": {"base": "Royal Axe", "type": "unique very high"},
+	"0 Royal Burgonet": {"base": "Royal Burgonet", "type": "unique very high"},
 	"0 Ruby Amulet": {"base": "Ruby Amulet", "type": "unique very high"},
 	"0 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "unique very high"},
 	"0 Sanctified Life Flask": {"base": "Sanctified Life Flask", "type": "unique very high"},
@@ -102,9 +103,11 @@ items = {
 	"0 Spine Bow": {"base": "Spine Bow", "type": "unique very high"},
 	"0 Steelhead": {"base": "Steelhead", "type": "unique very high"},
 	"0 Stibnite Flask": {"base": "Stibnite Flask", "type": "unique very high"},
+	"0 Thorium Spirit Shield": {"base": "Thorium Spirit Shield", "type": "unique very high"},
 	"0 Titanium Spirit Shield": {"base": "Titanium Spirit Shield", "type": "unique very high"},
 	"0 Topaz Flask": {"base": "Topaz Flask", "type": "unique very high"},
 	"0 Two-Stone Ring": {"base": "Two-Stone Ring", "type": "unique very high"},
+	"0 Vaal Axe": {"base": "Vaal Axe", "type": "unique very high"},
 	"0 Vaal Mask": {"base": "Vaal Mask", "type": "unique very high"},
 	"0 Vaal Regalia": {"base": "Vaal Regalia", "type": "unique very high"},
 	"0 Vaal Sceptre": {"base": "Vaal Sceptre", "type": "unique very high"},
@@ -139,11 +142,11 @@ items = {
 	"1 Saintly Chainmail": {"base": "Saintly Chainmail", "type": "unique high"},
 	"1 Savant's Robe": {"base": "Savant's Robe", "type": "unique high"},
 	"1 Sharkskin Tunic": {"base": "Sharkskin Tunic", "type": "unique high"},
+	"1 Simple Robe": {"base": "Simple Robe", "type": "unique high"},
 	"1 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique high"},
 	"1 Slink Boots": {"base": "Slink Boots", "type": "unique high"},
 	"1 Trapper Boots": {"base": "Trapper Boots", "type": "unique high"},
 	"1 Ursine Pelt": {"base": "Ursine Pelt", "type": "unique high"},
-	"1 Vaal Axe": {"base": "Vaal Axe", "type": "unique high"},
 	"1 Vaal Gauntlets": {"base": "Vaal Gauntlets", "type": "unique high"},
 	"1 Vaal Hatchet": {"base": "Vaal Hatchet", "type": "unique high"},
 	"1 Vaal Pyramid Map": {"base": "Vaal Pyramid Map", "type": "unique high"},

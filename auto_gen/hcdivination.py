@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/25/2016(m/d/y) 01:02:46 UTC from "Hardcore" data
+# Created: 12/28/2016(m/d/y) 01:25:17 UTC from "Hardcore" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -47,6 +47,7 @@ items = {
 	"1 The Artist": {"base": "The Artist", "class": "Divination Card", "type": "divination very high"},
 	"1 The Brittle Emperor": {"base": "The Brittle Emperor", "class": "Divination Card", "type": "divination very high"},
 	"1 The Celestial Justicar": {"base": "The Celestial Justicar", "class": "Divination Card", "type": "divination very high"},
+	"1 The Coming Storm": {"base": "The Coming Storm", "class": "Divination Card", "type": "divination very high"},
 	"1 The Cursed King": {"base": "The Cursed King", "class": "Divination Card", "type": "divination very high"},
 	"1 The Dapper Prodigy": {"base": "The Dapper Prodigy", "class": "Divination Card", "type": "divination very high"},
 	"1 The Dark Mage": {"base": "The Dark Mage", "class": "Divination Card", "type": "divination very high"},
@@ -56,12 +57,15 @@ items = {
 	"1 The Fiend": {"base": "The Fiend", "class": "Divination Card", "type": "divination very high"},
 	"1 The Formless Sea": {"base": "The Formless Sea", "class": "Divination Card", "type": "divination very high"},
 	"1 The Fox": {"base": "The Fox", "class": "Divination Card", "type": "divination very high"},
+	"1 The Garish Power": {"base": "The Garish Power", "class": "Divination Card", "type": "divination very high"},
 	"1 The Harvester": {"base": "The Harvester", "class": "Divination Card", "type": "divination very high"},
 	"1 The Hunger": {"base": "The Hunger", "class": "Divination Card", "type": "divination very high"},
 	"1 The Immortal": {"base": "The Immortal", "class": "Divination Card", "type": "divination very high"},
 	"1 The King's Heart": {"base": "The King's Heart", "class": "Divination Card", "type": "divination very high"},
 	"1 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination very high"},
 	"1 The Offering": {"base": "The Offering", "class": "Divination Card", "type": "divination very high"},
+	"1 The Polymath": {"base": "The Polymath", "class": "Divination Card", "type": "divination very high"},
+	"1 The Porcupine": {"base": "The Porcupine", "class": "Divination Card", "type": "divination very high"},
 	"1 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
 	"1 The Saint's Treasure": {"base": "The Saint's Treasure", "class": "Divination Card", "type": "divination very high"},
 	"1 The Spark and the Flame": {"base": "The Spark and the Flame", "class": "Divination Card", "type": "divination very high"},
@@ -101,7 +105,6 @@ items = {
 	"2 The Demoness": {"base": "The Demoness", "class": "Divination Card", "type": "divination high"},
 	"2 The Dragon": {"base": "The Dragon", "class": "Divination Card", "type": "divination high"},
 	"2 The Forsaken": {"base": "The Forsaken", "class": "Divination Card", "type": "divination high"},
-	"2 The Garish Power": {"base": "The Garish Power", "class": "Divination Card", "type": "divination high"},
 	"2 The Gladiator": {"base": "The Gladiator", "class": "Divination Card", "type": "divination high"},
 	"2 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination high"},
 	"2 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination high"},
