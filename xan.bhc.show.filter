@@ -1,6 +1,6 @@
 #**************************************************************
 # Welcome to xan.filter, a Python generated loot filter for PoE
-# This filter was generated for Hardcore Breach on 12/28/2016(m/d/y) 03:35:25 UTC
+# This filter was generated for Hardcore Breach on 12/28/2016(m/d/y) 06:28:49 UTC
 # The most current version of code can always be found at https://github.com/xanthics/poe_filter
 #**************************************************************
 
@@ -361,8 +361,8 @@ Show
 	BaseType "Blessed Orb"
 	Class "Currency"
 	SetBorderColor 170 158 130
-	SetFontSize 35
-	PlayAlertSound 5 25
+	SetFontSize 40
+	PlayAlertSound 5 75
 	SetBackgroundColor 0 0 0 220
 
 #0 Cartographer's Chisel - Currency Autogen
@@ -404,8 +404,8 @@ Show
 	BaseType "Gemcutter's Prism"
 	Class "Currency"
 	SetBorderColor 170 158 130
-	SetFontSize 35
-	PlayAlertSound 5 25
+	SetFontSize 40
+	PlayAlertSound 5 75
 	SetBackgroundColor 0 0 0 220
 
 #0 Glassblower's Bauble - Currency Autogen
@@ -469,7 +469,9 @@ Show
 Show
 	BaseType "Orb of Chance"
 	Class "Currency"
-	SetFontSize 30
+	SetBorderColor 170 158 130
+	SetFontSize 35
+	PlayAlertSound 5 25
 	SetBackgroundColor 0 0 0 220
 
 #0 Orb of Fusing - Currency Autogen
@@ -495,8 +497,8 @@ Show
 	BaseType "Orb of Scouring"
 	Class "Currency"
 	SetBorderColor 170 158 130
-	SetFontSize 35
-	PlayAlertSound 5 25
+	SetFontSize 40
+	PlayAlertSound 5 75
 	SetBackgroundColor 0 0 0 220
 
 #0 Orb of Transmutation - Currency Autogen
@@ -518,8 +520,8 @@ Show
 	BaseType "Regal Orb"
 	Class "Currency"
 	SetBorderColor 170 158 130
-	SetFontSize 40
-	PlayAlertSound 5 75
+	SetFontSize 45
+	PlayAlertSound 5 150
 	SetBackgroundColor 0 0 0 220
 
 #0 Silver Coin - Currency Autogen
@@ -1203,6 +1205,15 @@ Show
 	PlayAlertSound 3 300
 	SetBackgroundColor 0 0 0 220
 
+#0 Ritual Sceptre - Unique
+Show
+	BaseType "Ritual Sceptre"
+	Rarity Unique
+	SetBorderColor 175 96 37
+	SetFontSize 45
+	PlayAlertSound 3 300
+	SetBackgroundColor 0 0 0 220
+
 #0 Rotfeather Talisman - Unique
 Show
 	BaseType "Rotfeather Talisman"
@@ -1491,6 +1502,15 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
+#1 Karui Sceptre - Unique
+Show
+	BaseType "Karui Sceptre"
+	Rarity Unique
+	SetFontSize 40
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
+	SetBackgroundColor 0 0 0 220
+
 #1 Labrys - Unique
 Show
 	BaseType "Labrys"
@@ -1575,15 +1595,6 @@ Show
 #1 Regicide Mask - Unique
 Show
 	BaseType "Regicide Mask"
-	Rarity Unique
-	SetFontSize 40
-	SetBorderColor 175 96 37
-	PlayAlertSound 3 75
-	SetBackgroundColor 0 0 0 220
-
-#1 Ritual Sceptre - Unique
-Show
-	BaseType "Ritual Sceptre"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
@@ -2777,7 +2788,6 @@ Show
 Show
 	BaseType "Shaped Atoll Map"
 	Class "Maps"
-	ItemLevel <= 82
 	DropLevel 80
 	SetBorderColor 150 0 0
 	SetFontSize 45
@@ -3074,7 +3084,6 @@ Show
 Show
 	BaseType "Shaped Mesa Map"
 	Class "Maps"
-	ItemLevel <= 79
 	DropLevel 77
 	SetBorderColor 255 215 0
 	PlayAlertSound 7 50
@@ -3195,7 +3204,6 @@ Show
 Show
 	BaseType "Shaped Promenade Map"
 	Class "Maps"
-	ItemLevel <= 83
 	DropLevel 81
 	SetBorderColor 150 0 0
 	SetFontSize 45
@@ -3305,7 +3313,6 @@ Show
 Show
 	BaseType "Shaped Strand Map"
 	Class "Maps"
-	ItemLevel <= 80
 	DropLevel 78
 	SetBorderColor 150 0 0
 	SetFontSize 45
@@ -3360,7 +3367,6 @@ Show
 Show
 	BaseType "Shaped Tropical Island Map"
 	Class "Maps"
-	ItemLevel <= 82
 	DropLevel 80
 	SetBorderColor 150 0 0
 	SetFontSize 45
@@ -3911,7 +3917,6 @@ Show
 Show
 	BaseType "Gorge Map"
 	Class "Maps"
-	ItemLevel <= 82
 	DropLevel 80
 	SetBorderColor 150 0 0
 	SetFontSize 45
@@ -4198,7 +4203,6 @@ Show
 Show
 	BaseType "Plateau Map"
 	Class "Maps"
-	ItemLevel <= 81
 	DropLevel 79
 	SetBorderColor 150 0 0
 	SetFontSize 45
@@ -4263,7 +4267,6 @@ Show
 Show
 	BaseType "Quay Map"
 	Class "Maps"
-	ItemLevel <= 79
 	DropLevel 77
 	SetBorderColor 255 215 0
 	PlayAlertSound 7 50
@@ -4545,7 +4548,6 @@ Show
 Show
 	BaseType "Vault Map"
 	Class "Maps"
-	ItemLevel <= 81
 	DropLevel 79
 	SetBorderColor 150 0 0
 	SetFontSize 45
@@ -4566,7 +4568,6 @@ Show
 Show
 	BaseType "Volcano Map"
 	Class "Maps"
-	ItemLevel <= 83
 	DropLevel 81
 	SetBorderColor 150 0 0
 	SetFontSize 45
@@ -4598,7 +4599,6 @@ Show
 Show
 	BaseType "Waterways Map"
 	Class "Maps"
-	ItemLevel <= 82
 	DropLevel 80
 	SetBorderColor 150 0 0
 	SetFontSize 45
@@ -4929,6 +4929,15 @@ Show
 	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
+#1 The Jester - Divination Card
+Show
+	BaseType "The Jester"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	SetFontSize 40
+	PlayAlertSound 6 175
+	SetBackgroundColor 0 0 0 220
+
 #1 The King's Heart - Divination Card
 Show
 	BaseType "The King's Heart"
@@ -4995,15 +5004,6 @@ Show
 #1 The Sephirot - Divination Card
 Show
 	BaseType "The Sephirot"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	SetFontSize 40
-	PlayAlertSound 6 175
-	SetBackgroundColor 0 0 0 220
-
-#1 The Soul - Divination Card
-Show
-	BaseType "The Soul"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
 	SetFontSize 40
@@ -5541,14 +5541,6 @@ Show
 	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
-#2 The Jester - Divination Card
-Show
-	BaseType "The Jester"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
-	SetBackgroundColor 0 0 0 220
-
 #2 The Lich - Divination Card
 Show
 	BaseType "The Lich"
@@ -5584,14 +5576,6 @@ Show
 #2 The Mercenary - Divination Card
 Show
 	BaseType "The Mercenary"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
-	SetBackgroundColor 0 0 0 220
-
-#2 The Metalsmith's Gift - Divination Card
-Show
-	BaseType "The Metalsmith's Gift"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
 	PlayAlertSound 6 75
@@ -5688,6 +5672,14 @@ Show
 #2 The Siren - Divination Card
 Show
 	BaseType "The Siren"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	PlayAlertSound 6 75
+	SetBackgroundColor 0 0 0 220
+
+#2 The Soul - Divination Card
+Show
+	BaseType "The Soul"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
 	PlayAlertSound 6 75
@@ -5936,6 +5928,12 @@ Show
 #3 Rain of Chaos - Divination Card
 Show
 	BaseType "Rain of Chaos"
+	Class "Divination Card"
+	SetBackgroundColor 0 0 0 220
+
+#3 Rats - Divination Card
+Show
+	BaseType "Rats"
 	Class "Divination Card"
 	SetBackgroundColor 0 0 0 220
 
