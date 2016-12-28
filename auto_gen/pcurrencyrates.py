@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/28/2016(m/d/y) 03:19:12 UTC from "Breach" data
+# Created: 12/28/2016(m/d/y) 03:26:55 UTC from "Breach" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -37,10 +37,10 @@ items = {
 	"aug": 0.013333333333333334,
 	"bauble": 0.2,
 	"blessed": 0.4,
-	"chance": 0.1482213438735178,
+	"chance": 0.15268065268065267,
 	"chaos": 1.0,
-	"chisel": 0.2840909090909091,
-	"chrom": 0.09569597069597069,
+	"chisel": 0.2771805896805897,
+	"chrom": 0.09523809523809523,
 	"divine": 10.0,
 	"exa": 70.0,
 	"fuse": 0.4166666666666667,
@@ -50,10 +50,10 @@ items = {
 	"mastercartosextant": 4.5,
 	"mirror": 20000.0,
 	"perandus": 0.01818181818181818,
-	"regal": 1.0750000000000002,
+	"regal": 1.1,
 	"regret": 1.0,
-	"scour": 0.5798319327731092,
+	"scour": 0.5714285714285714,
 	"silver": 0.2777777777777778,
 	"transmute": 0.02,
-	"vaal": 1.188235294117647,
+	"vaal": 1.1715686274509804,
 }
