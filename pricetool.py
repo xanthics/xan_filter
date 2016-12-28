@@ -493,7 +493,6 @@ def poetrade_getcurrencyrates():
 					rrate = float(re.search(r'data-sellvalue="(-?\d*(\.\d+)?)"', i.lower()).group(1))
 					buyratios[rtype].append(crate / rrate)
 
-
 			# Generate our average prices shortlist
 			ratios = [[] for _ in range(max(currencies.values()) + 1)]
 			for currency in currencies:
@@ -501,8 +500,9 @@ def poetrade_getcurrencyrates():
 				if len(sellratios[currencies[currency]]) + len(buyratios[currencies[currency]]) > 8:
 					vals = sellratios[currencies[currency]] + buyratios[currencies[currency]]
 					ratios[currencies[currency]] = median([i for i in vals if stddevcheck(i, median(vals), stdev(vals))])
+					# ratios[currencies[currency]] = mean([i for i in vals if stddevcheck(i, mean(vals), stdev(vals))])
 
-					# slice the highest someone will buy an orb from you and the lowest you would have to pay for an orb
+			# slice the highest someone will buy an orb from you and the lowest you would have to pay for an orb
 					# ratios[currencies[currency]] = mean(sorted(sellratios[currencies[currency]], reverse=True)[:5] + sorted(buyratios[currencies[currency]])[:5])
 
 
