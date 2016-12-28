@@ -389,7 +389,7 @@ def convertshorttolongstr(cur, val, l, exa):
 
 
 	if cur in currency:
-		return "0 {0}: {{\"base\": \"{0}\", \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier)
+		return "0 {0}\": {{\"base\": \"{0}\", \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier)
 	else:
 		print("invalid input: {}, {}".format(cur, l))
 		return None

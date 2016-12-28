@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/28/2016(m/d/y) 05:35:19 UTC from "Hardcore" data
+# Created: 12/28/2016(m/d/y) 05:37:34 UTC from "Hardcore" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -31,27 +31,27 @@ desc = "Currency Autogen"
 
 # Base type : settings pair
 items = {
-	"0 alch: {"base": "alch", "class": "Currency", "type": "currency normal"},
-	"0 alt: {"base": "alt", "class": "Currency", "type": "currency low"},
-	"0 apprenticecartosextant: {"base": "apprenticecartosextant", "class": "Currency", "type": "currency normal"},
-	"0 aug: {"base": "aug", "class": "Currency", "type": "currency low"},
-	"0 bauble: {"base": "bauble", "class": "Currency", "type": "currency low"},
-	"0 blessed: {"base": "blessed", "class": "Currency", "type": "currency normal"},
-	"0 chance: {"base": "chance", "class": "Currency", "type": "currency low"},
-	"0 chaos: {"base": "chaos", "class": "Currency", "type": "currency high"},
-	"0 chisel: {"base": "chisel", "class": "Currency", "type": "currency normal"},
-	"0 chrom: {"base": "chrom", "class": "Currency", "type": "currency low"},
-	"0 divine: {"base": "divine", "class": "Currency", "type": "currency very high"},
-	"0 fuse: {"base": "fuse", "class": "Currency", "type": "currency normal"},
-	"0 gcp: {"base": "gcp", "class": "Currency", "type": "currency high"},
-	"0 jew: {"base": "jew", "class": "Currency", "type": "currency normal"},
-	"0 journeycartosextant: {"base": "journeycartosextant", "class": "Currency", "type": "currency high"},
-	"0 mastercartosextant: {"base": "mastercartosextant", "class": "Currency", "type": "currency very high"},
-	"0 perandus: {"base": "perandus", "class": "Currency", "type": "currency low"},
-	"0 regal: {"base": "regal", "class": "Currency", "type": "currency high"},
-	"0 regret: {"base": "regret", "class": "Currency", "type": "currency high"},
-	"0 scour: {"base": "scour", "class": "Currency", "type": "currency normal"},
-	"0 silver: {"base": "silver", "class": "Currency", "type": "currency normal"},
-	"0 transmute: {"base": "transmute", "class": "Currency", "type": "currency low"},
-	"0 vaal: {"base": "vaal", "class": "Currency", "type": "currency high"},
+	"0 alch": {"base": "alch", "class": "Currency", "type": "currency normal"},
+	"0 alt": {"base": "alt", "class": "Currency", "type": "currency low"},
+	"0 apprenticecartosextant": {"base": "apprenticecartosextant", "class": "Currency", "type": "currency normal"},
+	"0 aug": {"base": "aug", "class": "Currency", "type": "currency low"},
+	"0 bauble": {"base": "bauble", "class": "Currency", "type": "currency low"},
+	"0 blessed": {"base": "blessed", "class": "Currency", "type": "currency normal"},
+	"0 chance": {"base": "chance", "class": "Currency", "type": "currency low"},
+	"0 chaos": {"base": "chaos", "class": "Currency", "type": "currency high"},
+	"0 chisel": {"base": "chisel", "class": "Currency", "type": "currency normal"},
+	"0 chrom": {"base": "chrom", "class": "Currency", "type": "currency low"},
+	"0 divine": {"base": "divine", "class": "Currency", "type": "currency very high"},
+	"0 fuse": {"base": "fuse", "class": "Currency", "type": "currency normal"},
+	"0 gcp": {"base": "gcp", "class": "Currency", "type": "currency high"},
+	"0 jew": {"base": "jew", "class": "Currency", "type": "currency normal"},
+	"0 journeycartosextant": {"base": "journeycartosextant", "class": "Currency", "type": "currency high"},
+	"0 mastercartosextant": {"base": "mastercartosextant", "class": "Currency", "type": "currency very high"},
+	"0 perandus": {"base": "perandus", "class": "Currency", "type": "currency low"},
+	"0 regal": {"base": "regal", "class": "Currency", "type": "currency high"},
+	"0 regret": {"base": "regret", "class": "Currency", "type": "currency high"},
+	"0 scour": {"base": "scour", "class": "Currency", "type": "currency normal"},
+	"0 silver": {"base": "silver", "class": "Currency", "type": "currency normal"},
+	"0 transmute": {"base": "transmute", "class": "Currency", "type": "currency low"},
+	"0 vaal": {"base": "vaal", "class": "Currency", "type": "currency high"},
 }

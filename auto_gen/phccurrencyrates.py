@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/28/2016(m/d/y) 05:35:33 UTC from "Hardcore Breach" data
+# Created: 12/28/2016(m/d/y) 05:37:50 UTC from "Hardcore Breach" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -37,7 +37,7 @@ items = {
 	"aug": 0.01380952380952381,
 	"bauble": 0.25,
 	"blessed": 0.6666666666666666,
-	"chance": 0.11979913916786226,
+	"chance": 0.11764705882352941,
 	"chaos": 1.0,
 	"chisel": 0.2,
 	"chrom": 0.08196721311475409,
