@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/28/2016(m/d/y) 01:25:17 UTC from "Standard" data
+# Created: 12/28/2016(m/d/y) 06:21:49 UTC from "Standard" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -33,7 +33,6 @@ desc = "Unique"
 items = {
 	"0 Abyssal Axe": {"base": "Abyssal Axe", "type": "unique very high"},
 	"0 Assassin's Garb": {"base": "Assassin's Garb", "type": "unique very high"},
-	"0 Champion Kite Shield": {"base": "Champion Kite Shield", "type": "unique very high"},
 	"0 Chateau Map": {"base": "Chateau Map", "type": "unique very high"},
 	"0 Citadel Bow": {"base": "Citadel Bow", "type": "unique very high"},
 	"0 Citrine Amulet": {"base": "Citrine Amulet", "type": "unique very high"},
@@ -65,18 +64,11 @@ items = {
 	"0 Rotfeather Talisman": {"base": "Rotfeather Talisman", "type": "unique very high"},
 	"0 Royal Axe": {"base": "Royal Axe", "type": "unique very high"},
 	"0 Royal Burgonet": {"base": "Royal Burgonet", "type": "unique very high"},
-	"0 Ruby Amulet": {"base": "Ruby Amulet", "type": "unique very high"},
-	"0 Sanctified Mana Flask": {"base": "Sanctified Mana Flask", "type": "unique very high"},
 	"0 Sapphire Flask": {"base": "Sapphire Flask", "type": "unique very high"},
-	"0 Sharkskin Tunic": {"base": "Sharkskin Tunic", "type": "unique very high"},
-	"0 Siege Helmet": {"base": "Siege Helmet", "type": "unique very high"},
 	"0 Silver Flask": {"base": "Silver Flask", "type": "unique very high"},
-	"0 Sorcerer Boots": {"base": "Sorcerer Boots", "type": "unique very high"},
-	"0 Steelhead": {"base": "Steelhead", "type": "unique very high"},
 	"0 Thorium Spirit Shield": {"base": "Thorium Spirit Shield", "type": "unique very high"},
 	"0 Topaz Flask": {"base": "Topaz Flask", "type": "unique very high"},
 	"0 Vaal Spirit Shield": {"base": "Vaal Spirit Shield", "type": "unique very high"},
-	"0 Vanguard Belt": {"base": "Vanguard Belt", "type": "unique very high"},
 	"0 Void Axe": {"base": "Void Axe", "type": "unique very high"},
 	"0 Wereclaw Talisman": {"base": "Wereclaw Talisman", "type": "unique very high"},
 	"1 Ancient Gauntlets": {"base": "Ancient Gauntlets", "type": "unique high"},
@@ -84,6 +76,7 @@ items = {
 	"1 Bone Bow": {"base": "Bone Bow", "type": "unique high"},
 	"1 Carnal Sceptre": {"base": "Carnal Sceptre", "type": "unique high"},
 	"1 Cedar Tower Shield": {"base": "Cedar Tower Shield", "type": "unique high"},
+	"1 Champion Kite Shield": {"base": "Champion Kite Shield", "type": "unique high"},
 	"1 Courtyard Map": {"base": "Courtyard Map", "type": "unique high"},
 	"1 Despot Axe": {"base": "Despot Axe", "type": "unique high"},
 	"1 Exquisite Leather": {"base": "Exquisite Leather", "type": "unique high"},
@@ -100,11 +93,17 @@ items = {
 	"1 Karui Sceptre": {"base": "Karui Sceptre", "type": "unique high"},
 	"1 Nightmare Bascinet": {"base": "Nightmare Bascinet", "type": "unique high"},
 	"1 Regicide Mask": {"base": "Regicide Mask", "type": "unique high"},
+	"1 Ruby Amulet": {"base": "Ruby Amulet", "type": "unique high"},
 	"1 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "unique high"},
 	"1 Sanctified Life Flask": {"base": "Sanctified Life Flask", "type": "unique high"},
+	"1 Sanctified Mana Flask": {"base": "Sanctified Mana Flask", "type": "unique high"},
+	"1 Sharkskin Tunic": {"base": "Sharkskin Tunic", "type": "unique high"},
 	"1 Siege Axe": {"base": "Siege Axe", "type": "unique high"},
+	"1 Siege Helmet": {"base": "Siege Helmet", "type": "unique high"},
 	"1 Slaughter Knife": {"base": "Slaughter Knife", "type": "unique high"},
+	"1 Sorcerer Boots": {"base": "Sorcerer Boots", "type": "unique high"},
 	"1 Spine Bow": {"base": "Spine Bow", "type": "unique high"},
+	"1 Steelhead": {"base": "Steelhead", "type": "unique high"},
 	"1 Stibnite Flask": {"base": "Stibnite Flask", "type": "unique high"},
 	"1 Strapped Mitts": {"base": "Strapped Mitts", "type": "unique high"},
 	"1 Terror Claw": {"base": "Terror Claw", "type": "unique high"},
@@ -113,6 +112,7 @@ items = {
 	"1 Vaal Mask": {"base": "Vaal Mask", "type": "unique high"},
 	"1 Vaal Regalia": {"base": "Vaal Regalia", "type": "unique high"},
 	"1 Vaal Sceptre": {"base": "Vaal Sceptre", "type": "unique high"},
+	"1 Vanguard Belt": {"base": "Vanguard Belt", "type": "unique high"},
 	"1 Varnished Coat": {"base": "Varnished Coat", "type": "unique high"},
 	"7 Aventail Helmet": {"base": "Aventail Helmet", "type": "unique low"},
 	"7 Awl": {"base": "Awl", "type": "unique low"},

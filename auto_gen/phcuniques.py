@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/28/2016(m/d/y) 01:25:17 UTC from "Hardcore Breach" data
+# Created: 12/28/2016(m/d/y) 06:21:49 UTC from "Hardcore Breach" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -70,6 +70,7 @@ items = {
 	"0 Prophecy Wand": {"base": "Prophecy Wand", "type": "unique very high"},
 	"0 Raven Mask": {"base": "Raven Mask", "type": "unique very high"},
 	"0 Rawhide Boots": {"base": "Rawhide Boots", "type": "unique very high"},
+	"0 Ritual Sceptre": {"base": "Ritual Sceptre", "type": "unique very high"},
 	"0 Rotfeather Talisman": {"base": "Rotfeather Talisman", "type": "unique very high"},
 	"0 Royal Axe": {"base": "Royal Axe", "type": "unique very high"},
 	"0 Ruby Amulet": {"base": "Ruby Amulet", "type": "unique very high"},
@@ -102,6 +103,7 @@ items = {
 	"1 Imperial Staff": {"base": "Imperial Staff", "type": "unique high"},
 	"1 Ironscale Gauntlets": {"base": "Ironscale Gauntlets", "type": "unique high"},
 	"1 Jingling Spirit Shield": {"base": "Jingling Spirit Shield", "type": "unique high"},
+	"1 Karui Sceptre": {"base": "Karui Sceptre", "type": "unique high"},
 	"1 Labrys": {"base": "Labrys", "type": "unique high"},
 	"1 Leather Cap": {"base": "Leather Cap", "type": "unique high"},
 	"1 Lion Pelt": {"base": "Lion Pelt", "type": "unique high"},
@@ -112,7 +114,6 @@ items = {
 	"1 Penetrating Arrow Quiver": {"base": "Penetrating Arrow Quiver", "type": "unique high"},
 	"1 Reef Map": {"base": "Reef Map", "type": "unique high"},
 	"1 Regicide Mask": {"base": "Regicide Mask", "type": "unique high"},
-	"1 Ritual Sceptre": {"base": "Ritual Sceptre", "type": "unique high"},
 	"1 Sanctified Life Flask": {"base": "Sanctified Life Flask", "type": "unique high"},
 	"1 Sanctified Mana Flask": {"base": "Sanctified Mana Flask", "type": "unique high"},
 	"1 Sharkskin Tunic": {"base": "Sharkskin Tunic", "type": "unique high"},
