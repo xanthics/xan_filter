@@ -381,16 +381,16 @@ def convertshorttolongstr(cur, val, l, exa):
 	else:
 		tier = 'currency low'
 	
-	currency = {'divine': 'Divine Orb', 'regret': 'Orb of Regret', 'gcp': 'Gemcutter\'s Prism', 'chaos': '0 Chaos Orb', 'regal': 'Regal Orb',
+	currency = {'divine': 'Divine Orb', 'regret': 'Orb of Regret', 'gcp': 'Gemcutter\'s Prism', 'chaos': 'Chaos Orb', 'regal': 'Regal Orb',
 			   'fuse': 'Orb of Fusing', 'blessed': 'Blessed Orb', 'scour': 'Orb of Scouring', 'alch': 'Orb of Alchemy', 'vaal': 'Vaal Orb',
-			   'chisel': 'Cartographer\'s Chisel', 'bauble': 'Glassblower\'s Bauble', 'chance': 'Orb of Chanc', 'jew': 'Jeweller\'s Orb',
+			   'chisel': 'Cartographer\'s Chisel', 'bauble': 'Glassblower\'s Bauble', 'chance': 'Orb of Chance', 'jew': 'Jeweller\'s Orb',
 			   'chrom': 'Chromatic Orb', 'alt': 'Orb of Alteration', 'aug': 'Orb of Augmentation', 'transmute': 'Orb of Transmutation',
 			   'perandus': 'Perandus Coin', 'silver': 'Silver Coin', 'apprenticecartosextant': 'Apprentice Cartographer\'s Sextant',
 			   'journeycartosextant': 'Journeyman Cartographer\'s Sextant', 'mastercartosextant': 'Master Cartographer\'s Sextant'}
 
 
 	if cur in currency:
-		return "0 {0}\": {{\"base\": \"{0}\", \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier)
+		return "0 {0}\": {{\"base\": \"{0}\", \"class\": \"Currency\", \"type\": \"{1}\"}}".format(currency[cur], tier)
 	else:
 		print("invalid input: {}, {}".format(cur, l))
 		return None
@@ -501,7 +501,7 @@ def poetrade_getcurrencyrates():
 
 
 if __name__ == '__main__':
-#	poetrade_getcurrencyrates()
+	poetrade_getcurrencyrates()
 	divuniqueupdate()
 
 
