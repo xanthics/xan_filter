@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/27/2016(m/d/y) 23:02:40 UTC from "Hardcore" data
+# Created: 12/28/2016(m/d/y) 03:26:29 UTC from "Hardcore" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -39,13 +39,13 @@ items = {
 	"blessed": 0.5,
 	"chance": 0.07142857142857142,
 	"chaos": 1.0,
-	"chisel": 0.26459303466609574,
+	"chisel": 0.25,
 	"chrom": 0.06666666666666667,
 	"divine": 15.0,
-	"exa": 51.57575757575758,
+	"exa": 41.5,
 	"fuse": 0.5,
 	"gcp": 1,
-	"jew": 0.4210424523740451,
+	"jew": 0.125,
 	"journeycartosextant": 2,
 	"mastercartosextant": 5,
 	"mirror": 20000.0,
