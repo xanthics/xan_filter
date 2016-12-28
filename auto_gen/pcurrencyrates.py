@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/28/2016(m/d/y) 05:35:44 UTC from "Breach" data
+# Created: 12/28/2016(m/d/y) 05:38:00 UTC from "Breach" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -31,19 +31,19 @@ desc = "Currency Rates"
 
 # Base type : settings pair
 items = {
-	"alch": 0.2564102564102564,
-	"alt": 0.06081780538302277,
+	"alch": 0.25478740668614086,
+	"alt": 0.0625,
 	"apprenticecartosextant": 1.0,
 	"aug": 0.013333333333333334,
 	"bauble": 0.2,
-	"blessed": 0.4772727272727273,
-	"chance": 0.14285714285714285,
+	"blessed": 0.45454545454545453,
+	"chance": 0.15384615384615385,
 	"chaos": 1.0,
 	"chisel": 0.2631578947368421,
 	"chrom": 0.09090909090909091,
 	"divine": 10.0,
 	"exa": 70.0,
-	"fuse": 0.4494949494949495,
+	"fuse": 0.43933823529411764,
 	"gcp": 1.25,
 	"jew": 0.1,
 	"journeycartosextant": 2.0,
