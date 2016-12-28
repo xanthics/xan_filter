@@ -117,7 +117,7 @@ def adddata(nextchange, remove, add, ldb):
 
 
 #  Retrieve Stash Tab API data from GGG
-def get_stashes(ldb, start=None):
+def get_stashes(ldb, requester,start=None):
 	if not start:
 		if 'key' in ldb.collection_names():
 			start = ldb.key.find_one()['next']
@@ -128,7 +128,7 @@ def get_stashes(ldb, start=None):
 		url = 'https://www.pathofexile.com/api/public-stash-tabs'
 
 	print("Starting {}".format(url))
-	req = requests.get(url)
+	req = requester.get(url)
 	mybytes = len(req.content)/1000000  # Assume digital storage 1mB=1000kB=1000000B
 	print("{:.2f} MegaBytes received".format(mybytes))
 
@@ -319,6 +319,7 @@ def divuniqueupdate():
 
 	with MongoClient() as client:
 		ldb = client.stashdata
+		requester = requests.session()
 
 		nc = None
 		oldnc = nc
@@ -326,7 +327,7 @@ def divuniqueupdate():
 
 		while True:
 			try:
-				nc, nmybytes = get_stashes(ldb, nc)
+				nc, nmybytes = get_stashes(ldb, requester, nc)
 				mybytes += nmybytes
 				print("{:.2f} Megabytes recieved so far(total)".format(mybytes))
 				if oldnc == nc:
@@ -380,16 +381,16 @@ def convertshorttolongstr(cur, val, l, exa):
 	else:
 		tier = 'currency low'
 	
-	currency = {'divine': 'Divine Orb', 'regret': 'Orb of Regret', 'gcp': 'Gemcutter\'s Prism', 'chaos': '0 Chaos Orb', 'regal': 'Regal Orb',
+	currency = {'divine': 'Divine Orb', 'regret': 'Orb of Regret', 'gcp': 'Gemcutter\'s Prism', 'chaos': 'Chaos Orb', 'regal': 'Regal Orb',
 			   'fuse': 'Orb of Fusing', 'blessed': 'Blessed Orb', 'scour': 'Orb of Scouring', 'alch': 'Orb of Alchemy', 'vaal': 'Vaal Orb',
-			   'chisel': 'Cartographer\'s Chisel', 'bauble': 'Glassblower\'s Bauble', 'chance': 'Orb of Chanc', 'jew': 'Jeweller\'s Orb',
+			   'chisel': 'Cartographer\'s Chisel', 'bauble': 'Glassblower\'s Bauble', 'chance': 'Orb of Chance', 'jew': 'Jeweller\'s Orb',
 			   'chrom': 'Chromatic Orb', 'alt': 'Orb of Alteration', 'aug': 'Orb of Augmentation', 'transmute': 'Orb of Transmutation',
 			   'perandus': 'Perandus Coin', 'silver': 'Silver Coin', 'apprenticecartosextant': 'Apprentice Cartographer\'s Sextant',
 			   'journeycartosextant': 'Journeyman Cartographer\'s Sextant', 'mastercartosextant': 'Master Cartographer\'s Sextant'}
 
 
 	if cur in currency:
-		return "0 {0}\": {{\"base\": \"{0}\", \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier)
+		return "0 {0}\": {{\"base\": \"{0}\", \"class\": \"Currency\", \"type\": \"{1}\"}}".format(currency[cur], tier)
 	else:
 		print("invalid input: {}, {}".format(cur, l))
 		return None
@@ -464,7 +465,6 @@ def poetrade_getcurrencyrates():
 				if len(sellratios[currencies[currency]]) + len(buyratios[currencies[currency]]) > 8:
 					vals = sellratios[currencies[currency]] + buyratios[currencies[currency]]
 					ratios[currencies[currency]] = median([i for i in vals if stddevcheck(i, median(vals), stdev(vals))])
-					# ratios[currencies[currency]] = mean([i for i in vals if stddevcheck(i, mean(vals), stdev(vals))])
 
 			# slice the highest someone will buy an orb from you and the lowest you would have to pay for an orb
 					# ratios[currencies[currency]] = mean(sorted(sellratios[currencies[currency]], reverse=True)[:5] + sorted(buyratios[currencies[currency]])[:5])

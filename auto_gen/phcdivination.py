@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/28/2016(m/d/y) 01:25:17 UTC from "Hardcore Breach" data
+# Created: 12/28/2016(m/d/y) 06:21:49 UTC from "Hardcore Breach" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -63,6 +63,7 @@ items = {
 	"1 The Harvester": {"base": "The Harvester", "class": "Divination Card", "type": "divination very high"},
 	"1 The Hunger": {"base": "The Hunger", "class": "Divination Card", "type": "divination very high"},
 	"1 The Immortal": {"base": "The Immortal", "class": "Divination Card", "type": "divination very high"},
+	"1 The Jester": {"base": "The Jester", "class": "Divination Card", "type": "divination very high"},
 	"1 The King's Heart": {"base": "The King's Heart", "class": "Divination Card", "type": "divination very high"},
 	"1 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination very high"},
 	"1 The Offering": {"base": "The Offering", "class": "Divination Card", "type": "divination very high"},
@@ -71,7 +72,6 @@ items = {
 	"1 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
 	"1 The Saint's Treasure": {"base": "The Saint's Treasure", "class": "Divination Card", "type": "divination very high"},
 	"1 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination very high"},
-	"1 The Soul": {"base": "The Soul", "class": "Divination Card", "type": "divination very high"},
 	"1 The Spark and the Flame": {"base": "The Spark and the Flame", "class": "Divination Card", "type": "divination very high"},
 	"1 The Standoff": {"base": "The Standoff", "class": "Divination Card", "type": "divination very high"},
 	"1 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination very high"},
@@ -137,13 +137,11 @@ items = {
 	"2 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination high"},
 	"2 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination high"},
 	"2 The Inventor": {"base": "The Inventor", "class": "Divination Card", "type": "divination high"},
-	"2 The Jester": {"base": "The Jester", "class": "Divination Card", "type": "divination high"},
 	"2 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination high"},
 	"2 The Lion": {"base": "The Lion", "class": "Divination Card", "type": "divination high"},
 	"2 The Lord in Black": {"base": "The Lord in Black", "class": "Divination Card", "type": "divination high"},
 	"2 The Lover": {"base": "The Lover", "class": "Divination Card", "type": "divination high"},
 	"2 The Mercenary": {"base": "The Mercenary", "class": "Divination Card", "type": "divination high"},
-	"2 The Metalsmith's Gift": {"base": "The Metalsmith's Gift", "class": "Divination Card", "type": "divination high"},
 	"2 The Oath": {"base": "The Oath", "class": "Divination Card", "type": "divination high"},
 	"2 The One With All": {"base": "The One With All", "class": "Divination Card", "type": "divination high"},
 	"2 The Pack Leader": {"base": "The Pack Leader", "class": "Divination Card", "type": "divination high"},
@@ -156,6 +154,7 @@ items = {
 	"2 The Scavenger": {"base": "The Scavenger", "class": "Divination Card", "type": "divination high"},
 	"2 The Sigil": {"base": "The Sigil", "class": "Divination Card", "type": "divination high"},
 	"2 The Siren": {"base": "The Siren", "class": "Divination Card", "type": "divination high"},
+	"2 The Soul": {"base": "The Soul", "class": "Divination Card", "type": "divination high"},
 	"2 The Spoiled Prince": {"base": "The Spoiled Prince", "class": "Divination Card", "type": "divination high"},
 	"2 The Stormcaller": {"base": "The Stormcaller", "class": "Divination Card", "type": "divination high"},
 	"2 The Summoner": {"base": "The Summoner", "class": "Divination Card", "type": "divination high"},
@@ -189,6 +188,7 @@ items = {
 	"3 Lantador's Lost Love": {"base": "Lantador's Lost Love", "class": "Divination Card", "type": "divination low"},
 	"3 Loyalty": {"base": "Loyalty", "class": "Divination Card", "type": "divination low"},
 	"3 Rain of Chaos": {"base": "Rain of Chaos", "class": "Divination Card", "type": "divination low"},
+	"3 Rats": {"base": "Rats", "class": "Divination Card", "type": "divination low"},
 	"3 The Catalyst": {"base": "The Catalyst", "class": "Divination Card", "type": "divination low"},
 	"3 The Dragon": {"base": "The Dragon", "class": "Divination Card", "type": "divination low"},
 	"3 The Drunken Aristocrat": {"base": "The Drunken Aristocrat", "class": "Divination Card", "type": "divination low"},

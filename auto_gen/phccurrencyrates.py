@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/28/2016(m/d/y) 05:37:50 UTC from "Hardcore Breach" data
+# Created: 12/28/2016(m/d/y) 06:30:42 UTC from "Hardcore Breach" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -33,27 +33,27 @@ desc = "Currency Rates"
 items = {
 	"alch": 0.2,
 	"alt": 0.0625,
-	"apprenticecartosextant": 1.0,
-	"aug": 0.01380952380952381,
+	"apprenticecartosextant": 0.8888888888888888,
+	"aug": 0.012658227848101266,
 	"bauble": 0.25,
-	"blessed": 0.6666666666666666,
+	"blessed": 0.5,
 	"chance": 0.11764705882352941,
 	"chaos": 1.0,
-	"chisel": 0.2,
-	"chrom": 0.08196721311475409,
+	"chisel": 0.19230769230769232,
+	"chrom": 0.072992700729927,
 	"divine": 6.5,
-	"exa": 19.333333333333336,
-	"fuse": 0.35714285714285715,
+	"exa": 19.0,
+	"fuse": 0.3448275862068966,
 	"gcp": 1.0,
-	"jew": 0.09090909090909091,
+	"jew": 0.08695652173913043,
 	"journeycartosextant": 2.0,
 	"mastercartosextant": 5.0,
 	"mirror": 20000.0,
 	"perandus": 0.025,
-	"regal": 1.325,
+	"regal": 1.25,
 	"regret": 1.0,
 	"scour": 0.5,
 	"silver": 0.16666666666666666,
-	"transmute": 0.025,
+	"transmute": 0.01380952380952381,
 	"vaal": 0.6666666666666666,
 }
