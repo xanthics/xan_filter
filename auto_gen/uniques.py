@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/28/2016(m/d/y) 06:21:49 UTC from "Standard" data
+# Created: 01/02/2017(m/d/y) 07:29:50 UTC from "Standard" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -33,6 +33,7 @@ desc = "Unique"
 items = {
 	"0 Abyssal Axe": {"base": "Abyssal Axe", "type": "unique very high"},
 	"0 Assassin's Garb": {"base": "Assassin's Garb", "type": "unique very high"},
+	"0 Blinder": {"base": "Blinder", "type": "unique very high"},
 	"0 Chateau Map": {"base": "Chateau Map", "type": "unique very high"},
 	"0 Citadel Bow": {"base": "Citadel Bow", "type": "unique very high"},
 	"0 Citrine Amulet": {"base": "Citrine Amulet", "type": "unique very high"},
@@ -72,12 +73,12 @@ items = {
 	"0 Void Axe": {"base": "Void Axe", "type": "unique very high"},
 	"0 Wereclaw Talisman": {"base": "Wereclaw Talisman", "type": "unique very high"},
 	"1 Ancient Gauntlets": {"base": "Ancient Gauntlets", "type": "unique high"},
-	"1 Blinder": {"base": "Blinder", "type": "unique high"},
 	"1 Bone Bow": {"base": "Bone Bow", "type": "unique high"},
 	"1 Carnal Sceptre": {"base": "Carnal Sceptre", "type": "unique high"},
 	"1 Cedar Tower Shield": {"base": "Cedar Tower Shield", "type": "unique high"},
 	"1 Champion Kite Shield": {"base": "Champion Kite Shield", "type": "unique high"},
 	"1 Courtyard Map": {"base": "Courtyard Map", "type": "unique high"},
+	"1 Deerskin Gloves": {"base": "Deerskin Gloves", "type": "unique high"},
 	"1 Despot Axe": {"base": "Despot Axe", "type": "unique high"},
 	"1 Exquisite Leather": {"base": "Exquisite Leather", "type": "unique high"},
 	"1 Ezomyte Burgonet": {"base": "Ezomyte Burgonet", "type": "unique high"},
@@ -106,7 +107,6 @@ items = {
 	"1 Steelhead": {"base": "Steelhead", "type": "unique high"},
 	"1 Stibnite Flask": {"base": "Stibnite Flask", "type": "unique high"},
 	"1 Strapped Mitts": {"base": "Strapped Mitts", "type": "unique high"},
-	"1 Terror Claw": {"base": "Terror Claw", "type": "unique high"},
 	"1 Two-Stone Ring": {"base": "Two-Stone Ring", "type": "unique high"},
 	"1 Ursine Pelt": {"base": "Ursine Pelt", "type": "unique high"},
 	"1 Vaal Mask": {"base": "Vaal Mask", "type": "unique high"},
@@ -128,7 +128,6 @@ items = {
 	"7 Coral Ring": {"base": "Coral Ring", "type": "unique low"},
 	"7 Crusader Chainmail": {"base": "Crusader Chainmail", "type": "unique low"},
 	"7 Crystal Sceptre": {"base": "Crystal Sceptre", "type": "unique low"},
-	"7 Cured Quiver": {"base": "Cured Quiver", "type": "unique low"},
 	"7 Decorative Axe": {"base": "Decorative Axe", "type": "unique low"},
 	"7 Deerskin Boots": {"base": "Deerskin Boots", "type": "unique low"},
 	"7 Dread Maul": {"base": "Dread Maul", "type": "unique low"},
@@ -162,7 +161,6 @@ items = {
 	"7 Quartz Wand": {"base": "Quartz Wand", "type": "unique low"},
 	"7 Recurve Bow": {"base": "Recurve Bow", "type": "unique low"},
 	"7 Reinforced Tower Shield": {"base": "Reinforced Tower Shield", "type": "unique low"},
-	"7 Rotted Round Shield": {"base": "Rotted Round Shield", "type": "unique low"},
 	"7 Royal Staff": {"base": "Royal Staff", "type": "unique low"},
 	"7 Rusted Sword": {"base": "Rusted Sword", "type": "unique low"},
 	"7 Sabre": {"base": "Sabre", "type": "unique low"},
@@ -171,7 +169,6 @@ items = {
 	"7 Secutor Helm": {"base": "Secutor Helm", "type": "unique low"},
 	"7 Serrated Arrow Quiver": {"base": "Serrated Arrow Quiver", "type": "unique low"},
 	"7 Shagreen Boots": {"base": "Shagreen Boots", "type": "unique low"},
-	"7 Sharktooth Arrow Quiver": {"base": "Sharktooth Arrow Quiver", "type": "unique low"},
 	"7 Sledgehammer": {"base": "Sledgehammer", "type": "unique low"},
 	"7 Soldier Helmet": {"base": "Soldier Helmet", "type": "unique low"},
 	"7 Spidersilk Robe": {"base": "Spidersilk Robe", "type": "unique low"},

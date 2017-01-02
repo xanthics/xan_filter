@@ -210,7 +210,7 @@ settings = {
 					 "SetBorderColor {}".format(color['normal'])],
 
 	"map red": ["SetBorderColor {} 150".format(color['fire']),
-				"SetFontSize {}".format(size['large']),
+				"SetFontSize {}".format(size['vlarge']),
 				"PlayAlertSound 8 50",
 				"SetBackgroundColor {} 220".format(color['black'])],
 	"map yellow": ["SetBorderColor {} 150".format(color['lightning']),
