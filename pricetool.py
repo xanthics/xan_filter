@@ -463,8 +463,9 @@ def poetrade_getcurrencyrates():
 			for currency in currencies:
 				# ensure there is enough price data to generate a meaningful average
 				if len(sellratios[currencies[currency]]) + len(buyratios[currencies[currency]]) > 8:
-					vals = sellratios[currencies[currency]] + buyratios[currencies[currency]]
-					ratios[currencies[currency]] = median([i for i in vals if stddevcheck(i, median(vals), stdev(vals))])
+					vals = sorted(sellratios[currencies[currency]], reverse=True)[:5] + sorted(buyratios[currencies[currency]])[:5]
+					valstdev = stdev(vals)
+					ratios[currencies[currency]] = mean([i for i in vals if stddevcheck(i, mean(vals), valstdev)])
 
 			# slice the highest someone will buy an orb from you and the lowest you would have to pay for an orb
 					# ratios[currencies[currency]] = mean(sorted(sellratios[currencies[currency]], reverse=True)[:5] + sorted(buyratios[currencies[currency]])[:5])
@@ -501,7 +502,7 @@ def poetrade_getcurrencyrates():
 
 
 if __name__ == '__main__':
-	poetrade_getcurrencyrates()
+	#poetrade_getcurrencyrates()
 	divuniqueupdate()
 
 
