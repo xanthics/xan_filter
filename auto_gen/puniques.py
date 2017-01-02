@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/28/2016(m/d/y) 06:21:49 UTC from "Breach" data
+# Created: 01/02/2017(m/d/y) 07:29:50 UTC from "Breach" data
 """
 * Copyright (c) 2016 Jeremy Parks. All rights reserved.
 *
@@ -32,12 +32,13 @@ desc = "Unique"
 # Base type : settings pair
 items = {
 	"0 Assassin's Garb": {"base": "Assassin's Garb", "type": "unique very high"},
+	"0 Black Maw Talisman": {"base": "Black Maw Talisman", "type": "unique very high"},
 	"0 Chateau Map": {"base": "Chateau Map", "type": "unique very high"},
 	"0 Clasped Mitts": {"base": "Clasped Mitts", "type": "unique very high"},
 	"0 Clutching Talisman": {"base": "Clutching Talisman", "type": "unique very high"},
+	"0 Courtyard Map": {"base": "Courtyard Map", "type": "unique very high"},
 	"0 Crusader Boots": {"base": "Crusader Boots", "type": "unique very high"},
 	"0 Deicide Mask": {"base": "Deicide Mask", "type": "unique very high"},
-	"0 Ezomyte Tower Shield": {"base": "Ezomyte Tower Shield", "type": "unique very high"},
 	"0 Glorious Plate": {"base": "Glorious Plate", "type": "unique very high"},
 	"0 Golden Bracers": {"base": "Golden Bracers", "type": "unique very high"},
 	"0 Golden Caligae": {"base": "Golden Caligae", "type": "unique very high"},
@@ -61,10 +62,10 @@ items = {
 	"0 Topaz Flask": {"base": "Topaz Flask", "type": "unique very high"},
 	"1 Abyssal Axe": {"base": "Abyssal Axe", "type": "unique high"},
 	"1 Citrine Amulet": {"base": "Citrine Amulet", "type": "unique high"},
-	"1 Courtyard Map": {"base": "Courtyard Map", "type": "unique high"},
 	"1 Cutlass": {"base": "Cutlass", "type": "unique high"},
 	"1 Despot Axe": {"base": "Despot Axe", "type": "unique high"},
 	"1 Ezomyte Burgonet": {"base": "Ezomyte Burgonet", "type": "unique high"},
+	"1 Ezomyte Tower Shield": {"base": "Ezomyte Tower Shield", "type": "unique high"},
 	"1 Fishing Rod": {"base": "Fishing Rod", "type": "unique high"},
 	"1 Full Wyrmscale": {"base": "Full Wyrmscale", "type": "unique high"},
 	"1 Gladiator Plate": {"base": "Gladiator Plate", "type": "unique high"},
@@ -77,7 +78,6 @@ items = {
 	"1 Sanctified Mana Flask": {"base": "Sanctified Mana Flask", "type": "unique high"},
 	"1 Savant's Robe": {"base": "Savant's Robe", "type": "unique high"},
 	"1 Siege Axe": {"base": "Siege Axe", "type": "unique high"},
-	"1 Slaughter Knife": {"base": "Slaughter Knife", "type": "unique high"},
 	"1 Sorcerer Boots": {"base": "Sorcerer Boots", "type": "unique high"},
 	"1 Steelhead": {"base": "Steelhead", "type": "unique high"},
 	"1 Stibnite Flask": {"base": "Stibnite Flask", "type": "unique high"},
@@ -123,7 +123,6 @@ items = {
 	"7 Crusader Chainmail": {"base": "Crusader Chainmail", "type": "unique low"},
 	"7 Crystal Sceptre": {"base": "Crystal Sceptre", "type": "unique low"},
 	"7 Crystal Wand": {"base": "Crystal Wand", "type": "unique low"},
-	"7 Cured Quiver": {"base": "Cured Quiver", "type": "unique low"},
 	"7 Decimation Bow": {"base": "Decimation Bow", "type": "unique low"},
 	"7 Decorative Axe": {"base": "Decorative Axe", "type": "unique low"},
 	"7 Deerskin Boots": {"base": "Deerskin Boots", "type": "unique low"},
@@ -133,8 +132,10 @@ items = {
 	"7 Dream Mace": {"base": "Dream Mace", "type": "unique low"},
 	"7 Dusk Blade": {"base": "Dusk Blade", "type": "unique low"},
 	"7 Ebony Tower Shield": {"base": "Ebony Tower Shield", "type": "unique low"},
+	"7 Elder Sword": {"base": "Elder Sword", "type": "unique low"},
 	"7 Elegant Ringmail": {"base": "Elegant Ringmail", "type": "unique low"},
 	"7 Elegant Sword": {"base": "Elegant Sword", "type": "unique low"},
+	"7 Enameled Buckler": {"base": "Enameled Buckler", "type": "unique low"},
 	"7 Estoc": {"base": "Estoc", "type": "unique low"},
 	"7 Ezomyte Blade": {"base": "Ezomyte Blade", "type": "unique low"},
 	"7 Fire Arrow Quiver": {"base": "Fire Arrow Quiver", "type": "unique low"},
@@ -159,7 +160,6 @@ items = {
 	"7 Holy Chainmail": {"base": "Holy Chainmail", "type": "unique low"},
 	"7 Imbued Wand": {"base": "Imbued Wand", "type": "unique low"},
 	"7 Infernal Axe": {"base": "Infernal Axe", "type": "unique low"},
-	"7 Iron Gauntlets": {"base": "Iron Gauntlets", "type": "unique low"},
 	"7 Iron Hat": {"base": "Iron Hat", "type": "unique low"},
 	"7 Iron Mask": {"base": "Iron Mask", "type": "unique low"},
 	"7 Iron Sceptre": {"base": "Iron Sceptre", "type": "unique low"},
@@ -168,6 +168,7 @@ items = {
 	"7 Ivory Spirit Shield": {"base": "Ivory Spirit Shield", "type": "unique low"},
 	"7 Jagged Maul": {"base": "Jagged Maul", "type": "unique low"},
 	"7 Lacquered Garb": {"base": "Lacquered Garb", "type": "unique low"},
+	"7 Lapis Amulet": {"base": "Lapis Amulet", "type": "unique low"},
 	"7 Latticed Ringmail": {"base": "Latticed Ringmail", "type": "unique low"},
 	"7 Leather Belt": {"base": "Leather Belt", "type": "unique low"},
 	"7 Leather Hood": {"base": "Leather Hood", "type": "unique low"},
