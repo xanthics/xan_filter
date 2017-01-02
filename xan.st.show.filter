@@ -1,6 +1,6 @@
 #**************************************************************
 # Welcome to xan.filter, a Python generated loot filter for PoE
-# This filter was generated for Standard on 12/28/2016(m/d/y) 06:28:49 UTC
+# This filter was generated for Standard on 01/02/2017(m/d/y) 07:31:53 UTC
 # The most current version of code can always be found at https://github.com/xanthics/poe_filter
 #**************************************************************
 
@@ -282,18 +282,14 @@ Show
 Show
 	BaseType "Glassblower's Bauble"
 	Class "Currency"
-	SetBorderColor 170 158 130
-	SetFontSize 35
-	PlayAlertSound 5 25
+	SetFontSize 30
 	SetBackgroundColor 0 0 0 220
 
 #0 Jeweller's Orb - Currency Autogen
 Show
 	BaseType "Jeweller's Orb"
 	Class "Currency"
-	SetBorderColor 170 158 130
-	SetFontSize 35
-	PlayAlertSound 5 25
+	SetFontSize 30
 	SetBackgroundColor 0 0 0 220
 
 #0 Journeyman Cartographer's Sextant - Currency Autogen
@@ -334,7 +330,9 @@ Show
 Show
 	BaseType "Orb of Augmentation"
 	Class "Currency"
-	SetFontSize 30
+	SetBorderColor 170 158 130
+	SetFontSize 35
+	PlayAlertSound 5 25
 	SetBackgroundColor 0 0 0 220
 
 #0 Orb of Chance - Currency Autogen
@@ -384,9 +382,7 @@ Show
 Show
 	BaseType "Perandus Coin"
 	Class "Currency"
-	SetBorderColor 170 158 130
-	SetFontSize 35
-	PlayAlertSound 5 25
+	SetFontSize 30
 	SetBackgroundColor 0 0 0 220
 
 #0 Regal Orb - Currency Autogen
@@ -402,9 +398,7 @@ Show
 Show
 	BaseType "Silver Coin"
 	Class "Currency"
-	SetBorderColor 170 158 130
-	SetFontSize 35
-	PlayAlertSound 5 25
+	SetFontSize 30
 	SetBackgroundColor 0 0 0 220
 
 #0 Vaal Orb - Currency Autogen
@@ -740,6 +734,15 @@ Show
 #0 Assassin's Garb - Unique
 Show
 	BaseType "Assassin's Garb"
+	Rarity Unique
+	SetBorderColor 175 96 37
+	SetFontSize 45
+	PlayAlertSound 3 300
+	SetBackgroundColor 0 0 0 220
+
+#0 Blinder - Unique
+Show
+	BaseType "Blinder"
 	Rarity Unique
 	SetBorderColor 175 96 37
 	SetFontSize 45
@@ -1097,15 +1100,6 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
-#1 Blinder - Unique
-Show
-	BaseType "Blinder"
-	Rarity Unique
-	SetFontSize 40
-	SetBorderColor 175 96 37
-	PlayAlertSound 3 75
-	SetBackgroundColor 0 0 0 220
-
 #1 Bone Bow - Unique
 Show
 	BaseType "Bone Bow"
@@ -1145,6 +1139,15 @@ Show
 #1 Courtyard Map - Unique
 Show
 	BaseType "Courtyard Map"
+	Rarity Unique
+	SetFontSize 40
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
+	SetBackgroundColor 0 0 0 220
+
+#1 Deerskin Gloves - Unique
+Show
+	BaseType "Deerskin Gloves"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
@@ -1403,15 +1406,6 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
-#1 Terror Claw - Unique
-Show
-	BaseType "Terror Claw"
-	Rarity Unique
-	SetFontSize 40
-	SetBorderColor 175 96 37
-	PlayAlertSound 3 75
-	SetBackgroundColor 0 0 0 220
-
 #1 Two-Stone Ring - Unique
 Show
 	BaseType "Two-Stone Ring"
@@ -1582,14 +1576,6 @@ Show
 #7 Crystal Sceptre - Unique
 Show
 	BaseType "Crystal Sceptre"
-	Rarity Unique
-	PlayAlertSound 3 25
-	SetFontSize 25
-	SetBackgroundColor 0 0 0 220
-
-#7 Cured Quiver - Unique
-Show
-	BaseType "Cured Quiver"
 	Rarity Unique
 	PlayAlertSound 3 25
 	SetFontSize 25
@@ -1859,14 +1845,6 @@ Show
 	SetFontSize 25
 	SetBackgroundColor 0 0 0 220
 
-#7 Rotted Round Shield - Unique
-Show
-	BaseType "Rotted Round Shield"
-	Rarity Unique
-	PlayAlertSound 3 25
-	SetFontSize 25
-	SetBackgroundColor 0 0 0 220
-
 #7 Royal Staff - Unique
 Show
 	BaseType "Royal Staff"
@@ -1926,14 +1904,6 @@ Show
 #7 Shagreen Boots - Unique
 Show
 	BaseType "Shagreen Boots"
-	Rarity Unique
-	PlayAlertSound 3 25
-	SetFontSize 25
-	SetBackgroundColor 0 0 0 220
-
-#7 Sharktooth Arrow Quiver - Unique
-Show
-	BaseType "Sharktooth Arrow Quiver"
 	Rarity Unique
 	PlayAlertSound 3 25
 	SetFontSize 25
@@ -2137,7 +2107,7 @@ Show
 	BaseType "Fragment of the Chimera"
 	Class "Map Fragments"
 	SetBorderColor 150 0 0 150
-	SetFontSize 35
+	SetFontSize 40
 	PlayAlertSound 8 50
 	SetBackgroundColor 0 0 0 220
 
@@ -2146,7 +2116,7 @@ Show
 	BaseType "Fragment of the Hydra"
 	Class "Map Fragments"
 	SetBorderColor 150 0 0 150
-	SetFontSize 35
+	SetFontSize 40
 	PlayAlertSound 8 50
 	SetBackgroundColor 0 0 0 220
 
@@ -2155,7 +2125,7 @@ Show
 	BaseType "Fragment of the Minotaur"
 	Class "Map Fragments"
 	SetBorderColor 150 0 0 150
-	SetFontSize 35
+	SetFontSize 40
 	PlayAlertSound 8 50
 	SetBackgroundColor 0 0 0 220
 
@@ -2164,7 +2134,7 @@ Show
 	BaseType "Fragment of the Phoenix"
 	Class "Map Fragments"
 	SetBorderColor 150 0 0 150
-	SetFontSize 35
+	SetFontSize 40
 	PlayAlertSound 8 50
 	SetBackgroundColor 0 0 0 220
 
@@ -4168,7 +4138,7 @@ Show
 	Class "Maps"
 	DropLevel >= 78
 	SetBorderColor 150 0 0 150
-	SetFontSize 35
+	SetFontSize 40
 	PlayAlertSound 8 50
 	SetBackgroundColor 0 0 0 220
 
@@ -4308,15 +4278,6 @@ Show
 	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
-#1 The Coming Storm - Divination Card
-Show
-	BaseType "The Coming Storm"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	SetFontSize 40
-	PlayAlertSound 6 175
-	SetBackgroundColor 0 0 0 220
-
 #1 The Doctor - Divination Card
 Show
 	BaseType "The Doctor"
@@ -4353,15 +4314,6 @@ Show
 	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
-#1 The Hunger - Divination Card
-Show
-	BaseType "The Hunger"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	SetFontSize 40
-	PlayAlertSound 6 175
-	SetBackgroundColor 0 0 0 220
-
 #1 The Immortal - Divination Card
 Show
 	BaseType "The Immortal"
@@ -4383,15 +4335,6 @@ Show
 #1 The Offering - Divination Card
 Show
 	BaseType "The Offering"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	SetFontSize 40
-	PlayAlertSound 6 175
-	SetBackgroundColor 0 0 0 220
-
-#1 The Polymath - Divination Card
-Show
-	BaseType "The Polymath"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
 	SetFontSize 40
@@ -4452,15 +4395,6 @@ Show
 	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
-#1 The Wolven King's Bite - Divination Card
-Show
-	BaseType "The Wolven King's Bite"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	SetFontSize 40
-	PlayAlertSound 6 175
-	SetBackgroundColor 0 0 0 220
-
 #1 Wealth and Power - Divination Card
 Show
 	BaseType "Wealth and Power"
@@ -4473,14 +4407,6 @@ Show
 #2 Chaotic Disposition - Divination Card
 Show
 	BaseType "Chaotic Disposition"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
-	SetBackgroundColor 0 0 0 220
-
-#2 Earth Drinker - Divination Card
-Show
-	BaseType "Earth Drinker"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
 	PlayAlertSound 6 75
@@ -4566,6 +4492,14 @@ Show
 	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
+#2 The Coming Storm - Divination Card
+Show
+	BaseType "The Coming Storm"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	PlayAlertSound 6 75
+	SetBackgroundColor 0 0 0 220
+
 #2 The Cursed King - Divination Card
 Show
 	BaseType "The Cursed King"
@@ -4638,6 +4572,14 @@ Show
 	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
+#2 The Hunger - Divination Card
+Show
+	BaseType "The Hunger"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	PlayAlertSound 6 75
+	SetBackgroundColor 0 0 0 220
+
 #2 The King's Heart - Divination Card
 Show
 	BaseType "The King's Heart"
@@ -4649,6 +4591,14 @@ Show
 #2 The Penitent - Divination Card
 Show
 	BaseType "The Penitent"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	PlayAlertSound 6 75
+	SetBackgroundColor 0 0 0 220
+
+#2 The Polymath - Divination Card
+Show
+	BaseType "The Polymath"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
 	PlayAlertSound 6 75
@@ -4742,6 +4692,14 @@ Show
 	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
+#2 The Wolven King's Bite - Divination Card
+Show
+	BaseType "The Wolven King's Bite"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	PlayAlertSound 6 75
+	SetBackgroundColor 0 0 0 220
+
 #2 The Wolverine - Divination Card
 Show
 	BaseType "The Wolverine"
@@ -4802,21 +4760,9 @@ Show
 	Class "Divination Card"
 	SetBackgroundColor 0 0 0 220
 
-#3 Rain Tempter - Divination Card
-Show
-	BaseType "Rain Tempter"
-	Class "Divination Card"
-	SetBackgroundColor 0 0 0 220
-
 #3 Rain of Chaos - Divination Card
 Show
 	BaseType "Rain of Chaos"
-	Class "Divination Card"
-	SetBackgroundColor 0 0 0 220
-
-#3 Shard of Fate - Divination Card
-Show
-	BaseType "Shard of Fate"
 	Class "Divination Card"
 	SetBackgroundColor 0 0 0 220
 
@@ -4829,12 +4775,6 @@ Show
 #3 The Flora's Gift - Divination Card
 Show
 	BaseType "The Flora's Gift"
-	Class "Divination Card"
-	SetBackgroundColor 0 0 0 220
-
-#3 The Gemcutter - Divination Card
-Show
-	BaseType "The Gemcutter"
 	Class "Divination Card"
 	SetBackgroundColor 0 0 0 220
 
@@ -4853,12 +4793,6 @@ Show
 #3 The Metalsmith's Gift - Divination Card
 Show
 	BaseType "The Metalsmith's Gift"
-	Class "Divination Card"
-	SetBackgroundColor 0 0 0 220
-
-#3 The Oath - Divination Card
-Show
-	BaseType "The Oath"
 	Class "Divination Card"
 	SetBackgroundColor 0 0 0 220
 
