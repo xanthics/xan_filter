@@ -502,7 +502,7 @@ def poetrade_getcurrencyrates():
 
 
 if __name__ == '__main__':
-	#poetrade_getcurrencyrates()
+	poetrade_getcurrencyrates()
 	divuniqueupdate()
 
 

@@ -1,6 +1,6 @@
 #**************************************************************
 # Welcome to xan.filter, a Python generated loot filter for PoE
-# This filter was generated for Standard on 01/02/2017(m/d/y) 07:31:53 UTC
+# This filter was generated for Standard on 01/14/2017(m/d/y) 05:24:58 UTC
 # The most current version of code can always be found at https://github.com/xanthics/poe_filter
 #**************************************************************
 
@@ -44,6 +44,26 @@ Show
 	BaseType "Sacrificial Garb"
 	SetBorderColor 192 128 254
 	SetFontSize 35
+	SetBackgroundColor 0 0 0 220
+
+#0 corrupted amulet - Always show
+Show
+	Class "Amulets"
+	Corrupted True
+	Rarity Normal
+	ItemLevel >= 60
+	SetBorderColor 192 128 254
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#0 corrupted belt - Always show
+Show
+	Class "Belts"
+	Corrupted True
+	Rarity Normal
+	ItemLevel >= 60
+	SetBorderColor 192 128 254
+	SetFontSize 30
 	SetBackgroundColor 0 0 0 220
 
 #01 Tabula Exception - Always show
@@ -330,9 +350,7 @@ Show
 Show
 	BaseType "Orb of Augmentation"
 	Class "Currency"
-	SetBorderColor 170 158 130
-	SetFontSize 35
-	PlayAlertSound 5 25
+	SetFontSize 30
 	SetBackgroundColor 0 0 0 220
 
 #0 Orb of Chance - Currency Autogen
@@ -722,15 +740,6 @@ Show
 	SetFontSize 25
 	SetBackgroundColor 0 0 0 220
 
-#0 Abyssal Axe - Unique
-Show
-	BaseType "Abyssal Axe"
-	Rarity Unique
-	SetBorderColor 175 96 37
-	SetFontSize 45
-	PlayAlertSound 3 300
-	SetBackgroundColor 0 0 0 220
-
 #0 Assassin's Garb - Unique
 Show
 	BaseType "Assassin's Garb"
@@ -749,18 +758,18 @@ Show
 	PlayAlertSound 3 300
 	SetBackgroundColor 0 0 0 220
 
-#0 Chateau Map - Unique
+#0 Champion Kite Shield - Unique
 Show
-	BaseType "Chateau Map"
+	BaseType "Champion Kite Shield"
 	Rarity Unique
 	SetBorderColor 175 96 37
 	SetFontSize 45
 	PlayAlertSound 3 300
 	SetBackgroundColor 0 0 0 220
 
-#0 Citadel Bow - Unique
+#0 Chateau Map - Unique
 Show
-	BaseType "Citadel Bow"
+	BaseType "Chateau Map"
 	Rarity Unique
 	SetBorderColor 175 96 37
 	SetFontSize 45
@@ -788,6 +797,15 @@ Show
 #0 Clutching Talisman - Unique
 Show
 	BaseType "Clutching Talisman"
+	Rarity Unique
+	SetBorderColor 175 96 37
+	SetFontSize 45
+	PlayAlertSound 3 300
+	SetBackgroundColor 0 0 0 220
+
+#0 Courtyard Map - Unique
+Show
+	BaseType "Courtyard Map"
 	Rarity Unique
 	SetBorderColor 175 96 37
 	SetFontSize 45
@@ -1019,9 +1037,9 @@ Show
 	PlayAlertSound 3 300
 	SetBackgroundColor 0 0 0 220
 
-#0 Royal Burgonet - Unique
+#0 Ruby Amulet - Unique
 Show
-	BaseType "Royal Burgonet"
+	BaseType "Ruby Amulet"
 	Rarity Unique
 	SetBorderColor 175 96 37
 	SetFontSize 45
@@ -1037,6 +1055,15 @@ Show
 	PlayAlertSound 3 300
 	SetBackgroundColor 0 0 0 220
 
+#0 Sharkskin Tunic - Unique
+Show
+	BaseType "Sharkskin Tunic"
+	Rarity Unique
+	SetBorderColor 175 96 37
+	SetFontSize 45
+	PlayAlertSound 3 300
+	SetBackgroundColor 0 0 0 220
+
 #0 Silver Flask - Unique
 Show
 	BaseType "Silver Flask"
@@ -1046,9 +1073,9 @@ Show
 	PlayAlertSound 3 300
 	SetBackgroundColor 0 0 0 220
 
-#0 Thorium Spirit Shield - Unique
+#0 Sorcerer Boots - Unique
 Show
-	BaseType "Thorium Spirit Shield"
+	BaseType "Sorcerer Boots"
 	Rarity Unique
 	SetBorderColor 175 96 37
 	SetFontSize 45
@@ -1058,15 +1085,6 @@ Show
 #0 Topaz Flask - Unique
 Show
 	BaseType "Topaz Flask"
-	Rarity Unique
-	SetBorderColor 175 96 37
-	SetFontSize 45
-	PlayAlertSound 3 300
-	SetBackgroundColor 0 0 0 220
-
-#0 Vaal Spirit Shield - Unique
-Show
-	BaseType "Vaal Spirit Shield"
 	Rarity Unique
 	SetBorderColor 175 96 37
 	SetFontSize 45
@@ -1089,6 +1107,15 @@ Show
 	SetBorderColor 175 96 37
 	SetFontSize 45
 	PlayAlertSound 3 300
+	SetBackgroundColor 0 0 0 220
+
+#1 Abyssal Axe - Unique
+Show
+	BaseType "Abyssal Axe"
+	Rarity Unique
+	SetFontSize 40
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
 #1 Ancient Gauntlets - Unique
@@ -1127,18 +1154,18 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
-#1 Champion Kite Shield - Unique
+#1 Citadel Bow - Unique
 Show
-	BaseType "Champion Kite Shield"
+	BaseType "Citadel Bow"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
-#1 Courtyard Map - Unique
+#1 Coronal Leather - Unique
 Show
-	BaseType "Courtyard Map"
+	BaseType "Coronal Leather"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
@@ -1202,6 +1229,15 @@ Show
 #1 Full Wyrmscale - Unique
 Show
 	BaseType "Full Wyrmscale"
+	Rarity Unique
+	SetFontSize 40
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
+	SetBackgroundColor 0 0 0 220
+
+#1 Goliath Greaves - Unique
+Show
+	BaseType "Goliath Greaves"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
@@ -1289,9 +1325,9 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
-#1 Ruby Amulet - Unique
+#1 Royal Burgonet - Unique
 Show
-	BaseType "Ruby Amulet"
+	BaseType "Royal Burgonet"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
@@ -1325,15 +1361,6 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
-#1 Sharkskin Tunic - Unique
-Show
-	BaseType "Sharkskin Tunic"
-	Rarity Unique
-	SetFontSize 40
-	SetBorderColor 175 96 37
-	PlayAlertSound 3 75
-	SetBackgroundColor 0 0 0 220
-
 #1 Siege Axe - Unique
 Show
 	BaseType "Siege Axe"
@@ -1355,15 +1382,6 @@ Show
 #1 Slaughter Knife - Unique
 Show
 	BaseType "Slaughter Knife"
-	Rarity Unique
-	SetFontSize 40
-	SetBorderColor 175 96 37
-	PlayAlertSound 3 75
-	SetBackgroundColor 0 0 0 220
-
-#1 Sorcerer Boots - Unique
-Show
-	BaseType "Sorcerer Boots"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
@@ -1400,6 +1418,15 @@ Show
 #1 Strapped Mitts - Unique
 Show
 	BaseType "Strapped Mitts"
+	Rarity Unique
+	SetFontSize 40
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
+	SetBackgroundColor 0 0 0 220
+
+#1 Thorium Spirit Shield - Unique
+Show
+	BaseType "Thorium Spirit Shield"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
@@ -1451,6 +1478,15 @@ Show
 	PlayAlertSound 3 75
 	SetBackgroundColor 0 0 0 220
 
+#1 Vaal Spirit Shield - Unique
+Show
+	BaseType "Vaal Spirit Shield"
+	Rarity Unique
+	SetFontSize 40
+	SetBorderColor 175 96 37
+	PlayAlertSound 3 75
+	SetBackgroundColor 0 0 0 220
+
 #1 Vanguard Belt - Unique
 Show
 	BaseType "Vanguard Belt"
@@ -1467,6 +1503,14 @@ Show
 	SetFontSize 40
 	SetBorderColor 175 96 37
 	PlayAlertSound 3 75
+	SetBackgroundColor 0 0 0 220
+
+#7 Antique Rapier - Unique
+Show
+	BaseType "Antique Rapier"
+	Rarity Unique
+	PlayAlertSound 3 25
+	SetFontSize 25
 	SetBackgroundColor 0 0 0 220
 
 #7 Aventail Helmet - Unique
@@ -1488,6 +1532,14 @@ Show
 #7 Baroque Round Shield - Unique
 Show
 	BaseType "Baroque Round Shield"
+	Rarity Unique
+	PlayAlertSound 3 25
+	SetFontSize 25
+	SetBackgroundColor 0 0 0 220
+
+#7 Basket Rapier - Unique
+Show
+	BaseType "Basket Rapier"
 	Rarity Unique
 	PlayAlertSound 3 25
 	SetFontSize 25
@@ -1576,6 +1628,14 @@ Show
 #7 Crystal Sceptre - Unique
 Show
 	BaseType "Crystal Sceptre"
+	Rarity Unique
+	PlayAlertSound 3 25
+	SetFontSize 25
+	SetBackgroundColor 0 0 0 220
+
+#7 Cured Quiver - Unique
+Show
+	BaseType "Cured Quiver"
 	Rarity Unique
 	PlayAlertSound 3 25
 	SetFontSize 25
@@ -1733,6 +1793,14 @@ Show
 	SetFontSize 25
 	SetBackgroundColor 0 0 0 220
 
+#7 Leatherscale Boots - Unique
+Show
+	BaseType "Leatherscale Boots"
+	Rarity Unique
+	PlayAlertSound 3 25
+	SetFontSize 25
+	SetBackgroundColor 0 0 0 220
+
 #7 Military Staff - Unique
 Show
 	BaseType "Military Staff"
@@ -1768,6 +1836,14 @@ Show
 #7 Ornate Ringmail - Unique
 Show
 	BaseType "Ornate Ringmail"
+	Rarity Unique
+	PlayAlertSound 3 25
+	SetFontSize 25
+	SetBackgroundColor 0 0 0 220
+
+#7 Ornate Sword - Unique
+Show
+	BaseType "Ornate Sword"
 	Rarity Unique
 	PlayAlertSound 3 25
 	SetFontSize 25
@@ -1845,6 +1921,14 @@ Show
 	SetFontSize 25
 	SetBackgroundColor 0 0 0 220
 
+#7 Rotted Round Shield - Unique
+Show
+	BaseType "Rotted Round Shield"
+	Rarity Unique
+	PlayAlertSound 3 25
+	SetFontSize 25
+	SetBackgroundColor 0 0 0 220
+
 #7 Royal Staff - Unique
 Show
 	BaseType "Royal Staff"
@@ -1904,6 +1988,14 @@ Show
 #7 Shagreen Boots - Unique
 Show
 	BaseType "Shagreen Boots"
+	Rarity Unique
+	PlayAlertSound 3 25
+	SetFontSize 25
+	SetBackgroundColor 0 0 0 220
+
+#7 Sharktooth Arrow Quiver - Unique
+Show
+	BaseType "Sharktooth Arrow Quiver"
 	Rarity Unique
 	PlayAlertSound 3 25
 	SetFontSize 25
@@ -1981,6 +2073,14 @@ Show
 	SetFontSize 25
 	SetBackgroundColor 0 0 0 220
 
+#7 Tarnished Spirit Shield - Unique
+Show
+	BaseType "Tarnished Spirit Shield"
+	Rarity Unique
+	PlayAlertSound 3 25
+	SetFontSize 25
+	SetBackgroundColor 0 0 0 220
+
 #7 Timeworn Claw - Unique
 Show
 	BaseType "Timeworn Claw"
@@ -2048,6 +2148,14 @@ Show
 #7 Wild Leather - Unique
 Show
 	BaseType "Wild Leather"
+	Rarity Unique
+	PlayAlertSound 3 25
+	SetFontSize 25
+	SetBackgroundColor 0 0 0 220
+
+#7 Woodsplitter - Unique
+Show
+	BaseType "Woodsplitter"
 	Rarity Unique
 	PlayAlertSound 3 25
 	SetFontSize 25
@@ -4215,15 +4323,6 @@ Show
 	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
-#1 Call to the First Ones - Divination Card
-Show
-	BaseType "Call to the First Ones"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	SetFontSize 40
-	PlayAlertSound 6 175
-	SetBackgroundColor 0 0 0 220
-
 #1 Heterochromia - Divination Card
 Show
 	BaseType "Heterochromia"
@@ -4341,6 +4440,15 @@ Show
 	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
+#1 The Polymath - Divination Card
+Show
+	BaseType "The Polymath"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	SetFontSize 40
+	PlayAlertSound 6 175
+	SetBackgroundColor 0 0 0 220
+
 #1 The Queen - Divination Card
 Show
 	BaseType "The Queen"
@@ -4395,6 +4503,15 @@ Show
 	PlayAlertSound 6 175
 	SetBackgroundColor 0 0 0 220
 
+#1 The Wolven King's Bite - Divination Card
+Show
+	BaseType "The Wolven King's Bite"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	SetFontSize 40
+	PlayAlertSound 6 175
+	SetBackgroundColor 0 0 0 220
+
 #1 Wealth and Power - Divination Card
 Show
 	BaseType "Wealth and Power"
@@ -4402,6 +4519,14 @@ Show
 	SetBorderColor 30 144 255
 	SetFontSize 40
 	PlayAlertSound 6 175
+	SetBackgroundColor 0 0 0 220
+
+#2 Call to the First Ones - Divination Card
+Show
+	BaseType "Call to the First Ones"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
 #2 Chaotic Disposition - Divination Card
@@ -4412,17 +4537,17 @@ Show
 	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
-#2 Hope - Divination Card
+#2 Earth Drinker - Divination Card
 Show
-	BaseType "Hope"
+	BaseType "Earth Drinker"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
 	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
-#2 Lingering Remnants - Divination Card
+#2 Hope - Divination Card
 Show
-	BaseType "Lingering Remnants"
+	BaseType "Hope"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
 	PlayAlertSound 6 75
@@ -4492,14 +4617,6 @@ Show
 	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
-#2 The Coming Storm - Divination Card
-Show
-	BaseType "The Coming Storm"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
-	SetBackgroundColor 0 0 0 220
-
 #2 The Cursed King - Divination Card
 Show
 	BaseType "The Cursed King"
@@ -4556,14 +4673,6 @@ Show
 	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
-#2 The Garish Power - Divination Card
-Show
-	BaseType "The Garish Power"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
-	SetBackgroundColor 0 0 0 220
-
 #2 The Hoarder - Divination Card
 Show
 	BaseType "The Hoarder"
@@ -4591,14 +4700,6 @@ Show
 #2 The Penitent - Divination Card
 Show
 	BaseType "The Penitent"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
-	SetBackgroundColor 0 0 0 220
-
-#2 The Polymath - Divination Card
-Show
-	BaseType "The Polymath"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
 	PlayAlertSound 6 75
@@ -4660,6 +4761,14 @@ Show
 	PlayAlertSound 6 75
 	SetBackgroundColor 0 0 0 220
 
+#2 The Tyrant - Divination Card
+Show
+	BaseType "The Tyrant"
+	Class "Divination Card"
+	SetBorderColor 30 144 255
+	PlayAlertSound 6 75
+	SetBackgroundColor 0 0 0 220
+
 #2 The Valley of Steel Boxes - Divination Card
 Show
 	BaseType "The Valley of Steel Boxes"
@@ -4687,22 +4796,6 @@ Show
 #2 The Wolf - Divination Card
 Show
 	BaseType "The Wolf"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
-	SetBackgroundColor 0 0 0 220
-
-#2 The Wolven King's Bite - Divination Card
-Show
-	BaseType "The Wolven King's Bite"
-	Class "Divination Card"
-	SetBorderColor 30 144 255
-	PlayAlertSound 6 75
-	SetBackgroundColor 0 0 0 220
-
-#2 The Wolverine - Divination Card
-Show
-	BaseType "The Wolverine"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
 	PlayAlertSound 6 75
@@ -16372,14 +16465,37 @@ Show
 	SetBackgroundColor 0 0 0 100
 	SetBorderColor 200 200 200
 
+#0 Brinerot magic item - Warbands
+Hide
+	Class "Gloves"
+	Rarity Magic
+	SetBorderColor 255 215 0
+	Identified True
+	
+
+#0 Mutewind magic item - Warbands
+Hide
+	Class "Boots"
+	Rarity Magic
+	SetBorderColor 54 100 146
+	Identified True
+	
+
 #0 Redblade magic item - Warbands
-Show
+Hide
 	Class "Helm"
 	Rarity Magic
 	SetBorderColor 150 0 0
 	Identified True
-	SetFontSize 30
-	SetBackgroundColor 0 0 0 220
+	
+
+#0 Renegade magic item - Warbands
+Hide
+	Class Dagger Wand "One Hand" Bow Stave "Two Hand" Sceptre Claws
+	Rarity Magic
+	SetBorderColor 208 32 144
+	Identified True
+	
 
 Show
 	SetFontSize 18
