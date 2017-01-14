@@ -1,6 +1,6 @@
 #**************************************************************
 # Welcome to xan.filter, a Python generated loot filter for PoE
-# This filter was generated for Breach on 01/02/2017(m/d/y) 07:39:09 UTC
+# This filter was generated for Breach on 01/14/2017(m/d/y) 01:22:10 UTC
 # The most current version of code can always be found at https://github.com/xanthics/poe_filter
 #**************************************************************
 
@@ -44,6 +44,26 @@ Show
 	BaseType "Sacrificial Garb"
 	SetBorderColor 192 128 254
 	SetFontSize 35
+	SetBackgroundColor 0 0 0 220
+
+#0 corrupted amulet - Always show
+Show
+	Class "Amulets"
+	Corrupted True
+	Rarity Normal
+	ItemLevel >= 60
+	SetBorderColor 192 128 254
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#0 corrupted belt - Always show
+Show
+	Class "Belts"
+	Corrupted True
+	Rarity Normal
+	ItemLevel >= 60
+	SetBorderColor 192 128 254
+	SetFontSize 30
 	SetBackgroundColor 0 0 0 220
 
 #01 Tabula Exception - Always show
@@ -7167,14 +7187,37 @@ Show
 	SetFontSize 25
 	SetBackgroundColor 0 0 0 220
 
+#0 Brinerot magic item - Warbands
+Hide
+	Class "Gloves"
+	Rarity Magic
+	SetBorderColor 255 215 0
+	Identified True
+	
+
+#0 Mutewind magic item - Warbands
+Hide
+	Class "Boots"
+	Rarity Magic
+	SetBorderColor 54 100 146
+	Identified True
+	
+
 #0 Redblade magic item - Warbands
-Show
+Hide
 	Class "Helm"
 	Rarity Magic
 	SetBorderColor 150 0 0
 	Identified True
-	SetFontSize 30
-	SetBackgroundColor 0 0 0 220
+	
+
+#0 Renegade magic item - Warbands
+Hide
+	Class Dagger Wand "One Hand" Bow Stave "Two Hand" Sceptre Claws
+	Rarity Magic
+	SetBorderColor 208 32 144
+	Identified True
+	
 
 Show
 	SetFontSize 18
