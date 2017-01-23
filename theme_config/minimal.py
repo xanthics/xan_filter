@@ -271,7 +271,7 @@ settings = {
 
 	"show very high": ["SetBorderColor {}".format(color['premiumlpurple']),
 					   "SetFontSize {}".format(size['huge']),
-					   "PlayAlertSound 1{}".format(volume['high']),
+					   "PlayAlertSound 1 {}".format(volume['high']),
 					   "SetBackgroundColor {} 220".format(color['black'])],
 	"show high": ["SetBorderColor {}".format(color['premiumlpurple']),
 				  "SetFontSize {}".format(size['large']),
