@@ -98,6 +98,14 @@ size = {
 	"minimum": "18",
 }
 
+volume = {
+	"max": "300",
+	"high": "100",
+	"normal": "75",
+	"medium": "45",
+	"low": "20"
+}
+
 # Text settings for various categories
 # This is where you would define general settings for a category, such as PlayAlertSound.
 # Each config should be its own array element.  Parsing will handle tabs/etc.
@@ -105,11 +113,11 @@ size = {
 settings = {
 	"challenge high": ["SetBorderColor {}".format(color['prophecy']),
 					   "SetFontSize {}".format(size['huge']),
-					   "PlayAlertSound 4 175",
+					   "PlayAlertSound 4 {}".format(volume['high']),
 					   "SetBackgroundColor {} 220".format(color['black'])],
 	"challenge normal": ["SetBorderColor {}".format(color['prophecy']),
 						 "SetFontSize {}".format(size['large']),
-						 "PlayAlertSound 4 25",
+						 "PlayAlertSound 4 {}".format(volume['low']),
 						 "SetBackgroundColor {} 220".format(color['black'])],
 	"challenge low": ["SetBorderColor {}".format(color['prophecy']),
 					  "SetFontSize {}".format(size['small']),
@@ -156,15 +164,15 @@ settings = {
 
 	"currency extremely high": ["SetBorderColor {}".format(color['currency']),
 								"SetFontSize {}".format(size['huge']),
-								"PlayAlertSound 5 300",
+								"PlayAlertSound 5 {}".format(volume['max']),
 								"SetBackgroundColor {} 220".format(color['highlight'])],
 	"currency very high": ["SetBorderColor {}".format(color['currency']),
 						   "SetFontSize {}".format(size['huge']),
-						   "PlayAlertSound 5 150",
+						   "PlayAlertSound 5 {}".format(volume['high']),
 						   "SetBackgroundColor {} 220".format(color['highlight'])],
 	"currency high": ["SetBorderColor {}".format(color['currency']),
 					  "SetFontSize {}".format(size['vlarge']),
-					  "PlayAlertSound 5 75",
+					  "PlayAlertSound 5 {}".format(volume['normal']),
 					  "SetBackgroundColor {} 220".format(color['highlight'])],
 	"currency normal": ["SetBorderColor {}".format(color['currency']),
 						"SetFontSize {}".format(size['large']),
@@ -177,13 +185,13 @@ settings = {
 
 	"divination very high": ["SetBorderColor {}".format(color['divinationnew']),
 							 "SetFontSize {}".format(size['vlarge']),
-							 "PlayAlertSound 6 175",
+							 "PlayAlertSound 6 {}".format(volume['high']),
 							 "SetBackgroundColor {} 220".format(color['black'])],
 	"divination high": ["SetBorderColor {}".format(color['divinationnew']),
-						"PlayAlertSound 6 75",
+						"PlayAlertSound 6 {}".format(volume['normal']),
 						"SetBackgroundColor {} 220".format(color['black'])],
 	"divination normal": ["SetBorderColor {}".format(color['divinationnew']),
-						  "PlayAlertSound 6 25",
+						  "PlayAlertSound 6 {}".format(volume['low']),
 						  "SetBackgroundColor {} 220".format(color['black'])],
 	"divination low": ["SetBackgroundColor {} 220".format(color['black'])],
 
@@ -211,10 +219,10 @@ settings = {
 
 	"map red": ["SetBorderColor {} 150".format(color['fire']),
 				"SetFontSize {}".format(size['vlarge']),
-				"PlayAlertSound 8 50",
+				"PlayAlertSound 8 {}".format(volume['normal']),
 				"SetBackgroundColor {} 220".format(color['black'])],
 	"map yellow": ["SetBorderColor {} 150".format(color['lightning']),
-				   # 45				   "PlayAlertSound 8 25",
+				   "PlayAlertSound 8 {}".format(volume['low']),
 				   "SetFontSize {}".format(size['large']),
 				   "SetBackgroundColor {} 220".format(color['black'])],
 	"map white": ["SetBorderColor {} 150".format(color['normal']),
@@ -222,20 +230,21 @@ settings = {
 
 	"map red good": ["SetBorderColor {}".format(color['fire']),
 					 "SetFontSize {}".format(size['huge']),
-					 "PlayAlertSound 7 100",
+					 "PlayAlertSound 7 {}".format(volume['high']),
 					 "SetBackgroundColor {} 220".format(color['black'])],
 	"map yellow good": ["SetBorderColor {}".format(color['lightning']),
-						"PlayAlertSound 7 50",
+						"PlayAlertSound 7 {}".format(volume['medium']),
 						"SetFontSize {}".format(size['large']),
 						"SetBackgroundColor {} 220".format(color['black'])],
 	"map white good": ["SetBorderColor {}".format(color['normal']),
 					   "SetBackgroundColor {} 220".format(color['black']),
-					   "PlayAlertSound 7 25"],
+					   "PlayAlertSound 7 {}".format(volume['low'])],
 
 	"levelling rare high": ["Rarity Rare",
 							"SetBorderColor {} 150".format(color['rare']),
 							"SetFontSize {}".format(size['large']),
 							"SetBackgroundColor {} 220".format(color['black'])],
+
 	"rare highlight": ["Rarity Rare",
 			   "SetFontSize {}".format(size['large']),
 			   "SetBorderColor {} 150".format(color['premiumorange']),
@@ -262,7 +271,7 @@ settings = {
 
 	"show very high": ["SetBorderColor {}".format(color['premiumlpurple']),
 					   "SetFontSize {}".format(size['huge']),
-					   "PlayAlertSound 1 175",
+					   "PlayAlertSound 1{}".format(volume['high']),
 					   "SetBackgroundColor {} 220".format(color['black'])],
 	"show high": ["SetBorderColor {}".format(color['premiumlpurple']),
 				  "SetFontSize {}".format(size['large']),
@@ -286,18 +295,18 @@ settings = {
 	"unique very high": ["Rarity Unique",
 						 "SetBorderColor {}".format(color['unique']),
 						 "SetFontSize {}".format(size['huge']),
-						 "PlayAlertSound 3 300",
+						 "PlayAlertSound 3 {}".format(volume['high']),
 						 "SetBackgroundColor {} 220".format(color['black'])],
 	"unique high": ["Rarity Unique",
 					"SetFontSize {}".format(size['vlarge']),
 					"SetBorderColor {}".format(color['unique']),
-					"PlayAlertSound 3 75",
+					"PlayAlertSound 3 {}".format(volume['normal']),
 					"SetBackgroundColor {} 220".format(color['black'])],
 	"unique normal": ["Rarity Unique",
-					  "PlayAlertSound 3 50",
+					  "PlayAlertSound 3 {}".format(volume['medium']),
 					  "SetBackgroundColor {} 220".format(color['black'])],
 	"unique low": ["Rarity Unique",
-				   "PlayAlertSound 3 25",
+				   "PlayAlertSound 3 {}".format(volume['low']),
 				   "SetFontSize {}".format(size['small']),
 				   "SetBackgroundColor {} 220".format(color['black'])],
 
