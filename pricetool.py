@@ -335,10 +335,10 @@ def divuniqueupdate():
 				oldnc = nc
 			except ValueError as ve:
 				print("ValueError: {}".format(ve))
-				break
+				time.sleep(61)
 			except TypeError as te:
 				print("TypeError: {}".format(te))
-				time.sleep(120)
+				time.sleep(61)
 
 		gen_lists(ldb)
 
@@ -502,7 +502,7 @@ def poetrade_getcurrencyrates():
 
 
 if __name__ == '__main__':
-	poetrade_getcurrencyrates()
+	#poetrade_getcurrencyrates()
 	divuniqueupdate()
 
 
