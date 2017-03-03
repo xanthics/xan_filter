@@ -138,8 +138,8 @@ def gen_list(obj):
 def main():
 	leagues = [("st", "Standard", uniques, divination, stcurrency),
 			   ("hc", "Hardcore", hcuniques, hcdivination, hccurrency),
-			   ("b", "Breach", puniques, pdivination, pcurrency),
-			   ("bhc", "Hardcore Breach", phcuniques, phcdivination, phccurrency)]
+			   ("l", "Legacy", puniques, pdivination, pcurrency),
+			   ("lhc", "Hardcore Legacy", phcuniques, phcdivination, phccurrency)]
 
 	leveling = True  # toggle to show leveling items
 
@@ -180,7 +180,7 @@ def main():
 			buffer += gen_list(general_levelling)
 		buffer += gen_list(chance)  # Chance bases
 		buffer += gen_list(crafting_bases)  # Crafting bases
-		buffer += gen_list(animate_weapon)  # Animate Weapon bases
+		#buffer += gen_list(animate_weapon)  # Animate Weapon bases
 
 		if leveling:
 			for nonrareitemleveling in [nonrare_armor_dex, nonrare_armor_dex_int, nonrare_armor_str_dex, nonrare_armor_str, nonrare_armor_int, nonrare_armor_str_int, nonrare_bow, nonrare_claw, nonrare_dagger,
