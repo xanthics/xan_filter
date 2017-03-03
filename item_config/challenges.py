@@ -28,19 +28,5 @@ desc = "challenge item"
 
 # Base type : settings pair
 items = {
-	"0 Splinter of Xoph": {"base": "Splinter of Xoph", "class": "Currency", "type": "chance"},
-	"0 Splinter of Tul": {"base": "Splinter of Tul", "class": "Currency", "type": "chance"},
-	"0 Splinter of Esh": {"base": "Splinter of Esh", "class": "Currency", "type": "chance"},
-	"0 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", "class": "Currency", "type": "chance"},
-	"0 Splinter of Chayula": {"base": "Splinter of Chayula", "class": "Currency", "type": "chance"},
-	"0 Blessing of Xoph": {"base": "Blessing of Xoph", "class": "Currency", "type": "challenge normal"},
-	"0 Blessing of Tul": {"base": "Blessing of Tul", "class": "Currency", "type": "challenge normal"},
-	"0 Blessing of Esh": {"base": "Blessing of Esh", "class": "Currency", "type": "challenge normal"},
-	"0 Blessing of Uul-Netol": {"base": "Blessing of Uul-Netol", "class": "Currency", "type": "challenge normal"},
-	"0 Blessing of Chayula": {"base": "Blessing of Chayula", "class": "Currency", "type": "challenge normal"},
-	"0 Xoph's Breachstone": {"base": "Xoph's Breachstone", "class": "Map Fragments", "type": "challenge normal"},
-	"0 Tul's Breachstone": {"base": "Tul's Breachstone", "class": "Map Fragments", "type": "challenge normal"},
-	"0 Esh's Breachstone": {"base": "Esh's Breachstone", "class": "Map Fragments", "type": "challenge normal"},
-	"0 Uul-Netol's Breachstone": {"base": "Uul-Netol's Breachstone", "class": "Map Fragments", "type": "challenge normal"},
-	"0 Chayula's Breachstone": {"base": "Chayula's Breachstone", "class": "Map Fragments", "type": "challenge normal"},
+	"0 Leaguestone": {"class": "Leaguestone", "type": "challenge normal"},
 }

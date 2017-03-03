@@ -263,4 +263,5 @@ items = {
 	"72 Maps <= 72": {"class": "Maps", "other": ["DropLevel <= 72"], "type": "map white"},
 	"73 Other maps": {"class": "Maps", "type": "map yellow"},
 	"74 Map Fragments": {"class": "Map Fragments", "type": "map white"},
+	"75 Misc map items": {"class": "Misc Map Items", "type": "map red"},
 }
