@@ -1,6 +1,6 @@
 #**************************************************************
 # Welcome to xan.filter, a Python generated loot filter for PoE
-# This filter was generated for Breach on 01/23/2017(m/d/y) 23:54:20 UTC
+# This filter was generated for Legacy on 03/03/2017(m/d/y) 13:00:39 UTC
 # The most current version of code can always be found at https://github.com/xanthics/poe_filter
 #**************************************************************
 
@@ -44,6 +44,46 @@ Show
 	BaseType "Sacrificial Garb"
 	SetBorderColor 192 128 254
 	SetFontSize 35
+	SetBackgroundColor 0 0 0 220
+
+#0 Splinter of Chayula - Always show
+Show
+	BaseType "Splinter of Chayula"
+	Class "Currency"
+	SetBorderColor 192 128 254
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#0 Splinter of Esh - Always show
+Show
+	BaseType "Splinter of Esh"
+	Class "Currency"
+	SetBorderColor 192 128 254
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#0 Splinter of Tul - Always show
+Show
+	BaseType "Splinter of Tul"
+	Class "Currency"
+	SetBorderColor 192 128 254
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#0 Splinter of Uul-Netol - Always show
+Show
+	BaseType "Splinter of Uul-Netol"
+	Class "Currency"
+	SetBorderColor 192 128 254
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#0 Splinter of Xoph - Always show
+Show
+	BaseType "Splinter of Xoph"
+	Class "Currency"
+	SetBorderColor 192 128 254
+	SetFontSize 30
 	SetBackgroundColor 0 0 0 220
 
 #0 corrupted amulet - Always show
@@ -153,131 +193,9 @@ Show
 	SetBackgroundColor 0 0 0 100
 	SetBorderColor 135 135 135
 
-#0 Blessing of Chayula - challenge item
+#0 Leaguestone - challenge item
 Show
-	BaseType "Blessing of Chayula"
-	Class "Currency"
-	SetBorderColor 128 0 200
-	SetFontSize 35
-	PlayAlertSound 4 20
-	SetBackgroundColor 0 0 0 220
-
-#0 Blessing of Esh - challenge item
-Show
-	BaseType "Blessing of Esh"
-	Class "Currency"
-	SetBorderColor 128 0 200
-	SetFontSize 35
-	PlayAlertSound 4 20
-	SetBackgroundColor 0 0 0 220
-
-#0 Blessing of Tul - challenge item
-Show
-	BaseType "Blessing of Tul"
-	Class "Currency"
-	SetBorderColor 128 0 200
-	SetFontSize 35
-	PlayAlertSound 4 20
-	SetBackgroundColor 0 0 0 220
-
-#0 Blessing of Uul-Netol - challenge item
-Show
-	BaseType "Blessing of Uul-Netol"
-	Class "Currency"
-	SetBorderColor 128 0 200
-	SetFontSize 35
-	PlayAlertSound 4 20
-	SetBackgroundColor 0 0 0 220
-
-#0 Blessing of Xoph - challenge item
-Show
-	BaseType "Blessing of Xoph"
-	Class "Currency"
-	SetBorderColor 128 0 200
-	SetFontSize 35
-	PlayAlertSound 4 20
-	SetBackgroundColor 0 0 0 220
-
-#0 Chayula's Breachstone - challenge item
-Show
-	BaseType "Chayula's Breachstone"
-	Class "Map Fragments"
-	SetBorderColor 128 0 200
-	SetFontSize 35
-	PlayAlertSound 4 20
-	SetBackgroundColor 0 0 0 220
-
-#0 Esh's Breachstone - challenge item
-Show
-	BaseType "Esh's Breachstone"
-	Class "Map Fragments"
-	SetBorderColor 128 0 200
-	SetFontSize 35
-	PlayAlertSound 4 20
-	SetBackgroundColor 0 0 0 220
-
-#0 Splinter of Chayula - challenge item
-Show
-	BaseType "Splinter of Chayula"
-	Class "Currency"
-	SetBorderColor 128 0 200
-	SetFontSize 25
-	SetBackgroundColor 0 0 0 220
-
-#0 Splinter of Esh - challenge item
-Show
-	BaseType "Splinter of Esh"
-	Class "Currency"
-	SetBorderColor 128 0 200
-	SetFontSize 25
-	SetBackgroundColor 0 0 0 220
-
-#0 Splinter of Tul - challenge item
-Show
-	BaseType "Splinter of Tul"
-	Class "Currency"
-	SetBorderColor 128 0 200
-	SetFontSize 25
-	SetBackgroundColor 0 0 0 220
-
-#0 Splinter of Uul-Netol - challenge item
-Show
-	BaseType "Splinter of Uul-Netol"
-	Class "Currency"
-	SetBorderColor 128 0 200
-	SetFontSize 25
-	SetBackgroundColor 0 0 0 220
-
-#0 Splinter of Xoph - challenge item
-Show
-	BaseType "Splinter of Xoph"
-	Class "Currency"
-	SetBorderColor 128 0 200
-	SetFontSize 25
-	SetBackgroundColor 0 0 0 220
-
-#0 Tul's Breachstone - challenge item
-Show
-	BaseType "Tul's Breachstone"
-	Class "Map Fragments"
-	SetBorderColor 128 0 200
-	SetFontSize 35
-	PlayAlertSound 4 20
-	SetBackgroundColor 0 0 0 220
-
-#0 Uul-Netol's Breachstone - challenge item
-Show
-	BaseType "Uul-Netol's Breachstone"
-	Class "Map Fragments"
-	SetBorderColor 128 0 200
-	SetFontSize 35
-	PlayAlertSound 4 20
-	SetBackgroundColor 0 0 0 220
-
-#0 Xoph's Breachstone - challenge item
-Show
-	BaseType "Xoph's Breachstone"
-	Class "Map Fragments"
+	Class "Leaguestone"
 	SetBorderColor 128 0 200
 	SetFontSize 35
 	PlayAlertSound 4 20
@@ -432,14 +350,18 @@ Show
 Show
 	BaseType "Glassblower's Bauble"
 	Class "Currency"
-	SetFontSize 30
+	SetBorderColor 170 158 130
+	SetFontSize 35
+	PlayAlertSound 5 20
 	SetBackgroundColor 0 0 0 220
 
 #0 Jeweller's Orb - Currency Autogen
 Show
 	BaseType "Jeweller's Orb"
 	Class "Currency"
-	SetFontSize 30
+	SetBorderColor 170 158 130
+	SetFontSize 35
+	PlayAlertSound 5 20
 	SetBackgroundColor 0 0 0 220
 
 #0 Journeyman Cartographer's Sextant - Currency Autogen
@@ -707,6 +629,51 @@ Show
 	Class "Currency"
 	SetFontSize 30
 	SetBackgroundColor 0 0 0 100
+
+#0 Blessing of Chayula - Currency catchall and special currency
+Show
+	BaseType "Blessing of Chayula"
+	Class "Currency"
+	SetBorderColor 170 158 130
+	SetFontSize 35
+	PlayAlertSound 5 20
+	SetBackgroundColor 0 0 0 220
+
+#0 Blessing of Esh - Currency catchall and special currency
+Show
+	BaseType "Blessing of Esh"
+	Class "Currency"
+	SetBorderColor 170 158 130
+	SetFontSize 35
+	PlayAlertSound 5 20
+	SetBackgroundColor 0 0 0 220
+
+#0 Blessing of Tul - Currency catchall and special currency
+Show
+	BaseType "Blessing of Tul"
+	Class "Currency"
+	SetBorderColor 170 158 130
+	SetFontSize 35
+	PlayAlertSound 5 20
+	SetBackgroundColor 0 0 0 220
+
+#0 Blessing of Uul-Netol - Currency catchall and special currency
+Show
+	BaseType "Blessing of Uul-Netol"
+	Class "Currency"
+	SetBorderColor 170 158 130
+	SetFontSize 35
+	PlayAlertSound 5 20
+	SetBackgroundColor 0 0 0 220
+
+#0 Blessing of Xoph - Currency catchall and special currency
+Show
+	BaseType "Blessing of Xoph"
+	Class "Currency"
+	SetBorderColor 170 158 130
+	SetFontSize 35
+	PlayAlertSound 5 20
+	SetBackgroundColor 0 0 0 220
 
 #0 Exalted Orb - Currency catchall and special currency
 Show
@@ -4944,6 +4911,14 @@ Show
 Show
 	Class "Map Fragments"
 	SetBorderColor 200 200 200 150
+	SetBackgroundColor 0 0 0 220
+
+#75 Misc map items - maps
+Show
+	Class "Misc Map Items"
+	SetBorderColor 150 0 0 150
+	SetFontSize 40
+	PlayAlertSound 8 75
 	SetBackgroundColor 0 0 0 220
 
 #000 The Wolf's Shadow - Divination Card
@@ -17198,7 +17173,7 @@ Hide
 	Identified True
 	
 
-Show
+Hide
 	SetFontSize 18
 	SetBackgroundColor 0 0 0 100
 	SetBorderColor 100 100 100
