@@ -28,27 +28,32 @@ desc = "Always show"
 
 # Base type : settings pair
 items = {
-    "01 Tabula Exception": {"base": "Simple Robe", "other": ["Rarity Unique", "SocketGroup WWWWWW"], "type": "unique high"},
-    "02 6L": {"other": ["LinkedSockets 6"], "type": "show very high"},
-    "03 5L": {"other": ["LinkedSockets 5", "PlayAlertSound 2 75"], "type": "show high"},
-    "04 6S": {"other": ["Sockets 6", "PlayAlertSound 2 50"], "type": "show high"},
-    # High value atlas bases.  Show and make noise at any rarity
-    "04 Steel Ring": {"base": "Steel Ring", "type": "show high"},
-    "04 Crystal Belt": {"base": "Crystal Belt", "type": "show high"},
-    "04 Opal Ring": {"base": "Opal Ring", "type": "show high"},
-    "10 Talisman": {'other': ["Rarity >= Rare", "ItemLevel >= 70"], "base": "Talisman", "type": "show high"},
-    "11 Talisman": {'other': ["ItemLevel >= 70"], "base": "Talisman", "type": "show high"},
-    "12 Talisman": {"base": "Talisman", "type": "show low"},
-    "0 Fishing Rod": {"base": "Fishing Rod", "type": "show very high"},
-    "0 Hideout Doodads": {"class": "Hideout Doodads", "type": "show low"},
-    "0 Microtransactions": {"class": "Microtransactions", "type": "show low"},
-    "0 Quest": {"class": "Quest", "type": "quest"},
-    "0 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "show high"},
-    "0 Jewel": {"class": "Jewel", "other": ["Rarity <= Magic"], "type": "show normal"},
+	"01 Tabula Exception": {"base": "Simple Robe", "other": ["Rarity Unique", "SocketGroup WWWWWW"], "type": "unique high"},
+	"02 6L": {"other": ["LinkedSockets 6"], "type": "show very high"},
+	"03 5L": {"other": ["LinkedSockets 5", "PlayAlertSound 2 75"], "type": "show high"},
+	"04 6S": {"other": ["Sockets 6", "PlayAlertSound 2 50"], "type": "show high"},
+	# High value atlas bases.  Show and make noise at any rarity
+	"04 Steel Ring": {"base": "Steel Ring", "type": "show high"},
+	"04 Crystal Belt": {"base": "Crystal Belt", "type": "show high"},
+	"04 Opal Ring": {"base": "Opal Ring", "type": "show high"},
+	"10 Talisman": {'other': ["Rarity >= Rare", "ItemLevel >= 70"], "base": "Talisman", "type": "show high"},
+	"11 Talisman": {'other': ["ItemLevel >= 70"], "base": "Talisman", "type": "show high"},
+	"12 Talisman": {"base": "Talisman", "type": "show low"},
+	"0 Fishing Rod": {"base": "Fishing Rod", "type": "show very high"},
+	"0 Hideout Doodads": {"class": "Hideout Doodads", "type": "show low"},
+	"0 Microtransactions": {"class": "Microtransactions", "type": "show low"},
+	"0 Quest": {"class": "Quest", "type": "quest"},
+	"0 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "show high"},
+	"0 Jewel": {"class": "Jewel", "other": ["Rarity <= Magic"], "type": "show normal"},
+	"0 Splinter of Xoph": {"base": "Splinter of Xoph", "class": "Currency", "type": "show normal"},
+	"0 Splinter of Tul": {"base": "Splinter of Tul", "class": "Currency", "type": "show normal"},
+	"0 Splinter of Esh": {"base": "Splinter of Esh", "class": "Currency", "type": "show normal"},
+	"0 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", "class": "Currency", "type": "show normal"},
+	"0 Splinter of Chayula": {"base": "Splinter of Chayula", "class": "Currency", "type": "show normal"},
 
-    "9 Starter weapon": {"other": ["Class Dagger Wand \"One Hand\" Bow Stave \"Two Hand\" Sceptre Claws", "ItemLevel < 2"], "type": "low"},
+	"9 Starter weapon": {"other": ["Class Dagger Wand \"One Hand\" Bow Stave \"Two Hand\" Sceptre Claws", "ItemLevel < 2"], "type": "low"},
 
-    # Corrupted white items for lead to gold darkshrine
+	# Corrupted white items for lead to gold darkshrine
 	"0 corrupted amulet": {"class": "Amulets", "other": ["Corrupted True", "Rarity Normal", "ItemLevel >= 60"], "type": "show normal"},
 	"0 corrupted ring": {"class": "Rings", "other": ["Corrupted True", "Rarity Normal", "ItemLevel >= 60"], "type": "ignore"},
 	"0 corrupted belt": {"class": "Belts", "other": ["Corrupted True", "Rarity Normal", "ItemLevel >= 60"], "type": "show normal"},
@@ -58,22 +63,14 @@ items = {
 	"0 corrupted shield": {"class": "Shield", "other": ["Corrupted True", "Rarity Normal", "ItemLevel >= 60"], "type": "ignore"},
 
 	# Rare highlighting for currency recipes.  change 'ignore' to 'high' or back as needed
-    "0 Rare Two Hand": {"class": "Two Hand\" \"Staves\" \"Bow", "other": ["Rarity Rare", "ItemLevel >= 60"], "type": "ignore"},
-    "0 Rare Helm": {"class": "Helmets", "other": ["Rarity Rare", "ItemLevel >= 60"], "type": "ignore"},
-    "0 Rare Body": {"class": "Body Armours", "other": ["Rarity Rare", "ItemLevel >= 60"], "type": "ignore"},
-    "0 Rare Glove": {"class": "Gloves", "other": ["Rarity Rare", "ItemLevel >= 60"], "type": "ignore"},
-    "0 Rare Boot": {"class": "Boots", "other": ["Rarity Rare", "ItemLevel >= 60"], "type": "ignore"},
+	"0 Rare Two Hand": {"class": "Two Hand\" \"Staves\" \"Bow", "other": ["Rarity Rare", "ItemLevel >= 60"], "type": "ignore"},
+	"0 Rare Helm": {"class": "Helmets", "other": ["Rarity Rare", "ItemLevel >= 60"], "type": "ignore"},
+	"0 Rare Body": {"class": "Body Armours", "other": ["Rarity Rare", "ItemLevel >= 60"], "type": "ignore"},
+	"0 Rare Glove": {"class": "Gloves", "other": ["Rarity Rare", "ItemLevel >= 60"], "type": "ignore"},
+	"0 Rare Boot": {"class": "Boots", "other": ["Rarity Rare", "ItemLevel >= 60"], "type": "ignore"},
 
 	"02 60+ amulet": {"class": "Amulets", "other": ["Rarity Rare", "ItemLevel >= 60"], "type": "ignore"},
 	"02 60+ ring": {"class": "Rings", "other": ["Rarity Rare", "ItemLevel >= 60"], "type": "ignore"},
 	"02 60+ belt": {"class": "Belts", "other": ["Rarity Rare", "ItemLevel >= 60"], "type": "ignore"},
-
-#    "0 Trisula": {"base": "Trisula", "class": "Dagger", "type": "show high"},
-#    "0 Prong Dagger": {"base": "Prong Dagger", "class": "Dagger", "type": "show high"},
-#    "0 Sai": {"base": "Sai", "class": "Dagger", "type": "show high"},
-#    "0 Kris": {"base": "Kris", "class": "Dagger", "other": ["ItemLevel >= 83"], "type": "t1 ilvl83/84 crafting"},
-#    "0 Imp": {"base": "Imp", "class": "Dagger", "other": ["ItemLevel >= 83"], "type": "t1 ilvl83/84 crafting"},
-#    "0 Fiend": {"base": "Fiend", "class": "Dagger", "other": ["ItemLevel >= 83"], "type": "t1 ilvl83/84 crafting"},
-#    "0 Demon": {"base": "Demon", "class": "Dagger", "other": ["ItemLevel >= 83"], "type": "t1 ilvl83/84 crafting"},
 
 }
