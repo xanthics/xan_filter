@@ -141,7 +141,7 @@ def main():
 			   ("l", "Legacy", puniques, pdivination, pcurrency),
 			   ("lhc", "Hardcore Legacy", phcuniques, phcdivination, phccurrency)]
 
-	leveling = False  # toggle to show leveling items
+	leveling = True  # toggle to show leveling items
 
 	for i in leagues:
 
