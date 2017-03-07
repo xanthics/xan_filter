@@ -45,5 +45,5 @@ items = {
     "7 40": {"other": ["DropLevel <= 40", "ItemLevel >= 50"], "type": "rare low"},
     "7 45": {"other": ["DropLevel <= 45", "ItemLevel >= 55"], "type": "rare low"},
 
-    "9 Other rares": {"type": "ignore"}
+    "9 Other rares": {"type": "rare low"}
 }
