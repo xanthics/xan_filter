@@ -293,8 +293,7 @@ settings = {
 	"normal": ["SetFontSize {}".format(size['normal']),
 			   "SetBackgroundColor {} 220".format(color['black'])],
 	"low": ["SetFontSize {}".format(size['minimum']),
-			"SetBackgroundColor {} 100".format(color['black']),
-			"SetBorderColor {}".format(color['premiumgrey'])],
+			"SetBackgroundColor {} 100".format(color['black'])],
 
 	"ignore": [""],  # will have no styling applied and will use the default set at the end
 	"hide": [""]  # Will be explicitly hidden with applied styling
