@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/07/2017(m/d/y) 04:07:40 UTC from "Hardcore" data
+# Created: 03/13/2017(m/d/y) 02:15:03 UTC from "Hardcore" data
 
 desc = "Divination Card"
 
@@ -49,12 +49,12 @@ items = {
 	"1 The Standoff": {"base": "The Standoff", "class": "Divination Card", "type": "divination very high"},
 	"1 The Surveyor": {"base": "The Surveyor", "class": "Divination Card", "type": "divination very high"},
 	"1 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination very high"},
-	"1 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination very high"},
 	"1 The Valley of Steel Boxes": {"base": "The Valley of Steel Boxes", "class": "Divination Card", "type": "divination very high"},
 	"1 The Vast": {"base": "The Vast", "class": "Divination Card", "type": "divination very high"},
 	"1 The Warlord": {"base": "The Warlord", "class": "Divination Card", "type": "divination very high"},
 	"1 The Wolf": {"base": "The Wolf", "class": "Divination Card", "type": "divination very high"},
 	"1 The Wretched": {"base": "The Wretched", "class": "Divination Card", "type": "divination very high"},
+	"1 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination very high"},
 	"1 Wealth and Power": {"base": "Wealth and Power", "class": "Divination Card", "type": "divination very high"},
 	"2 Atziri's Arsenal": {"base": "Atziri's Arsenal", "class": "Divination Card", "type": "divination high"},
 	"2 Call to the First Ones": {"base": "Call to the First Ones", "class": "Divination Card", "type": "divination high"},
@@ -81,26 +81,25 @@ items = {
 	"2 The Jester": {"base": "The Jester", "class": "Divination Card", "type": "divination high"},
 	"2 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination high"},
 	"2 The Opulent": {"base": "The Opulent", "class": "Divination Card", "type": "divination high"},
+	"2 The Penitent": {"base": "The Penitent", "class": "Divination Card", "type": "divination high"},
 	"2 The Porcupine": {"base": "The Porcupine", "class": "Divination Card", "type": "divination high"},
 	"2 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
 	"2 The Soul": {"base": "The Soul", "class": "Divination Card", "type": "divination high"},
 	"2 The Stormcaller": {"base": "The Stormcaller", "class": "Divination Card", "type": "divination high"},
 	"2 The Trial": {"base": "The Trial", "class": "Divination Card", "type": "divination high"},
 	"2 The Union": {"base": "The Union", "class": "Divination Card", "type": "divination high"},
+	"2 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination high"},
 	"2 The Void": {"base": "The Void", "class": "Divination Card", "type": "divination high"},
 	"2 The Watcher": {"base": "The Watcher", "class": "Divination Card", "type": "divination high"},
 	"2 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination high"},
 	"2 The Wolven King's Bite": {"base": "The Wolven King's Bite", "class": "Divination Card", "type": "divination high"},
 	"2 The Wolverine": {"base": "The Wolverine", "class": "Divination Card", "type": "divination high"},
-	"2 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination high"},
 	"3 Boundless Realms": {"base": "Boundless Realms", "class": "Divination Card", "type": "divination low"},
 	"3 Cartographer's Delight": {"base": "Cartographer's Delight", "class": "Divination Card", "type": "divination low"},
 	"3 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "divination low"},
-	"3 Doedre's Madness": {"base": "Doedre's Madness", "class": "Divination Card", "type": "divination low"},
 	"3 Dying Anguish": {"base": "Dying Anguish", "class": "Divination Card", "type": "divination low"},
 	"3 Emperor's Luck": {"base": "Emperor's Luck", "class": "Divination Card", "type": "divination low"},
 	"3 Gemcutter's Promise": {"base": "Gemcutter's Promise", "class": "Divination Card", "type": "divination low"},
-	"3 Her Mask": {"base": "Her Mask", "class": "Divination Card", "type": "divination low"},
 	"3 Loyalty": {"base": "Loyalty", "class": "Divination Card", "type": "divination low"},
 	"3 Rain of Chaos": {"base": "Rain of Chaos", "class": "Divination Card", "type": "divination low"},
 	"3 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},
