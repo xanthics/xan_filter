@@ -67,7 +67,7 @@ items = {
     "0 Buckler": {"base": "Buckler", "other": ["DropLevel >= 58"], "class": "Shields", "type": "rare high"},
     "0 Spirit Shield": {"base": "Spirit Shield", "other": ["DropLevel >= 57"], "class": "Shields", "type": "rare high"},
     "0 Round Shield": {"base": "Round Shield", "other": ["DropLevel >= 59"], "class": "Shields", "type": "rare high"},
-    "0 Kite Shield": {"base": "Kite Shield", "other": ["DropLevel >= 51"], "class": "Shields", "type": "rare high"},
+    "0 Kite Shield": {"base": "Kite Shield", "other": ["DropLevel >= 50"], "class": "Shields", "type": "rare highlight"},
     "0 Spiked Shield": {"base": "Spiked Shield", "other": ["DropLevel >= 55"], "class": "Shields", "type": "rare high"},
 
     "0 Jewel": {"class": "Jewel", "type": "rare highlight"},
