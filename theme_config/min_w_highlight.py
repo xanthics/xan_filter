@@ -225,7 +225,7 @@ settings = {
 			   "SetBackgroundColor {} 220".format(color['premiumdpurple'])],
 	"rare high": ["Rarity Rare",
 				  "SetBorderColor {}".format(color['rare']),
-				  "SetFontSize {}".format(size['large']),
+				  "SetFontSize {}".format(size['normal']),
 				  "SetBackgroundColor {} 220".format(color['black'])],
 	"levelling rare normal": ["Rarity Rare",
 							  "SetBorderColor {} 150".format(color['rare']),
