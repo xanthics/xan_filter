@@ -1,18 +1,18 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/13/2017(m/d/y) 02:15:03 UTC from "Standard" data
+# Created: 03/15/2017(m/d/y) 04:28:56 UTC from "Standard" data
 
 desc = "Unique"
 
 # Base type : settings pair
 items = {
 	"0 Assassin's Garb": {"base": "Assassin's Garb", "type": "unique very high"},
-	"0 Bismuth Flask": {"base": "Bismuth Flask", "type": "unique very high"},
 	"0 Chateau Map": {"base": "Chateau Map", "type": "unique very high"},
 	"0 Clasped Mitts": {"base": "Clasped Mitts", "type": "unique very high"},
 	"0 Clutching Talisman": {"base": "Clutching Talisman", "type": "unique very high"},
 	"0 Courtyard Map": {"base": "Courtyard Map", "type": "unique very high"},
 	"0 Crusader Boots": {"base": "Crusader Boots", "type": "unique very high"},
+	"0 Crystal Belt": {"base": "Crystal Belt", "type": "unique very high"},
 	"0 Cutlass": {"base": "Cutlass", "type": "unique very high"},
 	"0 Deicide Mask": {"base": "Deicide Mask", "type": "unique very high"},
 	"0 Ezomyte Tower Shield": {"base": "Ezomyte Tower Shield", "type": "unique very high"},
@@ -48,13 +48,13 @@ items = {
 	"0 Wereclaw Talisman": {"base": "Wereclaw Talisman", "type": "unique very high"},
 	"0 Wyrmscale Doublet": {"base": "Wyrmscale Doublet", "type": "unique very high"},
 	"1 Abyssal Axe": {"base": "Abyssal Axe", "type": "unique high"},
+	"1 Bismuth Flask": {"base": "Bismuth Flask", "type": "unique high"},
 	"1 Blinder": {"base": "Blinder", "type": "unique high"},
 	"1 Carnal Sceptre": {"base": "Carnal Sceptre", "type": "unique high"},
 	"1 Cedar Tower Shield": {"base": "Cedar Tower Shield", "type": "unique high"},
 	"1 Champion Kite Shield": {"base": "Champion Kite Shield", "type": "unique high"},
 	"1 Citadel Bow": {"base": "Citadel Bow", "type": "unique high"},
 	"1 Citrine Amulet": {"base": "Citrine Amulet", "type": "unique high"},
-	"1 Crystal Belt": {"base": "Crystal Belt", "type": "unique high"},
 	"1 Deerskin Gloves": {"base": "Deerskin Gloves", "type": "unique high"},
 	"1 Despot Axe": {"base": "Despot Axe", "type": "unique high"},
 	"1 Exquisite Leather": {"base": "Exquisite Leather", "type": "unique high"},
@@ -114,6 +114,7 @@ items = {
 	"7 Deerskin Boots": {"base": "Deerskin Boots", "type": "unique low"},
 	"7 Dread Maul": {"base": "Dread Maul", "type": "unique low"},
 	"7 Dream Mace": {"base": "Dream Mace", "type": "unique low"},
+	"7 Ebony Tower Shield": {"base": "Ebony Tower Shield", "type": "unique low"},
 	"7 Elegant Sword": {"base": "Elegant Sword", "type": "unique low"},
 	"7 Estoc": {"base": "Estoc", "type": "unique low"},
 	"7 Fright Claw": {"base": "Fright Claw", "type": "unique low"},
@@ -165,6 +166,7 @@ items = {
 	"7 Shadow Sceptre": {"base": "Shadow Sceptre", "type": "unique low"},
 	"7 Shagreen Boots": {"base": "Shagreen Boots", "type": "unique low"},
 	"7 Sharktooth Arrow Quiver": {"base": "Sharktooth Arrow Quiver", "type": "unique low"},
+	"7 Skinning Knife": {"base": "Skinning Knife", "type": "unique low"},
 	"7 Sledgehammer": {"base": "Sledgehammer", "type": "unique low"},
 	"7 Soldier Helmet": {"base": "Soldier Helmet", "type": "unique low"},
 	"7 Spidersilk Robe": {"base": "Spidersilk Robe", "type": "unique low"},

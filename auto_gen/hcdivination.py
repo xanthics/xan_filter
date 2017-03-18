@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/13/2017(m/d/y) 02:15:03 UTC from "Hardcore" data
+# Created: 03/15/2017(m/d/y) 04:28:56 UTC from "Hardcore" data
 
 desc = "Divination Card"
 
@@ -80,8 +80,6 @@ items = {
 	"2 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination high"},
 	"2 The Jester": {"base": "The Jester", "class": "Divination Card", "type": "divination high"},
 	"2 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination high"},
-	"2 The Opulent": {"base": "The Opulent", "class": "Divination Card", "type": "divination high"},
-	"2 The Penitent": {"base": "The Penitent", "class": "Divination Card", "type": "divination high"},
 	"2 The Porcupine": {"base": "The Porcupine", "class": "Divination Card", "type": "divination high"},
 	"2 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
 	"2 The Soul": {"base": "The Soul", "class": "Divination Card", "type": "divination high"},
@@ -100,6 +98,7 @@ items = {
 	"3 Dying Anguish": {"base": "Dying Anguish", "class": "Divination Card", "type": "divination low"},
 	"3 Emperor's Luck": {"base": "Emperor's Luck", "class": "Divination Card", "type": "divination low"},
 	"3 Gemcutter's Promise": {"base": "Gemcutter's Promise", "class": "Divination Card", "type": "divination low"},
+	"3 Her Mask": {"base": "Her Mask", "class": "Divination Card", "type": "divination low"},
 	"3 Loyalty": {"base": "Loyalty", "class": "Divination Card", "type": "divination low"},
 	"3 Rain of Chaos": {"base": "Rain of Chaos", "class": "Divination Card", "type": "divination low"},
 	"3 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},
