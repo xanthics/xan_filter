@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/15/2017(m/d/y) 04:28:56 UTC from "Hardcore" data
+# Created: 03/18/2017(m/d/y) 09:11:55 UTC from "Hardcore" data
 
 desc = "Divination Card"
 
@@ -62,13 +62,13 @@ items = {
 	"2 Dialla's Subjugation": {"base": "Dialla's Subjugation", "class": "Divination Card", "type": "divination high"},
 	"2 Earth Drinker": {"base": "Earth Drinker", "class": "Divination Card", "type": "divination high"},
 	"2 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination high"},
-	"2 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
 	"2 Jack in the Box": {"base": "Jack in the Box", "class": "Divination Card", "type": "divination high"},
 	"2 Lingering Remnants": {"base": "Lingering Remnants", "class": "Divination Card", "type": "divination high"},
 	"2 Lost Worlds": {"base": "Lost Worlds", "class": "Divination Card", "type": "divination high"},
 	"2 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination high"},
 	"2 Lysah's Respite": {"base": "Lysah's Respite", "class": "Divination Card", "type": "divination high"},
 	"2 Merciless Armament": {"base": "Merciless Armament", "class": "Divination Card", "type": "divination high"},
+	"2 Might is Right": {"base": "Might is Right", "class": "Divination Card", "type": "divination high"},
 	"2 Struck by Lightning": {"base": "Struck by Lightning", "class": "Divination Card", "type": "divination high"},
 	"2 The Aesthete": {"base": "The Aesthete", "class": "Divination Card", "type": "divination high"},
 	"2 The Arena Champion": {"base": "The Arena Champion", "class": "Divination Card", "type": "divination high"},
@@ -80,6 +80,7 @@ items = {
 	"2 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination high"},
 	"2 The Jester": {"base": "The Jester", "class": "Divination Card", "type": "divination high"},
 	"2 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination high"},
+	"2 The Opulent": {"base": "The Opulent", "class": "Divination Card", "type": "divination high"},
 	"2 The Porcupine": {"base": "The Porcupine", "class": "Divination Card", "type": "divination high"},
 	"2 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
 	"2 The Soul": {"base": "The Soul", "class": "Divination Card", "type": "divination high"},

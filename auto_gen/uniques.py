@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/15/2017(m/d/y) 04:28:56 UTC from "Standard" data
+# Created: 03/18/2017(m/d/y) 09:11:55 UTC from "Standard" data
 
 desc = "Unique"
 
@@ -28,6 +28,7 @@ items = {
 	"0 Golden Wreath": {"base": "Golden Wreath", "type": "unique very high"},
 	"0 Greatwolf Talisman": {"base": "Greatwolf Talisman", "type": "unique very high"},
 	"0 Highborn Staff": {"base": "Highborn Staff", "type": "unique very high"},
+	"0 Hubris Circlet": {"base": "Hubris Circlet", "type": "unique very high"},
 	"0 Imperial Maul": {"base": "Imperial Maul", "type": "unique very high"},
 	"0 Jasper Chopper": {"base": "Jasper Chopper", "type": "unique very high"},
 	"0 Jet Amulet": {"base": "Jet Amulet", "type": "unique very high"},
@@ -63,7 +64,6 @@ items = {
 	"1 Full Wyrmscale": {"base": "Full Wyrmscale", "type": "unique high"},
 	"1 Grand Mana Flask": {"base": "Grand Mana Flask", "type": "unique high"},
 	"1 Granite Flask": {"base": "Granite Flask", "type": "unique high"},
-	"1 Hubris Circlet": {"base": "Hubris Circlet", "type": "unique high"},
 	"1 Imperial Claw": {"base": "Imperial Claw", "type": "unique high"},
 	"1 Ironscale Gauntlets": {"base": "Ironscale Gauntlets", "type": "unique high"},
 	"1 Jingling Spirit Shield": {"base": "Jingling Spirit Shield", "type": "unique high"},
@@ -103,18 +103,16 @@ items = {
 	"7 Carnal Armour": {"base": "Carnal Armour", "type": "unique low"},
 	"7 Carved Wand": {"base": "Carved Wand", "type": "unique low"},
 	"7 Chain Gloves": {"base": "Chain Gloves", "type": "unique low"},
-	"7 Clasped Boots": {"base": "Clasped Boots", "type": "unique low"},
 	"7 Cleaver": {"base": "Cleaver", "type": "unique low"},
 	"7 Compound Spiked Shield": {"base": "Compound Spiked Shield", "type": "unique low"},
 	"7 Coral Ring": {"base": "Coral Ring", "type": "unique low"},
-	"7 Crude Bow": {"base": "Crude Bow", "type": "unique low"},
 	"7 Crusader Chainmail": {"base": "Crusader Chainmail", "type": "unique low"},
 	"7 Crystal Sceptre": {"base": "Crystal Sceptre", "type": "unique low"},
+	"7 Crystal Wand": {"base": "Crystal Wand", "type": "unique low"},
 	"7 Decorative Axe": {"base": "Decorative Axe", "type": "unique low"},
 	"7 Deerskin Boots": {"base": "Deerskin Boots", "type": "unique low"},
 	"7 Dread Maul": {"base": "Dread Maul", "type": "unique low"},
 	"7 Dream Mace": {"base": "Dream Mace", "type": "unique low"},
-	"7 Ebony Tower Shield": {"base": "Ebony Tower Shield", "type": "unique low"},
 	"7 Elegant Sword": {"base": "Elegant Sword", "type": "unique low"},
 	"7 Estoc": {"base": "Estoc", "type": "unique low"},
 	"7 Fright Claw": {"base": "Fright Claw", "type": "unique low"},
