@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/07/2017(m/d/y) 04:07:40 UTC from "Hardcore" data
+# Created: 03/18/2017(m/d/y) 09:11:55 UTC from "Hardcore" data
 
 desc = "Unique"
 
@@ -22,6 +22,7 @@ items = {
 	"0 Coronal Leather": {"base": "Coronal Leather", "type": "unique very high"},
 	"0 Courtyard Map": {"base": "Courtyard Map", "type": "unique very high"},
 	"0 Crusader Boots": {"base": "Crusader Boots", "type": "unique very high"},
+	"0 Crystal Belt": {"base": "Crystal Belt", "type": "unique very high"},
 	"0 Cutlass": {"base": "Cutlass", "type": "unique very high"},
 	"0 Deicide Mask": {"base": "Deicide Mask", "type": "unique very high"},
 	"0 Desert Brigandine": {"base": "Desert Brigandine", "type": "unique very high"},
@@ -44,6 +45,7 @@ items = {
 	"0 Greatwolf Talisman": {"base": "Greatwolf Talisman", "type": "unique very high"},
 	"0 Highborn Staff": {"base": "Highborn Staff", "type": "unique very high"},
 	"0 Hubris Circlet": {"base": "Hubris Circlet", "type": "unique very high"},
+	"0 Imperial Maul": {"base": "Imperial Maul", "type": "unique very high"},
 	"0 Imperial Skean": {"base": "Imperial Skean", "type": "unique very high"},
 	"0 Ironscale Gauntlets": {"base": "Ironscale Gauntlets", "type": "unique very high"},
 	"0 Jasper Chopper": {"base": "Jasper Chopper", "type": "unique very high"},
@@ -81,7 +83,6 @@ items = {
 	"0 Steelhead": {"base": "Steelhead", "type": "unique very high"},
 	"0 Stibnite Flask": {"base": "Stibnite Flask", "type": "unique very high"},
 	"0 Thorium Spirit Shield": {"base": "Thorium Spirit Shield", "type": "unique very high"},
-	"0 Titanium Spirit Shield": {"base": "Titanium Spirit Shield", "type": "unique very high"},
 	"0 Topaz Flask": {"base": "Topaz Flask", "type": "unique very high"},
 	"0 Two-Stone Ring": {"base": "Two-Stone Ring", "type": "unique very high"},
 	"0 Vaal Axe": {"base": "Vaal Axe", "type": "unique very high"},
@@ -95,7 +96,6 @@ items = {
 	"0 Wereclaw Talisman": {"base": "Wereclaw Talisman", "type": "unique very high"},
 	"0 Wyrmscale Doublet": {"base": "Wyrmscale Doublet", "type": "unique very high"},
 	"1 Ancient Gauntlets": {"base": "Ancient Gauntlets", "type": "unique high"},
-	"1 Arcanist Gloves": {"base": "Arcanist Gloves", "type": "unique high"},
 	"1 Archon Kite Shield": {"base": "Archon Kite Shield", "type": "unique high"},
 	"1 Black Maw Talisman": {"base": "Black Maw Talisman", "type": "unique high"},
 	"1 Broadhead Arrow Quiver": {"base": "Broadhead Arrow Quiver", "type": "unique high"},
@@ -113,6 +113,7 @@ items = {
 	"1 Imperial Staff": {"base": "Imperial Staff", "type": "unique high"},
 	"1 Karui Maul": {"base": "Karui Maul", "type": "unique high"},
 	"1 Labrys": {"base": "Labrys", "type": "unique high"},
+	"1 Lathi": {"base": "Lathi", "type": "unique high"},
 	"1 Museum Map": {"base": "Museum Map", "type": "unique high"},
 	"1 Opal Wand": {"base": "Opal Wand", "type": "unique high"},
 	"1 Saintly Chainmail": {"base": "Saintly Chainmail", "type": "unique high"},
@@ -123,8 +124,8 @@ items = {
 	"1 Simple Robe": {"base": "Simple Robe", "type": "unique high"},
 	"1 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique high"},
 	"1 Slink Boots": {"base": "Slink Boots", "type": "unique high"},
-	"1 Strapped Mitts": {"base": "Strapped Mitts", "type": "unique high"},
 	"1 Terror Maul": {"base": "Terror Maul", "type": "unique high"},
+	"1 Titanium Spirit Shield": {"base": "Titanium Spirit Shield", "type": "unique high"},
 	"1 Trapper Boots": {"base": "Trapper Boots", "type": "unique high"},
 	"1 Ursine Pelt": {"base": "Ursine Pelt", "type": "unique high"},
 	"1 Vaal Gauntlets": {"base": "Vaal Gauntlets", "type": "unique high"},
@@ -136,11 +137,11 @@ items = {
 	"7 Chain Gloves": {"base": "Chain Gloves", "type": "unique low"},
 	"7 Cleaver": {"base": "Cleaver", "type": "unique low"},
 	"7 Crystal Sceptre": {"base": "Crystal Sceptre", "type": "unique low"},
+	"7 Cured Quiver": {"base": "Cured Quiver", "type": "unique low"},
 	"7 Dread Maul": {"base": "Dread Maul", "type": "unique low"},
 	"7 Fright Claw": {"base": "Fright Claw", "type": "unique low"},
 	"7 Gnarled Branch": {"base": "Gnarled Branch", "type": "unique low"},
 	"7 Goathide Gloves": {"base": "Goathide Gloves", "type": "unique low"},
-	"7 Golden Buckler": {"base": "Golden Buckler", "type": "unique low"},
 	"7 Great Helmet": {"base": "Great Helmet", "type": "unique low"},
 	"7 Iron Hat": {"base": "Iron Hat", "type": "unique low"},
 	"7 Ironscale Boots": {"base": "Ironscale Boots", "type": "unique low"},
@@ -157,8 +158,6 @@ items = {
 	"7 Plate Vest": {"base": "Plate Vest", "type": "unique low"},
 	"7 Prophet Crown": {"base": "Prophet Crown", "type": "unique low"},
 	"7 Quartz Flask": {"base": "Quartz Flask", "type": "unique low"},
-	"7 Rusted Sword": {"base": "Rusted Sword", "type": "unique low"},
-	"7 Sabre": {"base": "Sabre", "type": "unique low"},
 	"7 Serrated Arrow Quiver": {"base": "Serrated Arrow Quiver", "type": "unique low"},
 	"7 Spiked Club": {"base": "Spiked Club", "type": "unique low"},
 	"7 Stiletto": {"base": "Stiletto", "type": "unique low"},
@@ -169,5 +168,6 @@ items = {
 	"7 Velvet Gloves": {"base": "Velvet Gloves", "type": "unique low"},
 	"7 Vine Circlet": {"base": "Vine Circlet", "type": "unique low"},
 	"7 War Buckler": {"base": "War Buckler", "type": "unique low"},
+	"7 Wrapped Mitts": {"base": "Wrapped Mitts", "type": "unique low"},
 	"9 Other uniques": {"type": "unique normal"}
 }
