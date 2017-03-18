@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/15/2017(m/d/y) 04:28:56 UTC from "Legacy" data
+# Created: 03/18/2017(m/d/y) 09:11:55 UTC from "Legacy" data
 
 desc = "Divination Card"
 
@@ -50,7 +50,6 @@ items = {
 	"2 The Chains that Bind": {"base": "The Chains that Bind", "class": "Divination Card", "type": "divination high"},
 	"2 The Dapper Prodigy": {"base": "The Dapper Prodigy", "class": "Divination Card", "type": "divination high"},
 	"2 The Dark Mage": {"base": "The Dark Mage", "class": "Divination Card", "type": "divination high"},
-	"2 The Dragon": {"base": "The Dragon", "class": "Divination Card", "type": "divination high"},
 	"2 The Fletcher": {"base": "The Fletcher", "class": "Divination Card", "type": "divination high"},
 	"2 The Formless Sea": {"base": "The Formless Sea", "class": "Divination Card", "type": "divination high"},
 	"2 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination high"},
@@ -84,10 +83,13 @@ items = {
 	"3 Prosperity": {"base": "Prosperity", "class": "Divination Card", "type": "divination low"},
 	"3 Rain of Chaos": {"base": "Rain of Chaos", "class": "Divination Card", "type": "divination low"},
 	"3 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},
+	"3 Struck by Lightning": {"base": "Struck by Lightning", "class": "Divination Card", "type": "divination low"},
 	"3 The Betrayal": {"base": "The Betrayal", "class": "Divination Card", "type": "divination low"},
+	"3 The Calling": {"base": "The Calling", "class": "Divination Card", "type": "divination low"},
 	"3 The Catalyst": {"base": "The Catalyst", "class": "Divination Card", "type": "divination low"},
 	"3 The Coming Storm": {"base": "The Coming Storm", "class": "Divination Card", "type": "divination low"},
 	"3 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
+	"3 The Explorer": {"base": "The Explorer", "class": "Divination Card", "type": "divination low"},
 	"3 The Feast": {"base": "The Feast", "class": "Divination Card", "type": "divination low"},
 	"3 The Flora's Gift": {"base": "The Flora's Gift", "class": "Divination Card", "type": "divination low"},
 	"3 The Gambler": {"base": "The Gambler", "class": "Divination Card", "type": "divination low"},
@@ -105,6 +107,7 @@ items = {
 	"3 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},
 	"3 The Sigil": {"base": "The Sigil", "class": "Divination Card", "type": "divination low"},
 	"3 The Summoner": {"base": "The Summoner", "class": "Divination Card", "type": "divination low"},
+	"3 The Sun": {"base": "The Sun", "class": "Divination Card", "type": "divination low"},
 	"3 The Surgeon": {"base": "The Surgeon", "class": "Divination Card", "type": "divination low"},
 	"3 The Tower": {"base": "The Tower", "class": "Divination Card", "type": "divination low"},
 	"3 The Twins": {"base": "The Twins", "class": "Divination Card", "type": "divination low"},

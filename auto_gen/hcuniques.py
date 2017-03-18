@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/15/2017(m/d/y) 04:28:56 UTC from "Hardcore" data
+# Created: 03/18/2017(m/d/y) 09:11:55 UTC from "Hardcore" data
 
 desc = "Unique"
 
@@ -74,6 +74,7 @@ items = {
 	"0 Sanctified Life Flask": {"base": "Sanctified Life Flask", "type": "unique very high"},
 	"0 Sanctified Mana Flask": {"base": "Sanctified Mana Flask", "type": "unique very high"},
 	"0 Sapphire Flask": {"base": "Sapphire Flask", "type": "unique very high"},
+	"0 Serpentscale Gauntlets": {"base": "Serpentscale Gauntlets", "type": "unique very high"},
 	"0 Siege Axe": {"base": "Siege Axe", "type": "unique very high"},
 	"0 Silver Flask": {"base": "Silver Flask", "type": "unique very high"},
 	"0 Slaughter Knife": {"base": "Slaughter Knife", "type": "unique very high"},
@@ -82,7 +83,6 @@ items = {
 	"0 Steelhead": {"base": "Steelhead", "type": "unique very high"},
 	"0 Stibnite Flask": {"base": "Stibnite Flask", "type": "unique very high"},
 	"0 Thorium Spirit Shield": {"base": "Thorium Spirit Shield", "type": "unique very high"},
-	"0 Titanium Spirit Shield": {"base": "Titanium Spirit Shield", "type": "unique very high"},
 	"0 Topaz Flask": {"base": "Topaz Flask", "type": "unique very high"},
 	"0 Two-Stone Ring": {"base": "Two-Stone Ring", "type": "unique very high"},
 	"0 Vaal Axe": {"base": "Vaal Axe", "type": "unique very high"},
@@ -119,14 +119,13 @@ items = {
 	"1 Saintly Chainmail": {"base": "Saintly Chainmail", "type": "unique high"},
 	"1 Savant's Robe": {"base": "Savant's Robe", "type": "unique high"},
 	"1 Serpentscale Boots": {"base": "Serpentscale Boots", "type": "unique high"},
-	"1 Serpentscale Gauntlets": {"base": "Serpentscale Gauntlets", "type": "unique high"},
 	"1 Sharkskin Boots": {"base": "Sharkskin Boots", "type": "unique high"},
 	"1 Sharkskin Tunic": {"base": "Sharkskin Tunic", "type": "unique high"},
 	"1 Simple Robe": {"base": "Simple Robe", "type": "unique high"},
 	"1 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique high"},
 	"1 Slink Boots": {"base": "Slink Boots", "type": "unique high"},
-	"1 Strapped Mitts": {"base": "Strapped Mitts", "type": "unique high"},
 	"1 Terror Maul": {"base": "Terror Maul", "type": "unique high"},
+	"1 Titanium Spirit Shield": {"base": "Titanium Spirit Shield", "type": "unique high"},
 	"1 Trapper Boots": {"base": "Trapper Boots", "type": "unique high"},
 	"1 Ursine Pelt": {"base": "Ursine Pelt", "type": "unique high"},
 	"1 Vaal Gauntlets": {"base": "Vaal Gauntlets", "type": "unique high"},
@@ -138,6 +137,7 @@ items = {
 	"7 Chain Gloves": {"base": "Chain Gloves", "type": "unique low"},
 	"7 Cleaver": {"base": "Cleaver", "type": "unique low"},
 	"7 Crystal Sceptre": {"base": "Crystal Sceptre", "type": "unique low"},
+	"7 Cured Quiver": {"base": "Cured Quiver", "type": "unique low"},
 	"7 Dread Maul": {"base": "Dread Maul", "type": "unique low"},
 	"7 Fright Claw": {"base": "Fright Claw", "type": "unique low"},
 	"7 Gnarled Branch": {"base": "Gnarled Branch", "type": "unique low"},
