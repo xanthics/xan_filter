@@ -1,15 +1,15 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/13/2017(m/d/y) 02:15:03 UTC from "Hardcore Legacy" data
+# Created: 03/15/2017(m/d/y) 04:28:56 UTC from "Hardcore Legacy" data
 
 desc = "Divination Card"
 
 # Base type : settings pair
 items = {
-	"000 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination low"},
+	"000 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination high"},
 	"001 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
 	"002 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination high"},
-	"003 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination low"},
+	"003 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination high"},
 	"1 Abandoned Wealth": {"base": "Abandoned Wealth", "class": "Divination Card", "type": "divination very high"},
 	"1 Bowyer's Dream": {"base": "Bowyer's Dream", "class": "Divination Card", "type": "divination very high"},
 	"1 Chaotic Disposition": {"base": "Chaotic Disposition", "class": "Divination Card", "type": "divination very high"},
@@ -70,7 +70,6 @@ items = {
 	"2 Hope": {"base": "Hope", "class": "Divination Card", "type": "divination high"},
 	"2 Hubris": {"base": "Hubris", "class": "Divination Card", "type": "divination high"},
 	"2 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
-	"2 Hunter's Resolve": {"base": "Hunter's Resolve", "class": "Divination Card", "type": "divination high"},
 	"2 Jack in the Box": {"base": "Jack in the Box", "class": "Divination Card", "type": "divination high"},
 	"2 Light and Truth": {"base": "Light and Truth", "class": "Divination Card", "type": "divination high"},
 	"2 Lingering Remnants": {"base": "Lingering Remnants", "class": "Divination Card", "type": "divination high"},
@@ -102,9 +101,10 @@ items = {
 	"2 The Dragon": {"base": "The Dragon", "class": "Divination Card", "type": "divination high"},
 	"2 The Drunken Aristocrat": {"base": "The Drunken Aristocrat", "class": "Divination Card", "type": "divination high"},
 	"2 The Encroaching Darkness": {"base": "The Encroaching Darkness", "class": "Divination Card", "type": "divination high"},
-	"2 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination high"},
+	"2 The Explorer": {"base": "The Explorer", "class": "Divination Card", "type": "divination high"},
 	"2 The Fletcher": {"base": "The Fletcher", "class": "Divination Card", "type": "divination high"},
 	"2 The Fox": {"base": "The Fox", "class": "Divination Card", "type": "divination high"},
+	"2 The Gambler": {"base": "The Gambler", "class": "Divination Card", "type": "divination high"},
 	"2 The Garish Power": {"base": "The Garish Power", "class": "Divination Card", "type": "divination high"},
 	"2 The Gentleman": {"base": "The Gentleman", "class": "Divination Card", "type": "divination high"},
 	"2 The Gladiator": {"base": "The Gladiator", "class": "Divination Card", "type": "divination high"},
@@ -141,15 +141,12 @@ items = {
 	"2 The Valley of Steel Boxes": {"base": "The Valley of Steel Boxes", "class": "Divination Card", "type": "divination high"},
 	"2 The Visionary": {"base": "The Visionary", "class": "Divination Card", "type": "divination high"},
 	"2 The Watcher": {"base": "The Watcher", "class": "Divination Card", "type": "divination high"},
-	"2 The Web": {"base": "The Web", "class": "Divination Card", "type": "divination high"},
 	"2 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination high"},
 	"2 The Wolven King's Bite": {"base": "The Wolven King's Bite", "class": "Divination Card", "type": "divination high"},
 	"2 The Wolverine": {"base": "The Wolverine", "class": "Divination Card", "type": "divination high"},
 	"2 The Wrath": {"base": "The Wrath", "class": "Divination Card", "type": "divination high"},
 	"2 The Wretched": {"base": "The Wretched", "class": "Divination Card", "type": "divination high"},
-	"2 Three Faces in the Dark": {"base": "Three Faces in the Dark", "class": "Divination Card", "type": "divination high"},
 	"2 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination high"},
-	"2 Tranquillity": {"base": "Tranquillity", "class": "Divination Card", "type": "divination high"},
 	"2 Treasure Hunter": {"base": "Treasure Hunter", "class": "Divination Card", "type": "divination high"},
 	"2 Vinia's Token": {"base": "Vinia's Token", "class": "Divination Card", "type": "divination high"},
 	"2 Volatile Power": {"base": "Volatile Power", "class": "Divination Card", "type": "divination high"},
@@ -163,8 +160,10 @@ items = {
 	"3 Rats": {"base": "Rats", "class": "Divination Card", "type": "divination low"},
 	"3 The Catalyst": {"base": "The Catalyst", "class": "Divination Card", "type": "divination low"},
 	"3 The Feast": {"base": "The Feast", "class": "Divination Card", "type": "divination low"},
+	"3 The Gemcutter": {"base": "The Gemcutter", "class": "Divination Card", "type": "divination low"},
 	"3 The Hermit": {"base": "The Hermit", "class": "Divination Card", "type": "divination low"},
 	"3 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination low"},
+	"3 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination low"},
 	"3 The Lunaris Priestess": {"base": "The Lunaris Priestess", "class": "Divination Card", "type": "divination low"},
 	"3 The Metalsmith's Gift": {"base": "The Metalsmith's Gift", "class": "Divination Card", "type": "divination low"},
 	"3 The Rabid Rhoa": {"base": "The Rabid Rhoa", "class": "Divination Card", "type": "divination low"},
@@ -172,6 +171,7 @@ items = {
 	"3 The Surgeon": {"base": "The Surgeon", "class": "Divination Card", "type": "divination low"},
 	"3 The Twins": {"base": "The Twins", "class": "Divination Card", "type": "divination low"},
 	"3 Thunderous Skies": {"base": "Thunderous Skies", "class": "Divination Card", "type": "divination low"},
+	"3 Tranquillity": {"base": "Tranquillity", "class": "Divination Card", "type": "divination low"},
 	"7 The Carrion Crow": {"base": "The Carrion Crow", "class": "Divination Card", "type": "hide"},
 	"7 The Inoculated": {"base": "The Inoculated", "class": "Divination Card", "type": "hide"},
 	"7 The King's Blade": {"base": "The King's Blade", "class": "Divination Card", "type": "hide"},
