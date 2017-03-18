@@ -196,7 +196,6 @@ settings = {
 				"PlayAlertSound 8 {}".format(volume['normal']),
 				"SetBackgroundColor {} 220".format(color['black'])],
 	"map yellow": ["SetBorderColor {} 150".format(color['lightning']),
-				   "PlayAlertSound 8 {}".format(volume['low']),
 				   "SetFontSize {}".format(size['large']),
 				   "SetBackgroundColor {} 220".format(color['black'])],
 	"map white": ["SetBorderColor {} 150".format(color['normal']),
@@ -225,7 +224,7 @@ settings = {
 			   "SetBackgroundColor {} 220".format(color['premiumdpurple'])],
 	"rare high": ["Rarity Rare",
 				  "SetBorderColor {}".format(color['rare']),
-				  "SetFontSize {}".format(size['large']),
+				  "SetFontSize {}".format(size['normal']),
 				  "SetBackgroundColor {} 220".format(color['black'])],
 	"levelling rare normal": ["Rarity Rare",
 							  "SetBorderColor {} 150".format(color['rare']),
@@ -293,8 +292,7 @@ settings = {
 	"normal": ["SetFontSize {}".format(size['normal']),
 			   "SetBackgroundColor {} 220".format(color['black'])],
 	"low": ["SetFontSize {}".format(size['minimum']),
-			"SetBackgroundColor {} 100".format(color['black']),
-			"SetBorderColor {}".format(color['premiumgrey'])],
+			"SetBackgroundColor {} 100".format(color['black'])],
 
 	"ignore": [""],  # will have no styling applied and will use the default set at the end
 	"hide": [""]  # Will be explicitly hidden with applied styling

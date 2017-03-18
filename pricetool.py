@@ -13,6 +13,7 @@ import time
 import re
 from pymongo import MongoClient
 from statistics import mean, stdev
+import os
 
 from auto_gen import currencyrates
 from auto_gen import hccurrencyrates
@@ -455,7 +456,8 @@ def poetrade_getcurrencyrates():
 
 
 if __name__ == '__main__':
-	poetrade_getcurrencyrates()
+	os.environ['NO_PROXY'] = 'www.pathofexile.com'
+	# poetrade_getcurrencyrates()
 	divuniqueupdate()
 
 

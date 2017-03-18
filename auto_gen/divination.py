@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/07/2017(m/d/y) 04:07:40 UTC from "Standard" data
+# Created: 03/18/2017(m/d/y) 09:11:55 UTC from "Standard" data
 
 desc = "Divination Card"
 
@@ -37,6 +37,7 @@ items = {
 	"2 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination high"},
 	"2 Lysah's Respite": {"base": "Lysah's Respite", "class": "Divination Card", "type": "divination high"},
 	"2 Merciless Armament": {"base": "Merciless Armament", "class": "Divination Card", "type": "divination high"},
+	"2 Might is Right": {"base": "Might is Right", "class": "Divination Card", "type": "divination high"},
 	"2 Pride Before the Fall": {"base": "Pride Before the Fall", "class": "Divination Card", "type": "divination high"},
 	"2 Struck by Lightning": {"base": "Struck by Lightning", "class": "Divination Card", "type": "divination high"},
 	"2 The Aesthete": {"base": "The Aesthete", "class": "Divination Card", "type": "divination high"},
@@ -47,7 +48,6 @@ items = {
 	"2 The Dapper Prodigy": {"base": "The Dapper Prodigy", "class": "Divination Card", "type": "divination high"},
 	"2 The Dark Mage": {"base": "The Dark Mage", "class": "Divination Card", "type": "divination high"},
 	"2 The Enlightened": {"base": "The Enlightened", "class": "Divination Card", "type": "divination high"},
-	"2 The Fletcher": {"base": "The Fletcher", "class": "Divination Card", "type": "divination high"},
 	"2 The Formless Sea": {"base": "The Formless Sea", "class": "Divination Card", "type": "divination high"},
 	"2 The Harvester": {"base": "The Harvester", "class": "Divination Card", "type": "divination high"},
 	"2 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination high"},
@@ -56,13 +56,9 @@ items = {
 	"2 The King's Heart": {"base": "The King's Heart", "class": "Divination Card", "type": "divination high"},
 	"2 The Opulent": {"base": "The Opulent", "class": "Divination Card", "type": "divination high"},
 	"2 The Porcupine": {"base": "The Porcupine", "class": "Divination Card", "type": "divination high"},
-	"2 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
-	"2 The Road to Power": {"base": "The Road to Power", "class": "Divination Card", "type": "divination high"},
 	"2 The Saint's Treasure": {"base": "The Saint's Treasure", "class": "Divination Card", "type": "divination high"},
 	"2 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination high"},
-	"2 The Soul": {"base": "The Soul", "class": "Divination Card", "type": "divination high"},
 	"2 The Standoff": {"base": "The Standoff", "class": "Divination Card", "type": "divination high"},
-	"2 The Stormcaller": {"base": "The Stormcaller", "class": "Divination Card", "type": "divination high"},
 	"2 The Valley of Steel Boxes": {"base": "The Valley of Steel Boxes", "class": "Divination Card", "type": "divination high"},
 	"2 The Void": {"base": "The Void", "class": "Divination Card", "type": "divination high"},
 	"2 The Warlord": {"base": "The Warlord", "class": "Divination Card", "type": "divination high"},
@@ -77,6 +73,7 @@ items = {
 	"3 Lantador's Lost Love": {"base": "Lantador's Lost Love", "class": "Divination Card", "type": "divination low"},
 	"3 Loyalty": {"base": "Loyalty", "class": "Divination Card", "type": "divination low"},
 	"3 Rain of Chaos": {"base": "Rain of Chaos", "class": "Divination Card", "type": "divination low"},
+	"3 The Catalyst": {"base": "The Catalyst", "class": "Divination Card", "type": "divination low"},
 	"3 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
 	"3 The Flora's Gift": {"base": "The Flora's Gift", "class": "Divination Card", "type": "divination low"},
 	"3 The Hermit": {"base": "The Hermit", "class": "Divination Card", "type": "divination low"},

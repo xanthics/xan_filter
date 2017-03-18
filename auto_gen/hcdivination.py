@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/07/2017(m/d/y) 04:07:40 UTC from "Hardcore" data
+# Created: 03/18/2017(m/d/y) 09:11:55 UTC from "Hardcore" data
 
 desc = "Divination Card"
 
@@ -49,12 +49,12 @@ items = {
 	"1 The Standoff": {"base": "The Standoff", "class": "Divination Card", "type": "divination very high"},
 	"1 The Surveyor": {"base": "The Surveyor", "class": "Divination Card", "type": "divination very high"},
 	"1 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination very high"},
-	"1 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination very high"},
 	"1 The Valley of Steel Boxes": {"base": "The Valley of Steel Boxes", "class": "Divination Card", "type": "divination very high"},
 	"1 The Vast": {"base": "The Vast", "class": "Divination Card", "type": "divination very high"},
 	"1 The Warlord": {"base": "The Warlord", "class": "Divination Card", "type": "divination very high"},
 	"1 The Wolf": {"base": "The Wolf", "class": "Divination Card", "type": "divination very high"},
 	"1 The Wretched": {"base": "The Wretched", "class": "Divination Card", "type": "divination very high"},
+	"1 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination very high"},
 	"1 Wealth and Power": {"base": "Wealth and Power", "class": "Divination Card", "type": "divination very high"},
 	"2 Atziri's Arsenal": {"base": "Atziri's Arsenal", "class": "Divination Card", "type": "divination high"},
 	"2 Call to the First Ones": {"base": "Call to the First Ones", "class": "Divination Card", "type": "divination high"},
@@ -62,13 +62,13 @@ items = {
 	"2 Dialla's Subjugation": {"base": "Dialla's Subjugation", "class": "Divination Card", "type": "divination high"},
 	"2 Earth Drinker": {"base": "Earth Drinker", "class": "Divination Card", "type": "divination high"},
 	"2 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination high"},
-	"2 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
 	"2 Jack in the Box": {"base": "Jack in the Box", "class": "Divination Card", "type": "divination high"},
 	"2 Lingering Remnants": {"base": "Lingering Remnants", "class": "Divination Card", "type": "divination high"},
 	"2 Lost Worlds": {"base": "Lost Worlds", "class": "Divination Card", "type": "divination high"},
 	"2 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination high"},
 	"2 Lysah's Respite": {"base": "Lysah's Respite", "class": "Divination Card", "type": "divination high"},
 	"2 Merciless Armament": {"base": "Merciless Armament", "class": "Divination Card", "type": "divination high"},
+	"2 Might is Right": {"base": "Might is Right", "class": "Divination Card", "type": "divination high"},
 	"2 Struck by Lightning": {"base": "Struck by Lightning", "class": "Divination Card", "type": "divination high"},
 	"2 The Aesthete": {"base": "The Aesthete", "class": "Divination Card", "type": "divination high"},
 	"2 The Arena Champion": {"base": "The Arena Champion", "class": "Divination Card", "type": "divination high"},
@@ -87,16 +87,15 @@ items = {
 	"2 The Stormcaller": {"base": "The Stormcaller", "class": "Divination Card", "type": "divination high"},
 	"2 The Trial": {"base": "The Trial", "class": "Divination Card", "type": "divination high"},
 	"2 The Union": {"base": "The Union", "class": "Divination Card", "type": "divination high"},
+	"2 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination high"},
 	"2 The Void": {"base": "The Void", "class": "Divination Card", "type": "divination high"},
 	"2 The Watcher": {"base": "The Watcher", "class": "Divination Card", "type": "divination high"},
 	"2 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination high"},
 	"2 The Wolven King's Bite": {"base": "The Wolven King's Bite", "class": "Divination Card", "type": "divination high"},
 	"2 The Wolverine": {"base": "The Wolverine", "class": "Divination Card", "type": "divination high"},
-	"2 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination high"},
 	"3 Boundless Realms": {"base": "Boundless Realms", "class": "Divination Card", "type": "divination low"},
 	"3 Cartographer's Delight": {"base": "Cartographer's Delight", "class": "Divination Card", "type": "divination low"},
 	"3 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "divination low"},
-	"3 Doedre's Madness": {"base": "Doedre's Madness", "class": "Divination Card", "type": "divination low"},
 	"3 Dying Anguish": {"base": "Dying Anguish", "class": "Divination Card", "type": "divination low"},
 	"3 Emperor's Luck": {"base": "Emperor's Luck", "class": "Divination Card", "type": "divination low"},
 	"3 Gemcutter's Promise": {"base": "Gemcutter's Promise", "class": "Divination Card", "type": "divination low"},
