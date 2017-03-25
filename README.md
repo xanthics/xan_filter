@@ -20,7 +20,9 @@ Usage
 =====
 Run Create_filter with necessary config files to generate xan.filter.  Note that this will automatically put xan.show.filter and xan.hide.filter in <relative path>\Documents\My Games\Path of Exile
 
-(Optional) Run pricetool to update divination and unique tiers.  This may take some time depending on how much data is pending in ggg stash river.  Requires a running MongoDB instance.
+(Optional) Run pricetool to update currency, divination, and unique tiers.  
+The poe ninja version should finish very quickly  
+The ggg-api version may take some time depending on how much data is pending in ggg stash river.  Requires a running MongoDB instance.
 
 Config
 ======
