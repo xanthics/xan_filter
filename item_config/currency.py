@@ -7,14 +7,13 @@ desc = "Currency catchall and special currency"
 # Base type : settings pair
 items = {
 	"0 Mirror of Kalandra": {"base": "Mirror of Kalandra", "class": "Currency", "type": "currency extremely high"},
-	"0 Exalted Orb": {"base": "Exalted Orb", "class": "Currency", "type": "currency extremely high"},
 	"0 Albino Rhoa Feather": {"base": "Albino Rhoa Feather", "class": "Currency", "type": "currency extremely high"},
 	"0 Stacked Deck": {"base": "Stacked Deck", "class": "Currency", "type": "currency normal"},
 	"0 Blessing of Xoph": {"base": "Blessing of Xoph", "class": "Currency", "type": "currency normal"},
 	"0 Blessing of Tul": {"base": "Blessing of Tul", "class": "Currency", "type": "currency normal"},
 	"0 Blessing of Esh": {"base": "Blessing of Esh", "class": "Currency", "type": "currency normal"},
 	"0 Blessing of Uul-Netol": {"base": "Blessing of Uul-Netol", "class": "Currency", "type": "currency normal"},
-	"0 Blessing of Chayula": {"base": "Blessing of Chayula", "class": "Currency", "type": "currency normal"},
+	"0 Blessing of Chayula": {"base": "Blessing of Chayula", "class": "Currency", "type": "currency high"},
 	"0 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", "class": "Currency", "type": "currency very low"},
 	"0 Armourer's Scrap": {"base": "Armourer's Scrap", "class": "Currency", "type": "currency very low"},
 	"0 Scroll of Wisdom": {"base": "Scroll of Wisdom", "class": "Currency", "type": "currency very low"},

@@ -80,8 +80,6 @@ from item_config import warbands
 
 from theme_config import formatting
 
-import pricetool
-
 
 def gen_list(obj):
 #	print("Starting {}".format(obj))
@@ -189,7 +187,4 @@ def main():
 
 
 if __name__ == "__main__":
-	# Price updates can take some time.  Uncomment to get most current data before updating filter
-#	pricetool.poetrade_getcurrencyrates()
-#	pricetool.divuniqueupdate()
 	main()
