@@ -280,6 +280,11 @@ settings = {
 					"SetBorderColor {}".format(color['unique']),
 					"PlayAlertSound 3 {}".format(volume['normal']),
 					"SetBackgroundColor {} 220".format(color['black'])],
+	# Special class of unique that has a low average value but still gets a border
+	"unique special": ["Rarity Unique",
+	                   "SetBorderColor {} 150".format(color['unique']),
+	                   "PlayAlertSound 3 {}".format(volume['medium']),
+					   "SetBackgroundColor {} 220".format(color['black'])],
 	"unique normal": ["Rarity Unique",
 					  "PlayAlertSound 3 {}".format(volume['medium']),
 					  "SetBackgroundColor {} 220".format(color['black'])],
