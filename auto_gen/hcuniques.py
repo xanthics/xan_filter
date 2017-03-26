@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/26/2017(m/d/y) 23:12:49 UTC from "Hardcore" data
+# Created: 03/26/2017(m/d/y) 23:19:46 UTC from "Hardcore" data
 
 desc = "Unique"
 
@@ -119,6 +119,7 @@ items = {
 	"7 Demon's Horn": {"base": "Demon's Horn", "type": "unique low"},
 	"7 Imperial Bow": {"base": "Imperial Bow", "type": "unique low"},
 	"7 Iron Hat": {"base": "Iron Hat", "type": "unique low"},
+	"7 Plank Kite Shield": {"base": "Plank Kite Shield", "type": "unique low"},
 	"7 Quartz Flask": {"base": "Quartz Flask", "type": "unique low"},
 	"9 Other uniques": {"type": "unique normal"}
 }

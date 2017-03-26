@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/26/2017(m/d/y) 23:12:49 UTC from "tmpstandard" data
+# Created: 03/26/2017(m/d/y) 23:19:46 UTC from "tmpstandard" data
 
 desc = "Unique"
 
@@ -183,7 +183,6 @@ items = {
 	"7 Demon's Horn": {"base": "Demon's Horn", "type": "unique low"},
 	"7 Destiny Leather": {"base": "Destiny Leather", "type": "unique low"},
 	"7 Diamond Ring": {"base": "Diamond Ring", "type": "unique low"},
-	"7 Dragonscale Boots": {"base": "Dragonscale Boots", "type": "unique low"},
 	"7 Dragonscale Gauntlets": {"base": "Dragonscale Gauntlets", "type": "unique low"},
 	"7 Dread Maul": {"base": "Dread Maul", "type": "unique low"},
 	"7 Dream Mace": {"base": "Dream Mace", "type": "unique low"},
