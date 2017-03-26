@@ -14,6 +14,18 @@ header = '''#!/usr/bin/python
 '''
 
 
+# Helper function to convert a league name to a file prefix
+def convertname(l):
+	if l == 'Standard':
+		return ""
+	elif l == 'Hardcore':
+		return "hc"
+	elif 'tmphardcore' in l:
+		return "phc"
+	else:
+		return "p"
+
+
 # Convert a currency shorthand to full name.  returns a string
 def currencyclassify(cur, val, exa):
 	if val >= exa * .5:
@@ -51,14 +63,7 @@ def gen_currency(currency_list):
 				print('No data for {} in {}.  Using default,'.format(cur, l))
 		curval += u'}\n'
 
-		if l == 'Standard':
-			name = ""
-		elif l == 'Hardcore':
-			name = "hc"
-		elif 'tmphardcore' in l:
-			name = "phc"
-		else:
-			name = "p"
+		name = convertname(l)
 
 		with open('auto_gen\\{}currency.py'.format(name), 'w', encoding='utf-8') as f:
 			f.write(curval)
@@ -69,6 +74,44 @@ def gen_currency(currency_list):
 
 	for u in unknown:
 		print("Unknown currency: {}".format(u))
+
+
+# Convert a currency shorthand to full name.  returns a string
+def essenceclassify(cur, val):
+	if val >= 10:
+		tier = 'currency extremely high'
+	elif val >= 3:
+		tier = 'currency very high'
+	elif val >= 0.95:
+		tier = 'currency high'
+	elif val >= 1 / 8:
+		tier = 'currency normal'
+	else:
+		return ''
+		# tier = 'currency low'
+
+	return "0 {0}\": {{\"base\": \"{0}\", \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier)
+
+
+# given a league grouped list of currency determine all unique entries and then output for each league
+def gen_essence(essence_list):
+	for l in essence_list:
+		curval = '''{}\ndesc = "Essence Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), l))
+
+		for cur in sorted(essence_list[l].keys()):
+			retstr = essenceclassify(cur, essence_list[l][cur])
+			if retstr:
+				curval += '\t"{},\n'.format(retstr)
+
+		curval += '\t"7 Essence default": {"base": "Essence", "class": "Currency", "type": "currency low"}'
+		curval += u'}\n'
+
+		name = convertname(l)
+
+		with open('auto_gen\\{}essence.py'.format(name), 'w', encoding='utf-8') as f:
+			f.write(curval)
+
+
 
 
 # Find all divination cards that have cards which are substrings
@@ -142,14 +185,7 @@ def gen_div(div_list):
 
 		bcards = badcards[:]
 
-		if l == 'Standard':
-			name = ""
-		elif l == 'Hardcore':
-			name = "hc"
-		elif 'tmphardcore' in l:
-			name = "phc"
-		else:
-			name = "p"
+		name = convertname(l)
 
 		items = {'high': verygoodcards[:], 'normal': [], 'low': lowcards[:]}
 
@@ -194,21 +230,14 @@ def gen_div(div_list):
 def gen_unique(unique_list):
 	
 	for l in unique_list:
-		if l == 'Standard':
-			name = ""
-		elif l == 'Hardcore':
-			name = "hc"
-		elif 'tmphardcore' in l:
-			name = "phc"
-		else:
-			name = "p"
+		name = convertname(l)
 
 		items = {'very high': [], 'high': [], 'special': [], 'low': []}
 
 		for u in unique_list[l].keys():
 			# If a unique shares a base and has at least 1 value that is over 2c while average is low, give it a special border
 			if len(unique_list[l][u]) > 1:
-				if max(unique_list[l][u]) > 2 > min(unique_list[l][u]):
+				if max(unique_list[l][u]) > 3 > min(unique_list[l][u]):
 					items['special'].append(u)
 					continue
 				unique_list[l][u] = min(unique_list[l][u])
@@ -217,7 +246,7 @@ def gen_unique(unique_list):
 
 			if unique_list[l][u] >= 30:
 				items['very high'].append(u)
-			elif unique_list[l][u] >= 2:
+			elif unique_list[l][u] >= 3:
 				items['high'].append(u)
 			elif unique_list[l][u] < 0.5:
 				items['low'].append(u)
@@ -234,6 +263,7 @@ def gen_unique(unique_list):
 				f.write(u'\t"7 {0}": {{"base": "{0}", "type": "unique low"}},\n'.format(ii))
 			f.write(u'\t"9 Other uniques": {"type": "unique normal"}\n}\n')
 
+
 # Entry point for getting price data from poe.ninja
 def scrape_ninja():
 	leagues = ['Standard', 'Hardcore', 'tmpstandard', 'tmphardcore']
@@ -241,7 +271,7 @@ def scrape_ninja():
 	paths = {
 		'currency': 'http://poeninja.azureedge.net/api/Data/GetCurrencyOverview?league={}',
 		'div': 'http://poeninja.azureedge.net/api/Data/GetDivinationCardsOverview?league={}',
-		# 'essence': 'http://poeninja.azureedge.net/api/Data/GetEssenceOverview?league={}',
+		'essence': 'http://poeninja.azureedge.net/api/Data/GetEssenceOverview?league={}',
 		'unique jewel': 'http://poeninja.azureedge.net/api/Data/GetUniqueJewelOverview?league={}',
 		'unique map': 'http://poeninja.azureedge.net/api/Data/GetUniqueMapOverview?league={}',
 		'unique flask': 'http://poeninja.azureedge.net/api/Data/GetUniqueFlaskOverview?league={}',
@@ -250,15 +280,18 @@ def scrape_ninja():
 		'unique accessory': 'http://poeninja.azureedge.net/api/Data/GetUniqueAccessoryOverview?league={}'
 	}
 
+	os.environ['NO_PROXY'] = 'poeninja.azureedge.net'
 	requester = requests.session()
 
 	currency = {}
 	divs = {}
+	essences = {}
 	uniques = defaultdict(list)
 
 	for league in leagues:
 		currency[league] = {}
 		divs[league] = {}
+		essences[league] = {}
 		uniques[league] = defaultdict(list)
 
 		for key in paths:
@@ -274,6 +307,11 @@ def scrape_ninja():
 				for i in data:
 					for ii in data[i]:
 						divs[league][ii['name']] = ii['chaosValue']
+			elif key == 'essence':
+				for i in data:
+					for ii in data[i]:
+						essences[league][ii['name']] = ii['chaosValue']
+
 			else:
 				for i in data:
 					for ii in data[i]:
@@ -281,9 +319,9 @@ def scrape_ninja():
 
 	gen_currency(currency)
 	gen_div(divs)
+	gen_essence(essences)
 	gen_unique(uniques)
 
 
 if __name__ == '__main__':
-	os.environ['NO_PROXY'] = 'poeninja.azureedge.net'
 	scrape_ninja()

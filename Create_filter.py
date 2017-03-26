@@ -18,6 +18,11 @@ from auto_gen import currency as stcurrency
 from auto_gen import hccurrency
 from auto_gen import pcurrency
 from auto_gen import phccurrency
+from auto_gen import essence as stessence
+from auto_gen import hcessence
+from auto_gen import pessence
+from auto_gen import phcessence
+
 
 from item_config import animate_weapon
 from item_config import challenges
@@ -111,10 +116,10 @@ def gen_list(obj):
 
 # main function for creating a filter
 def main():
-	leagues = [("st", "Standard", uniques, divination, stcurrency),
-			   ("hc", "Hardcore", hcuniques, hcdivination, hccurrency),
-			   ("l", "Legacy", puniques, pdivination, pcurrency),
-			   ("lhc", "Hardcore Legacy", phcuniques, phcdivination, phccurrency)]
+	leagues = [("st", "Standard", uniques, divination, stcurrency, stessence),
+			   ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence),
+			   ("l", "Legacy", puniques, pdivination, pcurrency, pessence),
+			   ("lhc", "Hardcore Legacy", phcuniques, phcdivination, phccurrency, phcessence)]
 
 	leveling = True  # toggle to show leveling items
 
@@ -134,7 +139,8 @@ def main():
 			buffer += gen_list(challenges)
 		buffer += gen_list(labyrinth)
 		buffer += gen_list(i[4])  # Autogen currency values
-		buffer += gen_list(essences)  # Essences
+		# buffer += gen_list(essences)  # Essences
+		buffer += gen_list(i[5])  # Autogen Essences
 		buffer += gen_list(currency)  # Currency
 		buffer += gen_list(gems)  # Gems
 		buffer += gen_list(i[2])  # uniques
