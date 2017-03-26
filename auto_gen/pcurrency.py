@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/25/2017(m/d/y) 02:42:45 UTC from "tmpstandard" data
+# Created: 03/26/2017(m/d/y) 23:19:46 UTC from "tmpstandard" data
 
 desc = "Currency Autogen"
 
@@ -24,7 +24,7 @@ items = {
 	"0 Orb of Augmentation": {"base": "Orb of Augmentation", "class": "Currency", "type": "currency low"},
 	"0 Orb of Chance": {"base": "Orb of Chance", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Fusing": {"base": "Orb of Fusing", "class": "Currency", "type": "currency normal"},
-	"0 Orb of Regret": {"base": "Orb of Regret", "class": "Currency", "type": "currency normal"},
+	"0 Orb of Regret": {"base": "Orb of Regret", "class": "Currency", "type": "currency high"},
 	"0 Orb of Scouring": {"base": "Orb of Scouring", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Transmutation": {"base": "Orb of Transmutation", "class": "Currency", "type": "currency low"},
 	"0 Perandus Coin": {"base": "Perandus Coin", "class": "Currency", "type": "currency low"},

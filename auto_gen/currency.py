@@ -1,12 +1,12 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/25/2017(m/d/y) 02:42:45 UTC from "Standard" data
+# Created: 03/26/2017(m/d/y) 23:19:46 UTC from "Standard" data
 
 desc = "Currency Autogen"
 
 # Base type : settings pair
 items = {
-	"0 Apprentice Cartographer's Sextant": {"base": "Apprentice Cartographer's Sextant", "class": "Currency", "type": "currency high"},
+	"0 Apprentice Cartographer's Sextant": {"base": "Apprentice Cartographer's Sextant", "class": "Currency", "type": "currency normal"},
 	"0 Blessed Orb": {"base": "Blessed Orb", "class": "Currency", "type": "currency normal"},
 	"0 Cartographer's Chisel": {"base": "Cartographer's Chisel", "class": "Currency", "type": "currency normal"},
 	"0 Chaos Orb": {"base": "Chaos Orb", "class": "Currency", "type": "currency high"},
@@ -28,7 +28,7 @@ items = {
 	"0 Orb of Scouring": {"base": "Orb of Scouring", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Transmutation": {"base": "Orb of Transmutation", "class": "Currency", "type": "currency low"},
 	"0 Perandus Coin": {"base": "Perandus Coin", "class": "Currency", "type": "currency low"},
-	"0 Regal Orb": {"base": "Regal Orb", "class": "Currency", "type": "currency high"},
+	"0 Regal Orb": {"base": "Regal Orb", "class": "Currency", "type": "currency normal"},
 	"0 Silver Coin": {"base": "Silver Coin", "class": "Currency", "type": "currency low"},
 	"0 Vaal Orb": {"base": "Vaal Orb", "class": "Currency", "type": "currency high"},
 }
