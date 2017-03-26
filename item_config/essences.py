@@ -18,5 +18,4 @@ items = {
 	"0 Essence of Horror": {"base": "Essence of Horror", "class": "Currency", "type": "currency normal"},
 	"0 Essence of Hysteria": {"base": "Essence of Hysteria", "class": "Currency", "type": "currency normal"},
 	"0 Essence of Insanity": {"base": "Essence of Insanity", "class": "Currency", "type": "currency normal"},
-	"0 Prophecy": {"base": "Prophecy", "class": "Currency", "type": "currency high"},
 }
