@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/26/2017(m/d/y) 23:12:49 UTC from "tmpstandard" data
+# Created: 03/26/2017(m/d/y) 23:19:46 UTC from "tmpstandard" data
 
 desc = "Divination Card"
 
@@ -91,7 +91,6 @@ items = {
 	"3 The Forsaken": {"base": "The Forsaken", "class": "Divination Card", "type": "divination low"},
 	"3 The Fox": {"base": "The Fox", "class": "Divination Card", "type": "divination low"},
 	"3 The Gambler": {"base": "The Gambler", "class": "Divination Card", "type": "divination low"},
-	"3 The Garish Power": {"base": "The Garish Power", "class": "Divination Card", "type": "divination low"},
 	"3 The Gemcutter": {"base": "The Gemcutter", "class": "Divination Card", "type": "divination low"},
 	"3 The Gentleman": {"base": "The Gentleman", "class": "Divination Card", "type": "divination low"},
 	"3 The Gladiator": {"base": "The Gladiator", "class": "Divination Card", "type": "divination low"},
