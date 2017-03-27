@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/26/2017(m/d/y) 23:23:06 UTC from "Standard" data
+# Created: 03/27/2017(m/d/y) 00:17:41 UTC from "Standard" data
 
 desc = "Unique"
 
@@ -61,7 +61,6 @@ items = {
 	"1 Carnal Sceptre": {"base": "Carnal Sceptre", "type": "unique high"},
 	"1 Champion Kite Shield": {"base": "Champion Kite Shield", "type": "unique high"},
 	"1 Citadel Bow": {"base": "Citadel Bow", "type": "unique high"},
-	"1 Conjurer Boots": {"base": "Conjurer Boots", "type": "unique high"},
 	"1 Conjurer Gloves": {"base": "Conjurer Gloves", "type": "unique high"},
 	"1 Coronal Leather": {"base": "Coronal Leather", "type": "unique high"},
 	"1 Corrugated Buckler": {"base": "Corrugated Buckler", "type": "unique high"},
@@ -69,6 +68,7 @@ items = {
 	"1 Ezomyte Burgonet": {"base": "Ezomyte Burgonet", "type": "unique high"},
 	"1 Fiend Dagger": {"base": "Fiend Dagger", "type": "unique high"},
 	"1 Full Wyrmscale": {"base": "Full Wyrmscale", "type": "unique high"},
+	"1 Gold Ring": {"base": "Gold Ring", "type": "unique high"},
 	"1 Grand Mana Flask": {"base": "Grand Mana Flask", "type": "unique high"},
 	"1 Granite Flask": {"base": "Granite Flask", "type": "unique high"},
 	"1 Graveyard Map": {"base": "Graveyard Map", "type": "unique high"},
@@ -117,6 +117,7 @@ items = {
 	"6 Amethyst Ring": {"base": "Amethyst Ring", "type": "unique special"},
 	"6 Archon Kite Shield": {"base": "Archon Kite Shield", "type": "unique special"},
 	"6 Branded Kite Shield": {"base": "Branded Kite Shield", "type": "unique special"},
+	"6 Bronzescale Gauntlets": {"base": "Bronzescale Gauntlets", "type": "unique special"},
 	"6 Cloth Belt": {"base": "Cloth Belt", "type": "unique special"},
 	"6 Cobalt Jewel": {"base": "Cobalt Jewel", "type": "unique special"},
 	"6 Coiled Staff": {"base": "Coiled Staff", "type": "unique special"},
@@ -135,7 +136,6 @@ items = {
 	"6 Goathide Boots": {"base": "Goathide Boots", "type": "unique special"},
 	"6 Goathide Gloves": {"base": "Goathide Gloves", "type": "unique special"},
 	"6 Gold Amulet": {"base": "Gold Amulet", "type": "unique special"},
-	"6 Gold Ring": {"base": "Gold Ring", "type": "unique special"},
 	"6 Great Mallet": {"base": "Great Mallet", "type": "unique special"},
 	"6 Harbinger Bow": {"base": "Harbinger Bow", "type": "unique special"},
 	"6 Heavy Belt": {"base": "Heavy Belt", "type": "unique special"},
@@ -207,7 +207,6 @@ items = {
 	"7 Brass Spirit Shield": {"base": "Brass Spirit Shield", "type": "unique low"},
 	"7 Bronze Sceptre": {"base": "Bronze Sceptre", "type": "unique low"},
 	"7 Bronzescale Boots": {"base": "Bronzescale Boots", "type": "unique low"},
-	"7 Bronzescale Gauntlets": {"base": "Bronzescale Gauntlets", "type": "unique low"},
 	"7 Buckskin Tunic": {"base": "Buckskin Tunic", "type": "unique low"},
 	"7 Burnished Spiked Shield": {"base": "Burnished Spiked Shield", "type": "unique low"},
 	"7 Carnal Armour": {"base": "Carnal Armour", "type": "unique low"},
@@ -246,7 +245,6 @@ items = {
 	"7 Great Crown": {"base": "Great Crown", "type": "unique low"},
 	"7 Great Helmet": {"base": "Great Helmet", "type": "unique low"},
 	"7 Gut Ripper": {"base": "Gut Ripper", "type": "unique low"},
-	"7 Harmonic Spirit Shield": {"base": "Harmonic Spirit Shield", "type": "unique low"},
 	"7 Headsman Axe": {"base": "Headsman Axe", "type": "unique low"},
 	"7 Heavy Quiver": {"base": "Heavy Quiver", "type": "unique low"},
 	"7 Highland Blade": {"base": "Highland Blade", "type": "unique low"},
@@ -335,6 +333,7 @@ items = {
 	"7 Void Sceptre": {"base": "Void Sceptre", "type": "unique low"},
 	"7 War Buckler": {"base": "War Buckler", "type": "unique low"},
 	"7 War Hammer": {"base": "War Hammer", "type": "unique low"},
+	"7 Widowsilk Robe": {"base": "Widowsilk Robe", "type": "unique low"},
 	"7 Wild Leather": {"base": "Wild Leather", "type": "unique low"},
 	"7 Wool Shoes": {"base": "Wool Shoes", "type": "unique low"},
 	"7 Wrapped Mitts": {"base": "Wrapped Mitts", "type": "unique low"},

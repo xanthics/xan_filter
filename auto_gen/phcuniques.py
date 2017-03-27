@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/26/2017(m/d/y) 23:23:06 UTC from "tmphardcore" data
+# Created: 03/27/2017(m/d/y) 00:17:41 UTC from "tmphardcore" data
 
 desc = "Unique"
 
@@ -191,7 +191,6 @@ items = {
 	"7 Decimation Bow": {"base": "Decimation Bow", "type": "unique low"},
 	"7 Decorative Axe": {"base": "Decorative Axe", "type": "unique low"},
 	"7 Deerskin Boots": {"base": "Deerskin Boots", "type": "unique low"},
-	"7 Demon's Horn": {"base": "Demon's Horn", "type": "unique low"},
 	"7 Dragonscale Gauntlets": {"base": "Dragonscale Gauntlets", "type": "unique low"},
 	"7 Dread Maul": {"base": "Dread Maul", "type": "unique low"},
 	"7 Dream Mace": {"base": "Dream Mace", "type": "unique low"},
@@ -262,8 +261,7 @@ items = {
 	"7 Serrated Arrow Quiver": {"base": "Serrated Arrow Quiver", "type": "unique low"},
 	"7 Shadow Sceptre": {"base": "Shadow Sceptre", "type": "unique low"},
 	"7 Shagreen Boots": {"base": "Shagreen Boots", "type": "unique low"},
-	"7 Silk Slippers": {"base": "Silk Slippers", "type": "unique low"},
-	"7 Silken Hood": {"base": "Silken Hood", "type": "unique low"},
+	"7 Silk Gloves": {"base": "Silk Gloves", "type": "unique low"},
 	"7 Skinning Knife": {"base": "Skinning Knife", "type": "unique low"},
 	"7 Soldier Boots": {"base": "Soldier Boots", "type": "unique low"},
 	"7 Soldier Helmet": {"base": "Soldier Helmet", "type": "unique low"},
@@ -274,7 +272,6 @@ items = {
 	"7 Strapped Leather": {"base": "Strapped Leather", "type": "unique low"},
 	"7 Sulphur Flask": {"base": "Sulphur Flask", "type": "unique low"},
 	"7 Sundering Axe": {"base": "Sundering Axe", "type": "unique low"},
-	"7 Supreme Spiked Shield": {"base": "Supreme Spiked Shield", "type": "unique low"},
 	"7 Thresher Claw": {"base": "Thresher Claw", "type": "unique low"},
 	"7 Timeworn Claw": {"base": "Timeworn Claw", "type": "unique low"},
 	"7 Tomahawk": {"base": "Tomahawk", "type": "unique low"},
