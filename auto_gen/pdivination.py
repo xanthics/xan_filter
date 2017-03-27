@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/26/2017(m/d/y) 23:23:06 UTC from "tmpstandard" data
+# Created: 03/27/2017(m/d/y) 00:17:41 UTC from "tmpstandard" data
 
 desc = "Divination Card"
 
@@ -42,6 +42,7 @@ items = {
 	"2 The Hunger": {"base": "The Hunger", "class": "Divination Card", "type": "divination high"},
 	"2 The King's Heart": {"base": "The King's Heart", "class": "Divination Card", "type": "divination high"},
 	"2 The Porcupine": {"base": "The Porcupine", "class": "Divination Card", "type": "divination high"},
+	"2 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
 	"2 The Saint's Treasure": {"base": "The Saint's Treasure", "class": "Divination Card", "type": "divination high"},
 	"2 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination high"},
 	"2 The Standoff": {"base": "The Standoff", "class": "Divination Card", "type": "divination high"},
@@ -77,7 +78,6 @@ items = {
 	"3 Rats": {"base": "Rats", "class": "Divination Card", "type": "divination low"},
 	"3 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},
 	"3 Struck by Lightning": {"base": "Struck by Lightning", "class": "Divination Card", "type": "divination low"},
-	"3 The Battle Born": {"base": "The Battle Born", "class": "Divination Card", "type": "divination low"},
 	"3 The Betrayal": {"base": "The Betrayal", "class": "Divination Card", "type": "divination low"},
 	"3 The Calling": {"base": "The Calling", "class": "Divination Card", "type": "divination low"},
 	"3 The Catalyst": {"base": "The Catalyst", "class": "Divination Card", "type": "divination low"},

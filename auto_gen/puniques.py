@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/26/2017(m/d/y) 23:23:06 UTC from "tmpstandard" data
+# Created: 03/27/2017(m/d/y) 00:17:41 UTC from "tmpstandard" data
 
 desc = "Unique"
 
@@ -61,6 +61,7 @@ items = {
 	"1 Torture Chamber Map": {"base": "Torture Chamber Map", "type": "unique high"},
 	"1 Trapper Boots": {"base": "Trapper Boots", "type": "unique high"},
 	"1 Underground River Map": {"base": "Underground River Map", "type": "unique high"},
+	"1 Ursine Pelt": {"base": "Ursine Pelt", "type": "unique high"},
 	"1 Vaal Mask": {"base": "Vaal Mask", "type": "unique high"},
 	"1 Vaal Pyramid Map": {"base": "Vaal Pyramid Map", "type": "unique high"},
 	"1 Vaal Regalia": {"base": "Vaal Regalia", "type": "unique high"},
@@ -156,6 +157,7 @@ items = {
 	"7 Boot Knife": {"base": "Boot Knife", "type": "unique low"},
 	"7 Brass Maul": {"base": "Brass Maul", "type": "unique low"},
 	"7 Brass Spirit Shield": {"base": "Brass Spirit Shield", "type": "unique low"},
+	"7 Bronze Sceptre": {"base": "Bronze Sceptre", "type": "unique low"},
 	"7 Bronzescale Boots": {"base": "Bronzescale Boots", "type": "unique low"},
 	"7 Bronzescale Gauntlets": {"base": "Bronzescale Gauntlets", "type": "unique low"},
 	"7 Buckskin Tunic": {"base": "Buckskin Tunic", "type": "unique low"},
@@ -290,6 +292,7 @@ items = {
 	"7 Siege Helmet": {"base": "Siege Helmet", "type": "unique low"},
 	"7 Silk Gloves": {"base": "Silk Gloves", "type": "unique low"},
 	"7 Silk Slippers": {"base": "Silk Slippers", "type": "unique low"},
+	"7 Silken Hood": {"base": "Silken Hood", "type": "unique low"},
 	"7 Skinning Knife": {"base": "Skinning Knife", "type": "unique low"},
 	"7 Sledgehammer": {"base": "Sledgehammer", "type": "unique low"},
 	"7 Soldier Boots": {"base": "Soldier Boots", "type": "unique low"},

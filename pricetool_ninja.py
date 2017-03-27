@@ -76,13 +76,13 @@ def gen_currency(currency_list):
 		print("Unknown currency: {}".format(u))
 
 
-# Convert a currency shorthand to full name.  returns a string
+# Convert a essence value to string.  returns a string
 def essenceclassify(cur, val):
-	if val >= 10:
+	if val >= 15:
 		tier = 'currency extremely high'
-	elif val >= 3:
+	elif val >= 6:
 		tier = 'currency very high'
-	elif val >= 0.95:
+	elif val >= 2:
 		tier = 'currency high'
 	elif val >= 1 / 8:
 		tier = 'currency normal'
@@ -93,7 +93,7 @@ def essenceclassify(cur, val):
 	return "0 {0}\": {{\"base\": \"{0}\", \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier)
 
 
-# given a league grouped list of currency determine all unique entries and then output for each league
+# given a league grouped list of essences determine all unique entries and then output for each league
 def gen_essence(essence_list):
 	for l in essence_list:
 		curval = '''{}\ndesc = "Essence Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), l))
