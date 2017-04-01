@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/26/2017(m/d/y) 23:19:46 UTC from "tmpstandard" data
+# Created: 04/01/2017(m/d/y) 01:01:39 UTC from "tmpstandard" data
 
 desc = "Currency Autogen"
 
