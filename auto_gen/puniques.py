@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 04/01/2017(m/d/y) 01:01:39 UTC from "tmpstandard" data
+# Created: 04/01/2017(m/d/y) 01:07:53 UTC from "tmpstandard" data
 
 desc = "Unique"
 
@@ -37,7 +37,6 @@ items = {
 	"1 Ezomyte Burgonet": {"base": "Ezomyte Burgonet", "type": "unique high"},
 	"1 Full Wyrmscale": {"base": "Full Wyrmscale", "type": "unique high"},
 	"1 Gladiator Plate": {"base": "Gladiator Plate", "type": "unique high"},
-	"1 Graveyard Map": {"base": "Graveyard Map", "type": "unique high"},
 	"1 Highborn Staff": {"base": "Highborn Staff", "type": "unique high"},
 	"1 Hubris Circlet": {"base": "Hubris Circlet", "type": "unique high"},
 	"1 Imperial Maul": {"base": "Imperial Maul", "type": "unique high"},
