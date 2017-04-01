@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 04/01/2017(m/d/y) 00:49:38 UTC from "tmphardcore" data
+# Created: 04/01/2017(m/d/y) 01:01:39 UTC from "tmphardcore" data
 
 desc = "Unique"
 
@@ -40,6 +40,7 @@ items = {
 	"1 Bismuth Flask": {"base": "Bismuth Flask", "type": "unique high"},
 	"1 Blinder": {"base": "Blinder", "type": "unique high"},
 	"1 Broadhead Arrow Quiver": {"base": "Broadhead Arrow Quiver", "type": "unique high"},
+	"1 Citrine Amulet": {"base": "Citrine Amulet", "type": "unique high"},
 	"1 Clasped Mitts": {"base": "Clasped Mitts", "type": "unique high"},
 	"1 Clutching Talisman": {"base": "Clutching Talisman", "type": "unique high"},
 	"1 Coiled Staff": {"base": "Coiled Staff", "type": "unique high"},
@@ -86,7 +87,6 @@ items = {
 	"6 Amber Amulet": {"base": "Amber Amulet", "type": "unique special"},
 	"6 Branded Kite Shield": {"base": "Branded Kite Shield", "type": "unique special"},
 	"6 Chain Belt": {"base": "Chain Belt", "type": "unique special"},
-	"6 Citrine Amulet": {"base": "Citrine Amulet", "type": "unique special"},
 	"6 Cloth Belt": {"base": "Cloth Belt", "type": "unique special"},
 	"6 Cobalt Jewel": {"base": "Cobalt Jewel", "type": "unique special"},
 	"6 Coral Amulet": {"base": "Coral Amulet", "type": "unique special"},
@@ -256,7 +256,6 @@ items = {
 	"7 Stiletto": {"base": "Stiletto", "type": "unique low"},
 	"7 Strapped Boots": {"base": "Strapped Boots", "type": "unique low"},
 	"7 Strapped Leather": {"base": "Strapped Leather", "type": "unique low"},
-	"7 Studded Belt": {"base": "Studded Belt", "type": "unique low"},
 	"7 Sulphur Flask": {"base": "Sulphur Flask", "type": "unique low"},
 	"7 Sundering Axe": {"base": "Sundering Axe", "type": "unique low"},
 	"7 Tarnished Spirit Shield": {"base": "Tarnished Spirit Shield", "type": "unique low"},

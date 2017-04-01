@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 04/01/2017(m/d/y) 00:49:38 UTC from "tmpstandard" data
+# Created: 04/01/2017(m/d/y) 01:01:39 UTC from "tmpstandard" data
 
 desc = "Divination Card"
 
@@ -109,7 +109,6 @@ items = {
 	"3 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},
 	"3 The Sigil": {"base": "The Sigil", "class": "Divination Card", "type": "divination low"},
 	"3 The Siren": {"base": "The Siren", "class": "Divination Card", "type": "divination low"},
-	"3 The Summoner": {"base": "The Summoner", "class": "Divination Card", "type": "divination low"},
 	"3 The Sun": {"base": "The Sun", "class": "Divination Card", "type": "divination low"},
 	"3 The Surgeon": {"base": "The Surgeon", "class": "Divination Card", "type": "divination low"},
 	"3 The Throne": {"base": "The Throne", "class": "Divination Card", "type": "divination low"},

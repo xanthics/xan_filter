@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 04/01/2017(m/d/y) 00:49:38 UTC from "Hardcore" data
+# Created: 04/01/2017(m/d/y) 01:01:39 UTC from "Hardcore" data
 
 desc = "Divination Card"
 
@@ -31,7 +31,6 @@ items = {
 	"2 Atziri's Arsenal": {"base": "Atziri's Arsenal", "class": "Divination Card", "type": "divination high"},
 	"2 Bowyer's Dream": {"base": "Bowyer's Dream", "class": "Divination Card", "type": "divination high"},
 	"2 Chaotic Disposition": {"base": "Chaotic Disposition", "class": "Divination Card", "type": "divination high"},
-	"2 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination high"},
 	"2 Heterochromia": {"base": "Heterochromia", "class": "Divination Card", "type": "divination high"},
 	"2 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
 	"2 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination high"},
