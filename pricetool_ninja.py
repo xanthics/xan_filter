@@ -79,12 +79,10 @@ def gen_currency(currency_list):
 # Convert a essence value to string.  returns a string
 def essenceclassify(cur, val):
 	if val >= 15:
-		tier = 'currency extremely high'
-	elif val >= 6:
 		tier = 'currency very high'
-	elif val >= 2:
+	elif val >= 9:
 		tier = 'currency high'
-	elif val >= 1 / 8:
+	elif val >= 1.5:
 		tier = 'currency normal'
 	else:
 		return ''

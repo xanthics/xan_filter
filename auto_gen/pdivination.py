@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/27/2017(m/d/y) 00:17:41 UTC from "tmpstandard" data
+# Created: 04/01/2017(m/d/y) 00:49:38 UTC from "tmpstandard" data
 
 desc = "Divination Card"
 
@@ -16,7 +16,6 @@ items = {
 	"1 Hunter's Reward": {"base": "Hunter's Reward", "class": "Divination Card", "type": "divination very high"},
 	"1 Mawr Blaidd": {"base": "Mawr Blaidd", "class": "Divination Card", "type": "divination very high"},
 	"1 The Artist": {"base": "The Artist", "class": "Divination Card", "type": "divination very high"},
-	"1 The Celestial Justicar": {"base": "The Celestial Justicar", "class": "Divination Card", "type": "divination very high"},
 	"1 The Doctor": {"base": "The Doctor", "class": "Divination Card", "type": "divination very high"},
 	"1 The Ethereal": {"base": "The Ethereal", "class": "Divination Card", "type": "divination very high"},
 	"1 The Fiend": {"base": "The Fiend", "class": "Divination Card", "type": "divination very high"},
@@ -27,7 +26,6 @@ items = {
 	"1 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
 	"1 The Spark and the Flame": {"base": "The Spark and the Flame", "class": "Divination Card", "type": "divination very high"},
 	"1 Wealth and Power": {"base": "Wealth and Power", "class": "Divination Card", "type": "divination very high"},
-	"2 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "divination high"},
 	"2 Chaotic Disposition": {"base": "Chaotic Disposition", "class": "Divination Card", "type": "divination high"},
 	"2 Heterochromia": {"base": "Heterochromia", "class": "Divination Card", "type": "divination high"},
 	"2 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination high"},
@@ -35,6 +33,7 @@ items = {
 	"2 The Aesthete": {"base": "The Aesthete", "class": "Divination Card", "type": "divination high"},
 	"2 The Brittle Emperor": {"base": "The Brittle Emperor", "class": "Divination Card", "type": "divination high"},
 	"2 The Cartographer": {"base": "The Cartographer", "class": "Divination Card", "type": "divination high"},
+	"2 The Celestial Justicar": {"base": "The Celestial Justicar", "class": "Divination Card", "type": "divination high"},
 	"2 The Dapper Prodigy": {"base": "The Dapper Prodigy", "class": "Divination Card", "type": "divination high"},
 	"2 The Enlightened": {"base": "The Enlightened", "class": "Divination Card", "type": "divination high"},
 	"2 The Fletcher": {"base": "The Fletcher", "class": "Divination Card", "type": "divination high"},
@@ -45,7 +44,6 @@ items = {
 	"2 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
 	"2 The Saint's Treasure": {"base": "The Saint's Treasure", "class": "Divination Card", "type": "divination high"},
 	"2 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination high"},
-	"2 The Standoff": {"base": "The Standoff", "class": "Divination Card", "type": "divination high"},
 	"2 The Stormcaller": {"base": "The Stormcaller", "class": "Divination Card", "type": "divination high"},
 	"2 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination high"},
 	"2 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination high"},
@@ -83,17 +81,15 @@ items = {
 	"3 The Catalyst": {"base": "The Catalyst", "class": "Divination Card", "type": "divination low"},
 	"3 The Coming Storm": {"base": "The Coming Storm", "class": "Divination Card", "type": "divination low"},
 	"3 The Demoness": {"base": "The Demoness", "class": "Divination Card", "type": "divination low"},
+	"3 The Doppelganger": {"base": "The Doppelganger", "class": "Divination Card", "type": "divination low"},
 	"3 The Drunken Aristocrat": {"base": "The Drunken Aristocrat", "class": "Divination Card", "type": "divination low"},
 	"3 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
 	"3 The Explorer": {"base": "The Explorer", "class": "Divination Card", "type": "divination low"},
 	"3 The Feast": {"base": "The Feast", "class": "Divination Card", "type": "divination low"},
 	"3 The Flora's Gift": {"base": "The Flora's Gift", "class": "Divination Card", "type": "divination low"},
-	"3 The Forsaken": {"base": "The Forsaken", "class": "Divination Card", "type": "divination low"},
-	"3 The Fox": {"base": "The Fox", "class": "Divination Card", "type": "divination low"},
 	"3 The Gambler": {"base": "The Gambler", "class": "Divination Card", "type": "divination low"},
 	"3 The Gemcutter": {"base": "The Gemcutter", "class": "Divination Card", "type": "divination low"},
 	"3 The Gentleman": {"base": "The Gentleman", "class": "Divination Card", "type": "divination low"},
-	"3 The Gladiator": {"base": "The Gladiator", "class": "Divination Card", "type": "divination low"},
 	"3 The Hermit": {"base": "The Hermit", "class": "Divination Card", "type": "divination low"},
 	"3 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination low"},
 	"3 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination low"},
@@ -104,8 +100,8 @@ items = {
 	"3 The Mercenary": {"base": "The Mercenary", "class": "Divination Card", "type": "divination low"},
 	"3 The Metalsmith's Gift": {"base": "The Metalsmith's Gift", "class": "Divination Card", "type": "divination low"},
 	"3 The Oath": {"base": "The Oath", "class": "Divination Card", "type": "divination low"},
-	"3 The Opulent": {"base": "The Opulent", "class": "Divination Card", "type": "divination low"},
 	"3 The Pack Leader": {"base": "The Pack Leader", "class": "Divination Card", "type": "divination low"},
+	"3 The Pact": {"base": "The Pact", "class": "Divination Card", "type": "divination low"},
 	"3 The Penitent": {"base": "The Penitent", "class": "Divination Card", "type": "divination low"},
 	"3 The Rabid Rhoa": {"base": "The Rabid Rhoa", "class": "Divination Card", "type": "divination low"},
 	"3 The Scarred Meadow": {"base": "The Scarred Meadow", "class": "Divination Card", "type": "divination low"},
@@ -118,7 +114,6 @@ items = {
 	"3 The Surgeon": {"base": "The Surgeon", "class": "Divination Card", "type": "divination low"},
 	"3 The Throne": {"base": "The Throne", "class": "Divination Card", "type": "divination low"},
 	"3 The Tower": {"base": "The Tower", "class": "Divination Card", "type": "divination low"},
-	"3 The Traitor": {"base": "The Traitor", "class": "Divination Card", "type": "divination low"},
 	"3 The Twins": {"base": "The Twins", "class": "Divination Card", "type": "divination low"},
 	"3 The Visionary": {"base": "The Visionary", "class": "Divination Card", "type": "divination low"},
 	"3 The Warden": {"base": "The Warden", "class": "Divination Card", "type": "divination low"},
