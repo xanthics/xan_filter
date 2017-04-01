@@ -1,6 +1,6 @@
 #**************************************************************
 # Welcome to xan.filter, a Python generated loot filter for PoE
-# This filter was generated for Legacy on 04/01/2017(m/d/y) 00:49:38 UTC
+# This filter was generated for Legacy on 04/01/2017(m/d/y) 01:01:44 UTC
 # The most current version of code can always be found at https://github.com/xanthics/poe_filter
 #**************************************************************
 
@@ -41,7 +41,7 @@ Show
 
 #Always show
 Show
-	BaseType "Splinter of Tul" "Splinter of Uul-Netol" "Splinter of Xoph" "Splinter of Chayula" "Splinter of Esh"
+	BaseType "Splinter of Esh" "Splinter of Uul-Netol" "Splinter of Xoph" "Splinter of Tul" "Splinter of Chayula"
 	Class "Currency"
 	SetBorderColor 192 128 254
 	SetFontSize 30
@@ -103,7 +103,7 @@ Show
 
 #Always show
 Show
-	BaseType "Opal Ring" "Crystal Belt" "Steel Ring"
+	BaseType "Steel Ring" "Crystal Belt" "Opal Ring"
 	PlayAlertSound 2 50
 	SetBorderColor 192 128 254
 	SetFontSize 35
@@ -149,6 +149,7 @@ Show
 	ItemLevel < 2
 	SetFontSize 18
 	SetBackgroundColor 0 0 0 100
+	SetBorderColor 135 135 135
 
 #challenge item
 Show
@@ -160,7 +161,7 @@ Show
 
 #Labyrinth
 Show
-	BaseType "Portal Shredder" "Sand of Eternity" "Silver Key" "Rod of Detonation" "Treasure Key" "Offering to the Goddess" "Heart of the Gargoyle" "Orb of Elemental Dispersion" "Cogs of Disruption" "Cube Of Absorption" "Golden Key" "Bane of the Loyal"
+	BaseType "Silver Key" "Orb of Elemental Dispersion" "Golden Key" "Cube Of Absorption" "Rod of Detonation" "Bane of the Loyal" "Heart of the Gargoyle" "Portal Shredder" "Cogs of Disruption" "Sand of Eternity" "Offering to the Goddess" "Treasure Key"
 	SetBorderColor 192 128 254
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
@@ -172,7 +173,7 @@ Show
 	SetBorderColor 170 158 130
 	SetFontSize 45
 	PlayAlertSound 5 300
-	SetBackgroundColor 51 58 75 220
+	SetBackgroundColor 0 0 0 220
 
 #Currency Autogen
 Show
@@ -181,59 +182,68 @@ Show
 	SetBorderColor 170 158 130
 	SetFontSize 40
 	PlayAlertSound 5 75
-	SetBackgroundColor 51 58 75 220
+	SetBackgroundColor 0 0 0 220
 
 #Currency Autogen
 Show
-	BaseType "Perandus Coin" "Glassblower's Bauble" "Orb of Transmutation" "Orb of Augmentation" "Chromatic Orb" "Silver Coin" "Jeweller's Orb" "Orb of Alteration"
+	BaseType "Silver Coin" "Chromatic Orb" "Orb of Alteration" "Jeweller's Orb" "Orb of Augmentation" "Perandus Coin" "Orb of Transmutation"
 	Class "Currency"
 	SetFontSize 30
 	SetBackgroundColor 0 0 0 220
 
 #Currency Autogen
 Show
-	BaseType "Orb of Fusing" "Blessed Orb" "Regal Orb" "Orb of Scouring" "Cartographer's Chisel" "Orb of Chance" "Orb of Alchemy" "Apprentice Cartographer's Sextant" "Vaal Orb"
+	BaseType "Apprentice Cartographer's Sextant" "Glassblower's Bauble" "Orb of Alchemy" "Orb of Scouring" "Vaal Orb" "Orb of Fusing" "Regal Orb" "Cartographer's Chisel" "Orb of Chance" "Blessed Orb"
 	Class "Currency"
 	SetBorderColor 170 158 130
 	SetFontSize 35
-	PlayAlertSound 5 25
-	SetBackgroundColor 51 58 75 220
+	PlayAlertSound 5 20
+	SetBackgroundColor 0 0 0 220
 
 #Currency Autogen
 Show
-	BaseType "Divine Orb" "Master Cartographer's Sextant"
+	BaseType "Master Cartographer's Sextant" "Divine Orb"
 	Class "Currency"
 	SetBorderColor 170 158 130
 	SetFontSize 45
 	PlayAlertSound 5 100
-	SetBackgroundColor 51 58 75 220
+	SetBackgroundColor 0 0 0 220
 
 #Essence Autogen
 Show
-	BaseType "Deafening Essence of Woe" "Deafening Essence of Contempt" "Essence of Horror"
+	BaseType "Essence of Horror" "Essence of Delirium" "Deafening Essence of Spite" "Essence of Insanity"
+	Class "Currency"
+	SetBorderColor 170 158 130
+	SetFontSize 45
+	PlayAlertSound 5 300
+	SetBackgroundColor 0 0 0 220
+
+#Essence Autogen
+Show
+	BaseType "Shrieking Essence of Hatred" "Shrieking Essence of Greed" "Screaming Essence of Loathing" "Shrieking Essence of Misery" "Deafening Essence of Suffering" "Deafening Essence of Hatred" "Deafening Essence of Torment" "Shrieking Essence of Dread" "Screaming Essence of Envy" "Screaming Essence of Contempt" "Shrieking Essence of Fear" "Shrieking Essence of Torment" "Screaming Essence of Spite" "Shrieking Essence of Wrath" "Deafening Essence of Anguish" "Shrieking Essence of Scorn" "Deafening Essence of Sorrow" "Screaming Essence of Woe" "Shrieking Essence of Sorrow" "Deafening Essence of Doubt" "Shrieking Essence of Loathing"
 	Class "Currency"
 	SetBorderColor 170 158 130
 	SetFontSize 40
 	PlayAlertSound 5 75
-	SetBackgroundColor 51 58 75 220
+	SetBackgroundColor 0 0 0 220
 
 #Essence Autogen
 Show
-	BaseType "Shrieking Essence of Zeal" "Essence of Hysteria" "Screaming Essence of Spite" "Deafening Essence of Wrath" "Shrieking Essence of Spite" "Deafening Essence of Dread" "Shrieking Essence of Wrath" "Shrieking Essence of Misery" "Deafening Essence of Greed" "Shrieking Essence of Greed" "Deafening Essence of Scorn" "Deafening Essence of Envy" "Deafening Essence of Anger" "Deafening Essence of Loathing" "Shrieking Essence of Woe" "Shrieking Essence of Anger" "Shrieking Essence of Loathing" "Deafening Essence of Hatred" "Shrieking Essence of Scorn" "Shrieking Essence of Fear" "Shrieking Essence of Rage" "Screaming Essence of Envy" "Deafening Essence of Fear" "Deafening Essence of Zeal" "Shrieking Essence of Envy" "Remnant of Corruption" "Deafening Essence of Rage" "Deafening Essence of Misery" "Shrieking Essence of Contempt"
+	BaseType "Wailing Essence of Zeal" "Shrieking Essence of Suffering" "Weeping Essence of Woe" "Wailing Essence of Rage" "Whispering Essence of Woe" "Whispering Essence of Contempt" "Muttering Essence of Woe" "Weeping Essence of Fear" "Muttering Essence of Torment" "Weeping Essence of Contempt" "Screaming Essence of Doubt" "Weeping Essence of Doubt" "Wailing Essence of Sorrow" "Screaming Essence of Scorn" "Screaming Essence of Zeal" "Weeping Essence of Wrath" "Weeping Essence of Greed" "Weeping Essence of Hatred" "Wailing Essence of Spite" "Wailing Essence of Torment" "Screaming Essence of Wrath" "Screaming Essence of Fear" "Weeping Essence of Suffering" "Wailing Essence of Wrath" "Screaming Essence of Suffering" "Screaming Essence of Sorrow" "Wailing Essence of Contempt" "Weeping Essence of Anger" "Wailing Essence of Anger" "Shrieking Essence of Anguish" "Weeping Essence of Sorrow" "Muttering Essence of Sorrow" "Muttering Essence of Hatred" "Muttering Essence of Fear" "Screaming Essence of Torment" "Shrieking Essence of Doubt" "Wailing Essence of Hatred" "Whispering Essence of Greed" "Weeping Essence of Torment" "Screaming Essence of Misery" "Screaming Essence of Dread" "Wailing Essence of Suffering" "Screaming Essence of Greed" "Screaming Essence of Rage" "Weeping Essence of Rage" "Wailing Essence of Loathing" "Muttering Essence of Greed" "Screaming Essence of Anger" "Screaming Essence of Anguish" "Wailing Essence of Greed" "Wailing Essence of Woe" "Wailing Essence of Doubt" "Wailing Essence of Anguish" "Screaming Essence of Hatred" "Muttering Essence of Contempt" "Muttering Essence of Anger" "Wailing Essence of Fear"
 	Class "Currency"
 	SetBorderColor 170 158 130
 	SetFontSize 35
-	PlayAlertSound 5 25
-	SetBackgroundColor 51 58 75 220
+	PlayAlertSound 5 20
+	SetBackgroundColor 0 0 0 220
 
 #Essence Autogen
 Show
-	BaseType "Deafening Essence of Spite" "Essence of Insanity" "Essence of Delirium"
+	BaseType "Remnant of Corruption" "Deafening Essence of Zeal" "Deafening Essence of Misery" "Deafening Essence of Dread" "Shrieking Essence of Spite" "Deafening Essence of Scorn" "Shrieking Essence of Zeal" "Shrieking Essence of Rage" "Deafening Essence of Envy" "Essence of Hysteria" "Deafening Essence of Contempt" "Deafening Essence of Greed" "Shrieking Essence of Contempt" "Deafening Essence of Wrath" "Deafening Essence of Rage" "Deafening Essence of Anger" "Shrieking Essence of Envy" "Shrieking Essence of Woe" "Shrieking Essence of Anger" "Deafening Essence of Loathing" "Deafening Essence of Woe" "Deafening Essence of Fear"
 	Class "Currency"
 	SetBorderColor 170 158 130
 	SetFontSize 45
 	PlayAlertSound 5 100
-	SetBackgroundColor 51 58 75 220
+	SetBackgroundColor 0 0 0 220
 
 #Essence Autogen
 Show
@@ -249,7 +259,7 @@ Show
 	SetBorderColor 170 158 130
 	SetFontSize 45
 	PlayAlertSound 5 300
-	SetBackgroundColor 51 58 75 220
+	SetBackgroundColor 0 0 0 220
 
 #Currency catchall and special currency
 Show
@@ -258,20 +268,20 @@ Show
 	SetBorderColor 170 158 130
 	SetFontSize 40
 	PlayAlertSound 5 75
-	SetBackgroundColor 51 58 75 220
+	SetBackgroundColor 0 0 0 220
 
 #Currency catchall and special currency
 Show
-	BaseType "Blessing of Tul" "Apprentice Cartographer's Seal" "Blessing of Uul-Netol" "Journeyman Cartographer's Seal" "Master Cartographer's Seal" "Unshaping Orb" "Blessing of Esh" "Blessing of Xoph" "Prophecy" "Stacked Deck"
+	BaseType "Blessing of Uul-Netol" "Master Cartographer's Seal" "Apprentice Cartographer's Seal" "Blessing of Tul" "Unshaping Orb" "Journeyman Cartographer's Seal" "Blessing of Xoph" "Stacked Deck" "Prophecy" "Blessing of Esh"
 	Class "Currency"
 	SetBorderColor 170 158 130
 	SetFontSize 35
-	PlayAlertSound 5 25
-	SetBackgroundColor 51 58 75 220
+	PlayAlertSound 5 20
+	SetBackgroundColor 0 0 0 220
 
 #Currency catchall and special currency
 Show
-	BaseType "Alteration Shard" "Portal Scroll" "Scroll of Wisdom" "Armourer's Scrap" "Blacksmith's Whetstone"
+	BaseType "Blacksmith's Whetstone" "Alteration Shard" "Scroll of Wisdom" "Portal Scroll" "Armourer's Scrap"
 	Class "Currency"
 	SetFontSize 30
 	SetBackgroundColor 0 0 0 100
@@ -287,8 +297,8 @@ Show
 	Class "Currency"
 	SetBorderColor 170 158 130
 	SetFontSize 35
-	PlayAlertSound 5 25
-	SetBackgroundColor 51 58 75 220
+	PlayAlertSound 5 20
+	SetBackgroundColor 0 0 0 220
 
 #gems
 Show
@@ -297,7 +307,7 @@ Show
 	SetBorderColor 170 158 130
 	SetFontSize 40
 	PlayAlertSound 5 75
-	SetBackgroundColor 51 58 75 220
+	SetBackgroundColor 0 0 0 220
 
 #gems
 Show
@@ -324,14 +334,20 @@ Show
 
 #gems
 Show
-	BaseType "Portal" "Empower" "Vaal" "Added Chaos Damage" "Enlighten"
+	BaseType "Portal" "Empower" "Added Chaos Damage" "Enlighten" "Vaal"
 	Class "Gems"
 	SetBorderColor 27 162 155
 	SetBackgroundColor 0 0 0 220
 
+#gems
+Show
+	Class "Gems"
+	SetFontSize 25
+	SetBackgroundColor 0 0 0 220
+
 #Unique
 Show
-	BaseType "Topaz Flask" "Rotfeather Talisman" "Prophecy Wand" "Greatwolf Talisman" "Glorious Plate" "Cutlass" "Chateau Map" "Courtyard Map" "Occultist's Vestment" "Prismatic Jewel" "Museum Map" "Crusader Boots" "Savant's Robe" "Rawhide Boots" "Silver Flask" "Ezomyte Tower Shield" "Assassin's Garb" "Sapphire Flask"
+	BaseType "Topaz Flask" "Cutlass" "Silver Flask" "Occultist's Vestment" "Golden Obi" "Prophecy Wand" "Sapphire Flask" "Courtyard Map" "Rotfeather Talisman" "Glorious Plate" "Crusader Boots" "Savant's Robe" "Greatwolf Talisman" "Prismatic Jewel" "Assassin's Garb" "Rawhide Boots" "Ezomyte Tower Shield" "Chateau Map" "Museum Map"
 	Rarity Unique
 	SetBorderColor 175 96 37
 	SetFontSize 45
@@ -340,7 +356,7 @@ Show
 
 #Unique
 Show
-	BaseType "Deicide Mask" "Vaal Pyramid Map" "Temple Map" "Despot Axe" "Penetrating Arrow Quiver" "Champion Kite Shield" "Carnal Sceptre" "Ruby Amulet" "Ritual Sceptre" "Blinder" "Jewelled Foil" "Vaal Mask" "Trapper Boots" "Wereclaw Talisman" "Crystal Belt" "Jingling Spirit Shield" "Legion Gloves" "Ezomyte Burgonet" "Murder Boots" "Ruby Flask" "Underground River Map" "Void Axe" "Rawhide Tower Shield" "Royal Burgonet" "Wyrmscale Doublet" "Vaal Spirit Shield" "Sorcerer Boots" "Full Wyrmscale" "Imperial Staff" "Reef Map" "Bismuth Flask" "Siege Axe" "Stibnite Flask" "Royal Axe" "Sacrificial Garb" "Imperial Maul" "Gold Ring" "Hubris Circlet" "Clasped Mitts" "Highborn Staff" "Raven Mask" "Gladiator Plate" "Torture Chamber Map" "Vaal Regalia" "Graveyard Map"
+	BaseType "Jewelled Foil" "Sacrificial Garb" "Torture Chamber Map" "Vaal Spirit Shield" "Raven Mask" "Bismuth Flask" "Full Wyrmscale" "Imperial Staff" "Deicide Mask" "Clasped Mitts" "Imperial Maul" "Vaal Mask" "Highborn Staff" "Legion Gloves" "Carnal Sceptre" "Crystal Belt" "Ezomyte Burgonet" "Archon Kite Shield" "Jingling Spirit Shield" "Blinder" "Underground River Map" "Hubris Circlet" "Vaal Regalia" "Stibnite Flask" "Rawhide Tower Shield" "Void Axe" "Ritual Sceptre" "Trapper Boots" "Wereclaw Talisman" "Reef Map" "Royal Burgonet" "Penetrating Arrow Quiver" "Vaal Pyramid Map" "Despot Axe" "Sorcerer Boots" "Gladiator Plate" "Siege Axe" "Temple Map" "Ruby Amulet" "Wyrmscale Doublet" "Graveyard Map" "Champion Kite Shield" "Murder Boots" "Royal Axe"
 	Rarity Unique
 	SetFontSize 40
 	SetBorderColor 175 96 37
@@ -349,7 +365,7 @@ Show
 
 #Unique
 Show
-	BaseType "Imperial Claw" "Death Bow" "Coral Amulet" "Goathide Boots" "Imperial Bow" "Prismatic Ring" "Elegant Sword" "Two-Stone Ring" "Deerskin Gloves" "Fiend Dagger" "Sage Wand" "Vaal Axe" "Wool Gloves" "Onyx Amulet" "Cloth Belt" "Fire Arrow Quiver" "Large Hybrid Flask" "Infernal Sword" "Mosaic Kite Shield" "Moonstone Ring" "Royal Bow" "Plank Kite Shield" "Amber Amulet" "Crude Bow" "Lapis Amulet" "Vaal Sceptre" "Unset Ring" "Leather Belt" "Long Staff" "Midnight Blade" "Maelström Staff" "Gold Amulet" "Two-Point Arrow Quiver" "Turquoise Amulet" "Jade Hatchet" "Jade Amulet" "Ebony Tower Shield" "Eternal Sword" "Prophet Crown" "Woodsplitter" "Spine Bow" "Paua Ring" "Topaz Ring" "Cobalt Jewel" "Coral Ring" "Crusader Gloves" "Ornate Sword" "Goathide Gloves" "Murder Mitts" "Heavy Belt" "Ruby Ring" "Crystal Sceptre" "Plate Vest" "Strapped Mitts" "Iron Ring" "Simple Robe" "Long Bow" "Nubuck Boots" "Archon Kite Shield" "Terror Claw" "Rustic Sash" "Stealth Boots" "Citrine Amulet" "Desert Brigandine" "Branded Kite Shield" "Agate Amulet" "Spike-Point Arrow Quiver" "Vaal Gauntlets" "Nightmare Bascinet" "Sapphire Ring" "Viridian Jewel" "Conjurer Boots" "Vaal Blade" "Granite Flask" "Crimson Jewel" "Zodiac Leather"
+	BaseType "Vaal Blade" "Prophet Crown" "Elegant Sword" "Eternal Sword" "Fiend Dagger" "Woodsplitter" "Paua Ring" "Ruby Ring" "Citrine Amulet" "Prismatic Ring" "Midnight Blade" "Vaal Gauntlets" "Sage Wand" "Long Bow" "Spike-Point Arrow Quiver" "Royal Bow" "Heavy Belt" "Goathide Boots" "Two-Point Arrow Quiver" "Nightmare Bascinet" "Fire Arrow Quiver" "Maelström Staff" "Leather Belt" "Cloth Belt" "Large Hybrid Flask" "Ebony Tower Shield" "Deerskin Gloves" "Crystal Sceptre" "Plank Kite Shield" "Agate Amulet" "Death Bow" "Simple Robe" "Viridian Jewel" "Spine Bow" "Gold Amulet" "Coral Amulet" "Desert Brigandine" "Imperial Claw" "Vaal Axe" "Long Staff" "Wool Gloves" "Unset Ring" "Crimson Jewel" "Coral Ring" "Lapis Amulet" "Zodiac Leather" "Vaal Sceptre" "Granite Flask" "Crude Bow" "Cobalt Jewel" "Jade Amulet" "Branded Kite Shield" "Goathide Gloves" "Conjurer Boots" "Nubuck Boots" "Two-Stone Ring" "Infernal Sword" "Ornate Sword" "Imperial Bow" "Iron Ring" "Terror Claw" "Murder Mitts" "Stealth Boots" "Turquoise Amulet" "Topaz Ring" "Crusader Gloves" "Plate Vest" "Onyx Amulet" "Moonstone Ring" "Strapped Mitts" "Ruby Flask" "Rustic Sash" "Mosaic Kite Shield" "Sapphire Ring" "Amber Amulet" "Jade Hatchet"
 	Rarity Unique
 	SetBorderColor 175 96 37 150
 	PlayAlertSound 3 45
@@ -357,7 +373,7 @@ Show
 
 #Unique
 Show
-	BaseType "Estoc" "Vile Staff" "Dream Mace" "Supreme Spiked Shield" "Etched Greatsword" "Colossal Tower Shield" "Boot Knife" "Decorative Axe" "Scholar Boots" "Latticed Ringmail" "Studded Round Shield" "Paua Amulet" "Lacquered Helmet" "Wyrmscale Gauntlets" "Tricorne" "Elder Sword" "Gnarled Branch" "Vaal Claw" "Zealot Helmet" "Recurve Bow" "Crystal Wand" "Highland Blade" "War Hammer" "Soldier Helmet" "Tarnished Spirit Shield" "Reinforced Tower Shield" "Goat's Horn" "Shadow Sceptre" "Saintly Chainmail" "Ivory Spirit Shield" "Chain Gloves" "Bastard Sword" "Tomahawk" "Quartz Flask" "Diamond Ring" "Strapped Leather" "Jagged Foil" "Thresher Claw" "Painted Buckler" "Destiny Leather" "Conquest Chainmail" "Boot Blade" "Platinum Sceptre" "Copper Plate" "Gilded Sallet" "Mind Cage" "Mesh Boots" "Leather Hood" "Iron Sceptre" "Bone Bow" "Secutor Helm" "Silken Hood" "Compound Spiked Shield" "Legion Boots" "Corsair Sword" "Gladius" "Deerskin Boots" "Opal Wand" "Aventail Helmet" "Buckskin Tunic" "Great Crown" "Legion Sword" "Primordial Staff" "Poleaxe" "Sulphur Flask" "Silk Gloves" "Full Scale Armour" "Velvet Gloves" "Stiletto" "Crusader Chainmail" "War Sword" "Nailed Fist" "Serrated Arrow Quiver" "Serpentscale Boots" "Antique Rapier" "Necromancer Circlet" "Ranger Bow" "Carved Wand" "Headsman Axe" "Infernal Axe" "Sundering Axe" "Iron Hat" "Imbued Wand" "Ironscale Gauntlets" "Sharktooth Arrow Quiver" "Blunt Arrow Quiver" "Lunaris Circlet" "Enameled Buckler" "Clasped Boots" "Lacquered Garb" "Bronzescale Gauntlets" "Burnished Spiked Shield" "Goliath Gauntlets" "Wild Leather" "War Buckler" "Tiger Sword" "Vine Circlet" "Lathi" "Twilight Blade" "Crusader Plate" "Royal Skean" "Laminated Kite Shield" "Short Bow" "Siege Helmet" "Spiraled Wand" "Golden Buckler" "Karui Chopper" "Sage's Robe" "Platinum Kris" "Harbinger Bow" "Harmonic Spirit Shield" "Pine Buckler" "Timeworn Claw" "Spidersilk Robe" "Visored Sallet" "Golden Mask" "Chain Belt" "Serpentine Staff" "Velvet Slippers" "Awl" "Iron Mask" "Ezomyte Blade" "Wrapped Mitts" "Quicksilver Flask" "Spiked Club" "Samite Helmet" "Flaying Knife" "Military Staff" "Auric Mace" "Iron Circlet" "Widowsilk Robe" "Great Mallet" "Iron Staff" "Greater Mana Flask" "Great Helmet" "Brass Spirit Shield" "Thorium Spirit Shield" "Soldier Boots" "Holy Chainmail" "Full Dragonscale" "Dragonscale Gauntlets" "Gut Ripper" "Hellion's Paw" "Jagged Maul" "Shadow Axe" "Soldier Gloves" "Sabre" "Strapped Boots" "Cutthroat's Garb" "Titan Greaves" "Bronzescale Boots" "Brass Maul" "Whalebone Rapier" "Steel Gauntlets" "Scholar's Robe" "Lion Sword" "Sledgehammer" "Cleaver" "Studded Belt" "Rusted Sword" "Dread Maul" "Karui Maul" "Goliath Greaves" "Baroque Round Shield" "Quartz Wand" "Basket Rapier" "Tornado Wand" "Skinning Knife" "Ornate Ringmail" "Ironscale Boots" "Gavel" "Rotted Round Shield" "Royal Staff" "Assassin Bow" "Carnal Armour" "Demon's Horn" "Decimation Bow" "Ornate Mace" "Silk Slippers" "Shagreen Boots" "Void Sceptre" "Titan Gauntlets" "Close Helmet" "Reaver Sword" "Vaal Buckler"
+	BaseType "Gut Ripper" "Serpentine Staff" "Samite Helmet" "Paua Amulet" "Great Mallet" "Demon's Horn" "Opal Wand" "War Hammer" "Deerskin Boots" "Stiletto" "Copper Plate" "Spidersilk Robe" "Velvet Gloves" "Thresher Claw" "Highland Blade" "Quartz Flask" "Titan Gauntlets" "Infernal Axe" "Silk Slippers" "Shagreen Boots" "Full Scale Armour" "Iron Sceptre" "Lacquered Garb" "Legion Sword" "Goat's Horn" "Hellion's Paw" "Tarnished Spirit Shield" "Primordial Staff" "Thorium Spirit Shield" "Golden Buckler" "Steel Gauntlets" "Widowsilk Robe" "Awl" "Buckskin Tunic" "Flaying Knife" "Bastard Sword" "Scholar's Robe" "Serpentscale Boots" "Blunt Arrow Quiver" "Baroque Round Shield" "Studded Belt" "Iron Mask" "Goliath Greaves" "Cutthroat's Garb" "Vile Staff" "Boot Knife" "Tiger Sword" "Ironscale Gauntlets" "Quartz Wand" "Spiked Club" "Short Bow" "Cleaver" "Sundering Axe" "Sulphur Flask" "Lathi" "Karui Chopper" "Great Helmet" "Gladius" "Timeworn Claw" "Corsair Sword" "Siege Helmet" "Sage's Robe" "Destiny Leather" "Lion Sword" "Aventail Helmet" "Headsman Axe" "Silk Gloves" "Bronzescale Boots" "Soldier Boots" "Golden Mask" "Military Staff" "Saintly Chainmail" "Brass Maul" "Pine Buckler" "Jagged Foil" "Latticed Ringmail" "Nailed Fist" "War Buckler" "Supreme Spiked Shield" "Necromancer Circlet" "Auric Mace" "Studded Round Shield" "Strapped Boots" "Sledgehammer" "Bone Bow" "Soldier Gloves" "Void Sceptre" "Enameled Buckler" "Brass Spirit Shield" "Strapped Leather" "Gilded Sallet" "Mesh Boots" "Crystal Wand" "Ranger Bow" "Goliath Gauntlets" "Poleaxe" "Wrapped Mitts" "Legion Boots" "Titan Greaves" "Iron Hat" "Ironscale Boots" "Spiraled Wand" "Lacquered Helmet" "Bronzescale Gauntlets" "Etched Greatsword" "Wyrmscale Gauntlets" "Antique Rapier" "Carved Wand" "Judgement Staff" "Elder Sword" "Silken Hood" "Full Dragonscale" "Zealot Helmet" "Chain Belt" "Harmonic Spirit Shield" "Ornate Mace" "Sabre" "Ivory Spirit Shield" "Chain Gloves" "Conquest Chainmail" "Dusk Blade" "Skinning Knife" "Gavel" "Vine Circlet" "Ornate Ringmail" "Rotted Round Shield" "Scholar Boots" "Dream Mace" "Holy Chainmail" "Close Helmet" "Tornado Wand" "Boot Blade" "Compound Spiked Shield" "Crusader Chainmail" "Vaal Buckler" "Iron Circlet" "Lunaris Circlet" "Secutor Helm" "Recurve Bow" "Iron Staff" "Tomahawk" "War Sword" "Visored Sallet" "Estoc" "Serrated Arrow Quiver" "Velvet Slippers" "Colossal Tower Shield" "Mind Cage" "Crusader Plate" "Laminated Kite Shield" "Vaal Claw" "Clasped Boots" "Tricorne" "Dragonscale Gauntlets" "Ezomyte Blade" "Wild Leather" "Rusted Sword" "Burnished Spiked Shield" "Gnarled Branch" "Reaver Sword" "Sharktooth Arrow Quiver" "Diamond Ring" "Quicksilver Flask" "Platinum Kris" "Reinforced Tower Shield" "Carnal Armour" "Decorative Axe" "Shadow Axe" "Royal Staff" "Karui Maul" "Painted Buckler" "Rock Breaker" "Bronze Sceptre" "Decimation Bow" "Harbinger Bow" "Shadow Sceptre" "Jagged Maul" "Soldier Helmet" "Great Crown" "Royal Skean" "Greater Mana Flask" "Basket Rapier" "Twilight Blade" "Leather Hood" "Dread Maul" "Imbued Wand" "Assassin Bow" "Platinum Sceptre"
 	Rarity Unique
 	PlayAlertSound 3 20
 	SetFontSize 25
@@ -369,9 +385,35 @@ Show
 	PlayAlertSound 3 45
 	SetBackgroundColor 0 0 0 220
 
+#Recipe Item
+Show
+	BaseType "Stone Hammer" "Rock Breaker" "Gavel"
+	Rarity Magic
+	Quality >= 12
+	SetBorderColor 204 0 154
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#Recipe Item
+Show
+	BaseType "Stone Hammer" "Rock Breaker" "Gavel"
+	Rarity Normal
+	SetBorderColor 204 0 154
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#Recipe Item
+Show
+	BaseType "Stone Hammer" "Rock Breaker" "Gavel"
+	Rarity Rare
+	Quality >= 16
+	SetBorderColor 204 0 154
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
 #maps
 Show
-	BaseType "Fragment of the Phoenix" "Fragment of the Chimera" "Fragment of the Minotaur" "Fragment of the Hydra"
+	BaseType "Fragment of the Hydra" "Fragment of the Phoenix" "Fragment of the Chimera" "Fragment of the Minotaur"
 	Class "Map Fragments"
 	SetBorderColor 150 0 0 150
 	SetFontSize 40
@@ -388,7 +430,7 @@ Show
 
 #maps
 Show
-	BaseType "Yriel's Key" "Eber's Key" "Volkuur's Key" "Mortal Hope" "Inya's Key"
+	BaseType "Volkuur's Key" "Inya's Key" "Eber's Key" "Yriel's Key" "Mortal Hope"
 	Class "Map Fragments"
 	SetBorderColor 255 215 0
 	PlayAlertSound 7 45
@@ -397,7 +439,7 @@ Show
 
 #maps
 Show
-	BaseType "Mortal Ignorance" "Mortal Grief" "Mortal Rage"
+	BaseType "Mortal Grief" "Mortal Rage" "Mortal Ignorance"
 	Class "Map Fragments"
 	SetBorderColor 255 215 0 150
 	SetFontSize 35
@@ -415,7 +457,7 @@ Show
 
 #maps
 Show
-	BaseType "Shaped Tropical Island Map" "Shaped Atoll Map"
+	BaseType "Shaped Atoll Map" "Shaped Tropical Island Map"
 	Class "Maps"
 	DropLevel 80
 	SetBorderColor 150 0 0
@@ -435,7 +477,7 @@ Show
 
 #maps
 Show
-	BaseType "Shaped Wharf Map" "Shaped Spider Forest Map" "Shaped Thicket Map" "Shaped Vaal City Map" "Shaped Quarry Map" "Shaped Canyon Map" "Shaped Ramparts Map" "Shaped Racecourse Map"
+	BaseType "Shaped Thicket Map" "Shaped Vaal City Map" "Shaped Spider Forest Map" "Shaped Wharf Map" "Shaped Racecourse Map" "Shaped Canyon Map" "Shaped Quarry Map" "Shaped Ramparts Map"
 	Class "Maps"
 	ItemLevel <= 80
 	DropLevel 78
@@ -446,7 +488,7 @@ Show
 
 #maps
 Show
-	BaseType "Shaped Catacombs Map" "Shaped Ashen Wood Map" "Shaped Arachnid Tomb Map" "Shaped Armoury Map" "Shaped Cells Map" "Shaped Mud Geyser Map" "Shaped Castle Ruins Map"
+	BaseType "Shaped Castle Ruins Map" "Shaped Armoury Map" "Shaped Catacombs Map" "Shaped Ashen Wood Map" "Shaped Cells Map" "Shaped Mud Geyser Map" "Shaped Arachnid Tomb Map"
 	Class "Maps"
 	ItemLevel <= 81
 	DropLevel 79
@@ -457,7 +499,7 @@ Show
 
 #maps
 Show
-	BaseType "Shaped Cemetery Map" "Shaped Bog Map" "Shaped Arachnid Nest Map" "Shaped Shore Map" "Shaped Arena Map" "Shaped Barrows Map" "Shaped Pier Map"
+	BaseType "Shaped Shore Map" "Shaped Cemetery Map" "Shaped Barrows Map" "Shaped Bog Map" "Shaped Arena Map" "Shaped Pier Map" "Shaped Arachnid Nest Map"
 	Class "Maps"
 	ItemLevel <= 82
 	DropLevel 80
@@ -468,7 +510,7 @@ Show
 
 #maps
 Show
-	BaseType "Shaped Coves Map" "Shaped Crypt Map" "Shaped Orchard Map" "Shaped Temple Map" "Shaped Overgrown Shrine Map" "Shaped Reef Map" "Shaped Museum Map"
+	BaseType "Shaped Temple Map" "Shaped Crypt Map" "Shaped Coves Map" "Shaped Overgrown Shrine Map" "Shaped Museum Map" "Shaped Orchard Map" "Shaped Reef Map"
 	Class "Maps"
 	ItemLevel <= 83
 	DropLevel 81
@@ -479,7 +521,7 @@ Show
 
 #maps
 Show
-	BaseType "Shaped Arsenal Map" "Shaped Courtyard Map" "Shaped Malformation Map" "Shaped Underground River Map" "Shaped Quay Map" "Shaped Terrace Map" "Shaped Colonnade Map"
+	BaseType "Shaped Terrace Map" "Shaped Quay Map" "Shaped Arsenal Map" "Shaped Malformation Map" "Shaped Courtyard Map" "Shaped Colonnade Map" "Shaped Underground River Map"
 	Class "Maps"
 	ItemLevel <= 84
 	DropLevel 82
@@ -500,7 +542,7 @@ Show
 
 #maps
 Show
-	BaseType "Shaped Arcade Map" "Shaped Crystal Ore Map" "Shaped Jungle Valley Map" "Shaped Desert Map"
+	BaseType "Shaped Arcade Map" "Shaped Desert Map" "Shaped Jungle Valley Map" "Shaped Crystal Ore Map"
 	Class "Maps"
 	ItemLevel <= 75
 	DropLevel 73
@@ -511,7 +553,7 @@ Show
 
 #maps
 Show
-	BaseType "Shaped Ghetto Map" "Shaped Factory Map" "Shaped Oasis Map" "Shaped Beach Map"
+	BaseType "Shaped Oasis Map" "Shaped Beach Map" "Shaped Ghetto Map" "Shaped Factory Map"
 	Class "Maps"
 	ItemLevel <= 76
 	DropLevel 74
@@ -522,7 +564,7 @@ Show
 
 #maps
 Show
-	BaseType "Shaped Marshes Map" "Shaped Sewer Map" "Shaped Vaal Pyramid Map" "Shaped Cavern Map" "Shaped Arid Lake Map" "Shaped Grotto Map" "Shaped Channel Map"
+	BaseType "Shaped Cavern Map" "Shaped Channel Map" "Shaped Sewer Map" "Shaped Marshes Map" "Shaped Vaal Pyramid Map" "Shaped Grotto Map" "Shaped Arid Lake Map"
 	Class "Maps"
 	ItemLevel <= 77
 	DropLevel 75
@@ -533,7 +575,7 @@ Show
 
 #maps
 Show
-	BaseType "Shaped Dungeon Map" "Shaped Acid Lakes Map" "Shaped Academy Map" "Shaped Graveyard Map" "Shaped Phantasmagoria Map" "Shaped Villa Map" "Shaped Waste Pool Map"
+	BaseType "Shaped Dungeon Map" "Shaped Villa Map" "Shaped Academy Map" "Shaped Phantasmagoria Map" "Shaped Waste Pool Map" "Shaped Graveyard Map" "Shaped Acid Lakes Map"
 	Class "Maps"
 	ItemLevel <= 78
 	DropLevel 76
@@ -544,7 +586,7 @@ Show
 
 #maps
 Show
-	BaseType "Shaped Burial Chambers Map" "Shaped Pit Map" "Shaped Spider Lair Map" "Shaped Peninsula Map" "Shaped Dunes Map" "Shaped Primordial Pool Map" "Shaped Tower Map"
+	BaseType "Shaped Pit Map" "Shaped Tower Map" "Shaped Dunes Map" "Shaped Spider Lair Map" "Shaped Burial Chambers Map" "Shaped Peninsula Map" "Shaped Primordial Pool Map"
 	Class "Maps"
 	ItemLevel <= 79
 	DropLevel 77
@@ -565,7 +607,7 @@ Show
 
 #maps
 Show
-	BaseType "Gorge Map" "Waterways Map"
+	BaseType "Waterways Map" "Gorge Map"
 	Class "Maps"
 	DropLevel 80
 	SetBorderColor 150 0 0
@@ -585,7 +627,7 @@ Show
 
 #maps
 Show
-	BaseType "Underground Sea Map" "Chateau Map" "Wasteland Map" "Excavation Map" "Precinct Map" "Torture Chamber Map" "Bazaar Map"
+	BaseType "Torture Chamber Map" "Bazaar Map" "Excavation Map" "Underground Sea Map" "Precinct Map" "Chateau Map" "Wasteland Map"
 	Class "Maps"
 	ItemLevel <= 80
 	DropLevel 78
@@ -596,7 +638,7 @@ Show
 
 #maps
 Show
-	BaseType "Estuary Map" "Ivory Temple Map" "Shipyard Map" "Crematorium Map" "Necropolis Map" "Residence Map"
+	BaseType "Shipyard Map" "Necropolis Map" "Estuary Map" "Crematorium Map" "Ivory Temple Map" "Residence Map"
 	Class "Maps"
 	ItemLevel <= 81
 	DropLevel 79
@@ -607,7 +649,7 @@ Show
 
 #maps
 Show
-	BaseType "Beacon Map" "Lair Map" "Sulphur Wastes Map" "Scriptorium Map" "Plaza Map" "High Gardens Map"
+	BaseType "Sulphur Wastes Map" "Beacon Map" "Lair Map" "High Gardens Map" "Scriptorium Map" "Plaza Map"
 	Class "Maps"
 	ItemLevel <= 82
 	DropLevel 80
@@ -618,7 +660,7 @@ Show
 
 #maps
 Show
-	BaseType "Palace Map" "Mineral Pools Map" "Springs Map" "Shrine Map" "Maze Map"
+	BaseType "Springs Map" "Maze Map" "Shrine Map" "Palace Map" "Mineral Pools Map"
 	Class "Maps"
 	ItemLevel <= 83
 	DropLevel 81
@@ -629,7 +671,7 @@ Show
 
 #maps
 Show
-	BaseType "Colosseum Map" "Abyss Map" "Overgrown Ruin Map" "Core Map" "Dark Forest Map"
+	BaseType "Colosseum Map" "Dark Forest Map" "Core Map" "Overgrown Ruin Map" "Abyss Map"
 	Class "Maps"
 	ItemLevel <= 84
 	DropLevel 82
@@ -640,7 +682,7 @@ Show
 
 #maps
 Show
-	BaseType "Vaal Temple Map" "Maze of the Minotaur Map" "Lair of the Hydra Map" "Pit of the Chimera Map" "Forge of the Phoenix Map"
+	BaseType "Forge of the Phoenix Map" "Vaal Temple Map" "Maze of the Minotaur Map" "Lair of the Hydra Map" "Pit of the Chimera Map"
 	Class "Maps"
 	ItemLevel <= 85
 	DropLevel 83
@@ -651,7 +693,7 @@ Show
 
 #maps
 Show
-	BaseType "Arcade Map" "Jungle Valley Map" "Desert Map" "Crystal Ore Map"
+	BaseType "Arcade Map" "Desert Map" "Crystal Ore Map" "Jungle Valley Map"
 	Class "Maps"
 	ItemLevel <= 70
 	SetBorderColor 200 200 200
@@ -660,7 +702,7 @@ Show
 
 #maps
 Show
-	BaseType "Oasis Map" "Ghetto Map" "Factory Map" "Beach Map"
+	BaseType "Oasis Map" "Factory Map" "Beach Map" "Ghetto Map"
 	Class "Maps"
 	ItemLevel <= 71
 	DropLevel 69
@@ -670,7 +712,7 @@ Show
 
 #maps
 Show
-	BaseType "Cavern Map" "Marshes Map" "Sewer Map" "Arid Lake Map" "Grotto Map" "Vaal Pyramid Map" "Channel Map"
+	BaseType "Channel Map" "Sewer Map" "Arid Lake Map" "Cavern Map" "Grotto Map" "Marshes Map" "Vaal Pyramid Map"
 	Class "Maps"
 	ItemLevel <= 72
 	DropLevel 70
@@ -680,7 +722,7 @@ Show
 
 #maps
 Show
-	BaseType "Villa Map" "Phantasmagoria Map" "Academy Map" "Waste Pool Map" "Acid Lakes Map" "Dungeon Map" "Graveyard Map"
+	BaseType "Academy Map" "Dungeon Map" "Phantasmagoria Map" "Acid Lakes Map" "Villa Map" "Waste Pool Map" "Graveyard Map"
 	Class "Maps"
 	ItemLevel <= 73
 	DropLevel 71
@@ -690,7 +732,7 @@ Show
 
 #maps
 Show
-	BaseType "Burial Chambers Map" "Primordial Pool Map" "Spider Lair Map" "Dunes Map" "Pit Map" "Tower Map" "Mesa Map" "Peninsula Map"
+	BaseType "Primordial Pool Map" "Spider Lair Map" "Pit Map" "Mesa Map" "Tower Map" "Dunes Map" "Burial Chambers Map" "Peninsula Map"
 	Class "Maps"
 	ItemLevel <= 74
 	DropLevel 72
@@ -710,7 +752,7 @@ Show
 
 #maps
 Show
-	BaseType "Strand Map" "Canyon Map" "Spider Forest Map" "Thicket Map" "Ramparts Map" "Wharf Map" "Racecourse Map" "Vaal City Map" "Quarry Map"
+	BaseType "Canyon Map" "Strand Map" "Vaal City Map" "Ramparts Map" "Quarry Map" "Wharf Map" "Thicket Map" "Spider Forest Map" "Racecourse Map"
 	Class "Maps"
 	ItemLevel <= 75
 	DropLevel 73
@@ -721,7 +763,7 @@ Show
 
 #maps
 Show
-	BaseType "Castle Ruins Map" "Cells Map" "Mud Geyser Map" "Catacombs Map" "Ashen Wood Map" "Arachnid Tomb Map" "Armoury Map"
+	BaseType "Armoury Map" "Mud Geyser Map" "Castle Ruins Map" "Arachnid Tomb Map" "Ashen Wood Map" "Catacombs Map" "Cells Map"
 	Class "Maps"
 	ItemLevel <= 76
 	DropLevel 74
@@ -732,7 +774,7 @@ Show
 
 #maps
 Show
-	BaseType "Pier Map" "Arachnid Nest Map" "Tropical Island Map" "Arena Map" "Atoll Map" "Bog Map" "Barrows Map" "Shore Map" "Cemetery Map"
+	BaseType "Pier Map" "Arena Map" "Cemetery Map" "Arachnid Nest Map" "Atoll Map" "Bog Map" "Barrows Map" "Tropical Island Map" "Shore Map"
 	Class "Maps"
 	ItemLevel <= 77
 	DropLevel 75
@@ -743,7 +785,7 @@ Show
 
 #maps
 Show
-	BaseType "Orchard Map" "Museum Map" "Temple Map" "Overgrown Shrine Map" "Coves Map" "Reef Map" "Promenade Map" "Crypt Map"
+	BaseType "Orchard Map" "Crypt Map" "Coves Map" "Museum Map" "Overgrown Shrine Map" "Reef Map" "Temple Map" "Promenade Map"
 	Class "Maps"
 	ItemLevel <= 78
 	DropLevel 76
@@ -754,7 +796,7 @@ Show
 
 #maps
 Show
-	BaseType "Courtyard Map" "Terrace Map" "Underground River Map" "Colonnade Map" "Arsenal Map" "Malformation Map"
+	BaseType "Malformation Map" "Underground River Map" "Colonnade Map" "Terrace Map" "Courtyard Map" "Arsenal Map"
 	Class "Maps"
 	ItemLevel <= 79
 	DropLevel 77
@@ -833,7 +875,7 @@ Show
 
 #Divination Card
 Show
-	BaseType "Abandoned Wealth" "Bowyer's Dream" "The Immortal" "Mawr Blaidd" "The Queen" "The Doctor" "The Last One Standing" "Hunter's Reward" "The Fiend" "The Spark and the Flame" "The Ethereal" "The Polymath" "Wealth and Power" "The Artist" "The Offering" "House of Mirrors"
+	BaseType "The Queen" "The Ethereal" "The Artist" "The Immortal" "The Doctor" "The Spark and the Flame" "Bowyer's Dream" "The Fiend" "The Polymath" "Mawr Blaidd" "House of Mirrors" "Wealth and Power" "The Offering" "Abandoned Wealth" "Hunter's Reward" "The Last One Standing"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
 	SetFontSize 40
@@ -842,7 +884,7 @@ Show
 
 #Divination Card
 Show
-	BaseType "The Saint's Treasure" "The Valkyrie" "The Vast" "The Sephirot" "The Hunger" "Lucky Deck" "The Thaumaturgist" "The Porcupine" "Chaotic Disposition" "The Cartographer" "The King's Heart" "The Brittle Emperor" "The Hoarder" "The Celestial Justicar" "Pride Before the Fall" "The Stormcaller" "The Aesthete" "The Fletcher" "Heterochromia" "The Valley of Steel Boxes" "The Enlightened" "The Dapper Prodigy" "The Void" "The Risk"
+	BaseType "The Hunger" "The Aesthete" "The Enlightened" "The Brittle Emperor" "The Sephirot" "The Stormcaller" "The King's Heart" "The Void" "The Valkyrie" "The Cartographer" "The Risk" "The Porcupine" "Lucky Deck" "The Fletcher" "The Celestial Justicar" "The Valley of Steel Boxes" "The Thaumaturgist" "The Hoarder" "Chaotic Disposition" "The Dapper Prodigy" "The Vast" "Pride Before the Fall" "Heterochromia" "The Saint's Treasure"
 	Class "Divination Card"
 	SetBorderColor 30 144 255
 	PlayAlertSound 6 75
@@ -850,13 +892,13 @@ Show
 
 #Divination Card
 Show
-	BaseType "Lantador's Lost Love" "Thunderous Skies" "Shard of Fate" "Hubris" "Might is Right" "Assassin's Favour" "The Lover" "Anarchy's Price" "The Twins" "The Wolverine" "Blind Venture" "The Incantation" "The Lich" "The Visionary" "The Web" "The Hermit" "The Sun" "The Siren" "The Scarred Meadow" "The Feast" "Hunter's Resolve" "The Pact" "The Endurance" "Tranquillity" "The Penitent" "The Lunaris Priestess" "Birth of the Three" "The Oath" "Her Mask" "Audacity" "The Demoness" "The Watcher" "The Gemcutter" "The Tower" "The Catalyst" "The Calling" "The Scavenger" "The Sigil" "The Coming Storm" "Prosperity" "The Explorer" "The Betrayal" "Mitts" "The Metalsmith's Gift" "The Warden" "Destined to Crumble" "Doedre's Madness" "Dying Anguish" "Call to the First Ones" "Volatile Power" "Light and Truth" "The Gentleman" "Rain of Chaos" "The Lord in Black" "The Flora's Gift" "The Scholar" "The Throne" "Rats" "The Gambler" "Coveted Possession" "The Doppelganger" "The Pack Leader" "Struck by Lightning" "Death" "The Summoner" "The Rabid Rhoa" "Loyalty" "Cartographer's Delight" "The Mercenary" "The Surgeon" "The Drunken Aristocrat" "Rain Tempter" "The Lion"
+	BaseType "Cartographer's Delight" "Thunderous Skies" "The Sun" "The Metalsmith's Gift" "Destined to Crumble" "The Gentleman" "Assassin's Favour" "Death" "Hunter's Resolve" "The Incantation" "The Web" "Light and Truth" "The Gambler" "Anarchy's Price" "The Doppelganger" "Call to the First Ones" "The Visionary" "The Lunaris Priestess" "Coveted Possession" "Her Mask" "The Warden" "The Scholar" "Hubris" "The Explorer" "The Scavenger" "The Rabid Rhoa" "Lantador's Lost Love" "The Lover" "Rain Tempter" "The Calling" "The Flora's Gift" "The Lich" "Loyalty" "Tranquillity" "The Siren" "Rain of Chaos" "The Feast" "The Catalyst" "The Hermit" "Dying Anguish" "The Oath" "The Twins" "The Lord in Black" "Birth of the Three" "The Betrayal" "Audacity" "The Lion" "The Penitent" "Might is Right" "The Gemcutter" "The Scarred Meadow" "The Mercenary" "The Drunken Aristocrat" "The Demoness" "The Pack Leader" "Rats" "The Throne" "Blind Venture" "The Sigil" "Doedre's Madness" "Mitts" "The Wolverine" "The Watcher" "Struck by Lightning" "Volatile Power" "The Surgeon" "The Tower" "Shard of Fate" "The Coming Storm" "Prosperity" "The Endurance" "The Pact"
 	Class "Divination Card"
 	SetBackgroundColor 0 0 0 220
 
 #Divination Card
 Hide
-	BaseType "The Carrion Crow" "The Inoculated" "The King's Blade" "Turn the Other Cheek"
+	BaseType "The Inoculated" "The King's Blade" "Turn the Other Cheek" "The Carrion Crow"
 	Class "Divination Card"
 	
 
@@ -886,7 +928,14 @@ Show
 
 #Flasks
 Show
-	BaseType "Quartz Flask" "Topaz Flask" "Diamond Flask" "Sapphire Flask" "Basalt Flask" "Jade Flask" "Stibnite Flask" "Ruby Flask" "Silver Flask" "Amethyst Flask"
+	BaseType "Flask"
+	Quality >= 1
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#Flasks
+Show
+	BaseType "Sapphire Flask" "Aquamarine Flask" "Basalt Flask" "Granite Flask" "Quartz Flask" "Sulphur Flask" "Diamond Flask" "Ruby Flask" "Topaz Flask" "Amethyst Flask" "Silver Flask" "Stibnite Flask"
 	Rarity Normal
 	SetFontSize 30
 	SetBackgroundColor 0 0 0 220
@@ -958,8 +1007,32 @@ Show
 #Flasks
 Show
 	Class "Life Flasks" "Mana Flasks"
+	DropLevel = 50
+	ItemLevel <= 60
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#Flasks
+Show
+	Class "Life Flasks" "Mana Flasks"
 	DropLevel = 6
 	ItemLevel <= 12
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#Flasks
+Show
+	Class "Life Flasks" "Mana Flasks"
+	DropLevel = 60
+	ItemLevel <= 65
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#Flasks
+Show
+	Class "Life Flasks" "Mana Flasks"
+	DropLevel = 65
+	ItemLevel <= 70
 	SetFontSize 30
 	SetBackgroundColor 0 0 0 220
 
@@ -977,9 +1050,57 @@ Show
 	SetFontSize 30
 	SetBackgroundColor 0 0 0 220
 
+#Flasks
+Show
+	Class "Hybrid Flask"
+	DropLevel = 10
+	ItemLevel <= 20
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#Flasks
+Show
+	Class "Hybrid Flask"
+	DropLevel = 20
+	ItemLevel <= 30
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#Flasks
+Show
+	Class "Hybrid Flask"
+	DropLevel = 30
+	ItemLevel <= 40
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#Flasks
+Show
+	Class "Hybrid Flask"
+	DropLevel = 40
+	ItemLevel <= 50
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#Flasks
+Show
+	Class "Hybrid Flask"
+	DropLevel = 50
+	ItemLevel <= 60
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#Flasks
+Show
+	Class "Hybrid Flask"
+	DropLevel = 60
+	ItemLevel <= 70
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
 #Crafting Bases
 Show
-	BaseType "Vaal Axe" "Jewelled Foil" "Judgement Staff" "Platinum Kris" "Eclipse Staff" "Imperial Skean" "Eternal Sword" "Harbinger Bow" "Runic Hatchet" "Fleshripper" "Vaal Hatchet" "Maelström Staff" "Demon Dagger" "Ambusher" "Coronal Maul" "Dragoon Sword" "Tiger Hook" "Gemini Claw" "Behemoth Mace"
+	BaseType "Dragoon Sword" "Gemini Claw" "Eclipse Staff" "Ambusher" "Judgement Staff" "Demon Dagger" "Eternal Sword" "Platinum Kris" "Vaal Hatchet" "Jewelled Foil" "Runic Hatchet" "Tiger Hook" "Coronal Maul" "Fleshripper" "Maelström Staff" "Vaal Axe" "Harbinger Bow" "Behemoth Mace" "Imperial Skean"
 	ItemLevel >= 83
 	Rarity Rare
 	SetBorderColor 255 40 0
@@ -988,7 +1109,7 @@ Show
 
 #Crafting Bases
 Show
-	BaseType "Saintly Chainmail" "Opal Wand" "Imbued Wand" "Opal Sceptre" "Void Sceptre" "Slink Gloves" "Profane Wand" "Sambar Sceptre" "Eternal Burgonet" "Titan Gauntlets" "Prophecy Wand" "Lion Pelt" "Slink Boots" "Titan Greaves" "Fossilised Spirit Shield" "Harmonic Spirit Shield"
+	BaseType "Opal Wand" "Fossilised Spirit Shield" "Prophecy Wand" "Titan Greaves" "Titan Gauntlets" "Void Sceptre" "Lion Pelt" "Slink Boots" "Sambar Sceptre" "Harmonic Spirit Shield" "Slink Gloves" "Opal Sceptre" "Imbued Wand" "Saintly Chainmail" "Profane Wand" "Eternal Burgonet"
 	ItemLevel >= 84
 	Rarity Rare
 	SetBorderColor 255 40 0
@@ -997,12 +1118,12 @@ Show
 
 #Crafting Bases
 Show
-	BaseType "Crystal Belt" "Vaal Regalia" "Unset Ring" "Titanium Spirit Shield" "Sorcerer Boots" "Lapis Amulet" "Agate Amulet" "Marble Amulet" "Vanguard Belt" "Sapphire Ring" "Gold Ring" "Heavy Belt" "Coral Ring" "Steel Ring" "Hubris Circlet" "Prismatic Ring" "Two-Stone Ring" "Bone Helmet" "Spiked Gloves" "Topaz Ring" "Leather Belt" "Ruby Ring" "Citrine Amulet" "Opal Ring" "Gripped Gloves" "Onyx Amulet" "Gold Amulet" "Two-Toned Boots" "Amber Amulet" "Rustic Sash" "Turquoise Amulet" "Sorcerer Gloves" "Diamond Ring" "Fingerless Silk Gloves" "Moonstone Ring" "Jade Amulet"
+	BaseType "Fingerless Silk Gloves" "Spiked Gloves" "Unset Ring" "Onyx Amulet" "Sorcerer Boots" "Prismatic Ring" "Gold Amulet" "Amber Amulet" "Two-Toned Boots" "Gold Ring" "Topaz Ring" "Diamond Ring" "Citrine Amulet" "Steel Ring" "Titanium Spirit Shield" "Heavy Belt" "Turquoise Amulet" "Rustic Sash" "Crystal Belt" "Moonstone Ring" "Vanguard Belt" "Lapis Amulet" "Sorcerer Gloves" "Agate Amulet" "Opal Ring" "Sapphire Ring" "Jade Amulet" "Leather Belt" "Bone Helmet" "Ruby Ring" "Gripped Gloves" "Two-Stone Ring" "Hubris Circlet" "Coral Ring" "Marble Amulet" "Vaal Regalia"
 	ItemLevel >= 84
 	Rarity Rare
 	SetBorderColor 255 40 0
 	SetFontSize 35
-	SetBackgroundColor 38 0 86 220
+	SetBackgroundColor 0 0 0 220
 
 #Crafting Bases
 Show
@@ -1016,7 +1137,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Spiked Bundle" "Rusted Coif" "Corroded Tower Shield" "Rotted Round Shield" "Chain Boots" "Wrapped Mitts"
+	BaseType "Spiked Bundle" "Wrapped Mitts" "Rotted Round Shield" "Rusted Coif" "Corroded Tower Shield" "Chain Boots"
 	ItemLevel <= 10
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1043,7 +1164,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Pine Buckler" "Chainmail Tunic" "Light Brigandine" "Iron Circlet"
+	BaseType "Light Brigandine" "Pine Buckler" "Iron Circlet" "Chainmail Tunic"
 	ItemLevel <= 13
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1052,7 +1173,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Goathide Gloves" "Steel Greaves" "Yew Spirit Shield" "Velvet Slippers" "Strapped Leather" "Oiled Vest"
+	BaseType "Velvet Slippers" "Steel Greaves" "Strapped Leather" "Oiled Vest" "Yew Spirit Shield" "Goathide Gloves"
 	ItemLevel <= 14
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1070,7 +1191,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Plated Gauntlets" "Silken Vest" "Rawhide Tower Shield"
+	BaseType "Rawhide Tower Shield" "Plated Gauntlets" "Silken Vest"
 	ItemLevel <= 16
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1079,7 +1200,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Velvet Gloves" "Soldier Helmet" "Goathide Boots" "Fir Round Shield" "Driftwood Spiked Shield"
+	BaseType "Velvet Gloves" "Driftwood Spiked Shield" "Goathide Boots" "Soldier Helmet" "Fir Round Shield"
 	ItemLevel <= 17
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1088,7 +1209,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Sallet" "Ringmail Boots" "Linden Kite Shield"
+	BaseType "Linden Kite Shield" "Sallet" "Ringmail Boots"
 	ItemLevel <= 18
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1097,7 +1218,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Ironscale Gauntlets" "Bone Spirit Shield"
+	BaseType "Bone Spirit Shield" "Ironscale Gauntlets"
 	ItemLevel <= 20
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1115,7 +1236,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Buckskin Tunic" "Iron Mask" "Cedar Tower Shield" "Copper Plate" "Ringmail Coat" "Scale Doublet" "Torture Cage"
+	BaseType "Ringmail Coat" "Torture Cage" "Buckskin Tunic" "Cedar Tower Shield" "Iron Mask" "Scale Doublet" "Copper Plate"
 	ItemLevel <= 22
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1124,7 +1245,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Scholar's Robe" "Ironscale Boots" "Padded Jacket" "Barbute Helmet"
+	BaseType "Ironscale Boots" "Scholar's Robe" "Padded Jacket" "Barbute Helmet"
 	ItemLevel <= 23
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1151,7 +1272,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Chainmail Doublet" "Infantry Brigandine" "Deerskin Gloves" "War Plate"
+	BaseType "Deerskin Gloves" "Chainmail Doublet" "Infantry Brigandine" "War Plate"
 	ItemLevel <= 26
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1160,7 +1281,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Deerskin Boots" "Oiled Coat" "Silk Slippers" "Great Helmet"
+	BaseType "Deerskin Boots" "Great Helmet" "Oiled Coat" "Silk Slippers"
 	ItemLevel <= 27
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1169,7 +1290,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Bronze Gauntlets" "Visored Sallet" "Tarnished Spirit Shield" "Hammered Buckler" "Plated Greaves"
+	BaseType "Visored Sallet" "Plated Greaves" "Bronze Gauntlets" "Tarnished Spirit Shield" "Hammered Buckler"
 	ItemLevel <= 28
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1187,7 +1308,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Wild Leather" "Silk Gloves" "Silken Garb"
+	BaseType "Silk Gloves" "Silken Garb" "Wild Leather"
 	ItemLevel <= 30
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1205,7 +1326,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Layered Kite Shield" "Bronzescale Gauntlets" "Clasped Boots" "Burnished Spiked Shield" "Scarlet Round Shield"
+	BaseType "Scarlet Round Shield" "Clasped Boots" "Layered Kite Shield" "Bronzescale Gauntlets" "Burnished Spiked Shield"
 	ItemLevel <= 32
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1214,7 +1335,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Full Scale Armour" "Festival Mask" "Scarlet Raiment" "Mesh Boots" "Full Ringmail" "Jingling Spirit Shield" "Full Plate" "Full Leather" "Mage's Vestment"
+	BaseType "Full Leather" "Jingling Spirit Shield" "Festival Mask" "Full Scale Armour" "Mage's Vestment" "Scarlet Raiment" "Full Plate" "Full Ringmail" "Mesh Boots"
 	ItemLevel <= 33
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1232,7 +1353,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Bronzescale Boots" "Wolf Pelt" "Reinforced Tower Shield"
+	BaseType "Reinforced Tower Shield" "Bronzescale Boots" "Wolf Pelt"
 	ItemLevel <= 35
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1241,7 +1362,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Crusader Helmet" "Clasped Mitts"
+	BaseType "Clasped Mitts" "Crusader Helmet"
 	ItemLevel <= 36
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1250,7 +1371,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Scholar Boots" "Sun Leather" "Waxed Garb" "Arena Plate" "Full Chainmail" "Mesh Gloves" "Silk Robe" "Soldier's Brigandine"
+	BaseType "Arena Plate" "Soldier's Brigandine" "Full Chainmail" "Scholar Boots" "Silk Robe" "Mesh Gloves" "Waxed Garb" "Sun Leather"
 	ItemLevel <= 37
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1259,7 +1380,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Reinforced Greaves" "Nubuck Gloves" "Splendid Round Shield" "Gilded Sallet" "Ornate Spiked Shield" "Brass Spirit Shield"
+	BaseType "Gilded Sallet" "Nubuck Gloves" "Ornate Spiked Shield" "Splendid Round Shield" "Brass Spirit Shield" "Reinforced Greaves"
 	ItemLevel <= 38
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1268,7 +1389,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Bone Circlet" "Shackled Boots" "Nubuck Boots" "Ceremonial Kite Shield" "Gilded Buckler"
+	BaseType "Shackled Boots" "Nubuck Boots" "Bone Circlet" "Ceremonial Kite Shield" "Gilded Buckler"
 	ItemLevel <= 39
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1277,7 +1398,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Thief's Garb" "Steel Gauntlets" "Field Lamellar" "Painted Tower Shield" "Golden Mask" "Bone Armour" "Gladiator Helmet" "Holy Chainmail" "Lordly Plate" "Cabalist Regalia"
+	BaseType "Cabalist Regalia" "Painted Tower Shield" "Field Lamellar" "Thief's Garb" "Golden Mask" "Lordly Plate" "Steel Gauntlets" "Holy Chainmail" "Bone Armour" "Gladiator Helmet"
 	ItemLevel <= 40
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1286,7 +1407,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Secutor Helm" "Embroidered Gloves" "Steelscale Boots" "Steelscale Gauntlets" "Riveted Boots" "Trapper Mitts"
+	BaseType "Steelscale Gauntlets" "Trapper Mitts" "Embroidered Gloves" "Steelscale Boots" "Riveted Boots" "Secutor Helm"
 	ItemLevel <= 41
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1295,7 +1416,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Antique Greaves" "Sage's Robe" "Aventail Helmet" "Eelskin Tunic" "Bronze Plate" "Walnut Spirit Shield" "Riveted Gloves"
+	BaseType "Aventail Helmet" "Walnut Spirit Shield" "Bronze Plate" "Eelskin Tunic" "Antique Greaves" "Sage's Robe" "Riveted Gloves"
 	ItemLevel <= 42
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1304,7 +1425,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Wyrmscale Doublet" "Oak Buckler" "Satin Slippers" "Raven Mask" "Eelskin Gloves"
+	BaseType "Wyrmscale Doublet" "Oak Buckler" "Raven Mask" "Eelskin Gloves" "Satin Slippers"
 	ItemLevel <= 43
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1313,7 +1434,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Eelskin Boots" "Latticed Ringmail" "Maple Round Shield" "Redwood Spiked Shield" "Buckskin Tower Shield" "Lunaris Circlet" "Antique Gauntlets"
+	BaseType "Lunaris Circlet" "Eelskin Boots" "Antique Gauntlets" "Redwood Spiked Shield" "Maple Round Shield" "Buckskin Tower Shield" "Latticed Ringmail"
 	ItemLevel <= 44
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1322,7 +1443,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Reaver Helmet" "Zealot Boots" "Etched Kite Shield" "Quilted Jacket"
+	BaseType "Quilted Jacket" "Reaver Helmet" "Zealot Boots" "Etched Kite Shield"
 	ItemLevel <= 45
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1331,7 +1452,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Trapper Boots" "Ivory Spirit Shield" "Frontier Leather" "Hunter Hood" "Satin Gloves" "Battle Plate" "Silken Wrap"
+	BaseType "Hunter Hood" "Battle Plate" "Satin Gloves" "Silken Wrap" "Ivory Spirit Shield" "Trapper Boots" "Frontier Leather"
 	ItemLevel <= 46
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1340,7 +1461,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Enameled Buckler" "Serpentscale Boots" "Hussar Brigandine"
+	BaseType "Serpentscale Boots" "Enameled Buckler" "Hussar Brigandine"
 	ItemLevel <= 47
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1349,7 +1470,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Mahogany Tower Shield" "Crusader Chainmail" "Fencer Helm" "Serpentscale Gauntlets" "Zealot Gloves"
+	BaseType "Zealot Gloves" "Serpentscale Gauntlets" "Crusader Chainmail" "Fencer Helm" "Mahogany Tower Shield"
 	ItemLevel <= 48
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1358,7 +1479,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Sharkskin Boots" "Sleek Coat" "Zealot Helmet" "Samite Slippers"
+	BaseType "Samite Slippers" "Sleek Coat" "Sharkskin Boots" "Zealot Helmet"
 	ItemLevel <= 49
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1367,7 +1488,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Ambush Mitts" "Conjurer's Vestment" "Sharkskin Gloves" "Spiked Round Shield" "Sun Plate" "Glorious Leather" "Ancient Spirit Shield" "Callous Mask" "Compound Spiked Shield"
+	BaseType "Glorious Leather" "Spiked Round Shield" "Callous Mask" "Sun Plate" "Compound Spiked Shield" "Ancient Spirit Shield" "Ambush Mitts" "Conjurer's Vestment" "Sharkskin Gloves"
 	ItemLevel <= 50
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1376,7 +1497,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Ancient Greaves" "Corrugated Buckler" "Steel Kite Shield" "Full Wyrmscale"
+	BaseType "Corrugated Buckler" "Full Wyrmscale" "Steel Kite Shield" "Ancient Greaves"
 	ItemLevel <= 51
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1385,7 +1506,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Bronze Tower Shield" "Samite Gloves" "Ambush Boots" "Ancient Gauntlets" "Ornate Ringmail" "Noble Tricorne"
+	BaseType "Noble Tricorne" "Samite Gloves" "Ambush Boots" "Bronze Tower Shield" "Ancient Gauntlets" "Ornate Ringmail"
 	ItemLevel <= 52
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1394,7 +1515,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Siege Helmet" "Steel Circlet" "Crimson Raiment"
+	BaseType "Steel Circlet" "Crimson Raiment" "Siege Helmet"
 	ItemLevel <= 53
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1403,7 +1524,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Spidersilk Robe" "Soldier Boots" "Colosseum Plate" "Crimson Round Shield" "Polished Spiked Shield" "Chiming Spirit Shield" "Coronal Leather" "Wyrmscale Gauntlets"
+	BaseType "Polished Spiked Shield" "Wyrmscale Gauntlets" "Crimson Round Shield" "Spidersilk Robe" "Coronal Leather" "Chiming Spirit Shield" "Colosseum Plate" "Soldier Boots"
 	ItemLevel <= 54
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1421,7 +1542,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Lacquered Helmet" "Soldier Gloves" "Girded Tower Shield" "Chain Hauberk" "Wyrmscale Boots"
+	BaseType "Soldier Gloves" "Lacquered Helmet" "Girded Tower Shield" "Wyrmscale Boots" "Chain Hauberk"
 	ItemLevel <= 56
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1430,7 +1551,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Lacquered Garb" "Regicide Mask"
+	BaseType "Regicide Mask" "Lacquered Garb"
 	ItemLevel <= 57
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1439,7 +1560,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Great Crown" "Goliath Gauntlets" "Cutthroat's Garb" "Majestic Plate" "Thorium Spirit Shield" "Destroyer Regalia" "Conjurer Boots"
+	BaseType "Cutthroat's Garb" "Great Crown" "Majestic Plate" "Goliath Gauntlets" "Conjurer Boots" "Destroyer Regalia" "Thorium Spirit Shield"
 	ItemLevel <= 58
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1448,7 +1569,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Baroque Round Shield" "Battle Lamellar" "Sovereign Spiked Shield" "Goliath Greaves" "Golden Buckler" "Necromancer Circlet" "Shagreen Gloves"
+	BaseType "Necromancer Circlet" "Golden Buckler" "Sovereign Spiked Shield" "Goliath Greaves" "Shagreen Gloves" "Battle Lamellar" "Baroque Round Shield"
 	ItemLevel <= 59
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1457,7 +1578,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Plate Vest" "Iron Greaves" "Iron Gauntlets" "Iron Hat" "Splintered Tower Shield"
+	BaseType "Iron Greaves" "Plate Vest" "Splintered Tower Shield" "Iron Gauntlets" "Iron Hat"
 	ItemLevel <= 6
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1466,7 +1587,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Shagreen Boots" "Carnal Boots" "Angelic Kite Shield" "Conjurer Gloves" "Crested Tower Shield" "Ursine Pelt" "Devout Chainmail" "Samite Helmet"
+	BaseType "Conjurer Gloves" "Devout Chainmail" "Crested Tower Shield" "Samite Helmet" "Carnal Boots" "Angelic Kite Shield" "Ursine Pelt" "Shagreen Boots"
 	ItemLevel <= 60
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1475,7 +1596,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Golden Plate" "Crypt Armour" "Sharkskin Tunic" "Lacewood Spirit Shield" "Savant's Robe"
+	BaseType "Golden Plate" "Crypt Armour" "Sharkskin Tunic" "Savant's Robe" "Lacewood Spirit Shield"
 	ItemLevel <= 61
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1484,7 +1605,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Dragonscale Doublet" "Harlequin Mask" "Legion Gloves" "Ironwood Buckler"
+	BaseType "Legion Gloves" "Harlequin Mask" "Dragonscale Doublet" "Ironwood Buckler"
 	ItemLevel <= 62
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1493,7 +1614,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Fluted Bascinet" "Loricated Ringmail" "Magistrate Crown" "Shagreen Tower Shield" "Alder Spiked Shield" "Assassin's Mitts" "Teak Round Shield" "Legion Boots"
+	BaseType "Fluted Bascinet" "Legion Boots" "Assassin's Mitts" "Shagreen Tower Shield" "Loricated Ringmail" "Teak Round Shield" "Magistrate Crown" "Alder Spiked Shield"
 	ItemLevel <= 63
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1502,7 +1623,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Fossilised Spirit Shield" "Solaris Circlet" "Sentinel Jacket" "Crusader Plate" "Necromancer Silks" "Destiny Leather" "Branded Kite Shield" "Hydrascale Boots" "Hydrascale Gauntlets"
+	BaseType "Fossilised Spirit Shield" "Hydrascale Gauntlets" "Crusader Plate" "Solaris Circlet" "Sentinel Jacket" "Hydrascale Boots" "Branded Kite Shield" "Necromancer Silks" "Destiny Leather"
 	ItemLevel <= 64
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1511,7 +1632,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Arcanist Gloves" "Desert Brigandine" "Lacquered Buckler" "Silken Hood" "Ezomyte Burgonet"
+	BaseType "Silken Hood" "Arcanist Gloves" "Desert Brigandine" "Lacquered Buckler" "Ezomyte Burgonet"
 	ItemLevel <= 65
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1520,7 +1641,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Conquest Chainmail" "Ebony Tower Shield" "Arcanist Slippers"
+	BaseType "Conquest Chainmail" "Arcanist Slippers" "Ebony Tower Shield"
 	ItemLevel <= 66
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1529,7 +1650,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Astral Plate" "Varnished Coat" "Vaal Spirit Shield" "Stealth Boots" "Occultist's Vestment" "Vaal Greaves" "Vaal Mask" "Spiny Round Shield" "Champion Kite Shield" "Stealth Gloves" "Exquisite Leather" "Ezomyte Spiked Shield"
+	BaseType "Vaal Mask" "Vaal Spirit Shield" "Astral Plate" "Stealth Boots" "Champion Kite Shield" "Ezomyte Spiked Shield" "Occultist's Vestment" "Spiny Round Shield" "Exquisite Leather" "Vaal Greaves" "Stealth Gloves" "Varnished Coat"
 	ItemLevel <= 67
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1547,7 +1668,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Leather Cap" "Simple Robe" "Rawhide Boots" "Wool Gloves" "Vine Circlet" "Wool Shoes" "Rawhide Gloves" "Twig Spirit Shield"
+	BaseType "Leather Cap" "Simple Robe" "Twig Spirit Shield" "Wool Shoes" "Vine Circlet" "Wool Gloves" "Rawhide Boots" "Rawhide Gloves"
 	ItemLevel <= 8
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -1556,7 +1677,7 @@ Show
 
 #Rare item for leveling or crafting
 Show
-	BaseType "Chainmail Vest" "Fishscale Gauntlets" "Scale Vest" "Battered Helm" "Padded Vest" "Scare Mask"
+	BaseType "Battered Helm" "Scare Mask" "Fishscale Gauntlets" "Padded Vest" "Chainmail Vest" "Scale Vest"
 	ItemLevel <= 9
 	Rarity Rare
 	SetBorderColor 255 255 119 150
@@ -4095,15 +4216,25 @@ Show
 
 #Endgame Rare Bases
 Show
-	BaseType "Vaal Regalia" "Arcanist Gloves" "Sorcerer Boots" "Mind Cage" "Sorcerer Gloves" "Fingerless Silk Gloves" "Hubris Circlet" "Eternal Burgonet" "Arcanist Slippers"
+	Class "Body Armours"
+	DropLevel >= 62
 	Rarity Rare
-	SetFontSize 35
-	SetBorderColor 191 91 0 150
-	SetBackgroundColor 38 0 86 220
+	SetBorderColor 255 255 119
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
 
 #Endgame Rare Bases
 Show
-	BaseType "Decimation Bow" "Harbinger Bow"
+	Class "Boots"
+	DropLevel >= 53
+	Rarity Rare
+	SetBorderColor 255 255 119
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#Endgame Rare Bases
+Show
+	BaseType "Harbinger Bow" "Decimation Bow"
 	Class "Bow"
 	Rarity Rare
 	SetBorderColor 255 255 119
@@ -4112,7 +4243,7 @@ Show
 
 #Endgame Rare Bases
 Show
-	BaseType "Imperial Claw" "Great White Claw" "Eye Gouger" "Gemini Claw"
+	BaseType "Gemini Claw" "Imperial Claw" "Great White Claw" "Eye Gouger"
 	Class "Claw"
 	Rarity Rare
 	SetBorderColor 255 255 119
@@ -4121,8 +4252,26 @@ Show
 
 #Endgame Rare Bases
 Show
-	BaseType "Copper Kris" "Golden Kris" "Imperial Skean" "Ambusher" "Platinum Kris" "Imp Dagger" "Ambusher" "Fiend Dagger" "Ezomyte Dagger"
+	BaseType "Fiend Dagger" "Imperial Skean" "Copper Kris" "Ambusher" "Golden Kris" "Ambusher" "Ezomyte Dagger" "Platinum Kris" "Imp Dagger"
 	Class "Dagger"
+	Rarity Rare
+	SetBorderColor 255 255 119
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#Endgame Rare Bases
+Show
+	Class "Gloves"
+	DropLevel >= 53
+	Rarity Rare
+	SetBorderColor 255 255 119
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#Endgame Rare Bases
+Show
+	Class "Helmets"
+	DropLevel >= 53
 	Rarity Rare
 	SetBorderColor 255 255 119
 	SetFontSize 30
@@ -4133,8 +4282,8 @@ Show
 	Class "Jewel"
 	Rarity Rare
 	SetFontSize 35
-	SetBorderColor 191 91 0 150
-	SetBackgroundColor 38 0 86 220
+	SetBorderColor 191 91 0
+	SetBackgroundColor 0 0 0 220
 
 #Endgame Rare Bases
 Show
@@ -4147,7 +4296,7 @@ Show
 
 #Endgame Rare Bases
 Show
-	BaseType "Tiger Hook" "Corsair Sword"
+	BaseType "Corsair Sword" "Tiger Hook"
 	Class "One Hand Sword"
 	Rarity Rare
 	SetBorderColor 255 255 119
@@ -4165,7 +4314,7 @@ Show
 
 #Endgame Rare Bases
 Show
-	BaseType "Opal Sceptre" "Vaal Sceptre" "Void Sceptre" "Sambar Sceptre" "Carnal Sceptre"
+	BaseType "Opal Sceptre" "Void Sceptre" "Sambar Sceptre" "Vaal Sceptre" "Carnal Sceptre"
 	Class "Sceptres"
 	Rarity Rare
 	SetBorderColor 255 255 119
@@ -4176,7 +4325,7 @@ Show
 Show
 	BaseType "Kite Shield"
 	Class "Shields"
-	DropLevel >= 50
+	DropLevel >= 51
 	Rarity Rare
 	SetBorderColor 255 255 119
 	SetFontSize 30
@@ -4234,7 +4383,7 @@ Show
 
 #Endgame Rare Bases
 Show
-	BaseType "Imperial Staff" "Eclipse Staff" "Maelström Staff"
+	BaseType "Eclipse Staff" "Imperial Staff" "Maelström Staff"
 	Class "Staves"
 	Rarity Rare
 	SetBorderColor 255 255 119
@@ -4243,7 +4392,7 @@ Show
 
 #Endgame Rare Bases
 Show
-	BaseType "Jewelled Foil" "Vaal Rapier" "Harpy Rapier" "Spiraled Foil" "Dragoon Sword"
+	BaseType "Spiraled Foil" "Dragoon Sword" "Vaal Rapier" "Harpy Rapier" "Jewelled Foil"
 	Class "Thrusting One Hand Sword"
 	Rarity Rare
 	SetBorderColor 255 255 119
@@ -4261,7 +4410,7 @@ Show
 
 #Endgame Rare Bases
 Show
-	BaseType "Karui Maul" "Colossus Mallet" "Piledriver" "Coronal Maul"
+	BaseType "Piledriver" "Karui Maul" "Coronal Maul" "Colossus Mallet"
 	Class "Two Hand Maces"
 	Rarity Rare
 	SetBorderColor 255 255 119
@@ -4279,7 +4428,7 @@ Show
 
 #Endgame Rare Bases
 Show
-	BaseType "Opal Wand" "Tornado Wand" "Prophecy Wand" "Profane Wand" "Imbued Wand"
+	BaseType "Opal Wand" "Prophecy Wand" "Tornado Wand" "Imbued Wand" "Profane Wand"
 	Class "Wand"
 	Rarity Rare
 	SetBorderColor 255 255 119
@@ -4292,8 +4441,8 @@ Show
 	ItemLevel >= 60
 	Rarity Rare
 	SetFontSize 35
-	SetBorderColor 191 91 0 150
-	SetBackgroundColor 38 0 86 220
+	SetBorderColor 191 91 0
+	SetBackgroundColor 0 0 0 220
 
 #Endgame Rare Bases
 Show
@@ -4301,8 +4450,8 @@ Show
 	ItemLevel >= 60
 	Rarity Rare
 	SetFontSize 35
-	SetBorderColor 191 91 0 150
-	SetBackgroundColor 38 0 86 220
+	SetBorderColor 191 91 0
+	SetBackgroundColor 0 0 0 220
 
 #Endgame Rare Bases
 Show
@@ -4310,8 +4459,8 @@ Show
 	ItemLevel >= 60
 	Rarity Rare
 	SetFontSize 35
-	SetBorderColor 191 91 0 150
-	SetBackgroundColor 38 0 86 220
+	SetBorderColor 191 91 0
+	SetBackgroundColor 0 0 0 220
 
 #Endgame Rare Bases
 Show
@@ -4337,42 +4486,6 @@ Show
 	SetFontSize 35
 	SetBackgroundColor 0 0 0 220
 
-#Endgame Rare Bases
-Show
-	Class "Body Armours"
-	DropLevel >= 62
-	Rarity Rare
-	SetBorderColor 255 255 119
-	SetFontSize 30
-	SetBackgroundColor 0 0 0 220
-
-#Endgame Rare Bases
-Show
-	Class "Boots"
-	DropLevel >= 53
-	Rarity Rare
-	SetBorderColor 255 255 119
-	SetFontSize 30
-	SetBackgroundColor 0 0 0 220
-
-#Endgame Rare Bases
-Show
-	Class "Gloves"
-	DropLevel >= 53
-	Rarity Rare
-	SetBorderColor 255 255 119
-	SetFontSize 30
-	SetBackgroundColor 0 0 0 220
-
-#Endgame Rare Bases
-Show
-	Class "Helmets"
-	DropLevel >= 53
-	Rarity Rare
-	SetBorderColor 255 255 119
-	SetFontSize 30
-	SetBackgroundColor 0 0 0 220
-
 #General Rares
 Show
 	Class "Boots"
@@ -4395,6 +4508,145 @@ Show
 	ItemLevel >= 84
 	Rarity Rare
 	SetFontSize 25
+	SetBackgroundColor 0 0 0 220
+
+#General Rares
+Show
+	Class "Quivers"
+	Rarity Rare
+	SetFontSize 25
+	SetBackgroundColor 0 0 0 220
+
+#General Rares
+Show
+	DropLevel <= 10
+	ItemLevel >= 20
+	Rarity Rare
+	SetFontSize 18
+	SetBackgroundColor 0 0 0 100
+	SetBorderColor 135 135 135
+
+#General Rares
+Show
+	DropLevel <= 15
+	ItemLevel >= 25
+	Rarity Rare
+	SetFontSize 18
+	SetBackgroundColor 0 0 0 100
+	SetBorderColor 135 135 135
+
+#General Rares
+Show
+	DropLevel <= 20
+	ItemLevel >= 30
+	Rarity Rare
+	SetFontSize 18
+	SetBackgroundColor 0 0 0 100
+	SetBorderColor 135 135 135
+
+#General Rares
+Show
+	DropLevel <= 25
+	ItemLevel >= 35
+	Rarity Rare
+	SetFontSize 18
+	SetBackgroundColor 0 0 0 100
+	SetBorderColor 135 135 135
+
+#General Rares
+Show
+	DropLevel <= 30
+	ItemLevel >= 40
+	Rarity Rare
+	SetFontSize 18
+	SetBackgroundColor 0 0 0 100
+	SetBorderColor 135 135 135
+
+#General Rares
+Show
+	DropLevel <= 35
+	ItemLevel >= 45
+	Rarity Rare
+	SetFontSize 18
+	SetBackgroundColor 0 0 0 100
+	SetBorderColor 135 135 135
+
+#General Rares
+Show
+	DropLevel <= 40
+	ItemLevel >= 50
+	Rarity Rare
+	SetFontSize 18
+	SetBackgroundColor 0 0 0 100
+	SetBorderColor 135 135 135
+
+#General Rares
+Show
+	DropLevel <= 45
+	ItemLevel >= 55
+	Rarity Rare
+	SetFontSize 18
+	SetBackgroundColor 0 0 0 100
+	SetBorderColor 135 135 135
+
+#General Rares
+Show
+	DropLevel <= 5
+	ItemLevel >= 15
+	Rarity Rare
+	SetFontSize 18
+	SetBackgroundColor 0 0 0 100
+	SetBorderColor 135 135 135
+
+#General Rares
+Show
+	DropLevel <= 50
+	ItemLevel >= 60
+	Rarity Rare
+	SetFontSize 18
+	SetBackgroundColor 0 0 0 100
+	SetBorderColor 135 135 135
+
+#General Rares
+Show
+	DropLevel <= 55
+	ItemLevel >= 65
+	Rarity Rare
+	SetFontSize 18
+	SetBackgroundColor 0 0 0 100
+	SetBorderColor 135 135 135
+
+#General Rares
+Show
+	Rarity Rare
+	SetFontSize 25
+	SetBackgroundColor 0 0 0 220
+
+#Chromes
+Show
+	Height 4
+	Width 1
+	SocketGroup RGB
+	SetBorderColor 0 191 0
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#Chromes
+Show
+	Height 3
+	Width 1
+	SocketGroup RGB
+	SetBorderColor 0 191 0
+	SetFontSize 30
+	SetBackgroundColor 0 0 0 220
+
+#Chromes
+Show
+	Height 2
+	Width 2
+	SocketGroup RGB
+	SetBorderColor 0 191 0
+	SetFontSize 30
 	SetBackgroundColor 0 0 0 220
 
 #leveling items that are worth seeing
@@ -4472,7 +4724,16 @@ Show
 
 #Chance Base
 Show
-	BaseType "Sorcerer Boots" "Leather Belt"
+	BaseType "Sorcerer Boots"
+	Rarity Normal
+	SetFontSize 35
+	SetBorderColor 191 91 0 150
+	SetBackgroundColor 38 0 86 220
+
+#Chance Base
+Show
+	BaseType "Leather Belt"
+	ItemLevel >= 74
 	Rarity Normal
 	SetFontSize 35
 	SetBorderColor 191 91 0 150
@@ -4480,8 +4741,25 @@ Show
 
 #Crafting Bases
 Show
-	BaseType "Opal Sceptre" "Hubris Circlet" "Void Sceptre" "Eternal Burgonet" "Prophet Crown"
+	BaseType "Dragoon Sword" "Gemini Claw" "Eclipse Staff" "Ambusher" "Judgement Staff" "Demon Dagger" "Eternal Sword" "Platinum Kris" "Vaal Hatchet" "Jewelled Foil" "Runic Hatchet" "Tiger Hook" "Coronal Maul" "Fleshripper" "Maelström Staff" "Vaal Axe" "Harbinger Bow" "Behemoth Mace" "Imperial Skean"
+	ItemLevel >= 83
+	Rarity <= Magic
+	SetFontSize 25
+	SetBackgroundColor 0 0 0 220
+
+#Crafting Bases
+Show
+	BaseType "Fingerless Silk Gloves" "Opal Wand" "Spiked Gloves" "Fossilised Spirit Shield" "Unset Ring" "Onyx Amulet" "Prophecy Wand" "Titan Greaves" "Sorcerer Boots" "Prismatic Ring" "Gold Amulet" "Amber Amulet" "Two-Toned Boots" "Titan Gauntlets" "Gold Ring" "Void Sceptre" "Topaz Ring" "Diamond Ring" "Citrine Amulet" "Blue Pearl Amulet" "Steel Ring" "Titanium Spirit Shield" "Heavy Belt" "Turquoise Amulet" "Lion Pelt" "Rustic Sash" "Crystal Belt" "Moonstone Ring" "Vanguard Belt" "Lapis Amulet" "Sorcerer Gloves" "Slink Boots" "Agate Amulet" "Opal Ring" "Sambar Sceptre" "Sapphire Ring" "Harmonic Spirit Shield" "Slink Gloves" "Opal Sceptre" "Jade Amulet" "Leather Belt" "Bone Helmet" "Imbued Wand" "Ruby Ring" "Gripped Gloves" "Two-Stone Ring" "Hubris Circlet" "Saintly Chainmail" "Profane Wand" "Coral Ring" "Marble Amulet" "Vaal Regalia" "Eternal Burgonet"
 	ItemLevel >= 84
+	Rarity <= Magic
+	SetFontSize 25
+	SetBackgroundColor 0 0 0 220
+
+#Crafting Bases
+Show
+	BaseType "Sai"
+	Class "Dagger"
+	ItemLevel >= 83
 	Rarity <= Magic
 	SetFontSize 25
 	SetBackgroundColor 0 0 0 220
