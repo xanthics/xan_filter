@@ -86,15 +86,15 @@ from item_config import warbands
 from theme_config import formatting
 
 
-def gen_list(obj):
+def gen_list_full(items, desc):
 #	print("Starting {}".format(obj))
 	b = ""
 
 	# gen our string
-	for i in sorted(obj.items):
-		s = obj.items[i]
+	for i in sorted(items):
+		s = items[i]
 		if s['type'] != "ignore":
-			b += "#{} - {}\n".format(i, obj.desc)
+			b += "#{} - {}\n".format(i, desc)
 			if s['type'] == "hide":
 				b += "Hide"
 			else:
@@ -108,14 +108,75 @@ def gen_list(obj):
 			if formatting.settings[s['type']]:
 				b += "\n\t{}".format("\n\t".join(formatting.settings[s['type']]))
 			else:
-				print("Missing type field {} ** {}".format(obj, i))
+				print("Missing type field {} ** {}".format(items[i], i))
 			b += "\n\n"
 
 	return b
 
 
+def gen_list_compact(items, desc):
+#	print("Starting {}".format(obj))
+
+	# gen our string
+	l = {}
+	for i in items:
+		s = items[i]
+		if s['type'] != "ignore":
+			if not i.split()[0].isdigit():
+				v = '0'
+			else:
+				v = i.split()[0]
+			if v not in l:
+				l[v] = {}
+
+			c = ''
+			f = ''
+			o = ''
+			b = ''
+			t = 'Show'
+			if s['type'] == "hide":
+				t = "Hide"
+			if 'base' in s:
+				b = s['base']
+			if 'class' in s:
+				c = s['class']
+			if 'other' in s:
+				o = ",".join(s['other'])
+
+			if formatting.settings[s['type']]:
+				f = s['type']
+			else:
+				print("Missing type field {} ** {}".format(items[i], i))
+
+			k = '{},{},{},{}'.format(t, c, f, o)
+			if k in l[v]:
+				l[v][k].append(b)
+			else:
+				l[v][k] = [b]
+	b = ""
+	for i in sorted(l.keys()):
+		for ii in sorted(l[i].keys()):
+			t, c, f, o = ii.split(',', maxsplit=3)
+			b += "#{}\n".format(desc)
+			b += t
+			if l[i][ii][0]:
+				b += "\n\tBaseType \"{}\"".format('" "'.join(l[i][ii]))
+			if c:
+				b += "\n\tClass \"{}\"".format(c)
+			if o:
+				b += "\n\t{}".format("\n\t".join(o.split(',')))
+			if formatting.settings[f]:
+				b += "\n\t{}".format("\n\t".join(formatting.settings[f]))
+			else:
+				print("Missing type field {} ** {}".format(items[i], i))
+			b += "\n\n"
+	return b
+
+
 # main function for creating a filter
 def main():
+	# gen_list = gen_list_full
+	gen_list = gen_list_compact
 	leagues = [("st", "Standard", uniques, divination, stcurrency, stessence),
 			   ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence),
 			   ("l", "Legacy", puniques, pdivination, pcurrency, pessence),
@@ -133,43 +194,49 @@ def main():
 
 """.format(i[1], datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'))
 
-		buffer += gen_list(show)  # Always show these items
-		buffer += gen_list(hide)  # Always hide these items
+		buffer += gen_list(show.items, show.desc)  # Always show these items
+		buffer += gen_list(hide.items, hide.desc)  # Always hide these items
 		if i[0] not in ['st', 'hc']:
-			buffer += gen_list(challenges)
-		buffer += gen_list(labyrinth)
-		buffer += gen_list(i[4])  # Autogen currency values
-		# buffer += gen_list(essences)  # Essences
-		buffer += gen_list(i[5])  # Autogen Essences
-		buffer += gen_list(currency)  # Currency
-		buffer += gen_list(gems)  # Gems
-		buffer += gen_list(i[2])  # uniques
-		#buffer += gen_list(recipe_item)  # Items for vendor recipe
-		buffer += gen_list(maps)  # maps
-		buffer += gen_list(i[3])  # divination cards
-		buffer += gen_list(flask)  # Flasks
-		buffer += gen_list(t1_rares)
+			buffer += gen_list(challenges.items, challenges.desc)
+		buffer += gen_list(labyrinth.items, labyrinth.desc)
+		buffer += gen_list(i[4].items, i[4].desc)  # Autogen currency values
+		# buffer += gen_list(essences.items, essences.desc)  # Essences
+		buffer += gen_list(i[5].items, i[5].desc)  # Autogen Essences
+		buffer += gen_list(currency.items, currency.desc)  # Currency
+		buffer += gen_list(gems.items, gems.desc)  # Gems
+		buffer += gen_list(i[2].items, i[2].desc)  # uniques
+		# buffer += gen_list(recipe_item.items, recipe_item.desc)  # Items for vendor recipe
+		buffer += gen_list(maps.items, maps.desc)  # maps
+		buffer += gen_list(i[3].items, i[3].desc)  # divination cards
+		buffer += gen_list(flask.items, flask.desc)  # Flasks
+		buffer += gen_list(t1_rares.items, t1_rares.desc)
 		if leveling:
+			buf = {}
+			desc = rare_armor_dex.desc
 			for rareitemleveling in [rare_armor_dex, rare_armor_dex_int, rare_armor_str_dex, rare_armor_str, rare_armor_int, rare_armor_str_int, rare_bow, rare_claw, rare_dagger, rare_one_hand_sword,
 									 rare_one_hand_mace, rare_one_hand_axe, rare_sceptre, rare_staff, rare_thrusting_one_hand_sword, rare_two_hand_sword, rare_two_hand_mace, rare_two_hand_axe, rare_wand]:
-				buffer += gen_list(rareitemleveling)
+				buf.update(rareitemleveling.items)
+			buffer += gen_list(buf, desc)
 
-		buffer += gen_list(rare_highlight)  # rares highlighting + jewelry
-		buffer += gen_list(rares)  # rares catchall
-		#buffer += gen_list(chroma)  # chrome vendor items
+		buffer += gen_list(rare_highlight.items, rare_highlight.desc)  # rares highlighting + jewelry
+		buffer += gen_list(rares.items, rares.desc)  # rares catchall
+		# buffer += gen_list(chroma.items, chroma.desc)  # chrome vendor items
 		if leveling:
-			buffer += gen_list(general_levelling)
-		buffer += gen_list(chance)  # Chance bases
-		buffer += gen_list(crafting_bases)  # Crafting bases
-		#buffer += gen_list(animate_weapon)  # Animate Weapon bases
+			buffer += gen_list(general_levelling.items, general_levelling.desc)
+		buffer += gen_list(chance.items, chance.desc)  # Chance bases
+		buffer += gen_list(crafting_bases.items, crafting_bases.desc)  # Crafting bases
+		# buffer += gen_list(animate_weapon.items, animate_weapon.desc)  # Animate Weapon bases
 
 		if 0:
+			buf = {}
+			desc = rare_armor_dex.desc
 			for nonrareitemleveling in [nonrare_armor_dex, nonrare_armor_dex_int, nonrare_armor_str_dex, nonrare_armor_str, nonrare_armor_int, nonrare_armor_str_int, nonrare_bow, nonrare_claw, nonrare_dagger,
 										nonrare_jewelry, nonrare_one_hand_sword, nonrare_one_hand_mace, nonrare_one_hand_axe, nonrare_sceptre, nonrare_staff,
 										nonrare_thrusting_one_hand_sword, nonrare_two_hand_sword, nonrare_two_hand_mace, nonrare_two_hand_axe, nonrare_wand]:
-				buffer += gen_list(nonrareitemleveling)
+				buf.update(nonrareitemleveling.items)
+			buffer += gen_list(buf, desc)
 
-		buffer += gen_list(warbands)  # Warband base type highlighting
+		buffer += gen_list(warbands.items, warbands.desc)  # Warband base type highlighting
 
 		print("Writing files to {}".format(path.expanduser("~\\my game\\Path of Exile\\")))
 
