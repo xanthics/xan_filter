@@ -160,13 +160,13 @@ def gen_list_compact(items, desc):
 			b += "#{}\n".format(desc)
 			b += t
 			if l[i][ii][0]:
-				b += "\n\tBaseType \"{}\"".format('" "'.join(l[i][ii]))
+				b += "\n\tBaseType \"{}\"".format('" "'.join(sorted(l[i][ii])))
 			if c:
 				b += "\n\tClass \"{}\"".format(c)
 			if o:
-				b += "\n\t{}".format("\n\t".join(o.split(',')))
+				b += "\n\t{}".format("\n\t".join(sorted(o.split(','))))
 			if formatting.settings[f]:
-				b += "\n\t{}".format("\n\t".join(formatting.settings[f]))
+				b += "\n\t{}".format("\n\t".join(sorted(formatting.settings[f])))
 			else:
 				print("Missing type field {} ** {}".format(items[i], i))
 			b += "\n\n"
