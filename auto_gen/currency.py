@@ -1,12 +1,12 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 04/01/2017(m/d/y) 01:01:39 UTC from "Standard" data
+# Created: 08/07/2017(m/d/y) 05:06:28 UTC from "Standard" data
 
 desc = "Currency Autogen"
 
 # Base type : settings pair
 items = {
-	"0 Apprentice Cartographer's Sextant": {"base": "Apprentice Cartographer's Sextant", "class": "Currency", "type": "currency normal"},
+	"0 Apprentice Cartographer's Sextant": {"base": "Apprentice Cartographer's Sextant", "class": "Currency", "type": "currency high"},
 	"0 Blessed Orb": {"base": "Blessed Orb", "class": "Currency", "type": "currency normal"},
 	"0 Cartographer's Chisel": {"base": "Cartographer's Chisel", "class": "Currency", "type": "currency normal"},
 	"0 Chaos Orb": {"base": "Chaos Orb", "class": "Currency", "type": "currency high"},
@@ -16,8 +16,8 @@ items = {
 	"0 Exalted Orb": {"base": "Exalted Orb", "class": "Currency", "type": "currency extremely high"},
 	"0 Gemcutter's Prism": {"base": "Gemcutter's Prism", "class": "Currency", "type": "currency high"},
 	"0 Glassblower's Bauble": {"base": "Glassblower's Bauble", "class": "Currency", "type": "currency low"},
-	"0 Jeweller's Orb": {"base": "Jeweller's Orb", "class": "Currency", "type": "currency low"},
-	"0 Journeyman Cartographer's Sextant": {"base": "Journeyman Cartographer's Sextant", "class": "Currency", "type": "currency high"},
+	"0 Jeweller's Orb": {"base": "Jeweller's Orb", "class": "Currency", "type": "currency normal"},
+	"0 Journeyman Cartographer's Sextant": {"base": "Journeyman Cartographer's Sextant", "class": "Currency", "type": "currency very high"},
 	"0 Master Cartographer's Sextant": {"base": "Master Cartographer's Sextant", "class": "Currency", "type": "currency very high"},
 	"0 Orb of Alchemy": {"base": "Orb of Alchemy", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Alteration": {"base": "Orb of Alteration", "class": "Currency", "type": "currency low"},
