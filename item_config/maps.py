@@ -122,7 +122,7 @@ items = {
 	"1 Arsenal Map": {"base": "Arsenal Map", "class": "Maps", "other": ["ItemLevel <= 79", "DropLevel 77"], "type": "map yellow good"},
 	"1 Courtyard Map": {"base": "Courtyard Map", "class": "Maps", "other": ["ItemLevel <= 79", "DropLevel 77"], "type": "map yellow good"},
 	"1 Malformation Map": {"base": "Malformation Map", "class": "Maps", "other": ["ItemLevel <= 79", "DropLevel 77"], "type": "map yellow good"},
-	"1 Quay Map": {"base": "Quay Map", "class": "Maps", "other": ["DropLevel 77"], "type": "map yellow good"},
+	"1 Port Map": {"base": "Port Map", "class": "Maps", "other": ["DropLevel 77"], "type": "map yellow good"},
 	"1 Terrace Map": {"base": "Terrace Map", "class": "Maps", "other": ["ItemLevel <= 79", "DropLevel 77"], "type": "map yellow good"},
 	"1 Underground River Map": {"base": "Underground River Map", "class": "Maps", "other": ["ItemLevel <= 79", "DropLevel 77"], "type": "map yellow good"},
 
@@ -201,7 +201,7 @@ items = {
 	"0 Shaped Arsenal Map": {"base": "Shaped Arsenal Map", "class": "Maps", "other": ["ItemLevel <= 84", "DropLevel 82"], "type": "map red good"},
 	"0 Shaped Courtyard Map": {"base": "Shaped Courtyard Map", "class": "Maps", "other": ["ItemLevel <= 84", "DropLevel 82"], "type": "map red good"},
 	"0 Shaped Malformation Map": {"base": "Shaped Malformation Map", "class": "Maps", "other": ["ItemLevel <= 84", "DropLevel 82"], "type": "map red good"},
-	"0 Shaped Quay Map": {"base": "Shaped Quay Map", "class": "Maps", "other": ["ItemLevel <= 84", "DropLevel 82"], "type": "map red good"},
+	"0 Shaped Port Map": {"base": "Shaped Port Map", "class": "Maps", "other": ["ItemLevel <= 84", "DropLevel 82"], "type": "map red good"},
 	"0 Shaped Terrace Map": {"base": "Shaped Terrace Map", "class": "Maps", "other": ["ItemLevel <= 84", "DropLevel 82"], "type": "map red good"},
 	"0 Shaped Underground River Map": {"base": "Shaped Underground River Map", "class": "Maps", "other": ["ItemLevel <= 84", "DropLevel 82"], "type": "map red good"},
 	"1 Abyss Map": {"base": "Abyss Map", "class": "Maps", "other": ["ItemLevel <= 84", "DropLevel 82"], "type": "map red good"},
@@ -236,6 +236,7 @@ items = {
 	"0 Fragment of the Minotaur": {"base": "Fragment of the Minotaur", "class": "Map Fragments", "type": "map red"},
 	"0 Fragment of the Chimera": {"base": "Fragment of the Chimera", "class": "Map Fragments", "type": "map red"},
 	"0 Fragment of the Hydra": {"base": "Fragment of the Hydra", "class": "Map Fragments", "type": "map red"},
+	"0 Divine Vessel": {"base": "Divine Vessel", "class": "Map Fragments", "type": "map red good"},
 
 	"71 Maps >= 78": {"class": "Maps", "other": ["DropLevel >= 78"], "type": "map red"},
 	"72 Maps <= 72": {"class": "Maps", "other": ["DropLevel <= 72"], "type": "map white"},

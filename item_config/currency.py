@@ -18,12 +18,14 @@ items = {
 	"0 Armourer's Scrap": {"base": "Armourer's Scrap", "class": "Currency", "type": "currency very low"},
 	"0 Scroll of Wisdom": {"base": "Scroll of Wisdom", "class": "Currency", "type": "currency very low"},
 	"0 Portal Scroll": {"base": "Portal Scroll", "class": "Currency", "type": "currency very low"},
-	"0 Alteration Shard": {"base": "Alteration Shard", "class": "Currency", "type": "currency very low"},
+	"0 Mirror Shard": {"base": "Mirror Shard", "class": "Currency", "type": "currency high"},
+	"0 Exalted Shard": {"base": "Exalted Shard", "class": "Currency", "type": "currency normal"},
 	"0 Apprentice Cartographer's Seal": {"base": "Apprentice Cartographer's Seal", "class": "Currency", "type": "currency normal"},
 	"0 Journeyman Cartographer's Seal": {"base": "Journeyman Cartographer's Seal", "class": "Currency", "type": "currency normal"},
 	"0 Master Cartographer's Seal": {"base": "Master Cartographer's Seal", "class": "Currency", "type": "currency normal"},
 	"0 Unshaping Orb": {"base": "Unshaping Orb", "class": "Currency", "type": "currency normal"},
 	"0 Prophecy": {"base": "Prophecy", "class": "Currency", "type": "currency normal"},
+	"6 Shard": {"base": "Shard", "class": "Currency", "type": "currency low"},
 	"7 Scroll Fragment": {"base": "Scroll Fragment", "class": "Currency", "type": "hide"},
 	"9 Currency": {"class": "Currency", "type": "currency normal"}
 }

@@ -220,7 +220,7 @@ def main():
 
 		buffer += gen_list(rare_highlight.items, rare_highlight.desc)  # rares highlighting + jewelry
 		buffer += gen_list(rares.items, rares.desc)  # rares catchall
-		# buffer += gen_list(chroma.items, chroma.desc)  # chrome vendor items
+		buffer += gen_list(chroma.items, chroma.desc)  # chrome vendor items
 		if leveling:
 			buffer += gen_list(general_levelling.items, general_levelling.desc)
 		buffer += gen_list(chance.items, chance.desc)  # Chance bases
