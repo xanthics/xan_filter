@@ -164,7 +164,7 @@ def gen_list_compact(items, desc):
 			if c:
 				b += "\n\tClass \"{}\"".format(c)
 			if o:
-				b += "\n\t{}".format("\n\t".join(o.split(',')))
+				b += "\n\t{}".format("\n\t".join(sorted(o.split(','))))
 			if formatting.settings[f]:
 				b += "\n\t{}".format("\n\t".join(sorted(formatting.settings[f])))
 			else:
