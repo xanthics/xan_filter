@@ -23,13 +23,13 @@ items = {
 	"0 Quest": {"class": "Quest", "type": "quest"},
 	"0 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "show high"},
 	"0 Jewel": {"class": "Jewel", "other": ["Rarity <= Magic"], "type": "show normal"},
-	"0 Splinter of Xoph": {"base": "Splinter of Xoph", "class": "Currency", "type": "show normal"},
-	"0 Splinter of Tul": {"base": "Splinter of Tul", "class": "Currency", "type": "show normal"},
-	"0 Splinter of Esh": {"base": "Splinter of Esh", "class": "Currency", "type": "show normal"},
-	"0 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", "class": "Currency", "type": "show normal"},
-	"0 Splinter of Chayula": {"base": "Splinter of Chayula", "class": "Currency", "type": "show normal"},
+#	"0 Splinter of Xoph": {"base": "Splinter of Xoph", "class": "Currency", "type": "show normal"},
+#	"0 Splinter of Tul": {"base": "Splinter of Tul", "class": "Currency", "type": "show normal"},
+#	"0 Splinter of Esh": {"base": "Splinter of Esh", "class": "Currency", "type": "show normal"},
+#	"0 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", "class": "Currency", "type": "show normal"},
+#	"0 Splinter of Chayula": {"base": "Splinter of Chayula", "class": "Currency", "type": "show normal"},
 
-	"9 Starter weapon": {"other": ["Class Dagger Wand \"One Hand\" Bow Stave \"Two Hand\" Sceptre Claws", "ItemLevel < 2"], "type": "low"},
+	"9 Starter weapon": {"other": ["Class Dagger Wand \"One Hand\" Bow Stave \"Two Hand\" Sceptre Claws", "ItemLevel < 2"], "type": "show normal"},
 
 	# Corrupted white items for lead to gold darkshrine
 	"0 corrupted amulet": {"class": "Amulets", "other": ["Corrupted True", "Rarity Normal", "ItemLevel >= 60"], "type": "show normal"},
