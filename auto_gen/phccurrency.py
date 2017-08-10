@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 08/09/2017(m/d/y) 05:48:51 UTC from "tmphardcore" data
+# Created: 08/10/2017(m/d/y) 03:29:02 UTC from "tmphardcore" data
 
 desc = "Currency Autogen"
 
@@ -18,7 +18,7 @@ items = {
 	"0 Blessed Orb": {"base": "Blessed Orb", "class": "Currency", "type": "currency normal"},
 	"0 Blessing of Chayula": {"base": "Blessing of Chayula", "class": "Currency", "type": "currency extremely high"},
 	"0 Blessing of Esh": {"base": "Blessing of Esh", "class": "Currency", "type": "currency extremely high"},
-	"0 Blessing of Tul": {"base": "Blessing of Tul", "class": "Currency", "type": "currency high"},
+	"0 Blessing of Tul": {"base": "Blessing of Tul", "class": "Currency", "type": "currency extremely high"},
 	"0 Blessing of Uul-Netol": {"base": "Blessing of Uul-Netol", "class": "Currency", "type": "currency very high"},
 	"0 Blessing of Xoph": {"base": "Blessing of Xoph", "class": "Currency", "type": "currency extremely high"},
 	"0 Cartographer's Chisel": {"base": "Cartographer's Chisel", "class": "Currency", "type": "currency normal"},
@@ -51,7 +51,7 @@ items = {
 	"0 Orb of Regret": {"base": "Orb of Regret", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Scouring": {"base": "Orb of Scouring", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Transmutation": {"base": "Orb of Transmutation", "class": "Currency", "type": "currency very low"},
-	"0 Perandus Coin": {"base": "Perandus Coin", "class": "Currency", "type": "currency very low"},
+	"0 Perandus Coin": {"base": "Perandus Coin", "class": "Currency", "type": "currency high"},
 	"0 Portal Scroll": {"base": "Portal Scroll", "class": "Currency", "type": "currency very low"},
 	"0 Regal Orb": {"base": "Regal Orb", "class": "Currency", "type": "currency high"},
 	"0 Regal Shard": {"base": "Regal Shard", "class": "Currency", "type": "currency low"},

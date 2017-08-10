@@ -179,8 +179,8 @@ def main():
 	gen_list = gen_list_compact
 	leagues = [("st", "Standard", uniques, divination, stcurrency, stessence),
 			   ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence),
-			   ("l", "Legacy", puniques, pdivination, pcurrency, pessence),
-			   ("lhc", "Hardcore Legacy", phcuniques, phcdivination, phccurrency, phcessence)]
+			   ("t", "Temp Standard", puniques, pdivination, pcurrency, pessence),
+			   ("thc", "Temp Hardcore", phcuniques, phcdivination, phccurrency, phcessence)]
 
 	leveling = False  # toggle to show leveling items
 
