@@ -5,14 +5,14 @@ This is a script to generate a filter file for Path of Exile using the included 
 [GGG Forum thread](https://www.pathofexile.com/forum/view-thread/1721195) with more information about the filter.
 
 **HIDE**
-* [Download Legacy](xan.l.hide.filter?raw=true)
-* [Download Legacy Hardcore](xan.lhc.hide.filter?raw=true)
+* [Download Harbinger](xan.t.hide.filter?raw=true)
+* [Download Harbinger Hardcore](xan.thc.hide.filter?raw=true)
 * [Download Standard](xan.st.hide.filter?raw=true)
 * [Download Hardcore](xan.hc.hide.filter?raw=true)
 
 **SHOW**
-* [Download Legacy](xan.l.show.filter?raw=true)
-* [Download Legacy Hardcore](xan.lhc.show.filter?raw=true)
+* [Download Harbinger](xan.t.show.filter?raw=true)
+* [Download Harbinger Hardcore](xan.thc.show.filter?raw=true)
 * [Download Standard](xan.s.show.filter?raw=true)
 * [Download Hardcore](xan.hc.show.filter?raw=true)
 
@@ -22,7 +22,7 @@ Run Create_filter with necessary config files to generate xan.filter.  Note that
 
 (Optional) Run pricetool to update currency, divination, and unique tiers.  
 The poe ninja version should finish very quickly  
-The ggg-api version may take some time depending on how much data is pending in ggg stash river.  Requires a running MongoDB instance.
+~~The ggg-api version may take some time depending on how much data is pending in ggg stash river.  Requires a running MongoDB instance.~~
 
 Config
 ======

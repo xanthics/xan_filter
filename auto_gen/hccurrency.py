@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 08/09/2017(m/d/y) 05:48:51 UTC from "Hardcore" data
+# Created: 08/10/2017(m/d/y) 03:29:02 UTC from "Hardcore" data
 
 desc = "Currency Autogen"
 
@@ -50,7 +50,7 @@ items = {
 	"0 Orb of Horizons": {"base": "Orb of Horizons", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Regret": {"base": "Orb of Regret", "class": "Currency", "type": "currency high"},
 	"0 Orb of Scouring": {"base": "Orb of Scouring", "class": "Currency", "type": "currency normal"},
-	"0 Orb of Transmutation": {"base": "Orb of Transmutation", "class": "Currency", "type": "currency very low"},
+	"0 Orb of Transmutation": {"base": "Orb of Transmutation", "class": "Currency", "type": "currency low"},
 	"0 Perandus Coin": {"base": "Perandus Coin", "class": "Currency", "type": "currency very low"},
 	"0 Portal Scroll": {"base": "Portal Scroll", "class": "Currency", "type": "currency very low"},
 	"0 Regal Orb": {"base": "Regal Orb", "class": "Currency", "type": "currency high"},
