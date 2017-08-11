@@ -1,11 +1,12 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 08/10/2017(m/d/y) 03:29:02 UTC from "Hardcore" data
+# Created: 08/11/2017(m/d/y) 03:27:04 UTC from "Hardcore" data
 
 desc = "Essence Autogen"
 
 # Base type : settings pair
 items = {
+	"0 Essence of Delirium": {"base": "Essence of Delirium", "class": "Currency", "type": "currency very high"},
 	"0 Remnant of Corruption": {"base": "Remnant of Corruption", "class": "Currency", "type": "currency normal"},
 	"0 Screaming Essence of Greed": {"base": "Screaming Essence of Greed", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Contempt": {"base": "Shrieking Essence of Contempt", "class": "Currency", "type": "currency normal"},
