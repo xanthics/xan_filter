@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 08/10/2017(m/d/y) 03:29:02 UTC from "tmpstandard" data
+# Created: 08/11/2017(m/d/y) 03:24:05 UTC from "tmpstandard" data
 
 desc = "Currency Autogen"
 
@@ -54,7 +54,7 @@ items = {
 	"0 Perandus Coin": {"base": "Perandus Coin", "class": "Currency", "type": "currency very low"},
 	"0 Portal Scroll": {"base": "Portal Scroll", "class": "Currency", "type": "currency very low"},
 	"0 Regal Orb": {"base": "Regal Orb", "class": "Currency", "type": "currency high"},
-	"0 Regal Shard": {"base": "Regal Shard", "class": "Currency", "type": "currency low"},
+	"0 Regal Shard": {"base": "Regal Shard", "class": "Currency", "type": "currency very low"},
 	"0 Scroll of Wisdom": {"base": "Scroll of Wisdom", "class": "Currency", "type": "currency very low"},
 	"0 Silver Coin": {"base": "Silver Coin", "class": "Currency", "type": "currency normal"},
 	"0 Splinter of Chayula": {"base": "Splinter of Chayula", "class": "Currency", "type": "currency high"},

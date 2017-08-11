@@ -158,7 +158,7 @@ settings = {
 	"currency low": ["SetFontSize {}".format(size['normal']),
 					 "SetBackgroundColor {} 220".format(color['black'])],
 	"currency very low": ["SetFontSize {}".format(size['normal']),
-						  "SetBackgroundColor {} 100".format(color['black'])],
+						  "SetBackgroundColor {} 150".format(color['black'])],
 
 	"divination very high": ["SetBorderColor {}".format(color['divinationnew']),
 							 "SetFontSize {}".format(size['vlarge']),
@@ -184,14 +184,14 @@ settings = {
 				"SetBackgroundColor {} 220".format(color['black'])],
 
 	"leveling high": ["SetFontSize {}".format(size['normal']),
-					  "SetBackgroundColor {} 100".format(color['black']),
+					  "SetBackgroundColor {} 150".format(color['black']),
 					  "SetBorderColor {}".format(color['nemesisoutline'])],
 	"leveling normal": ["SetFontSize {}".format(size['small']),
-						"SetBackgroundColor {} 100".format(color['black']),
+						"SetBackgroundColor {} 150".format(color['black']),
 						"SetBorderColor {}".format(color['tormentoutline'])],
 	"leveling low": ["SetFontSize {}".format(size['minimum']),
 					 "Sockets > 2",
-					 "SetBackgroundColor {} 100".format(color['black']),
+					 "SetBackgroundColor {} 150".format(color['black']),
 					 "SetBorderColor {}".format(color['normal'])],
 
 	"map red": ["SetBorderColor {} 150".format(color['fire']),
@@ -301,7 +301,7 @@ settings = {
 	"normal": ["SetFontSize {}".format(size['normal']),
 			   "SetBackgroundColor {} 220".format(color['black'])],
 	"low": ["SetFontSize {}".format(size['minimum']),
-			"SetBackgroundColor {} 100".format(color['black']),
+			"SetBackgroundColor {} 150".format(color['black']),
 			"SetBorderColor {}".format(color['premiumgrey'])],
 
 	"ignore": [""],  # will have no styling applied and will use the default set at the end
