@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 08/11/2017(m/d/y) 03:24:05 UTC from "tmpstandard" data
+# Created: 08/11/2017(m/d/y) 03:27:04 UTC from "tmpstandard" data
 
 desc = "Unique"
 
@@ -28,7 +28,6 @@ items = {
 	"0 Grand Mana Flask": {"base": "Grand Mana Flask", "type": "unique very high"},
 	"0 Harbinger Map": {"base": "Harbinger Map", "type": "unique very high"},
 	"0 Imperial Maul": {"base": "Imperial Maul", "type": "unique very high"},
-	"0 Jasper Chopper": {"base": "Jasper Chopper", "type": "unique very high"},
 	"0 Museum Map": {"base": "Museum Map", "type": "unique very high"},
 	"0 Occultist's Vestment": {"base": "Occultist's Vestment", "type": "unique very high"},
 	"0 Prismatic Jewel": {"base": "Prismatic Jewel", "type": "unique very high"},
@@ -75,6 +74,7 @@ items = {
 	"1 Imperial Skean": {"base": "Imperial Skean", "type": "unique high"},
 	"1 Imperial Staff": {"base": "Imperial Staff", "type": "unique high"},
 	"1 Ironscale Gauntlets": {"base": "Ironscale Gauntlets", "type": "unique high"},
+	"1 Jasper Chopper": {"base": "Jasper Chopper", "type": "unique high"},
 	"1 Jewelled Foil": {"base": "Jewelled Foil", "type": "unique high"},
 	"1 Jingling Spirit Shield": {"base": "Jingling Spirit Shield", "type": "unique high"},
 	"1 Judgement Staff": {"base": "Judgement Staff", "type": "unique high"},
@@ -281,7 +281,6 @@ items = {
 	"7 Reaver Sword": {"base": "Reaver Sword", "type": "unique low"},
 	"7 Recurve Bow": {"base": "Recurve Bow", "type": "unique low"},
 	"7 Reinforced Tower Shield": {"base": "Reinforced Tower Shield", "type": "unique low"},
-	"7 Rock Breaker": {"base": "Rock Breaker", "type": "unique low"},
 	"7 Rotted Round Shield": {"base": "Rotted Round Shield", "type": "unique low"},
 	"7 Royal Skean": {"base": "Royal Skean", "type": "unique low"},
 	"7 Royal Staff": {"base": "Royal Staff", "type": "unique low"},
@@ -292,7 +291,6 @@ items = {
 	"7 Scholar's Robe": {"base": "Scholar's Robe", "type": "unique low"},
 	"7 Secutor Helm": {"base": "Secutor Helm", "type": "unique low"},
 	"7 Sentinel Jacket": {"base": "Sentinel Jacket", "type": "unique low"},
-	"7 Serpentine Staff": {"base": "Serpentine Staff", "type": "unique low"},
 	"7 Serrated Arrow Quiver": {"base": "Serrated Arrow Quiver", "type": "unique low"},
 	"7 Shagreen Boots": {"base": "Shagreen Boots", "type": "unique low"},
 	"7 Sharktooth Arrow Quiver": {"base": "Sharktooth Arrow Quiver", "type": "unique low"},
