@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 08/11/2017(m/d/y) 03:24:05 UTC from "tmphardcore" data
+# Created: 08/11/2017(m/d/y) 03:27:04 UTC from "tmphardcore" data
 
 desc = "Unique"
 
@@ -32,6 +32,7 @@ items = {
 	"0 Mosaic Kite Shield": {"base": "Mosaic Kite Shield", "type": "unique very high"},
 	"0 Murder Boots": {"base": "Murder Boots", "type": "unique very high"},
 	"0 Occultist's Vestment": {"base": "Occultist's Vestment", "type": "unique very high"},
+	"0 Prismatic Jewel": {"base": "Prismatic Jewel", "type": "unique very high"},
 	"0 Prophecy Wand": {"base": "Prophecy Wand", "type": "unique very high"},
 	"0 Regicide Mask": {"base": "Regicide Mask", "type": "unique very high"},
 	"0 Ritual Sceptre": {"base": "Ritual Sceptre", "type": "unique very high"},
@@ -196,7 +197,6 @@ items = {
 	"7 Dread Maul": {"base": "Dread Maul", "type": "unique low"},
 	"7 Estoc": {"base": "Estoc", "type": "unique low"},
 	"7 Gnarled Branch": {"base": "Gnarled Branch", "type": "unique low"},
-	"7 Goat's Horn": {"base": "Goat's Horn", "type": "unique low"},
 	"7 Golden Buckler": {"base": "Golden Buckler", "type": "unique low"},
 	"7 Golden Mask": {"base": "Golden Mask", "type": "unique low"},
 	"7 Great Crown": {"base": "Great Crown", "type": "unique low"},
@@ -220,6 +220,7 @@ items = {
 	"7 Platinum Kris": {"base": "Platinum Kris", "type": "unique low"},
 	"7 Poleaxe": {"base": "Poleaxe", "type": "unique low"},
 	"7 Reaver Sword": {"base": "Reaver Sword", "type": "unique low"},
+	"7 Recurve Bow": {"base": "Recurve Bow", "type": "unique low"},
 	"7 Rotted Round Shield": {"base": "Rotted Round Shield", "type": "unique low"},
 	"7 Royal Staff": {"base": "Royal Staff", "type": "unique low"},
 	"7 Sage's Robe": {"base": "Sage's Robe", "type": "unique low"},
