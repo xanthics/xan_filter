@@ -26,6 +26,6 @@ items = {
 	"0 Unshaping Orb": {"base": "Unshaping Orb", "class": "Currency", "type": "currency normal"},
 	"0 Prophecy": {"base": "Prophecy", "class": "Currency", "type": "currency normal"},
 	"6 Shard": {"base": "Shard", "class": "Currency", "type": "currency low"},
-	"7 Scroll Fragment": {"base": "Scroll Fragment", "class": "Currency", "type": "hide"},
+#	"7 Scroll Fragment": {"base": "Scroll Fragment", "class": "Currency", "type": "hide"},
 	"9 Currency": {"class": "Currency", "type": "currency normal"}
 }
