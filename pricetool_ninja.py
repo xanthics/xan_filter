@@ -38,8 +38,10 @@ def currencyclassify(cur, val, exa):
 		tier = 'currency normal'
 	elif val >= 1 / 20:
 		tier = 'currency low'
-	else:
+	elif val >= 1 / 200:
 		tier = 'currency very low'
+	else:
+		tier = 'hide'
 	return "0 {0}\": {{\"base\": \"{0}\", \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier)
 
 
@@ -51,10 +53,10 @@ def gen_currency(currency_list):
 	            "Journeyman Cartographer's Sextant": 2, "Master Cartographer's Sextant": 5, 'Eternal Orb': 300, "Blessing of Chayula": 300, "Blessing of Esh": 30, "Blessing of Uul-Netol": 10,
 	            "Blessing of Tul": 2, "Blessing of Xoph": 3, "Splinter of Chayula": 3, "Splinter of Xoph": 0.333, "Splinter of Uul-Netol": 0.5, "Splinter of Tul": 1 / 5, "Splinter of Esh": 0.333,
 	            "Blacksmith's Whetstone": 1 / 30, "Portal Scroll": 1 / 100, "Armourer's Scrap": 1 / 50, "Mirror Shard": 52, "Ancient Orb": 7, "Harbinger's Orb": 4, "Orb of Annulment": 3, "Exalted Shard": 7 / 3,
-	            "Orb of Horizons": 2 / 3, "Engineer's Orb": 0.5, "Annulment Shard": 0.5, "Orb of Binding": 1 / 4, "Scroll of Wisdom": 1 / 240, 'Chaos Shard': 1 / 20}
+	            "Orb of Horizons": 2 / 3, "Engineer's Orb": 0.5, "Annulment Shard": 0.5, "Orb of Binding": 1 / 4, "Scroll of Wisdom": 1 / 100, 'Chaos Shard': 1 / 20}
 
 	shards = {'Binding Shard': 'Orb of Binding', 'Horizon Shard': 'Orb of Horizons', 'Harbinger\'s Shard': 'Harbinger\'s Orb', 'Engineer\'s Shard': 'Engineer\'s Orb', 'Ancient Shard': 'Ancient Orb',
-	          'Regal Shard': 'Regal Orb', 'Alchemy Shard': 'Orb of Alchemy', 'Alteration Shard': 'Orb of Alteration', 'Transmutation Shard': 'Orb of Transmutation'}
+	          'Regal Shard': 'Regal Orb', 'Alchemy Shard': 'Orb of Alchemy', 'Alteration Shard': 'Orb of Alteration', 'Transmutation Shard': 'Orb of Transmutation', 'Scroll Fragment': 'Scroll of Wisdom'}
 
 
 	c_list = list(defaults.keys()) + list(shards.keys())
@@ -69,9 +71,9 @@ def gen_currency(currency_list):
 				curval += '\t"{},\n'.format(retstr)
 			else:
 				if cur in shards and shards[cur] not in currency_list[l]:
-					retstr = currencyclassify(cur, defaults[shards[cur]] / 20, currency_list[l]['Exalted Orb'])
+					retstr = currencyclassify(cur, defaults[shards[cur]] / 10, currency_list[l]['Exalted Orb'])
 				elif cur in shards and shards[cur] in currency_list[l]:
-					retstr = currencyclassify(cur, currency_list[l][shards[cur]] / 20, currency_list[l]['Exalted Orb'])
+					retstr = currencyclassify(cur, currency_list[l][shards[cur]] / 10, currency_list[l]['Exalted Orb'])
 				else:
 					retstr = currencyclassify(cur, defaults[cur], currency_list[l]['Exalted Orb'])
 				curval += '\t"{},\n'.format(retstr)
@@ -283,18 +285,18 @@ def scrape_ninja():
 	leagues = ['Standard', 'Hardcore', 'tmpstandard', 'tmphardcore']
 
 	paths = {
-		'currency': 'http://poeninja.azureedge.net/api/Data/GetCurrencyOverview?league={}',
-		'div': 'http://poeninja.azureedge.net/api/Data/GetDivinationCardsOverview?league={}',
-		'essence': 'http://poeninja.azureedge.net/api/Data/GetEssenceOverview?league={}',
-		'unique jewel': 'http://poeninja.azureedge.net/api/Data/GetUniqueJewelOverview?league={}',
-		'unique map': 'http://poeninja.azureedge.net/api/Data/GetUniqueMapOverview?league={}',
-		'unique flask': 'http://poeninja.azureedge.net/api/Data/GetUniqueFlaskOverview?league={}',
-		'unique weapon': 'http://poeninja.azureedge.net/api/Data/GetUniqueWeaponOverview?league={}',
-		'unique armor': 'http://poeninja.azureedge.net/api/Data/GetUniqueArmourOverview?league={}',
-		'unique accessory': 'http://poeninja.azureedge.net/api/Data/GetUniqueAccessoryOverview?league={}'
+		'currency': 'http://cdn.poe.ninja/api/Data/GetCurrencyOverview?league={}',
+		'div': 'http://cdn.poe.ninja/api/Data/GetDivinationCardsOverview?league={}',
+		'essence': 'http://cdn.poe.ninja/api/Data/GetEssenceOverview?league={}',
+		'unique jewel': 'http://cdn.poe.ninja/api/Data/GetUniqueJewelOverview?league={}',
+		'unique map': 'http://cdn.poe.ninja/api/Data/GetUniqueMapOverview?league={}',
+		'unique flask': 'http://cdn.poe.ninja/api/Data/GetUniqueFlaskOverview?league={}',
+		'unique weapon': 'http://cdn.poe.ninja/api/Data/GetUniqueWeaponOverview?league={}',
+		'unique armor': 'http://cdn.poe.ninja/api/Data/GetUniqueArmourOverview?league={}',
+		'unique accessory': 'http://cdn.poe.ninja/api/Data/GetUniqueAccessoryOverview?league={}'
 	}
 
-	os.environ['NO_PROXY'] = 'poeninja.azureedge.net'
+	os.environ['NO_PROXY'] = 'cdn.poe.ninja'
 	requester = requests.session()
 
 	currency = {}
