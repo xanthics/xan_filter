@@ -21,14 +21,16 @@ def convertname(l):
 	elif l == 'Hardcore':
 		return "hc"
 	elif 'tmphardcore' in l:
-		return "phc"
+		return "thc"
 	else:
-		return "p"
+		return "t"
 
 
 # Convert a currency shorthand to full name.  returns a string
 def currencyclassify(cur, val, exa):
-	if val >= exa * .5:
+	if 'Splinter' in cur and val <= 1 / 8:
+		tier = 'show normal'
+	elif val >= exa * .5:
 		tier = 'currency extremely high'
 	elif val >= 3:
 		tier = 'currency very high'
@@ -58,12 +60,13 @@ def gen_currency(currency_list):
 	shards = {'Binding Shard': 'Orb of Binding', 'Horizon Shard': 'Orb of Horizons', 'Harbinger\'s Shard': 'Harbinger\'s Orb', 'Engineer\'s Shard': 'Engineer\'s Orb', 'Ancient Shard': 'Ancient Orb',
 	          'Regal Shard': 'Regal Orb', 'Alchemy Shard': 'Orb of Alchemy', 'Alteration Shard': 'Orb of Alteration', 'Transmutation Shard': 'Orb of Transmutation', 'Scroll Fragment': 'Scroll of Wisdom'}
 
-
 	c_list = list(defaults.keys()) + list(shards.keys())
 	unknown = defaultdict(list)
 	for l in currency_list:
 		curval = '''{}\ndesc = "Currency Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), l))
 
+		if 'Exalted Orb' not in currency_list[l]:
+			currency_list[l]['Exalted Orb'] = defaults['Exalted Orb']
 		for cur in sorted(c_list):
 			if cur in currency_list[l]:
 				# print(cur, currency_list[l][cur], l)

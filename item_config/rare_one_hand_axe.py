@@ -30,9 +30,9 @@ items = {
 	"Karui Axe": {"base": "Karui Axe", "class": "One Hand Axe", "other": ["ItemLevel <= 62"], "type": "levelling rare normal"},
 	"Siege Axe": {"base": "Siege Axe", "class": "One Hand Axe", "other": ["ItemLevel <= 64"], "type": "levelling rare normal"},
 	"Reaver Axe": {"base": "Reaver Axe", "class": "One Hand Axe", "other": ["ItemLevel <= 66"], "type": "levelling rare normal"},
-	"Butcher Axe": {"base": "Butcher Axe", "class": "One Hand Axe", "other": ["ItemLevel <= 68"], "type": "ignore"},
-	"Vaal Hatchet": {"base": "Vaal Hatchet", "class": "One Hand Axe", "other": ["ItemLevel <= 70"], "type": "ignore"},
-	"Royal Axe": {"base": "Royal Axe", "class": "One Hand Axe", "other": ["ItemLevel <= 72"], "type": "ignore"},
-	"Infernal Axe": {"base": "Infernal Axe", "class": "One Hand Axe", "other": ["ItemLevel <= 74"], "type": "ignore"},
-	"Runic Hatchet": {"base": "Runic Hatchet", "class": "One Hand Axe", "other": ["ItemLevel <= 76"], "type": "ignore"}
+	"Butcher Axe": {"base": "Butcher Axe", "class": "One Hand Axe", "other": ["ItemLevel <= 68"], "type": "levelling rare normal"},
+	"Vaal Hatchet": {"base": "Vaal Hatchet", "class": "One Hand Axe", "other": ["ItemLevel <= 70"], "type": "levelling rare normal"},
+	"Royal Axe": {"base": "Royal Axe", "class": "One Hand Axe", "other": ["ItemLevel <= 72"], "type": "levelling rare normal"},
+	"Infernal Axe": {"base": "Infernal Axe", "class": "One Hand Axe", "other": ["ItemLevel <= 74"], "type": "levelling rare normal"},
+	"Runic Hatchet": {"base": "Runic Hatchet", "class": "One Hand Axe", "other": ["ItemLevel <= 76"], "type": "levelling rare normal"}
 }

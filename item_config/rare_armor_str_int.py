@@ -64,6 +64,6 @@ items = {
 	"Angelic Kite Shield": {"base": "Angelic Kite Shield", "other": ["ItemLevel <= 60"], "type": "levelling rare normal"},
 	"Branded Kite Shield": {"base": "Branded Kite Shield", "other": ["ItemLevel <= 64"], "type": "levelling rare normal"},
 	"Champion Kite Shield": {"base": "Champion Kite Shield", "other": ["ItemLevel <= 67"], "type": "levelling rare normal"},
-	"Mosaic Kite Shield": {"base": "Mosaic Kite Shield", "other": ["ItemLevel <= 70"], "type": "ignore"},
-	"Archon Kite Shield": {"base": "Archon Kite Shield", "other": ["ItemLevel <= 73"], "type": "ignore"}
+	"Mosaic Kite Shield": {"base": "Mosaic Kite Shield", "other": ["ItemLevel <= 70"], "type": "levelling rare normal"},
+	"Archon Kite Shield": {"base": "Archon Kite Shield", "other": ["ItemLevel <= 73"], "type": "levelling rare normal"}
 }

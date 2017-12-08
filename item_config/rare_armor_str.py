@@ -70,7 +70,7 @@ items = {
 	"Crested Tower Shield": {"base": "Crested Tower Shield", "other": ["ItemLevel <= 60"], "type": "levelling rare normal"},
 	"Shagreen Tower Shield": {"base": "Shagreen Tower Shield", "other": ["ItemLevel <= 63"], "type": "levelling rare normal"},
 	"Ebony Tower Shield": {"base": "Ebony Tower Shield", "other": ["ItemLevel <= 66"], "type": "levelling rare normal"},
-	"Ezomyte Tower Shield": {"base": "Ezomyte Tower Shield", "other": ["ItemLevel <= 69"], "type": "ignore"},
-	"Colossal Tower Shield": {"base": "Colossal Tower Shield", "other": ["ItemLevel <= 72"], "type": "ignore"},
-	"Pinnacle Tower Shield": {"base": "Pinnacle Tower Shield", "other": ["ItemLevel <= 75"], "type": "ignore"}
+	"Ezomyte Tower Shield": {"base": "Ezomyte Tower Shield", "other": ["ItemLevel <= 69"], "type": "levelling rare normal"},
+	"Colossal Tower Shield": {"base": "Colossal Tower Shield", "other": ["ItemLevel <= 72"], "type": "levelling rare normal"},
+	"Pinnacle Tower Shield": {"base": "Pinnacle Tower Shield", "other": ["ItemLevel <= 75"], "type": "levelling rare normal"}
 }

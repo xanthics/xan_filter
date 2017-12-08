@@ -70,6 +70,6 @@ items = {
 	"Lacewood Spirit Shield": {"base": "Lacewood Spirit Shield", "other": ["ItemLevel <= 61"], "type": "levelling rare normal"},
 	"Fossilised Spirit Shield": {"base": "Fossilised Spirit Shield", "other": ["ItemLevel <= 64"], "type": "levelling rare normal"},
 	"Vaal Spirit Shield": {"base": "Vaal Spirit Shield", "other": ["ItemLevel <= 67"], "type": "levelling rare normal"},
-	"Harmonic Spirit Shield": {"base": "Harmonic Spirit Shield", "other": ["ItemLevel <= 70"], "type": "ignore"},
-	"Titanium Spirit Shield": {"base": "Titanium Spirit Shield", "other": ["ItemLevel <= 73"], "type": "ignore"}
+	"Harmonic Spirit Shield": {"base": "Harmonic Spirit Shield", "other": ["ItemLevel <= 70"], "type": "levelling rare normal"},
+	"Titanium Spirit Shield": {"base": "Titanium Spirit Shield", "other": ["ItemLevel <= 73"], "type": "levelling rare normal"}
 }

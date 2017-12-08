@@ -68,7 +68,7 @@ items = {
 	"Golden Buckler": {"base": "Golden Buckler", "other": ["ItemLevel <= 59"], "type": "levelling rare normal"},
 	"Ironwood Buckler": {"base": "Ironwood Buckler", "other": ["ItemLevel <= 62"], "type": "levelling rare normal"},
 	"Lacquered Buckler": {"base": "Lacquered Buckler", "other": ["ItemLevel <= 65"], "type": "levelling rare normal"},
-	"Vaal Buckler": {"base": "Vaal Buckler", "other": ["ItemLevel <= 68"], "type": "ignore"},
-	"Crusader Buckler": {"base": "Crusader Buckler", "other": ["ItemLevel <= 71"], "type": "ignore"},
-	"Imperial Buckler": {"base": "Imperial Buckler", "other": ["ItemLevel <= 74"], "type": "ignore"}
+	"Vaal Buckler": {"base": "Vaal Buckler", "other": ["ItemLevel <= 68"], "type": "levelling rare normal"},
+	"Crusader Buckler": {"base": "Crusader Buckler", "other": ["ItemLevel <= 71"], "type": "levelling rare normal"},
+	"Imperial Buckler": {"base": "Imperial Buckler", "other": ["ItemLevel <= 74"], "type": "levelling rare normal"}
 }

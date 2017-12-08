@@ -64,6 +64,6 @@ items = {
 	"Baroque Round Shield": {"base": "Baroque Round Shield", "other": ["ItemLevel <= 59"], "type": "levelling rare normal"},
 	"Teak Round Shield": {"base": "Teak Round Shield", "other": ["ItemLevel <= 63"], "type": "levelling rare normal"},
 	"Spiny Round Shield": {"base": "Spiny Round Shield", "other": ["ItemLevel <= 67"], "type": "levelling rare normal"},
-	"Cardinal Round Shield": {"base": "Cardinal Round Shield", "other": ["ItemLevel <= 71"], "type": "ignore"},
-	"Elegant Round Shield": {"base": "Elegant Round Shield", "other": ["ItemLevel <= 75"], "type": "ignore"}
+	"Cardinal Round Shield": {"base": "Cardinal Round Shield", "other": ["ItemLevel <= 71"], "type": "levelling rare normal"},
+	"Elegant Round Shield": {"base": "Elegant Round Shield", "other": ["ItemLevel <= 75"], "type": "levelling rare normal"}
 }
