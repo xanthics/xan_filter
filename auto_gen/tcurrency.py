@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/08/2017(m/d/y) 15:03:11 UTC from "tmpstandard" data
+# Created: 12/08/2017(m/d/y) 20:44:34 UTC from "tmpstandard" data
 
 desc = "Currency Autogen"
 
@@ -12,7 +12,7 @@ items = {
 	"0 Ancient Shard": {"base": "Ancient Shard", "class": "Currency", "type": "currency normal"},
 	"0 Annulment Shard": {"base": "Annulment Shard", "class": "Currency", "type": "currency normal"},
 	"0 Apprentice Cartographer's Sextant": {"base": "Apprentice Cartographer's Sextant", "class": "Currency", "type": "currency normal"},
-	"0 Armourer's Scrap": {"base": "Armourer's Scrap", "class": "Currency", "type": "currency very low"},
+	"0 Armourer's Scrap": {"base": "Armourer's Scrap", "class": "Currency", "type": "currency high"},
 	"0 Binding Shard": {"base": "Binding Shard", "class": "Currency", "type": "currency very low"},
 	"0 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", "class": "Currency", "type": "currency very low"},
 	"0 Blessed Orb": {"base": "Blessed Orb", "class": "Currency", "type": "currency normal"},
@@ -24,7 +24,7 @@ items = {
 	"0 Cartographer's Chisel": {"base": "Cartographer's Chisel", "class": "Currency", "type": "currency normal"},
 	"0 Chaos Orb": {"base": "Chaos Orb", "class": "Currency", "type": "currency high"},
 	"0 Chaos Shard": {"base": "Chaos Shard", "class": "Currency", "type": "currency low"},
-	"0 Chromatic Orb": {"base": "Chromatic Orb", "class": "Currency", "type": "currency low"},
+	"0 Chromatic Orb": {"base": "Chromatic Orb", "class": "Currency", "type": "currency high"},
 	"0 Divine Orb": {"base": "Divine Orb", "class": "Currency", "type": "currency very high"},
 	"0 Engineer's Orb": {"base": "Engineer's Orb", "class": "Currency", "type": "currency normal"},
 	"0 Engineer's Shard": {"base": "Engineer's Shard", "class": "Currency", "type": "currency low"},
