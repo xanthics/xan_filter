@@ -31,12 +31,12 @@ items = {
     "0 Harbinger Bow": {"base": "Harbinger Bow", "class": "Bow", "type": "rare high"},
     "0 Decimation Bow": {"base": "Decimation Bow", "class": "Bow", "type": "rare high"},
 
-    "0 Eclipse Staff": {"base": "Eclipse Staff", "class": "Staves", "type": "rare high"},
-    "0 Maelström Staff": {"base": "Maelström Staff", "class": "Staves", "type": "rare high"},
-    "0 Imperial Staff": {"base": "Imperial Staff", "class": "Staves", "type": "rare high"},
+    #"0 Eclipse Staff": {"base": "Eclipse Staff", "class": "Staves", "type": "rare high"},
+    #"0 Maelström Staff": {"base": "Maelström Staff", "class": "Staves", "type": "rare high"},
+    #"0 Imperial Staff": {"base": "Imperial Staff", "class": "Staves", "type": "rare high"},
 
-    "0 Exquisite Blade": {"base": "Exquisite Blade", "class": "Two Hand Swords", "type": "rare high"},
-    "0 Reaver Sword": {"base": "Reaver Sword", "class": "Two Hand Swords", "type": "rare high"},
+    #"0 Exquisite Blade": {"base": "Exquisite Blade", "class": "Two Hand Swords", "type": "rare high"},
+    #"0 Reaver Sword": {"base": "Reaver Sword", "class": "Two Hand Swords", "type": "rare high"},
 
     #"0 2h Axe": {"class": "Two Hand Axes", "other": ["DropLevel >= 62"], "type": "rare high"},
     #"0 2h Mace": {"class": "Two Hand Maces", "other": ["DropLevel >= 61"], "type": "rare high"},
@@ -47,16 +47,6 @@ items = {
     "0 Colossus Mallet": {"base": "Colossus Mallet", "class": "Two Hand Maces", "type": "rare high"},
     "0 Piledriver": {"base": "Piledriver", "class": "Two Hand Maces", "type": "rare high"},
     "0 Coronal Maul": {"base": "Coronal Maul", "class": "Two Hand Maces", "type": "rare high"},
-
-    "0 Eternal Burgonet": {"base": "Eternal Burgonet", "type": "rare highlight"},
-    "0 Vaal Regalia": {"base": "Vaal Regalia", "type": "rare highlight"},
-    "0 Arcanist Gloves": {"base": "Arcanist Gloves", "type": "rare highlight"},
-    "0 Sorcerer Gloves": {"base": "Sorcerer Gloves", "type": "rare highlight"},
-    "0 Fingerless Silk Gloves": {"base": "Fingerless Silk Gloves", "type": "rare highlight"},
-    "0 Arcanist Slippers": {"base": "Arcanist Slippers", "type": "rare highlight"},
-    "0 Sorcerer Boots": {"base": "Sorcerer Boots", "type": "rare highlight"},
-    "0 Mind Cage": {"base": "Mind Cage", "type": "rare highlight"},
-    "0 Hubris Circlet": {"base": "Hubris Circlet", "type": "rare highlight"},
 
     "1 Gloves": {"other": ["DropLevel >= 53"], "class": "Gloves", "type": "rare high"},
     "1 Boots": {"other": ["DropLevel >= 53"], "class": "Boots", "type": "rare high"},
@@ -91,8 +81,8 @@ items = {
     "0 Platinum Kris": {"base": "Platinum Kris", "class": "Dagger", "type": "rare high"},
     "0 Demon Dagger": {"base": "Ambusher", "class": "Dagger", "type": "rare high"},
 
-    "0 Spike-Point Arrow Quiver": {"base": "Spike-Point Arrow Quiver", "class": "Quivers", "type": "rare high"},
-    "0 Broadhead Arrow Quiver": {"base": "Broadhead Arrow Quiver", "class": "Quivers", "type": "rare high"},
+    #"0 Spike-Point Arrow Quiver": {"base": "Spike-Point Arrow Quiver", "class": "Quivers", "type": "rare high"},
+    #"0 Broadhead Arrow Quiver": {"base": "Broadhead Arrow Quiver", "class": "Quivers", "type": "rare high"},
 
     "02 60+ amulet": {"class": "Amulets", "other": ["ItemLevel >= 60"], "type": "rare highlight"},
     "02 60+ ring": {"class": "Rings", "other": ["ItemLevel >= 60"], "type": "rare highlight"},
