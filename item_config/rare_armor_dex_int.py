@@ -66,6 +66,6 @@ items = {
 	"Sovereign Spiked Shield": {"base": "Sovereign Spiked Shield", "other": ["ItemLevel <= 59"], "type": "levelling rare normal"},
 	"Alder Spiked Shield": {"base": "Alder Spiked Shield", "other": ["ItemLevel <= 63"], "type": "levelling rare normal"},
 	"Ezomyte Spiked Shield": {"base": "Ezomyte Spiked Shield", "other": ["ItemLevel <= 67"], "type": "levelling rare normal"},
-	"Mirrored Spiked Shield": {"base": "Mirrored Spiked Shield", "other": ["ItemLevel <= 71"], "type": "ignore"},
-	"Supreme Spiked Shield": {"base": "Supreme Spiked Shield", "other": ["ItemLevel <= 75"], "type": "ignore"}
+	"Mirrored Spiked Shield": {"base": "Mirrored Spiked Shield", "other": ["ItemLevel <= 71"], "type": "levelling rare normal"},
+	"Supreme Spiked Shield": {"base": "Supreme Spiked Shield", "other": ["ItemLevel <= 75"], "type": "levelling rare normal"}
 }

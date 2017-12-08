@@ -31,8 +31,8 @@ items = {
 	"Tenderizer": {"base": "Tenderizer", "class": "One Hand Mace", "other": ["ItemLevel <= 63"], "type": "levelling rare normal"},
 	"Gavel": {"base": "Gavel", "class": "One Hand Mace", "other": ["ItemLevel <= 65"], "type": "levelling rare normal"},
 	"Legion Hammer": {"base": "Legion Hammer", "class": "One Hand Mace", "other": ["ItemLevel <= 67"], "type": "levelling rare normal"},
-	"Pernarch": {"base": "Pernarch", "class": "One Hand Mace", "other": ["ItemLevel <= 69"], "type": "ignore"},
-	"Auric Mace": {"base": "Auric Mace", "class": "One Hand Mace", "other": ["ItemLevel <= 71"], "type": "ignore"},
-	"Nightmare Mace": {"base": "Nightmare Mace", "class": "One Hand Mace", "other": ["ItemLevel <= 73"], "type": "ignore"},
-	"Behemoth Mace": {"base": "Behemoth Mace", "class": "One Hand Mace", "other": ["ItemLevel <= 75"], "type": "ignore"}
+	"Pernarch": {"base": "Pernarch", "class": "One Hand Mace", "other": ["ItemLevel <= 69"], "type": "levelling rare normal"},
+	"Auric Mace": {"base": "Auric Mace", "class": "One Hand Mace", "other": ["ItemLevel <= 71"], "type": "levelling rare normal"},
+	"Nightmare Mace": {"base": "Nightmare Mace", "class": "One Hand Mace", "other": ["ItemLevel <= 73"], "type": "levelling rare normal"},
+	"Behemoth Mace": {"base": "Behemoth Mace", "class": "One Hand Mace", "other": ["ItemLevel <= 75"], "type": "levelling rare normal"}
 }

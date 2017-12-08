@@ -8,20 +8,20 @@ from io import open
 
 from auto_gen import divination
 from auto_gen import hcdivination
-from auto_gen import pdivination
-from auto_gen import phcdivination
+from auto_gen import tdivination
+from auto_gen import thcdivination
 from auto_gen import uniques
 from auto_gen import hcuniques
-from auto_gen import puniques
-from auto_gen import phcuniques
+from auto_gen import tuniques
+from auto_gen import thcuniques
 from auto_gen import currency as stcurrency
 from auto_gen import hccurrency
-from auto_gen import pcurrency
-from auto_gen import phccurrency
+from auto_gen import tcurrency
+from auto_gen import thccurrency
 from auto_gen import essence as stessence
 from auto_gen import hcessence
-from auto_gen import pessence
-from auto_gen import phcessence
+from auto_gen import tessence
+from auto_gen import thcessence
 
 
 from item_config import animate_weapon
@@ -179,10 +179,10 @@ def main():
 	gen_list = gen_list_compact
 	leagues = [("st", "Standard", uniques, divination, stcurrency, stessence),
 			   ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence),
-			   ("t", "Temp Standard", puniques, pdivination, pcurrency, pessence),
-			   ("thc", "Temp Hardcore", phcuniques, phcdivination, phccurrency, phcessence)]
+			   ("t", "Temp Standard", tuniques, tdivination, tcurrency, tessence),
+			   ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence)]
 
-	leveling = False  # toggle to show leveling items
+	leveling = True  # toggle to show leveling items
 
 	for i in leagues:
 
@@ -213,8 +213,24 @@ def main():
 		if leveling:
 			buf = {}
 			desc = rare_armor_dex.desc
-			for rareitemleveling in [rare_armor_dex, rare_armor_dex_int, rare_armor_str_dex, rare_armor_str, rare_armor_int, rare_armor_str_int, rare_bow, rare_claw, rare_dagger, rare_one_hand_sword,
-									 rare_one_hand_mace, rare_one_hand_axe, rare_sceptre, rare_staff, rare_thrusting_one_hand_sword, rare_two_hand_sword, rare_two_hand_mace, rare_two_hand_axe, rare_wand]:
+			for rareitemleveling in [rare_armor_dex,
+			                         rare_armor_dex_int,
+			                         rare_armor_str_dex,
+			                         rare_armor_str,
+			                         rare_armor_int,
+			                         rare_armor_str_int,
+			                         #rare_bow, rare_claw,
+			                         rare_dagger,
+			                         #rare_one_hand_sword,
+									 #rare_one_hand_mace,
+									 #rare_one_hand_axe,
+									 rare_sceptre,
+									 #rare_staff,
+									 #rare_thrusting_one_hand_sword,
+									 #rare_two_hand_sword,
+									 #rare_two_hand_mace,
+									 #rare_two_hand_axe,
+									 rare_wand]:
 				buf.update(rareitemleveling.items)
 			buffer += gen_list(buf, desc)
 
@@ -227,12 +243,29 @@ def main():
 		buffer += gen_list(crafting_bases.items, crafting_bases.desc)  # Crafting bases
 		# buffer += gen_list(animate_weapon.items, animate_weapon.desc)  # Animate Weapon bases
 
-		if leveling:
+		if False:  # leveling:
 			buf = {}
 			desc = rare_armor_dex.desc
-			for nonrareitemleveling in [nonrare_armor_dex, nonrare_armor_dex_int, nonrare_armor_str_dex, nonrare_armor_str, nonrare_armor_int, nonrare_armor_str_int, nonrare_bow, nonrare_claw, nonrare_dagger,
-										nonrare_jewelry, nonrare_one_hand_sword, nonrare_one_hand_mace, nonrare_one_hand_axe, nonrare_sceptre, nonrare_staff,
-										nonrare_thrusting_one_hand_sword, nonrare_two_hand_sword, nonrare_two_hand_mace, nonrare_two_hand_axe, nonrare_wand]:
+			for nonrareitemleveling in [nonrare_armor_dex,
+			                            nonrare_armor_dex_int,
+			                            nonrare_armor_str_dex,
+			                            nonrare_armor_str,
+			                            nonrare_armor_int,
+			                            nonrare_armor_str_int,
+			                            nonrare_bow,
+			                            nonrare_claw,
+			                            nonrare_dagger,
+										nonrare_jewelry,
+										nonrare_one_hand_sword,
+										nonrare_one_hand_mace,
+										nonrare_one_hand_axe,
+										nonrare_sceptre,
+										nonrare_staff,
+										nonrare_thrusting_one_hand_sword,
+										nonrare_two_hand_sword,
+										nonrare_two_hand_mace,
+										nonrare_two_hand_axe,
+										nonrare_wand]:
 				buf.update(nonrareitemleveling.items)
 			buffer += gen_list(buf, desc)
 

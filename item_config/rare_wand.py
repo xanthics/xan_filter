@@ -26,7 +26,7 @@ items = {
 	"Demon's Horn": {"base": "Demon's Horn", "class": "Wand", "other": ["ItemLevel <= 61"], "type": "levelling rare normal"},
 	"Imbued Wand": {"base": "Imbued Wand", "class": "Wand", "other": ["ItemLevel <= 64"], "type": "levelling rare normal"},
 	"Opal Wand": {"base": "Opal Wand", "class": "Wand", "other": ["ItemLevel <= 67"], "type": "levelling rare normal"},
-	"Tornado Wand": {"base": "Tornado Wand", "class": "Wand", "other": ["ItemLevel <= 70"], "type": "ignore"},
-	"Prophecy Wand": {"base": "Prophecy Wand", "class": "Wand", "other": ["ItemLevel <= 73"], "type": "ignore"},
-	"Profane Wand": {"base": "Profane Wand", "class": "Wand", "other": ["ItemLevel <= 75"], "type": "ignore"}
+	"Tornado Wand": {"base": "Tornado Wand", "class": "Wand", "other": ["ItemLevel <= 70"], "type": "levelling rare normal"},
+	"Prophecy Wand": {"base": "Prophecy Wand", "class": "Wand", "other": ["ItemLevel <= 73"], "type": "levelling rare normal"},
+	"Profane Wand": {"base": "Profane Wand", "class": "Wand", "other": ["ItemLevel <= 75"], "type": "levelling rare normal"}
 }

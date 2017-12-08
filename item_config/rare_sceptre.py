@@ -31,8 +31,8 @@ items = {
 	"Tyrant's Sekhem": {"base": "Tyrant's Sekhem", "class": "Sceptre", "other": ["ItemLevel <= 63"], "type": "levelling rare normal"},
 	"Opal Sceptre": {"base": "Opal Sceptre", "class": "Sceptre", "other": ["ItemLevel <= 65"], "type": "levelling rare high"},
 	"Platinum Sceptre": {"base": "Platinum Sceptre", "class": "Sceptre", "other": ["ItemLevel <= 67"], "type": "levelling rare normal"},
-	"Vaal Sceptre": {"base": "Vaal Sceptre", "class": "Sceptre", "other": ["ItemLevel <= 69"], "type": "ignore"},
-	"Carnal Sceptre": {"base": "Carnal Sceptre", "class": "Sceptre", "other": ["ItemLevel <= 71"], "type": "ignore"},
-	"Void Sceptre": {"base": "Void Sceptre", "class": "Sceptre", "other": ["ItemLevel <= 73"], "type": "ignore"},
-	"Sambar Sceptre": {"base": "Sambar Sceptre", "class": "Sceptre", "other": ["ItemLevel <= 75"], "type": "ignore"}
+	"Vaal Sceptre": {"base": "Vaal Sceptre", "class": "Sceptre", "other": ["ItemLevel <= 69"], "type": "levelling rare normal"},
+	"Carnal Sceptre": {"base": "Carnal Sceptre", "class": "Sceptre", "other": ["ItemLevel <= 71"], "type": "levelling rare normal"},
+	"Void Sceptre": {"base": "Void Sceptre", "class": "Sceptre", "other": ["ItemLevel <= 73"], "type": "levelling rare normal"},
+	"Sambar Sceptre": {"base": "Sambar Sceptre", "class": "Sceptre", "other": ["ItemLevel <= 75"], "type": "levelling rare normal"}
 }

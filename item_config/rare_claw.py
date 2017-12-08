@@ -30,9 +30,9 @@ items = {
 	"Great White Claw": {"base": "Great White Claw", "class": "Claw", "other": ["ItemLevel <= 63"], "type": "levelling rare normal"},
 	"Throat Stabber": {"base": "Throat Stabber", "class": "Claw", "other": ["ItemLevel <= 65"], "type": "levelling rare normal"},
 	"Hellion's Paw": {"base": "Hellion's Paw", "class": "Claw", "other": ["ItemLevel <= 67"], "type": "levelling rare normal"},
-	"Eye Gouger": {"base": "Eye Gouger", "class": "Claw", "other": ["ItemLevel <= 69"], "type": "ignore"},
-	"Vaal Claw": {"base": "Vaal Claw", "class": "Claw", "other": ["ItemLevel <= 71"], "type": "ignore"},
-	"Imperial Claw": {"base": "Imperial Claw", "class": "Claw", "other": ["ItemLevel <= 73"], "type": "ignore"},
-	"Terror Claw": {"base": "Terror Claw", "class": "Claw", "other": ["ItemLevel <= 75"], "type": "ignore"},
-	"Gemini Claw": {"base": "Gemini Claw", "class": "Claw", "other": ["ItemLevel <= 77"], "type": "ignore"}
+	"Eye Gouger": {"base": "Eye Gouger", "class": "Claw", "other": ["ItemLevel <= 69"], "type": "levelling rare normal"},
+	"Vaal Claw": {"base": "Vaal Claw", "class": "Claw", "other": ["ItemLevel <= 71"], "type": "levelling rare normal"},
+	"Imperial Claw": {"base": "Imperial Claw", "class": "Claw", "other": ["ItemLevel <= 73"], "type": "levelling rare normal"},
+	"Terror Claw": {"base": "Terror Claw", "class": "Claw", "other": ["ItemLevel <= 75"], "type": "levelling rare normal"},
+	"Gemini Claw": {"base": "Gemini Claw", "class": "Claw", "other": ["ItemLevel <= 77"], "type": "levelling rare normal"}
 }
