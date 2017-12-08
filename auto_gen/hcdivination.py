@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/08/2017(m/d/y) 15:03:11 UTC from "Hardcore" data
+# Created: 12/08/2017(m/d/y) 20:44:34 UTC from "Hardcore" data
 
 desc = "Divination Card"
 
@@ -23,7 +23,6 @@ items = {
 	"1 The Celestial Justicar": {"base": "The Celestial Justicar", "class": "Divination Card", "type": "divination very high"},
 	"1 The Cursed King": {"base": "The Cursed King", "class": "Divination Card", "type": "divination very high"},
 	"1 The Doctor": {"base": "The Doctor", "class": "Divination Card", "type": "divination very high"},
-	"1 The Ethereal": {"base": "The Ethereal", "class": "Divination Card", "type": "divination very high"},
 	"1 The Fiend": {"base": "The Fiend", "class": "Divination Card", "type": "divination very high"},
 	"1 The Immortal": {"base": "The Immortal", "class": "Divination Card", "type": "divination very high"},
 	"1 The King's Heart": {"base": "The King's Heart", "class": "Divination Card", "type": "divination very high"},
@@ -48,6 +47,7 @@ items = {
 	"2 The Dapper Prodigy": {"base": "The Dapper Prodigy", "class": "Divination Card", "type": "divination high"},
 	"2 The Dark Mage": {"base": "The Dark Mage", "class": "Divination Card", "type": "divination high"},
 	"2 The Enlightened": {"base": "The Enlightened", "class": "Divination Card", "type": "divination high"},
+	"2 The Ethereal": {"base": "The Ethereal", "class": "Divination Card", "type": "divination high"},
 	"2 The Fletcher": {"base": "The Fletcher", "class": "Divination Card", "type": "divination high"},
 	"2 The Formless Sea": {"base": "The Formless Sea", "class": "Divination Card", "type": "divination high"},
 	"2 The Forsaken": {"base": "The Forsaken", "class": "Divination Card", "type": "divination high"},

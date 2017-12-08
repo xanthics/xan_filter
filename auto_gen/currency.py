@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/08/2017(m/d/y) 15:03:11 UTC from "Standard" data
+# Created: 12/08/2017(m/d/y) 20:44:34 UTC from "Standard" data
 
 desc = "Currency Autogen"
 
@@ -11,7 +11,7 @@ items = {
 	"0 Ancient Orb": {"base": "Ancient Orb", "class": "Currency", "type": "currency very high"},
 	"0 Ancient Shard": {"base": "Ancient Shard", "class": "Currency", "type": "currency high"},
 	"0 Annulment Shard": {"base": "Annulment Shard", "class": "Currency", "type": "currency normal"},
-	"0 Apprentice Cartographer's Sextant": {"base": "Apprentice Cartographer's Sextant", "class": "Currency", "type": "currency normal"},
+	"0 Apprentice Cartographer's Sextant": {"base": "Apprentice Cartographer's Sextant", "class": "Currency", "type": "currency high"},
 	"0 Armourer's Scrap": {"base": "Armourer's Scrap", "class": "Currency", "type": "currency very low"},
 	"0 Binding Shard": {"base": "Binding Shard", "class": "Currency", "type": "currency very low"},
 	"0 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", "class": "Currency", "type": "currency very low"},

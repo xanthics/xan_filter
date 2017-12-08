@@ -1,15 +1,8 @@
 #**************************************************************
 # Welcome to xan.filter, a Python generated loot filter for PoE
-# This filter was generated for Standard on 12/08/2017(m/d/y) 15:03:11 UTC
+# This filter was generated for Standard on 12/08/2017(m/d/y) 20:44:34 UTC
 # The most current version of code can always be found at https://github.com/xanthics/poe_filter
 #**************************************************************
-
-#Always show
-Show
-	BaseType "Sacrificial Garb"
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 192 128 254
-	SetFontSize 35
 
 #Always show
 Show
@@ -27,31 +20,18 @@ Show
 
 #Always show
 Show
+	BaseType "Sacrificial Garb"
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 192 128 254
+	SetFontSize 30
+
+#Always show
+Show
 	BaseType "Fishing Rod"
 	PlayAlertSound 1 100
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 192 128 254
 	SetFontSize 45
-
-#Always show
-Show
-	Class "Amulets"
-	Corrupted True
-	ItemLevel >= 60
-	Rarity Normal
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 192 128 254
-	SetFontSize 30
-
-#Always show
-Show
-	Class "Belts"
-	Corrupted True
-	ItemLevel >= 60
-	Rarity Normal
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 192 128 254
-	SetFontSize 30
 
 #Always show
 Show
@@ -333,6 +313,12 @@ Show
 	Class "Gems"
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 27 162 155
+
+#gems
+Show
+	Class "Gems"
+	SetBackgroundColor 0 0 0 220
+	SetFontSize 25
 
 #Unique
 Show
@@ -2428,7 +2414,7 @@ Show
 
 #Chance Base
 Show
-	BaseType "Close Helmet"
+	BaseType "Sorcerer Boots"
 	Rarity Normal
 	SetBackgroundColor 38 0 86 220
 	SetBorderColor 191 91 0 150
