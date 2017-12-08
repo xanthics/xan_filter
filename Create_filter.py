@@ -209,7 +209,7 @@ def main():
 		buffer += gen_list(maps.items, maps.desc)  # maps
 		buffer += gen_list(i[3].items, i[3].desc)  # divination cards
 		buffer += gen_list(flask.items, flask.desc)  # Flasks
-		buffer += gen_list(t1_rares.items, t1_rares.desc)
+		#buffer += gen_list(t1_rares.items, t1_rares.desc)
 		if leveling:
 			buf = {}
 			desc = rare_armor_dex.desc
