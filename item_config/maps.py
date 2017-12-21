@@ -27,9 +27,14 @@ items = {
 	"0 Fragment of the Hydra": {"base": "Fragment of the Hydra", "class": "Map Fragments", "type": "map red"},
 	"0 Divine Vessel": {"base": "Divine Vessel", "class": "Map Fragments", "type": "map red good"},
 
+	"41 Maps >= 78 good": {"class": "Maps", "other": ["ShapedMap True", "ItemLevel <= 85", "DropLevel >= 73"], "type": "map red good"},
+	"42 Maps <= 72 good": {"class": "Maps", "other": ["ShapedMap True", "ItemLevel <= 74"], "type": "map yellow good"},
+	"51 Maps >= 78": {"class": "Maps", "other": ["ShapedMap True", "DropLevel >= 73"], "type": "map red"},
+	"53 Other maps": {"class": "Maps", "other": ["ShapedMap True"], "type": "map yellow"},
+
 	"61 Maps >= 78 good": {"class": "Maps", "other": ["ItemLevel <= 85", "DropLevel >= 78"], "type": "map red good"},
 	"62 Maps <= 72 good": {"class": "Maps", "other": ["ItemLevel <= 74", "DropLevel <= 72"], "type": "map white good"},
-	"63 Other maps good": {"class": "Maps", "other": ["ItemLevel <= 80"], "type": "map yellow good"},
+	"63 Other maps good": {"class": "Maps", "other": ["ItemLevel <= 80", "DropLevel > 72", "DropLevel < 78"], "type": "map yellow good"},
 	"71 Maps >= 78": {"class": "Maps", "other": ["DropLevel >= 78"], "type": "map red"},
 	"72 Maps <= 72": {"class": "Maps", "other": ["DropLevel <= 72"], "type": "map white"},
 	"73 Other maps": {"class": "Maps", "type": "map yellow"},

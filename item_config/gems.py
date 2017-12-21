@@ -16,5 +16,5 @@ items = {
     "1 Enlighten": {"base": "Enlighten", "class": "Gems", "type": "gem normal"},
     "1 Added Chaos Damage": {"base": "Added Chaos Damage", "class": "Gems", "type": "gem normal"},
     "1 Vaal Gems": {"base": "Vaal", "class": "Gems", "type": "gem normal"},
-    "9 Other Gems": {"class": "Gems", "type": "gem low"}
+    "9 Other Gems": {"class": "Gems", "type": "ignore"}
 }
