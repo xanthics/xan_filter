@@ -181,7 +181,8 @@ def gen_div(div_list):
 	badcards = ["The Carrion Crow",
 				"The King's Blade",
 				"The Inoculated",
-				"Turn the Other Cheek"]
+				"Turn the Other Cheek",
+	            "Struck by Lightning"]
 
 	# Cards that will never make a drop noise
 	lowcards = ["Thunderous Skies",
@@ -250,6 +251,8 @@ def gen_unique(unique_list):
 	
 	for l in unique_list:
 		name = convertname(l)
+		if 'Catacombs Map' in unique_list[l]:
+			del unique_list[l]['Catacombs Map']
 
 		items = {'very high': [], 'high': [], 'special': [], 'low': []}
 

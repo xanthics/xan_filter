@@ -13,7 +13,7 @@ items = {
 	# High value atlas bases.  Show and make noise at any rarity
 	"04 Steel Ring": {"other": ["PlayAlertSound 2 50"], "base": "Steel Ring", "type": "show high"},
 	"04 Crystal Belt": {"other": ["PlayAlertSound 2 50"], "base": "Crystal Belt", "type": "show high"},
-	"04 Stygian Vise": {"other": ["PlayAlertSound 2 50"], "base": "Stygian Vise", "type": "show high"},
+	#"04 Stygian Vise": {"other": ["PlayAlertSound 2 50"], "base": "Stygian Vise", "type": "show high"},
 	"04 Opal Ring": {"other": ["PlayAlertSound 2 50"], "base": "Opal Ring", "type": "show high"},
 	"10 Talisman": {"class": "Amulets", 'other': ["Rarity >= Rare", "ItemLevel >= 70"], "base": "Talisman", "type": "show high"},
 	"11 Talisman": {"class": "Amulets", 'other': ["ItemLevel >= 70"], "base": "Talisman", "type": "show high"},
@@ -24,9 +24,6 @@ items = {
 	"0 Quest": {"class": "Quest", "type": "quest"},
 	"0 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "show normal"},
 	"0 Jewel": {"class": "Jewel", "other": ["Rarity <= Magic"], "type": "show normal"},
-
-	"0 Elder Item": {'other': ["ElderItem True"], "type": "show high"},
-	"0 Shaper Item": {'other': ["ShaperItem True"], "type": "show high"},
 
 	"9 Starter weapon": {"other": ["Class Dagger Wand \"One Hand\" Bow Stave \"Two Hand\" Sceptre Claws", "ItemLevel < 2"], "type": "show normal"},
 
