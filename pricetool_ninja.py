@@ -337,6 +337,8 @@ def scrape_ninja():
 			else:
 				for i in data:
 					for ii in data[i]:
+						if 'links' in ii and ii['links']:
+							continue
 						uniques[league][ii['baseType']].append(ii['chaosValue'])
 
 	gen_currency(currency)
