@@ -37,7 +37,7 @@ items = {
     "1 Hallowed Flask": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 42", "ItemLevel <= 60"], "type": "normal"},
     "1 Sanctified Flask": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 50", "ItemLevel <= 60"], "type": "ignore"},
     "1 Divine Flask": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 60", "ItemLevel <= 65"], "type": "ignore"},
-    "1 Eternal Flask": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 65", "ItemLevel <= 70"], "type": "normal"},
+    "1 Eternal Flask": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 65", "ItemLevel <= 70"], "type": "ignore"},
 
     "2 Small Flask": {"class": "Hybrid Flask", "other": ["DropLevel = 10", "ItemLevel <= 20"], "type": "ignore"},
     "2 medium Flask": {"class": "Hybrid Flask", "other": ["DropLevel = 20", "ItemLevel <= 30"], "type": "ignore"},
