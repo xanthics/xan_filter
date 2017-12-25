@@ -40,8 +40,9 @@ def currencyclassify(cur, val, exa):
 		tier = 'currency normal'
 	elif val >= 1 / 20:
 		tier = 'currency low'
-	#elif val >= 1 / 200:
-	#	tier = 'currency very low'
+	elif val >= 1 / 200:
+		tier = 'hide'
+		tier = 'currency very low'
 	else:
 		tier = 'hide'
 	return "0 {0}\": {{\"base\": \"{0}\", \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier)
