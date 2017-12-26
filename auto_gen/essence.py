@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/25/2017(m/d/y) 22:23:43 UTC from "Standard" data
+# Created: 12/26/2017(m/d/y) 09:02:28 UTC from "Standard" data
 
 desc = "Essence Autogen"
 
@@ -38,11 +38,11 @@ items = {
 	"0 Shrieking Essence of Fear": {"base": "Shrieking Essence of Fear", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Greed": {"base": "Shrieking Essence of Greed", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Hatred": {"base": "Shrieking Essence of Hatred", "class": "Currency", "type": "currency normal"},
+	"0 Shrieking Essence of Loathing": {"base": "Shrieking Essence of Loathing", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Misery": {"base": "Shrieking Essence of Misery", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Rage": {"base": "Shrieking Essence of Rage", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Scorn": {"base": "Shrieking Essence of Scorn", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Spite": {"base": "Shrieking Essence of Spite", "class": "Currency", "type": "currency normal"},
-	"0 Shrieking Essence of Suffering": {"base": "Shrieking Essence of Suffering", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Woe": {"base": "Shrieking Essence of Woe", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Wrath": {"base": "Shrieking Essence of Wrath", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Zeal": {"base": "Shrieking Essence of Zeal", "class": "Currency", "type": "currency normal"},

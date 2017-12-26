@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/25/2017(m/d/y) 22:23:43 UTC from "tmpstandard" data
+# Created: 12/26/2017(m/d/y) 09:02:28 UTC from "tmpstandard" data
 
 desc = "Currency Autogen"
 
@@ -32,7 +32,7 @@ items = {
 	"0 Exalted Orb": {"base": "Exalted Orb", "class": "Currency", "type": "currency extremely high"},
 	"0 Exalted Shard": {"base": "Exalted Shard", "class": "Currency", "type": "currency high"},
 	"0 Gemcutter's Prism": {"base": "Gemcutter's Prism", "class": "Currency", "type": "currency normal"},
-	"0 Glassblower's Bauble": {"base": "Glassblower's Bauble", "class": "Currency", "type": "currency normal"},
+	"0 Glassblower's Bauble": {"base": "Glassblower's Bauble", "class": "Currency", "type": "currency low"},
 	"0 Harbinger's Orb": {"base": "Harbinger's Orb", "class": "Currency", "type": "currency very high"},
 	"0 Harbinger's Shard": {"base": "Harbinger's Shard", "class": "Currency", "type": "currency normal"},
 	"0 Horizon Shard": {"base": "Horizon Shard", "class": "Currency", "type": "currency low"},

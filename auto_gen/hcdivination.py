@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/25/2017(m/d/y) 22:23:43 UTC from "Hardcore" data
+# Created: 12/26/2017(m/d/y) 09:02:28 UTC from "Hardcore" data
 
 desc = "Divination Card"
 
@@ -25,7 +25,6 @@ items = {
 	"1 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
 	"1 The Spark and the Flame": {"base": "The Spark and the Flame", "class": "Divination Card", "type": "divination very high"},
 	"1 The Vast": {"base": "The Vast", "class": "Divination Card", "type": "divination very high"},
-	"1 The Wolven King's Bite": {"base": "The Wolven King's Bite", "class": "Divination Card", "type": "divination very high"},
 	"1 Wealth and Power": {"base": "Wealth and Power", "class": "Divination Card", "type": "divination very high"},
 	"2 Abandoned Wealth": {"base": "Abandoned Wealth", "class": "Divination Card", "type": "divination high"},
 	"2 Boundless Realms": {"base": "Boundless Realms", "class": "Divination Card", "type": "divination high"},
@@ -53,6 +52,7 @@ items = {
 	"2 The Offering": {"base": "The Offering", "class": "Divination Card", "type": "divination high"},
 	"2 The Pact": {"base": "The Pact", "class": "Divination Card", "type": "divination high"},
 	"2 The Polymath": {"base": "The Polymath", "class": "Divination Card", "type": "divination high"},
+	"2 The Porcupine": {"base": "The Porcupine", "class": "Divination Card", "type": "divination high"},
 	"2 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
 	"2 The Road to Power": {"base": "The Road to Power", "class": "Divination Card", "type": "divination high"},
 	"2 The Ruthless Ceinture": {"base": "The Ruthless Ceinture", "class": "Divination Card", "type": "divination high"},
@@ -68,9 +68,11 @@ items = {
 	"2 The Warlord": {"base": "The Warlord", "class": "Divination Card", "type": "divination high"},
 	"2 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination high"},
 	"2 The Wolf": {"base": "The Wolf", "class": "Divination Card", "type": "divination high"},
+	"2 The Wolven King's Bite": {"base": "The Wolven King's Bite", "class": "Divination Card", "type": "divination high"},
 	"2 The Wretched": {"base": "The Wretched", "class": "Divination Card", "type": "divination high"},
 	"2 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination high"},
 	"3 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "divination low"},
+	"3 Anarchy's Price": {"base": "Anarchy's Price", "class": "Divination Card", "type": "divination low"},
 	"3 Assassin's Favour": {"base": "Assassin's Favour", "class": "Divination Card", "type": "divination low"},
 	"3 Cartographer's Delight": {"base": "Cartographer's Delight", "class": "Divination Card", "type": "divination low"},
 	"3 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "divination low"},
@@ -78,14 +80,11 @@ items = {
 	"3 The Betrayal": {"base": "The Betrayal", "class": "Divination Card", "type": "divination low"},
 	"3 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
 	"3 The Feast": {"base": "The Feast", "class": "Divination Card", "type": "divination low"},
-	"3 The Flora's Gift": {"base": "The Flora's Gift", "class": "Divination Card", "type": "divination low"},
 	"3 The Hermit": {"base": "The Hermit", "class": "Divination Card", "type": "divination low"},
 	"3 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination low"},
-	"3 The Lunaris Priestess": {"base": "The Lunaris Priestess", "class": "Divination Card", "type": "divination low"},
 	"3 The Metalsmith's Gift": {"base": "The Metalsmith's Gift", "class": "Divination Card", "type": "divination low"},
 	"3 The Rabid Rhoa": {"base": "The Rabid Rhoa", "class": "Divination Card", "type": "divination low"},
 	"3 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},
-	"3 The Summoner": {"base": "The Summoner", "class": "Divination Card", "type": "divination low"},
 	"3 The Surgeon": {"base": "The Surgeon", "class": "Divination Card", "type": "divination low"},
 	"3 The Twins": {"base": "The Twins", "class": "Divination Card", "type": "divination low"},
 	"3 The Warden": {"base": "The Warden", "class": "Divination Card", "type": "divination low"},

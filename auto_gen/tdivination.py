@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/25/2017(m/d/y) 22:23:43 UTC from "tmpstandard" data
+# Created: 12/26/2017(m/d/y) 09:02:28 UTC from "tmpstandard" data
 
 desc = "Divination Card"
 
@@ -15,6 +15,7 @@ items = {
 	"1 Hunter's Reward": {"base": "Hunter's Reward", "class": "Divination Card", "type": "divination very high"},
 	"1 Mawr Blaidd": {"base": "Mawr Blaidd", "class": "Divination Card", "type": "divination very high"},
 	"1 Pride Before the Fall": {"base": "Pride Before the Fall", "class": "Divination Card", "type": "divination very high"},
+	"1 The Artist": {"base": "The Artist", "class": "Divination Card", "type": "divination very high"},
 	"1 The Brittle Emperor": {"base": "The Brittle Emperor", "class": "Divination Card", "type": "divination very high"},
 	"1 The Celestial Justicar": {"base": "The Celestial Justicar", "class": "Divination Card", "type": "divination very high"},
 	"1 The Doctor": {"base": "The Doctor", "class": "Divination Card", "type": "divination very high"},
@@ -34,7 +35,6 @@ items = {
 	"2 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination high"},
 	"2 Heterochromia": {"base": "Heterochromia", "class": "Divination Card", "type": "divination high"},
 	"2 Left to Fate": {"base": "Left to Fate", "class": "Divination Card", "type": "divination high"},
-	"2 The Artist": {"base": "The Artist", "class": "Divination Card", "type": "divination high"},
 	"2 The Dapper Prodigy": {"base": "The Dapper Prodigy", "class": "Divination Card", "type": "divination high"},
 	"2 The Enlightened": {"base": "The Enlightened", "class": "Divination Card", "type": "divination high"},
 	"2 The Ethereal": {"base": "The Ethereal", "class": "Divination Card", "type": "divination high"},
@@ -49,7 +49,6 @@ items = {
 	"2 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination high"},
 	"2 The Throne": {"base": "The Throne", "class": "Divination Card", "type": "divination high"},
 	"2 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination high"},
-	"2 The Valley of Steel Boxes": {"base": "The Valley of Steel Boxes", "class": "Divination Card", "type": "divination high"},
 	"2 The Vast": {"base": "The Vast", "class": "Divination Card", "type": "divination high"},
 	"2 The Void": {"base": "The Void", "class": "Divination Card", "type": "divination high"},
 	"2 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination high"},
@@ -88,7 +87,6 @@ items = {
 	"3 The Conduit": {"base": "The Conduit", "class": "Divination Card", "type": "divination low"},
 	"3 The Doppelganger": {"base": "The Doppelganger", "class": "Divination Card", "type": "divination low"},
 	"3 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
-	"3 The Explorer": {"base": "The Explorer", "class": "Divination Card", "type": "divination low"},
 	"3 The Eye of the Dragon": {"base": "The Eye of the Dragon", "class": "Divination Card", "type": "divination low"},
 	"3 The Feast": {"base": "The Feast", "class": "Divination Card", "type": "divination low"},
 	"3 The Flora's Gift": {"base": "The Flora's Gift", "class": "Divination Card", "type": "divination low"},
@@ -102,7 +100,6 @@ items = {
 	"3 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination low"},
 	"3 The Lover": {"base": "The Lover", "class": "Divination Card", "type": "divination low"},
 	"3 The Lunaris Priestess": {"base": "The Lunaris Priestess", "class": "Divination Card", "type": "divination low"},
-	"3 The Mercenary": {"base": "The Mercenary", "class": "Divination Card", "type": "divination low"},
 	"3 The Metalsmith's Gift": {"base": "The Metalsmith's Gift", "class": "Divination Card", "type": "divination low"},
 	"3 The Oath": {"base": "The Oath", "class": "Divination Card", "type": "divination low"},
 	"3 The Opulent": {"base": "The Opulent", "class": "Divination Card", "type": "divination low"},
