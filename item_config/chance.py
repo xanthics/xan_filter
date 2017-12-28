@@ -15,13 +15,13 @@ items = {
 	"0 Carcass Jack": {"base": "Varnished Coat", "type": "ignore"},
 	"0 The Baron": {"base": "Close Helmet", "type": "ignore"},
 
-	"0 Lycosidae": {"base": "Rawhide Tower Shield", "type": "chance"},
+	"0 Lycosidae": {"base": "Rawhide Tower Shield", "type": "ignore"},
 	"0 Bisco's Collar": {"base": "Gold Amulet", "type": "chance"},
 	"0 Shavronne's Wrappings": {"base": "Occultist's Vestment", "type": "ignore"},
 	"0 Kaom's Heart": {"base": "Glorious Plate", "type": "ignore"},
 	"0 Void Battery": {"base": "Prophecy Wand", "type": "ignore"},
 	"0 Soul Taker": {"base": "Siege Axe", "type": "ignore"},
-	"0 Skyforth": {"base": "Sorcerer Boots", "type": "chance"},
+	"0 Skyforth": {"base": "Sorcerer Boots", "type": "ignore"},
 	"0 Headhunter": {"base": "Leather Belt", "type": "ignore"},
-	"0 Tukohama's Fortress": {"base": "Ebony Tower Shield", "type": "chance"}
+	"0 Tukohama's Fortress": {"base": "Ebony Tower Shield", "type": "ignore"}
 }
