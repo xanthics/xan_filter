@@ -241,7 +241,7 @@ def main():
 		if leveling:
 			buffer += gen_list(general_levelling.items, general_levelling.desc)
 		buffer += gen_list(chance.items, chance.desc)  # Chance bases
-		buffer += gen_list(crafting_bases.items, crafting_bases.desc)  # Crafting bases
+		# buffer += gen_list(crafting_bases.items, crafting_bases.desc)  # Crafting bases
 		# buffer += gen_list(animate_weapon.items, animate_weapon.desc)  # Animate Weapon bases
 
 		if False:  # leveling:
