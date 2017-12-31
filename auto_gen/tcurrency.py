@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/26/2017(m/d/y) 09:02:28 UTC from "tmpstandard" data
+# Created: 12/31/2017(m/d/y) 01:18:27 UTC from "tmpstandard" data
 
 desc = "Currency Autogen"
 
@@ -17,7 +17,7 @@ items = {
 	"0 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", "class": "Currency", "type": "currency very low"},
 	"0 Blessed Orb": {"base": "Blessed Orb", "class": "Currency", "type": "currency normal"},
 	"0 Blessing of Chayula": {"base": "Blessing of Chayula", "class": "Currency", "type": "currency extremely high"},
-	"0 Blessing of Esh": {"base": "Blessing of Esh", "class": "Currency", "type": "currency very high"},
+	"0 Blessing of Esh": {"base": "Blessing of Esh", "class": "Currency", "type": "currency high"},
 	"0 Blessing of Tul": {"base": "Blessing of Tul", "class": "Currency", "type": "currency very high"},
 	"0 Blessing of Uul-Netol": {"base": "Blessing of Uul-Netol", "class": "Currency", "type": "currency very high"},
 	"0 Blessing of Xoph": {"base": "Blessing of Xoph", "class": "Currency", "type": "currency high"},
@@ -31,8 +31,8 @@ items = {
 	"0 Eternal Orb": {"base": "Eternal Orb", "class": "Currency", "type": "currency extremely high"},
 	"0 Exalted Orb": {"base": "Exalted Orb", "class": "Currency", "type": "currency extremely high"},
 	"0 Exalted Shard": {"base": "Exalted Shard", "class": "Currency", "type": "currency high"},
-	"0 Gemcutter's Prism": {"base": "Gemcutter's Prism", "class": "Currency", "type": "currency normal"},
-	"0 Glassblower's Bauble": {"base": "Glassblower's Bauble", "class": "Currency", "type": "currency low"},
+	"0 Gemcutter's Prism": {"base": "Gemcutter's Prism", "class": "Currency", "type": "currency high"},
+	"0 Glassblower's Bauble": {"base": "Glassblower's Bauble", "class": "Currency", "type": "currency normal"},
 	"0 Harbinger's Orb": {"base": "Harbinger's Orb", "class": "Currency", "type": "currency very high"},
 	"0 Harbinger's Shard": {"base": "Harbinger's Shard", "class": "Currency", "type": "currency normal"},
 	"0 Horizon Shard": {"base": "Horizon Shard", "class": "Currency", "type": "currency low"},
@@ -52,11 +52,11 @@ items = {
 	"0 Orb of Scouring": {"base": "Orb of Scouring", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Transmutation": {"base": "Orb of Transmutation", "class": "Currency", "type": "currency very low"},
 	"0 Perandus Coin": {"base": "Perandus Coin", "class": "Currency", "type": "currency very low"},
-	"0 Portal Scroll": {"base": "Portal Scroll", "class": "Currency", "type": "hide"},
+	"0 Portal Scroll": {"base": "Portal Scroll", "class": "Currency", "type": "ignore"},
 	"0 Regal Orb": {"base": "Regal Orb", "class": "Currency", "type": "currency normal"},
 	"0 Regal Shard": {"base": "Regal Shard", "class": "Currency", "type": "currency low"},
 	"0 Scroll Fragment": {"base": "Scroll Fragment", "class": "Currency", "type": "hide"},
-	"0 Scroll of Wisdom": {"base": "Scroll of Wisdom", "class": "Currency", "type": "hide"},
+	"0 Scroll of Wisdom": {"base": "Scroll of Wisdom", "class": "Currency", "type": "ignore"},
 	"0 Silver Coin": {"base": "Silver Coin", "class": "Currency", "type": "currency normal"},
 	"0 Splinter of Chayula": {"base": "Splinter of Chayula", "class": "Currency", "type": "currency very high"},
 	"0 Splinter of Esh": {"base": "Splinter of Esh", "class": "Currency", "type": "show normal"},

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/26/2017(m/d/y) 09:02:28 UTC from "tmphardcore" data
+# Created: 12/31/2017(m/d/y) 01:18:27 UTC from "tmphardcore" data
 
 desc = "Currency Autogen"
 
@@ -59,8 +59,8 @@ items = {
 	"0 Scroll of Wisdom": {"base": "Scroll of Wisdom", "class": "Currency", "type": "currency very low"},
 	"0 Silver Coin": {"base": "Silver Coin", "class": "Currency", "type": "currency normal"},
 	"0 Splinter of Chayula": {"base": "Splinter of Chayula", "class": "Currency", "type": "currency high"},
-	"0 Splinter of Esh": {"base": "Splinter of Esh", "class": "Currency", "type": "currency normal"},
-	"0 Splinter of Tul": {"base": "Splinter of Tul", "class": "Currency", "type": "currency normal"},
+	"0 Splinter of Esh": {"base": "Splinter of Esh", "class": "Currency", "type": "show normal"},
+	"0 Splinter of Tul": {"base": "Splinter of Tul", "class": "Currency", "type": "show normal"},
 	"0 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", "class": "Currency", "type": "currency normal"},
 	"0 Splinter of Xoph": {"base": "Splinter of Xoph", "class": "Currency", "type": "currency normal"},
 	"0 Transmutation Shard": {"base": "Transmutation Shard", "class": "Currency", "type": "hide"},

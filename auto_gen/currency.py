@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/26/2017(m/d/y) 09:02:28 UTC from "Standard" data
+# Created: 12/31/2017(m/d/y) 01:18:27 UTC from "Standard" data
 
 desc = "Currency Autogen"
 
@@ -24,7 +24,7 @@ items = {
 	"0 Cartographer's Chisel": {"base": "Cartographer's Chisel", "class": "Currency", "type": "currency normal"},
 	"0 Chaos Orb": {"base": "Chaos Orb", "class": "Currency", "type": "currency high"},
 	"0 Chaos Shard": {"base": "Chaos Shard", "class": "Currency", "type": "currency low"},
-	"0 Chromatic Orb": {"base": "Chromatic Orb", "class": "Currency", "type": "currency normal"},
+	"0 Chromatic Orb": {"base": "Chromatic Orb", "class": "Currency", "type": "currency low"},
 	"0 Divine Orb": {"base": "Divine Orb", "class": "Currency", "type": "currency very high"},
 	"0 Engineer's Orb": {"base": "Engineer's Orb", "class": "Currency", "type": "currency normal"},
 	"0 Engineer's Shard": {"base": "Engineer's Shard", "class": "Currency", "type": "currency very low"},
@@ -57,7 +57,7 @@ items = {
 	"0 Regal Shard": {"base": "Regal Shard", "class": "Currency", "type": "currency low"},
 	"0 Scroll Fragment": {"base": "Scroll Fragment", "class": "Currency", "type": "hide"},
 	"0 Scroll of Wisdom": {"base": "Scroll of Wisdom", "class": "Currency", "type": "currency very low"},
-	"0 Silver Coin": {"base": "Silver Coin", "class": "Currency", "type": "currency normal"},
+	"0 Silver Coin": {"base": "Silver Coin", "class": "Currency", "type": "currency low"},
 	"0 Splinter of Chayula": {"base": "Splinter of Chayula", "class": "Currency", "type": "currency high"},
 	"0 Splinter of Esh": {"base": "Splinter of Esh", "class": "Currency", "type": "show normal"},
 	"0 Splinter of Tul": {"base": "Splinter of Tul", "class": "Currency", "type": "show normal"},
