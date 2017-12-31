@@ -123,6 +123,7 @@ settings = {
 			  "SetBackgroundColor {} 220".format(color['black'])],
 
 	"chance": ["Rarity Normal",
+	           'Corrupted False',
 			   "SetFontSize {}".format(size['large']),
 			   "SetBorderColor {} 150".format(color['premiumorange']),
 			   "SetBackgroundColor {} 220".format(color['premiumdpurple'])],
