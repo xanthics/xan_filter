@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/31/2017(m/d/y) 01:18:27 UTC from "tmphardcore" data
+# Created: 01/01/2018(m/d/y) 21:38:59 UTC from "tmphardcore" data
 
 desc = "Currency Autogen"
 
