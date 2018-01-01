@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/31/2017(m/d/y) 01:18:27 UTC from "tmpstandard" data
+# Created: 01/01/2018(m/d/y) 21:38:59 UTC from "tmpstandard" data
 
 desc = "Divination Card"
 
@@ -34,13 +34,11 @@ items = {
 	"2 Heterochromia": {"base": "Heterochromia", "class": "Divination Card", "type": "divination high"},
 	"2 Left to Fate": {"base": "Left to Fate", "class": "Divination Card", "type": "divination high"},
 	"2 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination high"},
-	"2 Rebirth": {"base": "Rebirth", "class": "Divination Card", "type": "divination high"},
 	"2 The Artist": {"base": "The Artist", "class": "Divination Card", "type": "divination high"},
 	"2 The Cartographer": {"base": "The Cartographer", "class": "Divination Card", "type": "divination high"},
 	"2 The Dapper Prodigy": {"base": "The Dapper Prodigy", "class": "Divination Card", "type": "divination high"},
 	"2 The Enlightened": {"base": "The Enlightened", "class": "Divination Card", "type": "divination high"},
 	"2 The Ethereal": {"base": "The Ethereal", "class": "Divination Card", "type": "divination high"},
-	"2 The Fletcher": {"base": "The Fletcher", "class": "Divination Card", "type": "divination high"},
 	"2 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination high"},
 	"2 The Offering": {"base": "The Offering", "class": "Divination Card", "type": "divination high"},
 	"2 The Polymath": {"base": "The Polymath", "class": "Divination Card", "type": "divination high"},
@@ -60,11 +58,11 @@ items = {
 	"3 Anarchy's Price": {"base": "Anarchy's Price", "class": "Divination Card", "type": "divination low"},
 	"3 Assassin's Favour": {"base": "Assassin's Favour", "class": "Divination Card", "type": "divination low"},
 	"3 Audacity": {"base": "Audacity", "class": "Divination Card", "type": "divination low"},
-	"3 Birth of the Three": {"base": "Birth of the Three", "class": "Divination Card", "type": "divination low"},
 	"3 Blind Venture": {"base": "Blind Venture", "class": "Divination Card", "type": "divination low"},
 	"3 Boundless Realms": {"base": "Boundless Realms", "class": "Divination Card", "type": "divination low"},
 	"3 Call to the First Ones": {"base": "Call to the First Ones", "class": "Divination Card", "type": "divination low"},
 	"3 Cartographer's Delight": {"base": "Cartographer's Delight", "class": "Divination Card", "type": "divination low"},
+	"3 Coveted Possession": {"base": "Coveted Possession", "class": "Divination Card", "type": "divination low"},
 	"3 Death": {"base": "Death", "class": "Divination Card", "type": "divination low"},
 	"3 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "divination low"},
 	"3 Doedre's Madness": {"base": "Doedre's Madness", "class": "Divination Card", "type": "divination low"},
@@ -73,13 +71,13 @@ items = {
 	"3 Grave Knowledge": {"base": "Grave Knowledge", "class": "Divination Card", "type": "divination low"},
 	"3 Her Mask": {"base": "Her Mask", "class": "Divination Card", "type": "divination low"},
 	"3 Hubris": {"base": "Hubris", "class": "Divination Card", "type": "divination low"},
-	"3 Hunter's Resolve": {"base": "Hunter's Resolve", "class": "Divination Card", "type": "divination low"},
 	"3 Lantador's Lost Love": {"base": "Lantador's Lost Love", "class": "Divination Card", "type": "divination low"},
 	"3 Light and Truth": {"base": "Light and Truth", "class": "Divination Card", "type": "divination low"},
 	"3 Loyalty": {"base": "Loyalty", "class": "Divination Card", "type": "divination low"},
 	"3 Might is Right": {"base": "Might is Right", "class": "Divination Card", "type": "divination low"},
 	"3 Mitts": {"base": "Mitts", "class": "Divination Card", "type": "divination low"},
 	"3 Prosperity": {"base": "Prosperity", "class": "Divination Card", "type": "divination low"},
+	"3 Rain Tempter": {"base": "Rain Tempter", "class": "Divination Card", "type": "divination low"},
 	"3 Rain of Chaos": {"base": "Rain of Chaos", "class": "Divination Card", "type": "divination low"},
 	"3 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},
 	"3 The Betrayal": {"base": "The Betrayal", "class": "Divination Card", "type": "divination low"},
@@ -89,7 +87,6 @@ items = {
 	"3 The Coming Storm": {"base": "The Coming Storm", "class": "Divination Card", "type": "divination low"},
 	"3 The Conduit": {"base": "The Conduit", "class": "Divination Card", "type": "divination low"},
 	"3 The Doppelganger": {"base": "The Doppelganger", "class": "Divination Card", "type": "divination low"},
-	"3 The Drunken Aristocrat": {"base": "The Drunken Aristocrat", "class": "Divination Card", "type": "divination low"},
 	"3 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
 	"3 The Explorer": {"base": "The Explorer", "class": "Divination Card", "type": "divination low"},
 	"3 The Eye of the Dragon": {"base": "The Eye of the Dragon", "class": "Divination Card", "type": "divination low"},
@@ -100,6 +97,7 @@ items = {
 	"3 The Garish Power": {"base": "The Garish Power", "class": "Divination Card", "type": "divination low"},
 	"3 The Gemcutter": {"base": "The Gemcutter", "class": "Divination Card", "type": "divination low"},
 	"3 The Gentleman": {"base": "The Gentleman", "class": "Divination Card", "type": "divination low"},
+	"3 The Gladiator": {"base": "The Gladiator", "class": "Divination Card", "type": "divination low"},
 	"3 The Hermit": {"base": "The Hermit", "class": "Divination Card", "type": "divination low"},
 	"3 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination low"},
 	"3 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination low"},

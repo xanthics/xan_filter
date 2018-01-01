@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/31/2017(m/d/y) 01:18:27 UTC from "Standard" data
+# Created: 01/01/2018(m/d/y) 21:38:59 UTC from "Standard" data
 
 desc = "Currency Autogen"
 
@@ -24,7 +24,7 @@ items = {
 	"0 Cartographer's Chisel": {"base": "Cartographer's Chisel", "class": "Currency", "type": "currency normal"},
 	"0 Chaos Orb": {"base": "Chaos Orb", "class": "Currency", "type": "currency high"},
 	"0 Chaos Shard": {"base": "Chaos Shard", "class": "Currency", "type": "currency low"},
-	"0 Chromatic Orb": {"base": "Chromatic Orb", "class": "Currency", "type": "currency low"},
+	"0 Chromatic Orb": {"base": "Chromatic Orb", "class": "Currency", "type": "currency normal"},
 	"0 Divine Orb": {"base": "Divine Orb", "class": "Currency", "type": "currency very high"},
 	"0 Engineer's Orb": {"base": "Engineer's Orb", "class": "Currency", "type": "currency normal"},
 	"0 Engineer's Shard": {"base": "Engineer's Shard", "class": "Currency", "type": "currency very low"},
@@ -34,7 +34,7 @@ items = {
 	"0 Gemcutter's Prism": {"base": "Gemcutter's Prism", "class": "Currency", "type": "currency high"},
 	"0 Glassblower's Bauble": {"base": "Glassblower's Bauble", "class": "Currency", "type": "currency low"},
 	"0 Harbinger's Orb": {"base": "Harbinger's Orb", "class": "Currency", "type": "currency very high"},
-	"0 Harbinger's Shard": {"base": "Harbinger's Shard", "class": "Currency", "type": "currency high"},
+	"0 Harbinger's Shard": {"base": "Harbinger's Shard", "class": "Currency", "type": "currency normal"},
 	"0 Horizon Shard": {"base": "Horizon Shard", "class": "Currency", "type": "currency normal"},
 	"0 Jeweller's Orb": {"base": "Jeweller's Orb", "class": "Currency", "type": "currency normal"},
 	"0 Journeyman Cartographer's Sextant": {"base": "Journeyman Cartographer's Sextant", "class": "Currency", "type": "currency high"},
@@ -61,7 +61,7 @@ items = {
 	"0 Splinter of Chayula": {"base": "Splinter of Chayula", "class": "Currency", "type": "currency high"},
 	"0 Splinter of Esh": {"base": "Splinter of Esh", "class": "Currency", "type": "show normal"},
 	"0 Splinter of Tul": {"base": "Splinter of Tul", "class": "Currency", "type": "show normal"},
-	"0 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", "class": "Currency", "type": "currency normal"},
+	"0 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", "class": "Currency", "type": "show normal"},
 	"0 Splinter of Xoph": {"base": "Splinter of Xoph", "class": "Currency", "type": "show normal"},
 	"0 Transmutation Shard": {"base": "Transmutation Shard", "class": "Currency", "type": "hide"},
 	"0 Vaal Orb": {"base": "Vaal Orb", "class": "Currency", "type": "currency high"},

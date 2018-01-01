@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/31/2017(m/d/y) 01:18:27 UTC from "Standard" data
+# Created: 01/01/2018(m/d/y) 21:38:59 UTC from "Standard" data
 
 desc = "Essence Autogen"
 
@@ -8,7 +8,7 @@ desc = "Essence Autogen"
 items = {
 	"0 Deafening Essence of Anger": {"base": "Deafening Essence of Anger", "class": "Currency", "type": "currency high"},
 	"0 Deafening Essence of Anguish": {"base": "Deafening Essence of Anguish", "class": "Currency", "type": "currency normal"},
-	"0 Deafening Essence of Contempt": {"base": "Deafening Essence of Contempt", "class": "Currency", "type": "currency high"},
+	"0 Deafening Essence of Contempt": {"base": "Deafening Essence of Contempt", "class": "Currency", "type": "currency very high"},
 	"0 Deafening Essence of Dread": {"base": "Deafening Essence of Dread", "class": "Currency", "type": "currency normal"},
 	"0 Deafening Essence of Envy": {"base": "Deafening Essence of Envy", "class": "Currency", "type": "currency high"},
 	"0 Deafening Essence of Fear": {"base": "Deafening Essence of Fear", "class": "Currency", "type": "currency normal"},
@@ -21,15 +21,17 @@ items = {
 	"0 Deafening Essence of Spite": {"base": "Deafening Essence of Spite", "class": "Currency", "type": "currency normal"},
 	"0 Deafening Essence of Torment": {"base": "Deafening Essence of Torment", "class": "Currency", "type": "currency normal"},
 	"0 Deafening Essence of Woe": {"base": "Deafening Essence of Woe", "class": "Currency", "type": "currency normal"},
-	"0 Deafening Essence of Wrath": {"base": "Deafening Essence of Wrath", "class": "Currency", "type": "currency normal"},
+	"0 Deafening Essence of Wrath": {"base": "Deafening Essence of Wrath", "class": "Currency", "type": "currency high"},
 	"0 Deafening Essence of Zeal": {"base": "Deafening Essence of Zeal", "class": "Currency", "type": "currency normal"},
 	"0 Essence of Delirium": {"base": "Essence of Delirium", "class": "Currency", "type": "currency very high"},
 	"0 Essence of Horror": {"base": "Essence of Horror", "class": "Currency", "type": "currency very high"},
 	"0 Essence of Hysteria": {"base": "Essence of Hysteria", "class": "Currency", "type": "currency very high"},
 	"0 Essence of Insanity": {"base": "Essence of Insanity", "class": "Currency", "type": "currency very high"},
+	"0 Muttering Essence of Greed": {"base": "Muttering Essence of Greed", "class": "Currency", "type": "currency normal"},
 	"0 Remnant of Corruption": {"base": "Remnant of Corruption", "class": "Currency", "type": "currency normal"},
 	"0 Screaming Essence of Anger": {"base": "Screaming Essence of Anger", "class": "Currency", "type": "currency normal"},
 	"0 Screaming Essence of Contempt": {"base": "Screaming Essence of Contempt", "class": "Currency", "type": "currency normal"},
+	"0 Screaming Essence of Envy": {"base": "Screaming Essence of Envy", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Anger": {"base": "Shrieking Essence of Anger", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Contempt": {"base": "Shrieking Essence of Contempt", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Envy": {"base": "Shrieking Essence of Envy", "class": "Currency", "type": "currency normal"},
@@ -47,6 +49,6 @@ items = {
 	"0 Shrieking Essence of Woe": {"base": "Shrieking Essence of Woe", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Wrath": {"base": "Shrieking Essence of Wrath", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Zeal": {"base": "Shrieking Essence of Zeal", "class": "Currency", "type": "currency normal"},
-	"0 Weeping Essence of Woe": {"base": "Weeping Essence of Woe", "class": "Currency", "type": "currency normal"},
-	"0 Whispering Essence of Woe": {"base": "Whispering Essence of Woe", "class": "Currency", "type": "currency normal"},
+	"0 Wailing Essence of Wrath": {"base": "Wailing Essence of Wrath", "class": "Currency", "type": "currency normal"},
+	"0 Whispering Essence of Hatred": {"base": "Whispering Essence of Hatred", "class": "Currency", "type": "currency normal"},
 	"7 Essence default": {"base": "Essence", "class": "Currency", "type": "currency low"}}
