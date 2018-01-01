@@ -951,6 +951,6 @@ def genrareshighlight(alwaysshow=(('Helmet', 84), ('Gloves', 84), ('Boots', 84),
 				elif cur['name'] in shown:
 					ret['2 {}'.format(cur['name'])] = {"base": cur['name'], "class": cur['base'], "type": "rare normal"}
 				elif s:
-					ret['3 {}'.format(cur['name'])] = {"base": cur['name'], "class": cur['base'], "other": ["ItemLevel <= {}".format(ilvl)], "type": "rare low"}
+					ret['3 {}'.format(cur['name'])] = {"base": cur['name'], "class": cur['base'], "other": ["ItemLevel >= {}".format(ilvl)], "type": "rare low"}
 
 	return ret
