@@ -57,31 +57,13 @@ from item_config import nonrare_two_hand_axe
 from item_config import nonrare_two_hand_mace
 from item_config import nonrare_two_hand_sword
 from item_config import nonrare_wand
-from item_config import rare_armor_dex
-from item_config import rare_armor_dex_int
-from item_config import rare_armor_int
-from item_config import rare_armor_str
-from item_config import rare_armor_str_dex
-from item_config import rare_armor_str_int
-from item_config import rare_bow
-from item_config import rare_claw
-from item_config import rare_dagger
 from item_config import rare_highlight
-from item_config import rare_one_hand_axe
-from item_config import rare_one_hand_mace
-from item_config import rare_one_hand_sword
-from item_config import rare_sceptre
-from item_config import rare_staff
-from item_config import rare_thrusting_one_hand_sword
-from item_config import rare_two_hand_axe
-from item_config import rare_two_hand_mace
-from item_config import rare_two_hand_sword
-from item_config import rare_wand
 from item_config import rares
 from item_config import recipe_item
 from item_config import show
 from item_config import t1_rares
 from item_config import warbands
+from item_config.rare_gen import genrareshighlight, genraresleveling
 
 from theme_config import formatting
 
@@ -211,31 +193,12 @@ def main():
 		buffer += gen_list(flask.items, flask.desc)  # Flasks
 		#buffer += gen_list(t1_rares.items, t1_rares.desc)
 		if leveling:
-			buf = {}
-			desc = rare_armor_dex.desc
-			for rareitemleveling in [rare_armor_dex,
-			                         rare_armor_dex_int,
-			                         rare_armor_str_dex,
-			                         rare_armor_str,
-			                         rare_armor_int,
-			                         rare_armor_str_int,
-			                         #rare_bow,
-			                         #rare_claw,
-			                         rare_dagger,
-			                         #rare_one_hand_sword,
-									 #rare_one_hand_mace,
-									 #rare_one_hand_axe,
-									 rare_sceptre,
-									 #rare_staff,
-									 #rare_thrusting_one_hand_sword,
-									 #rare_two_hand_sword,
-									 #rare_two_hand_mace,
-									 #rare_two_hand_axe,
-									 rare_wand]:
-				buf.update(rareitemleveling.items)
-			buffer += gen_list(buf, desc)
+			desc = "Rare item for leveling"
+			flags = 'All'  # see item_config/rare_gen - genraresleveling for valid values
+			buffer += gen_list(genraresleveling(flags, overlevel=3, maxlevel=67), desc)
 
-		buffer += gen_list(rare_highlight.items, rare_highlight.desc)  # rares highlighting + jewelry
+		#buffer += gen_list(rare_highlight.items, rare_highlight.desc)  # rares highlighting + jewelry
+		buffer += gen_list(genrareshighlight(), 'Rare item highlighting for endgame')
 		buffer += gen_list(rares.items, rares.desc)  # rares catchall
 		# buffer += gen_list(chroma.items, chroma.desc)  # chrome vendor items
 		if leveling:
@@ -246,7 +209,7 @@ def main():
 
 		if False:  # leveling:
 			buf = {}
-			desc = rare_armor_dex.desc
+			desc = 'item for leveling'
 			for nonrareitemleveling in [nonrare_armor_dex,
 			                            nonrare_armor_dex_int,
 			                            nonrare_armor_str_dex,

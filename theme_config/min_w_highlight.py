@@ -232,7 +232,6 @@ settings = {
 							  "SetFontSize {}".format(size['normal']),
 							  "SetBackgroundColor {} 220".format(color['black'])],
 	"rare normal": ["Rarity Rare",
-					"SetBorderColor {}".format(color['rare']),
 					"SetFontSize {}".format(size['normal']),
 					"SetBackgroundColor {} 220".format(color['black'])],
 	"rare low": ["Rarity Rare",
