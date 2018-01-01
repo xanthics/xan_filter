@@ -6,12 +6,6 @@ desc = "General Rares"
 
 # Base type : settings pair
 items = {
-
-	"1 Gloves": {"other": ["ItemLevel >= 84"], "class": "Gloves", "type": "rare low"},
-	"1 Boots": {"other": ["ItemLevel >= 84"], "class": "Boots", "type": "rare low"},
-	"1 Body Armours": {"other": ["ItemLevel >= 84"], "class": "Body Armours", "type": "ignore"},
-	"1 Helmets": {"other": ["ItemLevel >= 84"], "class": "Helmets", "type": "rare low"},
-
 	# 'rare low' after this
 	"7 5": {"other": ["DropLevel <= 5", "ItemLevel >= 15", "Rarity Rare"], "type": "ignore"},
 	"7 10": {"other": ["DropLevel <= 10", "ItemLevel >= 20", "Rarity Rare"], "type": "ignore"},

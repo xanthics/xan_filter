@@ -12,7 +12,7 @@ items = {
 	"04 6S": {"other": ["Sockets 6", "PlayAlertSound 2 50"], "type": "show high"},
 	# High value atlas bases.  Show and make noise at any rarity
 	"04 Steel Ring": {"other": ["PlayAlertSound 2 50"], "base": "Steel Ring", "type": "show high"},
-	"04 Crystal Belt": {"other": ["PlayAlertSound 2 50"], "base": "Crystal Belt", "type": "show high"},
+	"04 Crystal Belt": {"other": ["PlayAlertSound 2 50"], "base": "Crystal Belt", "type": "ignore"},
 	#"04 Stygian Vise": {"other": ["PlayAlertSound 2 50"], "base": "Stygian Vise", "type": "show high"},
 	"04 Opal Ring": {"other": ["PlayAlertSound 2 50"], "base": "Opal Ring", "type": "show high"},
 	"10 Talisman": {"class": "Amulets", 'other': ["Rarity >= Rare", "ItemLevel >= 70"], "base": "Talisman", "type": "show high"},
