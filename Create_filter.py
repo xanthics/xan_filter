@@ -37,33 +37,12 @@ from item_config import general_levelling
 from item_config import hide
 from item_config import labyrinth
 from item_config import maps
-from item_config import nonrare_armor_dex
-from item_config import nonrare_armor_dex_int
-from item_config import nonrare_armor_int
-from item_config import nonrare_armor_str
-from item_config import nonrare_armor_str_dex
-from item_config import nonrare_armor_str_int
-from item_config import nonrare_bow
-from item_config import nonrare_claw
-from item_config import nonrare_dagger
-from item_config import nonrare_jewelry
-from item_config import nonrare_one_hand_axe
-from item_config import nonrare_one_hand_mace
-from item_config import nonrare_one_hand_sword
-from item_config import nonrare_sceptre
-from item_config import nonrare_staff
-from item_config import nonrare_thrusting_one_hand_sword
-from item_config import nonrare_two_hand_axe
-from item_config import nonrare_two_hand_mace
-from item_config import nonrare_two_hand_sword
-from item_config import nonrare_wand
-from item_config import rare_highlight
 from item_config import rares
 from item_config import recipe_item
 from item_config import show
 from item_config import t1_rares
 from item_config import warbands
-from item_config.rare_gen import genrareshighlight, genraresleveling
+from item_config.gen_item_lists import genrareshighlight, genraresleveling, gennonrareleveling
 
 from theme_config import formatting
 
@@ -207,31 +186,10 @@ def main():
 		# buffer += gen_list(crafting_bases.items, crafting_bases.desc)  # Crafting bases
 		# buffer += gen_list(animate_weapon.items, animate_weapon.desc)  # Animate Weapon bases
 
-		if False:  # leveling:
-			buf = {}
+		if leveling:
 			desc = 'item for leveling'
-			for nonrareitemleveling in [nonrare_armor_dex,
-			                            nonrare_armor_dex_int,
-			                            nonrare_armor_str_dex,
-			                            nonrare_armor_str,
-			                            nonrare_armor_int,
-			                            nonrare_armor_str_int,
-			                            nonrare_bow,
-			                            nonrare_claw,
-			                            nonrare_dagger,
-										nonrare_jewelry,
-										nonrare_one_hand_sword,
-										nonrare_one_hand_mace,
-										nonrare_one_hand_axe,
-										nonrare_sceptre,
-										nonrare_staff,
-										nonrare_thrusting_one_hand_sword,
-										nonrare_two_hand_sword,
-										nonrare_two_hand_mace,
-										nonrare_two_hand_axe,
-										nonrare_wand]:
-				buf.update(nonrareitemleveling.items)
-			buffer += gen_list(buf, desc)
+			flags = 'All'  # see item_config/rare_gen - genraresleveling for valid values
+			buffer += gen_list(gennonrareleveling(flags, overlevel=5, maxlevel=35), desc)
 
 		buffer += gen_list(warbands.items, warbands.desc)  # Warband base type highlighting
 

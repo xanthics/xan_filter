@@ -847,9 +847,6 @@ bases = {
 }
 
 
-
-
-
 # given a list of flags, generate a list of rares to highlight while leveling, will only highlight current best items
 # Will match all valid flags
 # Valid flags are:
@@ -885,6 +882,41 @@ def genraresleveling(flags='All', overlevel=3, maxlevel=67, alwayshighlight=('Ac
 	return ret
 
 
+# given a list of flags, generate a list of rares to highlight while leveling, will only highlight current best items
+# Will match all valid flags
+# Valid flags are:
+# Bow, Two, Ranged, Dex, Claw, One, Melee, Int, Dagger, Caster, One Hand Axe, Str, One Hand Mace,
+# One Hand Sword, Sceptre, Staff, Thrusting One Hand Sword, Two Hand Axe, Two Hand Mace, Two Hand Sword,
+# Wand, Body Armour, Armour, Boots, Gloves, Helmet, Shield, Amulet, Accessory, Belt, Ring, Weapon
+# All is a special flag that chooses all categories
+# overlevel is how many levels to show an item after a better base starts dropping
+# maxlevel is the maximum level to highlight levelling rares
+# alwayshighlight is a list of bases to always highlight while leveling regardless of drop level
+def gennonrareleveling(flags='All', overlevel=0, maxlevel=35, alwayshighlight=('',)):
+	ret = {}
+
+	for category in bases:
+		for vals in bases[category]:
+			f = vals.split('|')
+			l = len(bases[category][vals])
+			if 'Accessory' in f or set(f).intersection(set(alwayshighlight)):
+				for i in range(l):
+					cur = bases[category][vals][i]
+					if cur['drop'] <= maxlevel:
+						ret[bases[category][vals][i]['name']] = {"base": cur['name'], "class": cur['base'], "other": ["Rarity <= Magic", "ItemLevel <= {}".format(maxlevel)], "type": "leveling low"}
+			elif flags == 'All' or set(f).intersection(set(flags)) or set(f).intersection(set(alwayshighlight)):
+				for i in range(l-1):
+					cur = bases[category][vals][i]
+					if cur['drop'] <= maxlevel:
+						cap = bases[category][vals][i+1]['drop'] + overlevel
+						cap = cap if cap < maxlevel else maxlevel
+						ret[cur['name']] = {"base": cur['name'], "class": cur['base'], "other": ["Rarity <= Magic", "ItemLevel <= {}".format(cap)], "type": "leveling low"}
+				cur = bases[category][vals][l-1]
+				if cur['drop'] <= maxlevel:
+					ret[bases[category][vals][l-1]['name']] = {"base": cur['name'], "class": cur['base'], "other": ["Rarity <= Magic", "ItemLevel <= {}".format(maxlevel)], "type": "leveling low"}
+	return ret
+
+
 # generate a list of t1, highlighted, and "show anyways" rares
 # alwayshighlight highlights any items that match the flag at the ilvl specificed or higher
 # alwaysshow and alwayst1 are the same behaviour
@@ -892,8 +924,11 @@ def genraresleveling(flags='All', overlevel=3, maxlevel=67, alwayshighlight=('Ac
 #  value is the flag to match
 #  number is the min ilvl to start showing
 # These overrides take effect after any normal highlighting
-def genrareshighlight(alwaysshow=(('Helmet', 84), ('Gloves', 84), ('Boots', 84), ('Accessory', 68))):
+def genrareshighlight():
 	ret = {}
+	# Bases that are always shown when a certain ilvl threshold is reached
+	alwaysshow = {'Helmet': 84, 'Gloves': 84, 'Boots': 84, 'Accessory': 68}
+
 	#  Bases that are always highlighted, supercedes t1 and shown
 	highlighted = {'Two-Toned Boots',
 	               'Spiked Gloves', 'Gripped Gloves', 'Fingerless Silk Gloves',
@@ -933,14 +968,14 @@ def genrareshighlight(alwaysshow=(('Helmet', 84), ('Gloves', 84), ('Boots', 84),
 	         'Crusader Buckler', 'Harmonic Spirit Shield', 'Titanium Spirit Shield', 'Fossilised Spirit Shield', 'Angelic Kite Shield', 'Ceremonial Kite Shield', 'Ivory Spirit Shield', 'Bone Spirit Shield',
 	         }
 
-	askeys = [x[0] for x in alwaysshow]
+	askeys = alwaysshow.keys()
 	for category in bases:
 		for vals in bases[category]:
 			f = vals.split('|')
 			l = len(bases[category][vals])
 			s = set(f).intersection(set(askeys))
 			if s:
-				ilvl = min([alwaysshow[askeys.index(x)][1] for x in set(f).intersection(set(askeys))])
+				ilvl = min([alwaysshow[x] for x in set(f).intersection(set(askeys))])
 
 			for i in range(l):
 				cur = bases[category][vals][i]
