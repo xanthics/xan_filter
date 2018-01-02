@@ -41,7 +41,6 @@ def currencyclassify(cur, val, exa):
 	elif val >= 1 / 20:
 		tier = 'currency low'
 	elif val >= 1 / 200:
-		tier = 'hide'
 		tier = 'currency very low'
 	else:
 		tier = 'hide'
@@ -182,8 +181,11 @@ def gen_div(div_list):
 	badcards = ["The Carrion Crow",
 				"The King's Blade",
 				"The Inoculated",
-				"Turn the Other Cheek",
-	            "Struck by Lightning"]
+				"Struck by Lightning",
+	            'The Web',
+	            'The Sigil',
+	            'The Surgeon',
+	            'Prosperity']
 
 	# Cards that will never make a drop noise
 	lowcards = ["Thunderous Skies",
@@ -191,7 +193,10 @@ def gen_div(div_list):
 				"The Surgeon",
 				"The Twins",
 				"The Scholar",
-				"Destined to Crumble"]
+				"Destined to Crumble",
+	            'The Incantation',
+	            'Shard of Fate',
+	            'The Endurance']
 
 	predefinedcards = badcards + lowcards + substringcards + verygoodcards
 
@@ -228,11 +233,11 @@ def gen_div(div_list):
 				if ii in bcards:
 					lvl = 'hide'
 					bcards.remove(ii)
-				elif div_list[l][ii] > 20:
+				elif div_list[l][ii] > 15:
 					lvl = 'divination very high'
 				elif div_list[l][ii] > 2:
 					lvl = 'divination high'
-				elif div_list[l][ii] < 0.5:
+				elif div_list[l][ii] <= 1:
 					lvl = 'divination low'
 				else:
 					lvl = 'divination normal'
@@ -269,9 +274,9 @@ def gen_unique(unique_list):
 
 			if unique_list[l][u] >= 30:
 				items['very high'].append(u)
-			elif unique_list[l][u] >= 3:
+			elif unique_list[l][u] >= 3.5:
 				items['high'].append(u)
-			elif unique_list[l][u] < 0.5:
+			elif unique_list[l][u] < 0.75:
 				items['low'].append(u)
 
 		with open('auto_gen\\{}uniques.py'.format(name), 'w', encoding='utf-8') as f:
