@@ -84,7 +84,7 @@ def gen_list_compact(items, desc):
 		s = items[i]
 		if s['type'] != "ignore":
 			if not i.split()[0].isdigit():
-				v = '0'
+				v = '1'
 			else:
 				v = i.split()[0]
 			if v not in l:
