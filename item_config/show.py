@@ -25,6 +25,7 @@ items = {
 	"0 Quest": {"class": "Quest", "type": "quest"},
 	"0 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "show normal"},
 	"0 Jewel": {"class": "Jewel", "other": ["Rarity <= Magic"], "type": "ignore"},
+	"0 Net": {"base": "Net", "class": "Currency", "type": "show normal"},
 
 	"9 Starter weapon": {"other": ["Class Dagger Wand \"One Hand\" Bow Stave \"Two Hand\" Sceptre Claws", "ItemLevel < 2"], "type": "show normal"},
 

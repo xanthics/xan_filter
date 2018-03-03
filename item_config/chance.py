@@ -16,7 +16,7 @@ items = {
 	"0 The Baron": {"base": "Close Helmet", "type": "ignore"},
 
 	"0 Lycosidae": {"base": "Rawhide Tower Shield", "type": "ignore"},
-	"0 Bisco's Collar": {"base": "Gold Amulet", "type": "chance"},
+	"0 Bisco's Collar": {"base": "Gold Amulet", "type": "ignore"},
 	"0 Shavronne's Wrappings": {"base": "Occultist's Vestment", "type": "ignore"},
 	"0 Kaom's Heart": {"base": "Glorious Plate", "type": "ignore"},
 	"0 Void Battery": {"base": "Prophecy Wand", "type": "ignore"},
