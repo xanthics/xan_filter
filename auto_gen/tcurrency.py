@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/05/2018(m/d/y) 06:15:12 UTC from "tmpstandard" data
+# Created: 03/05/2018(m/d/y) 06:31:15 UTC from "tmpstandard" data
 
 desc = "Currency Autogen"
 
@@ -27,7 +27,7 @@ items = {
 	"0 Chromatic Orb": {"base": "Chromatic Orb", "class": "Currency", "type": "currency low"},
 	"0 Divine Orb": {"base": "Divine Orb", "class": "Currency", "type": "currency very high"},
 	"0 Engineer's Orb": {"base": "Engineer's Orb", "class": "Currency", "type": "currency very high"},
-	"0 Engineer's Shard": {"base": "Engineer's Shard", "class": "Currency", "type": "currency normal"},
+	"0 Engineer's Shard": {"base": "Engineer's Shard", "class": "Currency", "type": "currency high"},
 	"0 Eternal Orb": {"base": "Eternal Orb", "class": "Currency", "type": "currency extremely high"},
 	"0 Exalted Orb": {"base": "Exalted Orb", "class": "Currency", "type": "currency extremely high"},
 	"0 Exalted Shard": {"base": "Exalted Shard", "class": "Currency", "type": "currency high"},

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/05/2018(m/d/y) 06:15:12 UTC from "Standard" data
+# Created: 03/05/2018(m/d/y) 06:31:15 UTC from "Standard" data
 
 desc = "Unique"
 
@@ -94,11 +94,13 @@ items = {
 	"1 Vaal Pyramid Map": {"base": "Vaal Pyramid Map", "type": "unique high"},
 	"1 Vaal Sceptre": {"base": "Vaal Sceptre", "type": "unique high"},
 	"1 Vaal Spirit Shield": {"base": "Vaal Spirit Shield", "type": "unique high"},
+	"1 Vanguard Belt": {"base": "Vanguard Belt", "type": "unique high"},
 	"1 Wereclaw Talisman": {"base": "Wereclaw Talisman", "type": "unique high"},
 	"1 Zealot Gloves": {"base": "Zealot Gloves", "type": "unique high"},
 	"6 Agate Amulet": {"base": "Agate Amulet", "type": "unique special"},
 	"6 Amber Amulet": {"base": "Amber Amulet", "type": "unique special"},
 	"6 Amethyst Ring": {"base": "Amethyst Ring", "type": "unique special"},
+	"6 Archon Kite Shield": {"base": "Archon Kite Shield", "type": "unique special"},
 	"6 Assassin Bow": {"base": "Assassin Bow", "type": "unique special"},
 	"6 Blunt Arrow Quiver": {"base": "Blunt Arrow Quiver", "type": "unique special"},
 	"6 Branded Kite Shield": {"base": "Branded Kite Shield", "type": "unique special"},
@@ -235,6 +237,7 @@ items = {
 	"7 Bone Circlet": {"base": "Bone Circlet", "type": "unique low"},
 	"7 Boot Blade": {"base": "Boot Blade", "type": "unique low"},
 	"7 Boot Knife": {"base": "Boot Knife", "type": "unique low"},
+	"7 Brass Spirit Shield": {"base": "Brass Spirit Shield", "type": "unique low"},
 	"7 Bronze Gauntlets": {"base": "Bronze Gauntlets", "type": "unique low"},
 	"7 Bronze Sceptre": {"base": "Bronze Sceptre", "type": "unique low"},
 	"7 Bronzescale Boots": {"base": "Bronzescale Boots", "type": "unique low"},
@@ -341,6 +344,7 @@ items = {
 	"7 Sulphur Flask": {"base": "Sulphur Flask", "type": "unique low"},
 	"7 Supreme Spiked Shield": {"base": "Supreme Spiked Shield", "type": "unique low"},
 	"7 Tarnished Spirit Shield": {"base": "Tarnished Spirit Shield", "type": "unique low"},
+	"7 Tiger Sword": {"base": "Tiger Sword", "type": "unique low"},
 	"7 Timeworn Claw": {"base": "Timeworn Claw", "type": "unique low"},
 	"7 Tomahawk": {"base": "Tomahawk", "type": "unique low"},
 	"7 Tricorne": {"base": "Tricorne", "type": "unique low"},
