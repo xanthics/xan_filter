@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/05/2018(m/d/y) 06:31:15 UTC from "Hardcore" data
+# Created: 03/05/2018(m/d/y) 16:57:58 UTC from "Hardcore" data
 
 desc = "Divination Card"
 
@@ -23,7 +23,6 @@ items = {
 	"1 The Dreamer": {"base": "The Dreamer", "class": "Divination Card", "type": "divination very high"},
 	"1 The Enlightened": {"base": "The Enlightened", "class": "Divination Card", "type": "divination very high"},
 	"1 The Fiend": {"base": "The Fiend", "class": "Divination Card", "type": "divination very high"},
-	"1 The Formless Sea": {"base": "The Formless Sea", "class": "Divination Card", "type": "divination very high"},
 	"1 The Immortal": {"base": "The Immortal", "class": "Divination Card", "type": "divination very high"},
 	"1 The Iron Bard": {"base": "The Iron Bard", "class": "Divination Card", "type": "divination very high"},
 	"1 The King's Heart": {"base": "The King's Heart", "class": "Divination Card", "type": "divination very high"},
@@ -50,7 +49,6 @@ items = {
 	"2 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination high"},
 	"2 Merciless Armament": {"base": "Merciless Armament", "class": "Divination Card", "type": "divination high"},
 	"2 The Artist": {"base": "The Artist", "class": "Divination Card", "type": "divination high"},
-	"2 The Avenger": {"base": "The Avenger", "class": "Divination Card", "type": "divination high"},
 	"2 The Body": {"base": "The Body", "class": "Divination Card", "type": "divination high"},
 	"2 The Breach": {"base": "The Breach", "class": "Divination Card", "type": "divination high"},
 	"2 The Cartographer": {"base": "The Cartographer", "class": "Divination Card", "type": "divination high"},
@@ -59,7 +57,7 @@ items = {
 	"2 The Dark Mage": {"base": "The Dark Mage", "class": "Divination Card", "type": "divination high"},
 	"2 The Dragon": {"base": "The Dragon", "class": "Divination Card", "type": "divination high"},
 	"2 The Ethereal": {"base": "The Ethereal", "class": "Divination Card", "type": "divination high"},
-	"2 The Forsaken": {"base": "The Forsaken", "class": "Divination Card", "type": "divination high"},
+	"2 The Formless Sea": {"base": "The Formless Sea", "class": "Divination Card", "type": "divination high"},
 	"2 The Gladiator": {"base": "The Gladiator", "class": "Divination Card", "type": "divination high"},
 	"2 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination high"},
 	"2 The Hunger": {"base": "The Hunger", "class": "Divination Card", "type": "divination high"},
@@ -79,7 +77,6 @@ items = {
 	"2 The Surveyor": {"base": "The Surveyor", "class": "Divination Card", "type": "divination high"},
 	"2 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination high"},
 	"2 The Throne": {"base": "The Throne", "class": "Divination Card", "type": "divination high"},
-	"2 The Tyrant": {"base": "The Tyrant", "class": "Divination Card", "type": "divination high"},
 	"2 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination high"},
 	"2 The Valley of Steel Boxes": {"base": "The Valley of Steel Boxes", "class": "Divination Card", "type": "divination high"},
 	"2 The Void": {"base": "The Void", "class": "Divination Card", "type": "divination high"},
