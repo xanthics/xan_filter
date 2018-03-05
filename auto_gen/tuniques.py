@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/05/2018(m/d/y) 06:15:12 UTC from "tmpstandard" data
+# Created: 03/05/2018(m/d/y) 06:31:15 UTC from "tmpstandard" data
 
 desc = "Unique"
 
@@ -48,6 +48,7 @@ items = {
 	"1 Ezomyte Burgonet": {"base": "Ezomyte Burgonet", "type": "unique high"},
 	"1 Gladius": {"base": "Gladius", "type": "unique high"},
 	"1 Grand Mana Flask": {"base": "Grand Mana Flask", "type": "unique high"},
+	"1 Granite Flask": {"base": "Granite Flask", "type": "unique high"},
 	"1 Harlequin Mask": {"base": "Harlequin Mask", "type": "unique high"},
 	"1 Hellion's Paw": {"base": "Hellion's Paw", "type": "unique high"},
 	"1 Highborn Staff": {"base": "Highborn Staff", "type": "unique high"},
@@ -78,6 +79,7 @@ items = {
 	"1 Titan Greaves": {"base": "Titan Greaves", "type": "unique high"},
 	"1 Titanium Spirit Shield": {"base": "Titanium Spirit Shield", "type": "unique high"},
 	"1 Topaz Flask": {"base": "Topaz Flask", "type": "unique high"},
+	"1 Tornado Wand": {"base": "Tornado Wand", "type": "unique high"},
 	"1 Torture Chamber Map": {"base": "Torture Chamber Map", "type": "unique high"},
 	"1 Underground River Map": {"base": "Underground River Map", "type": "unique high"},
 	"1 Ursine Pelt": {"base": "Ursine Pelt", "type": "unique high"},
@@ -194,6 +196,7 @@ items = {
 	"7 Bronzescale Gauntlets": {"base": "Bronzescale Gauntlets", "type": "unique low"},
 	"7 Buckskin Tunic": {"base": "Buckskin Tunic", "type": "unique low"},
 	"7 Burnished Spiked Shield": {"base": "Burnished Spiked Shield", "type": "unique low"},
+	"7 Cedar Tower Shield": {"base": "Cedar Tower Shield", "type": "unique low"},
 	"7 Chain Gloves": {"base": "Chain Gloves", "type": "unique low"},
 	"7 Clasped Boots": {"base": "Clasped Boots", "type": "unique low"},
 	"7 Cloth Belt": {"base": "Cloth Belt", "type": "unique low"},
@@ -219,10 +222,10 @@ items = {
 	"7 Dragonscale Gauntlets": {"base": "Dragonscale Gauntlets", "type": "unique low"},
 	"7 Dread Maul": {"base": "Dread Maul", "type": "unique low"},
 	"7 Dream Mace": {"base": "Dream Mace", "type": "unique low"},
+	"7 Driftwood Wand": {"base": "Driftwood Wand", "type": "unique low"},
 	"7 Dusk Blade": {"base": "Dusk Blade", "type": "unique low"},
 	"7 Elegant Ringmail": {"base": "Elegant Ringmail", "type": "unique low"},
 	"7 Enameled Buckler": {"base": "Enameled Buckler", "type": "unique low"},
-	"7 Engraved Wand": {"base": "Engraved Wand", "type": "unique low"},
 	"7 Estoc": {"base": "Estoc", "type": "unique low"},
 	"7 Etched Greatsword": {"base": "Etched Greatsword", "type": "unique low"},
 	"7 Ezomyte Staff": {"base": "Ezomyte Staff", "type": "unique low"},
@@ -242,6 +245,7 @@ items = {
 	"7 Gut Ripper": {"base": "Gut Ripper", "type": "unique low"},
 	"7 Harmonic Spirit Shield": {"base": "Harmonic Spirit Shield", "type": "unique low"},
 	"7 Headsman Axe": {"base": "Headsman Axe", "type": "unique low"},
+	"7 Heavy Belt": {"base": "Heavy Belt", "type": "unique low"},
 	"7 Highland Blade": {"base": "Highland Blade", "type": "unique low"},
 	"7 Holy Chainmail": {"base": "Holy Chainmail", "type": "unique low"},
 	"7 Imbued Wand": {"base": "Imbued Wand", "type": "unique low"},

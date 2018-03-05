@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/05/2018(m/d/y) 06:15:12 UTC from "Hardcore" data
+# Created: 03/05/2018(m/d/y) 06:31:15 UTC from "Hardcore" data
 
 desc = "Essence Autogen"
 

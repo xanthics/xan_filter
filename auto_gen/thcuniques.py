@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/05/2018(m/d/y) 06:15:12 UTC from "tmphardcore" data
+# Created: 03/05/2018(m/d/y) 06:31:15 UTC from "tmphardcore" data
 
 desc = "Unique"
 
@@ -33,6 +33,7 @@ items = {
 	"1 Abyssal Axe": {"base": "Abyssal Axe", "type": "unique high"},
 	"1 Amethyst Flask": {"base": "Amethyst Flask", "type": "unique high"},
 	"1 Ancient Gauntlets": {"base": "Ancient Gauntlets", "type": "unique high"},
+	"1 Astral Plate": {"base": "Astral Plate", "type": "unique high"},
 	"1 Auric Mace": {"base": "Auric Mace", "type": "unique high"},
 	"1 Blinder": {"base": "Blinder", "type": "unique high"},
 	"1 Close Helmet": {"base": "Close Helmet", "type": "unique high"},
@@ -162,6 +163,7 @@ items = {
 	"6 Widowsilk Robe": {"base": "Widowsilk Robe", "type": "unique special"},
 	"6 Woodsplitter": {"base": "Woodsplitter", "type": "unique special"},
 	"7 Ambusher": {"base": "Ambusher", "type": "unique low"},
+	"7 Antique Rapier": {"base": "Antique Rapier", "type": "unique low"},
 	"7 Assassin Bow": {"base": "Assassin Bow", "type": "unique low"},
 	"7 Awl": {"base": "Awl", "type": "unique low"},
 	"7 Baroque Round Shield": {"base": "Baroque Round Shield", "type": "unique low"},
@@ -199,6 +201,7 @@ items = {
 	"7 Great Helmet": {"base": "Great Helmet", "type": "unique low"},
 	"7 Greater Mana Flask": {"base": "Greater Mana Flask", "type": "unique low"},
 	"7 Harbinger Bow": {"base": "Harbinger Bow", "type": "unique low"},
+	"7 Highland Blade": {"base": "Highland Blade", "type": "unique low"},
 	"7 Holy Chainmail": {"base": "Holy Chainmail", "type": "unique low"},
 	"7 Imbued Wand": {"base": "Imbued Wand", "type": "unique low"},
 	"7 Infernal Sword": {"base": "Infernal Sword", "type": "unique low"},
@@ -216,6 +219,7 @@ items = {
 	"7 Military Staff": {"base": "Military Staff", "type": "unique low"},
 	"7 Nailed Fist": {"base": "Nailed Fist", "type": "unique low"},
 	"7 Necromancer Circlet": {"base": "Necromancer Circlet", "type": "unique low"},
+	"7 Ornate Mace": {"base": "Ornate Mace", "type": "unique low"},
 	"7 Ornate Ringmail": {"base": "Ornate Ringmail", "type": "unique low"},
 	"7 Painted Buckler": {"base": "Painted Buckler", "type": "unique low"},
 	"7 Paua Amulet": {"base": "Paua Amulet", "type": "unique low"},
