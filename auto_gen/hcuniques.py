@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/05/2018(m/d/y) 06:31:15 UTC from "Hardcore" data
+# Created: 03/05/2018(m/d/y) 16:57:58 UTC from "Hardcore" data
 
 desc = "Unique"
 
@@ -21,6 +21,7 @@ items = {
 	"0 Champion Kite Shield": {"base": "Champion Kite Shield", "type": "unique very high"},
 	"0 Citadel Bow": {"base": "Citadel Bow", "type": "unique very high"},
 	"0 Citrine Amulet": {"base": "Citrine Amulet", "type": "unique very high"},
+	"0 Clasped Mitts": {"base": "Clasped Mitts", "type": "unique very high"},
 	"0 Cloth Belt Piece": {"base": "Cloth Belt Piece", "type": "unique very high"},
 	"0 Clutching Talisman": {"base": "Clutching Talisman", "type": "unique very high"},
 	"0 Coronal Leather": {"base": "Coronal Leather", "type": "unique very high"},
@@ -29,6 +30,7 @@ items = {
 	"0 Crystal Belt": {"base": "Crystal Belt", "type": "unique very high"},
 	"0 Cutlass": {"base": "Cutlass", "type": "unique very high"},
 	"0 Enameled Buckler": {"base": "Enameled Buckler", "type": "unique very high"},
+	"0 Eternal Sword": {"base": "Eternal Sword", "type": "unique very high"},
 	"0 Exquisite Leather": {"base": "Exquisite Leather", "type": "unique very high"},
 	"0 Ezomyte Tower Shield": {"base": "Ezomyte Tower Shield", "type": "unique very high"},
 	"0 Full Wyrmscale": {"base": "Full Wyrmscale", "type": "unique very high"},
@@ -73,7 +75,6 @@ items = {
 	"1 Bismuth Flask": {"base": "Bismuth Flask", "type": "unique high"},
 	"1 Blinder": {"base": "Blinder", "type": "unique high"},
 	"1 Broadhead Arrow Quiver": {"base": "Broadhead Arrow Quiver", "type": "unique high"},
-	"1 Clasped Mitts": {"base": "Clasped Mitts", "type": "unique high"},
 	"1 Close Helmet": {"base": "Close Helmet", "type": "unique high"},
 	"1 Conjurer Boots": {"base": "Conjurer Boots", "type": "unique high"},
 	"1 Conjurer Gloves": {"base": "Conjurer Gloves", "type": "unique high"},
@@ -81,11 +82,11 @@ items = {
 	"1 Corsair Sword": {"base": "Corsair Sword", "type": "unique high"},
 	"1 Deicide Mask": {"base": "Deicide Mask", "type": "unique high"},
 	"1 Desert Brigandine": {"base": "Desert Brigandine", "type": "unique high"},
+	"1 Diamond Flask": {"base": "Diamond Flask", "type": "unique high"},
 	"1 Diamond Ring": {"base": "Diamond Ring", "type": "unique high"},
 	"1 Elegant Ringmail": {"base": "Elegant Ringmail", "type": "unique high"},
 	"1 Engraved Wand": {"base": "Engraved Wand", "type": "unique high"},
 	"1 Etched Greatsword": {"base": "Etched Greatsword", "type": "unique high"},
-	"1 Eternal Sword": {"base": "Eternal Sword", "type": "unique high"},
 	"1 Eye Gouger": {"base": "Eye Gouger", "type": "unique high"},
 	"1 Ezomyte Blade": {"base": "Ezomyte Blade", "type": "unique high"},
 	"1 Ezomyte Burgonet": {"base": "Ezomyte Burgonet", "type": "unique high"},
@@ -241,6 +242,7 @@ items = {
 	"7 Golden Buckler": {"base": "Golden Buckler", "type": "unique low"},
 	"7 Great Helmet": {"base": "Great Helmet", "type": "unique low"},
 	"7 Holy Chainmail": {"base": "Holy Chainmail", "type": "unique low"},
+	"7 Iron Mask": {"base": "Iron Mask", "type": "unique low"},
 	"7 Ironscale Boots": {"base": "Ironscale Boots", "type": "unique low"},
 	"7 Leather Hood": {"base": "Leather Hood", "type": "unique low"},
 	"7 Long Bow": {"base": "Long Bow", "type": "unique low"},
@@ -276,6 +278,7 @@ items = {
 	"7 Visored Sallet": {"base": "Visored Sallet", "type": "unique low"},
 	"7 War Hammer": {"base": "War Hammer", "type": "unique low"},
 	"7 Wild Leather": {"base": "Wild Leather", "type": "unique low"},
+	"7 Wool Shoes": {"base": "Wool Shoes", "type": "unique low"},
 	"7 Wrapped Mitts": {"base": "Wrapped Mitts", "type": "unique low"},
 	"9 Other uniques": {"type": "unique normal"}
 }

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/05/2018(m/d/y) 06:31:15 UTC from "tmpstandard" data
+# Created: 03/05/2018(m/d/y) 16:57:58 UTC from "tmpstandard" data
 
 desc = "Currency Autogen"
 
@@ -17,9 +17,9 @@ items = {
 	"0 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", "class": "Currency", "type": "currency very low"},
 	"0 Blessed Orb": {"base": "Blessed Orb", "class": "Currency", "type": "currency normal"},
 	"0 Blessing of Chayula": {"base": "Blessing of Chayula", "class": "Currency", "type": "currency extremely high"},
-	"0 Blessing of Esh": {"base": "Blessing of Esh", "class": "Currency", "type": "currency very high"},
+	"0 Blessing of Esh": {"base": "Blessing of Esh", "class": "Currency", "type": "currency extremely high"},
 	"0 Blessing of Tul": {"base": "Blessing of Tul", "class": "Currency", "type": "currency extremely high"},
-	"0 Blessing of Uul-Netol": {"base": "Blessing of Uul-Netol", "class": "Currency", "type": "currency very high"},
+	"0 Blessing of Uul-Netol": {"base": "Blessing of Uul-Netol", "class": "Currency", "type": "currency extremely high"},
 	"0 Blessing of Xoph": {"base": "Blessing of Xoph", "class": "Currency", "type": "currency very high"},
 	"0 Cartographer's Chisel": {"base": "Cartographer's Chisel", "class": "Currency", "type": "currency normal"},
 	"0 Chaos Orb": {"base": "Chaos Orb", "class": "Currency", "type": "currency high"},
@@ -30,11 +30,11 @@ items = {
 	"0 Engineer's Shard": {"base": "Engineer's Shard", "class": "Currency", "type": "currency high"},
 	"0 Eternal Orb": {"base": "Eternal Orb", "class": "Currency", "type": "currency extremely high"},
 	"0 Exalted Orb": {"base": "Exalted Orb", "class": "Currency", "type": "currency extremely high"},
-	"0 Exalted Shard": {"base": "Exalted Shard", "class": "Currency", "type": "currency high"},
+	"0 Exalted Shard": {"base": "Exalted Shard", "class": "Currency", "type": "currency very high"},
 	"0 Gemcutter's Prism": {"base": "Gemcutter's Prism", "class": "Currency", "type": "currency normal"},
 	"0 Glassblower's Bauble": {"base": "Glassblower's Bauble", "class": "Currency", "type": "currency normal"},
-	"0 Harbinger's Orb": {"base": "Harbinger's Orb", "class": "Currency", "type": "currency very high"},
-	"0 Harbinger's Shard": {"base": "Harbinger's Shard", "class": "Currency", "type": "currency normal"},
+	"0 Harbinger's Orb": {"base": "Harbinger's Orb", "class": "Currency", "type": "currency normal"},
+	"0 Harbinger's Shard": {"base": "Harbinger's Shard", "class": "Currency", "type": "currency very low"},
 	"0 Horizon Shard": {"base": "Horizon Shard", "class": "Currency", "type": "currency high"},
 	"0 Jeweller's Orb": {"base": "Jeweller's Orb", "class": "Currency", "type": "currency low"},
 	"0 Journeyman Cartographer's Sextant": {"base": "Journeyman Cartographer's Sextant", "class": "Currency", "type": "currency high"},
@@ -64,9 +64,9 @@ items = {
 	"0 Simple Iron Net": {"base": "Simple Iron Net", "class": "Currency", "type": "currency very low"},
 	"0 Simple Rope Net": {"base": "Simple Rope Net", "class": "Currency", "type": "currency very low"},
 	"0 Simple Steel Net": {"base": "Simple Steel Net", "class": "Currency", "type": "currency very low"},
-	"0 Splinter of Chayula": {"base": "Splinter of Chayula", "class": "Currency", "type": "currency normal"},
-	"0 Splinter of Esh": {"base": "Splinter of Esh", "class": "Currency", "type": "show normal"},
-	"0 Splinter of Tul": {"base": "Splinter of Tul", "class": "Currency", "type": "show normal"},
+	"0 Splinter of Chayula": {"base": "Splinter of Chayula", "class": "Currency", "type": "currency high"},
+	"0 Splinter of Esh": {"base": "Splinter of Esh", "class": "Currency", "type": "currency normal"},
+	"0 Splinter of Tul": {"base": "Splinter of Tul", "class": "Currency", "type": "currency normal"},
 	"0 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", "class": "Currency", "type": "currency normal"},
 	"0 Splinter of Xoph": {"base": "Splinter of Xoph", "class": "Currency", "type": "currency normal"},
 	"0 Strong Iron Net": {"base": "Strong Iron Net", "class": "Currency", "type": "currency very low"},
