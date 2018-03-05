@@ -15,7 +15,7 @@ items = {
 	"04 Crystal Belt": {"other": ["PlayAlertSound 2 50"], "base": "Crystal Belt", "type": "ignore"},
 	"04 Stygian Vise": {"other": ["PlayAlertSound 2 50"], "base": "Stygian Vise", "type": "show high"},
 	"04 Opal Ring": {"other": ["PlayAlertSound 2 50"], "base": "Opal Ring", "type": "show high"},
-	"04 Abyss Jewel": {"class": "Abyss Jewel", "other": ["PlayAlertSound 2 50"], "type": "show high"},
+	"04 Abyss Jewel": {"class": "Abyss Jewel", "type": "show high"},
 	"10 Talisman": {"class": "Amulets", 'other': ["Rarity >= Rare", "ItemLevel >= 70"], "base": "Talisman", "type": "show high"},
 	"11 Talisman": {"class": "Amulets", 'other': ["ItemLevel >= 70"], "base": "Talisman", "type": "show high"},
 	"12 Talisman": {"class": "Amulets", "base": "Talisman", "type": "show low"},
@@ -25,9 +25,9 @@ items = {
 	"0 Quest": {"class": "Quest", "type": "quest"},
 	"0 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "show normal"},
 	"0 Jewel": {"class": "Jewel", "other": ["Rarity <= Magic"], "type": "ignore"},
-	"0 Strong Steel Net": {"base": "Strong Steel Net", "class": "Currency", "type": "show normal"},
-	"0 Thaumaturgical Net": {"base": "Thaumaturgical Net", "class": "Currency", "type": "show high"},
-	"1 Net": {"base": "Net", "class": "Currency", "type": "currency very low"},
+#	"0 Strong Steel Net": {"base": "Strong Steel Net", "class": "Currency", "type": "show normal"},
+#	"0 Thaumaturgical Net": {"base": "Thaumaturgical Net", "class": "Currency", "type": "show high"},
+#	"1 Net": {"base": "Net", "class": "Currency", "type": "currency very low"},
 
 	"9 Starter weapon": {"other": ["Class Dagger Wand \"One Hand\" Bow Stave \"Two Hand\" Sceptre Claws", "ItemLevel < 2"], "type": "show normal"},
 
