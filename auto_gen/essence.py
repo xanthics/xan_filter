@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/05/2018(m/d/y) 16:57:58 UTC from "Standard" data
+# Created: 03/06/2018(m/d/y) 04:20:54 UTC from "Standard" data
 
 desc = "Essence Autogen"
 
@@ -15,7 +15,7 @@ items = {
 	"0 Deafening Essence of Fear": {"base": "Deafening Essence of Fear", "class": "Currency", "type": "currency normal"},
 	"0 Deafening Essence of Greed": {"base": "Deafening Essence of Greed", "class": "Currency", "type": "currency high"},
 	"0 Deafening Essence of Hatred": {"base": "Deafening Essence of Hatred", "class": "Currency", "type": "currency normal"},
-	"0 Deafening Essence of Loathing": {"base": "Deafening Essence of Loathing", "class": "Currency", "type": "currency normal"},
+	"0 Deafening Essence of Loathing": {"base": "Deafening Essence of Loathing", "class": "Currency", "type": "currency high"},
 	"0 Deafening Essence of Misery": {"base": "Deafening Essence of Misery", "class": "Currency", "type": "currency normal"},
 	"0 Deafening Essence of Rage": {"base": "Deafening Essence of Rage", "class": "Currency", "type": "currency normal"},
 	"0 Deafening Essence of Scorn": {"base": "Deafening Essence of Scorn", "class": "Currency", "type": "currency high"},
@@ -39,6 +39,7 @@ items = {
 	"0 Shrieking Essence of Loathing": {"base": "Shrieking Essence of Loathing", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Rage": {"base": "Shrieking Essence of Rage", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Scorn": {"base": "Shrieking Essence of Scorn", "class": "Currency", "type": "currency normal"},
+	"0 Shrieking Essence of Spite": {"base": "Shrieking Essence of Spite", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Woe": {"base": "Shrieking Essence of Woe", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Wrath": {"base": "Shrieking Essence of Wrath", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Zeal": {"base": "Shrieking Essence of Zeal", "class": "Currency", "type": "currency normal"},
