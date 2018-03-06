@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/05/2018(m/d/y) 16:57:58 UTC from "Hardcore" data
+# Created: 03/06/2018(m/d/y) 04:20:54 UTC from "Hardcore" data
 
 desc = "Currency Autogen"
 
 # Base type : settings pair
 items = {
 	"0 Alchemy Shard": {"base": "Alchemy Shard", "class": "Currency", "type": "currency very low"},
-	"0 Alteration Shard": {"base": "Alteration Shard", "class": "Currency", "type": "currency very low"},
+	"0 Alteration Shard": {"base": "Alteration Shard", "class": "Currency", "type": "currency low"},
 	"0 Ancient Orb": {"base": "Ancient Orb", "class": "Currency", "type": "currency very high"},
 	"0 Ancient Shard": {"base": "Ancient Shard", "class": "Currency", "type": "currency high"},
 	"0 Annulment Shard": {"base": "Annulment Shard", "class": "Currency", "type": "currency normal"},
@@ -20,11 +20,11 @@ items = {
 	"0 Blessing of Esh": {"base": "Blessing of Esh", "class": "Currency", "type": "currency very high"},
 	"0 Blessing of Tul": {"base": "Blessing of Tul", "class": "Currency", "type": "currency extremely high"},
 	"0 Blessing of Uul-Netol": {"base": "Blessing of Uul-Netol", "class": "Currency", "type": "currency extremely high"},
-	"0 Blessing of Xoph": {"base": "Blessing of Xoph", "class": "Currency", "type": "currency very high"},
+	"0 Blessing of Xoph": {"base": "Blessing of Xoph", "class": "Currency", "type": "currency extremely high"},
 	"0 Cartographer's Chisel": {"base": "Cartographer's Chisel", "class": "Currency", "type": "currency normal"},
 	"0 Chaos Orb": {"base": "Chaos Orb", "class": "Currency", "type": "currency high"},
 	"0 Chaos Shard": {"base": "Chaos Shard", "class": "Currency", "type": "currency low"},
-	"0 Chromatic Orb": {"base": "Chromatic Orb", "class": "Currency", "type": "currency very low"},
+	"0 Chromatic Orb": {"base": "Chromatic Orb", "class": "Currency", "type": "currency low"},
 	"0 Divine Orb": {"base": "Divine Orb", "class": "Currency", "type": "currency very high"},
 	"0 Engineer's Orb": {"base": "Engineer's Orb", "class": "Currency", "type": "currency normal"},
 	"0 Engineer's Shard": {"base": "Engineer's Shard", "class": "Currency", "type": "currency low"},
@@ -45,13 +45,13 @@ items = {
 	"0 Orb of Annulment": {"base": "Orb of Annulment", "class": "Currency", "type": "currency very high"},
 	"0 Orb of Augmentation": {"base": "Orb of Augmentation", "class": "Currency", "type": "currency very low"},
 	"0 Orb of Binding": {"base": "Orb of Binding", "class": "Currency", "type": "currency normal"},
-	"0 Orb of Chance": {"base": "Orb of Chance", "class": "Currency", "type": "currency low"},
+	"0 Orb of Chance": {"base": "Orb of Chance", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Fusing": {"base": "Orb of Fusing", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Horizons": {"base": "Orb of Horizons", "class": "Currency", "type": "currency very high"},
 	"0 Orb of Regret": {"base": "Orb of Regret", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Scouring": {"base": "Orb of Scouring", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Transmutation": {"base": "Orb of Transmutation", "class": "Currency", "type": "currency very low"},
-	"0 Perandus Coin": {"base": "Perandus Coin", "class": "Currency", "type": "currency low"},
+	"0 Perandus Coin": {"base": "Perandus Coin", "class": "Currency", "type": "currency very low"},
 	"0 Portal Scroll": {"base": "Portal Scroll", "class": "Currency", "type": "currency very low"},
 	"0 Regal Orb": {"base": "Regal Orb", "class": "Currency", "type": "currency high"},
 	"0 Regal Shard": {"base": "Regal Shard", "class": "Currency", "type": "currency normal"},

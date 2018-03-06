@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/05/2018(m/d/y) 16:57:58 UTC from "tmpstandard" data
+# Created: 03/06/2018(m/d/y) 04:20:54 UTC from "tmpstandard" data
 
 desc = "Essence Autogen"
 
 # Base type : settings pair
 items = {
 	"0 Essence of Delirium": {"base": "Essence of Delirium", "class": "Currency", "type": "currency high"},
-	"0 Essence of Horror": {"base": "Essence of Horror", "class": "Currency", "type": "currency high"},
+	"0 Essence of Horror": {"base": "Essence of Horror", "class": "Currency", "type": "currency very high"},
 	"0 Essence of Hysteria": {"base": "Essence of Hysteria", "class": "Currency", "type": "currency normal"},
 	"0 Essence of Insanity": {"base": "Essence of Insanity", "class": "Currency", "type": "currency high"},
 	"0 Remnant of Corruption": {"base": "Remnant of Corruption", "class": "Currency", "type": "currency normal"},
@@ -19,7 +19,7 @@ items = {
 	"0 Shrieking Essence of Dread": {"base": "Shrieking Essence of Dread", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Envy": {"base": "Shrieking Essence of Envy", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Fear": {"base": "Shrieking Essence of Fear", "class": "Currency", "type": "currency normal"},
-	"0 Shrieking Essence of Greed": {"base": "Shrieking Essence of Greed", "class": "Currency", "type": "currency normal"},
+	"0 Shrieking Essence of Greed": {"base": "Shrieking Essence of Greed", "class": "Currency", "type": "currency high"},
 	"0 Shrieking Essence of Hatred": {"base": "Shrieking Essence of Hatred", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Loathing": {"base": "Shrieking Essence of Loathing", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Misery": {"base": "Shrieking Essence of Misery", "class": "Currency", "type": "currency normal"},
