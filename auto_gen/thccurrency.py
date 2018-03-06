@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/06/2018(m/d/y) 04:20:54 UTC from "tmphardcore" data
+# Created: 03/06/2018(m/d/y) 07:42:55 UTC from "tmphardcore" data
 
 desc = "Currency Autogen"
 
@@ -35,10 +35,10 @@ items = {
 	"0 Glassblower's Bauble": {"base": "Glassblower's Bauble", "class": "Currency", "type": "currency normal"},
 	"0 Harbinger's Orb": {"base": "Harbinger's Orb", "class": "Currency", "type": "currency very high"},
 	"0 Harbinger's Shard": {"base": "Harbinger's Shard", "class": "Currency", "type": "currency normal"},
-	"0 Horizon Shard": {"base": "Horizon Shard", "class": "Currency", "type": "currency low"},
+	"0 Horizon Shard": {"base": "Horizon Shard", "class": "Currency", "type": "currency very high"},
 	"0 Jeweller's Orb": {"base": "Jeweller's Orb", "class": "Currency", "type": "currency low"},
 	"0 Journeyman Cartographer's Sextant": {"base": "Journeyman Cartographer's Sextant", "class": "Currency", "type": "currency high"},
-	"0 Master Cartographer's Sextant": {"base": "Master Cartographer's Sextant", "class": "Currency", "type": "currency very high"},
+	"0 Master Cartographer's Sextant": {"base": "Master Cartographer's Sextant", "class": "Currency", "type": "currency high"},
 	"0 Mirror Shard": {"base": "Mirror Shard", "class": "Currency", "type": "currency extremely high"},
 	"0 Orb of Alchemy": {"base": "Orb of Alchemy", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Alteration": {"base": "Orb of Alteration", "class": "Currency", "type": "currency low"},
@@ -47,7 +47,7 @@ items = {
 	"0 Orb of Binding": {"base": "Orb of Binding", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Chance": {"base": "Orb of Chance", "class": "Currency", "type": "currency low"},
 	"0 Orb of Fusing": {"base": "Orb of Fusing", "class": "Currency", "type": "currency normal"},
-	"0 Orb of Horizons": {"base": "Orb of Horizons", "class": "Currency", "type": "currency normal"},
+	"0 Orb of Horizons": {"base": "Orb of Horizons", "class": "Currency", "type": "currency extremely high"},
 	"0 Orb of Regret": {"base": "Orb of Regret", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Scouring": {"base": "Orb of Scouring", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Transmutation": {"base": "Orb of Transmutation", "class": "Currency", "type": "currency very low"},
