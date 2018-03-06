@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/06/2018(m/d/y) 04:20:54 UTC from "Hardcore" data
+# Created: 03/06/2018(m/d/y) 07:42:55 UTC from "Hardcore" data
 
 desc = "Currency Autogen"
 
@@ -15,7 +15,7 @@ items = {
 	"0 Armourer's Scrap": {"base": "Armourer's Scrap", "class": "Currency", "type": "currency very low"},
 	"0 Binding Shard": {"base": "Binding Shard", "class": "Currency", "type": "currency very low"},
 	"0 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", "class": "Currency", "type": "currency low"},
-	"0 Blessed Orb": {"base": "Blessed Orb", "class": "Currency", "type": "currency high"},
+	"0 Blessed Orb": {"base": "Blessed Orb", "class": "Currency", "type": "currency normal"},
 	"0 Blessing of Chayula": {"base": "Blessing of Chayula", "class": "Currency", "type": "currency extremely high"},
 	"0 Blessing of Esh": {"base": "Blessing of Esh", "class": "Currency", "type": "currency very high"},
 	"0 Blessing of Tul": {"base": "Blessing of Tul", "class": "Currency", "type": "currency extremely high"},
@@ -37,7 +37,7 @@ items = {
 	"0 Harbinger's Shard": {"base": "Harbinger's Shard", "class": "Currency", "type": "currency very high"},
 	"0 Horizon Shard": {"base": "Horizon Shard", "class": "Currency", "type": "currency high"},
 	"0 Jeweller's Orb": {"base": "Jeweller's Orb", "class": "Currency", "type": "currency normal"},
-	"0 Journeyman Cartographer's Sextant": {"base": "Journeyman Cartographer's Sextant", "class": "Currency", "type": "currency high"},
+	"0 Journeyman Cartographer's Sextant": {"base": "Journeyman Cartographer's Sextant", "class": "Currency", "type": "currency very high"},
 	"0 Master Cartographer's Sextant": {"base": "Master Cartographer's Sextant", "class": "Currency", "type": "currency very high"},
 	"0 Mirror Shard": {"base": "Mirror Shard", "class": "Currency", "type": "currency extremely high"},
 	"0 Orb of Alchemy": {"base": "Orb of Alchemy", "class": "Currency", "type": "currency normal"},
@@ -52,7 +52,7 @@ items = {
 	"0 Orb of Scouring": {"base": "Orb of Scouring", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Transmutation": {"base": "Orb of Transmutation", "class": "Currency", "type": "currency very low"},
 	"0 Perandus Coin": {"base": "Perandus Coin", "class": "Currency", "type": "currency very low"},
-	"0 Portal Scroll": {"base": "Portal Scroll", "class": "Currency", "type": "currency very low"},
+	"0 Portal Scroll": {"base": "Portal Scroll", "class": "Currency", "type": "currency extremely high"},
 	"0 Regal Orb": {"base": "Regal Orb", "class": "Currency", "type": "currency high"},
 	"0 Regal Shard": {"base": "Regal Shard", "class": "Currency", "type": "currency normal"},
 	"0 Reinforced Iron Net": {"base": "Reinforced Iron Net", "class": "Currency", "type": "currency very low"},

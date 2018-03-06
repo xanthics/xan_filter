@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/06/2018(m/d/y) 04:20:54 UTC from "tmpstandard" data
+# Created: 03/06/2018(m/d/y) 07:42:55 UTC from "tmpstandard" data
 
 desc = "Currency Autogen"
 
@@ -34,7 +34,7 @@ items = {
 	"0 Gemcutter's Prism": {"base": "Gemcutter's Prism", "class": "Currency", "type": "currency normal"},
 	"0 Glassblower's Bauble": {"base": "Glassblower's Bauble", "class": "Currency", "type": "currency normal"},
 	"0 Harbinger's Orb": {"base": "Harbinger's Orb", "class": "Currency", "type": "currency normal"},
-	"0 Harbinger's Shard": {"base": "Harbinger's Shard", "class": "Currency", "type": "currency very low"},
+	"0 Harbinger's Shard": {"base": "Harbinger's Shard", "class": "Currency", "type": "currency low"},
 	"0 Horizon Shard": {"base": "Horizon Shard", "class": "Currency", "type": "currency normal"},
 	"0 Jeweller's Orb": {"base": "Jeweller's Orb", "class": "Currency", "type": "currency low"},
 	"0 Journeyman Cartographer's Sextant": {"base": "Journeyman Cartographer's Sextant", "class": "Currency", "type": "currency high"},
@@ -54,7 +54,7 @@ items = {
 	"0 Perandus Coin": {"base": "Perandus Coin", "class": "Currency", "type": "currency very low"},
 	"0 Portal Scroll": {"base": "Portal Scroll", "class": "Currency", "type": "currency very low"},
 	"0 Regal Orb": {"base": "Regal Orb", "class": "Currency", "type": "currency high"},
-	"0 Regal Shard": {"base": "Regal Shard", "class": "Currency", "type": "currency normal"},
+	"0 Regal Shard": {"base": "Regal Shard", "class": "Currency", "type": "currency low"},
 	"0 Reinforced Iron Net": {"base": "Reinforced Iron Net", "class": "Currency", "type": "currency very low"},
 	"0 Reinforced Rope Net": {"base": "Reinforced Rope Net", "class": "Currency", "type": "currency very low"},
 	"0 Reinforced Steel Net": {"base": "Reinforced Steel Net", "class": "Currency", "type": "currency very low"},

@@ -843,6 +843,11 @@ bases = {
 			{'drop': 78, 'base': 'Ring', 'name': 'Opal Ring'},  # Elemental Damage +(15 to 25)
 			{'drop': 78, 'base': 'Ring', 'name': 'Steel Ring'},  # Minimum Added Physical Damage (3 to 4), Maximum Added Physical Damage (10 to 14)
 		],
+		"Other": [
+			{'drop': 100, 'base': 'Jewel', 'name': 'Cobalt Jewel'},
+			{'drop': 100, 'base': 'Jewel', 'name': 'Crimson Jewel'},
+			{'drop': 100, 'base': 'Jewel', 'name': 'Viridian Jewel'},
+		]
 	},
 }
 
@@ -977,7 +982,8 @@ def genrareshighlight():
 	               'Bone Helmet',
 	               'Jade Amulet', 'Amber Amulet', 'Lapis Amulet', 'Agate Amulet', 'Turquoise Amulet', 'Citrine Amulet', 'Onyx Amulet', 'Marble Amulet',
 	               'Stygian Vise', 'Rustic Sash', 'Heavy Belt', 'Leather Belt',
-	               'Coral Ring', 'Sapphire Ring', 'Topaz Ring', 'Ruby Ring', 'Two-Stone Ring', 'Diamond Ring', 'Prismatic Ring', 'Amethyst Ring', 'Unset Ring', 'Opal Ring', 'Steel Ring'}
+	               'Coral Ring', 'Sapphire Ring', 'Topaz Ring', 'Ruby Ring', 'Two-Stone Ring', 'Diamond Ring', 'Prismatic Ring', 'Amethyst Ring', 'Unset Ring', 'Opal Ring', 'Steel Ring',
+	               'Cobalt Jewel', 'Crimson Jewel', 'Viridian Jewel'}
 
 	#  Best bases, supercedes shown
 	t1 = {'Harbinger Bow',

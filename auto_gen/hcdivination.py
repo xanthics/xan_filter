@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/06/2018(m/d/y) 04:20:54 UTC from "Hardcore" data
+# Created: 03/06/2018(m/d/y) 07:42:55 UTC from "Hardcore" data
 
 desc = "Divination Card"
 
@@ -35,8 +35,8 @@ items = {
 	"1 The Vast": {"base": "The Vast", "class": "Divination Card", "type": "divination very high"},
 	"1 The Wolven King's Bite": {"base": "The Wolven King's Bite", "class": "Divination Card", "type": "divination very high"},
 	"1 The World Eater": {"base": "The World Eater", "class": "Divination Card", "type": "divination very high"},
-	"2 Blessing of God": {"base": "Blessing of God", "class": "Divination Card", "type": "divination high"},
 	"2 Bowyer's Dream": {"base": "Bowyer's Dream", "class": "Divination Card", "type": "divination high"},
+	"2 Chaotic Disposition": {"base": "Chaotic Disposition", "class": "Divination Card", "type": "divination high"},
 	"2 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination high"},
 	"2 Forbidden Power": {"base": "Forbidden Power", "class": "Divination Card", "type": "divination high"},
 	"2 Heterochromia": {"base": "Heterochromia", "class": "Divination Card", "type": "divination high"},
@@ -54,7 +54,6 @@ items = {
 	"2 The Dapper Prodigy": {"base": "The Dapper Prodigy", "class": "Divination Card", "type": "divination high"},
 	"2 The Dark Mage": {"base": "The Dark Mage", "class": "Divination Card", "type": "divination high"},
 	"2 The Ethereal": {"base": "The Ethereal", "class": "Divination Card", "type": "divination high"},
-	"2 The Forsaken": {"base": "The Forsaken", "class": "Divination Card", "type": "divination high"},
 	"2 The Gladiator": {"base": "The Gladiator", "class": "Divination Card", "type": "divination high"},
 	"2 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination high"},
 	"2 The Hunger": {"base": "The Hunger", "class": "Divination Card", "type": "divination high"},
@@ -77,16 +76,20 @@ items = {
 	"2 The Warlord": {"base": "The Warlord", "class": "Divination Card", "type": "divination high"},
 	"2 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination high"},
 	"2 The Wolf": {"base": "The Wolf", "class": "Divination Card", "type": "divination high"},
+	"2 The Wretched": {"base": "The Wretched", "class": "Divination Card", "type": "divination high"},
 	"2 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination high"},
 	"2 Wealth and Power": {"base": "Wealth and Power", "class": "Divination Card", "type": "divination high"},
 	"3 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "divination low"},
 	"3 Anarchy's Price": {"base": "Anarchy's Price", "class": "Divination Card", "type": "divination low"},
 	"3 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "divination low"},
+	"3 Doedre's Madness": {"base": "Doedre's Madness", "class": "Divination Card", "type": "divination low"},
 	"3 Dying Anguish": {"base": "Dying Anguish", "class": "Divination Card", "type": "divination low"},
 	"3 Lantador's Lost Love": {"base": "Lantador's Lost Love", "class": "Divination Card", "type": "divination low"},
+	"3 Loyalty": {"base": "Loyalty", "class": "Divination Card", "type": "divination low"},
 	"3 Rain of Chaos": {"base": "Rain of Chaos", "class": "Divination Card", "type": "divination low"},
 	"3 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},
 	"3 The Betrayal": {"base": "The Betrayal", "class": "Divination Card", "type": "divination low"},
+	"3 The Catalyst": {"base": "The Catalyst", "class": "Divination Card", "type": "divination low"},
 	"3 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
 	"3 The Gemcutter": {"base": "The Gemcutter", "class": "Divination Card", "type": "divination low"},
 	"3 The Hermit": {"base": "The Hermit", "class": "Divination Card", "type": "divination low"},
@@ -100,6 +103,7 @@ items = {
 	"3 The Warden": {"base": "The Warden", "class": "Divination Card", "type": "divination low"},
 	"3 Thunderous Skies": {"base": "Thunderous Skies", "class": "Divination Card", "type": "divination low"},
 	"3 Turn the Other Cheek": {"base": "Turn the Other Cheek", "class": "Divination Card", "type": "divination low"},
+	"3 Volatile Power": {"base": "Volatile Power", "class": "Divination Card", "type": "divination low"},
 	"7 Prosperity": {"base": "Prosperity", "class": "Divination Card", "type": "hide"},
 	"7 Struck by Lightning": {"base": "Struck by Lightning", "class": "Divination Card", "type": "hide"},
 	"7 The Carrion Crow": {"base": "The Carrion Crow", "class": "Divination Card", "type": "hide"},
