@@ -8,7 +8,7 @@ desc = "Always show"
 items = {
 	"01 Tabula Exception": {"base": "Simple Robe", "other": ["Rarity Unique", "SocketGroup WWWWWW"], "type": "unique high"},
 	"02 6L": {"other": ["LinkedSockets 6"], "type": "show very high"},
-	"03 5L": {"other": ["LinkedSockets 5", "PlayAlertSound 2 15"], "type": "show high"},
+	"03 5L": {"other": ["Sockets 5", "LinkedSockets 5", "PlayAlertSound 2 15"], "type": "show high"},
 	"04 6S": {"other": ["Sockets 6", "PlayAlertSound 2 50"], "type": "show high"},
 	# High value atlas bases.  Show and make noise at any rarity
 	"04 Steel Ring": {"other": ["PlayAlertSound 2 50"], "base": "Steel Ring", "type": "show high"},
