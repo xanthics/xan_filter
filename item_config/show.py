@@ -27,6 +27,7 @@ items = {
 	"0 Jewel": {"class": "Jewel", "other": ["Rarity <= Magic"], "type": "ignore"},
 	"0 Strong Steel Net": {"base": "Strong Steel Net", "class": "Currency", "type": "show normal"},
 	"0 Thaumaturgical Net": {"base": "Thaumaturgical Net", "class": "Currency", "type": "show high"},
+	"0 Necromancy Net": {"other": ["PlayAlertSound 2 50"], "base": "Necromancy Net", "class": "Currency", "type": "show high"},
 	"1 Net": {"base": "Net", "class": "Currency", "type": "currency very low"},
 
 	"9 Starter weapon": {"other": ["Class Dagger Wand \"One Hand\" Bow Stave \"Two Hand\" Sceptre Claws", "ItemLevel < 2"], "type": "show normal"},
