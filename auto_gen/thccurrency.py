@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/07/2018(m/d/y) 08:06:52 UTC from "tmphardcore" data
+# Created: 03/08/2018(m/d/y) 17:53:52 UTC from "tmphardcore" data
 
 desc = "Currency Autogen"
 
@@ -27,10 +27,10 @@ items = {
 	"0 Chromatic Orb": {"base": "Chromatic Orb", "class": "Currency", "type": "currency low"},
 	"0 Divine Orb": {"base": "Divine Orb", "class": "Currency", "type": "currency very high"},
 	"0 Engineer's Orb": {"base": "Engineer's Orb", "class": "Currency", "type": "currency high"},
-	"0 Engineer's Shard": {"base": "Engineer's Shard", "class": "Currency", "type": "currency normal"},
+	"0 Engineer's Shard": {"base": "Engineer's Shard", "class": "Currency", "type": "currency low"},
 	"0 Eternal Orb": {"base": "Eternal Orb", "class": "Currency", "type": "currency extremely high"},
 	"0 Exalted Orb": {"base": "Exalted Orb", "class": "Currency", "type": "currency extremely high"},
-	"0 Exalted Shard": {"base": "Exalted Shard", "class": "Currency", "type": "currency normal"},
+	"0 Exalted Shard": {"base": "Exalted Shard", "class": "Currency", "type": "currency high"},
 	"0 Gemcutter's Prism": {"base": "Gemcutter's Prism", "class": "Currency", "type": "currency normal"},
 	"0 Glassblower's Bauble": {"base": "Glassblower's Bauble", "class": "Currency", "type": "currency normal"},
 	"0 Harbinger's Orb": {"base": "Harbinger's Orb", "class": "Currency", "type": "currency high"},
@@ -45,9 +45,9 @@ items = {
 	"0 Orb of Annulment": {"base": "Orb of Annulment", "class": "Currency", "type": "currency very high"},
 	"0 Orb of Augmentation": {"base": "Orb of Augmentation", "class": "Currency", "type": "currency very low"},
 	"0 Orb of Binding": {"base": "Orb of Binding", "class": "Currency", "type": "currency high"},
-	"0 Orb of Chance": {"base": "Orb of Chance", "class": "Currency", "type": "currency low"},
+	"0 Orb of Chance": {"base": "Orb of Chance", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Fusing": {"base": "Orb of Fusing", "class": "Currency", "type": "currency normal"},
-	"0 Orb of Horizons": {"base": "Orb of Horizons", "class": "Currency", "type": "currency very high"},
+	"0 Orb of Horizons": {"base": "Orb of Horizons", "class": "Currency", "type": "currency high"},
 	"0 Orb of Regret": {"base": "Orb of Regret", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Scouring": {"base": "Orb of Scouring", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Transmutation": {"base": "Orb of Transmutation", "class": "Currency", "type": "currency very low"},
@@ -66,7 +66,7 @@ items = {
 	"0 Simple Steel Net": {"base": "Simple Steel Net", "class": "Currency", "type": "currency very low"},
 	"0 Splinter of Chayula": {"base": "Splinter of Chayula", "class": "Currency", "type": "currency normal"},
 	"0 Splinter of Esh": {"base": "Splinter of Esh", "class": "Currency", "type": "currency normal"},
-	"0 Splinter of Tul": {"base": "Splinter of Tul", "class": "Currency", "type": "currency normal"},
+	"0 Splinter of Tul": {"base": "Splinter of Tul", "class": "Currency", "type": "show normal"},
 	"0 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", "class": "Currency", "type": "currency normal"},
 	"0 Splinter of Xoph": {"base": "Splinter of Xoph", "class": "Currency", "type": "currency normal"},
 	"0 Strong Iron Net": {"base": "Strong Iron Net", "class": "Currency", "type": "currency very low"},
