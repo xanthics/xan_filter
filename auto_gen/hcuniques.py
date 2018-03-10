@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/10/2018(m/d/y) 06:04:59 UTC from "Hardcore" data
+# Created: 03/10/2018(m/d/y) 06:06:32 UTC from "Hardcore" data
 
 desc = "Unique"
 
