@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/08/2018(m/d/y) 17:53:52 UTC from "Standard" data
+# Created: 03/10/2018(m/d/y) 06:04:59 UTC from "Standard" data
 
 desc = "Currency Autogen"
 
@@ -17,7 +17,7 @@ items = {
 	"0 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", "class": "Currency", "type": "currency very low"},
 	"0 Blessed Orb": {"base": "Blessed Orb", "class": "Currency", "type": "currency normal"},
 	"0 Blessing of Chayula": {"base": "Blessing of Chayula", "class": "Currency", "type": "currency extremely high"},
-	"0 Blessing of Esh": {"base": "Blessing of Esh", "class": "Currency", "type": "currency high"},
+	"0 Blessing of Esh": {"base": "Blessing of Esh", "class": "Currency", "type": "currency very high"},
 	"0 Blessing of Tul": {"base": "Blessing of Tul", "class": "Currency", "type": "currency high"},
 	"0 Blessing of Uul-Netol": {"base": "Blessing of Uul-Netol", "class": "Currency", "type": "currency very high"},
 	"0 Blessing of Xoph": {"base": "Blessing of Xoph", "class": "Currency", "type": "currency high"},
