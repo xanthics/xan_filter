@@ -25,7 +25,7 @@ items = {
 	"0 Fragment of the Minotaur": {"base": "Fragment of the Minotaur", "class": "Map Fragments", "type": "map red"},
 	"0 Fragment of the Chimera": {"base": "Fragment of the Chimera", "class": "Map Fragments", "type": "map red"},
 	"0 Fragment of the Hydra": {"base": "Fragment of the Hydra", "class": "Map Fragments", "type": "map red"},
-	"0 Divine Vessel": {"base": "Divine Vessel", "class": "Map Fragments", "type": "map red"},
+	"0 Divine Vessel": {"other": ["PlayAlertSound 9 50"], "base": "Divine Vessel", "class": "Map Fragments", "type": "show high"},
 
 	"000 Elder": {"class": "Maps", "other": ["ElderMap True"], "type": "map red good"},
 

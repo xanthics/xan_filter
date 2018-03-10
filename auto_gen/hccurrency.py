@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/08/2018(m/d/y) 17:53:52 UTC from "Hardcore" data
+# Created: 03/10/2018(m/d/y) 06:04:59 UTC from "Hardcore" data
 
 desc = "Currency Autogen"
 
@@ -12,15 +12,15 @@ items = {
 	"0 Ancient Shard": {"base": "Ancient Shard", "class": "Currency", "type": "currency normal"},
 	"0 Annulment Shard": {"base": "Annulment Shard", "class": "Currency", "type": "currency normal"},
 	"0 Apprentice Cartographer's Sextant": {"base": "Apprentice Cartographer's Sextant", "class": "Currency", "type": "currency very high"},
-	"0 Armourer's Scrap": {"base": "Armourer's Scrap", "class": "Currency", "type": "currency high"},
+	"0 Armourer's Scrap": {"base": "Armourer's Scrap", "class": "Currency", "type": "currency low"},
 	"0 Binding Shard": {"base": "Binding Shard", "class": "Currency", "type": "currency very low"},
-	"0 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", "class": "Currency", "type": "currency normal"},
+	"0 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", "class": "Currency", "type": "currency low"},
 	"0 Blessed Orb": {"base": "Blessed Orb", "class": "Currency", "type": "currency normal"},
 	"0 Blessing of Chayula": {"base": "Blessing of Chayula", "class": "Currency", "type": "currency extremely high"},
 	"0 Blessing of Esh": {"base": "Blessing of Esh", "class": "Currency", "type": "currency very high"},
-	"0 Blessing of Tul": {"base": "Blessing of Tul", "class": "Currency", "type": "currency extremely high"},
-	"0 Blessing of Uul-Netol": {"base": "Blessing of Uul-Netol", "class": "Currency", "type": "currency extremely high"},
-	"0 Blessing of Xoph": {"base": "Blessing of Xoph", "class": "Currency", "type": "currency extremely high"},
+	"0 Blessing of Tul": {"base": "Blessing of Tul", "class": "Currency", "type": "currency high"},
+	"0 Blessing of Uul-Netol": {"base": "Blessing of Uul-Netol", "class": "Currency", "type": "currency very high"},
+	"0 Blessing of Xoph": {"base": "Blessing of Xoph", "class": "Currency", "type": "currency very high"},
 	"0 Cartographer's Chisel": {"base": "Cartographer's Chisel", "class": "Currency", "type": "currency normal"},
 	"0 Chaos Orb": {"base": "Chaos Orb", "class": "Currency", "type": "currency high"},
 	"0 Chaos Shard": {"base": "Chaos Shard", "class": "Currency", "type": "currency low"},
@@ -41,15 +41,15 @@ items = {
 	"0 Master Cartographer's Sextant": {"base": "Master Cartographer's Sextant", "class": "Currency", "type": "currency very high"},
 	"0 Mirror Shard": {"base": "Mirror Shard", "class": "Currency", "type": "currency extremely high"},
 	"0 Orb of Alchemy": {"base": "Orb of Alchemy", "class": "Currency", "type": "currency normal"},
-	"0 Orb of Alteration": {"base": "Orb of Alteration", "class": "Currency", "type": "currency normal"},
+	"0 Orb of Alteration": {"base": "Orb of Alteration", "class": "Currency", "type": "currency low"},
 	"0 Orb of Annulment": {"base": "Orb of Annulment", "class": "Currency", "type": "currency very high"},
 	"0 Orb of Augmentation": {"base": "Orb of Augmentation", "class": "Currency", "type": "currency very low"},
 	"0 Orb of Binding": {"base": "Orb of Binding", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Chance": {"base": "Orb of Chance", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Fusing": {"base": "Orb of Fusing", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Horizons": {"base": "Orb of Horizons", "class": "Currency", "type": "currency very high"},
-	"0 Orb of Regret": {"base": "Orb of Regret", "class": "Currency", "type": "currency normal"},
-	"0 Orb of Scouring": {"base": "Orb of Scouring", "class": "Currency", "type": "currency high"},
+	"0 Orb of Regret": {"base": "Orb of Regret", "class": "Currency", "type": "currency high"},
+	"0 Orb of Scouring": {"base": "Orb of Scouring", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Transmutation": {"base": "Orb of Transmutation", "class": "Currency", "type": "currency very low"},
 	"0 Perandus Coin": {"base": "Perandus Coin", "class": "Currency", "type": "currency very low"},
 	"0 Portal Scroll": {"base": "Portal Scroll", "class": "Currency", "type": "currency very low"},
