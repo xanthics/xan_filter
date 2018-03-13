@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/10/2018(m/d/y) 06:06:32 UTC from "Standard" data
+# Created: 03/13/2018(m/d/y) 06:57:25 UTC from "Standard" data
 
 desc = "Currency Autogen"
 
@@ -10,7 +10,7 @@ items = {
 	"0 Alteration Shard": {"base": "Alteration Shard", "class": "Currency", "type": "currency very low"},
 	"0 Ancient Orb": {"base": "Ancient Orb", "class": "Currency", "type": "currency very high"},
 	"0 Ancient Shard": {"base": "Ancient Shard", "class": "Currency", "type": "currency high"},
-	"0 Annulment Shard": {"base": "Annulment Shard", "class": "Currency", "type": "currency high"},
+	"0 Annulment Shard": {"base": "Annulment Shard", "class": "Currency", "type": "currency normal"},
 	"0 Apprentice Cartographer's Sextant": {"base": "Apprentice Cartographer's Sextant", "class": "Currency", "type": "currency normal"},
 	"0 Armourer's Scrap": {"base": "Armourer's Scrap", "class": "Currency", "type": "currency very low"},
 	"0 Binding Shard": {"base": "Binding Shard", "class": "Currency", "type": "currency very low"},
@@ -24,7 +24,7 @@ items = {
 	"0 Cartographer's Chisel": {"base": "Cartographer's Chisel", "class": "Currency", "type": "currency normal"},
 	"0 Chaos Orb": {"base": "Chaos Orb", "class": "Currency", "type": "currency high"},
 	"0 Chaos Shard": {"base": "Chaos Shard", "class": "Currency", "type": "currency low"},
-	"0 Chromatic Orb": {"base": "Chromatic Orb", "class": "Currency", "type": "currency low"},
+	"0 Chromatic Orb": {"base": "Chromatic Orb", "class": "Currency", "type": "currency normal"},
 	"0 Divine Orb": {"base": "Divine Orb", "class": "Currency", "type": "currency very high"},
 	"0 Engineer's Orb": {"base": "Engineer's Orb", "class": "Currency", "type": "currency normal"},
 	"0 Engineer's Shard": {"base": "Engineer's Shard", "class": "Currency", "type": "currency very low"},
@@ -67,7 +67,7 @@ items = {
 	"0 Splinter of Chayula": {"base": "Splinter of Chayula", "class": "Currency", "type": "currency high"},
 	"0 Splinter of Esh": {"base": "Splinter of Esh", "class": "Currency", "type": "show normal"},
 	"0 Splinter of Tul": {"base": "Splinter of Tul", "class": "Currency", "type": "show normal"},
-	"0 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", "class": "Currency", "type": "currency normal"},
+	"0 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", "class": "Currency", "type": "show normal"},
 	"0 Splinter of Xoph": {"base": "Splinter of Xoph", "class": "Currency", "type": "show normal"},
 	"0 Strong Iron Net": {"base": "Strong Iron Net", "class": "Currency", "type": "currency very low"},
 	"0 Strong Rope Net": {"base": "Strong Rope Net", "class": "Currency", "type": "currency very low"},
