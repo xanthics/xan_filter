@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/13/2018(m/d/y) 06:57:25 UTC from "Standard" data
+# Created: 03/15/2018(m/d/y) 22:50:46 UTC from "Standard" data
 
 desc = "Currency Autogen"
 
@@ -27,7 +27,7 @@ items = {
 	"0 Chromatic Orb": {"base": "Chromatic Orb", "class": "Currency", "type": "currency normal"},
 	"0 Divine Orb": {"base": "Divine Orb", "class": "Currency", "type": "currency very high"},
 	"0 Engineer's Orb": {"base": "Engineer's Orb", "class": "Currency", "type": "currency normal"},
-	"0 Engineer's Shard": {"base": "Engineer's Shard", "class": "Currency", "type": "currency very low"},
+	"0 Engineer's Shard": {"base": "Engineer's Shard", "class": "Currency", "type": "currency low"},
 	"0 Eternal Orb": {"base": "Eternal Orb", "class": "Currency", "type": "currency extremely high"},
 	"0 Exalted Orb": {"base": "Exalted Orb", "class": "Currency", "type": "currency extremely high"},
 	"0 Exalted Shard": {"base": "Exalted Shard", "class": "Currency", "type": "currency very high"},
@@ -45,7 +45,7 @@ items = {
 	"0 Orb of Annulment": {"base": "Orb of Annulment", "class": "Currency", "type": "currency very high"},
 	"0 Orb of Augmentation": {"base": "Orb of Augmentation", "class": "Currency", "type": "currency very low"},
 	"0 Orb of Binding": {"base": "Orb of Binding", "class": "Currency", "type": "currency normal"},
-	"0 Orb of Chance": {"base": "Orb of Chance", "class": "Currency", "type": "currency low"},
+	"0 Orb of Chance": {"base": "Orb of Chance", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Fusing": {"base": "Orb of Fusing", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Horizons": {"base": "Orb of Horizons", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Regret": {"base": "Orb of Regret", "class": "Currency", "type": "currency normal"},
@@ -55,24 +55,14 @@ items = {
 	"0 Portal Scroll": {"base": "Portal Scroll", "class": "Currency", "type": "currency very low"},
 	"0 Regal Orb": {"base": "Regal Orb", "class": "Currency", "type": "currency normal"},
 	"0 Regal Shard": {"base": "Regal Shard", "class": "Currency", "type": "currency low"},
-	"0 Reinforced Iron Net": {"base": "Reinforced Iron Net", "class": "Currency", "type": "currency very low"},
-	"0 Reinforced Rope Net": {"base": "Reinforced Rope Net", "class": "Currency", "type": "currency very low"},
-	"0 Reinforced Steel Net": {"base": "Reinforced Steel Net", "class": "Currency", "type": "currency very low"},
 	"0 Scroll Fragment": {"base": "Scroll Fragment", "class": "Currency", "type": "hide"},
 	"0 Scroll of Wisdom": {"base": "Scroll of Wisdom", "class": "Currency", "type": "currency very low"},
 	"0 Silver Coin": {"base": "Silver Coin", "class": "Currency", "type": "currency normal"},
-	"0 Simple Iron Net": {"base": "Simple Iron Net", "class": "Currency", "type": "currency very low"},
-	"0 Simple Rope Net": {"base": "Simple Rope Net", "class": "Currency", "type": "currency very low"},
-	"0 Simple Steel Net": {"base": "Simple Steel Net", "class": "Currency", "type": "currency very low"},
 	"0 Splinter of Chayula": {"base": "Splinter of Chayula", "class": "Currency", "type": "currency high"},
-	"0 Splinter of Esh": {"base": "Splinter of Esh", "class": "Currency", "type": "show normal"},
+	"0 Splinter of Esh": {"base": "Splinter of Esh", "class": "Currency", "type": "currency normal"},
 	"0 Splinter of Tul": {"base": "Splinter of Tul", "class": "Currency", "type": "show normal"},
-	"0 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", "class": "Currency", "type": "show normal"},
-	"0 Splinter of Xoph": {"base": "Splinter of Xoph", "class": "Currency", "type": "show normal"},
-	"0 Strong Iron Net": {"base": "Strong Iron Net", "class": "Currency", "type": "currency very low"},
-	"0 Strong Rope Net": {"base": "Strong Rope Net", "class": "Currency", "type": "currency very low"},
-	"0 Strong Steel Net": {"base": "Strong Steel Net", "class": "Currency", "type": "currency normal"},
-	"0 Thaumaturgical Net": {"base": "Thaumaturgical Net", "class": "Currency", "type": "currency high"},
+	"0 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", "class": "Currency", "type": "currency normal"},
+	"0 Splinter of Xoph": {"base": "Splinter of Xoph", "class": "Currency", "type": "currency normal"},
 	"0 Transmutation Shard": {"base": "Transmutation Shard", "class": "Currency", "type": "hide"},
 	"0 Vaal Orb": {"base": "Vaal Orb", "class": "Currency", "type": "currency high"},
 }
