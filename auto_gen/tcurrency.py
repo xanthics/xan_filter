@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/15/2018(m/d/y) 22:50:46 UTC from "tmpstandard" data
+# Created: 03/16/2018(m/d/y) 23:08:36 UTC from "tmpstandard" data
 
 desc = "Currency Autogen"
 
@@ -33,7 +33,7 @@ items = {
 	"0 Exalted Shard": {"base": "Exalted Shard", "class": "Currency", "type": "currency very high"},
 	"0 Gemcutter's Prism": {"base": "Gemcutter's Prism", "class": "Currency", "type": "currency normal"},
 	"0 Glassblower's Bauble": {"base": "Glassblower's Bauble", "class": "Currency", "type": "currency normal"},
-	"0 Harbinger's Orb": {"base": "Harbinger's Orb", "class": "Currency", "type": "currency extremely high"},
+	"0 Harbinger's Orb": {"base": "Harbinger's Orb", "class": "Currency", "type": "currency very high"},
 	"0 Harbinger's Shard": {"base": "Harbinger's Shard", "class": "Currency", "type": "currency very high"},
 	"0 Horizon Shard": {"base": "Horizon Shard", "class": "Currency", "type": "currency normal"},
 	"0 Jeweller's Orb": {"base": "Jeweller's Orb", "class": "Currency", "type": "currency low"},
@@ -55,7 +55,7 @@ items = {
 	"0 Portal Scroll": {"base": "Portal Scroll", "class": "Currency", "type": "currency very low"},
 	"0 Regal Orb": {"base": "Regal Orb", "class": "Currency", "type": "currency high"},
 	"0 Regal Shard": {"base": "Regal Shard", "class": "Currency", "type": "currency low"},
-	"0 Scroll Fragment": {"base": "Scroll Fragment", "class": "Currency", "type": "hide"},
+	"0 Scroll Fragment": {"base": "Scroll Fragment", "class": "Currency", "type": "currency very low"},
 	"0 Scroll of Wisdom": {"base": "Scroll of Wisdom", "class": "Currency", "type": "currency very low"},
 	"0 Silver Coin": {"base": "Silver Coin", "class": "Currency", "type": "currency normal"},
 	"0 Splinter of Chayula": {"base": "Splinter of Chayula", "class": "Currency", "type": "currency high"},
@@ -63,6 +63,6 @@ items = {
 	"0 Splinter of Tul": {"base": "Splinter of Tul", "class": "Currency", "type": "currency normal"},
 	"0 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", "class": "Currency", "type": "currency normal"},
 	"0 Splinter of Xoph": {"base": "Splinter of Xoph", "class": "Currency", "type": "currency normal"},
-	"0 Transmutation Shard": {"base": "Transmutation Shard", "class": "Currency", "type": "hide"},
+	"0 Transmutation Shard": {"base": "Transmutation Shard", "class": "Currency", "type": "currency very low"},
 	"0 Vaal Orb": {"base": "Vaal Orb", "class": "Currency", "type": "currency high"},
 }
