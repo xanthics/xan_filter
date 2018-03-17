@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/17/2018(m/d/y) 00:24:55 UTC from "tmphardcore" data
+# Created: 03/17/2018(m/d/y) 01:02:35 UTC from "tmphardcore" data
 
 desc = "Divination Card"
 
@@ -42,7 +42,6 @@ items = {
 	"2 The Formless Sea": {"base": "The Formless Sea", "class": "Divination Card", "type": "divination high"},
 	"2 The Hunger": {"base": "The Hunger", "class": "Divination Card", "type": "divination high"},
 	"2 The Jester": {"base": "The Jester", "class": "Divination Card", "type": "divination high"},
-	"2 The Obscured": {"base": "The Obscured", "class": "Divination Card", "type": "divination high"},
 	"2 The Polymath": {"base": "The Polymath", "class": "Divination Card", "type": "divination high"},
 	"2 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination high"},
 	"2 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
@@ -57,6 +56,7 @@ items = {
 	"2 The Void": {"base": "The Void", "class": "Divination Card", "type": "divination high"},
 	"2 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination high"},
 	"2 The Wolven King's Bite": {"base": "The Wolven King's Bite", "class": "Divination Card", "type": "divination high"},
+	"2 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination high"},
 	"3 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "divination low"},
 	"3 Anarchy's Price": {"base": "Anarchy's Price", "class": "Divination Card", "type": "divination low"},
 	"3 Cartographer's Delight": {"base": "Cartographer's Delight", "class": "Divination Card", "type": "divination low"},

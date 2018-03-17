@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/17/2018(m/d/y) 00:24:55 UTC from "Standard" data
+# Created: 03/17/2018(m/d/y) 01:02:35 UTC from "Standard" data
 
 desc = "Unique"
 
@@ -47,7 +47,6 @@ items = {
 	"0 Void Axe": {"base": "Void Axe", "type": "unique very high"},
 	"0 Wereclaw Talisman": {"base": "Wereclaw Talisman", "type": "unique very high"},
 	"1 Arcanist Gloves": {"base": "Arcanist Gloves", "type": "unique high"},
-	"1 Archon Kite Shield": {"base": "Archon Kite Shield", "type": "unique high"},
 	"1 Bismuth Flask": {"base": "Bismuth Flask", "type": "unique high"},
 	"1 Blunt Arrow Quiver Piece": {"base": "Blunt Arrow Quiver Piece", "type": "unique high"},
 	"1 Callous Mask Piece": {"base": "Callous Mask Piece", "type": "unique high"},
@@ -66,11 +65,11 @@ items = {
 	"1 Hellion's Paw": {"base": "Hellion's Paw", "type": "unique high"},
 	"1 Highborn Staff": {"base": "Highborn Staff", "type": "unique high"},
 	"1 Imperial Maul": {"base": "Imperial Maul", "type": "unique high"},
-	"1 Imperial Staff": {"base": "Imperial Staff", "type": "unique high"},
 	"1 Ironscale Gauntlets": {"base": "Ironscale Gauntlets", "type": "unique high"},
 	"1 Jasper Chopper": {"base": "Jasper Chopper", "type": "unique high"},
 	"1 Jingling Spirit Shield": {"base": "Jingling Spirit Shield", "type": "unique high"},
 	"1 Labrys": {"base": "Labrys", "type": "unique high"},
+	"1 Necromancer Silks": {"base": "Necromancer Silks", "type": "unique high"},
 	"1 Nightmare Mace": {"base": "Nightmare Mace", "type": "unique high"},
 	"1 Promenade Map": {"base": "Promenade Map", "type": "unique high"},
 	"1 Raven Mask": {"base": "Raven Mask", "type": "unique high"},
@@ -88,7 +87,6 @@ items = {
 	"1 Steelhead": {"base": "Steelhead", "type": "unique high"},
 	"1 Temple Map": {"base": "Temple Map", "type": "unique high"},
 	"1 Thorium Spirit Shield": {"base": "Thorium Spirit Shield", "type": "unique high"},
-	"1 Titan Greaves": {"base": "Titan Greaves", "type": "unique high"},
 	"1 Titanium Spirit Shield": {"base": "Titanium Spirit Shield", "type": "unique high"},
 	"1 Topaz Flask": {"base": "Topaz Flask", "type": "unique high"},
 	"1 Torture Chamber Map": {"base": "Torture Chamber Map", "type": "unique high"},
@@ -149,6 +147,7 @@ items = {
 	"6 Imbued Wand": {"base": "Imbued Wand", "type": "unique special"},
 	"6 Imperial Bow": {"base": "Imperial Bow", "type": "unique special"},
 	"6 Imperial Claw": {"base": "Imperial Claw", "type": "unique special"},
+	"6 Imperial Staff": {"base": "Imperial Staff", "type": "unique special"},
 	"6 Infernal Sword": {"base": "Infernal Sword", "type": "unique special"},
 	"6 Iron Circlet": {"base": "Iron Circlet", "type": "unique special"},
 	"6 Iron Mask": {"base": "Iron Mask", "type": "unique special"},
@@ -172,6 +171,7 @@ items = {
 	"6 Mind Cage": {"base": "Mind Cage", "type": "unique special"},
 	"6 Moonstone Ring": {"base": "Moonstone Ring", "type": "unique special"},
 	"6 Mosaic Kite Shield": {"base": "Mosaic Kite Shield", "type": "unique special"},
+	"6 Murder Boots": {"base": "Murder Boots", "type": "unique special"},
 	"6 Murder Mitts": {"base": "Murder Mitts", "type": "unique special"},
 	"6 Necromancer Circlet": {"base": "Necromancer Circlet", "type": "unique special"},
 	"6 Nightmare Bascinet": {"base": "Nightmare Bascinet", "type": "unique special"},
@@ -200,6 +200,7 @@ items = {
 	"6 Scholar Boots": {"base": "Scholar Boots", "type": "unique special"},
 	"6 Sharkskin Boots": {"base": "Sharkskin Boots", "type": "unique special"},
 	"6 Sharktooth Arrow Quiver": {"base": "Sharktooth Arrow Quiver", "type": "unique special"},
+	"6 Silken Hood": {"base": "Silken Hood", "type": "unique special"},
 	"6 Simple Robe": {"base": "Simple Robe", "type": "unique special"},
 	"6 Skinning Knife": {"base": "Skinning Knife", "type": "unique special"},
 	"6 Slink Boots": {"base": "Slink Boots", "type": "unique special"},
@@ -219,6 +220,7 @@ items = {
 	"6 Terror Claw": {"base": "Terror Claw", "type": "unique special"},
 	"6 Thresher Claw": {"base": "Thresher Claw", "type": "unique special"},
 	"6 Titan Gauntlets": {"base": "Titan Gauntlets", "type": "unique special"},
+	"6 Titan Greaves": {"base": "Titan Greaves", "type": "unique special"},
 	"6 Topaz Ring": {"base": "Topaz Ring", "type": "unique special"},
 	"6 Triumphant Lamellar": {"base": "Triumphant Lamellar", "type": "unique special"},
 	"6 Turquoise Amulet": {"base": "Turquoise Amulet", "type": "unique special"},
@@ -368,7 +370,6 @@ items = {
 	"7 Twilight Blade": {"base": "Twilight Blade", "type": "unique low"},
 	"7 Vaal Buckler": {"base": "Vaal Buckler", "type": "unique low"},
 	"7 Vaal Claw": {"base": "Vaal Claw", "type": "unique low"},
-	"7 Vaal Hatchet": {"base": "Vaal Hatchet", "type": "unique low"},
 	"7 Vile Staff": {"base": "Vile Staff", "type": "unique low"},
 	"7 Vine Circlet": {"base": "Vine Circlet", "type": "unique low"},
 	"7 Visored Sallet": {"base": "Visored Sallet", "type": "unique low"},

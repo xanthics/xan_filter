@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/17/2018(m/d/y) 00:24:55 UTC from "tmphardcore" data
+# Created: 03/17/2018(m/d/y) 01:02:35 UTC from "tmphardcore" data
 
 desc = "Unique"
 
@@ -34,7 +34,6 @@ items = {
 	"1 Arcanist Slippers": {"base": "Arcanist Slippers", "type": "unique high"},
 	"1 Assassin's Boots": {"base": "Assassin's Boots", "type": "unique high"},
 	"1 Cardinal Round Shield": {"base": "Cardinal Round Shield", "type": "unique high"},
-	"1 Cemetery Map": {"base": "Cemetery Map", "type": "unique high"},
 	"1 Champion Kite Shield": {"base": "Champion Kite Shield", "type": "unique high"},
 	"1 Citadel Bow": {"base": "Citadel Bow", "type": "unique high"},
 	"1 Courtyard Map": {"base": "Courtyard Map", "type": "unique high"},
@@ -72,7 +71,6 @@ items = {
 	"6 Carnal Armour": {"base": "Carnal Armour", "type": "unique special"},
 	"6 Carnal Mitts": {"base": "Carnal Mitts", "type": "unique special"},
 	"6 Carved Wand": {"base": "Carved Wand", "type": "unique special"},
-	"6 Chain Belt": {"base": "Chain Belt", "type": "unique special"},
 	"6 Citrine Amulet": {"base": "Citrine Amulet", "type": "unique special"},
 	"6 Cleaver": {"base": "Cleaver", "type": "unique special"},
 	"6 Cobalt Jewel": {"base": "Cobalt Jewel", "type": "unique special"},
@@ -174,6 +172,7 @@ items = {
 	"7 Bronzescale Gauntlets": {"base": "Bronzescale Gauntlets", "type": "unique low"},
 	"7 Buckskin Tunic": {"base": "Buckskin Tunic", "type": "unique low"},
 	"7 Burnished Spiked Shield": {"base": "Burnished Spiked Shield", "type": "unique low"},
+	"7 Chain Belt": {"base": "Chain Belt", "type": "unique low"},
 	"7 Chain Gloves": {"base": "Chain Gloves", "type": "unique low"},
 	"7 Clasped Boots": {"base": "Clasped Boots", "type": "unique low"},
 	"7 Cloth Belt": {"base": "Cloth Belt", "type": "unique low"},
@@ -267,6 +266,7 @@ items = {
 	"7 Quicksilver Flask": {"base": "Quicksilver Flask", "type": "unique low"},
 	"7 Ranger Bow": {"base": "Ranger Bow", "type": "unique low"},
 	"7 Recurve Bow": {"base": "Recurve Bow", "type": "unique low"},
+	"7 Regicide Mask": {"base": "Regicide Mask", "type": "unique low"},
 	"7 Riveted Boots": {"base": "Riveted Boots", "type": "unique low"},
 	"7 Rotted Round Shield": {"base": "Rotted Round Shield", "type": "unique low"},
 	"7 Royal Skean": {"base": "Royal Skean", "type": "unique low"},
@@ -312,7 +312,6 @@ items = {
 	"7 Timeworn Claw": {"base": "Timeworn Claw", "type": "unique low"},
 	"7 Titan Gauntlets": {"base": "Titan Gauntlets", "type": "unique low"},
 	"7 Tomahawk": {"base": "Tomahawk", "type": "unique low"},
-	"7 Trapper Boots": {"base": "Trapper Boots", "type": "unique low"},
 	"7 Tribal Circlet": {"base": "Tribal Circlet", "type": "unique low"},
 	"7 Tricorne": {"base": "Tricorne", "type": "unique low"},
 	"7 Turquoise Amulet": {"base": "Turquoise Amulet", "type": "unique low"},

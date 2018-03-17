@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/17/2018(m/d/y) 00:24:55 UTC from "Hardcore" data
+# Created: 03/17/2018(m/d/y) 01:02:35 UTC from "Hardcore" data
 
 desc = "Currency Autogen"
 
@@ -64,5 +64,5 @@ items = {
 	"0 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", "class": "Currency", "type": "currency extremely high"},
 	"0 Splinter of Xoph": {"base": "Splinter of Xoph", "class": "Currency", "type": "currency normal"},
 	"0 Transmutation Shard": {"base": "Transmutation Shard", "class": "Currency", "type": "currency very low"},
-	"0 Vaal Orb": {"base": "Vaal Orb", "class": "Currency", "type": "currency normal"},
+	"0 Vaal Orb": {"base": "Vaal Orb", "class": "Currency", "type": "currency high"},
 }

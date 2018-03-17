@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/17/2018(m/d/y) 00:24:55 UTC from "tmpstandard" data
+# Created: 03/17/2018(m/d/y) 01:02:35 UTC from "tmpstandard" data
 
 desc = "Unique"
 
@@ -37,6 +37,7 @@ items = {
 	"0 Thorium Spirit Shield": {"base": "Thorium Spirit Shield", "type": "unique very high"},
 	"0 Void Axe": {"base": "Void Axe", "type": "unique very high"},
 	"1 Arcanist Gloves": {"base": "Arcanist Gloves", "type": "unique high"},
+	"1 Assassin's Boots": {"base": "Assassin's Boots", "type": "unique high"},
 	"1 Bismuth Flask": {"base": "Bismuth Flask", "type": "unique high"},
 	"1 Cardinal Round Shield": {"base": "Cardinal Round Shield", "type": "unique high"},
 	"1 Cemetery Map": {"base": "Cemetery Map", "type": "unique high"},
@@ -56,6 +57,7 @@ items = {
 	"1 Reef Map": {"base": "Reef Map", "type": "unique high"},
 	"1 Royal Burgonet": {"base": "Royal Burgonet", "type": "unique high"},
 	"1 Ruby Amulet": {"base": "Ruby Amulet", "type": "unique high"},
+	"1 Ruby Flask": {"base": "Ruby Flask", "type": "unique high"},
 	"1 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "unique high"},
 	"1 Siege Axe": {"base": "Siege Axe", "type": "unique high"},
 	"1 Steel Ring": {"base": "Steel Ring", "type": "unique high"},
@@ -118,7 +120,6 @@ items = {
 	"6 Moonstone Ring": {"base": "Moonstone Ring", "type": "unique special"},
 	"6 Murder Boots": {"base": "Murder Boots", "type": "unique special"},
 	"6 Necromancer Circlet": {"base": "Necromancer Circlet", "type": "unique special"},
-	"6 Nightmare Bascinet": {"base": "Nightmare Bascinet", "type": "unique special"},
 	"6 Onyx Amulet": {"base": "Onyx Amulet", "type": "unique special"},
 	"6 Opal Ring": {"base": "Opal Ring", "type": "unique special"},
 	"6 Ornate Sword": {"base": "Ornate Sword", "type": "unique special"},
@@ -126,6 +127,7 @@ items = {
 	"6 Penetrating Arrow Quiver": {"base": "Penetrating Arrow Quiver", "type": "unique special"},
 	"6 Pinnacle Tower Shield": {"base": "Pinnacle Tower Shield", "type": "unique special"},
 	"6 Plank Kite Shield": {"base": "Plank Kite Shield", "type": "unique special"},
+	"6 Plate Vest": {"base": "Plate Vest", "type": "unique special"},
 	"6 Prismatic Ring": {"base": "Prismatic Ring", "type": "unique special"},
 	"6 Reaver Sword": {"base": "Reaver Sword", "type": "unique special"},
 	"6 Reinforced Greaves": {"base": "Reinforced Greaves", "type": "unique special"},
@@ -211,7 +213,6 @@ items = {
 	"7 Dragonscale Gauntlets": {"base": "Dragonscale Gauntlets", "type": "unique low"},
 	"7 Dread Maul": {"base": "Dread Maul", "type": "unique low"},
 	"7 Dream Mace": {"base": "Dream Mace", "type": "unique low"},
-	"7 Driftwood Wand": {"base": "Driftwood Wand", "type": "unique low"},
 	"7 Dusk Blade": {"base": "Dusk Blade", "type": "unique low"},
 	"7 Elder Sword": {"base": "Elder Sword", "type": "unique low"},
 	"7 Enameled Buckler": {"base": "Enameled Buckler", "type": "unique low"},
@@ -246,6 +247,7 @@ items = {
 	"7 Imbued Wand": {"base": "Imbued Wand", "type": "unique low"},
 	"7 Imperial Skean": {"base": "Imperial Skean", "type": "unique low"},
 	"7 Iron Hat": {"base": "Iron Hat", "type": "unique low"},
+	"7 Iron Sceptre": {"base": "Iron Sceptre", "type": "unique low"},
 	"7 Iron Staff": {"base": "Iron Staff", "type": "unique low"},
 	"7 Ironscale Boots": {"base": "Ironscale Boots", "type": "unique low"},
 	"7 Ironscale Gauntlets": {"base": "Ironscale Gauntlets", "type": "unique low"},
@@ -280,7 +282,6 @@ items = {
 	"7 Painted Tower Shield": {"base": "Painted Tower Shield", "type": "unique low"},
 	"7 Paua Amulet": {"base": "Paua Amulet", "type": "unique low"},
 	"7 Pine Buckler": {"base": "Pine Buckler", "type": "unique low"},
-	"7 Plate Vest": {"base": "Plate Vest", "type": "unique low"},
 	"7 Plated Greaves": {"base": "Plated Greaves", "type": "unique low"},
 	"7 Platinum Kris": {"base": "Platinum Kris", "type": "unique low"},
 	"7 Platinum Sceptre": {"base": "Platinum Sceptre", "type": "unique low"},
