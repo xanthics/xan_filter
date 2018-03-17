@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/16/2018(m/d/y) 23:08:36 UTC from "tmphardcore" data
+# Created: 03/17/2018(m/d/y) 00:24:55 UTC from "tmphardcore" data
 
 desc = "Essence Autogen"
 
@@ -8,6 +8,7 @@ desc = "Essence Autogen"
 items = {
 	"0 Deafening Essence of Anguish": {"base": "Deafening Essence of Anguish", "class": "Currency", "type": "currency normal"},
 	"0 Deafening Essence of Contempt": {"base": "Deafening Essence of Contempt", "class": "Currency", "type": "currency high"},
+	"0 Deafening Essence of Doubt": {"base": "Deafening Essence of Doubt", "class": "Currency", "type": "currency high"},
 	"0 Deafening Essence of Fear": {"base": "Deafening Essence of Fear", "class": "Currency", "type": "currency normal"},
 	"0 Deafening Essence of Hatred": {"base": "Deafening Essence of Hatred", "class": "Currency", "type": "currency high"},
 	"0 Deafening Essence of Rage": {"base": "Deafening Essence of Rage", "class": "Currency", "type": "currency high"},
@@ -22,6 +23,7 @@ items = {
 	"0 Essence of Insanity": {"base": "Essence of Insanity", "class": "Currency", "type": "currency normal"},
 	"0 Remnant of Corruption": {"base": "Remnant of Corruption", "class": "Currency", "type": "currency normal"},
 	"0 Screaming Essence of Anger": {"base": "Screaming Essence of Anger", "class": "Currency", "type": "currency normal"},
+	"0 Screaming Essence of Contempt": {"base": "Screaming Essence of Contempt", "class": "Currency", "type": "currency normal"},
 	"0 Screaming Essence of Greed": {"base": "Screaming Essence of Greed", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Anger": {"base": "Shrieking Essence of Anger", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Contempt": {"base": "Shrieking Essence of Contempt", "class": "Currency", "type": "currency normal"},

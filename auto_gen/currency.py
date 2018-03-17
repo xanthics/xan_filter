@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/16/2018(m/d/y) 23:08:36 UTC from "Standard" data
+# Created: 03/17/2018(m/d/y) 00:24:55 UTC from "Standard" data
 
 desc = "Currency Autogen"
 
@@ -24,7 +24,7 @@ items = {
 	"0 Cartographer's Chisel": {"base": "Cartographer's Chisel", "class": "Currency", "type": "currency normal"},
 	"0 Chaos Orb": {"base": "Chaos Orb", "class": "Currency", "type": "currency high"},
 	"0 Chaos Shard": {"base": "Chaos Shard", "class": "Currency", "type": "currency low"},
-	"0 Chromatic Orb": {"base": "Chromatic Orb", "class": "Currency", "type": "currency low"},
+	"0 Chromatic Orb": {"base": "Chromatic Orb", "class": "Currency", "type": "currency normal"},
 	"0 Divine Orb": {"base": "Divine Orb", "class": "Currency", "type": "currency very high"},
 	"0 Engineer's Orb": {"base": "Engineer's Orb", "class": "Currency", "type": "currency normal"},
 	"0 Engineer's Shard": {"base": "Engineer's Shard", "class": "Currency", "type": "currency low"},

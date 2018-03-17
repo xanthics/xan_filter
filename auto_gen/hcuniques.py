@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/16/2018(m/d/y) 23:08:36 UTC from "Hardcore" data
+# Created: 03/17/2018(m/d/y) 00:24:55 UTC from "Hardcore" data
 
 desc = "Unique"
 
@@ -14,6 +14,7 @@ items = {
 	"0 Callous Mask": {"base": "Callous Mask", "type": "unique very high"},
 	"0 Close Helmet": {"base": "Close Helmet", "type": "unique very high"},
 	"0 Conjurer Boots": {"base": "Conjurer Boots", "type": "unique very high"},
+	"0 Corrugated Buckler": {"base": "Corrugated Buckler", "type": "unique very high"},
 	"0 Desert Brigandine": {"base": "Desert Brigandine", "type": "unique very high"},
 	"0 Destiny Leather": {"base": "Destiny Leather", "type": "unique very high"},
 	"0 Elegant Foil": {"base": "Elegant Foil", "type": "unique very high"},
@@ -104,7 +105,6 @@ items = {
 	"1 Sapphire Ring": {"base": "Sapphire Ring", "type": "unique high"},
 	"1 Sentinel Jacket": {"base": "Sentinel Jacket", "type": "unique high"},
 	"1 Shadow Sceptre": {"base": "Shadow Sceptre", "type": "unique high"},
-	"1 Sharkskin Boots": {"base": "Sharkskin Boots", "type": "unique high"},
 	"1 Silken Hood": {"base": "Silken Hood", "type": "unique high"},
 	"1 Sorcerer Boots": {"base": "Sorcerer Boots", "type": "unique high"},
 	"1 Sorcerer Gloves": {"base": "Sorcerer Gloves", "type": "unique high"},
