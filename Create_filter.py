@@ -198,20 +198,20 @@ def main():
 		with open("xan.{}.show.filter".format(i[0]), "w", encoding='utf-8') as f:
 			f.write(buffer)
 			# Default for all other items
-			f.write("Show\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
+			f.write("Show\n\tDisableDropSound True\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
 		with open(path.expanduser(r"~\Documents\my games\Path of Exile\xan.{}.show.filter".format(i[0])), "w", encoding='utf-8') as f:
 			f.write(buffer)
 			# Default for all other items
-			f.write("Show\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
+			f.write("Show\n\tDisableDropSound True\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
 
 		with open("xan.{}.hide.filter".format(i[0]), "w", encoding='utf-8') as f:
 			f.write(buffer)
 			# Default for all other items
-			f.write("Hide\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
+			f.write("Hide\n\tDisableDropSound True\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
 		with open(path.expanduser(r"~\Documents\my games\Path of Exile\xan.{}.hide.filter".format(i[0])), "w", encoding='utf-8') as f:
 			f.write(buffer)
 			# Default for all other items
-			f.write("Hide\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
+			f.write("Hide\n\tDisableDropSound True\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
 
 
 if __name__ == "__main__":
