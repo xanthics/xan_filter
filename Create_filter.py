@@ -120,6 +120,7 @@ def gen_list_compact(items, desc):
 			t, c, f, o = ii.split(',', maxsplit=3)
 			b += "#{}\n".format(desc)
 			b += t
+			b += "\n\tDisableDropSound True"
 			if l[i][ii][0]:
 				b += "\n\tBaseType \"{}\"".format('" "'.join(sorted(l[i][ii])))
 			if c:

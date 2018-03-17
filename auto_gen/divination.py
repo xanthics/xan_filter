@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/17/2018(m/d/y) 00:24:55 UTC from "Standard" data
+# Created: 03/17/2018(m/d/y) 01:02:35 UTC from "Standard" data
 
 desc = "Divination Card"
 
@@ -78,6 +78,7 @@ items = {
 	"3 Dying Anguish": {"base": "Dying Anguish", "class": "Divination Card", "type": "divination low"},
 	"3 Her Mask": {"base": "Her Mask", "class": "Divination Card", "type": "divination low"},
 	"3 Lantador's Lost Love": {"base": "Lantador's Lost Love", "class": "Divination Card", "type": "divination low"},
+	"3 Might is Right": {"base": "Might is Right", "class": "Divination Card", "type": "divination low"},
 	"3 Rain of Chaos": {"base": "Rain of Chaos", "class": "Divination Card", "type": "divination low"},
 	"3 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},
 	"3 The Betrayal": {"base": "The Betrayal", "class": "Divination Card", "type": "divination low"},

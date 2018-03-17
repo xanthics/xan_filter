@@ -61,8 +61,8 @@ items = {
 	"127 Normal": {"class": "Maps", "other": ["ItemLevel <= 70", "DropLevel < 69"], "type": "map white good"},
 
 	"128 Normal": {"class": "Maps", "other": ["DropLevel >= 78"], "type": "map red"},
-	"129 Normal": {"class": "Maps", "other": ["DropLevel <= 72", "DisableDropSound True"], "type": "map white"},
-	"130 Normal": {"class": "Maps", 'other': ["DisableDropSound True"], "type": "map yellow"},
+	"129 Normal": {"class": "Maps", "other": ["DropLevel <= 72"], "type": "map white"},
+	"130 Normal": {"class": "Maps", "type": "map yellow"},
 
 	"74 Map Fragments": {"class": "Map Fragments", "type": "map white"},
 	"75 Misc map items": {"class": "Misc Map Items", 'other': ["PlayAlertSound 2 100"], "type": "show high"},
