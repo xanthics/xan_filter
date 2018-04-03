@@ -28,7 +28,12 @@ def convertname(l):
 
 # Convert a currency shorthand to full name.  returns a string
 def currencyclassify(cur, val, exa):
-	if 'Splinter' in cur and val <= 1 / 8:
+
+	# list of currency to always give a border to
+	ah = ["Splinter of Chayula", "Splinter of Xoph", "Splinter of Uul-Netol", "Splinter of Tul", "Splinter of Esh"
+	      "Chromatic Orb", "Perandus Coin"]
+
+	if cur in ah and val <= 1 / 8:
 		tier = 'show normal'
 	elif val >= exa * .5:
 		tier = 'currency extremely high'
