@@ -58,4 +58,11 @@ items = {
 	"02 60+ ring": {"class": "Rings", "other": ["Rarity Rare", "ItemLevel >= 60"], "type": "ignore"},
 	"02 60+ belt": {"class": "Belts", "other": ["Rarity Rare", "ItemLevel >= 60"], "type": "ignore"},
 
+	"9 Elder amulet": {"class": "Amulets", 'other': ["ElderItem True"], "type": "rare highlight"},
+	"9 Shaper amulet": {"class": "Amulets", 'other': ["ShaperItem True"], "type": "rare highlight"},
+	"9 Elder ring": {"class": "Rings", 'other': ["ElderItem True"], "type": "rare highlight"},
+	"9 Shaper ring": {"class": "Rings", 'other': ["ShaperItem True"], "type": "rare highlight"},
+	"9 Elder belt": {"class": "Belts", 'other': ["ElderItem True"], "type": "rare highlight"},
+	"9 Shaper belt": {"class": "Belts", 'other': ["ShaperItem True"], "type": "rare highlight"},
+
 }
