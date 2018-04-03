@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 04/03/2018(m/d/y) 00:45:57 UTC from "tmphardcore" data
+# Created: 04/03/2018(m/d/y) 01:15:27 UTC from "tmphardcore" data
 
 desc = "Unique"
 
@@ -63,6 +63,7 @@ items = {
 	"1 Siege Axe": {"base": "Siege Axe", "type": "unique high"},
 	"1 Steel Ring": {"base": "Steel Ring", "type": "unique high"},
 	"1 Stibnite Flask": {"base": "Stibnite Flask", "type": "unique high"},
+	"1 Stygian Vise": {"base": "Stygian Vise", "type": "unique high"},
 	"1 Temple Map": {"base": "Temple Map", "type": "unique high"},
 	"1 Titan Greaves": {"base": "Titan Greaves", "type": "unique high"},
 	"1 Torture Chamber Map": {"base": "Torture Chamber Map", "type": "unique high"},
@@ -78,6 +79,7 @@ items = {
 	"6 Assassin Bow": {"base": "Assassin Bow", "type": "unique special"},
 	"6 Carnal Mitts": {"base": "Carnal Mitts", "type": "unique special"},
 	"6 Carved Wand": {"base": "Carved Wand", "type": "unique special"},
+	"6 Chain Belt": {"base": "Chain Belt", "type": "unique special"},
 	"6 Cloth Belt": {"base": "Cloth Belt", "type": "unique special"},
 	"6 Cobalt Jewel": {"base": "Cobalt Jewel", "type": "unique special"},
 	"6 Coral Amulet": {"base": "Coral Amulet", "type": "unique special"},
@@ -99,6 +101,7 @@ items = {
 	"6 Granite Flask": {"base": "Granite Flask", "type": "unique special"},
 	"6 Great Crown": {"base": "Great Crown", "type": "unique special"},
 	"6 Harlequin Mask": {"base": "Harlequin Mask", "type": "unique special"},
+	"6 Heavy Belt": {"base": "Heavy Belt", "type": "unique special"},
 	"6 Hubris Circlet": {"base": "Hubris Circlet", "type": "unique special"},
 	"6 Imperial Bow": {"base": "Imperial Bow", "type": "unique special"},
 	"6 Imperial Claw": {"base": "Imperial Claw", "type": "unique special"},
@@ -132,6 +135,7 @@ items = {
 	"6 Ruby Flask": {"base": "Ruby Flask", "type": "unique special"},
 	"6 Rusted Sword": {"base": "Rusted Sword", "type": "unique special"},
 	"6 Rustic Sash": {"base": "Rustic Sash", "type": "unique special"},
+	"6 Sage Wand": {"base": "Sage Wand", "type": "unique special"},
 	"6 Sharktooth Arrow Quiver": {"base": "Sharktooth Arrow Quiver", "type": "unique special"},
 	"6 Sorcerer Boots": {"base": "Sorcerer Boots", "type": "unique special"},
 	"6 Steelscale Gauntlets": {"base": "Steelscale Gauntlets", "type": "unique special"},
@@ -171,7 +175,6 @@ items = {
 	"7 Buckskin Tunic": {"base": "Buckskin Tunic", "type": "unique low"},
 	"7 Burnished Spiked Shield": {"base": "Burnished Spiked Shield", "type": "unique low"},
 	"7 Carnal Armour": {"base": "Carnal Armour", "type": "unique low"},
-	"7 Chain Belt": {"base": "Chain Belt", "type": "unique low"},
 	"7 Chain Gloves": {"base": "Chain Gloves", "type": "unique low"},
 	"7 Clasped Boots": {"base": "Clasped Boots", "type": "unique low"},
 	"7 Cleaver": {"base": "Cleaver", "type": "unique low"},
@@ -217,7 +220,6 @@ items = {
 	"7 Harbinger Bow": {"base": "Harbinger Bow", "type": "unique low"},
 	"7 Harmonic Spirit Shield": {"base": "Harmonic Spirit Shield", "type": "unique low"},
 	"7 Headsman Axe": {"base": "Headsman Axe", "type": "unique low"},
-	"7 Heavy Belt": {"base": "Heavy Belt", "type": "unique low"},
 	"7 Highland Blade": {"base": "Highland Blade", "type": "unique low"},
 	"7 Holy Chainmail": {"base": "Holy Chainmail", "type": "unique low"},
 	"7 Imbued Wand": {"base": "Imbued Wand", "type": "unique low"},
@@ -266,7 +268,6 @@ items = {
 	"7 Royal Skean": {"base": "Royal Skean", "type": "unique low"},
 	"7 Sabre": {"base": "Sabre", "type": "unique low"},
 	"7 Sadist Garb": {"base": "Sadist Garb", "type": "unique low"},
-	"7 Sage Wand": {"base": "Sage Wand", "type": "unique low"},
 	"7 Sage's Robe": {"base": "Sage's Robe", "type": "unique low"},
 	"7 Samite Gloves": {"base": "Samite Gloves", "type": "unique low"},
 	"7 Samite Helmet": {"base": "Samite Helmet", "type": "unique low"},

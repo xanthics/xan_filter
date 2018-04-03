@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 04/03/2018(m/d/y) 00:45:57 UTC from "tmpstandard" data
+# Created: 04/03/2018(m/d/y) 01:15:27 UTC from "tmpstandard" data
 
 desc = "Unique"
 
@@ -40,7 +40,6 @@ items = {
 	"1 Courtyard Map": {"base": "Courtyard Map", "type": "unique high"},
 	"1 Cursed Crypt Map": {"base": "Cursed Crypt Map", "type": "unique high"},
 	"1 Cutlass": {"base": "Cutlass", "type": "unique high"},
-	"1 Destiny Leather": {"base": "Destiny Leather", "type": "unique high"},
 	"1 Full Wyrmscale": {"base": "Full Wyrmscale", "type": "unique high"},
 	"1 Gladiator Plate": {"base": "Gladiator Plate", "type": "unique high"},
 	"1 Hydrascale Gauntlets": {"base": "Hydrascale Gauntlets", "type": "unique high"},
@@ -55,7 +54,6 @@ items = {
 	"1 Reef Map": {"base": "Reef Map", "type": "unique high"},
 	"1 Ritual Sceptre": {"base": "Ritual Sceptre", "type": "unique high"},
 	"1 Rotfeather Talisman": {"base": "Rotfeather Talisman", "type": "unique high"},
-	"1 Royal Burgonet": {"base": "Royal Burgonet", "type": "unique high"},
 	"1 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "unique high"},
 	"1 Sanctified Life Flask": {"base": "Sanctified Life Flask", "type": "unique high"},
 	"1 Savant's Robe": {"base": "Savant's Robe", "type": "unique high"},
@@ -76,6 +74,7 @@ items = {
 	"6 Amber Amulet": {"base": "Amber Amulet", "type": "unique special"},
 	"6 Archon Kite Shield": {"base": "Archon Kite Shield", "type": "unique special"},
 	"6 Assassin Bow": {"base": "Assassin Bow", "type": "unique special"},
+	"6 Blunt Arrow Quiver": {"base": "Blunt Arrow Quiver", "type": "unique special"},
 	"6 Carnal Armour": {"base": "Carnal Armour", "type": "unique special"},
 	"6 Carnal Mitts": {"base": "Carnal Mitts", "type": "unique special"},
 	"6 Carved Wand": {"base": "Carved Wand", "type": "unique special"},
@@ -109,7 +108,6 @@ items = {
 	"6 Infernal Sword": {"base": "Infernal Sword", "type": "unique special"},
 	"6 Iron Circlet": {"base": "Iron Circlet", "type": "unique special"},
 	"6 Iron Mask": {"base": "Iron Mask", "type": "unique special"},
-	"6 Iron Ring": {"base": "Iron Ring", "type": "unique special"},
 	"6 Jade Amulet": {"base": "Jade Amulet", "type": "unique special"},
 	"6 Jade Hatchet": {"base": "Jade Hatchet", "type": "unique special"},
 	"6 Lacquered Garb": {"base": "Lacquered Garb", "type": "unique special"},
@@ -215,6 +213,7 @@ items = {
 	"7 Dream Mace": {"base": "Dream Mace", "type": "unique low"},
 	"7 Dusk Blade": {"base": "Dusk Blade", "type": "unique low"},
 	"7 Elder Sword": {"base": "Elder Sword", "type": "unique low"},
+	"7 Elegant Foil": {"base": "Elegant Foil", "type": "unique low"},
 	"7 Enameled Buckler": {"base": "Enameled Buckler", "type": "unique low"},
 	"7 Engraved Wand": {"base": "Engraved Wand", "type": "unique low"},
 	"7 Estoc": {"base": "Estoc", "type": "unique low"},
@@ -247,6 +246,7 @@ items = {
 	"7 Imbued Wand": {"base": "Imbued Wand", "type": "unique low"},
 	"7 Imperial Skean": {"base": "Imperial Skean", "type": "unique low"},
 	"7 Iron Hat": {"base": "Iron Hat", "type": "unique low"},
+	"7 Iron Ring": {"base": "Iron Ring", "type": "unique low"},
 	"7 Iron Staff": {"base": "Iron Staff", "type": "unique low"},
 	"7 Ironscale Boots": {"base": "Ironscale Boots", "type": "unique low"},
 	"7 Ironscale Gauntlets": {"base": "Ironscale Gauntlets", "type": "unique low"},
@@ -271,7 +271,6 @@ items = {
 	"7 Military Staff": {"base": "Military Staff", "type": "unique low"},
 	"7 Mind Cage": {"base": "Mind Cage", "type": "unique low"},
 	"7 Mirrored Spiked Shield": {"base": "Mirrored Spiked Shield", "type": "unique low"},
-	"7 Mosaic Kite Shield": {"base": "Mosaic Kite Shield", "type": "unique low"},
 	"7 Murder Mitts": {"base": "Murder Mitts", "type": "unique low"},
 	"7 Nailed Fist": {"base": "Nailed Fist", "type": "unique low"},
 	"7 Necromancer Circlet": {"base": "Necromancer Circlet", "type": "unique low"},
@@ -334,7 +333,6 @@ items = {
 	"7 Slaughter Knife": {"base": "Slaughter Knife", "type": "unique low"},
 	"7 Sledgehammer": {"base": "Sledgehammer", "type": "unique low"},
 	"7 Soldier Boots": {"base": "Soldier Boots", "type": "unique low"},
-	"7 Soldier Gloves": {"base": "Soldier Gloves", "type": "unique low"},
 	"7 Soldier Helmet": {"base": "Soldier Helmet", "type": "unique low"},
 	"7 Spidersilk Robe": {"base": "Spidersilk Robe", "type": "unique low"},
 	"7 Spike-Point Arrow Quiver": {"base": "Spike-Point Arrow Quiver", "type": "unique low"},
@@ -379,7 +377,6 @@ items = {
 	"7 Whalebone Rapier": {"base": "Whalebone Rapier", "type": "unique low"},
 	"7 Widowsilk Robe": {"base": "Widowsilk Robe", "type": "unique low"},
 	"7 Wild Leather": {"base": "Wild Leather", "type": "unique low"},
-	"7 Wool Gloves": {"base": "Wool Gloves", "type": "unique low"},
 	"7 Wrapped Mitts": {"base": "Wrapped Mitts", "type": "unique low"},
 	"7 Wyrmscale Gauntlets": {"base": "Wyrmscale Gauntlets", "type": "unique low"},
 	"7 Zealot Helmet": {"base": "Zealot Helmet", "type": "unique low"},
