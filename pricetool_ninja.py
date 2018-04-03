@@ -30,7 +30,7 @@ def convertname(l):
 def currencyclassify(cur, val, exa):
 
 	# list of currency to always give a border to
-	ah = ["Splinter of Chayula", "Splinter of Xoph", "Splinter of Uul-Netol", "Splinter of Tul", "Splinter of Esh"
+	ah = ["Splinter of Chayula", "Splinter of Xoph", "Splinter of Uul-Netol", "Splinter of Tul", "Splinter of Esh",
 	      "Chromatic Orb", "Perandus Coin"]
 
 	if cur in ah and val <= 1 / 8:

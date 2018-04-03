@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 04/03/2018(m/d/y) 00:45:57 UTC from "Standard" data
+# Created: 04/03/2018(m/d/y) 01:15:27 UTC from "Standard" data
 
 desc = "Unique"
 
@@ -62,6 +62,7 @@ items = {
 	"1 Cloth Belt Piece": {"base": "Cloth Belt Piece", "type": "unique high"},
 	"1 Corsair Sword": {"base": "Corsair Sword", "type": "unique high"},
 	"1 Cutlass": {"base": "Cutlass", "type": "unique high"},
+	"1 Destiny Leather": {"base": "Destiny Leather", "type": "unique high"},
 	"1 Ezomyte Burgonet": {"base": "Ezomyte Burgonet", "type": "unique high"},
 	"1 Full Wyrmscale": {"base": "Full Wyrmscale", "type": "unique high"},
 	"1 Gladiator Plate": {"base": "Gladiator Plate", "type": "unique high"},
