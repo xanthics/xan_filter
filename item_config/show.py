@@ -19,7 +19,7 @@ items = {
 	"04 84+ Hypnotic Abyss Jewel": {"base": "Hypnotic", "other": ["ItemLevel >= 84"], "class": "Abyss Jewel", "type": "show normal"},
 	"04 82+ Murderous Abyss Jewel": {"base": "Murderous", "other": ["ItemLevel >= 82"], "class": "Abyss Jewel", "type": "show high"},
 	"04 82+ Searching Eye Abyss Jewel": {"base": "Searching Eye", "other": ["ItemLevel >= 82"], "class": "Abyss Jewel", "type": "show high"},
-	"04 Abyss Jewel": {"class": "Abyss Jewel", "type": "normal"},
+	"05 Abyss Jewel": {"class": "Abyss Jewel", "type": "normal"},
 	"10 Talisman": {"class": "Amulets", 'other': ["Rarity >= Rare", "ItemLevel >= 70"], "base": "Talisman", "type": "show high"},
 	"11 Talisman": {"class": "Amulets", 'other': ["ItemLevel >= 70"], "base": "Talisman", "type": "show high"},
 	"12 Talisman": {"class": "Amulets", "base": "Talisman", "type": "show low"},

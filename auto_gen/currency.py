@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 04/03/2018(m/d/y) 01:15:27 UTC from "Standard" data
+# Created: 04/20/2018(m/d/y) 17:49:41 UTC from "Standard" data
 
 desc = "Currency Autogen"
 
@@ -23,11 +23,11 @@ items = {
 	"0 Blessing of Xoph": {"base": "Blessing of Xoph", "class": "Currency", "type": "currency high"},
 	"0 Cartographer's Chisel": {"base": "Cartographer's Chisel", "class": "Currency", "type": "currency normal"},
 	"0 Chaos Orb": {"base": "Chaos Orb", "class": "Currency", "type": "currency high"},
-	"0 Chaos Shard": {"base": "Chaos Shard", "class": "Currency", "type": "currency low"},
+	"0 Chaos Shard": {"base": "Chaos Shard", "class": "Currency", "type": "currency very low"},
 	"0 Chromatic Orb": {"base": "Chromatic Orb", "class": "Currency", "type": "currency normal"},
 	"0 Divine Orb": {"base": "Divine Orb", "class": "Currency", "type": "currency very high"},
 	"0 Engineer's Orb": {"base": "Engineer's Orb", "class": "Currency", "type": "currency normal"},
-	"0 Engineer's Shard": {"base": "Engineer's Shard", "class": "Currency", "type": "currency low"},
+	"0 Engineer's Shard": {"base": "Engineer's Shard", "class": "Currency", "type": "currency very low"},
 	"0 Eternal Orb": {"base": "Eternal Orb", "class": "Currency", "type": "currency extremely high"},
 	"0 Exalted Orb": {"base": "Exalted Orb", "class": "Currency", "type": "currency extremely high"},
 	"0 Exalted Shard": {"base": "Exalted Shard", "class": "Currency", "type": "currency very high"},
