@@ -5,14 +5,14 @@ This is a script to generate a filter file for Path of Exile using the included 
 [GGG Forum thread](https://www.pathofexile.com/forum/view-thread/1721195) with more information about the filter.
 
 **HIDE**
-* [Download Bestiary](xan.t.hide.filter?raw=true)
-* [Download Bestiary Hardcore](xan.thc.hide.filter?raw=true)
+* [Download Incursion](xan.t.hide.filter?raw=true)
+* [Download Incursion Hardcore](xan.thc.hide.filter?raw=true)
 * [Download Standard](xan.st.hide.filter?raw=true)
 * [Download Hardcore](xan.hc.hide.filter?raw=true)
 
 **SHOW**
-* [Download Bestiary](xan.t.show.filter?raw=true)
-* [Download Bestiary Hardcore](xan.thc.show.filter?raw=true)
+* [Download Incursion](xan.t.show.filter?raw=true)
+* [Download Incursion Hardcore](xan.thc.show.filter?raw=true)
 * [Download Standard](xan.s.show.filter?raw=true)
 * [Download Hardcore](xan.hc.show.filter?raw=true)
 

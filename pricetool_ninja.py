@@ -30,7 +30,7 @@ def convertname(l):
 def currencyclassify(cur, val, exa):
 
 	# list of currency to always give a border to
-	ah = ["Splinter of Chayula", "Splinter of Xoph", "Splinter of Uul-Netol", "Splinter of Tul", "Splinter of Esh", "Chromatic Orb", "Perandus Coin"]
+	ah = ["Splinter of Chayula", "Splinter of Xoph", "Splinter of Uul-Netol", "Splinter of Tul", "Splinter of Esh", "Chromatic Orb", "Perandus Coin", "Orb of Chance"]
 
 	if (cur in ah) and val <= 1 / 8:
 		tier = 'show normal'
@@ -302,18 +302,18 @@ def scrape_ninja():
 	leagues = ['Standard', 'Hardcore', 'tmpstandard', 'tmphardcore']
 
 	paths = {
-		'currency': 'http://cdn.poe.ninja/api/Data/GetCurrencyOverview?league={}',
-		'div': 'http://cdn.poe.ninja/api/Data/GetDivinationCardsOverview?league={}',
-		'essence': 'http://cdn.poe.ninja/api/Data/GetEssenceOverview?league={}',
-		'unique jewel': 'http://cdn.poe.ninja/api/Data/GetUniqueJewelOverview?league={}',
-		'unique map': 'http://cdn.poe.ninja/api/Data/GetUniqueMapOverview?league={}',
-		'unique flask': 'http://cdn.poe.ninja/api/Data/GetUniqueFlaskOverview?league={}',
-		'unique weapon': 'http://cdn.poe.ninja/api/Data/GetUniqueWeaponOverview?league={}',
-		'unique armor': 'http://cdn.poe.ninja/api/Data/GetUniqueArmourOverview?league={}',
-		'unique accessory': 'http://cdn.poe.ninja/api/Data/GetUniqueAccessoryOverview?league={}'
+		'currency': 'http://poe.ninja/api/Data/GetCurrencyOverview?league={}',
+		'div': 'http://poe.ninja/api/Data/GetDivinationCardsOverview?league={}',
+		'essence': 'http://poe.ninja/api/Data/GetEssenceOverview?league={}',
+		'unique jewel': 'http://poe.ninja/api/Data/GetUniqueJewelOverview?league={}',
+		'unique map': 'http://poe.ninja/api/Data/GetUniqueMapOverview?league={}',
+		'unique flask': 'http://poe.ninja/api/Data/GetUniqueFlaskOverview?league={}',
+		'unique weapon': 'http://poe.ninja/api/Data/GetUniqueWeaponOverview?league={}',
+		'unique armor': 'http://poe.ninja/api/Data/GetUniqueArmourOverview?league={}',
+		'unique accessory': 'http://poe.ninja/api/Data/GetUniqueAccessoryOverview?league={}'
 	}
 
-	os.environ['NO_PROXY'] = 'cdn.poe.ninja'
+	os.environ['NO_PROXY'] = 'poe.ninja'
 	requester = requests.session()
 
 	currency = {}

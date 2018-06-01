@@ -10,7 +10,7 @@ items = {
     "02 Quality Gem High": {"class": "Gems", "other": ["Quality >= 10"], "type": "gem very high"},
     "03 Quality Gem": {"class": "Gems", "other": ["Quality >= 1"], "type": "gem high"},
     "1 Portal": {"base": "Portal", "class": "Gems", "type": "gem normal"},
-    "1 Detonate Mines": {"base": "Detonate Mines", "class": "Gems", "type": "ignore"},
+    "1 Detonate Mines": {"base": "Detonate Mines", "class": "Gems", "type": "gem low"},
     "1 Empower": {"base": "Empower", "class": "Gems", "type": "gem normal"},
     "1 Enhance": {"base": "Enhance", "class": "Gems", "type": "ignore"},
     "1 Enlighten": {"base": "Enlighten", "class": "Gems", "type": "gem normal"},

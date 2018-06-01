@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 04/20/2018(m/d/y) 17:49:41 UTC from "Standard" data
+# Created: 05/08/2018(m/d/y) 17:51:54 UTC from "Standard" data
 
 desc = "Currency Autogen"
 
@@ -35,7 +35,7 @@ items = {
 	"0 Glassblower's Bauble": {"base": "Glassblower's Bauble", "class": "Currency", "type": "currency low"},
 	"0 Harbinger's Orb": {"base": "Harbinger's Orb", "class": "Currency", "type": "currency very high"},
 	"0 Harbinger's Shard": {"base": "Harbinger's Shard", "class": "Currency", "type": "currency high"},
-	"0 Horizon Shard": {"base": "Horizon Shard", "class": "Currency", "type": "currency normal"},
+	"0 Horizon Shard": {"base": "Horizon Shard", "class": "Currency", "type": "currency low"},
 	"0 Jeweller's Orb": {"base": "Jeweller's Orb", "class": "Currency", "type": "currency low"},
 	"0 Journeyman Cartographer's Sextant": {"base": "Journeyman Cartographer's Sextant", "class": "Currency", "type": "currency high"},
 	"0 Master Cartographer's Sextant": {"base": "Master Cartographer's Sextant", "class": "Currency", "type": "currency very high"},
@@ -45,7 +45,7 @@ items = {
 	"0 Orb of Annulment": {"base": "Orb of Annulment", "class": "Currency", "type": "currency very high"},
 	"0 Orb of Augmentation": {"base": "Orb of Augmentation", "class": "Currency", "type": "currency very low"},
 	"0 Orb of Binding": {"base": "Orb of Binding", "class": "Currency", "type": "currency normal"},
-	"0 Orb of Chance": {"base": "Orb of Chance", "class": "Currency", "type": "currency normal"},
+	"0 Orb of Chance": {"base": "Orb of Chance", "class": "Currency", "type": "show normal"},
 	"0 Orb of Fusing": {"base": "Orb of Fusing", "class": "Currency", "type": "currency normal"},
 	"0 Orb of Horizons": {"base": "Orb of Horizons", "class": "Currency", "type": "currency high"},
 	"0 Orb of Regret": {"base": "Orb of Regret", "class": "Currency", "type": "currency normal"},
@@ -59,7 +59,7 @@ items = {
 	"0 Scroll of Wisdom": {"base": "Scroll of Wisdom", "class": "Currency", "type": "currency very low"},
 	"0 Silver Coin": {"base": "Silver Coin", "class": "Currency", "type": "currency normal"},
 	"0 Splinter of Chayula": {"base": "Splinter of Chayula", "class": "Currency", "type": "currency high"},
-	"0 Splinter of Esh": {"base": "Splinter of Esh", "class": "Currency", "type": "show normal"},
+	"0 Splinter of Esh": {"base": "Splinter of Esh", "class": "Currency", "type": "currency normal"},
 	"0 Splinter of Tul": {"base": "Splinter of Tul", "class": "Currency", "type": "show normal"},
 	"0 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", "class": "Currency", "type": "currency normal"},
 	"0 Splinter of Xoph": {"base": "Splinter of Xoph", "class": "Currency", "type": "currency normal"},

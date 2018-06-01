@@ -41,8 +41,8 @@ from item_config import rares
 from item_config import recipe_item
 from item_config import show
 from item_config import t1_rares
-from item_config import warbands
 from item_config.gen_item_lists import genrareshighlight, genraresleveling, gennonrareleveling
+from item_config.magic import magicmods
 
 from theme_config import formatting
 
@@ -190,9 +190,9 @@ def main():
 		if leveling:
 			desc = 'item for leveling'
 			flags = 'All'  # see item_config/rare_gen - genraresleveling for valid values
-			buffer += gen_list(gennonrareleveling(flags, overlevel=5, maxlevel=35), desc)
+			buffer += gen_list(gennonrareleveling(flags, overlevel=5, maxlevel=55), desc)
 
-		buffer += gen_list(warbands.items, warbands.desc)  # Warband base type highlighting
+		buffer += gen_list(magicmods(), "Magic Items")  # magic base type highlighting
 
 		print("Writing files to {}".format(path.expanduser("~\\my game\\Path of Exile\\")))
 
@@ -217,5 +217,5 @@ def main():
 
 if __name__ == "__main__":
 	import pricetool_ninja
-	pricetool_ninja.scrape_ninja()
+	#pricetool_ninja.scrape_ninja()
 	main()
