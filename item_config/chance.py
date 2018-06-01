@@ -23,5 +23,10 @@ items = {
 	"0 Soul Taker": {"base": "Siege Axe", "type": "ignore"},
 	"0 Skyforth": {"base": "Sorcerer Boots", "type": "ignore"},
 	"0 Headhunter": {"base": "Leather Belt", "type": "ignore"},
-	"0 Tukohama's Fortress": {"base": "Ebony Tower Shield", "type": "ignore"}
+	"0 Tukohama's Fortress": {"base": "Ebony Tower Shield", "type": "ignore"},
+
+	"0 Boots of Ullr": {"base": "Silk Slippers", "type": "ignore"},
+	"0 Vis Mortis": {"base": "Necromancer Silks", "type": "ignore"},
+	"0 Dancing Dervish": {"base": "Reaver Sword", "type": "ignore"},
+
 }
