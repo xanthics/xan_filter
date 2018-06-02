@@ -190,7 +190,7 @@ def main():
 		if leveling:
 			desc = 'item for leveling'
 			flags = 'All'  # see item_config/rare_gen - genraresleveling for valid values
-			buffer += gen_list(gennonrareleveling(flags, overlevel=5, maxlevel=55), desc)
+			buffer += gen_list(gennonrareleveling(flags, overlevel=5, maxlevel=10), desc)
 
 		buffer += gen_list(magicmods(), "Magic Items")  # magic base type highlighting
 
