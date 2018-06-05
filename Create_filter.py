@@ -217,5 +217,5 @@ def main():
 
 if __name__ == "__main__":
 	import pricetool_ninja
-	#pricetool_ninja.scrape_ninja()
+	pricetool_ninja.scrape_ninja()
 	main()

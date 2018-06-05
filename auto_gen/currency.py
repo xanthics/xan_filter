@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 05/08/2018(m/d/y) 17:51:54 UTC from "Standard" data
+# Created: 06/05/2018(m/d/y) 00:37:09 UTC from "Standard" data
 
 desc = "Currency Autogen"
 
@@ -9,7 +9,7 @@ items = {
 	"0 Alchemy Shard": {"base": "Alchemy Shard", "class": "Currency", "type": "currency very low"},
 	"0 Alteration Shard": {"base": "Alteration Shard", "class": "Currency", "type": "currency very low"},
 	"0 Ancient Orb": {"base": "Ancient Orb", "class": "Currency", "type": "currency very high"},
-	"0 Ancient Shard": {"base": "Ancient Shard", "class": "Currency", "type": "currency high"},
+	"0 Ancient Shard": {"base": "Ancient Shard", "class": "Currency", "type": "currency very high"},
 	"0 Annulment Shard": {"base": "Annulment Shard", "class": "Currency", "type": "currency normal"},
 	"0 Apprentice Cartographer's Sextant": {"base": "Apprentice Cartographer's Sextant", "class": "Currency", "type": "currency high"},
 	"0 Armourer's Scrap": {"base": "Armourer's Scrap", "class": "Currency", "type": "currency very low"},
@@ -17,7 +17,7 @@ items = {
 	"0 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", "class": "Currency", "type": "currency very low"},
 	"0 Blessed Orb": {"base": "Blessed Orb", "class": "Currency", "type": "currency normal"},
 	"0 Blessing of Chayula": {"base": "Blessing of Chayula", "class": "Currency", "type": "currency extremely high"},
-	"0 Blessing of Esh": {"base": "Blessing of Esh", "class": "Currency", "type": "currency very high"},
+	"0 Blessing of Esh": {"base": "Blessing of Esh", "class": "Currency", "type": "currency high"},
 	"0 Blessing of Tul": {"base": "Blessing of Tul", "class": "Currency", "type": "currency high"},
 	"0 Blessing of Uul-Netol": {"base": "Blessing of Uul-Netol", "class": "Currency", "type": "currency very high"},
 	"0 Blessing of Xoph": {"base": "Blessing of Xoph", "class": "Currency", "type": "currency high"},
@@ -32,11 +32,11 @@ items = {
 	"0 Exalted Orb": {"base": "Exalted Orb", "class": "Currency", "type": "currency extremely high"},
 	"0 Exalted Shard": {"base": "Exalted Shard", "class": "Currency", "type": "currency very high"},
 	"0 Gemcutter's Prism": {"base": "Gemcutter's Prism", "class": "Currency", "type": "currency high"},
-	"0 Glassblower's Bauble": {"base": "Glassblower's Bauble", "class": "Currency", "type": "currency low"},
+	"0 Glassblower's Bauble": {"base": "Glassblower's Bauble", "class": "Currency", "type": "currency very low"},
 	"0 Harbinger's Orb": {"base": "Harbinger's Orb", "class": "Currency", "type": "currency very high"},
 	"0 Harbinger's Shard": {"base": "Harbinger's Shard", "class": "Currency", "type": "currency high"},
-	"0 Horizon Shard": {"base": "Horizon Shard", "class": "Currency", "type": "currency low"},
-	"0 Jeweller's Orb": {"base": "Jeweller's Orb", "class": "Currency", "type": "currency low"},
+	"0 Horizon Shard": {"base": "Horizon Shard", "class": "Currency", "type": "currency normal"},
+	"0 Jeweller's Orb": {"base": "Jeweller's Orb", "class": "Currency", "type": "currency normal"},
 	"0 Journeyman Cartographer's Sextant": {"base": "Journeyman Cartographer's Sextant", "class": "Currency", "type": "currency high"},
 	"0 Master Cartographer's Sextant": {"base": "Master Cartographer's Sextant", "class": "Currency", "type": "currency very high"},
 	"0 Mirror Shard": {"base": "Mirror Shard", "class": "Currency", "type": "currency extremely high"},
