@@ -136,13 +136,13 @@ def gen_list_compact(items, desc):
 
 
 # main function for creating a filter
-def main():
+def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 	# gen_list = gen_list_full
 	gen_list = gen_list_compact
-	leagues = [("st", "Standard", uniques, divination, stcurrency, stessence),
-			   ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence),
-			   ("t", "Temp Standard", tuniques, tdivination, tcurrency, tessence),
-			   ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence)]
+	lookup_leagues = {'Standard': ("st", "Standard", uniques, divination, stcurrency, stessence),
+					  'Hardcore': ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence),
+					  'tmpstandard': ("t", "Temp Sofcore", tuniques, tdivination, tcurrency, tessence),
+					  'tmphardcore': ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence)}
 
 	leveling = True  # toggle to show leveling items
 
@@ -154,22 +154,22 @@ def main():
 # The most current version of code can always be found at https://github.com/xanthics/poe_filter
 #**************************************************************
 
-""".format(i[1], datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'))
+""".format(lookup_leagues[i][1], datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'))
 
 		buffer += gen_list(show.items, show.desc)  # Always show these items
 		buffer += gen_list(hide.items, hide.desc)  # Always hide these items
-		if i[0] not in ['st', 'hc']:
+		if lookup_leagues[i][0] not in ['st', 'hc']:
 			buffer += gen_list(challenges.items, challenges.desc)
 		buffer += gen_list(labyrinth.items, labyrinth.desc)
-		buffer += gen_list(i[4].items, i[4].desc)  # Autogen currency values
+		buffer += gen_list(lookup_leagues[i][4].items, lookup_leagues[i][4].desc)  # Autogen currency values
 		# buffer += gen_list(essences.items, essences.desc)  # Essences
-		buffer += gen_list(i[5].items, i[5].desc)  # Autogen Essences
+		buffer += gen_list(lookup_leagues[i][5].items, lookup_leagues[i][5].desc)  # Autogen Essences
 		buffer += gen_list(currency.items, currency.desc)  # Currency
 		buffer += gen_list(gems.items, gems.desc)  # Gems
-		buffer += gen_list(i[2].items, i[2].desc)  # uniques
+		buffer += gen_list(lookup_leagues[i][2].items, lookup_leagues[i][2].desc)  # uniques
 		# buffer += gen_list(recipe_item.items, recipe_item.desc)  # Items for vendor recipe
 		buffer += gen_list(maps.items, maps.desc)  # maps
-		buffer += gen_list(i[3].items, i[3].desc)  # divination cards
+		buffer += gen_list(lookup_leagues[i][3].items, lookup_leagues[i][3].desc)  # divination cards
 		buffer += gen_list(flask.items, flask.desc)  # Flasks
 		#buffer += gen_list(t1_rares.items, t1_rares.desc)
 		if leveling:
@@ -196,20 +196,20 @@ def main():
 
 		print("Writing files to {}".format(path.expanduser("~\\my game\\Path of Exile\\")))
 
-		with open("xan.{}.show.filter".format(i[0]), "w", encoding='utf-8') as f:
+		with open("xan.{}.show.filter".format(lookup_leagues[i][0]), "w", encoding='utf-8') as f:
 			f.write(buffer)
 			# Default for all other items
 			f.write("Show\n\tDisableDropSound True\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
-		with open(path.expanduser(r"~\Documents\my games\Path of Exile\xan.{}.show.filter".format(i[0])), "w", encoding='utf-8') as f:
+		with open(path.expanduser(r"~\Documents\my games\Path of Exile\xan.{}.show.filter".format(lookup_leagues[i][0])), "w", encoding='utf-8') as f:
 			f.write(buffer)
 			# Default for all other items
 			f.write("Show\n\tDisableDropSound True\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
 
-		with open("xan.{}.hide.filter".format(i[0]), "w", encoding='utf-8') as f:
+		with open("xan.{}.hide.filter".format(lookup_leagues[i][0]), "w", encoding='utf-8') as f:
 			f.write(buffer)
 			# Default for all other items
 			f.write("Hide\n\tDisableDropSound True\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
-		with open(path.expanduser(r"~\Documents\my games\Path of Exile\xan.{}.hide.filter".format(i[0])), "w", encoding='utf-8') as f:
+		with open(path.expanduser(r"~\Documents\my games\Path of Exile\xan.{}.hide.filter".format(lookup_leagues[i][0])), "w", encoding='utf-8') as f:
 			f.write(buffer)
 			# Default for all other items
 			f.write("Hide\n\tDisableDropSound True\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
@@ -217,5 +217,7 @@ def main():
 
 if __name__ == "__main__":
 	import pricetool_ninja
-	pricetool_ninja.scrape_ninja()
-	main()
+	league = ['Standard', 'Hardcore', 'tmpstandard', 'tmphardcore']
+#	league = ['tmpstandard']
+#	pricetool_ninja.scrape_ninja(league)
+	main(league)
