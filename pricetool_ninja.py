@@ -14,6 +14,17 @@ header = '''#!/usr/bin/python
 '''
 
 
+# Helper function to tier items based on value of ex
+def gentierval(exa):
+	ret = {'extremely': exa + 1 if exa > 50 else 50,
+		   'very': exa // 10 if exa > 50 else 5,
+		   'high': 1,
+		   'normal': 1/4,
+		   'low': 1/15,
+		   'min': 1/30}
+	return ret
+
+
 # Helper function to convert a league name to a file prefix
 def convertname(l):
 	if l == 'Standard':
@@ -27,40 +38,39 @@ def convertname(l):
 
 
 # Convert a currency shorthand to full name.  returns a string
-def currencyclassify(cur, val, exa):
+def currencyclassify(cur, val, curvals):
 
 	# list of currency to always give a border to
 	ah = ["Splinter of Chayula", "Splinter of Xoph", "Splinter of Uul-Netol", "Splinter of Tul", "Splinter of Esh", "Chromatic Orb", "Perandus Coin", "Orb of Chance"]
-	if (cur in ah) and val <= exa / 500:
+	if (cur in ah) and val <= curvals['normal']:
 		tier = 'show normal'
-	elif val > exa:
+	elif val >= curvals['extremely']:
 		tier = 'currency extremely high'
-	elif val > exa / 10:
+	elif val >= curvals['very']:
 		tier = 'currency very high'
-	elif val > exa / 100:
+	elif val >= curvals['high']:
 		tier = 'currency high'
-	elif val > exa / 500:
+	elif val >= curvals['normal']:
 		tier = 'currency normal'
-	elif val > exa / 1500:
+	elif val > curvals['low']:
 		tier = 'currency low'
-	elif val > exa / 3000:
+	elif val > curvals['min']:
 		tier = 'currency very low'
 	else:
-		print(cur, "< 3000, Hidden")
-#		#tier = 'currency very low'
-		tier = 'hide'
+		tier = 'currency very low'
+		#tier = 'hide'
 	return "0 {0}\": {{\"base\": \"{0}\", \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier)
 
 
 # given a league grouped list of currency determine all unique entries and then output for each league
 def gen_currency(currency_list, league):
-	defaults = {"Exalted Orb": 45.0, "Chaos Orb": 1.0, "Orb of Fusing": 0.5, "Regal Orb": 1, "Orb of Alteration": 1 / 16, "Orb of Alchemy": 1 / 3, "Jeweller's Orb": 1 / 8, "Gemcutter's Prism": 1,
+	defaults = {"Exalted Orb": 80.0, "Chaos Orb": 1.0, "Orb of Fusing": 0.5, "Regal Orb": 1, "Orb of Alteration": 1 / 16, "Orb of Alchemy": 1 / 3, "Jeweller's Orb": 1 / 8, "Gemcutter's Prism": 1,
 	            "Divine Orb": 15.0, "Orb of Scouring": 0.5, "Blessed Orb": 0.5, "Vaal Orb": 1, "Orb of Chance": 1 / 8, "Orb of Regret": 1.0, "Chromatic Orb": 1 / 15, "Cartographer's Chisel": 0.25,
 	            "Silver Coin": 1 / 3, "Glassblower's Bauble": 1 / 8, "Orb of Augmentation": 1 / 32, "Orb of Transmutation": 1 / 64, "Perandus Coin": 1 / 45, "Apprentice Cartographer's Sextant": .5,
 	            "Journeyman Cartographer's Sextant": 2, "Master Cartographer's Sextant": 5, 'Eternal Orb': 300, "Blessing of Chayula": 300, "Blessing of Esh": 30, "Blessing of Uul-Netol": 10,
 	            "Blessing of Tul": 2, "Blessing of Xoph": 3, "Splinter of Chayula": 3, "Splinter of Xoph": 0.333, "Splinter of Uul-Netol": 0.5, "Splinter of Tul": 1 / 5, "Splinter of Esh": 0.333,
 	            "Blacksmith's Whetstone": 1 / 30, "Portal Scroll": 1 / 100, "Armourer's Scrap": 1 / 50, "Mirror Shard": 52, "Ancient Orb": 7, "Harbinger's Orb": 4, "Orb of Annulment": 3, "Exalted Shard": 7 / 3,
-	            "Orb of Horizons": 2 / 3, "Engineer's Orb": 0.5, "Annulment Shard": 0.5, "Orb of Binding": 1 / 4, "Scroll of Wisdom": 1 / 100, 'Chaos Shard': 1 / 20}
+	            "Orb of Horizons": 2 / 3, "Engineer's Orb": 0.5, "Annulment Shard": 0.5, "Orb of Binding": 1 / 4, "Scroll of Wisdom": 1 / 100, 'Chaos Shard': 1 / 20, 'Mirror of Kalandra': 30000}
 
 	shards = {'Binding Shard': 'Orb of Binding', 'Horizon Shard': 'Orb of Horizons', 'Harbinger\'s Shard': 'Harbinger\'s Orb', 'Engineer\'s Shard': 'Engineer\'s Orb', 'Ancient Shard': 'Ancient Orb',
 	          'Regal Shard': 'Regal Orb', 'Alchemy Shard': 'Orb of Alchemy', 'Alteration Shard': 'Orb of Alteration', 'Transmutation Shard': 'Orb of Transmutation', 'Scroll Fragment': 'Scroll of Wisdom'}
@@ -71,18 +81,21 @@ def gen_currency(currency_list, league):
 
 	if 'Exalted Orb' not in currency_list:
 		currency_list['Exalted Orb'] = defaults['Exalted Orb']
+
+	curvals = gentierval(currency_list['Exalted Orb'])
+
 	for cur in sorted(c_list):
 		if cur in currency_list:
 			# print(cur, currency_list[l][cur], l)
-			retstr = currencyclassify(cur, currency_list[cur], currency_list['Exalted Orb'])
+			retstr = currencyclassify(cur, currency_list[cur], curvals)
 			curval += '\t"{},\n'.format(retstr)
 		else:
 			if cur in shards and shards[cur] not in currency_list:
-				retstr = currencyclassify(cur, defaults[shards[cur]] / 10, currency_list['Exalted Orb'])
+				retstr = currencyclassify(cur, defaults[shards[cur]] / 5, curvals)
 			elif cur in shards and shards[cur] in currency_list:
-				retstr = currencyclassify(cur, currency_list[shards[cur]] / 10, currency_list['Exalted Orb'])
+				retstr = currencyclassify(cur, currency_list[shards[cur]] / 5, curvals)
 			else:
-				retstr = currencyclassify(cur, defaults[cur], currency_list['Exalted Orb'])
+				retstr = currencyclassify(cur, defaults[cur], curvals)
 			curval += '\t"{},\n'.format(retstr)
 			print('No data for {} in {}.  Using default,'.format(cur, league))
 	curval += u'}\n'
@@ -100,16 +113,16 @@ def gen_currency(currency_list, league):
 		#print("Unknown currency: {}".format(u))
 		print('"{}": 0,'.format(u), end=' ')
 	print()
-	return currency_list["Exalted Orb"]
+	return curvals
 
 
 # Convert a essence value to string.  returns a string
-def essenceclassify(cur, val, exval):
-	if val > exval / 10:
+def essenceclassify(cur, val, curvals):
+	if val >= curvals['very']:
 		tier = 'currency very high'
-	elif val > exval / 50:
+	elif val >= curvals['high']:
 		tier = 'currency high'
-	elif val > exval / 200:
+	elif val >= curvals['normal']:
 		tier = 'currency normal'
 	else:
 		return ''
@@ -119,11 +132,11 @@ def essenceclassify(cur, val, exval):
 
 
 # given a league grouped list of essences determine all unique entries and then output for each league
-def gen_essence(essence_list, league, exval):
+def gen_essence(essence_list, league, curvals):
 	curval = '''{}\ndesc = "Essence Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
 
 	for cur in sorted(essence_list.keys()):
-		retstr = essenceclassify(cur, essence_list[cur], exval)
+		retstr = essenceclassify(cur, essence_list[cur], curvals)
 		if retstr:
 			curval += '\t"{},\n'.format(retstr)
 
@@ -175,7 +188,7 @@ def gen_div_default(div_list):
 	return cards
 
 
-def gen_div(div_list, league, exval):
+def gen_div(div_list, league, curvals):
 	substringcards = find_substrings(div_list)
 
 	# Cards that are so rare they may not even be on Standard
@@ -216,11 +229,11 @@ def gen_div(div_list, league, exval):
 	for c in div_list:
 		if c in predefinedcards:
 			pass
-		elif div_list[c] > exval / 10:
+		elif div_list[c] >= curvals['very']:
 			items['high'].append(c)
-		elif div_list[c] > exval / 50:
+		elif div_list[c] >= curvals['high']:
 			items['normal'].append(c)
-		elif div_list[c] <= exval / 200:
+		elif div_list[c] <= curvals['normal']:
 			items['low'].append(c)
 	with open('auto_gen\\{}divination.py'.format(name), 'w', encoding='utf-8') as f:
 		f.write(u'''{}\ndesc = "Divination Card"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league)))
@@ -228,11 +241,11 @@ def gen_div(div_list, league, exval):
 			if ii in bcards:
 				lvl = 'hide'
 				bcards.remove(ii)
-			elif div_list[ii] > exval / 10:
+			elif div_list[ii] >= curvals['very']:
 				lvl = 'divination very high'
-			elif div_list[ii] > exval / 50:
+			elif div_list[ii] >= curvals['high']:
 				lvl = 'divination high'
-			elif div_list[ii] <= exval / 200:
+			elif div_list[ii] <= curvals['normal']:
 				lvl = 'divination low'
 			else:
 				lvl = 'divination normal'
@@ -248,7 +261,7 @@ def gen_div(div_list, league, exval):
 		f.write(u'\t"9 Other uniques": {"class": "Divination Card", "type": "divination normal"}\n}\n')
 
 
-def gen_unique(unique_list, league, exval):
+def gen_unique(unique_list, league, curvals):
 	name = convertname(league)
 	if 'Catacombs Map' in unique_list:
 		del unique_list['Catacombs Map']
@@ -258,18 +271,18 @@ def gen_unique(unique_list, league, exval):
 	for u in unique_list.keys():
 		# If a unique shares a base and has at least 1 value that is over 2c while average is low, give it a special border
 		if len(unique_list[u]) > 1:
-			if max(unique_list[u]) > exval / 10 > min(unique_list[u]):
+			if max(unique_list[u]) > curvals['very'] > min(unique_list[u]):
 				items['special'].append(u)
 				continue
 			unique_list[u] = min(unique_list[u])
 		else:
 			unique_list[u] = unique_list[u][0]
 
-		if unique_list[u] > exval:
+		if unique_list[u] > curvals['extremely']:
 			items['very high'].append(u)
-		elif unique_list[u] > exval / 10:
+		elif unique_list[u] > curvals['very']:
 			items['high'].append(u)
-		elif unique_list[u] < exval / 100:
+		elif unique_list[u] < curvals['low']:
 			items['low'].append(u)
 
 	with open('auto_gen\\{}uniques.py'.format(name), 'w', encoding='utf-8') as f:
@@ -287,6 +300,13 @@ def gen_unique(unique_list, league, exval):
 
 # Entry point for getting price data from poe.ninja
 def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
+	# list of all fated uniques to remove them from unique price consideration
+	fated = ['Kaltensoul', 'Thirst for Horrors', 'Atziri\'s Reflection', 'The Oak', 'Ezomyte Hold', 'Frostferno', 'Martyr\'s Crown', 'Asenath\'s Chant', 'Deidbellow',
+			 'Malachai\'s Awakening', 'Wall of Brambles', 'Wildwrap', 'Fox\'s Fortune', 'Crystal Vault', 'Windshriek', 'Greedtrap', 'Shavronne\'s Gambit', 'Duskblight',
+			 'Sunspite', 'Hrimburn', 'Doedre\'s Malevolence', 'Amplification Rod', 'Corona Solaris', 'Sanguine Gambol', 'The Gryphon', 'Dreadsurge', 'Dreadbeak', 'Cameria\'s Avarice',
+			 'Silverbough', 'The Tempest', 'Doomfletch\'s Prism', 'Death\'s Opus', 'Mirebough', 'Realm Ender', 'The Stormwall', 'The Cauteriser', 'Queen\'s Escape', 'The Dancing Duo',
+			 'Hrimnor\'s Dirge', 'Panquetzaliztli', 'Geofri\'s Devotion', 'Voidheart', 'Kaom\'s Way', 'Winterweave', 'Timetwist', 'Ngamahu Tiki', 'Karui Charge', 'The Effigon',
+			 'The Tactician', 'The Nomad', 'The Signal Fire', 'Cragfall', 'Hyrri\'s Demise', 'Chaber Cairn', 'Geofri\'s Legacy', 'The Iron Fortress']
 
 	paths = {
 		'currency': 'http://poe.ninja/api/Data/GetCurrencyOverview?league={}',
@@ -332,12 +352,14 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 					for ii in data[i]:
 						if 'links' in ii and ii['links']:
 							continue
+						if ii['name'] in fated:
+							continue
 						uniques[ii['baseType']].append(ii['chaosValue'])
 
-		exval = gen_currency(currency, league)
-		gen_div(divs, league, exval)
-		gen_essence(essences, league, exval)
-		gen_unique(uniques, league, exval)
+		curvals = gen_currency(currency, league)
+		gen_div(divs, league, curvals)
+		gen_essence(essences, league, curvals)
+		gen_unique(uniques, league, curvals)
 
 
 if __name__ == '__main__':
