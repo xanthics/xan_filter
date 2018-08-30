@@ -1,6 +1,6 @@
 #**************************************************************
 # Welcome to xan.filter, a Python generated loot filter for PoE
-# This filter was generated for Hardcore on 08/30/2018(m/d/y) 03:21:32 UTC
+# This filter was generated for Hardcore on 08/30/2018(m/d/y) 05:27:58 UTC
 # The most current version of code can always be found at https://github.com/xanthics/poe_filter
 #**************************************************************
 
@@ -408,7 +408,7 @@ Show
 
 #Currency catchall and special currency
 Show
-	BaseType "Albino Rhoa Feather" "Mirror of Kalandra"
+	BaseType "Albino Rhoa Feather"
 	Class "Currency"
 	MinimapIcon 0 Yellow Circle
 	PlayAlertSound 5 300
@@ -476,7 +476,7 @@ Show
 
 #gems
 Show
-	BaseType "Added Chaos Damage" "Detonate Mines" "Vaal"
+	BaseType "Added Chaos Damage Support" "Detonate Mines"
 	Class "Gems"
 	SetBackgroundColor 0 0 0 220
 	SetFontSize 25
@@ -484,10 +484,18 @@ Show
 
 #gems
 Show
-	BaseType "Empower" "Enlighten" "Portal"
+	BaseType "Empower Support" "Enlighten Support" "Portal"
 	Class "Gems"
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 27 162 155
+	DisableDropSound True
+
+#gems
+Show
+	BaseType "Vaal"
+	Class "Gems"
+	SetBackgroundColor 0 0 0 220
+	SetFontSize 25
 	DisableDropSound True
 
 #Unique
@@ -1184,7 +1192,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Iron Hat"
+	BaseType "Iron Hat" "Nailed Fist" "Rusted Spike"
 	ItemLevel <= 10
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1194,7 +1202,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Chainmail Vest" "Corroded Blade" "Driftwood Maul" "Scale Vest" "Vine Circlet"
+	BaseType "Chainmail Vest" "Corroded Blade" "Driftwood Maul" "Goathide Buckler" "Scale Vest" "Vine Circlet"
 	ItemLevel <= 11
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1204,7 +1212,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Gnarled Branch" "Iron Greaves" "Padded Vest" "Rawhide Gloves" "Shabby Jerkin" "Short Bow" "Stone Axe" "Wool Shoes"
+	BaseType "Gnarled Branch" "Iron Greaves" "Padded Vest" "Rawhide Gloves" "Shabby Jerkin" "Short Bow" "Stone Axe" "Twig Spirit Shield" "Wool Shoes"
 	ItemLevel <= 12
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1214,7 +1222,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Leather Cap" "Scare Mask"
+	BaseType "Copper Sword" "Darkwood Sceptre" "Leather Cap" "Scare Mask" "Skinning Knife" "Tribal Club"
 	ItemLevel <= 13
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1224,7 +1232,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Iron Gauntlets" "Simple Robe"
+	BaseType "Corroded Tower Shield" "Iron Gauntlets" "Jade Hatchet" "Simple Robe"
 	ItemLevel <= 14
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1234,7 +1242,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Longsword" "Rawhide Boots" "Rusted Coif" "Tribal Maul" "Wool Gloves"
+	BaseType "Goat's Horn" "Longsword" "Rawhide Boots" "Rotted Round Shield" "Rusted Coif" "Sharktooth Claw" "Spiked Bundle" "Tribal Maul" "Whalebone Rapier" "Wool Gloves"
 	ItemLevel <= 15
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1244,7 +1252,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Battered Helm" "Chain Boots" "Jade Chopper" "Primitive Staff"
+	BaseType "Battered Helm" "Chain Boots" "Jade Chopper" "Plank Kite Shield" "Primitive Staff"
 	ItemLevel <= 16
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1264,7 +1272,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Fishscale Gauntlets"
+	BaseType "Bronze Sceptre" "Carving Knife" "Fishscale Gauntlets" "Sabre" "Spiked Club" "Yew Spirit Shield"
 	ItemLevel <= 18
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1274,7 +1282,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Wrapped Boots" "Wrapped Mitts"
+	BaseType "Boarding Axe" "Pine Buckler" "Wrapped Boots" "Wrapped Mitts"
 	ItemLevel <= 19
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1284,7 +1292,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Bastard Sword" "Chainmail Tunic" "Chestplate" "Iron Circlet" "Light Brigandine" "Plague Mask" "Strapped Leather"
+	BaseType "Awl" "Bastard Sword" "Battered Foil" "Chainmail Tunic" "Chestplate" "Iron Circlet" "Light Brigandine" "Plague Mask" "Rawhide Tower Shield" "Strapped Leather"
 	ItemLevel <= 20
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1294,7 +1302,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Composite Bow" "Cone Helmet" "Leatherscale Boots" "Long Staff" "Oiled Vest" "Silken Vest" "Woodsplitter"
+	BaseType "Carved Wand" "Composite Bow" "Cone Helmet" "Leatherscale Boots" "Long Staff" "Oiled Vest" "Silken Vest" "Woodsplitter"
 	ItemLevel <= 21
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1314,7 +1322,17 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Copper Plate" "Goathide Gloves" "Ringmail Coat" "Scale Doublet"
+	BaseType "Broad Sword" "Driftwood Spiked Shield" "Fir Round Shield" "Linden Kite Shield" "Quartz Sceptre" "Stiletto" "Stone Hammer"
+	ItemLevel <= 23
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 30
+	DisableDropSound True
+
+#Rare item for leveling
+Show
+	BaseType "Cleaver" "Copper Plate" "Goathide Gloves" "Ringmail Coat" "Scale Doublet"
 	ItemLevel <= 24
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1324,7 +1342,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Goathide Boots" "Padded Jacket" "Sledgehammer" "Soldier Helmet" "Two-Handed Sword" "Velvet Slippers"
+	BaseType "Basket Rapier" "Cat's Paw" "Goathide Boots" "Padded Jacket" "Sledgehammer" "Soldier Helmet" "Two-Handed Sword" "Velvet Slippers"
 	ItemLevel <= 25
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1334,7 +1352,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Iron Staff" "Plated Gauntlets" "Poleaxe" "Recurve Bow" "Steel Greaves"
+	BaseType "Bone Spirit Shield" "Iron Staff" "Painted Buckler" "Plated Gauntlets" "Poleaxe" "Recurve Bow" "Steel Greaves"
 	ItemLevel <= 26
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1344,7 +1362,17 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Buckskin Tunic" "Scholar's Robe" "Velvet Gloves"
+	BaseType "Boot Knife" "Cedar Tower Shield" "Iron Sceptre" "Quartz Wand" "War Hammer" "War Sword"
+	ItemLevel <= 27
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 30
+	DisableDropSound True
+
+#Rare item for leveling
+Show
+	BaseType "Broad Axe" "Buckskin Tunic" "Scholar's Robe" "Velvet Gloves"
 	ItemLevel <= 28
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1354,7 +1382,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Barbute Helmet" "Torture Cage"
+	BaseType "Barbute Helmet" "Blinder" "Jagged Foil" "Torture Cage"
 	ItemLevel <= 29
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1364,7 +1392,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Etched Greatsword" "Ironscale Gauntlets" "Jagged Maul" "Strapped Boots"
+	BaseType "Alloyed Spiked Shield" "Etched Greatsword" "Ironscale Gauntlets" "Jagged Maul" "Reinforced Kite Shield" "Strapped Boots" "Studded Round Shield"
 	ItemLevel <= 30
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1374,7 +1402,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Bone Bow" "Chainmail Doublet" "Coiled Staff" "Double Axe" "Infantry Brigandine" "Iron Mask" "Oiled Coat" "Ringmail Boots" "Silken Garb" "War Plate" "Wild Leather"
+	BaseType "Ancient Sword" "Bladed Mace" "Bone Bow" "Chainmail Doublet" "Coiled Staff" "Copper Kris" "Double Axe" "Infantry Brigandine" "Iron Mask" "Ochre Sceptre" "Oiled Coat" "Ringmail Boots" "Silken Garb" "Tarnished Spirit Shield" "War Plate" "Wild Leather"
 	ItemLevel <= 31
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1384,7 +1412,17 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Ironscale Boots" "Leather Hood"
+	BaseType "Arming Axe" "Hammered Buckler"
+	ItemLevel <= 32
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 30
+	DisableDropSound True
+
+#Rare item for leveling
+Show
+	BaseType "Antique Rapier" "Copper Tower Shield" "Ironscale Boots" "Leather Hood" "Spiraled Wand" "Timeworn Claw"
 	ItemLevel <= 33
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1404,7 +1442,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Brass Maul" "Full Leather" "Full Plate" "Full Ringmail" "Full Scale Armour" "Mage's Vestment" "Ornate Sword" "Ringmail Gloves" "Royal Bow" "Scarlet Raiment" "Silk Slippers"
+	BaseType "Brass Maul" "Ceremonial Mace" "Elegant Sword" "Full Leather" "Full Plate" "Full Ringmail" "Full Scale Armour" "Mage's Vestment" "Ornate Sword" "Ringmail Gloves" "Ritual Sceptre" "Royal Bow" "Scarlet Raiment" "Silk Slippers"
 	ItemLevel <= 35
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1414,7 +1452,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Deerskin Gloves" "Gilded Axe" "Plated Greaves" "Royal Staff" "Visored Sallet"
+	BaseType "Burnished Spiked Shield" "Decorative Axe" "Deerskin Gloves" "Gilded Axe" "Jingling Spirit Shield" "Plated Greaves" "Royal Staff" "Scarlet Round Shield" "Visored Sallet"
 	ItemLevel <= 36
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1424,7 +1462,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Clasped Boots" "Deerskin Boots" "Fright Maul" "Tribal Circlet"
+	BaseType "Clasped Boots" "Deerskin Boots" "Dream Mace" "Dusk Blade" "Elegant Foil" "Fright Maul" "Layered Kite Shield" "Sage Wand" "Sparkling Claw" "Tribal Circlet" "War Buckler"
 	ItemLevel <= 37
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1434,7 +1472,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Arena Plate" "Bronze Gauntlets" "Close Helmet" "Death Bow" "Festival Mask" "Full Chainmail" "Silk Robe" "Soldier's Brigandine" "Spectral Sword" "Sun Leather" "Waxed Garb"
+	BaseType "Arena Plate" "Bronze Gauntlets" "Close Helmet" "Death Bow" "Festival Mask" "Full Chainmail" "Hook Sword" "Imp Dagger" "Pagan Wand" "Reinforced Tower Shield" "Shadow Sceptre" "Silk Robe" "Soldier's Brigandine" "Spectral Axe" "Spectral Sword" "Sun Leather" "Waxed Garb" "Wyrm Mace"
 	ItemLevel <= 38
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1444,7 +1482,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Bronzescale Boots" "Bronzescale Gauntlets" "Clasped Mitts" "Curved Blade" "Gilded Sallet" "Grove Bow" "Mesh Boots" "Morning Star" "Shadow Axe" "Vile Staff"
+	BaseType "Bronzescale Boots" "Bronzescale Gauntlets" "Clasped Mitts" "Curved Blade" "Etched Hatchet" "Flaying Knife" "Fright Claw" "Gilded Sallet" "Grinning Fetish" "Grove Bow" "Mesh Boots" "Morning Star" "Shadow Axe" "Thorn Rapier" "Vile Staff"
 	ItemLevel <= 39
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1454,7 +1492,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Cabalist Regalia" "Crescent Staff" "Crusader Helmet" "Dagger Axe" "Lordly Plate" "Mesh Gloves" "Reinforced Greaves" "Thief's Garb"
+	BaseType "Brass Spirit Shield" "Cabalist Regalia" "Crescent Staff" "Crusader Helmet" "Dagger Axe" "Double Claw" "Lordly Plate" "Mesh Gloves" "Reinforced Greaves" "Smallsword" "Thief's Garb"
 	ItemLevel <= 40
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1464,7 +1502,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Field Lamellar" "Golden Mask" "Nubuck Gloves" "Reflex Bow" "Scholar Boots"
+	BaseType "Field Lamellar" "Gilded Buckler" "Golden Mask" "Horned Sceptre" "Nubuck Gloves" "Petrified Club" "Prong Dagger" "Reflex Bow" "Scholar Boots" "Variscite Blade"
 	ItemLevel <= 41
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1474,7 +1512,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Bone Circlet" "Holy Chainmail" "Nubuck Boots" "Steel Gauntlets"
+	BaseType "Bone Circlet" "Holy Chainmail" "Jasper Axe" "Nubuck Boots" "Ornate Spiked Shield" "Painted Tower Shield" "Splendid Round Shield" "Steel Gauntlets"
 	ItemLevel <= 42
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1484,7 +1522,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Bone Armour" "Butcher Sword" "Gladiator Helmet" "Riveted Boots" "Totemic Maul"
+	BaseType "Bone Armour" "Butcher Sword" "Ceremonial Kite Shield" "Faun's Horn" "Gladiator Helmet" "Riveted Boots" "Thresher Claw" "Totemic Maul" "Wyrmbone Rapier"
 	ItemLevel <= 43
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1494,7 +1532,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Bronze Plate" "Decurve Bow" "Eelskin Tunic" "Embroidered Gloves" "Jasper Chopper" "Sage's Robe" "Shackled Boots" "Wolf Pelt" "Woodful Staff"
+	BaseType "Barbed Club" "Bronze Plate" "Butcher Knife" "Cutlass" "Decurve Bow" "Eelskin Tunic" "Embroidered Gloves" "Jasper Chopper" "Sage's Robe" "Shackled Boots" "Walnut Spirit Shield" "Wolf Pelt" "Woodful Staff"
 	ItemLevel <= 44
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1504,7 +1542,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Steelscale Boots" "Wyrmscale Doublet"
+	BaseType "Oak Buckler" "Steelscale Boots" "Tomahawk" "Wyrmscale Doublet"
 	ItemLevel <= 45
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1514,7 +1552,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Latticed Ringmail" "Riveted Gloves" "Secutor Helm" "Steelscale Gauntlets"
+	BaseType "Buckskin Tower Shield" "Burnished Foil" "Latticed Ringmail" "Riveted Gloves" "Secutor Helm" "Steelscale Gauntlets"
 	ItemLevel <= 46
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1524,7 +1562,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Aventail Helmet" "Compound Bow" "Eelskin Boots" "Footman Sword" "Great Mallet" "Quilted Jacket" "Satin Slippers"
+	BaseType "Aventail Helmet" "Baselard" "Compound Bow" "Crystal Sceptre" "Eelskin Boots" "Footman Sword" "Great Mallet" "Poignard" "Quilted Jacket" "Rock Breaker" "Satin Slippers"
 	ItemLevel <= 47
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1534,7 +1572,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Battle Plate" "Eelskin Gloves" "Frontier Leather" "Quarterstaff" "Raven Mask" "Silken Wrap" "Timber Axe" "Trapper Mitts"
+	BaseType "Battle Plate" "Eelskin Gloves" "Engraved Wand" "Frontier Leather" "Ivory Spirit Shield" "Maple Round Shield" "Quarterstaff" "Raven Mask" "Redwood Spiked Shield" "Silken Wrap" "Timber Axe" "Trapper Mitts" "Wrist Chopper"
 	ItemLevel <= 48
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1544,7 +1582,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Antique Greaves" "Hussar Brigandine"
+	BaseType "Antique Greaves" "Enameled Buckler" "Estoc" "Etched Kite Shield" "Hussar Brigandine" "Tiger's Paw"
 	ItemLevel <= 49
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1554,7 +1592,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Antique Gauntlets" "Crusader Chainmail" "Hunter Hood" "Satin Gloves" "Sniper Bow" "Trapper Boots"
+	BaseType "Antique Gauntlets" "Battle Hammer" "Battle Sword" "Boot Blade" "Crusader Chainmail" "Hunter Hood" "Lead Sceptre" "Mahogany Tower Shield" "Satin Gloves" "Sniper Bow" "Trapper Boots"
 	ItemLevel <= 50
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1564,7 +1602,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Highland Blade" "Lunaris Circlet" "Reaver Helmet" "Sleek Coat" "Steelhead"
+	BaseType "Highland Blade" "Lunaris Circlet" "Reaver Helmet" "Sleek Coat" "Steelhead" "War Axe"
 	ItemLevel <= 51
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1574,7 +1612,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Conjurer's Vestment" "Glorious Leather" "Headsman Axe" "Military Staff" "Serpentscale Gauntlets" "Sun Plate" "Zealot Boots"
+	BaseType "Ancient Spirit Shield" "Compound Spiked Shield" "Conjurer's Vestment" "Crystal Wand" "Glorious Leather" "Gut Ripper" "Headsman Axe" "Military Staff" "Serpentscale Gauntlets" "Serrated Foil" "Spiked Round Shield" "Sun Plate" "Zealot Boots"
 	ItemLevel <= 52
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1584,7 +1622,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Ambush Mitts" "Full Wyrmscale" "Ivory Bow"
+	BaseType "Ambush Mitts" "Blood Sceptre" "Corrugated Buckler" "Elder Sword" "Flanged Mace" "Full Wyrmscale" "Golden Kris" "Ivory Bow" "Steel Kite Shield"
 	ItemLevel <= 53
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1594,7 +1632,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Engraved Greatsword" "Fencer Helm" "Ornate Ringmail" "Serpentscale Boots" "Spiny Maul" "Zealot Gloves"
+	BaseType "Bronze Tower Shield" "Chest Splitter" "Engraved Greatsword" "Fencer Helm" "Ornate Ringmail" "Serpentscale Boots" "Spiny Maul" "Zealot Gloves"
 	ItemLevel <= 54
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1604,7 +1642,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Callous Mask" "Crimson Raiment" "Labrys" "Serpentine Staff"
+	BaseType "Callous Mask" "Crimson Raiment" "Labrys" "Prehistoric Claw" "Primeval Rapier" "Serpentine Staff"
 	ItemLevel <= 55
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1614,7 +1652,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Ancient Gauntlets" "Colosseum Plate" "Coronal Leather" "Highborn Bow" "Samite Slippers" "Spidersilk Robe" "Zealot Helmet"
+	BaseType "Ancient Gauntlets" "Chiming Spirit Shield" "Colosseum Plate" "Coronal Leather" "Graceful Sword" "Highborn Bow" "Ornate Mace" "Royal Sceptre" "Royal Skean" "Samite Slippers" "Serpent Wand" "Spidersilk Robe" "Zealot Helmet"
 	ItemLevel <= 56
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1624,7 +1662,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Ancient Greaves" "Commander's Brigandine" "Plated Maul" "Sharkskin Gloves" "Steel Circlet" "Tiger Sword"
+	BaseType "Ancient Greaves" "Battle Buckler" "Ceremonial Axe" "Commander's Brigandine" "Crimson Round Shield" "Plated Maul" "Polished Spiked Shield" "Sharkskin Gloves" "Steel Circlet" "Tiger Sword"
 	ItemLevel <= 57
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1634,7 +1672,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Ambush Boots" "Chain Hauberk" "Highborn Staff" "Noble Axe" "Noble Tricorne" "Samite Gloves" "Sharkskin Boots" "Siege Helmet"
+	BaseType "Abyssal Sceptre" "Ambush Boots" "Chain Hauberk" "Fancy Foil" "Fiend Dagger" "Girded Tower Shield" "Highborn Staff" "Laminated Kite Shield" "Noble Axe" "Noble Claw" "Noble Tricorne" "Omen Wand" "Phantom Mace" "Samite Gloves" "Sharkskin Boots" "Siege Helmet" "Twilight Blade"
 	ItemLevel <= 58
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1644,7 +1682,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Cutthroat's Garb" "Decimation Bow" "Destroyer Regalia" "Dread Maul" "Lacquered Garb" "Majestic Plate" "Wraith Sword"
+	BaseType "Cutthroat's Garb" "Decimation Bow" "Destroyer Regalia" "Dragon Mace" "Dread Maul" "Grappler" "Heathen Wand" "Lacquered Garb" "Majestic Plate" "Stag Sceptre" "Thorium Spirit Shield" "Trisula" "Wraith Axe" "Wraith Sword"
 	ItemLevel <= 59
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1654,7 +1692,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Battle Lamellar" "Foul Staff" "Lithe Blade" "Regicide Mask" "Solar Maul" "Soldier Gloves" "Thicket Bow"
+	BaseType "Apex Rapier" "Battle Lamellar" "Eagle Claw" "Engraved Hatchet" "Foul Staff" "Golden Buckler" "Lithe Blade" "Regicide Mask" "Solar Maul" "Soldier Gloves" "Thicket Bow"
 	ItemLevel <= 60
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1664,7 +1702,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Abyssal Axe" "Carnal Mitts" "Devout Chainmail" "Great Crown" "Lacquered Helmet" "Moon Staff" "Soldier Boots" "Steelwood Bow"
+	BaseType "Abyssal Axe" "Ancestral Club" "Baroque Round Shield" "Carnal Mitts" "Courtesan Sword" "Crested Tower Shield" "Devout Chainmail" "Gemstone Sword" "Great Crown" "Gutting Knife" "Karui Sceptre" "Lacquered Helmet" "Moon Staff" "Soldier Boots" "Sovereign Spiked Shield" "Steelwood Bow" "Twin Claw"
 	ItemLevel <= 61
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1674,7 +1712,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Crypt Armour" "Golden Plate" "Headman's Sword" "Karui Chopper" "Karui Maul" "Necromancer Circlet" "Savant's Robe" "Sharkskin Tunic" "Wyrmscale Boots" "Wyrmscale Gauntlets"
+	BaseType "Angelic Kite Shield" "Crypt Armour" "Demon's Horn" "Golden Plate" "Headman's Sword" "Karui Axe" "Karui Chopper" "Karui Maul" "Lacewood Spirit Shield" "Necromancer Circlet" "Savant's Robe" "Sharkskin Tunic" "Wyrmscale Boots" "Wyrmscale Gauntlets"
 	ItemLevel <= 62
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1684,7 +1722,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Citadel Bow" "Conjurer Gloves" "Dragonscale Doublet" "Primordial Staff" "Samite Helmet" "Talon Axe" "Ursine Pelt"
+	BaseType "Citadel Bow" "Conjurer Gloves" "Corsair Sword" "Dragonbone Rapier" "Dragonscale Doublet" "Great White Claw" "Ironwood Buckler" "Primordial Staff" "Samite Helmet" "Slaughter Knife" "Talon Axe" "Tenderizer" "Tyrant's Sekhem" "Ursine Pelt"
 	ItemLevel <= 63
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1694,7 +1732,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Colossus Mallet" "Conjurer Boots" "Loricated Ringmail" "Reaver Sword"
+	BaseType "Colossus Mallet" "Conjurer Boots" "Loricated Ringmail" "Reaver Sword" "Shagreen Tower Shield" "Siege Axe"
 	ItemLevel <= 64
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1704,7 +1742,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Crusader Plate" "Destiny Leather" "Goliath Greaves" "Harlequin Mask" "Lathi" "Necromancer Silks" "Ranger Bow" "Sentinel Jacket" "Shagreen Boots" "Shagreen Gloves" "Sundering Axe"
+	BaseType "Alder Spiked Shield" "Ambusher" "Branded Kite Shield" "Crusader Plate" "Destiny Leather" "Fossilised Spirit Shield" "Gavel" "Gladius" "Goliath Greaves" "Harlequin Mask" "Imbued Wand" "Lathi" "Necromancer Silks" "Opal Sceptre" "Ranger Bow" "Sentinel Jacket" "Shagreen Boots" "Shagreen Gloves" "Sundering Axe" "Teak Round Shield" "Tempered Foil" "Throat Stabber"
 	ItemLevel <= 65
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1714,7 +1752,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Carnal Boots" "Desert Brigandine" "Ezomyte Blade" "Fluted Bascinet" "Goliath Gauntlets" "Magistrate Crown" "Piledriver"
+	BaseType "Carnal Boots" "Desert Brigandine" "Ezomyte Blade" "Fluted Bascinet" "Goliath Gauntlets" "Lacquered Buckler" "Magistrate Crown" "Piledriver" "Reaver Axe"
 	ItemLevel <= 66
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1724,7 +1762,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Agate Amulet" "Amber Amulet" "Amethyst Ring" "Arcanist Gloves" "Arcanist Slippers" "Ashscale Talisman" "Assassin Bow" "Assassin's Boots" "Assassin's Mitts" "Astral Plate" "Avian Twins Talisman" "Black Maw Talisman" "Blood Raiment" "Bonespire Talisman" "Breach Ring" "Breakrib Talisman" "Chain Belt" "Chrysalis Talisman" "Citrine Amulet" "Cloth Belt" "Clutching Talisman" "Conquest Chainmail" "Coral Amulet" "Coral Ring" "Crusader Boots" "Crusader Gloves" "Deadhand Talisman" "Deep One Talisman" "Deicide Mask" "Despot Axe" "Diamond Ring" "Dragonscale Boots" "Dragonscale Gauntlets" "Elegant Ringmail" "Exquisite Leather" "Ezomyte Axe" "Ezomyte Burgonet" "Ezomyte Staff" "Fangjaw Talisman" "Full Dragonscale" "General's Brigandine" "Gladiator Plate" "Gold Amulet" "Gold Ring" "Golden Hoop" "Golden Obi" "Heavy Belt" "Hexclaw Talisman" "Horned Talisman" "Hydrascale Boots" "Hydrascale Gauntlets" "Imperial Bow" "Imperial Maul" "Imperial Staff" "Infernal Sword" "Iron Ring" "Jade Amulet" "Jet Amulet" "Jet Ring" "Lapis Amulet" "Leather Belt" "Legion Boots" "Legion Gloves" "Lion Sword" "Lone Antler Talisman" "Longtooth Talisman" "Maelström Staff" "Mandible Talisman" "Meatgrinder" "Mind Cage" "Monkey Paw Talisman" "Monkey Twins Talisman" "Moonstone Ring" "Murder Mitts" "Nightmare Bascinet" "Occultist's Vestment" "Onyx Amulet" "Paua Amulet" "Paua Ring" "Pig-Faced Bascinet" "Primal Skull Talisman" "Prismatic Ring" "Prophet Crown" "Rot Head Talisman" "Rotfeather Talisman" "Royal Burgonet" "Ruby Amulet" "Ruby Ring" "Rustic Sash" "Saint's Hauberk" "Sapphire Ring" "Silken Hood" "Sinner Tricorne" "Solaris Circlet" "Sorcerer Boots" "Spine Bow" "Spinefuse Talisman" "Splitnewt Talisman" "Stealth Boots" "Stealth Gloves" "Studded Belt" "Stygian Vise" "Terror Maul" "Three Hands Talisman" "Three Rat Talisman" "Topaz Ring" "Turquoise Amulet" "Two-Stone Ring" "Undying Flesh Talisman" "Unset Ring" "Vaal Axe" "Vaal Gauntlets" "Vaal Greatsword" "Vaal Greaves" "Vaal Mask" "Varnished Coat" "Wereclaw Talisman" "Widowsilk Robe" "Writhing Talisman" "Zodiac Leather"
+	BaseType "Agate Amulet" "Amber Amulet" "Amethyst Ring" "Arcanist Gloves" "Arcanist Slippers" "Ashscale Talisman" "Assassin Bow" "Assassin's Boots" "Assassin's Mitts" "Astral Plate" "Auric Mace" "Avian Twins Talisman" "Black Maw Talisman" "Blood Raiment" "Bonespire Talisman" "Breach Ring" "Breakrib Talisman" "Butcher Axe" "Cardinal Round Shield" "Carnal Sceptre" "Chain Belt" "Champion Kite Shield" "Chrysalis Talisman" "Citrine Amulet" "Cloth Belt" "Clutching Talisman" "Colossal Tower Shield" "Conquest Chainmail" "Coral Amulet" "Coral Ring" "Crusader Boots" "Crusader Buckler" "Crusader Gloves" "Deadhand Talisman" "Deep One Talisman" "Deicide Mask" "Despot Axe" "Diamond Ring" "Dragonscale Boots" "Dragonscale Gauntlets" "Ebony Tower Shield" "Elegant Ringmail" "Eternal Sword" "Exquisite Leather" "Eye Gouger" "Ezomyte Axe" "Ezomyte Burgonet" "Ezomyte Dagger" "Ezomyte Spiked Shield" "Ezomyte Staff" "Ezomyte Tower Shield" "Fangjaw Talisman" "Full Dragonscale" "General's Brigandine" "Gladiator Plate" "Gold Amulet" "Gold Ring" "Golden Hoop" "Golden Obi" "Harmonic Spirit Shield" "Heavy Belt" "Hellion's Paw" "Hexclaw Talisman" "Horned Talisman" "Hydrascale Boots" "Hydrascale Gauntlets" "Imperial Bow" "Imperial Maul" "Imperial Skean" "Imperial Staff" "Infernal Sword" "Iron Ring" "Jade Amulet" "Jet Amulet" "Jet Ring" "Lapis Amulet" "Leather Belt" "Legion Boots" "Legion Gloves" "Legion Hammer" "Legion Sword" "Lion Sword" "Lone Antler Talisman" "Longtooth Talisman" "Maelström Staff" "Mandible Talisman" "Meatgrinder" "Mind Cage" "Mirrored Spiked Shield" "Monkey Paw Talisman" "Monkey Twins Talisman" "Moonstone Ring" "Mosaic Kite Shield" "Murder Mitts" "Nightmare Bascinet" "Occultist's Vestment" "Onyx Amulet" "Opal Wand" "Paua Amulet" "Paua Ring" "Pecoraro" "Pernarch" "Pig-Faced Bascinet" "Platinum Kris" "Platinum Sceptre" "Primal Skull Talisman" "Prismatic Ring" "Prophet Crown" "Rot Head Talisman" "Rotfeather Talisman" "Royal Axe" "Royal Burgonet" "Ruby Amulet" "Ruby Ring" "Rustic Sash" "Saint's Hauberk" "Sapphire Ring" "Silken Hood" "Sinner Tricorne" "Solaris Circlet" "Sorcerer Boots" "Spine Bow" "Spinefuse Talisman" "Spiny Round Shield" "Spiraled Foil" "Splitnewt Talisman" "Stealth Boots" "Stealth Gloves" "Studded Belt" "Stygian Vise" "Terror Maul" "Three Hands Talisman" "Three Rat Talisman" "Topaz Ring" "Tornado Wand" "Turquoise Amulet" "Two-Stone Ring" "Undying Flesh Talisman" "Unset Ring" "Vaal Axe" "Vaal Blade" "Vaal Buckler" "Vaal Claw" "Vaal Gauntlets" "Vaal Greatsword" "Vaal Greaves" "Vaal Hatchet" "Vaal Mask" "Vaal Rapier" "Vaal Sceptre" "Vaal Spirit Shield" "Varnished Coat" "Wereclaw Talisman" "Widowsilk Robe" "Writhing Talisman" "Zodiac Leather"
 	ItemLevel <= 67
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1734,7 +1772,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Crude Bow"
+	BaseType "Crude Bow" "Driftwood Club" "Driftwood Sceptre" "Glass Shank" "Rusted Sword" "Splintered Tower Shield"
 	ItemLevel <= 8
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -1744,8 +1782,32 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType "Plate Vest"
+	BaseType "Driftwood Wand" "Plate Vest" "Rusted Hatchet"
 	ItemLevel <= 9
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 30
+	DisableDropSound True
+
+#Rare item for leveling
+Show
+	BaseType "Gouger"
+	Class "Claw"
+	DropLevel 40
+	ItemLevel <= 46
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 30
+	DisableDropSound True
+
+#Rare item for leveling
+Show
+	BaseType "Skean"
+	Class "Dagger"
+	DropLevel 28
+	ItemLevel <= 35
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 255 255 119 150
@@ -1782,6 +1844,18 @@ Show
 	Class "Helmet"
 	DropLevel 13
 	ItemLevel <= 26
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 30
+	DisableDropSound True
+
+#Rare item for leveling
+Show
+	BaseType "Sekhem"
+	Class "Sceptre"
+	DropLevel 38
+	ItemLevel <= 44
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 255 255 119 150
@@ -1985,6 +2059,13 @@ Show
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
 	SetFontSize 25
+	DisableDropSound True
+
+#General Rares
+Show
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetFontSize 30
 	DisableDropSound True
 
 #General Rares
