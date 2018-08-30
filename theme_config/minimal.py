@@ -190,7 +190,6 @@ settings = {
 						"SetBackgroundColor {} 150".format(color['black']),
 						"SetBorderColor {}".format(color['tormentoutline'])],
 	"leveling low": ["SetFontSize {}".format(size['minimum']),
-					 "Sockets > 2",
 					 "SetBackgroundColor {} 150".format(color['black']),
 					 "SetBorderColor {}".format(color['normal'])],
 

@@ -29,4 +29,8 @@ items = {
 	"0 Vis Mortis": {"base": "Necromancer Silks", "type": "ignore"},
 	"0 Dancing Dervish": {"base": "Reaver Sword", "type": "ignore"},
 
+	"0 Chin Sol": {"base": "Assassin Bow", "type": "ignore"},
+	"0 Quill Rain": {"base": "Short Bow", "type": "ignore"},
+	"0 Skirmish": {"base": "Two-Point Arrow Quiver", "type": "ignore"},
+
 }
