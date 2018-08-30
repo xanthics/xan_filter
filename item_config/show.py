@@ -6,13 +6,14 @@ desc = "Always show"
 
 # Base type : settings pair
 items = {
+	# "00 Crafting base": {'class': 'Helmet', "other": ["Rarity Normal", "DropLevel >= 50"], "type": "leveling low"},
+
 	"01 Tabula Exception": {"base": "Simple Robe", "other": ["Rarity Unique", "SocketGroup WWWWWW"], "type": "unique high"},
 	"02 6L": {"other": ["LinkedSockets 6"], "type": "show very high"},
 	"03 5L": {"other": ["Rarity < Unique", "Sockets 5", "LinkedSockets 5", "PlayAlertSound 2 15"], "type": "show high"},
 	"04 6S": {"other": ["Sockets 6", "PlayAlertSound 2 50"], "type": "show high"},
-	# "04 Stone of Passage": {"other": ["PlayAlertSound 2 50"], "class": "Incursion Item", "type": "show high"},
-	# "04 Flashpowder Keg": {"other": ["PlayAlertSound 2 50"], "class": "Incursion Item", "type": "show high"},
 	"04 Incursion Item": {"other": ["PlayAlertSound 2 50"], "class": "Incursion Item", "type": "show high"},
+	"04 Timeworn Reliquary Key": {"base": "Timeworn Reliquary Key", "class": "Misc Map Items", "type": "show very high"},
 	# High value atlas bases.  Show and make noise at any rarity
 	"04 Steel Ring": {"other": ["PlayAlertSound 2 50"], "base": "Steel Ring", "type": "show high"},
 	"04 Crystal Belt": {"base": "Crystal Belt", "type": "ignore"},
@@ -32,12 +33,10 @@ items = {
 	"0 Quest": {"class": "Quest", "type": "quest"},
 	"0 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "show normal"},
 	"1 Jewel": {"class": "Jewel", "other": ["Rarity <= Magic"], "type": "normal"},
-	"0 Strong Steel Net": {"base": "Strong Steel Net", "class": "Currency", "type": "ignore"},
 	"0 Thaumaturgical Net": {"base": "Thaumaturgical Net", "class": "Currency", "type": "show normal"},
 	"0 Necromancy Net": {"other": ["PlayAlertSound 2 50"], "base": "Necromancy Net", "class": "Currency", "type": "show high"},
-	"1 Rope Net": {"base": "Rope Net", "class": "Currency", "type": "hide"},
-	"1 Iron Net": {"base": "Iron Net", "class": "Currency", "type": "hide"},
-	"1 Steel Net": {"base": "Steel Net", "class": "Currency", "type": "hide"},
+	"0 Strong Steel Net": {"base": "Strong Steel Net", "class": "Currency", "type": "ignore"},
+	"1 Net": {"base": "Net", "class": "Currency", "type": "hide"},
 
 	"9 Starter weapon": {"other": ["Class Dagger Wand \"One Hand\" Bow Stave \"Two Hand\" Sceptre Claws", "ItemLevel < 2"], "type": "show normal"},
 

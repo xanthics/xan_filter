@@ -929,7 +929,7 @@ def genraresleveling(flags='All', overlevel=3, maxlevel=67, alwayshighlight=('Ac
 # overlevel is how many levels to show an item after a better base starts dropping
 # maxlevel is the maximum level to highlight levelling normal or magic items
 # alwayshighlight is a list of bases to always highlight while leveling regardless of drop level (Up to maxlevel)
-def gennonrareleveling(flags='All', overlevel=0, maxlevel=35, alwayshighlight=('Accessory',)):
+def gennonrareleveling(flags='All', overlevel=0, maxlevel=35, alwayshighlight=()):
 	ret = {}
 	substrings = findsubstrings()
 
@@ -941,7 +941,7 @@ def gennonrareleveling(flags='All', overlevel=0, maxlevel=35, alwayshighlight=('
 				for i in range(l):
 					cur = bases[category][vals][i]
 					if cur['drop'] <= maxlevel:
-						ret[bases[category][vals][i]['name']] = {"base": cur['name'], "other": ["Rarity <= Magic", "ItemLevel <= {}".format(maxlevel)], "type": "leveling low"}
+						ret[cur['name']] = {"base": cur['name'], "other": ["Rarity <= Normal", "ItemLevel <= {}".format(maxlevel)], "type": "leveling low"}
 						if cur['name'] in substrings:
 							ret[cur['name']]['class'] = cur['base']
 							ret[cur['name']]['other'].append('DropLevel {}'.format(cur['drop']))
@@ -951,13 +951,13 @@ def gennonrareleveling(flags='All', overlevel=0, maxlevel=35, alwayshighlight=('
 					if cur['drop'] <= maxlevel:
 						cap = bases[category][vals][i+1]['drop'] + overlevel
 						cap = cap if cap < maxlevel else maxlevel
-						ret[cur['name']] = {"base": cur['name'], "other": ["Rarity <= Magic", "ItemLevel <= {}".format(cap)], "type": "leveling low"}
+						ret[cur['name']] = {"base": cur['name'], "other": ["Rarity <= Normal", "ItemLevel <= {}".format(cap)], "type": "leveling low"}
 						if cur['name'] in substrings:
 							ret[cur['name']]['class'] = cur['base']
 							ret[cur['name']]['other'].append('DropLevel {}'.format(cur['drop']))
 				cur = bases[category][vals][l-1]
 				if cur['drop'] <= maxlevel:
-					ret[cur['name']] = {"base": cur['name'], "other": ["Rarity <= Magic", "ItemLevel <= {}".format(maxlevel)], "type": "leveling low"}
+					ret[cur['name']] = {"base": cur['name'], "other": ["Rarity <= Normal", "ItemLevel <= {}".format(maxlevel)], "type": "leveling low"}
 					if cur['name'] in substrings:
 						ret[cur['name']]['class'] = cur['base']
 						ret[cur['name']]['other'].append('DropLevel {}'.format(cur['drop']))

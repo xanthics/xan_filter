@@ -4,6 +4,7 @@
 # Note: Requires Python 3.3.x or higher
 desc = "maps"
 
+# TODO: Test new MapTier keyword
 # Base type : settings pair
 items = {
 	"0 Sacrifice at Dusk": {"base": "Sacrifice at Dusk", "class": "Map Fragments", "type": "ignore"},
