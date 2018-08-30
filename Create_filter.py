@@ -120,7 +120,6 @@ def gen_list_compact(items, desc):
 			t, c, f, o = ii.split(',', maxsplit=3)
 			b += "#{}\n".format(desc)
 			b += t
-			b += "\n\tDisableDropSound True"
 			if l[i][ii][0]:
 				b += "\n\tBaseType \"{}\"".format('" "'.join(sorted(l[i][ii])))
 			if c:
@@ -131,6 +130,7 @@ def gen_list_compact(items, desc):
 				b += "\n\t{}".format("\n\t".join(sorted(formatting.settings[f])))
 			else:
 				print("Missing type field {} ** {}".format(items[i], i))
+			b += "\n\tDisableDropSound True"
 			b += "\n\n"
 	return b
 
@@ -162,7 +162,6 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 			buffer += gen_list(challenges.items, challenges.desc)
 		buffer += gen_list(labyrinth.items, labyrinth.desc)
 		buffer += gen_list(lookup_leagues[i][4].items, lookup_leagues[i][4].desc)  # Autogen currency values
-		# buffer += gen_list(essences.items, essences.desc)  # Essences
 		buffer += gen_list(lookup_leagues[i][5].items, lookup_leagues[i][5].desc)  # Autogen Essences
 		buffer += gen_list(currency.items, currency.desc)  # Currency
 		buffer += gen_list(gems.items, gems.desc)  # Gems
@@ -190,7 +189,7 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 		if leveling:
 			desc = 'item for leveling'
 			flags = 'All'  # see item_config/rare_gen - genraresleveling for valid values
-			buffer += gen_list(gennonrareleveling(flags, overlevel=5, maxlevel=10), desc)
+			buffer += gen_list(gennonrareleveling(flags, overlevel=2, maxlevel=20), desc)
 
 		buffer += gen_list(magicmods(), "Magic Items")  # magic base type highlighting
 
