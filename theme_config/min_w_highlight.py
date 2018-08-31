@@ -160,7 +160,7 @@ settings = {
 					  "PlayAlertSound 5 {}".format(volume['normal']),
 					  "SetBackgroundColor {} 220".format(color['highlight'])],
 	"currency normal": ["SetBorderColor {}".format(color['currency']),
-						'MinimapIcon 2 Yellow Circle'
+						'MinimapIcon 2 Yellow Circle',
 						"SetFontSize {}".format(size['large']),
 						"PlayAlertSound 5 25",
 						"SetBackgroundColor {} 220".format(color['highlight'])],
