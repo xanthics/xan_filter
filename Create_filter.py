@@ -188,8 +188,8 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 
 		if leveling:
 			desc = 'item for leveling'
-			flags = 'All'  # see item_config/rare_gen - genraresleveling for valid values
-			buffer += gen_list(gennonrareleveling(flags, overlevel=2, maxlevel=20), desc)
+			flags = ['Weapon']  # 'All'  # see item_config/rare_gen - genraresleveling for valid values
+			buffer += gen_list(gennonrareleveling(flags, overlevel=2, maxlevel=25), desc)
 
 		buffer += gen_list(magicmods(), "Magic Items")  # magic base type highlighting
 
@@ -218,5 +218,5 @@ if __name__ == "__main__":
 	import pricetool_ninja
 	league = ['Standard', 'Hardcore', 'tmpstandard', 'tmphardcore']
 #	league = ['tmpstandard']
-#	pricetool_ninja.scrape_ninja(league)
+	pricetool_ninja.scrape_ninja(league)
 	main(league)

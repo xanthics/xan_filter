@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 08/30/2018(m/d/y) 03:21:26 UTC from "Standard" data
+# Created: 09/02/2018(m/d/y) 17:45:58 UTC from "Standard" data
 
 desc = "Unique"
 
@@ -28,9 +28,9 @@ items = {
 	"1 Callous Mask Piece": {"base": "Callous Mask Piece", "type": "unique high"},
 	"1 Carnal Boots": {"base": "Carnal Boots", "type": "unique high"},
 	"1 Carnal Sceptre": {"base": "Carnal Sceptre", "type": "unique high"},
-	"1 Clasped Mitts": {"base": "Clasped Mitts", "type": "unique high"},
 	"1 Clutching Talisman": {"base": "Clutching Talisman", "type": "unique high"},
 	"1 Courtyard Map": {"base": "Courtyard Map", "type": "unique high"},
+	"1 Deicide Mask": {"base": "Deicide Mask", "type": "unique high"},
 	"1 Ezomyte Tower Shield": {"base": "Ezomyte Tower Shield", "type": "unique high"},
 	"1 Gemstone Sword": {"base": "Gemstone Sword", "type": "unique high"},
 	"1 Glorious Plate": {"base": "Glorious Plate", "type": "unique high"},
@@ -45,6 +45,7 @@ items = {
 	"1 Magistrate Crown": {"base": "Magistrate Crown", "type": "unique high"},
 	"1 Moon Temple Map": {"base": "Moon Temple Map", "type": "unique high"},
 	"1 Museum Map": {"base": "Museum Map", "type": "unique high"},
+	"1 Nubuck Gloves": {"base": "Nubuck Gloves", "type": "unique high"},
 	"1 Prismatic Jewel": {"base": "Prismatic Jewel", "type": "unique high"},
 	"1 Prophecy Wand": {"base": "Prophecy Wand", "type": "unique high"},
 	"1 Rawhide Tower Shield": {"base": "Rawhide Tower Shield", "type": "unique high"},
@@ -58,6 +59,7 @@ items = {
 	"1 Siege Axe": {"base": "Siege Axe", "type": "unique high"},
 	"1 Steel Ring": {"base": "Steel Ring", "type": "unique high"},
 	"1 Temple Map": {"base": "Temple Map", "type": "unique high"},
+	"1 Vaal Mask": {"base": "Vaal Mask", "type": "unique high"},
 	"1 Void Axe": {"base": "Void Axe", "type": "unique high"},
 	"1 Wereclaw Talisman": {"base": "Wereclaw Talisman", "type": "unique high"},
 	"1 Wyrmscale Doublet": {"base": "Wyrmscale Doublet", "type": "unique high"},
@@ -90,6 +92,7 @@ items = {
 	"6 Elegant Ringmail": {"base": "Elegant Ringmail", "type": "unique special"},
 	"6 Elegant Sword": {"base": "Elegant Sword", "type": "unique special"},
 	"6 Exquisite Leather": {"base": "Exquisite Leather", "type": "unique special"},
+	"6 Ezomyte Staff": {"base": "Ezomyte Staff", "type": "unique special"},
 	"6 Gavel": {"base": "Gavel", "type": "unique special"},
 	"6 Goathide Boots": {"base": "Goathide Boots", "type": "unique special"},
 	"6 Gold Amulet": {"base": "Gold Amulet", "type": "unique special"},
@@ -126,6 +129,7 @@ items = {
 	"6 Penetrating Arrow Quiver": {"base": "Penetrating Arrow Quiver", "type": "unique special"},
 	"6 Pine Buckler": {"base": "Pine Buckler", "type": "unique special"},
 	"6 Pinnacle Tower Shield": {"base": "Pinnacle Tower Shield", "type": "unique special"},
+	"6 Plank Kite Shield": {"base": "Plank Kite Shield", "type": "unique special"},
 	"6 Prismatic Ring": {"base": "Prismatic Ring", "type": "unique special"},
 	"6 Quartz Flask": {"base": "Quartz Flask", "type": "unique special"},
 	"6 Reinforced Tower Shield": {"base": "Reinforced Tower Shield", "type": "unique special"},
@@ -133,14 +137,12 @@ items = {
 	"6 Rustic Sash": {"base": "Rustic Sash", "type": "unique special"},
 	"6 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "unique special"},
 	"6 Sadist Garb": {"base": "Sadist Garb", "type": "unique special"},
-	"6 Sage Wand": {"base": "Sage Wand", "type": "unique special"},
 	"6 Sharkskin Boots": {"base": "Sharkskin Boots", "type": "unique special"},
 	"6 Silken Hood": {"base": "Silken Hood", "type": "unique special"},
 	"6 Simple Robe": {"base": "Simple Robe", "type": "unique special"},
 	"6 Slink Boots": {"base": "Slink Boots", "type": "unique special"},
 	"6 Soldier Gloves": {"base": "Soldier Gloves", "type": "unique special"},
 	"6 Sorcerer Boots": {"base": "Sorcerer Boots", "type": "unique special"},
-	"6 Spidersilk Robe": {"base": "Spidersilk Robe", "type": "unique special"},
 	"6 Spike-Point Arrow Quiver": {"base": "Spike-Point Arrow Quiver", "type": "unique special"},
 	"6 Spine Bow": {"base": "Spine Bow", "type": "unique special"},
 	"6 Stealth Boots": {"base": "Stealth Boots", "type": "unique special"},
