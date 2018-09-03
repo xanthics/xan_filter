@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/02/2018(m/d/y) 17:46:01 UTC from "Hardcore" data
+# Created: 09/03/2018(m/d/y) 22:13:03 UTC from "Hardcore" data
 
 desc = "Divination Card"
 
@@ -49,29 +49,22 @@ items = {
 	"1 The Wolven King's Bite": {"base": "The Wolven King's Bite", "class": "Divination Card", "type": "divination very high"},
 	"1 Three Faces in the Dark": {"base": "Three Faces in the Dark", "class": "Divination Card", "type": "divination very high"},
 	"1 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination very high"},
-	"2 Emperor's Luck": {"base": "Emperor's Luck", "class": "Divination Card", "type": "divination high"},
 	"2 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
 	"2 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination high"},
-	"2 Lucky Connections": {"base": "Lucky Connections", "class": "Divination Card", "type": "divination high"},
+	"2 Lost Worlds": {"base": "Lost Worlds", "class": "Divination Card", "type": "divination high"},
 	"2 Rebirth": {"base": "Rebirth", "class": "Divination Card", "type": "divination high"},
-	"2 The Avenger": {"base": "The Avenger", "class": "Divination Card", "type": "divination high"},
 	"2 The Beast": {"base": "The Beast", "class": "Divination Card", "type": "divination high"},
 	"2 The Blazing Fire": {"base": "The Blazing Fire", "class": "Divination Card", "type": "divination high"},
 	"2 The Cartographer": {"base": "The Cartographer", "class": "Divination Card", "type": "divination high"},
-	"2 The Cataclysm": {"base": "The Cataclysm", "class": "Divination Card", "type": "divination high"},
 	"2 The Chains that Bind": {"base": "The Chains that Bind", "class": "Divination Card", "type": "divination high"},
-	"2 The Conduit": {"base": "The Conduit", "class": "Divination Card", "type": "divination high"},
 	"2 The Dark Mage": {"base": "The Dark Mage", "class": "Divination Card", "type": "divination high"},
 	"2 The Deceiver": {"base": "The Deceiver", "class": "Divination Card", "type": "divination high"},
 	"2 The Encroaching Darkness": {"base": "The Encroaching Darkness", "class": "Divination Card", "type": "divination high"},
-	"2 The Gemcutter": {"base": "The Gemcutter", "class": "Divination Card", "type": "divination high"},
 	"2 The Gladiator": {"base": "The Gladiator", "class": "Divination Card", "type": "divination high"},
 	"2 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination high"},
 	"2 The Inventor": {"base": "The Inventor", "class": "Divination Card", "type": "divination high"},
-	"2 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination high"},
 	"2 The Lion": {"base": "The Lion", "class": "Divination Card", "type": "divination high"},
 	"2 The Obscured": {"base": "The Obscured", "class": "Divination Card", "type": "divination high"},
-	"2 The Pack Leader": {"base": "The Pack Leader", "class": "Divination Card", "type": "divination high"},
 	"2 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
 	"2 The Soul": {"base": "The Soul", "class": "Divination Card", "type": "divination high"},
 	"2 The Sword King's Salute": {"base": "The Sword King's Salute", "class": "Divination Card", "type": "divination high"},
@@ -79,9 +72,7 @@ items = {
 	"2 The Trial": {"base": "The Trial", "class": "Divination Card", "type": "divination high"},
 	"2 The Valley of Steel Boxes": {"base": "The Valley of Steel Boxes", "class": "Divination Card", "type": "divination high"},
 	"2 The Warlord": {"base": "The Warlord", "class": "Divination Card", "type": "divination high"},
-	"2 The Wrath": {"base": "The Wrath", "class": "Divination Card", "type": "divination high"},
 	"2 Vinia's Token": {"base": "Vinia's Token", "class": "Divination Card", "type": "divination high"},
-	"2 Volatile Power": {"base": "Volatile Power", "class": "Divination Card", "type": "divination high"},
 	"3 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "divination low"},
 	"3 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},
 	"3 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},

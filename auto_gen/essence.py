@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/02/2018(m/d/y) 17:45:58 UTC from "Standard" data
+# Created: 09/03/2018(m/d/y) 22:13:03 UTC from "Standard" data
 
 desc = "Essence Autogen"
 
@@ -49,7 +49,7 @@ items = {
 	"0 Screaming Essence of Greed": {"base": "Screaming Essence of Greed", "class": "Currency", "type": "currency high"},
 	"0 Screaming Essence of Hatred": {"base": "Screaming Essence of Hatred", "class": "Currency", "type": "currency high"},
 	"0 Screaming Essence of Loathing": {"base": "Screaming Essence of Loathing", "class": "Currency", "type": "currency normal"},
-	"0 Screaming Essence of Misery": {"base": "Screaming Essence of Misery", "class": "Currency", "type": "currency normal"},
+	"0 Screaming Essence of Misery": {"base": "Screaming Essence of Misery", "class": "Currency", "type": "currency high"},
 	"0 Screaming Essence of Rage": {"base": "Screaming Essence of Rage", "class": "Currency", "type": "currency normal"},
 	"0 Screaming Essence of Scorn": {"base": "Screaming Essence of Scorn", "class": "Currency", "type": "currency high"},
 	"0 Screaming Essence of Sorrow": {"base": "Screaming Essence of Sorrow", "class": "Currency", "type": "currency normal"},
@@ -79,7 +79,7 @@ items = {
 	"0 Shrieking Essence of Woe": {"base": "Shrieking Essence of Woe", "class": "Currency", "type": "currency high"},
 	"0 Shrieking Essence of Wrath": {"base": "Shrieking Essence of Wrath", "class": "Currency", "type": "currency high"},
 	"0 Shrieking Essence of Zeal": {"base": "Shrieking Essence of Zeal", "class": "Currency", "type": "currency high"},
-	"0 Wailing Essence of Anger": {"base": "Wailing Essence of Anger", "class": "Currency", "type": "currency normal"},
+	"0 Wailing Essence of Anger": {"base": "Wailing Essence of Anger", "class": "Currency", "type": "currency high"},
 	"0 Wailing Essence of Anguish": {"base": "Wailing Essence of Anguish", "class": "Currency", "type": "currency normal"},
 	"0 Wailing Essence of Contempt": {"base": "Wailing Essence of Contempt", "class": "Currency", "type": "currency normal"},
 	"0 Wailing Essence of Doubt": {"base": "Wailing Essence of Doubt", "class": "Currency", "type": "currency normal"},
