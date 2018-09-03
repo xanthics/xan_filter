@@ -41,9 +41,9 @@ def convertname(l):
 def currencyclassify(cur, val, curvals):
 
 	# list of currency to always give a border to
-	ah = ["Splinter of Chayula", "Splinter of Xoph", "Splinter of Uul-Netol", "Splinter of Tul", "Splinter of Esh", "Chromatic Orb", "Perandus Coin", "Orb of Chance"]
-	if (cur in ah) and val <= curvals['normal']:
-		tier = 'show normal'
+	ah = ["Splinter of Chayula", "Splinter of Xoph", "Splinter of Uul-Netol", "Splinter of Tul", "Splinter of Esh", "Chromatic Orb", "Perandus Coin", "Orb of Chance", "Silver Coin", "Cartographer's Chisel", "Jeweller's Orb"]
+	if ((cur in ah) or 'Fossil' in cur or 'Resonator' in cur) and val <= curvals['normal']:
+		tier = 'currency show'
 	elif val >= curvals['extremely']:
 		tier = 'currency extremely high'
 	elif val >= curvals['very']:
@@ -70,7 +70,15 @@ def gen_currency(currency_list, league):
 	            "Journeyman Cartographer's Sextant": 2, "Master Cartographer's Sextant": 5, 'Eternal Orb': 300, "Blessing of Chayula": 300, "Blessing of Esh": 30, "Blessing of Uul-Netol": 10,
 	            "Blessing of Tul": 2, "Blessing of Xoph": 3, "Splinter of Chayula": 3, "Splinter of Xoph": 0.333, "Splinter of Uul-Netol": 0.5, "Splinter of Tul": 1 / 5, "Splinter of Esh": 0.333,
 	            "Blacksmith's Whetstone": 1 / 30, "Portal Scroll": 1 / 100, "Armourer's Scrap": 1 / 50, "Mirror Shard": 52, "Ancient Orb": 7, "Harbinger's Orb": 4, "Orb of Annulment": 3, "Exalted Shard": 7 / 3,
-	            "Orb of Horizons": 2 / 3, "Engineer's Orb": 0.5, "Annulment Shard": 0.5, "Orb of Binding": 1 / 4, "Scroll of Wisdom": 1 / 100, 'Chaos Shard': 1 / 20, 'Mirror of Kalandra': 30000}
+	            "Orb of Horizons": 2 / 3, "Engineer's Orb": 0.5, "Annulment Shard": 0.5, "Orb of Binding": 1 / 4, "Scroll of Wisdom": 1 / 100, 'Chaos Shard': 1 / 20, 'Mirror of Kalandra': 30000,
+
+				"Prime Chaotic Resonator": 14.58, "Prime Alchemical Resonator": 13.86, "Powerful Chaotic Resonator": 1.0, "Powerful Alchemical Resonator": 1.0,
+				"Primitive Alchemical Resonator": 0.43, "Primitive Chaotic Resonator": 0.43, "Potent Alchemical Resonator": 0.43, "Potent Chaotic Resonator": 0.43,
+				"Fractured Fossil ": 139.02, "Faceted Fossil": 73.47, "Glyphic Fossil": 60.41, "Hollow Fossil": 37.09, "Tangled Fossil": 35.0, "Shuddering Fossil": 34.5,
+				"Bloodstained Fossil": 27.5, "Gilded Fossil": 15.0, "Sanctified Fossil": 15.0, "Lucent Fossil": 5.0, "Encrusted Fossil": 4.0, "Bound Fossil": 3.0,
+				"Prismatic Fossil": 3.0, "Enchanted Fossil": 3.0, "Perfect Fossil": 2.0, "Serrated Fossil": 1.93, "Aetheric Fossil": 1.14, "Jagged Fossil": 1.0,
+				"Scorched Fossil": 1.0, "Pristine Fossil": 1.0, "Corroded Fossil": 1.0, "Metallic Fossil": 0.88, "Dense Fossil": 0.86, "Aberrant Fossil": 0.43, "Frigid Fossil": 0.43,
+				}
 
 	shards = {'Binding Shard': 'Orb of Binding', 'Horizon Shard': 'Orb of Horizons', 'Harbinger\'s Shard': 'Harbinger\'s Orb', 'Engineer\'s Shard': 'Engineer\'s Orb', 'Ancient Shard': 'Ancient Orb',
 	          'Regal Shard': 'Regal Orb', 'Alchemy Shard': 'Orb of Alchemy', 'Alteration Shard': 'Orb of Alteration', 'Transmutation Shard': 'Orb of Transmutation', 'Scroll Fragment': 'Scroll of Wisdom'}
@@ -111,7 +119,7 @@ def gen_currency(currency_list, league):
 
 	for u in unknown:
 		#print("Unknown currency: {}".format(u))
-		print('"{}": 0,'.format(u), end=' ')
+		print('"{}": {},'.format(u, currency_list[u]), end=' ')
 	print()
 	return curvals
 
@@ -231,7 +239,7 @@ def gen_div(div_list, league, curvals):
 			pass
 		elif div_list[c] >= curvals['very']:
 			items['high'].append(c)
-		elif div_list[c] >= curvals['high']:
+		elif div_list[c] >= curvals['high']*2:
 			items['normal'].append(c)
 		elif div_list[c] <= curvals['normal']:
 			items['low'].append(c)
@@ -243,7 +251,7 @@ def gen_div(div_list, league, curvals):
 				bcards.remove(ii)
 			elif div_list[ii] >= curvals['very']:
 				lvl = 'divination very high'
-			elif div_list[ii] >= curvals['high']:
+			elif div_list[ii] >= curvals['high']*2:
 				lvl = 'divination high'
 			elif div_list[ii] <= curvals['normal']:
 				lvl = 'divination low'
@@ -317,7 +325,9 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		'unique flask': 'http://poe.ninja/api/Data/GetUniqueFlaskOverview?league={}',
 		'unique weapon': 'http://poe.ninja/api/Data/GetUniqueWeaponOverview?league={}',
 		'unique armor': 'http://poe.ninja/api/Data/GetUniqueArmourOverview?league={}',
-		'unique accessory': 'http://poe.ninja/api/Data/GetUniqueAccessoryOverview?league={}'
+		'unique accessory': 'http://poe.ninja/api/Data/GetUniqueAccessoryOverview?league={}',
+		'resonator': 'https://poe.ninja/api/data/itemoverview?league={}&type=Resonator',
+		'fossil': 'https://poe.ninja/api/data/itemoverview?league={}&type=Fossil'
 	}
 
 	os.environ['NO_PROXY'] = 'poe.ninja'
@@ -337,6 +347,11 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 					for ii in data[i]:
 						if 'chaosEquivalent' in ii:
 							currency[ii['currencyTypeName']] = ii['chaosEquivalent']
+
+			elif key in ['resonator', 'fossil']:
+				for i in data:
+					for ii in data[i]:
+						currency[ii['name']] = ii['chaosValue']
 
 			elif key == 'div':
 				for i in data:
