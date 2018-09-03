@@ -157,6 +157,9 @@ settings = {
 						"SetBackgroundColor {} 220".format(color['black'])],
 	"currency low": ["SetFontSize {}".format(size['normal']),
 					 "SetBackgroundColor {} 220".format(color['black'])],
+	"currency show": ["SetBorderColor {} 150".format(color['currency']),
+					  "SetFontSize {}".format(size['normal']),
+					 "SetBackgroundColor {} 220".format(color['black'])],
 	"currency very low": ["SetFontSize {}".format(size['normal']),
 						  "SetBackgroundColor {} 150".format(color['black'])],
 

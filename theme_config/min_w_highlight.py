@@ -166,6 +166,10 @@ settings = {
 						"SetBackgroundColor {} 220".format(color['highlight'])],
 	"currency low": ["SetFontSize {}".format(size['normal']),
 					 "SetBackgroundColor {} 220".format(color['black'])],
+	"currency show": ["SetBorderColor {} 150".format(color['currency']),
+					  'MinimapIcon 2 Yellow Circle',
+					  "SetFontSize {}".format(size['normal']),
+					 "SetBackgroundColor {} 220".format(color['black'])],
 	"currency very low": ["SetFontSize {}".format(size['normal']),
 						  "SetBackgroundColor {} 150".format(color['black'])],
 
@@ -277,6 +281,7 @@ settings = {
 				  "SetFontSize {}".format(size['large']),
 				  "SetBackgroundColor {} 220".format(color['black'])],
 	"show normal": ["SetBorderColor {}".format(color['premiumlpurple']),
+					'MinimapIcon 2 White Square',
 					"SetFontSize {}".format(size['normal']),
 					"SetBackgroundColor {} 220".format(color['black'])],
 	"show low": ["SetFontSize {}".format(size['small']),
