@@ -1,6 +1,6 @@
 #**************************************************************
 # Welcome to xan.filter, a Python generated loot filter for PoE
-# This filter was generated for Hardcore on 09/03/2018(m/d/y) 22:13:04 UTC
+# This filter was generated for Hardcore on 09/05/2018(m/d/y) 05:08:10 UTC
 # The most current version of code can always be found at https://github.com/xanthics/poe_filter
 #**************************************************************
 
@@ -17,7 +17,7 @@ Show
 Show
 	BaseType "Fishing Rod"
 	MinimapIcon 0 White Square
-	PlayAlertSound 1 100
+	PlayAlertSoundPositional 1 100
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 192 128 254
 	SetFontSize 45
@@ -27,7 +27,7 @@ Show
 Show
 	BaseType "Necromancy Net"
 	Class "Currency"
-	PlayAlertSound 2 50
+	PlayAlertSoundPositional 2 50
 	MinimapIcon 1 White Square
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 192 128 254
@@ -74,7 +74,7 @@ Show
 	Rarity Unique
 	SocketGroup WWWWWW
 	MinimapIcon 0 Yellow Star
-	PlayAlertSound 3 75
+	PlayAlertSoundPositional 3 75
 	PlayEffect Yellow Temp
 	Rarity Unique
 	SetBackgroundColor 0 0 0 220
@@ -86,7 +86,7 @@ Show
 Show
 	LinkedSockets 6
 	MinimapIcon 0 White Square
-	PlayAlertSound 1 100
+	PlayAlertSoundPositional 1 100
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 192 128 254
 	SetFontSize 45
@@ -95,7 +95,7 @@ Show
 #Always show
 Show
 	LinkedSockets 5
-	PlayAlertSound 2 15
+	PlayAlertSoundPositional 2 15
 	Rarity < Unique
 	Sockets 5
 	MinimapIcon 1 White Square
@@ -107,7 +107,7 @@ Show
 #Always show
 Show
 	BaseType "Opal Ring" "Steel Ring" "Stygian Vise"
-	PlayAlertSound 2 50
+	PlayAlertSoundPositional 2 50
 	MinimapIcon 1 White Square
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 192 128 254
@@ -116,7 +116,7 @@ Show
 
 #Always show
 Show
-	PlayAlertSound 2 50
+	PlayAlertSoundPositional 2 50
 	Sockets 6
 	MinimapIcon 1 White Square
 	SetBackgroundColor 0 0 0 220
@@ -149,7 +149,7 @@ Show
 #Always show
 Show
 	Class "Incursion Item"
-	PlayAlertSound 2 50
+	PlayAlertSoundPositional 2 50
 	MinimapIcon 1 White Square
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 192 128 254
@@ -161,7 +161,7 @@ Show
 	BaseType "Timeworn Reliquary Key"
 	Class "Misc Map Items"
 	MinimapIcon 0 White Square
-	PlayAlertSound 1 100
+	PlayAlertSoundPositional 1 100
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 192 128 254
 	SetFontSize 45
@@ -301,10 +301,23 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Blessing of Chayula" "Blessing of Uul-Netol" "Eternal Orb" "Fractured Fossil " "Mirror Shard" "Mirror of Kalandra"
+	BaseType "Chaos Shard"
 	Class "Currency"
+	StackSize >= 20
+	MinimapIcon 1 Yellow Circle
+	PlayAlertSoundPositional 5 75
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 40
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Master Cartographer's Sextant"
+	Class "Currency"
+	StackSize >= 15
 	MinimapIcon 0 Yellow Circle
-	PlayAlertSound 5 300
+	PlayAlertSoundPositional 5 300
 	PlayEffect Yellow
 	SetBackgroundColor 51 58 75 220
 	SetBorderColor 170 158 130
@@ -313,10 +326,50 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Aetheric Fossil" "Ancient Shard" "Apprentice Cartographer's Sextant" "Blessed Orb" "Blessing of Xoph" "Bound Fossil" "Chaos Orb" "Corroded Fossil" "Enchanted Fossil" "Encrusted Fossil" "Exalted Shard" "Gemcutter's Prism" "Harbinger's Orb" "Horizon Shard" "Jagged Fossil" "Journeyman Cartographer's Sextant" "Lucent Fossil" "Master Cartographer's Sextant" "Perfect Fossil" "Powerful Alchemical Resonator" "Powerful Chaotic Resonator" "Prismatic Fossil" "Pristine Fossil" "Regal Orb" "Scorched Fossil" "Serrated Fossil" "Splinter of Chayula" "Splinter of Esh" "Splinter of Tul" "Splinter of Uul-Netol" "Splinter of Xoph"
+	BaseType "Journeyman Cartographer's Sextant"
 	Class "Currency"
+	StackSize >= 16
+	MinimapIcon 0 Yellow Circle
+	PlayAlertSoundPositional 5 300
+	PlayEffect Yellow
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 45
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Exalted Shard"
+	Class "Currency"
+	StackSize >= 17
+	MinimapIcon 0 Yellow Circle
+	PlayAlertSoundPositional 5 300
+	PlayEffect Yellow
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 45
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Splinter of Chayula"
+	Class "Currency"
+	StackSize >= 18
+	MinimapIcon 0 Yellow Circle
+	PlayAlertSoundPositional 5 300
+	PlayEffect Yellow
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 45
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Blacksmith's Whetstone" "Regal Shard"
+	Class "Currency"
+	StackSize >= 13
 	MinimapIcon 1 Yellow Circle
-	PlayAlertSound 5 75
+	PlayAlertSoundPositional 5 75
 	SetBackgroundColor 51 58 75 220
 	SetBorderColor 170 158 130
 	SetFontSize 40
@@ -324,18 +377,59 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Binding Shard" "Engineer's Shard" "Orb of Alteration" "Regal Shard"
+	BaseType "Orb of Alteration"
 	Class "Currency"
-	SetBackgroundColor 0 0 0 220
-	SetFontSize 30
+	StackSize >= 15
+	MinimapIcon 1 Yellow Circle
+	PlayAlertSoundPositional 5 75
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 40
 	DisableDropSound True
 
 #Currency Autogen
 Show
-	BaseType "Aberrant Fossil" "Annulment Shard" "Cartographer's Chisel" "Dense Fossil" "Engineer's Orb" "Frigid Fossil" "Glassblower's Bauble" "Harbinger's Shard" "Metallic Fossil" "Orb of Alchemy" "Orb of Binding" "Orb of Fusing" "Orb of Regret" "Orb of Scouring" "Potent Alchemical Resonator" "Potent Chaotic Resonator" "Primitive Alchemical Resonator" "Primitive Chaotic Resonator" "Silver Coin" "Vaal Orb"
+	BaseType "Chromatic Orb"
 	Class "Currency"
+	StackSize >= 17
+	MinimapIcon 1 Yellow Circle
+	PlayAlertSoundPositional 5 75
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 40
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Harbinger's Shard"
+	Class "Currency"
+	StackSize >= 5
+	MinimapIcon 1 Yellow Circle
+	PlayAlertSoundPositional 5 75
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 40
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Jeweller's Orb" "Orb of Chance"
+	Class "Currency"
+	StackSize >= 7
+	MinimapIcon 1 Yellow Circle
+	PlayAlertSoundPositional 5 75
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 40
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Engineer's Shard"
+	Class "Currency"
+	StackSize >= 10
 	MinimapIcon 2 Yellow Circle
-	PlayAlertSound 5 25
+	PlayAlertSoundPositional 5 25
 	SetBackgroundColor 51 58 75 220
 	SetBorderColor 170 158 130
 	SetFontSize 35
@@ -343,7 +437,387 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Chromatic Orb" "Jeweller's Orb" "Orb of Chance" "Perandus Coin"
+	BaseType "Armourer's Scrap" "Portal Scroll"
+	Class "Currency"
+	StackSize >= 13
+	MinimapIcon 2 Yellow Circle
+	PlayAlertSoundPositional 5 25
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 35
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Alchemy Shard"
+	Class "Currency"
+	StackSize >= 18
+	MinimapIcon 2 Yellow Circle
+	PlayAlertSoundPositional 5 25
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 35
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Binding Shard"
+	Class "Currency"
+	StackSize >= 20
+	MinimapIcon 2 Yellow Circle
+	PlayAlertSoundPositional 5 25
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 35
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Chaos Shard"
+	Class "Currency"
+	StackSize >= 5
+	MinimapIcon 2 Yellow Circle
+	PlayAlertSoundPositional 5 25
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 35
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Orb of Augmentation" "Orb of Transmutation"
+	Class "Currency"
+	StackSize >= 9
+	MinimapIcon 2 Yellow Circle
+	PlayAlertSoundPositional 5 25
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 35
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Orb of Scouring" "Splinter of Xoph"
+	Class "Currency"
+	StackSize >= 11
+	MinimapIcon 1 Yellow Circle
+	PlayAlertSoundPositional 5 100
+	PlayEffect Yellow Temp
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 45
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Vaal Orb"
+	Class "Currency"
+	StackSize >= 13
+	MinimapIcon 1 Yellow Circle
+	PlayAlertSoundPositional 5 100
+	PlayEffect Yellow Temp
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 45
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Horizon Shard" "Orb of Fusing"
+	Class "Currency"
+	StackSize >= 15
+	MinimapIcon 1 Yellow Circle
+	PlayAlertSoundPositional 5 100
+	PlayEffect Yellow Temp
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 45
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Annulment Shard" "Engineer's Orb"
+	Class "Currency"
+	StackSize >= 16
+	MinimapIcon 1 Yellow Circle
+	PlayAlertSoundPositional 5 100
+	PlayEffect Yellow Temp
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 45
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Exalted Orb"
+	Class "Currency"
+	StackSize >= 2
+	MinimapIcon 0 Yellow Circle
+	PlayAlertSoundPositional 5 300
+	PlayEffect Yellow
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 45
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Ancient Orb" "Divine Orb" "Orb of Annulment"
+	Class "Currency"
+	StackSize >= 5
+	MinimapIcon 0 Yellow Circle
+	PlayAlertSoundPositional 5 300
+	PlayEffect Yellow
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 45
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Orb of Horizons"
+	Class "Currency"
+	StackSize >= 9
+	MinimapIcon 0 Yellow Circle
+	PlayAlertSoundPositional 5 300
+	PlayEffect Yellow
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 45
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Annulment Shard" "Engineer's Orb" "Horizon Shard" "Orb of Fusing" "Orb of Scouring" "Splinter of Xoph" "Vaal Orb"
+	Class "Currency"
+	StackSize >= 2
+	MinimapIcon 1 Yellow Circle
+	PlayAlertSoundPositional 5 75
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 40
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Cartographer's Chisel" "Glassblower's Bauble" "Orb of Alchemy" "Orb of Binding" "Silver Coin"
+	Class "Currency"
+	StackSize >= 4
+	MinimapIcon 1 Yellow Circle
+	PlayAlertSoundPositional 5 75
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 40
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Chaos Shard"
+	Class "Currency"
+	StackSize >= 2
+	SetBackgroundColor 0 0 0 220
+	SetFontSize 30
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Alteration Shard"
+	Class "Currency"
+	StackSize >= 20
+	SetBackgroundColor 0 0 0 220
+	SetFontSize 30
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Engineer's Shard" "Orb of Augmentation" "Orb of Transmutation"
+	Class "Currency"
+	StackSize >= 3
+	SetBackgroundColor 0 0 0 220
+	SetFontSize 30
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Armourer's Scrap" "Portal Scroll"
+	Class "Currency"
+	StackSize >= 4
+	SetBackgroundColor 0 0 0 220
+	SetFontSize 30
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Alchemy Shard"
+	Class "Currency"
+	StackSize >= 5
+	SetBackgroundColor 0 0 0 220
+	SetFontSize 30
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Binding Shard"
+	Class "Currency"
+	StackSize >= 6
+	SetBackgroundColor 0 0 0 220
+	SetFontSize 30
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Scroll of Wisdom"
+	Class "Currency"
+	StackSize >= 7
+	SetBackgroundColor 0 0 0 220
+	SetFontSize 30
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Perandus Coin"
+	Class "Currency"
+	StackSize >= 13
+	MinimapIcon 2 Yellow Circle
+	PlayAlertSoundPositional 5 25
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 35
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Harbinger's Shard" "Jeweller's Orb" "Orb of Chance"
+	Class "Currency"
+	StackSize >= 2
+	MinimapIcon 2 Yellow Circle
+	PlayAlertSoundPositional 5 25
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 35
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Blacksmith's Whetstone" "Orb of Alteration" "Regal Shard"
+	Class "Currency"
+	StackSize >= 4
+	MinimapIcon 2 Yellow Circle
+	PlayAlertSoundPositional 5 25
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 35
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Chromatic Orb"
+	Class "Currency"
+	StackSize >= 5
+	MinimapIcon 2 Yellow Circle
+	PlayAlertSoundPositional 5 25
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 35
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Apprentice Cartographer's Sextant" "Exalted Shard" "Harbinger's Orb" "Journeyman Cartographer's Sextant" "Master Cartographer's Sextant" "Splinter of Chayula" "Splinter of Uul-Netol"
+	Class "Currency"
+	StackSize >= 2
+	MinimapIcon 1 Yellow Circle
+	PlayAlertSoundPositional 5 100
+	PlayEffect Yellow Temp
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 45
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Splinter of Esh" "Splinter of Tul"
+	Class "Currency"
+	StackSize >= 3
+	MinimapIcon 1 Yellow Circle
+	PlayAlertSoundPositional 5 100
+	PlayEffect Yellow Temp
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 45
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Blessed Orb" "Orb of Regret" "Regal Orb"
+	Class "Currency"
+	StackSize >= 6
+	MinimapIcon 1 Yellow Circle
+	PlayAlertSoundPositional 5 100
+	PlayEffect Yellow Temp
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 45
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Ancient Shard" "Chaos Orb"
+	Class "Currency"
+	StackSize >= 8
+	MinimapIcon 1 Yellow Circle
+	PlayAlertSoundPositional 5 100
+	PlayEffect Yellow Temp
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 45
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Blessing of Chayula" "Blessing of Uul-Netol" "Eternal Orb" "Fractured Fossil " "Mirror Shard" "Mirror of Kalandra"
+	Class "Currency"
+	MinimapIcon 0 Yellow Circle
+	PlayAlertSoundPositional 5 300
+	PlayEffect Yellow
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 45
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Aetheric Fossil" "Ancient Shard" "Apprentice Cartographer's Sextant" "Blessed Orb" "Blessing of Tul" "Blessing of Xoph" "Bound Fossil" "Chaos Orb" "Corroded Fossil" "Enchanted Fossil" "Encrusted Fossil" "Exalted Shard" "Gemcutter's Prism" "Harbinger's Orb" "Jagged Fossil" "Journeyman Cartographer's Sextant" "Lucent Fossil" "Master Cartographer's Sextant" "Orb of Regret" "Perfect Fossil" "Powerful Alchemical Resonator" "Powerful Chaotic Resonator" "Prismatic Fossil" "Pristine Fossil" "Regal Orb" "Scorched Fossil" "Serrated Fossil" "Splinter of Chayula" "Splinter of Esh" "Splinter of Tul" "Splinter of Uul-Netol"
+	Class "Currency"
+	MinimapIcon 1 Yellow Circle
+	PlayAlertSoundPositional 5 75
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 40
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Blacksmith's Whetstone" "Harbinger's Shard" "Regal Shard"
+	Class "Currency"
+	SetBackgroundColor 0 0 0 220
+	SetFontSize 30
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Aberrant Fossil" "Annulment Shard" "Cartographer's Chisel" "Dense Fossil" "Engineer's Orb" "Frigid Fossil" "Glassblower's Bauble" "Horizon Shard" "Metallic Fossil" "Orb of Alchemy" "Orb of Binding" "Orb of Fusing" "Orb of Scouring" "Potent Alchemical Resonator" "Potent Chaotic Resonator" "Primitive Alchemical Resonator" "Primitive Chaotic Resonator" "Silver Coin" "Splinter of Xoph" "Vaal Orb"
+	Class "Currency"
+	MinimapIcon 2 Yellow Circle
+	PlayAlertSoundPositional 5 25
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 35
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Chromatic Orb" "Jeweller's Orb" "Orb of Alteration" "Orb of Chance" "Perandus Coin"
 	Class "Currency"
 	MinimapIcon 2 Yellow Circle
 	SetBackgroundColor 0 0 0 220
@@ -353,10 +827,10 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Ancient Orb" "Blessing of Esh" "Blessing of Tul" "Bloodstained Fossil" "Divine Orb" "Exalted Orb" "Faceted Fossil" "Gilded Fossil" "Glyphic Fossil" "Hollow Fossil" "Orb of Annulment" "Orb of Horizons" "Prime Alchemical Resonator" "Prime Chaotic Resonator" "Sanctified Fossil" "Shuddering Fossil" "Tangled Fossil"
+	BaseType "Ancient Orb" "Blessing of Esh" "Bloodstained Fossil" "Divine Orb" "Exalted Orb" "Faceted Fossil" "Gilded Fossil" "Glyphic Fossil" "Hollow Fossil" "Orb of Annulment" "Orb of Horizons" "Prime Alchemical Resonator" "Prime Chaotic Resonator" "Sanctified Fossil" "Shuddering Fossil" "Tangled Fossil"
 	Class "Currency"
 	MinimapIcon 1 Yellow Circle
-	PlayAlertSound 5 100
+	PlayAlertSoundPositional 5 100
 	PlayEffect Yellow Temp
 	SetBackgroundColor 51 58 75 220
 	SetBorderColor 170 158 130
@@ -365,7 +839,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Alchemy Shard" "Alteration Shard" "Armourer's Scrap" "Blacksmith's Whetstone" "Chaos Shard" "Orb of Augmentation" "Orb of Transmutation" "Portal Scroll" "Scroll Fragment" "Scroll of Wisdom" "Transmutation Shard"
+	BaseType "Alchemy Shard" "Alteration Shard" "Armourer's Scrap" "Binding Shard" "Chaos Shard" "Engineer's Shard" "Orb of Augmentation" "Orb of Transmutation" "Portal Scroll" "Scroll Fragment" "Scroll of Wisdom" "Transmutation Shard"
 	Class "Currency"
 	SetBackgroundColor 0 0 0 150
 	SetFontSize 30
@@ -373,10 +847,10 @@ Show
 
 #Essence Autogen
 Show
-	BaseType "Muttering Essence of Torment" "Remnant of Corruption" "Screaming Essence of Contempt" "Screaming Essence of Dread" "Screaming Essence of Greed" "Screaming Essence of Misery" "Screaming Essence of Woe" "Shrieking Essence of Zeal" "Wailing Essence of Contempt" "Wailing Essence of Fear" "Wailing Essence of Hatred" "Wailing Essence of Sorrow" "Wailing Essence of Spite" "Wailing Essence of Suffering" "Wailing Essence of Wrath" "Weeping Essence of Contempt" "Weeping Essence of Hatred" "Weeping Essence of Rage" "Weeping Essence of Suffering" "Weeping Essence of Wrath" "Whispering Essence of Woe"
+	BaseType "Remnant of Corruption" "Screaming Essence of Contempt" "Screaming Essence of Greed" "Screaming Essence of Misery" "Screaming Essence of Woe" "Shrieking Essence of Zeal" "Wailing Essence of Hatred" "Wailing Essence of Spite" "Wailing Essence of Wrath" "Weeping Essence of Rage" "Weeping Essence of Wrath" "Whispering Essence of Woe"
 	Class "Currency"
 	MinimapIcon 1 Yellow Circle
-	PlayAlertSound 5 75
+	PlayAlertSoundPositional 5 75
 	SetBackgroundColor 51 58 75 220
 	SetBorderColor 170 158 130
 	SetFontSize 40
@@ -387,7 +861,7 @@ Show
 	BaseType "Muttering Essence of Contempt" "Muttering Essence of Fear" "Muttering Essence of Hatred" "Muttering Essence of Sorrow" "Muttering Essence of Woe" "Screaming Essence of Spite" "Shrieking Essence of Fear" "Wailing Essence of Anger" "Wailing Essence of Anguish" "Wailing Essence of Loathing" "Weeping Essence of Doubt" "Weeping Essence of Fear" "Weeping Essence of Greed" "Weeping Essence of Sorrow" "Weeping Essence of Torment" "Weeping Essence of Woe" "Whispering Essence of Contempt" "Whispering Essence of Greed" "Whispering Essence of Hatred"
 	Class "Currency"
 	MinimapIcon 2 Yellow Circle
-	PlayAlertSound 5 25
+	PlayAlertSoundPositional 5 25
 	SetBackgroundColor 51 58 75 220
 	SetBorderColor 170 158 130
 	SetFontSize 35
@@ -395,10 +869,10 @@ Show
 
 #Essence Autogen
 Show
-	BaseType "Deafening Essence of Hatred" "Essence of Delirium" "Essence of Horror" "Essence of Hysteria" "Essence of Insanity" "Shrieking Essence of Contempt" "Shrieking Essence of Dread"
+	BaseType "Essence of Delirium" "Essence of Horror" "Essence of Hysteria" "Essence of Insanity" "Screaming Essence of Dread" "Shrieking Essence of Dread" "Wailing Essence of Doubt" "Wailing Essence of Woe"
 	Class "Currency"
 	MinimapIcon 1 Yellow Circle
-	PlayAlertSound 5 100
+	PlayAlertSoundPositional 5 100
 	PlayEffect Yellow Temp
 	SetBackgroundColor 51 58 75 220
 	SetBorderColor 170 158 130
@@ -418,7 +892,7 @@ Show
 	BaseType "Albino Rhoa Feather"
 	Class "Currency"
 	MinimapIcon 0 Yellow Circle
-	PlayAlertSound 5 300
+	PlayAlertSoundPositional 5 300
 	PlayEffect Yellow
 	SetBackgroundColor 51 58 75 220
 	SetBorderColor 170 158 130
@@ -430,7 +904,7 @@ Show
 	BaseType "Apprentice Cartographer's Seal" "Journeyman Cartographer's Seal" "Master Cartographer's Seal" "Prophecy" "Stacked Deck" "Unshaping Orb"
 	Class "Currency"
 	MinimapIcon 2 Yellow Circle
-	PlayAlertSound 5 25
+	PlayAlertSoundPositional 5 25
 	SetBackgroundColor 51 58 75 220
 	SetBorderColor 170 158 130
 	SetFontSize 35
@@ -448,7 +922,7 @@ Show
 Show
 	Class "Currency"
 	MinimapIcon 2 Yellow Circle
-	PlayAlertSound 5 25
+	PlayAlertSoundPositional 5 25
 	SetBackgroundColor 51 58 75 220
 	SetBorderColor 170 158 130
 	SetFontSize 35
@@ -459,7 +933,7 @@ Show
 	Class "Gems"
 	Quality 20
 	MinimapIcon 1 Yellow Circle
-	PlayAlertSound 5 75
+	PlayAlertSoundPositional 5 75
 	SetBackgroundColor 51 58 75 220
 	SetBorderColor 170 158 130
 	SetFontSize 40
@@ -509,9 +983,9 @@ Show
 
 #Unique
 Show
-	BaseType "Ambush Mitts" "Arcanist Gloves" "Assassin's Garb" "Callous Mask" "Carnal Sceptre" "Champion Kite Shield" "Chateau Map" "Chiming Spirit Shield" "Citadel Bow" "Courtyard Map" "Crusader Boots" "Crystal Belt" "Cutlass" "Ezomyte Tower Shield" "Gladiator Plate" "Glorious Plate" "Golden Mantle" "Grand Mana Flask" "Harbinger Map" "Harlequin Mask" "Jewelled Foil" "Prismatic Jewel" "Prophecy Wand" "Rawhide Boots" "Ritual Sceptre" "Royal Axe" "Ruby Amulet" "Sapphire Flask" "Sharkskin Tunic" "Siege Axe" "Steelhead" "Topaz Flask" "Vaal Mask" "Vaal Spirit Shield" "Void Axe" "Wereclaw Talisman"
+	BaseType "Assassin's Garb" "Callous Mask" "Carnal Sceptre" "Champion Kite Shield" "Chateau Map" "Chiming Spirit Shield" "Citrine Amulet" "Crusader Boots" "Crystal Belt" "Elegant Ringmail" "Ezomyte Tower Shield" "Glorious Plate" "Golden Mantle" "Grand Mana Flask" "Harlequin Mask" "Jasper Chopper" "Jewelled Foil" "Murder Boots" "Prismatic Jewel" "Prophecy Wand" "Raven Mask" "Rawhide Boots" "Rawhide Tower Shield" "Royal Axe" "Ruby Amulet" "Sapphire Flask" "Siege Axe" "Topaz Flask" "Vaal Mask" "Vaal Sceptre" "Vaal Spirit Shield" "Void Axe" "Wereclaw Talisman"
 	MinimapIcon 0 Yellow Star
-	PlayAlertSound 3 100
+	PlayAlertSoundPositional 3 100
 	PlayEffect Yellow
 	Rarity Unique
 	SetBackgroundColor 0 0 0 220
@@ -521,9 +995,9 @@ Show
 
 #Unique
 Show
-	BaseType "Abyssal Axe" "Amethyst Flask" "Ancient Greaves" "Ancient Spirit Shield" "Arcanist Slippers" "Astral Plate" "Bismuth Flask" "Black Maw Talisman" "Blinder" "Carnal Boots" "Citrine Amulet" "Clasped Mitts" "Close Helmet" "Cloth Belt Piece" "Coiled Staff" "Corsair Sword" "Crusader Gloves" "Crusader Helmet" "Deicide Mask" "Demon Dagger" "Desert Brigandine" "Destiny Leather" "Dunes Map" "Elder Sword" "Elegant Ringmail" "Enameled Buckler" "Exquisite Leather" "Ezomyte Burgonet" "Full Wyrmscale" "Gemstone Sword" "Gold Ring" "Granite Flask" "Hallowed Hybrid Flask" "Highborn Staff" "Imperial Claw" "Ironscale Gauntlets" "Jasper Chopper" "Jingling Spirit Shield" "Legion Gloves" "Lion Pelt" "Meatgrinder" "Midnight Blade" "Murder Boots" "Museum Map" "Nightmare Bascinet" "Nightmare Mace" "Nubuck Gloves" "Opal Ring" "Opal Sceptre" "Penetrating Arrow Quiver" "Pinnacle Tower Shield" "Platinum Sceptre" "Polished Spiked Shield" "Raven Mask" "Rawhide Tower Shield" "Regicide Mask" "Ruby Flask" "Sacrificial Garb" "Sadist Garb" "Sanctified Life Flask" "Sanctified Mana Flask" "Savant's Robe" "Serpentscale Gauntlets" "Shackled Boots" "Silken Hood" "Silver Flask" "Sorcerer Gloves" "Steel Ring" "Steelscale Gauntlets" "Stibnite Flask" "Temple Map" "Terror Maul" "Titanium Spirit Shield" "Tornado Wand" "Torture Chamber Map" "Triumphant Lamellar" "Vanguard Belt" "War Sword" "Wyrmscale Doublet" "Zealot Gloves"
+	BaseType "Abyssal Axe" "Ancient Greaves" "Ancient Spirit Shield" "Arcanist Slippers" "Archon Kite Shield" "Astral Plate" "Bismuth Flask" "Black Maw Talisman" "Blinder" "Bone Armour" "Clasped Mitts" "Close Helmet" "Cloth Belt Piece" "Corsair Sword" "Deicide Mask" "Demon Dagger" "Desert Brigandine" "Destiny Leather" "Diamond Ring" "Enameled Buckler" "Exquisite Leather" "Ezomyte Burgonet" "Full Dragonscale" "Full Scale Armour" "Full Wyrmscale" "Gladius" "Gold Ring" "Goliath Gauntlets" "Granite Flask" "Hallowed Hybrid Flask" "Harbinger Bow" "Imperial Claw" "Ironscale Gauntlets" "Judgement Staff" "Karui Sceptre" "Lacquered Helmet" "Legion Gloves" "Lion Pelt" "Meatgrinder" "Midnight Blade" "Museum Map" "Nightmare Bascinet" "Nightmare Mace" "Nubuck Boots" "Nubuck Gloves" "Opal Ring" "Opal Sceptre" "Opal Wand" "Overgrown Shrine Map" "Painted Tower Shield" "Penetrating Arrow Quiver" "Pinnacle Tower Shield" "Polished Spiked Shield" "Regicide Mask" "Ritual Sceptre" "Sadist Garb" "Saintly Chainmail" "Sanctified Life Flask" "Sanctified Mana Flask" "Silken Hood" "Silver Flask" "Sorcerer Gloves" "Steel Ring" "Steelscale Gauntlets" "Stibnite Flask" "Temple Map" "Terror Claw" "Terror Maul" "Thorium Spirit Shield" "Titan Greaves" "Titanium Spirit Shield" "Tomahawk" "Topaz Ring" "Tornado Wand" "Triumphant Lamellar" "Two-Stone Ring" "Vaal Axe" "Vaal Blade" "Vaal Gauntlets" "Vanguard Belt" "War Sword" "Zealot Gloves"
 	MinimapIcon 0 Yellow Star
-	PlayAlertSound 3 75
+	PlayAlertSoundPositional 3 75
 	PlayEffect Yellow Temp
 	Rarity Unique
 	SetBackgroundColor 0 0 0 220
@@ -533,9 +1007,9 @@ Show
 
 #Unique
 Show
-	BaseType "Agate Amulet" "Amber Amulet" "Amethyst Ring" "Archon Kite Shield" "Assassin Bow" "Assassin's Mitts" "Bronzescale Gauntlets" "Carnal Armour" "Carved Wand" "Cloth Belt" "Cobalt Jewel" "Coral Ring" "Crimson Jewel" "Crude Bow" "Diamond Ring" "Ebony Tower Shield" "Elegant Sword" "Eternal Sword" "Gavel" "Goathide Boots" "Gold Amulet" "Great Crown" "Harbinger Bow" "Heavy Belt" "Hubris Circlet" "Imperial Bow" "Imperial Skean" "Infernal Sword" "Iron Ring" "Jade Amulet" "Judgement Staff" "Lacquered Garb" "Lapis Amulet" "Leather Belt" "Legion Sword" "Maelström Staff" "Mind Cage" "Moonstone Ring" "Murder Mitts" "Nubuck Boots" "Occultist's Vestment" "Onyx Amulet" "Paua Ring" "Pine Buckler" "Praetor Crown" "Prismatic Ring" "Prophet Crown" "Quartz Flask" "Ranger Bow" "Rustic Sash" "Saintly Chainmail" "Sapphire Ring" "Shadow Sceptre" "Sorcerer Boots" "Spidersilk Robe" "Spike-Point Arrow Quiver" "Spiraled Wand" "Tarnished Spirit Shield" "Terror Claw" "Thresher Claw" "Titan Greaves" "Topaz Ring" "Turquoise Amulet" "Two-Point Arrow Quiver" "Two-Stone Ring" "Unset Ring" "Vaal Axe" "Vaal Blade" "Vaal Sceptre" "Velvet Slippers" "Viridian Jewel" "Widowsilk Robe" "Wool Gloves" "Zodiac Leather"
+	BaseType "Agate Amulet" "Amber Amulet" "Amethyst Ring" "Assassin Bow" "Carnal Armour" "Carved Wand" "Chain Belt" "Cloth Belt" "Cobalt Jewel" "Crimson Jewel" "Crusader Gloves" "Ebony Tower Shield" "Elegant Sword" "Eternal Sword" "Gavel" "Goathide Boots" "Gold Amulet" "Great Crown" "Heavy Belt" "Hubris Circlet" "Imperial Bow" "Imperial Skean" "Infernal Sword" "Iron Ring" "Lacquered Garb" "Lapis Amulet" "Leather Belt" "Legion Sword" "Maelström Staff" "Mind Cage" "Moonstone Ring" "Murder Mitts" "Occultist's Vestment" "Onyx Amulet" "Pine Buckler" "Praetor Crown" "Prismatic Ring" "Prophet Crown" "Ruby Flask" "Rustic Sash" "Sapphire Ring" "Shadow Sceptre" "Sorcerer Boots" "Spidersilk Robe" "Spike-Point Arrow Quiver" "Tarnished Spirit Shield" "Turquoise Amulet" "Unset Ring" "Viridian Jewel" "Widowsilk Robe" "Zodiac Leather"
 	MinimapIcon 1 Yellow Star
-	PlayAlertSound 3 45
+	PlayAlertSoundPositional 3 45
 	Rarity Unique
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 175 96 37 150
@@ -544,7 +1018,7 @@ Show
 #Unique
 Show
 	MinimapIcon 1 Yellow Star
-	PlayAlertSound 3 45
+	PlayAlertSoundPositional 3 45
 	Rarity Unique
 	SetBackgroundColor 0 0 0 220
 	DisableDropSound True
@@ -554,7 +1028,7 @@ Show
 	BaseType "Fragment of the Chimera" "Fragment of the Hydra" "Fragment of the Minotaur" "Fragment of the Phoenix"
 	Class "Map Fragments"
 	MinimapIcon 1 Red Diamond
-	PlayAlertSound 8 75
+	PlayAlertSoundPositional 8 75
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 150 0 0 150
 	SetFontSize 40
@@ -565,7 +1039,7 @@ Show
 	BaseType "Sacrifice at Midnight"
 	Class "Map Fragments"
 	MinimapIcon 1 White Diamond
-	PlayAlertSound 7 20
+	PlayAlertSoundPositional 7 20
 	PlayEffect White Temp
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 200 200 200
@@ -576,7 +1050,7 @@ Show
 	BaseType "Eber's Key" "Inya's Key" "Mortal Hope" "Volkuur's Key" "Yriel's Key"
 	Class "Map Fragments"
 	MinimapIcon 1 Yellow Diamond
-	PlayAlertSound 7 45
+	PlayAlertSoundPositional 7 45
 	PlayEffect Yellow Temp
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 255 215 0
@@ -597,7 +1071,7 @@ Show
 Show
 	BaseType "Divine Vessel"
 	Class "Map Fragments"
-	PlayAlertSound 9 50
+	PlayAlertSoundPositional 9 50
 	MinimapIcon 1 White Square
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 192 128 254
@@ -607,9 +1081,9 @@ Show
 #maps
 Show
 	Class "Maps"
-	ElderMap True
+	MapTier >= 16
 	MinimapIcon 0 Red Diamond
-	PlayAlertSound 7 100
+	PlayAlertSoundPositional 7 100
 	PlayEffect Red Temp
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 150 0 0
@@ -619,25 +1093,10 @@ Show
 #maps
 Show
 	Class "Maps"
-	DropLevel = 77
-	ItemLevel <= 85
-	ShapedMap True
-	MinimapIcon 0 Red Diamond
-	PlayAlertSound 7 100
-	PlayEffect Red Temp
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 150 0 0
-	SetFontSize 45
-	DisableDropSound True
-
-#maps
-Show
-	Class "Maps"
-	DropLevel = 76
 	ItemLevel <= 84
-	ShapedMap True
+	MapTier = 15
 	MinimapIcon 0 Red Diamond
-	PlayAlertSound 7 100
+	PlayAlertSoundPositional 7 100
 	PlayEffect Red Temp
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 150 0 0
@@ -647,11 +1106,10 @@ Show
 #maps
 Show
 	Class "Maps"
-	DropLevel = 75
 	ItemLevel <= 83
-	ShapedMap True
+	MapTier = 14
 	MinimapIcon 0 Red Diamond
-	PlayAlertSound 7 100
+	PlayAlertSoundPositional 7 100
 	PlayEffect Red Temp
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 150 0 0
@@ -661,11 +1119,10 @@ Show
 #maps
 Show
 	Class "Maps"
-	DropLevel = 74
 	ItemLevel <= 82
-	ShapedMap True
+	MapTier = 13
 	MinimapIcon 0 Red Diamond
-	PlayAlertSound 7 100
+	PlayAlertSoundPositional 7 100
 	PlayEffect Red Temp
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 150 0 0
@@ -675,11 +1132,10 @@ Show
 #maps
 Show
 	Class "Maps"
-	DropLevel = 73
 	ItemLevel <= 81
-	ShapedMap True
+	MapTier = 12
 	MinimapIcon 0 Red Diamond
-	PlayAlertSound 7 100
+	PlayAlertSoundPositional 7 100
 	PlayEffect Red Temp
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 150 0 0
@@ -689,25 +1145,23 @@ Show
 #maps
 Show
 	Class "Maps"
-	DropLevel = 72
 	ItemLevel <= 80
-	ShapedMap True
-	MinimapIcon 1 Yellow Diamond
-	PlayAlertSound 7 45
-	PlayEffect Yellow Temp
+	MapTier = 11
+	MinimapIcon 0 Red Diamond
+	PlayAlertSoundPositional 7 100
+	PlayEffect Red Temp
 	SetBackgroundColor 0 0 0 220
-	SetBorderColor 255 215 0
-	SetFontSize 35
+	SetBorderColor 150 0 0
+	SetFontSize 45
 	DisableDropSound True
 
 #maps
 Show
 	Class "Maps"
-	DropLevel = 71
 	ItemLevel <= 79
-	ShapedMap True
+	MapTier = 10
 	MinimapIcon 1 Yellow Diamond
-	PlayAlertSound 7 45
+	PlayAlertSoundPositional 7 45
 	PlayEffect Yellow Temp
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 255 215 0
@@ -717,11 +1171,10 @@ Show
 #maps
 Show
 	Class "Maps"
-	DropLevel = 70
 	ItemLevel <= 78
-	ShapedMap True
+	MapTier = 9
 	MinimapIcon 1 Yellow Diamond
-	PlayAlertSound 7 45
+	PlayAlertSoundPositional 7 45
 	PlayEffect Yellow Temp
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 255 215 0
@@ -731,11 +1184,10 @@ Show
 #maps
 Show
 	Class "Maps"
-	DropLevel = 69
 	ItemLevel <= 77
-	ShapedMap True
+	MapTier = 8
 	MinimapIcon 1 Yellow Diamond
-	PlayAlertSound 7 45
+	PlayAlertSoundPositional 7 45
 	PlayEffect Yellow Temp
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 255 215 0
@@ -745,11 +1197,10 @@ Show
 #maps
 Show
 	Class "Maps"
-	DropLevel < 69
 	ItemLevel <= 76
-	ShapedMap True
+	MapTier = 7
 	MinimapIcon 1 Yellow Diamond
-	PlayAlertSound 7 45
+	PlayAlertSoundPositional 7 45
 	PlayEffect Yellow Temp
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 255 215 0
@@ -759,162 +1210,10 @@ Show
 #maps
 Show
 	Class "Maps"
-	DropLevel >= 73
-	ShapedMap True
-	MinimapIcon 1 Red Diamond
-	PlayAlertSound 8 75
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 150 0 0 150
-	SetFontSize 40
-	DisableDropSound True
-
-#maps
-Show
-	Class "Maps"
-	ShapedMap True
-	MinimapIcon 2 Yellow Diamond
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 255 215 0 150
-	SetFontSize 35
-	DisableDropSound True
-
-#maps
-Show
-	Class "Maps"
-	DropLevel = 83
-	ItemLevel <= 85
-	MinimapIcon 0 Red Diamond
-	PlayAlertSound 7 100
-	PlayEffect Red Temp
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 150 0 0
-	SetFontSize 45
-	DisableDropSound True
-
-#maps
-Show
-	Class "Maps"
-	DropLevel = 82
-	ItemLevel <= 84
-	MinimapIcon 0 Red Diamond
-	PlayAlertSound 7 100
-	PlayEffect Red Temp
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 150 0 0
-	SetFontSize 45
-	DisableDropSound True
-
-#maps
-Show
-	Class "Maps"
-	DropLevel = 81
-	ItemLevel <= 83
-	MinimapIcon 0 Red Diamond
-	PlayAlertSound 7 100
-	PlayEffect Red Temp
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 150 0 0
-	SetFontSize 45
-	DisableDropSound True
-
-#maps
-Show
-	Class "Maps"
-	DropLevel = 80
-	ItemLevel <= 82
-	MinimapIcon 0 Red Diamond
-	PlayAlertSound 7 100
-	PlayEffect Red Temp
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 150 0 0
-	SetFontSize 45
-	DisableDropSound True
-
-#maps
-Show
-	Class "Maps"
-	DropLevel = 79
-	ItemLevel <= 81
-	MinimapIcon 0 Red Diamond
-	PlayAlertSound 7 100
-	PlayEffect Red Temp
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 150 0 0
-	SetFontSize 45
-	DisableDropSound True
-
-#maps
-Show
-	Class "Maps"
-	DropLevel = 78
-	ItemLevel <= 80
-	MinimapIcon 0 Red Diamond
-	PlayAlertSound 7 100
-	PlayEffect Red Temp
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 150 0 0
-	SetFontSize 45
-	DisableDropSound True
-
-#maps
-Show
-	Class "Maps"
-	DropLevel = 77
-	ItemLevel <= 79
-	MinimapIcon 1 Yellow Diamond
-	PlayAlertSound 7 45
-	PlayEffect Yellow Temp
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 255 215 0
-	SetFontSize 35
-	DisableDropSound True
-
-#maps
-Show
-	Class "Maps"
-	DropLevel = 76
-	ItemLevel <= 78
-	MinimapIcon 1 Yellow Diamond
-	PlayAlertSound 7 45
-	PlayEffect Yellow Temp
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 255 215 0
-	SetFontSize 35
-	DisableDropSound True
-
-#maps
-Show
-	Class "Maps"
-	DropLevel = 75
-	ItemLevel <= 77
-	MinimapIcon 1 Yellow Diamond
-	PlayAlertSound 7 45
-	PlayEffect Yellow Temp
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 255 215 0
-	SetFontSize 35
-	DisableDropSound True
-
-#maps
-Show
-	Class "Maps"
-	DropLevel = 74
-	ItemLevel <= 76
-	MinimapIcon 1 Yellow Diamond
-	PlayAlertSound 7 45
-	PlayEffect Yellow Temp
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 255 215 0
-	SetFontSize 35
-	DisableDropSound True
-
-#maps
-Show
-	Class "Maps"
-	DropLevel = 73
 	ItemLevel <= 75
+	MapTier = 6
 	MinimapIcon 1 Yellow Diamond
-	PlayAlertSound 7 45
+	PlayAlertSoundPositional 7 45
 	PlayEffect Yellow Temp
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 255 215 0
@@ -924,10 +1223,10 @@ Show
 #maps
 Show
 	Class "Maps"
-	DropLevel = 72
 	ItemLevel <= 74
+	MapTier = 5
 	MinimapIcon 1 White Diamond
-	PlayAlertSound 7 20
+	PlayAlertSoundPositional 7 20
 	PlayEffect White Temp
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 200 200 200
@@ -936,10 +1235,10 @@ Show
 #maps
 Show
 	Class "Maps"
-	DropLevel = 71
 	ItemLevel <= 73
+	MapTier = 4
 	MinimapIcon 1 White Diamond
-	PlayAlertSound 7 20
+	PlayAlertSoundPositional 7 20
 	PlayEffect White Temp
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 200 200 200
@@ -948,10 +1247,10 @@ Show
 #maps
 Show
 	Class "Maps"
-	DropLevel = 70
 	ItemLevel <= 72
+	MapTier = 3
 	MinimapIcon 1 White Diamond
-	PlayAlertSound 7 20
+	PlayAlertSoundPositional 7 20
 	PlayEffect White Temp
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 200 200 200
@@ -960,10 +1259,10 @@ Show
 #maps
 Show
 	Class "Maps"
-	DropLevel = 69
 	ItemLevel <= 71
+	MapTier = 2
 	MinimapIcon 1 White Diamond
-	PlayAlertSound 7 20
+	PlayAlertSoundPositional 7 20
 	PlayEffect White Temp
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 200 200 200
@@ -972,10 +1271,10 @@ Show
 #maps
 Show
 	Class "Maps"
-	DropLevel < 69
 	ItemLevel <= 70
+	MapTier = 1
 	MinimapIcon 1 White Diamond
-	PlayAlertSound 7 20
+	PlayAlertSoundPositional 7 20
 	PlayEffect White Temp
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 200 200 200
@@ -984,9 +1283,9 @@ Show
 #maps
 Show
 	Class "Maps"
-	DropLevel >= 78
+	MapTier >= 11
 	MinimapIcon 1 Red Diamond
-	PlayAlertSound 8 75
+	PlayAlertSoundPositional 8 75
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 150 0 0 150
 	SetFontSize 40
@@ -995,7 +1294,7 @@ Show
 #maps
 Show
 	Class "Maps"
-	DropLevel <= 72
+	MapTier <= 5
 	MinimapIcon 2 White Diamond
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 200 200 200 150
@@ -1021,7 +1320,7 @@ Show
 #maps
 Show
 	Class "Misc Map Items"
-	PlayAlertSound 2 100
+	PlayAlertSoundPositional 2 100
 	MinimapIcon 1 White Square
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 192 128 254
@@ -1030,10 +1329,10 @@ Show
 
 #Divination Card
 Show
-	BaseType "Abandoned Wealth" "Birth of the Three" "Bowyer's Dream" "Dying Anguish" "Emperor of Purity" "Gemcutter's Promise" "Heterochromia" "House of Mirrors" "Jack in the Box" "Pride Before the Fall" "Rats" "The Betrayal" "The Body" "The Brittle Emperor" "The Celestial Justicar" "The Cursed King" "The Dapper Prodigy" "The Doctor" "The Enlightened" "The Fathomless Depths" "The Fiend" "The Formless Sea" "The Gambler" "The Hermit" "The Hunger" "The Jester" "The King's Heart" "The Last One Standing" "The Offering" "The Porcupine" "The Professor" "The Queen" "The Saint's Treasure" "The Samurai's Eye" "The Summoner" "The Undaunted" "The Undisputed" "The Valkyrie" "The Wind" "The Wolf" "The Wolven King's Bite" "Three Faces in the Dark" "Time-Lost Relic"
+	BaseType "Birth of the Three" "Bowyer's Dream" "Dying Anguish" "Emperor of Purity" "Gemcutter's Promise" "House of Mirrors" "Jack in the Box" "Pride Before the Fall" "Rats" "The Betrayal" "The Body" "The Brittle Emperor" "The Celestial Justicar" "The Cursed King" "The Doctor" "The Enlightened" "The Gambler" "The Hermit" "The Hunger" "The King's Heart" "The Last One Standing" "The Offering" "The Risk" "The Saint's Treasure" "The Samurai's Eye" "The Summoner" "The Valkyrie" "The Wolf" "The Wolven King's Bite" "Three Faces in the Dark"
 	Class "Divination Card"
 	MinimapIcon 0 Blue Circle
-	PlayAlertSound 6 100
+	PlayAlertSoundPositional 6 100
 	PlayEffect Blue
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 30 144 255
@@ -1042,10 +1341,10 @@ Show
 
 #Divination Card
 Show
-	BaseType "Humility" "Last Hope" "Lost Worlds" "Rebirth" "The Beast" "The Blazing Fire" "The Cartographer" "The Chains that Bind" "The Dark Mage" "The Deceiver" "The Encroaching Darkness" "The Gladiator" "The Hoarder" "The Inventor" "The Lion" "The Obscured" "The Risk" "The Soul" "The Sword King's Salute" "The Throne" "The Trial" "The Valley of Steel Boxes" "The Warlord" "Vinia's Token"
+	BaseType "Humility" "Lost Worlds" "Rebirth" "The Beast" "The Cartographer" "The Chains that Bind" "The Deceiver" "The Encroaching Darkness" "The Inventor" "The Lich" "The Obscured" "The Warlord" "Vinia's Token"
 	Class "Divination Card"
 	MinimapIcon 0 Blue Circle
-	PlayAlertSound 6 75
+	PlayAlertSoundPositional 6 75
 	PlayEffect Blue Temp
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 30 144 255
@@ -1070,7 +1369,7 @@ Hide
 Show
 	Class "Divination Card"
 	MinimapIcon 1 Blue Circle
-	PlayAlertSound 6 20
+	PlayAlertSoundPositional 6 20
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 30 144 255
 	DisableDropSound True
