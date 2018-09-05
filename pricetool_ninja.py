@@ -38,10 +38,10 @@ def convertname(l):
 
 
 # Convert a currency shorthand to full name.  returns a string
-def currencyclassify(cur, val, curvals):
-
+def currencyclassify(cur, val, curvals, stacks=1):
 	# list of currency to always give a border to
-	ah = ["Splinter of Chayula", "Splinter of Xoph", "Splinter of Uul-Netol", "Splinter of Tul", "Splinter of Esh", "Chromatic Orb", "Perandus Coin", "Orb of Chance", "Silver Coin", "Cartographer's Chisel", "Jeweller's Orb"]
+	ah = ["Splinter of Chayula", "Splinter of Xoph", "Splinter of Uul-Netol", "Splinter of Tul", "Splinter of Esh",
+		  "Chromatic Orb", "Perandus Coin", "Orb of Chance", "Silver Coin", "Cartographer's Chisel", "Jeweller's Orb", "Orb of Alteration"]
 	if ((cur in ah) or 'Fossil' in cur or 'Resonator' in cur) and val <= curvals['normal']:
 		tier = 'currency show'
 	elif val >= curvals['extremely']:
@@ -52,18 +52,22 @@ def currencyclassify(cur, val, curvals):
 		tier = 'currency high'
 	elif val >= curvals['normal']:
 		tier = 'currency normal'
-	elif val > curvals['low']:
+	elif val >= curvals['low']:
 		tier = 'currency low'
-	elif val > curvals['min']:
+	elif val >= curvals['min']:
 		tier = 'currency very low'
 	else:
 		tier = 'currency very low'
 		#tier = 'hide'
-	return "0 {0}\": {{\"base\": \"{0}\", \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier)
+	if stacks > 1:
+		return "$ {0}\": {{\"base\": \"{0}\", 'other': ['StackSize >= {2}'], \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier, stacks)
+	return "1 {0}\": {{\"base\": \"{0}\", \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier)
 
 
 # given a league grouped list of currency determine all unique entries and then output for each league
 def gen_currency(currency_list, league):
+	stackable = ['Orb', 'Splinter', 'Chisel', 'Coin', 'Bauble', 'Sextant', 'Shard', 'Whetstone', 'Scroll', 'Scrap']
+
 	defaults = {"Exalted Orb": 80.0, "Chaos Orb": 1.0, "Orb of Fusing": 0.5, "Regal Orb": 1, "Orb of Alteration": 1 / 16, "Orb of Alchemy": 1 / 3, "Jeweller's Orb": 1 / 8, "Gemcutter's Prism": 1,
 	            "Divine Orb": 15.0, "Orb of Scouring": 0.5, "Blessed Orb": 0.5, "Vaal Orb": 1, "Orb of Chance": 1 / 8, "Orb of Regret": 1.0, "Chromatic Orb": 1 / 15, "Cartographer's Chisel": 0.25,
 	            "Silver Coin": 1 / 3, "Glassblower's Bauble": 1 / 8, "Orb of Augmentation": 1 / 32, "Orb of Transmutation": 1 / 64, "Perandus Coin": 1 / 45, "Apprentice Cartographer's Sextant": .5,
@@ -93,19 +97,44 @@ def gen_currency(currency_list, league):
 	curvals = gentierval(currency_list['Exalted Orb'])
 
 	for cur in sorted(c_list):
-		if cur in currency_list:
-			# print(cur, currency_list[l][cur], l)
-			retstr = currencyclassify(cur, currency_list[cur], curvals)
-			curval += '\t"{},\n'.format(retstr)
-		else:
-			if cur in shards and shards[cur] not in currency_list:
-				retstr = currencyclassify(cur, defaults[shards[cur]] / 5, curvals)
-			elif cur in shards and shards[cur] in currency_list:
-				retstr = currencyclassify(cur, currency_list[shards[cur]] / 5, curvals)
+		if any(stack in cur for stack in stackable):
+			if cur in currency_list:
+				val = currency_list[cur]
+				retstr = currencyclassify(cur, currency_list[cur], curvals)
+			elif cur in shards:
+				val = (currency_list[shards[cur]] if shards[cur] in currency_list else defaults[shards[cur]]) / 20
+				retstr = currencyclassify(cur, (currency_list[shards[cur]] if shards[cur] in currency_list else defaults[shards[cur]]) / 20, curvals)
 			else:
+				val = defaults[cur]
 				retstr = currencyclassify(cur, defaults[cur], curvals)
 			curval += '\t"{},\n'.format(retstr)
-			print('No data for {} in {}.  Using default,'.format(cur, league))
+
+			prevval = retstr[-20:]
+			count = 9
+			for i in range(2, 21):
+				if cur in currency_list:
+					retstr = currencyclassify(cur, currency_list[cur] * i, curvals, i)
+				else:
+					if cur in shards:
+						retstr = currencyclassify(cur, (currency_list[shards[cur]] if shards[cur] in currency_list else defaults[shards[cur]]) / 20 * i, curvals, i)
+					else:
+						retstr = currencyclassify(cur, defaults[cur] * i, curvals, i)
+				if prevval != retstr[-20:]:
+					curval += '\t"{},\n'.format(retstr.replace('$', '{:02}'.format(count)))
+					count -= 1
+					prevval = retstr[-20:]
+
+		else:
+			if cur in currency_list:
+				retstr = currencyclassify(cur, currency_list[cur], curvals)
+			else:
+				if cur in shards:
+					retstr = currencyclassify(cur, (currency_list[shards[cur]] if shards[cur] in currency_list else defaults[shards[cur]]) / 20, curvals)
+				else:
+					retstr = currencyclassify(cur, defaults[cur], curvals)
+				print('No data for {} in {}.  Using default,'.format(cur, league))
+			curval += '\t"{},\n'.format(retstr)
+
 	curval += u'}\n'
 
 	name = convertname(league)
