@@ -10,15 +10,15 @@ items = {
 
 	"01 Tabula Exception": {"base": "Simple Robe", "other": ["Rarity Unique", "SocketGroup WWWWWW"], "type": "unique high"},
 	"02 6L": {"other": ["LinkedSockets 6"], "type": "show very high"},
-	"03 5L": {"other": ["Rarity < Unique", "Sockets 5", "LinkedSockets 5", "PlayAlertSound 2 15"], "type": "show high"},
-	"04 6S": {"other": ["Sockets 6", "PlayAlertSound 2 50"], "type": "show high"},
-	"04 Incursion Item": {"other": ["PlayAlertSound 2 50"], "class": "Incursion Item", "type": "show high"},
+	"03 5L": {"other": ["Rarity < Unique", "Sockets 5", "LinkedSockets 5", "PlayAlertSoundPositional 2 15"], "type": "show high"},
+	"04 6S": {"other": ["Sockets 6", "PlayAlertSoundPositional 2 50"], "type": "show high"},
+	"04 Incursion Item": {"other": ["PlayAlertSoundPositional 2 50"], "class": "Incursion Item", "type": "show high"},
 	"04 Timeworn Reliquary Key": {"base": "Timeworn Reliquary Key", "class": "Misc Map Items", "type": "show very high"},
 	# High value atlas bases.  Show and make noise at any rarity
-	"04 Steel Ring": {"other": ["PlayAlertSound 2 50"], "base": "Steel Ring", "type": "show high"},
+	"04 Steel Ring": {"other": ["PlayAlertSoundPositional 2 50"], "base": "Steel Ring", "type": "show high"},
 	"04 Crystal Belt": {"base": "Crystal Belt", "type": "ignore"},
-	"04 Stygian Vise": {"other": ["PlayAlertSound 2 50"], "base": "Stygian Vise", "type": "show high"},
-	"04 Opal Ring": {"other": ["PlayAlertSound 2 50"], "base": "Opal Ring", "type": "show high"},
+	"04 Stygian Vise": {"other": ["PlayAlertSoundPositional 2 50"], "base": "Stygian Vise", "type": "show high"},
+	"04 Opal Ring": {"other": ["PlayAlertSoundPositional 2 50"], "base": "Opal Ring", "type": "show high"},
 	"04 84+ Ghastly Abyss Jewel": {"base": "Ghastly", "other": ["ItemLevel >= 84"], "class": "Abyss Jewel", "type": "show normal"},
 	"04 84+ Hypnotic Abyss Jewel": {"base": "Hypnotic", "other": ["ItemLevel >= 84"], "class": "Abyss Jewel", "type": "show normal"},
 	"04 82+ Murderous Abyss Jewel": {"base": "Murderous", "other": ["ItemLevel >= 82"], "class": "Abyss Jewel", "type": "show high"},
@@ -34,7 +34,7 @@ items = {
 	"0 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "show normal"},
 	"1 Jewel": {"class": "Jewel", "other": ["Rarity <= Magic"], "type": "normal"},
 	"0 Thaumaturgical Net": {"base": "Thaumaturgical Net", "class": "Currency", "type": "show normal"},
-	"0 Necromancy Net": {"other": ["PlayAlertSound 2 50"], "base": "Necromancy Net", "class": "Currency", "type": "show high"},
+	"0 Necromancy Net": {"other": ["PlayAlertSoundPositional 2 50"], "base": "Necromancy Net", "class": "Currency", "type": "show high"},
 	"0 Strong Steel Net": {"base": "Strong Steel Net", "class": "Currency", "type": "ignore"},
 	"1 Net": {"base": "Net", "class": "Currency", "type": "hide"},
 
@@ -48,6 +48,7 @@ items = {
 	#"0 corrupted gloves": {"class": "Gloves", "other": ["Corrupted True", "Rarity Normal", "ItemLevel >= 60"], "type": "ignore"},
 	#"0 corrupted boots": {"class": "Boots", "other": ["Corrupted True", "Rarity Normal", "ItemLevel >= 60"], "type": "ignore"},
 	#"0 corrupted shield": {"class": "Shield", "other": ["Corrupted True", "Rarity Normal", "ItemLevel >= 60"], "type": "ignore"},
+	#"0 Crafting helm": {"class": "Helmets", "other": ["Rarity Normal", "ItemLevel >= 84"], "type": "show normal"},
 
 	# Rare highlighting for currency recipes.  change 'ignore' to 'high' or back as needed
 	"0 Rare Two Hand": {"class": "Two Hand\" \"Staves\" \"Bow", "other": ["Rarity Rare", "ItemLevel >= 60"], "type": "ignore"},
