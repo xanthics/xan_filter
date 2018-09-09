@@ -5,6 +5,7 @@
 from datetime import datetime
 from os import path
 from io import open
+from zipfile import ZipFile
 
 from auto_gen import divination
 from auto_gen import hcdivination
@@ -45,37 +46,20 @@ from item_config.gen_item_lists import genrareshighlight, genraresleveling, genn
 from item_config.magic import magicmods
 
 from theme_config import formatting
+from wav_mixer import convert_wav
 
 
-def gen_list_full(items, desc):
-#	print("Starting {}".format(obj))
-	b = ""
-
-	# gen our string
-	for i in sorted(items):
-		s = items[i]
-		if s['type'] != "ignore":
-			b += "#{} - {}\n".format(i, desc)
-			if s['type'] == "hide":
-				b += "Hide"
-			else:
-				b += "Show"
-			if 'base' in s:
-				b += "\n\tBaseType \"{}\"".format(s['base'])
-			if 'class' in s:
-				b += "\n\tClass \"{}\"".format(s['class'])
-			if 'other' in s:
-				b += "\n\t{}".format("\n\t".join(s['other']))
-			if formatting.settings[s['type']]:
-				b += "\n\t{}".format("\n\t".join(formatting.settings[s['type']]))
-			else:
-				print("Missing type field {} ** {}".format(items[i], i))
-			b += "\n\n"
-
-	return b
+# Input is a list
+def getcustomsound(flags, soundlist):
+	if "Custom" in str(flags):
+		for val in flags:
+			if val.startswith('CustomAlertSound'):
+				sound = val.split('"')[1][:-4]
+				if sound not in soundlist:
+					soundlist.append(sound)
 
 
-def gen_list_compact(items, desc):
+def gen_list_compact(items, desc, soundlist):
 #	print("Starting {}".format(obj))
 
 	# gen our string
@@ -102,6 +86,7 @@ def gen_list_compact(items, desc):
 			if 'class' in s:
 				c = s['class']
 			if 'other' in s:
+				getcustomsound(s['other'], soundlist)
 				o = ",".join(s['other'])
 
 			if formatting.settings[s['type']]:
@@ -127,6 +112,7 @@ def gen_list_compact(items, desc):
 			if o:
 				b += "\n\t{}".format("\n\t".join(sorted(o.split(','))))
 			if formatting.settings[f]:
+				getcustomsound(formatting.settings[f], soundlist)
 				b += "\n\t{}".format("\n\t".join(sorted(formatting.settings[f])))
 			else:
 				print("Missing type field {} ** {}".format(items[i], i))
@@ -137,7 +123,6 @@ def gen_list_compact(items, desc):
 
 # main function for creating a filter
 def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
-	# gen_list = gen_list_full
 	gen_list = gen_list_compact
 	lookup_leagues = {'Standard': ("st", "Standard", uniques, divination, stcurrency, stessence),
 					  'Hardcore': ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence),
@@ -145,7 +130,7 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 					  'tmphardcore': ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence)}
 
 	leveling = True  # toggle to show leveling items
-
+	soundlist = []
 	for i in leagues:
 
 		buffer = """#**************************************************************
@@ -156,42 +141,42 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 
 """.format(lookup_leagues[i][1], datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'))
 
-		buffer += gen_list(show.items, show.desc)  # Always show these items
-		buffer += gen_list(hide.items, hide.desc)  # Always hide these items
+		buffer += gen_list(show.items, show.desc, soundlist)  # Always show these items
+		buffer += gen_list(hide.items, hide.desc, soundlist)  # Always hide these items
 		if lookup_leagues[i][0] not in ['st', 'hc']:
-			buffer += gen_list(challenges.items, challenges.desc)
-		buffer += gen_list(labyrinth.items, labyrinth.desc)
-		buffer += gen_list(lookup_leagues[i][4].items, lookup_leagues[i][4].desc)  # Autogen currency values
-		buffer += gen_list(lookup_leagues[i][5].items, lookup_leagues[i][5].desc)  # Autogen Essences
-		buffer += gen_list(currency.items, currency.desc)  # Currency
-		buffer += gen_list(gems.items, gems.desc)  # Gems
-		buffer += gen_list(lookup_leagues[i][2].items, lookup_leagues[i][2].desc)  # uniques
-		# buffer += gen_list(recipe_item.items, recipe_item.desc)  # Items for vendor recipe
-		buffer += gen_list(maps.items, maps.desc)  # maps
-		buffer += gen_list(lookup_leagues[i][3].items, lookup_leagues[i][3].desc)  # divination cards
-		buffer += gen_list(flask.items, flask.desc)  # Flasks
-		#buffer += gen_list(t1_rares.items, t1_rares.desc)
+			buffer += gen_list(challenges.items, challenges.desc, soundlist)
+		buffer += gen_list(labyrinth.items, labyrinth.desc, soundlist)
+		buffer += gen_list(lookup_leagues[i][4].items, lookup_leagues[i][4].desc, soundlist)  # Autogen currency values
+		buffer += gen_list(lookup_leagues[i][5].items, lookup_leagues[i][5].desc, soundlist)  # Autogen Essences
+		buffer += gen_list(currency.items, currency.desc, soundlist)  # Currency
+		buffer += gen_list(gems.items, gems.desc, soundlist)  # Gems
+		buffer += gen_list(lookup_leagues[i][2].items, lookup_leagues[i][2].desc, soundlist)  # uniques
+		# buffer += gen_list(recipe_item.items, recipe_item.desc, soundlist)  # Items for vendor recipe
+		buffer += gen_list(maps.items, maps.desc, soundlist)  # maps
+		buffer += gen_list(lookup_leagues[i][3].items, lookup_leagues[i][3].desc, soundlist)  # divination cards
+		buffer += gen_list(flask.items, flask.desc, soundlist)  # Flasks
+		#buffer += gen_list(t1_rares.items, t1_rares.desc, soundlist)
 		if leveling:
 			desc = "Rare item for leveling"
 			flags = 'All'  # see item_config/rare_gen - genraresleveling for valid values
-			buffer += gen_list(genraresleveling(flags, overlevel=3, maxlevel=67), desc)
+			buffer += gen_list(genraresleveling(flags, overlevel=3, maxlevel=67), desc, soundlist)
 
-		#buffer += gen_list(rare_highlight.items, rare_highlight.desc)  # rares highlighting + jewelry
-		buffer += gen_list(genrareshighlight(), 'Rare item highlighting for endgame')
-		buffer += gen_list(rares.items, rares.desc)  # rares catchall
-		# buffer += gen_list(chroma.items, chroma.desc)  # chrome vendor items
+		#buffer += gen_list(rare_highlight.items, rare_highlight.desc, soundlist)  # rares highlighting + jewelry
+		buffer += gen_list(genrareshighlight(), 'Rare item highlighting for endgame', soundlist)
+		buffer += gen_list(rares.items, rares.desc, soundlist)  # rares catchall
+		# buffer += gen_list(chroma.items, chroma.desc, soundlist)  # chrome vendor items
 		if leveling:
-			buffer += gen_list(general_levelling.items, general_levelling.desc)
-		buffer += gen_list(chance.items, chance.desc)  # Chance bases
-		# buffer += gen_list(crafting_bases.items, crafting_bases.desc)  # Crafting bases
-		# buffer += gen_list(animate_weapon.items, animate_weapon.desc)  # Animate Weapon bases
+			buffer += gen_list(general_levelling.items, general_levelling.desc, soundlist)
+		buffer += gen_list(chance.items, chance.desc, soundlist)  # Chance bases
+		# buffer += gen_list(crafting_bases.items, crafting_bases.desc, soundlist)  # Crafting bases
+		# buffer += gen_list(animate_weapon.items, animate_weapon.desc, soundlist)  # Animate Weapon bases
 
 		if leveling:
 			desc = 'item for leveling'
 			flags = ['Weapon']  # 'All'  # see item_config/rare_gen - genraresleveling for valid values
-			buffer += gen_list(gennonrareleveling(flags, overlevel=2, maxlevel=25), desc)
+			buffer += gen_list(gennonrareleveling(flags, overlevel=2, maxlevel=25), desc, soundlist)
 
-		buffer += gen_list(magicmods(), "Magic Items")  # magic base type highlighting
+		buffer += gen_list(magicmods(), "Magic Items", soundlist)  # magic base type highlighting
 
 		print("Writing files to {}".format(path.expanduser("~\\my game\\Path of Exile\\")))
 
@@ -212,6 +197,12 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 			f.write(buffer)
 			# Default for all other items
 			f.write("Hide\n\tDisableDropSound True\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
+	for track in soundlist:
+		i, sound = track.split('_', maxsplit=1)
+		convert_wav(int(i), sound)
+	with ZipFile('soundpack.zip', 'w') as zip:
+		for track in soundlist:
+			zip.write('filter_sounds/{}.wav'.format(track), arcname='{}.wav'.format(track))
 
 
 if __name__ == "__main__":
