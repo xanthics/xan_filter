@@ -50,5 +50,5 @@ items = {
 	"130 Normal": {"class": "Maps", "type": "map yellow"},
 
 	"74 Map Fragments": {"class": "Map Fragments", "type": "map white"},
-	"75 Misc map items": {"class": "Misc Map Items", 'other': ["PlayAlertSoundPositional 2 100"], "type": "show high"},
+	"75 Misc map items": {"class": "Misc Map Items", 'other': ['CustomAlertSound "100_show.wav"'], "type": "show high"},
 }

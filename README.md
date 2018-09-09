@@ -1,4 +1,8 @@
 # poe_filter
+**SoundPack**
+Required for filter sounds
+[soundpack](soundpack.zip?raw=true)
+
 
 **HIDE**
 * [Download Delve](xan.t.hide.filter?raw=true)
