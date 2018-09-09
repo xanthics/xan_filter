@@ -319,7 +319,7 @@ def gen_unique(unique_list, league, curvals):
 			items['very high'].append(u)
 		elif unique_list[u] > curvals['very']:
 			items['high'].append(u)
-		elif unique_list[u] < curvals['low']:
+		elif unique_list[u] < curvals['normal']:
 			items['low'].append(u)
 
 	with open('auto_gen\\{}uniques.py'.format(name), 'w', encoding='utf-8') as f:
