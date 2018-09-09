@@ -847,6 +847,10 @@ bases = {
 			{'drop': 100, 'base': 'Jewel', 'name': 'Cobalt Jewel'},
 			{'drop': 100, 'base': 'Jewel', 'name': 'Crimson Jewel'},
 			{'drop': 100, 'base': 'Jewel', 'name': 'Viridian Jewel'},
+			{'drop': 100, 'base': 'Abyss Jewel', 'name': 'Searching Eye Jewel'},
+			{'drop': 100, 'base': 'Abyss Jewel', 'name': 'Murderous Eye Jewel'},
+			{'drop': 100, 'base': 'Abyss Jewel', 'name': 'Hypnotic Eye Jewel'},
+			{'drop': 100, 'base': 'Abyss Jewel', 'name': 'Ghastly Eye Jewel'},
 		]
 	},
 }
@@ -983,7 +987,7 @@ def genrareshighlight():
 	               'Jade Amulet', 'Amber Amulet', 'Lapis Amulet', 'Agate Amulet', 'Turquoise Amulet', 'Citrine Amulet', 'Onyx Amulet', 'Marble Amulet',
 	               'Stygian Vise', 'Rustic Sash', 'Heavy Belt', 'Leather Belt',
 	               'Coral Ring', 'Sapphire Ring', 'Topaz Ring', 'Ruby Ring', 'Two-Stone Ring', 'Diamond Ring', 'Prismatic Ring', 'Amethyst Ring', 'Unset Ring', 'Opal Ring', 'Steel Ring',
-	               'Cobalt Jewel', 'Crimson Jewel', 'Viridian Jewel'}
+	               'Cobalt Jewel', 'Crimson Jewel', 'Viridian Jewel', 'Searching Eye Jewel', 'Murderous Eye Jewel', 'Hypnotic Eye Jewel', 'Ghastly Eye Jewel'}
 
 	#  Best bases, supercedes shown
 	t1 = {'Harbinger Bow',

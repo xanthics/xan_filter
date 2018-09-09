@@ -15,6 +15,6 @@ def magicmods():
 	ret = {"Magic Items": {"other": ['HasExplicitMod "Tacati\'s" "Citaqualotl\'s" "Matatl\'s" "Topotante\'s" "Xopec\'s" "Guatelitzi\'s" "of Tacati" "of Citaqualotl" "of Matatl" '
 									 '"of Puhuarte" "of Guatelitzi" "Brinerot" "Mutewind" "Redblade" "Betrayer\'s" "Deceiver\'s" "Turncoat\'s" "Tyrannical" "Merciless" "Electrocuting" '
 									 '"Resplendent" "Incandescent" "Rapturous" "Prime" "Vigorous" "Virile" "Overpowering" "of the Rainbow" "of Ephij" "of Haast" "of Tzteosh" '
-									 '"Subterranean" "of the Underground" "of Weaponcraft" "of Spellcraft" "of Crafting"'], "type": "show normal"}}
+									 '"Subterranean" "of the Underground" "of Weaponcraft" "of Spellcraft" "of Crafting" "Cheetah\'s"'], "type": "show normal"}}
 
 	return ret
