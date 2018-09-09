@@ -1,7 +1,6 @@
 # poe_filter
 **SoundPack**
-Required for filter sounds
-[soundpack](soundpack.zip?raw=true)
+[soundpack](soundpack.zip?raw=true) Download, unzip archive, and place wav files in same directory as the filter
 
 
 **HIDE**
