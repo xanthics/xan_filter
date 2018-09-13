@@ -206,6 +206,10 @@ settings = {
 	"map white": ["SetBorderColor {} 150".format(color['normal']),
 				  "SetBackgroundColor {} 220".format(color['black'])],
 
+	"map very good": ["SetBorderColor {}".format(color['fire']),
+					 "SetFontSize {}".format(size['huge']),
+					 "PlayAlertSound 7 {}".format(volume['high']),
+					 "SetBackgroundColor {} 220".format(color['black'])],
 	"map red good": ["SetBorderColor {}".format(color['fire']),
 					 "SetFontSize {}".format(size['huge']),
 					 "PlayAlertSound 7 {}".format(volume['high']),
