@@ -6,10 +6,10 @@ desc = "gems"
 
 # Base type : settings pair
 items = {
-	"0 Leveled Gem ": {"class": "Gems", "other": ["GemLevel >= 19543"], "type": "gem very high"},
-	"01 Quality Gem 20": {"class": "Gems", "other": ["Quality 20"], "type": "currency high"},
-	"02 Quality Gem High": {"class": "Gems", "other": ["Quality >= 10"], "type": "gem very high"},
-	"03 Quality Gem": {"class": "Gems", "other": ["Quality >= 1"], "type": "gem high"},
+	"0 Leveled Gem ": {"class": "Gems", "other": ["GemLevel >= 19"], "type": "gem very high"},
+	"01 Quality Gem 20": {"class": "Gems", "other": ["Quality 20"], "type": "gem very high"},
+	"02 Quality Gem High": {"class": "Gems", "other": ["Quality >= 10"], "type": "gem high"},
+	"03 Quality Gem": {"class": "Gems", "other": ["Quality >= 1"], "type": "gem normal"},
 	"1 Portal": {"base": "Portal", "class": "Gems", "type": "gem normal"},
 	"1 Detonate Mines": {"base": "Detonate Mines", "class": "Gems", "type": "gem low"},
 	"1 Empower": {"base": "Empower Support", "class": "Gems", "type": "gem normal"},
