@@ -14,7 +14,9 @@ def convert_wav(factor, inpath):
 				'challenge': 'defiance.wav',
 				'map_good': 'flippy.wav',
 				'currency': 'gold.wav',
-				'show': 'levelup.wav'}
+				'show': 'levelup.wav',
+				'valuable': 'portalcast.wav',
+				'gem': 'gem.wav'}
 
 	pathout = "{}_{}.wav".format(int(factor), inpath)
 	factor = factor / 100
@@ -49,7 +51,7 @@ def convert_wav(factor, inpath):
 
 
 if __name__ == '__main__':
-	sounds = ['divination', 'unique', 'map_okay', 'challenge', 'map_good', 'currency', 'show']
+	sounds = ['divination', 'unique', 'map_okay', 'challenge', 'map_good', 'currency', 'show', 'valuable']
 
 	for track in sounds:
 		for i in [20, 45, 75, 100, 300]:
