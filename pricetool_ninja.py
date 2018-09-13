@@ -16,7 +16,7 @@ header = '''#!/usr/bin/python
 
 # Helper function to tier items based on value of ex
 def gentierval(exa):
-	ret = {'extremely': exa + 1 if exa > 50 else 50,
+	ret = {'extremely': exa if exa > 50 else 50,
 		   'very': exa // 10 if exa > 50 else 5,
 		   'high': 1,
 		   'normal': 1/4,
@@ -244,7 +244,6 @@ def gen_div(div_list, league, curvals):
 	# Cards that will never make a drop noise
 	lowcards = ["Thunderous Skies",
 				"The Rabid Rhoa",
-				"The Surgeon",
 				"The Twins",
 				"The Scholar",
 				"Destined to Crumble",
