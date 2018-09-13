@@ -3,7 +3,7 @@
 # Author: Jeremy Parks
 # Note: Requires Python 3.3.x or higher
 from datetime import datetime
-from os import path
+import os
 from io import open
 from zipfile import ZipFile
 
@@ -178,13 +178,13 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 
 		buffer += gen_list(magicmods(), "Magic Items", soundlist)  # magic base type highlighting
 
-		print("Writing files to {}".format(path.expanduser("~\\my game\\Path of Exile\\")))
+		print("Writing files to {}".format(os.path.expanduser("~\\my game\\Path of Exile\\")))
 
 		with open("xan.{}.show.filter".format(lookup_leagues[i][0]), "w", encoding='utf-8') as f:
 			f.write(buffer)
 			# Default for all other items
 			f.write("Show\n\tDisableDropSound True\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
-		with open(path.expanduser(r"~\Documents\my games\Path of Exile\xan.{}.show.filter".format(lookup_leagues[i][0])), "w", encoding='utf-8') as f:
+		with open(os.path.expanduser(r"~\Documents\my games\Path of Exile\xan.{}.show.filter".format(lookup_leagues[i][0])), "w", encoding='utf-8') as f:
 			f.write(buffer)
 			# Default for all other items
 			f.write("Show\n\tDisableDropSound True\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
@@ -193,16 +193,27 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 			f.write(buffer)
 			# Default for all other items
 			f.write("Hide\n\tDisableDropSound True\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
-		with open(path.expanduser(r"~\Documents\my games\Path of Exile\xan.{}.hide.filter".format(lookup_leagues[i][0])), "w", encoding='utf-8') as f:
+		with open(os.path.expanduser(r"~\Documents\my games\Path of Exile\xan.{}.hide.filter".format(lookup_leagues[i][0])), "w", encoding='utf-8') as f:
 			f.write(buffer)
 			# Default for all other items
 			f.write("Hide\n\tDisableDropSound True\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
+
+	# Delete existing wav files before creating new ones
+	for file in os.listdir('filter_sounds'):
+		os.remove(os.path.join('filter_sounds', file))
+	if os.path.isfile('soundpack.zip'):
+		os.remove('soundpack.zip')
+	for file in os.listdir(os.path.expanduser(r"~\Documents\my games\Path of Exile")):
+		if file.endswith('.wav'):
+			os.remove(os.path.join(os.path.expanduser(r"~\Documents\my games\Path of Exile"), file))
+	# Create requested sound files
 	for track in soundlist:
 		i, sound = track.split('_', maxsplit=1)
 		convert_wav(int(i), sound)
-	with ZipFile('soundpack.zip', 'w') as zip:
+	# Create sound pack
+	with ZipFile('soundpack.zip', 'w') as zipper:
 		for track in soundlist:
-			zip.write('filter_sounds/{}.wav'.format(track), arcname='{}.wav'.format(track))
+			zipper.write('filter_sounds/{}.wav'.format(track), arcname='{}.wav'.format(track))
 
 
 if __name__ == "__main__":
