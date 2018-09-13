@@ -28,7 +28,7 @@ items = {
 	
 	"0 Divine Vessel": {"other": ["PlayAlertSoundPositional 9 50"], "base": "Divine Vessel", "class": "Map Fragments", "type": "show high"},
 
-	"112 Normal": {"class": "Maps", "other": ["MapTier >= 16"], "type": "map red good"},
+	"112 Normal": {"class": "Maps", "other": ["MapTier >= 16"], "type": "map very good"},
 	"113 Normal": {"class": "Maps", "other": ["ItemLevel <= 84", "MapTier = 15"], "type": "map red good"},
 	"114 Normal": {"class": "Maps", "other": ["ItemLevel <= 83", "MapTier = 14"], "type": "map red good"},
 	"115 Normal": {"class": "Maps", "other": ["ItemLevel <= 82", "MapTier = 13"], "type": "map red good"},
