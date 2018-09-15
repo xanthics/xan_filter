@@ -239,7 +239,8 @@ def gen_div(div_list, league, curvals):
 	            'The Web',
 	            'The Sigil',
 	            'The Surgeon',
-	            'Prosperity']
+	            'Prosperity',
+				'The Lover']
 
 	# Cards that will never make a drop noise
 	lowcards = ["Thunderous Skies",

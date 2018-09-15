@@ -43,7 +43,7 @@ from item_config import recipe_item
 from item_config import show
 from item_config import t1_rares
 from item_config.gen_item_lists import genrareshighlight, genraresleveling, gennonrareleveling
-from item_config.magic import magicmods
+from item_config.itemmod import itemmods
 
 from theme_config import formatting
 from wav_mixer import convert_wav
@@ -176,7 +176,7 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 			flags = ['Weapon']  # 'All'  # see item_config/rare_gen - genraresleveling for valid values
 			buffer += gen_list(gennonrareleveling(flags, overlevel=2, maxlevel=25), desc, soundlist)
 
-		buffer += gen_list(magicmods(), "Magic Items", soundlist)  # magic base type highlighting
+		buffer += gen_list(itemmods(), "Magic Items", soundlist)  # magic base type highlighting
 
 		print("Writing files to {}".format(os.path.expanduser("~\\my game\\Path of Exile\\")))
 
@@ -218,7 +218,7 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 
 if __name__ == "__main__":
 	import pricetool_ninja
-	league = ['Standard', 'Hardcore', 'tmpstandard', 'tmphardcore']
-#	league = ['tmpstandard']
-#	pricetool_ninja.scrape_ninja(league)
+#	league = ['Standard', 'Hardcore', 'tmpstandard', 'tmphardcore']
+	league = ['tmpstandard']
+	pricetool_ninja.scrape_ninja(league)
 	main(league)

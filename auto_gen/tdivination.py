@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/13/2018(m/d/y) 19:54:56 UTC from "tmpstandard" data
+# Created: 09/14/2018(m/d/y) 21:00:48 UTC from "tmpstandard" data
 
 desc = "Divination Card"
 
@@ -21,6 +21,7 @@ items = {
 	"1 Mawr Blaidd": {"base": "Mawr Blaidd", "class": "Divination Card", "type": "divination very high"},
 	"1 Pride Before the Fall": {"base": "Pride Before the Fall", "class": "Divination Card", "type": "divination very high"},
 	"1 The Artist": {"base": "The Artist", "class": "Divination Card", "type": "divination very high"},
+	"1 The Breach": {"base": "The Breach", "class": "Divination Card", "type": "divination very high"},
 	"1 The Celestial Justicar": {"base": "The Celestial Justicar", "class": "Divination Card", "type": "divination very high"},
 	"1 The Celestial Stone": {"base": "The Celestial Stone", "class": "Divination Card", "type": "divination very high"},
 	"1 The Doctor": {"base": "The Doctor", "class": "Divination Card", "type": "divination very high"},
@@ -52,18 +53,15 @@ items = {
 	"2 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination high"},
 	"2 Perfection": {"base": "Perfection", "class": "Divination Card", "type": "divination high"},
 	"2 Rebirth": {"base": "Rebirth", "class": "Divination Card", "type": "divination high"},
-	"2 The Beast": {"base": "The Beast", "class": "Divination Card", "type": "divination high"},
+	"2 Scholar of the Seas": {"base": "Scholar of the Seas", "class": "Divination Card", "type": "divination high"},
 	"2 The Body": {"base": "The Body", "class": "Divination Card", "type": "divination high"},
-	"2 The Breach": {"base": "The Breach", "class": "Divination Card", "type": "divination high"},
 	"2 The Brittle Emperor": {"base": "The Brittle Emperor", "class": "Divination Card", "type": "divination high"},
 	"2 The Cartographer": {"base": "The Cartographer", "class": "Divination Card", "type": "divination high"},
 	"2 The Chains that Bind": {"base": "The Chains that Bind", "class": "Divination Card", "type": "divination high"},
-	"2 The Cursed King": {"base": "The Cursed King", "class": "Divination Card", "type": "divination high"},
 	"2 The Dapper Prodigy": {"base": "The Dapper Prodigy", "class": "Divination Card", "type": "divination high"},
 	"2 The Dreamer": {"base": "The Dreamer", "class": "Divination Card", "type": "divination high"},
 	"2 The Endless Darkness": {"base": "The Endless Darkness", "class": "Divination Card", "type": "divination high"},
 	"2 The Ethereal": {"base": "The Ethereal", "class": "Divination Card", "type": "divination high"},
-	"2 The Formless Sea": {"base": "The Formless Sea", "class": "Divination Card", "type": "divination high"},
 	"2 The Hale Heart": {"base": "The Hale Heart", "class": "Divination Card", "type": "divination high"},
 	"2 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination high"},
 	"2 The Jester": {"base": "The Jester", "class": "Divination Card", "type": "divination high"},
@@ -74,6 +72,8 @@ items = {
 	"2 The Porcupine": {"base": "The Porcupine", "class": "Divination Card", "type": "divination high"},
 	"2 The Price of Protection": {"base": "The Price of Protection", "class": "Divination Card", "type": "divination high"},
 	"2 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
+	"2 The Standoff": {"base": "The Standoff", "class": "Divination Card", "type": "divination high"},
+	"2 The Surveyor": {"base": "The Surveyor", "class": "Divination Card", "type": "divination high"},
 	"2 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination high"},
 	"2 The Throne": {"base": "The Throne", "class": "Divination Card", "type": "divination high"},
 	"2 The Twilight Moon": {"base": "The Twilight Moon", "class": "Divination Card", "type": "divination high"},
@@ -90,12 +90,14 @@ items = {
 	"3 The Rabid Rhoa": {"base": "The Rabid Rhoa", "class": "Divination Card", "type": "divination low"},
 	"3 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},
 	"3 The Twins": {"base": "The Twins", "class": "Divination Card", "type": "divination low"},
+	"3 The Warden": {"base": "The Warden", "class": "Divination Card", "type": "divination low"},
 	"3 Thunderous Skies": {"base": "Thunderous Skies", "class": "Divination Card", "type": "divination low"},
 	"7 Prosperity": {"base": "Prosperity", "class": "Divination Card", "type": "hide"},
 	"7 Struck by Lightning": {"base": "Struck by Lightning", "class": "Divination Card", "type": "hide"},
 	"7 The Carrion Crow": {"base": "The Carrion Crow", "class": "Divination Card", "type": "hide"},
 	"7 The Inoculated": {"base": "The Inoculated", "class": "Divination Card", "type": "hide"},
 	"7 The King's Blade": {"base": "The King's Blade", "class": "Divination Card", "type": "hide"},
+	"7 The Lover": {"base": "The Lover", "class": "Divination Card", "type": "hide"},
 	"7 The Sigil": {"base": "The Sigil", "class": "Divination Card", "type": "hide"},
 	"7 The Surgeon": {"base": "The Surgeon", "class": "Divination Card", "type": "hide"},
 	"7 The Web": {"base": "The Web", "class": "Divination Card", "type": "hide"},

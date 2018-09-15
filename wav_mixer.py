@@ -14,7 +14,7 @@ def convert_wav(factor, inpath):
 				'challenge': 'defiance.wav',
 				'map_good': 'flippy.wav',
 				'currency': 'gold.wav',
-				'show': 'levelup.wav',
+				'show': 'rune.wav',
 				'valuable': 'portalcast.wav',
 				'gem': 'gem.wav'}
 
