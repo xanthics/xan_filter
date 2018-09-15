@@ -194,7 +194,7 @@ bases = {
 			{'drop': 68, 'base': 'Sceptre', 'name': 'Void Sceptre'},  # Elemental Damage +(40)
 			{'drop': 70, 'base': 'Sceptre', 'name': 'Sambar Sceptre'},  # Reduce Enemy Elemental Resistance (6)
 		],
-		"Caster|Int|Melee|Staff|Str|Two|Weapon": [
+		"Caster|Int|Melee|Stave|Str|Two|Weapon": [
 			{'drop': 4, 'base': 'Stave', 'name': 'Gnarled Branch'},  # Staff Block (18)
 			{'drop': 9, 'base': 'Stave', 'name': 'Primitive Staff'},  # Staff Block (18)
 			{'drop': 13, 'base': 'Stave', 'name': 'Long Staff'},  # Staff Block (18)
@@ -882,7 +882,7 @@ def findsubstrings():
 # Will match all valid flags
 # Valid flags are:
 # Bow, Two, Ranged, Dex, Claw, One, Melee, Int, Dagger, Caster, One Hand Axe, Str, One Hand Mace,
-# One Hand Sword, Sceptre, Staff, Thrusting One Hand Sword, Two Hand Axe, Two Hand Mace, Two Hand Sword,
+# One Hand Sword, Sceptre, Stave, Thrusting One Hand Sword, Two Hand Axe, Two Hand Mace, Two Hand Sword,
 # Wand, Body Armour, Armour, Boots, Gloves, Helmet, Shield, Amulet, Accessory, Belt, Ring, Weapon
 # All is a special flag that chooses all categories
 # overlevel is how many levels to highlight an item after a better base starts dropping
@@ -927,7 +927,7 @@ def genraresleveling(flags='All', overlevel=3, maxlevel=67, alwayshighlight=('Ac
 # Will match all valid flags
 # Valid flags are:
 # Bow, Two, Ranged, Dex, Claw, One, Melee, Int, Dagger, Caster, One Hand Axe, Str, One Hand Mace,
-# One Hand Sword, Sceptre, Staff, Thrusting One Hand Sword, Two Hand Axe, Two Hand Mace, Two Hand Sword,
+# One Hand Sword, Sceptre, Stave, Thrusting One Hand Sword, Two Hand Axe, Two Hand Mace, Two Hand Sword,
 # Wand, Body Armour, Armour, Boots, Gloves, Helmet, Shield, Amulet, Accessory, Belt, Ring, Weapon
 # All is a special flag that chooses all categories
 # overlevel is how many levels to show an item after a better base starts dropping
