@@ -188,8 +188,7 @@ settings = {
 						  'MinimapIcon 1 Blue Circle',
 						  'CustomAlertSound "{}_divination.wav"'.format(volume['low']),
 						  "SetBackgroundColor {} 220".format(color['black'])],
-	"divination low": ["SetBackgroundColor {} 220".format(color['black']),
-					   'MinimapIcon 2 Blue Circle'],
+	"divination low": ["SetBackgroundColor {} 220".format(color['black'])],
 
 	"gem very high": ["SetBorderColor {}".format(color['gem']),
 					  'MinimapIcon 1 Brown Hexagon',

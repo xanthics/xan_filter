@@ -68,8 +68,11 @@ def itemmods():
 				 'Flawless': ["Ring"],
 				 }
 
-	modanyitem = ['Eldritch', "The Shaper's", 'of the Elder', 'of Shaping', "Subterranean", "of the Underground", "of Weaponcraft", "of Spellcraft", "of Crafting", "Citaqualotl's", "Guatelitzi's", "Matatl's", "of Puhuarte", "of Tacati", "Tacati's",
-				  "Topotante's", "Xopec's", "Brinerot", "Mutewind", "Redblade", "Betrayer\'s", "Deceiver\'s", "Turncoat\'s"]
+	modanyitem = ['Eldritch', "The Shaper's", 'of the Elder', 'of Shaping',
+				  "Subterranean", "of the Underground", "of Weaponcraft", "of Spellcraft", "of Crafting",
+				  "Citaqualotl's", "Guatelitzi's", "Matatl's", "of Puhuarte", "of Tacati", "Tacati's", "Topotante's", "Xopec's",
+				  "Brinerot", "Mutewind", "Redblade", "Betrayer\'s", "Deceiver\'s", "Turncoat\'s",
+				  "of Farrul", "of Craiceann", "of Fenumus", "of Saqawal"]
 
 	ret = {'0 Item Mod': {'other': ['HasExplicitMod "{}"'.format('" "'.join(modanyitem))], "type": "item mod"}}
 
@@ -83,11 +86,6 @@ def itemmods():
 				ret[keyval]['class'] = item
 				ret[keyval]['other'] = ['HasExplicitMod "{}"'.format(mod)]
 
-
-#	ret = {"Magic Items": {"other": ['HasExplicitMod "Tacati\'s" "Citaqualotl\'s" "Matatl\'s" "Topotante\'s" "Xopec\'s" "Guatelitzi\'s" "of Tacati" "of Citaqualotl" "of Matatl" '
-#									 '"of Puhuarte" "of Guatelitzi" "Brinerot" "Mutewind" "Redblade" "Betrayer\'s" "Deceiver\'s" "Turncoat\'s" "Tyrannical" "Merciless" "Electrocuting" '
-#									 '"Resplendent" "Incandescent" "Rapturous" "Prime" "Vigorous" "Virile" "Overpowering" "of the Rainbow" "of Ephij" "of Haast" "of Tzteosh" '
-#									 '"Subterranean" "of the Underground" "of Weaponcraft" "of Spellcraft" "of Crafting" "Cheetah\'s"', "Corrupted False"], "type": "show normal"}}
 
 	return ret
 
