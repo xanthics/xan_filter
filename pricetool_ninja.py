@@ -57,8 +57,8 @@ def currencyclassify(cur, val, curvals, stacks=1):
 	elif val >= curvals['min']:
 		tier = 'currency very low'
 	else:
-		tier = 'currency very low'
-		#tier = 'hide'
+		#tier = 'currency very low'
+		tier = 'hide'
 	if stacks > 1:
 		return "$ {0}\": {{\"base\": \"{0}\", 'other': ['StackSize >= {2}'], \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier, stacks)
 	return "1 {0}\": {{\"base\": \"{0}\", \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier)
@@ -82,6 +82,7 @@ def gen_currency(currency_list, league):
 				"Bloodstained Fossil": 27.5, "Gilded Fossil": 15.0, "Sanctified Fossil": 15.0, "Lucent Fossil": 5.0, "Encrusted Fossil": 4.0, "Bound Fossil": 3.0,
 				"Prismatic Fossil": 3.0, "Enchanted Fossil": 3.0, "Perfect Fossil": 2.0, "Serrated Fossil": 1.93, "Aetheric Fossil": 1.14, "Jagged Fossil": 1.0,
 				"Scorched Fossil": 1.0, "Pristine Fossil": 1.0, "Corroded Fossil": 1.0, "Metallic Fossil": 0.88, "Dense Fossil": 0.86, "Aberrant Fossil": 0.43, "Frigid Fossil": 0.43,
+
 				}
 
 	shards = {'Binding Shard': 'Orb of Binding', 'Horizon Shard': 'Orb of Horizons', 'Harbinger\'s Shard': 'Harbinger\'s Orb', 'Engineer\'s Shard': 'Engineer\'s Orb', 'Ancient Shard': 'Ancient Orb',
@@ -239,8 +240,7 @@ def gen_div(div_list, league, curvals):
 	            'The Web',
 	            'The Sigil',
 	            'The Surgeon',
-	            'Prosperity',
-				'The Lover']
+	            'Prosperity']
 
 	# Cards that will never make a drop noise
 	lowcards = ["Thunderous Skies",
@@ -250,7 +250,8 @@ def gen_div(div_list, league, curvals):
 				"Destined to Crumble",
 	            'The Incantation',
 	            'Shard of Fate',
-	            'The Endurance']
+	            'The Endurance',
+				'The Lover']
 
 	predefinedcards = badcards + lowcards + substringcards + verygoodcards
 
@@ -266,11 +267,11 @@ def gen_div(div_list, league, curvals):
 	for c in div_list:
 		if c in predefinedcards:
 			pass
-		elif div_list[c] >= curvals['very']:
+		elif div_list[c] >= curvals['extremely']:
 			items['high'].append(c)
-		elif div_list[c] >= curvals['high']*2:
+		elif div_list[c] >= curvals['very']:
 			items['normal'].append(c)
-		elif div_list[c] <= curvals['normal']:
+		elif div_list[c] < curvals['high']/2:
 			items['low'].append(c)
 	with open('auto_gen\\{}divination.py'.format(name), 'w', encoding='utf-8') as f:
 		f.write(u'''{}\ndesc = "Divination Card"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league)))
@@ -278,11 +279,11 @@ def gen_div(div_list, league, curvals):
 			if ii in bcards:
 				lvl = 'hide'
 				bcards.remove(ii)
-			elif div_list[ii] >= curvals['very']:
+			elif div_list[ii] >= curvals['extremely']:
 				lvl = 'divination very high'
-			elif div_list[ii] >= curvals['high']*2:
+			elif div_list[ii] >= curvals['very']:
 				lvl = 'divination high'
-			elif div_list[ii] <= curvals['normal']:
+			elif div_list[ii] < curvals['high']/2:
 				lvl = 'divination low'
 			else:
 				lvl = 'divination normal'
@@ -319,7 +320,7 @@ def gen_unique(unique_list, league, curvals):
 			items['very high'].append(u)
 		elif unique_list[u] > curvals['very']:
 			items['high'].append(u)
-		elif unique_list[u] < curvals['normal']:
+		elif unique_list[u] < curvals['high']:
 			items['low'].append(u)
 
 	with open('auto_gen\\{}uniques.py'.format(name), 'w', encoding='utf-8') as f:
@@ -347,6 +348,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 
 	paths = {
 		'currency': 'http://poe.ninja/api/Data/GetCurrencyOverview?league={}',
+#		'prophecy': 'http://poe.ninja/api/Data/GetProphecyOverview?league={}',
 		'div': 'http://poe.ninja/api/Data/GetDivinationCardsOverview?league={}',
 		'essence': 'http://poe.ninja/api/Data/GetEssenceOverview?league={}',
 		'unique jewel': 'http://poe.ninja/api/Data/GetUniqueJewelOverview?league={}',
@@ -377,7 +379,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 						if 'chaosEquivalent' in ii:
 							currency[ii['currencyTypeName']] = ii['chaosEquivalent']
 
-			elif key in ['resonator', 'fossil']:
+			elif key in ['resonator', 'fossil', 'prophecy']:
 				for i in data:
 					for ii in data[i]:
 						currency[ii['name']] = ii['chaosValue']

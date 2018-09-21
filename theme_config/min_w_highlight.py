@@ -200,8 +200,9 @@ settings = {
 				 'CustomAlertSound "{}_gem.wav"'.format(volume['low']),
 				 "SetFontSize {}".format(size['normal']),
 				 "SetBackgroundColor {} 220".format(color['black'])],
-	"gem normal": ["SetBorderColor {}".format(color['gem']),
-				   "SetBackgroundColor {} 220".format(color['black'])],
+	"gem normal": ["SetBorderColor {} 150".format(color['gem']),
+				   "SetBackgroundColor {} 220".format(color['black']),
+				   "SetFontSize {}".format(size['small'])],
 	"gem low": ["SetFontSize {}".format(size['small']),
 				"SetBackgroundColor {} 220".format(color['black'])],
 
