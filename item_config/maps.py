@@ -26,7 +26,7 @@ items = {
 	"0 Fragment of the Chimera": {"base": "Fragment of the Chimera", "class": "Map Fragments", "type": "map red"},
 	"0 Fragment of the Hydra": {"base": "Fragment of the Hydra", "class": "Map Fragments", "type": "map red"},
 	
-	"0 Divine Vessel": {"other": ["PlayAlertSoundPositional 9 50"], "base": "Divine Vessel", "class": "Map Fragments", "type": "show high"},
+	"0 Divine Vessel": {"other": ['CustomAlertSound "45_show.wav"'], "base": "Divine Vessel", "class": "Map Fragments", "type": "show high"},
 
 	"112 Normal": {"class": "Maps", "other": ["MapTier >= 16"], "type": "map very good"},
 	"113 Normal": {"class": "Maps", "other": ["ItemLevel <= 84", "MapTier = 15"], "type": "map red good"},
