@@ -46,9 +46,9 @@ def currencyclassify(cur, val, curvals, stacks=1):
 		tier = 'currency show'
 	elif val >= curvals['extremely']:
 		tier = 'currency extremely high'
-	elif val >= curvals['very']:
+	elif val > curvals['very']:
 		tier = 'currency very high'
-	elif val >= curvals['high']:
+	elif val > curvals['high']:
 		tier = 'currency high'
 	elif val >= curvals['normal']:
 		tier = 'currency normal'
@@ -158,11 +158,11 @@ def gen_currency(currency_list, league):
 def essenceclassify(cur, val, curvals):
 	if val >= curvals['extremely']:
 		tier = 'currency extremely high'
-	elif val >= curvals['very']:
+	elif val > curvals['very']:
 		tier = 'currency very high'
-	elif val >= curvals['high']:
+	elif val > curvals['high']:
 		tier = 'currency high'
-	elif val >= curvals['normal']:
+	elif val > curvals['normal']:
 		tier = 'currency normal'
 	else:
 		return
@@ -271,9 +271,9 @@ def gen_div(div_list, league, curvals):
 			pass
 		elif div_list[c] >= curvals['extremely']:
 			items['ehigh'].append(c)
-		elif div_list[c] >= curvals['very']:
+		elif div_list[c] > curvals['very']:
 			items['vhigh'].append(c)
-		elif div_list[c] >= curvals['high']:
+		elif div_list[c] > curvals['high']:
 			items['high'].append(c)
 		elif div_list[c] <= curvals['low']:
 			items['low'].append(c)
@@ -285,9 +285,9 @@ def gen_div(div_list, league, curvals):
 				bcards.remove(ii)
 			elif div_list[ii] >= curvals['extremely']:
 				lvl = 'divination extremely high'
-			elif div_list[ii] >= curvals['very']:
+			elif div_list[ii] > curvals['very']:
 				lvl = 'divination very high'
-			elif div_list[ii] >= curvals['high']:
+			elif div_list[ii] > curvals['high']:
 				lvl = 'divination high'
 			elif div_list[ii] < curvals['low']:
 				lvl = 'divination low'
@@ -326,9 +326,9 @@ def gen_unique(unique_list, league, curvals):
 
 		if unique_list[u] >= curvals['extremely']:
 			items['ehigh'].append(u)
-		elif unique_list[u] >= curvals['very']:
+		elif unique_list[u] > curvals['very']:
 			items['vhigh'].append(u)
-		elif unique_list[u] >= curvals['high']:
+		elif unique_list[u] > curvals['high']:
 			items['high'].append(u)
 		elif unique_list[u] <= curvals['low']:
 			items['low'].append(u)

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/21/2018(m/d/y) 07:25:16 UTC from "Hardcore" data
+# Created: 09/21/2018(m/d/y) 22:40:50 UTC from "Hardcore" data
 
 desc = "Divination Card"
 
@@ -13,18 +13,15 @@ items = {
 	"1 The Mayor": {"base": "The Mayor", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Wolven King's Bite": {"base": "The Wolven King's Bite", "class": "Divination Card", "type": "divination extremely high"},
 	"2 Pride Before the Fall": {"base": "Pride Before the Fall", "class": "Divination Card", "type": "divination very high"},
-	"2 The Beast": {"base": "The Beast", "class": "Divination Card", "type": "divination very high"},
 	"2 The Body": {"base": "The Body", "class": "Divination Card", "type": "divination very high"},
+	"2 The Hunger": {"base": "The Hunger", "class": "Divination Card", "type": "divination very high"},
 	"2 The Lion": {"base": "The Lion", "class": "Divination Card", "type": "divination very high"},
 	"2 The Offering": {"base": "The Offering", "class": "Divination Card", "type": "divination very high"},
 	"2 The Saint's Treasure": {"base": "The Saint's Treasure", "class": "Divination Card", "type": "divination very high"},
 	"2 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination very high"},
-	"3 Doedre's Madness": {"base": "Doedre's Madness", "class": "Divination Card", "type": "divination high"},
-	"3 Hope": {"base": "Hope", "class": "Divination Card", "type": "divination high"},
 	"3 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
 	"3 Jack in the Box": {"base": "Jack in the Box", "class": "Divination Card", "type": "divination high"},
 	"3 Rebirth": {"base": "Rebirth", "class": "Divination Card", "type": "divination high"},
-	"3 The Scavenger": {"base": "The Scavenger", "class": "Divination Card", "type": "divination high"},
 	"3 Vinia's Token": {"base": "Vinia's Token", "class": "Divination Card", "type": "divination high"},
 	"4 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "divination low"},
 	"4 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},

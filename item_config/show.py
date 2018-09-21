@@ -9,7 +9,7 @@ items = {
 	# "00 Crafting base": {'class': 'Helmet', "other": ["Rarity Normal", "DropLevel >= 50"], "type": "leveling low"},
 
 	"01 Tabula Exception": {"base": "Simple Robe", "other": ["Rarity Unique", "SocketGroup WWWWWW"], "type": "unique high"},
-	"01 Plague Mask": {"base": "Plague Mask", "type": "show high"},
+#	"01 Plague Mask": {"base": "Plague Mask", "type": "show high"},
 	"02 6L": {"other": ["LinkedSockets 6"], "type": "show very high"},
 	"03 5L": {"other": ["Rarity < Unique", "Sockets 5", "LinkedSockets 5", 'CustomAlertSound "20_show.wav"'], "type": "show high"},
 	"04 6S": {"other": ["Sockets 6", 'CustomAlertSound "45_show.wav"'], "type": "show high"},
