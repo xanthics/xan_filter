@@ -1,12 +1,12 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/21/2018(m/d/y) 05:28:53 UTC from "tmpstandard" data
+# Created: 09/21/2018(m/d/y) 07:27:14 UTC from "tmpstandard" data
 
 desc = "Currency Autogen"
 
 # Base type : settings pair
 items = {
-	"1 Aberrant Fossil": {"base": "Aberrant Fossil", "class": "Currency", "type": "currency normal"},
+	"1 Aberrant Fossil": {"base": "Aberrant Fossil", "class": "Currency", "type": "currency show"},
 	"1 Aetheric Fossil": {"base": "Aetheric Fossil", "class": "Currency", "type": "currency high"},
 	"1 Alchemy Shard": {"base": "Alchemy Shard", "class": "Currency", "type": "hide"},
 	"09 Alchemy Shard": {"base": "Alchemy Shard", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency very low"},
@@ -58,7 +58,7 @@ items = {
 	"09 Chromatic Orb": {"base": "Chromatic Orb", 'other': ['StackSize >= 5'], "class": "Currency", "type": "currency normal"},
 	"08 Chromatic Orb": {"base": "Chromatic Orb", 'other': ['StackSize >= 17'], "class": "Currency", "type": "currency high"},
 	"1 Corroded Fossil": {"base": "Corroded Fossil", "class": "Currency", "type": "currency high"},
-	"1 Dense Fossil": {"base": "Dense Fossil", "class": "Currency", "type": "currency high"},
+	"1 Dense Fossil": {"base": "Dense Fossil", "class": "Currency", "type": "currency normal"},
 	"1 Divine Orb": {"base": "Divine Orb", "class": "Currency", "type": "currency very high"},
 	"09 Divine Orb": {"base": "Divine Orb", 'other': ['StackSize >= 8'], "class": "Currency", "type": "currency extremely high"},
 	"1 Enchanted Fossil": {"base": "Enchanted Fossil", "class": "Currency", "type": "currency high"},
@@ -75,7 +75,7 @@ items = {
 	"09 Exalted Shard": {"base": "Exalted Shard", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency very high"},
 	"1 Faceted Fossil": {"base": "Faceted Fossil", "class": "Currency", "type": "currency very high"},
 	"1 Fractured Fossil ": {"base": "Fractured Fossil ", "class": "Currency", "type": "currency extremely high"},
-	"1 Frigid Fossil": {"base": "Frigid Fossil", "class": "Currency", "type": "currency normal"},
+	"1 Frigid Fossil": {"base": "Frigid Fossil", "class": "Currency", "type": "currency show"},
 	"1 Gemcutter's Prism": {"base": "Gemcutter's Prism", "class": "Currency", "type": "currency normal"},
 	"1 Gilded Fossil": {"base": "Gilded Fossil", "class": "Currency", "type": "currency very high"},
 	"1 Glassblower's Bauble": {"base": "Glassblower's Bauble", "class": "Currency", "type": "currency low"},
@@ -100,7 +100,7 @@ items = {
 	"1 Lucent Fossil": {"base": "Lucent Fossil", "class": "Currency", "type": "currency very high"},
 	"1 Master Cartographer's Sextant": {"base": "Master Cartographer's Sextant", "class": "Currency", "type": "currency high"},
 	"09 Master Cartographer's Sextant": {"base": "Master Cartographer's Sextant", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency very high"},
-	"1 Metallic Fossil": {"base": "Metallic Fossil", "class": "Currency", "type": "currency high"},
+	"1 Metallic Fossil": {"base": "Metallic Fossil", "class": "Currency", "type": "currency normal"},
 	"1 Mirror Shard": {"base": "Mirror Shard", "class": "Currency", "type": "currency extremely high"},
 	"1 Mirror of Kalandra": {"base": "Mirror of Kalandra", "class": "Currency", "type": "currency extremely high"},
 	"1 Orb of Alchemy": {"base": "Orb of Alchemy", "class": "Currency", "type": "currency normal"},
@@ -186,5 +186,5 @@ items = {
 	"1 Tangled Fossil": {"base": "Tangled Fossil", "class": "Currency", "type": "currency very high"},
 	"1 Transmutation Shard": {"base": "Transmutation Shard", "class": "Currency", "type": "hide"},
 	"1 Vaal Orb": {"base": "Vaal Orb", "class": "Currency", "type": "currency high"},
-	"09 Vaal Orb": {"base": "Vaal Orb", 'other': ['StackSize >= 9'], "class": "Currency", "type": "currency very high"},
+	"09 Vaal Orb": {"base": "Vaal Orb", 'other': ['StackSize >= 10'], "class": "Currency", "type": "currency very high"},
 }

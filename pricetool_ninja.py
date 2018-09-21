@@ -156,14 +156,16 @@ def gen_currency(currency_list, league):
 
 # Convert a essence value to string.  returns a string
 def essenceclassify(cur, val, curvals):
-	if val >= curvals['very']:
+	if val >= curvals['extremely']:
+		tier = 'currency extremely high'
+	elif val >= curvals['very']:
 		tier = 'currency very high'
 	elif val >= curvals['high']:
 		tier = 'currency high'
 	elif val >= curvals['normal']:
 		tier = 'currency normal'
 	else:
-		return ''
+		return
 		# tier = 'currency low'
 
 	return "0 {0}\": {{\"base\": \"{0}\", \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier)
@@ -259,7 +261,7 @@ def gen_div(div_list, league, curvals):
 
 	name = convertname(league)
 
-	items = {'high': verygoodcards[:], 'normal': [], 'low': lowcards[:]}
+	items = {'ehigh': verygoodcards[:], 'vhigh': [], 'high': [], 'low': lowcards[:]}
 
 	for card in substringcards:
 		if card in items['low']:
@@ -268,10 +270,12 @@ def gen_div(div_list, league, curvals):
 		if c in predefinedcards:
 			pass
 		elif div_list[c] >= curvals['extremely']:
-			items['high'].append(c)
+			items['ehigh'].append(c)
 		elif div_list[c] >= curvals['very']:
-			items['normal'].append(c)
-		elif div_list[c] < curvals['high']/2:
+			items['vhigh'].append(c)
+		elif div_list[c] >= curvals['high']:
+			items['high'].append(c)
+		elif div_list[c] <= curvals['low']:
 			items['low'].append(c)
 	with open('auto_gen\\{}divination.py'.format(name), 'w', encoding='utf-8') as f:
 		f.write(u'''{}\ndesc = "Divination Card"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league)))
@@ -280,23 +284,27 @@ def gen_div(div_list, league, curvals):
 				lvl = 'hide'
 				bcards.remove(ii)
 			elif div_list[ii] >= curvals['extremely']:
-				lvl = 'divination very high'
+				lvl = 'divination extremely high'
 			elif div_list[ii] >= curvals['very']:
+				lvl = 'divination very high'
+			elif div_list[ii] >= curvals['high']:
 				lvl = 'divination high'
-			elif div_list[ii] < curvals['high']/2:
+			elif div_list[ii] < curvals['low']:
 				lvl = 'divination low'
 			else:
 				lvl = 'divination normal'
 			f.write(u'\t"{0:03d} {1}": {{"base": "{1}", "class": "Divination Card", "type": "{2}"}},\n'.format(c, ii, lvl))
+		for ii in sorted(items['ehigh']):
+			f.write(u'\t"1 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination extremely high"}},\n'.format(ii))
+		for ii in sorted(items['vhigh']):
+			f.write(u'\t"2 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination very high"}},\n'.format(ii))
 		for ii in sorted(items['high']):
-			f.write(u'\t"1 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination very high"}},\n'.format(ii))
-		for ii in sorted(items['normal']):
-			f.write(u'\t"2 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination high"}},\n'.format(ii))
+			f.write(u'\t"3 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination high"}},\n'.format(ii))
 		for ii in sorted(items['low']):
-			f.write(u'\t"3 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination low"}},\n'.format(ii))
+			f.write(u'\t"4 {0}": {{"base": "{0}", "class": "Divination Card", "type": "divination low"}},\n'.format(ii))
 		for ii in sorted(bcards):
 			f.write(u'\t"7 {0}": {{"base": "{0}", "class": "Divination Card", "type": "hide"}},\n'.format(ii))
-		f.write(u'\t"9 Other uniques": {"class": "Divination Card", "type": "divination normal"}\n}\n')
+		f.write(u'\t"9 Other Divination Cards": {"class": "Divination Card", "type": "divination normal"}\n}\n')
 
 
 def gen_unique(unique_list, league, curvals):
@@ -304,7 +312,7 @@ def gen_unique(unique_list, league, curvals):
 	if 'Catacombs Map' in unique_list:
 		del unique_list['Catacombs Map']
 
-	items = {'very high': [], 'high': [], 'special': [], 'low': []}
+	items = {'ehigh': [], 'vhigh': [], 'high': [], 'special': [], 'low': []}
 
 	for u in unique_list.keys():
 		# If a unique shares a base and has at least 1 value that is over 2c while average is low, give it a special border
@@ -316,19 +324,23 @@ def gen_unique(unique_list, league, curvals):
 		else:
 			unique_list[u] = unique_list[u][0]
 
-		if unique_list[u] > curvals['extremely']:
-			items['very high'].append(u)
-		elif unique_list[u] > curvals['very']:
+		if unique_list[u] >= curvals['extremely']:
+			items['ehigh'].append(u)
+		elif unique_list[u] >= curvals['very']:
+			items['vhigh'].append(u)
+		elif unique_list[u] >= curvals['high']:
 			items['high'].append(u)
-		elif unique_list[u] < curvals['high']:
+		elif unique_list[u] <= curvals['low']:
 			items['low'].append(u)
 
 	with open('auto_gen\\{}uniques.py'.format(name), 'w', encoding='utf-8') as f:
 		f.write(u'''{}\ndesc = "Unique"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league)))
-		for ii in sorted(items['very high']):
-			f.write(u'\t"0 {0}": {{"base": "{0}", "type": "unique very high"}},\n'.format(ii))
+		for ii in sorted(items['ehigh']):
+			f.write(u'\t"0 {0}": {{"base": "{0}", "type": "unique extremely high"}},\n'.format(ii))
+		for ii in sorted(items['vhigh']):
+			f.write(u'\t"1 {0}": {{"base": "{0}", "type": "unique very high"}},\n'.format(ii))
 		for ii in sorted(items['high']):
-			f.write(u'\t"1 {0}": {{"base": "{0}", "type": "unique high"}},\n'.format(ii))
+			f.write(u'\t"2 {0}": {{"base": "{0}", "type": "unique high"}},\n'.format(ii))
 		for ii in sorted(items['special']):
 			f.write(u'\t"6 {0}": {{"base": "{0}", "type": "unique special"}},\n'.format(ii))
 		for ii in sorted(items['low']):
