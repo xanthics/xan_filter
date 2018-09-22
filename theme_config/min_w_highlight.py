@@ -345,7 +345,7 @@ settings = {
 	                   'CustomAlertSound "{}_unique.wav"'.format(volume['medium']),
 					   "SetBackgroundColor {} 220".format(color['black'])],
 	"unique normal": ["Rarity Unique",
-#45					  "SetBorderColor {}".format(color['unique']),
+#					  "SetBorderColor {}".format(color['unique']),
 					  'MinimapIcon 2 Yellow Star',
 					  'CustomAlertSound "{}_unique.wav"'.format(volume['low']),
 					  "SetBackgroundColor {} 220".format(color['black'])],

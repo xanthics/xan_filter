@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/22/2018(m/d/y) 05:14:35 UTC from "tmpstandard" data
+# Created: 09/22/2018(m/d/y) 22:22:56 UTC from "tmpstandard" data
 
 desc = "Divination Card"
 
@@ -60,16 +60,15 @@ items = {
 	"3 The Brittle Emperor": {"base": "The Brittle Emperor", "class": "Divination Card", "type": "divination high"},
 	"3 The Cacophony": {"base": "The Cacophony", "class": "Divination Card", "type": "divination high"},
 	"3 The Cartographer": {"base": "The Cartographer", "class": "Divination Card", "type": "divination high"},
-	"3 The Cursed King": {"base": "The Cursed King", "class": "Divination Card", "type": "divination high"},
 	"3 The Dapper Prodigy": {"base": "The Dapper Prodigy", "class": "Divination Card", "type": "divination high"},
-	"3 The Dark Mage": {"base": "The Dark Mage", "class": "Divination Card", "type": "divination high"},
 	"3 The Dreamer": {"base": "The Dreamer", "class": "Divination Card", "type": "divination high"},
 	"3 The Ethereal": {"base": "The Ethereal", "class": "Divination Card", "type": "divination high"},
+	"3 The Fletcher": {"base": "The Fletcher", "class": "Divination Card", "type": "divination high"},
 	"3 The Formless Sea": {"base": "The Formless Sea", "class": "Divination Card", "type": "divination high"},
 	"3 The Hale Heart": {"base": "The Hale Heart", "class": "Divination Card", "type": "divination high"},
 	"3 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination high"},
 	"3 The Innocent": {"base": "The Innocent", "class": "Divination Card", "type": "divination high"},
-	"3 The Inventor": {"base": "The Inventor", "class": "Divination Card", "type": "divination high"},
+	"3 The Jester": {"base": "The Jester", "class": "Divination Card", "type": "divination high"},
 	"3 The Jeweller's Boon": {"base": "The Jeweller's Boon", "class": "Divination Card", "type": "divination high"},
 	"3 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination high"},
 	"3 The Lion": {"base": "The Lion", "class": "Divination Card", "type": "divination high"},
@@ -80,6 +79,7 @@ items = {
 	"3 The Price of Protection": {"base": "The Price of Protection", "class": "Divination Card", "type": "divination high"},
 	"3 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
 	"3 The Standoff": {"base": "The Standoff", "class": "Divination Card", "type": "divination high"},
+	"3 The Surveyor": {"base": "The Surveyor", "class": "Divination Card", "type": "divination high"},
 	"3 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination high"},
 	"3 The Throne": {"base": "The Throne", "class": "Divination Card", "type": "divination high"},
 	"3 The Twilight Moon": {"base": "The Twilight Moon", "class": "Divination Card", "type": "divination high"},

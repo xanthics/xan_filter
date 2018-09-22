@@ -46,9 +46,9 @@ def currencyclassify(cur, val, curvals, stacks=1):
 		tier = 'currency show'
 	elif val >= curvals['extremely']:
 		tier = 'currency extremely high'
-	elif val > curvals['very']:
+	elif val >= curvals['very']:
 		tier = 'currency very high'
-	elif val > curvals['high']:
+	elif val >= curvals['high']:
 		tier = 'currency high'
 	elif val >= curvals['normal']:
 		tier = 'currency normal'
