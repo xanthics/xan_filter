@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/21/2018(m/d/y) 22:40:50 UTC from "Hardcore" data
+# Created: 09/22/2018(m/d/y) 05:14:35 UTC from "Hardcore" data
 
 desc = "Divination Card"
 
@@ -15,7 +15,6 @@ items = {
 	"2 Pride Before the Fall": {"base": "Pride Before the Fall", "class": "Divination Card", "type": "divination very high"},
 	"2 The Body": {"base": "The Body", "class": "Divination Card", "type": "divination very high"},
 	"2 The Hunger": {"base": "The Hunger", "class": "Divination Card", "type": "divination very high"},
-	"2 The Lion": {"base": "The Lion", "class": "Divination Card", "type": "divination very high"},
 	"2 The Offering": {"base": "The Offering", "class": "Divination Card", "type": "divination very high"},
 	"2 The Saint's Treasure": {"base": "The Saint's Treasure", "class": "Divination Card", "type": "divination very high"},
 	"2 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination very high"},

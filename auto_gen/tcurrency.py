@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/21/2018(m/d/y) 22:40:50 UTC from "tmpstandard" data
+# Created: 09/22/2018(m/d/y) 05:14:35 UTC from "tmpstandard" data
 
 desc = "Currency Autogen"
 
@@ -58,7 +58,7 @@ items = {
 	"09 Chromatic Orb": {"base": "Chromatic Orb", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency normal"},
 	"08 Chromatic Orb": {"base": "Chromatic Orb", 'other': ['StackSize >= 15'], "class": "Currency", "type": "currency high"},
 	"1 Corroded Fossil": {"base": "Corroded Fossil", "class": "Currency", "type": "currency high"},
-	"1 Dense Fossil": {"base": "Dense Fossil", "class": "Currency", "type": "currency normal"},
+	"1 Dense Fossil": {"base": "Dense Fossil", "class": "Currency", "type": "currency high"},
 	"1 Divine Orb": {"base": "Divine Orb", "class": "Currency", "type": "currency very high"},
 	"09 Divine Orb": {"base": "Divine Orb", 'other': ['StackSize >= 8'], "class": "Currency", "type": "currency extremely high"},
 	"1 Enchanted Fossil": {"base": "Enchanted Fossil", "class": "Currency", "type": "currency high"},
@@ -81,7 +81,7 @@ items = {
 	"1 Gilded Fossil": {"base": "Gilded Fossil", "class": "Currency", "type": "currency very high"},
 	"1 Glassblower's Bauble": {"base": "Glassblower's Bauble", "class": "Currency", "type": "currency low"},
 	"09 Glassblower's Bauble": {"base": "Glassblower's Bauble", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency normal"},
-	"08 Glassblower's Bauble": {"base": "Glassblower's Bauble", 'other': ['StackSize >= 6'], "class": "Currency", "type": "currency high"},
+	"08 Glassblower's Bauble": {"base": "Glassblower's Bauble", 'other': ['StackSize >= 7'], "class": "Currency", "type": "currency high"},
 	"1 Glyphic Fossil": {"base": "Glyphic Fossil", "class": "Currency", "type": "currency very high"},
 	"1 Harbinger's Orb": {"base": "Harbinger's Orb", "class": "Currency", "type": "currency very high"},
 	"09 Harbinger's Orb": {"base": "Harbinger's Orb", 'other': ['StackSize >= 7'], "class": "Currency", "type": "currency extremely high"},
@@ -135,20 +135,20 @@ items = {
 	"08 Orb of Transmutation": {"base": "Orb of Transmutation", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency low"},
 	"07 Orb of Transmutation": {"base": "Orb of Transmutation", 'other': ['StackSize >= 13'], "class": "Currency", "type": "currency normal"},
 	"1 Perandus Coin": {"base": "Perandus Coin", "class": "Currency", "type": "currency show"},
-	"09 Perandus Coin": {"base": "Perandus Coin", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency normal"},
-	"08 Perandus Coin": {"base": "Perandus Coin", 'other': ['StackSize >= 8'], "class": "Currency", "type": "currency high"},
+	"09 Perandus Coin": {"base": "Perandus Coin", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency normal"},
+	"08 Perandus Coin": {"base": "Perandus Coin", 'other': ['StackSize >= 9'], "class": "Currency", "type": "currency high"},
 	"1 Perfect Fossil": {"base": "Perfect Fossil", "class": "Currency", "type": "currency high"},
 	"1 Portal Scroll": {"base": "Portal Scroll", "class": "Currency", "type": "hide"},
 	"09 Portal Scroll": {"base": "Portal Scroll", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency very low"},
 	"08 Portal Scroll": {"base": "Portal Scroll", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency low"},
 	"07 Portal Scroll": {"base": "Portal Scroll", 'other': ['StackSize >= 13'], "class": "Currency", "type": "currency normal"},
-	"1 Potent Alchemical Resonator": {"base": "Potent Alchemical Resonator", "class": "Currency", "type": "currency show"},
+	"1 Potent Alchemical Resonator": {"base": "Potent Alchemical Resonator", "class": "Currency", "type": "currency normal"},
 	"1 Potent Chaotic Resonator": {"base": "Potent Chaotic Resonator", "class": "Currency", "type": "currency normal"},
 	"1 Powerful Alchemical Resonator": {"base": "Powerful Alchemical Resonator", "class": "Currency", "type": "currency normal"},
 	"1 Powerful Chaotic Resonator": {"base": "Powerful Chaotic Resonator", "class": "Currency", "type": "currency normal"},
 	"1 Prime Alchemical Resonator": {"base": "Prime Alchemical Resonator", "class": "Currency", "type": "currency very high"},
 	"1 Prime Chaotic Resonator": {"base": "Prime Chaotic Resonator", "class": "Currency", "type": "currency very high"},
-	"1 Primitive Alchemical Resonator": {"base": "Primitive Alchemical Resonator", "class": "Currency", "type": "currency show"},
+	"1 Primitive Alchemical Resonator": {"base": "Primitive Alchemical Resonator", "class": "Currency", "type": "currency normal"},
 	"1 Primitive Chaotic Resonator": {"base": "Primitive Chaotic Resonator", "class": "Currency", "type": "currency normal"},
 	"1 Prismatic Fossil": {"base": "Prismatic Fossil", "class": "Currency", "type": "currency high"},
 	"1 Pristine Fossil": {"base": "Pristine Fossil", "class": "Currency", "type": "currency high"},
@@ -175,8 +175,8 @@ items = {
 	"09 Splinter of Esh": {"base": "Splinter of Esh", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency normal"},
 	"08 Splinter of Esh": {"base": "Splinter of Esh", 'other': ['StackSize >= 9'], "class": "Currency", "type": "currency high"},
 	"1 Splinter of Tul": {"base": "Splinter of Tul", "class": "Currency", "type": "currency show"},
-	"09 Splinter of Tul": {"base": "Splinter of Tul", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency normal"},
-	"08 Splinter of Tul": {"base": "Splinter of Tul", 'other': ['StackSize >= 12'], "class": "Currency", "type": "currency high"},
+	"09 Splinter of Tul": {"base": "Splinter of Tul", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency normal"},
+	"08 Splinter of Tul": {"base": "Splinter of Tul", 'other': ['StackSize >= 13'], "class": "Currency", "type": "currency high"},
 	"1 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", "class": "Currency", "type": "currency show"},
 	"09 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency normal"},
 	"08 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", 'other': ['StackSize >= 10'], "class": "Currency", "type": "currency high"},
