@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/21/2018(m/d/y) 22:40:49 UTC from "Standard" data
+# Created: 09/22/2018(m/d/y) 05:14:34 UTC from "Standard" data
 
 desc = "Unique"
 
@@ -43,6 +43,8 @@ items = {
 	"1 Courtyard Map": {"base": "Courtyard Map", "type": "unique very high"},
 	"1 Cured Quiver": {"base": "Cured Quiver", "type": "unique very high"},
 	"1 Deicide Mask": {"base": "Deicide Mask", "type": "unique very high"},
+	"1 Ezomyte Burgonet": {"base": "Ezomyte Burgonet", "type": "unique very high"},
+	"1 Gladiator Plate": {"base": "Gladiator Plate", "type": "unique very high"},
 	"1 Grand Mana Flask": {"base": "Grand Mana Flask", "type": "unique very high"},
 	"1 Harbinger Map": {"base": "Harbinger Map", "type": "unique very high"},
 	"1 Heavy Quiver": {"base": "Heavy Quiver", "type": "unique very high"},
@@ -77,6 +79,7 @@ items = {
 	"1 Zealot Gloves": {"base": "Zealot Gloves", "type": "unique very high"},
 	"2 Abyssal Axe": {"base": "Abyssal Axe", "type": "unique high"},
 	"2 Ancient Gauntlets": {"base": "Ancient Gauntlets", "type": "unique high"},
+	"2 Astral Plate": {"base": "Astral Plate", "type": "unique high"},
 	"2 Atoll Map": {"base": "Atoll Map", "type": "unique high"},
 	"2 Bismuth Flask": {"base": "Bismuth Flask", "type": "unique high"},
 	"2 Blue Pearl Amulet": {"base": "Blue Pearl Amulet", "type": "unique high"},
@@ -92,14 +95,13 @@ items = {
 	"2 Cursed Crypt Map": {"base": "Cursed Crypt Map", "type": "unique high"},
 	"2 Demon Dagger": {"base": "Demon Dagger", "type": "unique high"},
 	"2 Destiny Leather": {"base": "Destiny Leather", "type": "unique high"},
+	"2 Destroyer Regalia": {"base": "Destroyer Regalia", "type": "unique high"},
 	"2 Dunes Map": {"base": "Dunes Map", "type": "unique high"},
-	"2 Ezomyte Burgonet": {"base": "Ezomyte Burgonet", "type": "unique high"},
 	"2 Full Wyrmscale": {"base": "Full Wyrmscale", "type": "unique high"},
-	"2 Gladiator Plate": {"base": "Gladiator Plate", "type": "unique high"},
-	"2 Gold Ring": {"base": "Gold Ring", "type": "unique high"},
 	"2 Goliath Gauntlets": {"base": "Goliath Gauntlets", "type": "unique high"},
 	"2 Hallowed Hybrid Flask": {"base": "Hallowed Hybrid Flask", "type": "unique high"},
 	"2 Hellion's Paw": {"base": "Hellion's Paw", "type": "unique high"},
+	"2 Ironscale Gauntlets": {"base": "Ironscale Gauntlets", "type": "unique high"},
 	"2 Jingling Spirit Shield": {"base": "Jingling Spirit Shield", "type": "unique high"},
 	"2 Labrys": {"base": "Labrys", "type": "unique high"},
 	"2 Leather Cap": {"base": "Leather Cap", "type": "unique high"},
@@ -162,6 +164,7 @@ items = {
 	"6 Gavel": {"base": "Gavel", "type": "unique special"},
 	"6 Goathide Boots": {"base": "Goathide Boots", "type": "unique special"},
 	"6 Gold Amulet": {"base": "Gold Amulet", "type": "unique special"},
+	"6 Gold Ring": {"base": "Gold Ring", "type": "unique special"},
 	"6 Golden Plate": {"base": "Golden Plate", "type": "unique special"},
 	"6 Goliath Greaves": {"base": "Goliath Greaves", "type": "unique special"},
 	"6 Granite Flask": {"base": "Granite Flask", "type": "unique special"},
@@ -174,7 +177,6 @@ items = {
 	"6 Imperial Claw": {"base": "Imperial Claw", "type": "unique special"},
 	"6 Imperial Staff": {"base": "Imperial Staff", "type": "unique special"},
 	"6 Infernal Sword": {"base": "Infernal Sword", "type": "unique special"},
-	"6 Ironscale Gauntlets": {"base": "Ironscale Gauntlets", "type": "unique special"},
 	"6 Jade Amulet": {"base": "Jade Amulet", "type": "unique special"},
 	"6 Jasper Chopper": {"base": "Jasper Chopper", "type": "unique special"},
 	"6 Judgement Staff": {"base": "Judgement Staff", "type": "unique special"},
@@ -221,6 +223,7 @@ items = {
 	"6 Sorcerer Boots": {"base": "Sorcerer Boots", "type": "unique special"},
 	"6 Spidersilk Robe": {"base": "Spidersilk Robe", "type": "unique special"},
 	"6 Spike-Point Arrow Quiver": {"base": "Spike-Point Arrow Quiver", "type": "unique special"},
+	"6 Spine Bow": {"base": "Spine Bow", "type": "unique special"},
 	"6 Stealth Boots": {"base": "Stealth Boots", "type": "unique special"},
 	"6 Steelscale Gauntlets": {"base": "Steelscale Gauntlets", "type": "unique special"},
 	"6 Stibnite Flask": {"base": "Stibnite Flask", "type": "unique special"},

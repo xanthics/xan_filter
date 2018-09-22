@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/21/2018(m/d/y) 22:40:50 UTC from "tmpstandard" data
+# Created: 09/22/2018(m/d/y) 05:14:35 UTC from "tmpstandard" data
 
 desc = "Divination Card"
 
@@ -22,6 +22,7 @@ items = {
 	"2 Mawr Blaidd": {"base": "Mawr Blaidd", "class": "Divination Card", "type": "divination very high"},
 	"2 Pride Before the Fall": {"base": "Pride Before the Fall", "class": "Divination Card", "type": "divination very high"},
 	"2 The Artist": {"base": "The Artist", "class": "Divination Card", "type": "divination very high"},
+	"2 The Breach": {"base": "The Breach", "class": "Divination Card", "type": "divination very high"},
 	"2 The Celestial Justicar": {"base": "The Celestial Justicar", "class": "Divination Card", "type": "divination very high"},
 	"2 The Celestial Stone": {"base": "The Celestial Stone", "class": "Divination Card", "type": "divination very high"},
 	"2 The Endless Darkness": {"base": "The Endless Darkness", "class": "Divination Card", "type": "divination very high"},
@@ -38,6 +39,7 @@ items = {
 	"2 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination very high"},
 	"2 The Spark and the Flame": {"base": "The Spark and the Flame", "class": "Divination Card", "type": "divination very high"},
 	"2 The Undaunted": {"base": "The Undaunted", "class": "Divination Card", "type": "divination very high"},
+	"2 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination very high"},
 	"2 The Vast": {"base": "The Vast", "class": "Divination Card", "type": "divination very high"},
 	"2 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination very high"},
 	"2 The Wolf": {"base": "The Wolf", "class": "Divination Card", "type": "divination very high"},
@@ -55,21 +57,19 @@ items = {
 	"3 Perfection": {"base": "Perfection", "class": "Divination Card", "type": "divination high"},
 	"3 Rebirth": {"base": "Rebirth", "class": "Divination Card", "type": "divination high"},
 	"3 Scholar of the Seas": {"base": "Scholar of the Seas", "class": "Divination Card", "type": "divination high"},
-	"3 The Breach": {"base": "The Breach", "class": "Divination Card", "type": "divination high"},
 	"3 The Brittle Emperor": {"base": "The Brittle Emperor", "class": "Divination Card", "type": "divination high"},
+	"3 The Cacophony": {"base": "The Cacophony", "class": "Divination Card", "type": "divination high"},
 	"3 The Cartographer": {"base": "The Cartographer", "class": "Divination Card", "type": "divination high"},
-	"3 The Chains that Bind": {"base": "The Chains that Bind", "class": "Divination Card", "type": "divination high"},
 	"3 The Cursed King": {"base": "The Cursed King", "class": "Divination Card", "type": "divination high"},
 	"3 The Dapper Prodigy": {"base": "The Dapper Prodigy", "class": "Divination Card", "type": "divination high"},
 	"3 The Dark Mage": {"base": "The Dark Mage", "class": "Divination Card", "type": "divination high"},
 	"3 The Dreamer": {"base": "The Dreamer", "class": "Divination Card", "type": "divination high"},
 	"3 The Ethereal": {"base": "The Ethereal", "class": "Divination Card", "type": "divination high"},
-	"3 The Fletcher": {"base": "The Fletcher", "class": "Divination Card", "type": "divination high"},
 	"3 The Formless Sea": {"base": "The Formless Sea", "class": "Divination Card", "type": "divination high"},
 	"3 The Hale Heart": {"base": "The Hale Heart", "class": "Divination Card", "type": "divination high"},
 	"3 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination high"},
 	"3 The Innocent": {"base": "The Innocent", "class": "Divination Card", "type": "divination high"},
-	"3 The Jester": {"base": "The Jester", "class": "Divination Card", "type": "divination high"},
+	"3 The Inventor": {"base": "The Inventor", "class": "Divination Card", "type": "divination high"},
 	"3 The Jeweller's Boon": {"base": "The Jeweller's Boon", "class": "Divination Card", "type": "divination high"},
 	"3 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination high"},
 	"3 The Lion": {"base": "The Lion", "class": "Divination Card", "type": "divination high"},
@@ -84,7 +84,6 @@ items = {
 	"3 The Throne": {"base": "The Throne", "class": "Divination Card", "type": "divination high"},
 	"3 The Twilight Moon": {"base": "The Twilight Moon", "class": "Divination Card", "type": "divination high"},
 	"3 The Undisputed": {"base": "The Undisputed", "class": "Divination Card", "type": "divination high"},
-	"3 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination high"},
 	"3 The Valley of Steel Boxes": {"base": "The Valley of Steel Boxes", "class": "Divination Card", "type": "divination high"},
 	"3 The Void": {"base": "The Void", "class": "Divination Card", "type": "divination high"},
 	"3 The Wilted Rose": {"base": "The Wilted Rose", "class": "Divination Card", "type": "divination high"},
