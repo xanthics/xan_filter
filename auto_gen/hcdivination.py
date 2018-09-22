@@ -1,12 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/22/2018(m/d/y) 05:14:35 UTC from "Hardcore" data
+# Created: 09/22/2018(m/d/y) 22:22:55 UTC from "Hardcore" data
 
 desc = "Divination Card"
 
 # Base type : settings pair
 items = {
-	"000 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination extremely high"},
 	"1 House of Mirrors": {"base": "House of Mirrors", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Brittle Emperor": {"base": "The Brittle Emperor", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Hale Heart": {"base": "The Hale Heart", "class": "Divination Card", "type": "divination extremely high"},
@@ -16,7 +15,6 @@ items = {
 	"2 The Body": {"base": "The Body", "class": "Divination Card", "type": "divination very high"},
 	"2 The Hunger": {"base": "The Hunger", "class": "Divination Card", "type": "divination very high"},
 	"2 The Offering": {"base": "The Offering", "class": "Divination Card", "type": "divination very high"},
-	"2 The Saint's Treasure": {"base": "The Saint's Treasure", "class": "Divination Card", "type": "divination very high"},
 	"2 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination very high"},
 	"3 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
 	"3 Jack in the Box": {"base": "Jack in the Box", "class": "Divination Card", "type": "divination high"},
