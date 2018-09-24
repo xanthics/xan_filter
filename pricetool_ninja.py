@@ -42,7 +42,7 @@ def currencyclassify(cur, val, curvals, stacks=1):
 	# list of currency to always give a border to
 	ah = ["Splinter of Chayula", "Splinter of Xoph", "Splinter of Uul-Netol", "Splinter of Tul", "Splinter of Esh",
 		  "Chromatic Orb", "Perandus Coin", "Orb of Chance", "Silver Coin", "Cartographer's Chisel", "Jeweller's Orb", "Orb of Alteration"]
-	if ((cur in ah) or 'Fossil' in cur or 'Resonator' in cur) and val <= curvals['normal']:
+	if ((cur in ah) or 'Fossil' in cur) and val < curvals['normal']:
 		tier = 'currency show'
 	elif val >= curvals['extremely']:
 		tier = 'currency extremely high'
@@ -235,25 +235,38 @@ def gen_div(div_list, league, curvals):
 	verygoodcards = ['House of Mirrors']
 
 	# Cards that will never be displayed
-	badcards = ["The Carrion Crow",
+	badcards = ["The Twins",
+				"The Rabid Rhoa",
+				"Thunderous Skies",
+				"The Carrion Crow",
 				"The King's Blade",
 				"The Inoculated",
 				"Struck by Lightning",
 	            'The Web',
 	            'The Sigil',
 	            'The Surgeon',
-	            'Prosperity']
+	            'Prosperity',
+				'The Metalsmith\'s Gift',
+				'Dying Anguish',
+				'The Road to Power',
+				'The Lord in Black',
+				'The Tyrant',
+				'Merciless Armament',
+				'The Jester',
+				'The Spoiled Prince',
+				'The Undisputed',
+				'Blessing of God',
+				'The Scarred Meadow',
+				'Rain Tempter']
 
 	# Cards that will never make a drop noise
-	lowcards = ["Thunderous Skies",
-				"The Rabid Rhoa",
-				"The Twins",
-				"The Scholar",
+	lowcards = ["The Scholar",
 				"Destined to Crumble",
 	            'The Incantation',
 	            'Shard of Fate',
 	            'The Endurance',
-				'The Lover']
+				'The Lover',
+				'Anarchy\'s Price']
 
 	predefinedcards = badcards + lowcards + substringcards + verygoodcards
 
