@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/25/2018(m/d/y) 20:55:06 UTC from "tmpstandard" data
+# Created: 09/28/2018(m/d/y) 21:13:56 UTC from "tmpstandard" data
 
 desc = "Divination Card"
 
@@ -24,7 +24,6 @@ items = {
 	"2 The Artist": {"base": "The Artist", "class": "Divination Card", "type": "divination very high"},
 	"2 The Celestial Stone": {"base": "The Celestial Stone", "class": "Divination Card", "type": "divination very high"},
 	"2 The Endless Darkness": {"base": "The Endless Darkness", "class": "Divination Card", "type": "divination very high"},
-	"2 The Enlightened": {"base": "The Enlightened", "class": "Divination Card", "type": "divination very high"},
 	"2 The Hunger": {"base": "The Hunger", "class": "Divination Card", "type": "divination very high"},
 	"2 The Iron Bard": {"base": "The Iron Bard", "class": "Divination Card", "type": "divination very high"},
 	"2 The King's Heart": {"base": "The King's Heart", "class": "Divination Card", "type": "divination very high"},
@@ -45,7 +44,6 @@ items = {
 	"3 Bowyer's Dream": {"base": "Bowyer's Dream", "class": "Divination Card", "type": "divination high"},
 	"3 Chaotic Disposition": {"base": "Chaotic Disposition", "class": "Divination Card", "type": "divination high"},
 	"3 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination high"},
-	"3 Harmony of Souls": {"base": "Harmony of Souls", "class": "Divination Card", "type": "divination high"},
 	"3 Heterochromia": {"base": "Heterochromia", "class": "Divination Card", "type": "divination high"},
 	"3 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
 	"3 Left to Fate": {"base": "Left to Fate", "class": "Divination Card", "type": "divination high"},
@@ -59,9 +57,11 @@ items = {
 	"3 The Cacophony": {"base": "The Cacophony", "class": "Divination Card", "type": "divination high"},
 	"3 The Cartographer": {"base": "The Cartographer", "class": "Divination Card", "type": "divination high"},
 	"3 The Celestial Justicar": {"base": "The Celestial Justicar", "class": "Divination Card", "type": "divination high"},
+	"3 The Cursed King": {"base": "The Cursed King", "class": "Divination Card", "type": "divination high"},
 	"3 The Dapper Prodigy": {"base": "The Dapper Prodigy", "class": "Divination Card", "type": "divination high"},
 	"3 The Dark Mage": {"base": "The Dark Mage", "class": "Divination Card", "type": "divination high"},
 	"3 The Dreamer": {"base": "The Dreamer", "class": "Divination Card", "type": "divination high"},
+	"3 The Enlightened": {"base": "The Enlightened", "class": "Divination Card", "type": "divination high"},
 	"3 The Ethereal": {"base": "The Ethereal", "class": "Divination Card", "type": "divination high"},
 	"3 The Fletcher": {"base": "The Fletcher", "class": "Divination Card", "type": "divination high"},
 	"3 The Hale Heart": {"base": "The Hale Heart", "class": "Divination Card", "type": "divination high"},
@@ -81,7 +81,6 @@ items = {
 	"3 The Surveyor": {"base": "The Surveyor", "class": "Divination Card", "type": "divination high"},
 	"3 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination high"},
 	"3 The Throne": {"base": "The Throne", "class": "Divination Card", "type": "divination high"},
-	"3 The Trial": {"base": "The Trial", "class": "Divination Card", "type": "divination high"},
 	"3 The Twilight Moon": {"base": "The Twilight Moon", "class": "Divination Card", "type": "divination high"},
 	"3 The Valley of Steel Boxes": {"base": "The Valley of Steel Boxes", "class": "Divination Card", "type": "divination high"},
 	"3 The Vast": {"base": "The Vast", "class": "Divination Card", "type": "divination high"},
@@ -92,13 +91,14 @@ items = {
 	"3 The Wretched": {"base": "The Wretched", "class": "Divination Card", "type": "divination high"},
 	"3 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination high"},
 	"4 Anarchy's Price": {"base": "Anarchy's Price", "class": "Divination Card", "type": "divination low"},
-	"4 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "divination low"},
+	"4 Lantador's Lost Love": {"base": "Lantador's Lost Love", "class": "Divination Card", "type": "divination low"},
 	"4 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},
 	"4 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
 	"4 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination low"},
 	"4 The Lover": {"base": "The Lover", "class": "Divination Card", "type": "divination low"},
 	"4 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},
 	"7 Blessing of God": {"base": "Blessing of God", "class": "Divination Card", "type": "hide"},
+	"7 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "hide"},
 	"7 Dying Anguish": {"base": "Dying Anguish", "class": "Divination Card", "type": "hide"},
 	"7 Merciless Armament": {"base": "Merciless Armament", "class": "Divination Card", "type": "hide"},
 	"7 Prosperity": {"base": "Prosperity", "class": "Divination Card", "type": "hide"},

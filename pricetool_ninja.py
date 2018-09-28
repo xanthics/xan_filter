@@ -236,6 +236,7 @@ def gen_div(div_list, league, curvals):
 
 	# Cards that will never be displayed
 	badcards = ["The Twins",
+				"Destined to Crumble",
 				"The Rabid Rhoa",
 				"Thunderous Skies",
 				"The Carrion Crow",
@@ -261,12 +262,12 @@ def gen_div(div_list, league, curvals):
 
 	# Cards that will never make a drop noise
 	lowcards = ["The Scholar",
-				"Destined to Crumble",
-	            'The Incantation',
+				'The Incantation',
 	            'Shard of Fate',
 	            'The Endurance',
 				'The Lover',
-				'Anarchy\'s Price']
+				'Anarchy\'s Price',
+				'Lantador\'s Lost Love']
 
 	predefinedcards = badcards + lowcards + substringcards + verygoodcards
 
