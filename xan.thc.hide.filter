@@ -1,6 +1,6 @@
 #**************************************************************
 # Welcome to xan.filter, a Python generated loot filter for PoE
-# This filter was generated for Temp Hardcore on 09/22/2018(m/d/y) 22:22:57 UTC
+# This filter was generated for Temp Hardcore on 09/28/2018(m/d/y) 21:14:07 UTC
 # The most current version of code can always be found at https://github.com/xanthics/poe_filter
 #**************************************************************
 
@@ -325,7 +325,7 @@ Show
 Show
 	BaseType "Horizon Shard"
 	Class "Currency"
-	StackSize >= 18
+	StackSize >= 17
 	CustomAlertSound "75_currency.wav"
 	MinimapIcon 1 Yellow Circle
 	SetBackgroundColor 0 0 0 220
@@ -359,9 +359,9 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Binding Shard"
+	BaseType "Alchemy Shard"
 	Class "Currency"
-	StackSize >= 10
+	StackSize >= 12
 	CustomAlertSound "20_currency.wav"
 	MinimapIcon 2 Yellow Circle
 	SetBackgroundColor 0 0 0 220
@@ -371,7 +371,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Armourer's Scrap"
+	BaseType "Orb of Transmutation" "Portal Scroll"
 	Class "Currency"
 	StackSize >= 13
 	CustomAlertSound "20_currency.wav"
@@ -383,9 +383,9 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Alchemy Shard"
+	BaseType "Binding Shard"
 	Class "Currency"
-	StackSize >= 14
+	StackSize >= 8
 	CustomAlertSound "20_currency.wav"
 	MinimapIcon 2 Yellow Circle
 	SetBackgroundColor 0 0 0 220
@@ -395,7 +395,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation"
+	BaseType "Armourer's Scrap" "Blacksmith's Whetstone"
 	Class "Currency"
 	StackSize >= 9
 	CustomAlertSound "20_currency.wav"
@@ -407,33 +407,9 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Orb of Alteration"
-	Class "Currency"
-	StackSize >= 10
-	CustomAlertSound "75_currency.wav"
-	MinimapIcon 1 Yellow Circle
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 170 158 130
-	SetFontSize 40
-	DisableDropSound True
-
-#Currency Autogen
-Show
-	BaseType "Chromatic Orb" "Orb of Chance"
-	Class "Currency"
-	StackSize >= 12
-	CustomAlertSound "75_currency.wav"
-	MinimapIcon 1 Yellow Circle
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 170 158 130
-	SetFontSize 40
-	DisableDropSound True
-
-#Currency Autogen
-Show
 	BaseType "Engineer's Shard"
 	Class "Currency"
-	StackSize >= 13
+	StackSize >= 14
 	CustomAlertSound "75_currency.wav"
 	MinimapIcon 1 Yellow Circle
 	SetBackgroundColor 0 0 0 220
@@ -455,7 +431,19 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Jeweller's Orb" "Splinter of Uul-Netol"
+	BaseType "Jeweller's Orb"
+	Class "Currency"
+	StackSize >= 7
+	CustomAlertSound "75_currency.wav"
+	MinimapIcon 1 Yellow Circle
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 170 158 130
+	SetFontSize 40
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Orb of Alteration" "Splinter of Uul-Netol"
 	Class "Currency"
 	StackSize >= 8
 	CustomAlertSound "75_currency.wav"
@@ -467,16 +455,28 @@ Show
 
 #Currency Autogen
 Show
+	BaseType "Chromatic Orb" "Orb of Chance"
+	Class "Currency"
+	StackSize >= 9
+	CustomAlertSound "75_currency.wav"
+	MinimapIcon 1 Yellow Circle
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 170 158 130
+	SetFontSize 40
+	DisableDropSound True
+
+#Currency Autogen
+Show
 	BaseType "Alteration Shard"
 	Class "Currency"
-	StackSize >= 13
+	StackSize >= 11
 	SetBackgroundColor 0 0 0 220
 	SetFontSize 30
 	DisableDropSound True
 
 #Currency Autogen
 Show
-	BaseType "Binding Shard" "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation"
+	BaseType "Armourer's Scrap" "Binding Shard" "Blacksmith's Whetstone"
 	Class "Currency"
 	StackSize >= 3
 	SetBackgroundColor 0 0 0 220
@@ -485,7 +485,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Alchemy Shard" "Armourer's Scrap"
+	BaseType "Alchemy Shard" "Orb of Transmutation" "Portal Scroll"
 	Class "Currency"
 	StackSize >= 4
 	SetBackgroundColor 0 0 0 220
@@ -494,7 +494,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Portal Scroll" "Scroll of Wisdom"
+	BaseType "Scroll of Wisdom"
 	Class "Currency"
 	StackSize >= 7
 	SetBackgroundColor 0 0 0 220
@@ -515,9 +515,21 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Ancient Shard"
+	BaseType "Orb of Augmentation"
 	Class "Currency"
-	StackSize >= 12
+	StackSize >= 7
+	CustomAlertSound "20_currency.wav"
+	MinimapIcon 2 Yellow Circle
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 170 158 130
+	SetFontSize 35
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Vaal Orb"
+	Class "Currency"
+	StackSize >= 10
 	CustomAlertSound "100_currency.wav"
 	MinimapIcon 1 Yellow Circle
 	PlayEffect Yellow
@@ -528,7 +540,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Vaal Orb"
+	BaseType "Harbinger's Shard" "Orb of Binding" "Perandus Coin"
 	Class "Currency"
 	StackSize >= 13
 	CustomAlertSound "100_currency.wav"
@@ -541,9 +553,9 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Harbinger's Shard" "Orb of Binding"
+	BaseType "Ancient Shard" "Orb of Fusing"
 	Class "Currency"
-	StackSize >= 15
+	StackSize >= 14
 	CustomAlertSound "100_currency.wav"
 	MinimapIcon 1 Yellow Circle
 	PlayEffect Yellow
@@ -554,9 +566,22 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Orb of Fusing"
+	BaseType "Orb of Alchemy" "Orb of Scouring"
 	Class "Currency"
-	StackSize >= 16
+	StackSize >= 19
+	CustomAlertSound "100_currency.wav"
+	MinimapIcon 1 Yellow Circle
+	PlayEffect Yellow
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 170 158 130
+	SetFontSize 45
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Cartographer's Chisel"
+	Class "Currency"
+	StackSize >= 20
 	CustomAlertSound "100_currency.wav"
 	MinimapIcon 1 Yellow Circle
 	PlayEffect Yellow
@@ -569,7 +594,7 @@ Show
 Show
 	BaseType "Mirror Shard"
 	Class "Currency"
-	StackSize >= 4
+	StackSize >= 3
 	CustomAlertSound "300_valuable.wav"
 	MinimapIcon 0 Yellow Circle
 	PlayEffect Yellow
@@ -580,9 +605,9 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Ancient Orb" "Annulment Shard" "Divine Orb"
+	BaseType "Divine Orb"
 	Class "Currency"
-	StackSize >= 7
+	StackSize >= 5
 	CustomAlertSound "300_valuable.wav"
 	MinimapIcon 0 Yellow Circle
 	PlayEffect Yellow
@@ -595,6 +620,19 @@ Show
 Show
 	BaseType "Harbinger's Orb"
 	Class "Currency"
+	StackSize >= 7
+	CustomAlertSound "300_valuable.wav"
+	MinimapIcon 0 Yellow Circle
+	PlayEffect Yellow
+	SetBackgroundColor 51 58 75 220
+	SetBorderColor 170 158 130
+	SetFontSize 45
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Ancient Orb" "Orb of Annulment"
+	Class "Currency"
 	StackSize >= 8
 	CustomAlertSound "300_valuable.wav"
 	MinimapIcon 0 Yellow Circle
@@ -606,20 +644,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Orb of Annulment"
-	Class "Currency"
-	StackSize >= 9
-	CustomAlertSound "300_valuable.wav"
-	MinimapIcon 0 Yellow Circle
-	PlayEffect Yellow
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 170 158 130
-	SetFontSize 45
-	DisableDropSound True
-
-#Currency Autogen
-Show
-	BaseType "Ancient Shard" "Harbinger's Shard" "Orb of Binding" "Orb of Fusing" "Vaal Orb"
+	BaseType "Ancient Shard" "Harbinger's Shard" "Orb of Binding" "Orb of Fusing" "Perandus Coin" "Vaal Orb"
 	Class "Currency"
 	StackSize >= 2
 	CustomAlertSound "75_currency.wav"
@@ -631,7 +656,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Orb of Alchemy" "Orb of Regret" "Orb of Scouring"
+	BaseType "Cartographer's Chisel" "Glassblower's Bauble" "Orb of Alchemy" "Orb of Regret" "Orb of Scouring" "Splinter of Xoph"
 	Class "Currency"
 	StackSize >= 3
 	CustomAlertSound "75_currency.wav"
@@ -643,7 +668,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Blessed Orb" "Cartographer's Chisel" "Glassblower's Bauble" "Silver Coin" "Splinter of Xoph"
+	BaseType "Annulment Shard" "Blessed Orb" "Silver Coin"
 	Class "Currency"
 	StackSize >= 4
 	CustomAlertSound "75_currency.wav"
@@ -655,7 +680,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Chaos Shard" "Horizon Shard" "Regal Shard"
+	BaseType "Chaos Shard" "Horizon Shard" "Orb of Augmentation" "Regal Shard"
 	Class "Currency"
 	StackSize >= 2
 	SetBackgroundColor 0 0 0 220
@@ -664,7 +689,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Jeweller's Orb" "Splinter of Uul-Netol"
+	BaseType "Jeweller's Orb" "Orb of Alteration" "Splinter of Uul-Netol"
 	Class "Currency"
 	StackSize >= 2
 	CustomAlertSound "20_currency.wav"
@@ -676,7 +701,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Chromatic Orb" "Orb of Alteration" "Orb of Chance"
+	BaseType "Chromatic Orb" "Orb of Chance"
 	Class "Currency"
 	StackSize >= 3
 	CustomAlertSound "20_currency.wav"
@@ -726,9 +751,22 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Apprentice Cartographer's Sextant" "Engineer's Orb" "Splinter of Chayula"
+	BaseType "Apprentice Cartographer's Sextant" "Splinter of Chayula"
 	Class "Currency"
 	StackSize >= 5
+	CustomAlertSound "100_currency.wav"
+	MinimapIcon 1 Yellow Circle
+	PlayEffect Yellow
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 170 158 130
+	SetFontSize 45
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Engineer's Orb"
+	Class "Currency"
+	StackSize >= 6
 	CustomAlertSound "100_currency.wav"
 	MinimapIcon 1 Yellow Circle
 	PlayEffect Yellow
@@ -752,7 +790,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Chaos Orb" "Perandus Coin" "Regal Orb"
+	BaseType "Chaos Orb" "Regal Orb"
 	Class "Currency"
 	StackSize >= 8
 	CustomAlertSound "100_currency.wav"
@@ -765,7 +803,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Alchemy Shard" "Armourer's Scrap" "Binding Shard" "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation"
+	BaseType "Alchemy Shard" "Armourer's Scrap" "Binding Shard" "Blacksmith's Whetstone" "Orb of Transmutation" "Portal Scroll"
 	Class "Currency"
 	StackSize >= 2
 	SetBackgroundColor 0 0 0 150
@@ -774,7 +812,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Portal Scroll" "Scroll of Wisdom"
+	BaseType "Scroll of Wisdom"
 	Class "Currency"
 	StackSize >= 4
 	SetBackgroundColor 0 0 0 150
@@ -785,21 +823,21 @@ Show
 Show
 	BaseType "Alteration Shard"
 	Class "Currency"
-	StackSize >= 7
+	StackSize >= 6
 	SetBackgroundColor 0 0 0 150
 	SetFontSize 30
 	DisableDropSound True
 
 #Currency Autogen
 Hide
-	BaseType "Alchemy Shard" "Alteration Shard" "Armourer's Scrap" "Binding Shard" "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation" "Portal Scroll" "Scroll Fragment" "Scroll of Wisdom" "Transmutation Shard"
+	BaseType "Alchemy Shard" "Alteration Shard" "Armourer's Scrap" "Binding Shard" "Blacksmith's Whetstone" "Orb of Transmutation" "Portal Scroll" "Scroll Fragment" "Scroll of Wisdom" "Transmutation Shard"
 	Class "Currency"
 	
 	DisableDropSound True
 
 #Currency Autogen
 Show
-	BaseType "Blessing of Chayula" "Eternal Orb" "Exalted Orb" "Faceted Fossil" "Fractured Fossil " "Glyphic Fossil" "Mirror of Kalandra"
+	BaseType "Blessing of Chayula" "Eternal Orb" "Exalted Orb" "Faceted Fossil" "Glyphic Fossil" "Hollow Fossil" "Mirror of Kalandra"
 	Class "Currency"
 	CustomAlertSound "300_valuable.wav"
 	MinimapIcon 0 Yellow Circle
@@ -811,7 +849,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Aetheric Fossil" "Apprentice Cartographer's Sextant" "Blessing of Tul" "Blessing of Xoph" "Bound Fossil" "Chaos Orb" "Corroded Fossil" "Dense Fossil" "Enchanted Fossil" "Encrusted Fossil" "Engineer's Orb" "Exalted Shard" "Gemcutter's Prism" "Jagged Fossil" "Journeyman Cartographer's Sextant" "Master Cartographer's Sextant" "Metallic Fossil" "Orb of Horizons" "Perandus Coin" "Perfect Fossil" "Prismatic Fossil" "Pristine Fossil" "Regal Orb" "Serrated Fossil" "Splinter of Chayula"
+	BaseType "Aetheric Fossil" "Apprentice Cartographer's Sextant" "Blessing of Tul" "Blessing of Xoph" "Bound Fossil" "Chaos Orb" "Corroded Fossil" "Dense Fossil" "Enchanted Fossil" "Encrusted Fossil" "Engineer's Orb" "Exalted Shard" "Gemcutter's Prism" "Jagged Fossil" "Journeyman Cartographer's Sextant" "Master Cartographer's Sextant" "Metallic Fossil" "Orb of Horizons" "Perfect Fossil" "Prismatic Fossil" "Pristine Fossil" "Regal Orb" "Serrated Fossil" "Splinter of Chayula"
 	Class "Currency"
 	CustomAlertSound "75_currency.wav"
 	MinimapIcon 1 Yellow Circle
@@ -830,7 +868,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Aberrant Fossil" "Ancient Shard" "Blessed Orb" "Cartographer's Chisel" "Frigid Fossil" "Glassblower's Bauble" "Harbinger's Shard" "Orb of Alchemy" "Orb of Binding" "Orb of Fusing" "Orb of Regret" "Orb of Scouring" "Potent Alchemical Resonator" "Potent Chaotic Resonator" "Powerful Alchemical Resonator" "Powerful Chaotic Resonator" "Primitive Alchemical Resonator" "Primitive Chaotic Resonator" "Scorched Fossil" "Silver Coin" "Splinter of Xoph" "Vaal Orb"
+	BaseType "Aberrant Fossil" "Ancient Shard" "Annulment Shard" "Blessed Orb" "Cartographer's Chisel" "Frigid Fossil" "Glassblower's Bauble" "Harbinger's Shard" "Orb of Alchemy" "Orb of Binding" "Orb of Fusing" "Orb of Regret" "Orb of Scouring" "Perandus Coin" "Potent Alchemical Resonator" "Potent Chaotic Resonator" "Powerful Alchemical Resonator" "Powerful Chaotic Resonator" "Primitive Alchemical Resonator" "Primitive Chaotic Resonator" "Scorched Fossil" "Silver Coin" "Splinter of Xoph" "Vaal Orb"
 	Class "Currency"
 	CustomAlertSound "20_currency.wav"
 	MinimapIcon 2 Yellow Circle
@@ -850,7 +888,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Ancient Orb" "Annulment Shard" "Blessing of Esh" "Blessing of Uul-Netol" "Bloodstained Fossil" "Divine Orb" "Gilded Fossil" "Harbinger's Orb" "Hollow Fossil" "Lucent Fossil" "Mirror Shard" "Orb of Annulment" "Prime Alchemical Resonator" "Prime Chaotic Resonator" "Sanctified Fossil" "Shuddering Fossil" "Tangled Fossil"
+	BaseType "Ancient Orb" "Blessing of Esh" "Blessing of Uul-Netol" "Bloodstained Fossil" "Divine Orb" "Fractured Fossil " "Gilded Fossil" "Harbinger's Orb" "Lucent Fossil" "Mirror Shard" "Orb of Annulment" "Prime Alchemical Resonator" "Prime Chaotic Resonator" "Sanctified Fossil" "Shuddering Fossil" "Tangled Fossil"
 	Class "Currency"
 	CustomAlertSound "100_currency.wav"
 	MinimapIcon 1 Yellow Circle
@@ -862,7 +900,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Chaos Shard" "Horizon Shard" "Regal Shard"
+	BaseType "Chaos Shard" "Horizon Shard" "Orb of Augmentation" "Regal Shard"
 	Class "Currency"
 	SetBackgroundColor 0 0 0 150
 	SetFontSize 30
@@ -882,7 +920,7 @@ Show
 
 #Essence Autogen
 Show
-	BaseType "Deafening Essence of Anger" "Deafening Essence of Anguish" "Deafening Essence of Doubt" "Deafening Essence of Envy" "Deafening Essence of Hatred" "Deafening Essence of Misery" "Deafening Essence of Scorn" "Deafening Essence of Suffering" "Deafening Essence of Torment" "Deafening Essence of Woe" "Deafening Essence of Wrath" "Deafening Essence of Zeal" "Essence of Delirium" "Essence of Hysteria" "Remnant of Corruption" "Screaming Essence of Dread" "Screaming Essence of Greed" "Screaming Essence of Rage" "Shrieking Essence of Anger" "Shrieking Essence of Anguish" "Shrieking Essence of Contempt" "Shrieking Essence of Doubt" "Shrieking Essence of Envy" "Shrieking Essence of Fear" "Shrieking Essence of Greed" "Shrieking Essence of Hatred" "Shrieking Essence of Loathing" "Shrieking Essence of Misery" "Shrieking Essence of Rage" "Shrieking Essence of Scorn" "Shrieking Essence of Sorrow" "Shrieking Essence of Spite" "Shrieking Essence of Suffering" "Shrieking Essence of Torment" "Shrieking Essence of Woe" "Shrieking Essence of Wrath" "Shrieking Essence of Zeal"
+	BaseType "Deafening Essence of Anger" "Deafening Essence of Anguish" "Deafening Essence of Doubt" "Deafening Essence of Hatred" "Deafening Essence of Loathing" "Deafening Essence of Misery" "Deafening Essence of Scorn" "Deafening Essence of Sorrow" "Deafening Essence of Spite" "Deafening Essence of Suffering" "Deafening Essence of Torment" "Deafening Essence of Woe" "Deafening Essence of Wrath" "Deafening Essence of Zeal" "Essence of Hysteria" "Remnant of Corruption" "Screaming Essence of Anger" "Screaming Essence of Contempt" "Screaming Essence of Dread" "Screaming Essence of Envy" "Screaming Essence of Greed" "Screaming Essence of Rage" "Shrieking Essence of Anger" "Shrieking Essence of Anguish" "Shrieking Essence of Contempt" "Shrieking Essence of Doubt" "Shrieking Essence of Envy" "Shrieking Essence of Fear" "Shrieking Essence of Greed" "Shrieking Essence of Hatred" "Shrieking Essence of Loathing" "Shrieking Essence of Misery" "Shrieking Essence of Rage" "Shrieking Essence of Scorn" "Shrieking Essence of Sorrow" "Shrieking Essence of Spite" "Shrieking Essence of Suffering" "Shrieking Essence of Torment" "Shrieking Essence of Woe" "Shrieking Essence of Wrath" "Shrieking Essence of Zeal"
 	Class "Currency"
 	CustomAlertSound "75_currency.wav"
 	MinimapIcon 1 Yellow Circle
@@ -893,7 +931,7 @@ Show
 
 #Essence Autogen
 Show
-	BaseType "Muttering Essence of Anger" "Muttering Essence of Contempt" "Muttering Essence of Fear" "Muttering Essence of Greed" "Muttering Essence of Hatred" "Muttering Essence of Sorrow" "Muttering Essence of Torment" "Muttering Essence of Woe" "Screaming Essence of Anger" "Screaming Essence of Anguish" "Screaming Essence of Contempt" "Screaming Essence of Doubt" "Screaming Essence of Envy" "Screaming Essence of Fear" "Screaming Essence of Hatred" "Screaming Essence of Loathing" "Screaming Essence of Misery" "Screaming Essence of Scorn" "Screaming Essence of Sorrow" "Screaming Essence of Spite" "Screaming Essence of Suffering" "Screaming Essence of Torment" "Screaming Essence of Woe" "Screaming Essence of Wrath" "Screaming Essence of Zeal" "Wailing Essence of Anger" "Wailing Essence of Anguish" "Wailing Essence of Contempt" "Wailing Essence of Doubt" "Wailing Essence of Fear" "Wailing Essence of Greed" "Wailing Essence of Hatred" "Wailing Essence of Loathing" "Wailing Essence of Rage" "Wailing Essence of Sorrow" "Wailing Essence of Spite" "Wailing Essence of Suffering" "Wailing Essence of Torment" "Wailing Essence of Woe" "Wailing Essence of Wrath" "Wailing Essence of Zeal" "Weeping Essence of Anger" "Weeping Essence of Contempt" "Weeping Essence of Doubt" "Weeping Essence of Fear" "Weeping Essence of Greed" "Weeping Essence of Hatred" "Weeping Essence of Rage" "Weeping Essence of Sorrow" "Weeping Essence of Suffering" "Weeping Essence of Torment" "Weeping Essence of Woe" "Weeping Essence of Wrath" "Whispering Essence of Contempt" "Whispering Essence of Greed" "Whispering Essence of Hatred" "Whispering Essence of Woe"
+	BaseType "Muttering Essence of Anger" "Muttering Essence of Contempt" "Muttering Essence of Fear" "Muttering Essence of Greed" "Muttering Essence of Hatred" "Muttering Essence of Sorrow" "Muttering Essence of Torment" "Muttering Essence of Woe" "Screaming Essence of Anguish" "Screaming Essence of Doubt" "Screaming Essence of Fear" "Screaming Essence of Hatred" "Screaming Essence of Loathing" "Screaming Essence of Misery" "Screaming Essence of Scorn" "Screaming Essence of Sorrow" "Screaming Essence of Spite" "Screaming Essence of Suffering" "Screaming Essence of Torment" "Screaming Essence of Woe" "Screaming Essence of Wrath" "Screaming Essence of Zeal" "Wailing Essence of Anger" "Wailing Essence of Anguish" "Wailing Essence of Contempt" "Wailing Essence of Doubt" "Wailing Essence of Fear" "Wailing Essence of Greed" "Wailing Essence of Hatred" "Wailing Essence of Loathing" "Wailing Essence of Rage" "Wailing Essence of Sorrow" "Wailing Essence of Spite" "Wailing Essence of Suffering" "Wailing Essence of Torment" "Wailing Essence of Woe" "Wailing Essence of Wrath" "Wailing Essence of Zeal" "Weeping Essence of Anger" "Weeping Essence of Contempt" "Weeping Essence of Doubt" "Weeping Essence of Fear" "Weeping Essence of Greed" "Weeping Essence of Hatred" "Weeping Essence of Rage" "Weeping Essence of Sorrow" "Weeping Essence of Suffering" "Weeping Essence of Torment" "Weeping Essence of Woe" "Weeping Essence of Wrath" "Whispering Essence of Contempt" "Whispering Essence of Greed" "Whispering Essence of Hatred" "Whispering Essence of Woe"
 	Class "Currency"
 	CustomAlertSound "20_currency.wav"
 	MinimapIcon 2 Yellow Circle
@@ -904,7 +942,7 @@ Show
 
 #Essence Autogen
 Show
-	BaseType "Deafening Essence of Contempt" "Deafening Essence of Fear" "Deafening Essence of Greed" "Deafening Essence of Loathing" "Deafening Essence of Rage" "Deafening Essence of Sorrow" "Deafening Essence of Spite" "Essence of Insanity" "Shrieking Essence of Dread"
+	BaseType "Deafening Essence of Contempt" "Deafening Essence of Dread" "Deafening Essence of Envy" "Deafening Essence of Fear" "Deafening Essence of Greed" "Deafening Essence of Rage" "Essence of Delirium" "Essence of Insanity" "Shrieking Essence of Dread"
 	Class "Currency"
 	CustomAlertSound "100_currency.wav"
 	MinimapIcon 1 Yellow Circle
@@ -1040,7 +1078,7 @@ Show
 
 #Unique
 Show
-	BaseType "Ambush Mitts" "Ancient Spirit Shield" "Callous Mask" "Chateau Map" "Cloth Belt Piece" "Crusader Boots" "Ezomyte Tower Shield" "Gladiator Plate" "Glorious Plate" "Grand Mana Flask" "Greatwolf Talisman" "Hydrascale Gauntlets" "Legion Gloves" "Nightmare Mace" "Occultist's Vestment" "Prophecy Wand" "Rawhide Boots" "Royal Axe" "Sapphire Flask" "Shackled Boots" "Variscite Blade"
+	BaseType "Ambush Mitts" "Callous Mask" "Carnal Boots" "Chateau Map" "Clutching Talisman" "Crusader Boots" "Ezomyte Tower Shield" "Gladiator Plate" "Glorious Plate" "Golden Mantle" "Grand Mana Flask" "Legion Gloves" "Maze Map" "Nightmare Mace" "Occultist's Vestment" "Prismatic Jewel" "Prophecy Wand" "Rawhide Boots" "Riveted Gloves" "Royal Axe" "Ruby Amulet" "Sapphire Flask" "Shackled Boots" "Siege Axe"
 	CustomAlertSound "300_valuable.wav"
 	MinimapIcon 0 Yellow Star
 	PlayEffect Yellow
@@ -1052,7 +1090,7 @@ Show
 
 #Unique
 Show
-	BaseType "Arcanist Gloves" "Archon Kite Shield Piece" "Assassin's Boots" "Bismuth Flask" "Blood Raiment" "Blood Sceptre" "Blunt Arrow Quiver Piece" "Callous Mask Piece" "Carnal Sceptre" "Cedar Tower Shield" "Citrine Amulet" "Clutching Talisman" "Crusader Helmet" "Cutlass" "Deicide Mask" "Full Wyrmscale" "Granite Flask" "Harbinger Map" "Harlequin Mask" "Hydrascale Boots" "Imperial Maul" "Leather Cap" "Magistrate Crown" "Maze Map" "Moon Temple Map" "Museum Map" "Penetrating Arrow Quiver" "Prismatic Jewel" "Raven Mask" "Rawhide Tower Shield" "Ritual Sceptre" "Riveted Gloves" "Royal Burgonet" "Ruby Amulet" "Sanctified Life Flask" "Sanctified Mana Flask" "Savant's Robe" "Shore Map" "Siege Axe" "Steel Ring" "Stibnite Flask" "Titan Greaves" "Vaal Mask" "Vaal Sceptre" "Vaal Spirit Shield" "Void Axe" "Wereclaw Talisman"
+	BaseType "Ancient Spirit Shield" "Arcanist Gloves" "Archon Kite Shield Piece" "Assassin's Boots" "Bismuth Flask" "Black Maw Talisman" "Blood Raiment" "Blunt Arrow Quiver Piece" "Callous Mask Piece" "Carnal Sceptre" "Cedar Tower Shield" "Champion Kite Shield" "Citrine Amulet" "Cloth Belt Piece" "Courtyard Map" "Crusader Helmet" "Cutlass" "Deicide Mask" "Full Wyrmscale" "Greatwolf Talisman" "Harbinger Map" "Harlequin Mask" "Hydrascale Boots" "Hydrascale Gauntlets" "Imperial Maul" "Leather Cap" "Magistrate Crown" "Moon Temple Map" "Museum Map" "Penetrating Arrow Quiver" "Raven Mask" "Rawhide Tower Shield" "Ritual Sceptre" "Royal Burgonet" "Sacrificial Garb" "Sanctified Life Flask" "Sanctified Mana Flask" "Savant's Robe" "Shore Map" "Steel Ring" "Stibnite Flask" "Titan Greaves" "Vaal Mask" "Vaal Spirit Shield" "Variscite Blade" "Void Axe" "Wereclaw Talisman" "Wyrmscale Doublet"
 	CustomAlertSound "100_valuable.wav"
 	MinimapIcon 1 Yellow Star
 	PlayEffect Yellow
@@ -1064,7 +1102,7 @@ Show
 
 #Unique
 Show
-	BaseType "Abyssal Axe" "Amethyst Flask" "Amethyst Ring" "Ancient Gauntlets" "Arcanist Slippers" "Atoll Map" "Blue Pearl Amulet" "Bone Crypt Map" "Branded Kite Shield" "Broadhead Arrow Quiver" "Cardinal Round Shield" "Cemetery Map" "Champion Kite Shield" "Clasped Mitts" "Close Helmet" "Coiled Staff" "Coral Ring" "Corrugated Buckler" "Corsair Sword" "Crystal Belt" "Cursed Crypt Map" "Demon Dagger" "Desert Brigandine" "Destiny Leather" "Driftwood Wand" "Dunes Map" "Elder Sword" "Etched Greatsword" "Exquisite Leather" "Festival Mask" "Gold Ring" "Hallowed Hybrid Flask" "Highborn Staff" "Iron Gauntlets" "Iron Ring" "Ironscale Gauntlets" "Jewelled Foil" "Jingling Spirit Shield" "Labrys" "Large Hybrid Flask" "Lion Pelt" "Marble Amulet" "Meatgrinder" "Midnight Blade" "Necromancer Silks" "Necropolis Map" "Nubuck Boots" "Nubuck Gloves" "Overgrown Shrine Map" "Platinum Sceptre" "Promenade Map" "Saintly Chainmail" "Serpentscale Gauntlets" "Short Bow" "Sinner Tricorne" "Steelhead" "Strand Map" "Stygian Vise" "Temple Map" "Thorium Spirit Shield" "Torture Chamber Map" "Underground River Map" "Vaal Pyramid Map" "Vanguard Belt" "War Sword" "Wool Shoes" "Wyrmscale Doublet"
+	BaseType "Abyssal Axe" "Amethyst Flask" "Amethyst Ring" "Ancient Gauntlets" "Ancient Greaves" "Arcanist Slippers" "Assassin's Garb" "Atoll Map" "Blinder" "Blood Sceptre" "Blue Pearl Amulet" "Bone Armour" "Bone Crypt Map" "Branded Kite Shield" "Bronze Sceptre" "Cardinal Round Shield" "Cemetery Map" "Close Helmet" "Coiled Staff" "Coral Ring" "Corrugated Buckler" "Corsair Sword" "Crusader Chainmail" "Crystal Belt" "Cursed Crypt Map" "Demon Dagger" "Desert Brigandine" "Destiny Leather" "Destroyer Regalia" "Dunes Map" "Elegant Foil" "Etched Greatsword" "Ezomyte Burgonet" "Festival Mask" "Gold Ring" "Hallowed Hybrid Flask" "Highborn Staff" "Iron Gauntlets" "Iron Ring" "Ironscale Gauntlets" "Jewelled Foil" "Jingling Spirit Shield" "Karui Sceptre" "Labrys" "Large Hybrid Flask" "Lion Pelt" "Meatgrinder" "Necromancer Silks" "Necropolis Map" "Nubuck Boots" "Nubuck Gloves" "Overgrown Shrine Map" "Promenade Map" "Reinforced Tower Shield" "Saintly Chainmail" "Serpentscale Gauntlets" "Sharktooth Arrow Quiver" "Short Bow" "Siege Helmet" "Steel Gauntlets" "Steelhead" "Strand Map" "Temple Map" "Torture Chamber Map" "Underground River Map" "Vaal Pyramid Map" "War Sword" "Wool Shoes"
 	CustomAlertSound "75_unique.wav"
 	MinimapIcon 1 Yellow Star
 	Rarity Unique
@@ -1075,7 +1113,7 @@ Show
 
 #Unique
 Show
-	BaseType "Agate Amulet" "Amber Amulet" "Archon Kite Shield" "Assassin Bow" "Blinder" "Blunt Arrow Quiver" "Carnal Armour" "Carnal Mitts" "Carved Wand" "Chain Belt" "Citadel Bow" "Cloth Belt" "Cobalt Jewel" "Coronal Leather" "Crimson Jewel" "Crusader Gloves" "Despot Axe" "Diamond Ring" "Ebony Tower Shield" "Elegant Ringmail" "Elegant Sword" "Ezomyte Staff" "Gavel" "Goathide Boots" "Gold Amulet" "Golden Plate" "Goliath Greaves" "Great Crown" "Heavy Belt" "Hubris Circlet" "Imperial Bow" "Imperial Claw" "Imperial Staff" "Infernal Sword" "Jade Amulet" "Jasper Chopper" "Judgement Staff" "Lacquered Garb" "Lapis Amulet" "Leather Belt" "Legion Sword" "Maelström Staff" "Mind Cage" "Moonstone Ring" "Murder Boots" "Necromancer Circlet" "Onyx Amulet" "Opal Ring" "Paua Amulet" "Paua Ring" "Pinnacle Tower Shield" "Prismatic Ring" "Quartz Flask" "Regicide Mask" "Ruby Flask" "Ruby Ring" "Rustic Sash" "Sacrificial Garb" "Sadist Garb" "Sage Wand" "Sapphire Ring" "Serpentscale Boots" "Shadow Sceptre" "Sharkskin Tunic" "Siege Helmet" "Silken Hood" "Slink Boots" "Soldier Gloves" "Sorcerer Boots" "Spine Bow" "Steelscale Gauntlets" "Strapped Mitts" "Terror Claw" "Titan Gauntlets" "Topaz Flask" "Topaz Ring" "Tornado Wand" "Trapper Boots" "Triumphant Lamellar" "Turquoise Amulet" "Two-Point Arrow Quiver" "Two-Stone Ring" "Unset Ring" "Vaal Axe" "Vaal Blade" "Vaal Gauntlets" "Viridian Jewel" "Widowsilk Robe" "Zealot Gloves" "Zodiac Leather"
+	BaseType "Agate Amulet" "Amber Amulet" "Archon Kite Shield" "Assassin Bow" "Blunt Arrow Quiver" "Carnal Armour" "Carnal Mitts" "Carved Wand" "Chain Belt" "Citadel Bow" "Clasped Mitts" "Cloth Belt" "Cobalt Jewel" "Coronal Leather" "Crimson Jewel" "Crusader Gloves" "Despot Axe" "Diamond Ring" "Ebony Tower Shield" "Elegant Ringmail" "Elegant Sword" "Exquisite Leather" "Gavel" "Goathide Boots" "Gold Amulet" "Golden Plate" "Goliath Greaves" "Granite Flask" "Great Crown" "Heavy Belt" "Hubris Circlet" "Imperial Bow" "Imperial Claw" "Imperial Staff" "Infernal Sword" "Jade Amulet" "Jasper Chopper" "Judgement Staff" "Lacquered Garb" "Lapis Amulet" "Leather Belt" "Legion Sword" "Maelström Staff" "Midnight Blade" "Mind Cage" "Moonstone Ring" "Murder Boots" "Necromancer Circlet" "Onyx Amulet" "Opal Ring" "Painted Tower Shield" "Paua Amulet" "Paua Ring" "Pinnacle Tower Shield" "Prismatic Ring" "Quartz Flask" "Regicide Mask" "Ruby Flask" "Ruby Ring" "Rustic Sash" "Sadist Garb" "Sage Wand" "Sapphire Ring" "Sharkskin Tunic" "Silken Hood" "Slink Boots" "Soldier Gloves" "Sorcerer Boots" "Spine Bow" "Spiraled Wand" "Steelscale Gauntlets" "Strapped Mitts" "Terror Claw" "Thorium Spirit Shield" "Titan Gauntlets" "Topaz Flask" "Topaz Ring" "Tornado Wand" "Trapper Boots" "Triumphant Lamellar" "Turquoise Amulet" "Two-Point Arrow Quiver" "Two-Stone Ring" "Unset Ring" "Vaal Axe" "Vaal Blade" "Vaal Gauntlets" "Vaal Sceptre" "Viridian Jewel" "Widowsilk Robe" "Zealot Gloves" "Zodiac Leather"
 	CustomAlertSound "45_unique.wav"
 	MinimapIcon 2 Yellow Star
 	Rarity Unique
@@ -1402,7 +1440,6 @@ Show
 	CustomAlertSound "20_divination.wav"
 	MinimapIcon 2 Blue Circle
 	SetBackgroundColor 0 0 0 220
-	SetBorderColor 30 144 255
 	DisableDropSound True
 
 #Divination Card
@@ -1424,7 +1461,6 @@ Show
 	CustomAlertSound "20_divination.wav"
 	MinimapIcon 2 Blue Circle
 	SetBackgroundColor 0 0 0 220
-	SetBorderColor 30 144 255
 	DisableDropSound True
 
 #Divination Card
@@ -1434,7 +1470,6 @@ Show
 	CustomAlertSound "20_divination.wav"
 	MinimapIcon 2 Blue Circle
 	SetBackgroundColor 0 0 0 220
-	SetBorderColor 30 144 255
 	DisableDropSound True
 
 #Divination Card
@@ -1451,7 +1486,7 @@ Show
 
 #Divination Card
 Show
-	BaseType "House of Mirrors" "Immortal Resolve" "The Doctor" "The Fiend"
+	BaseType "House of Mirrors" "Immortal Resolve" "The Doctor" "The Fiend" "The Samurai's Eye"
 	Class "Divination Card"
 	CustomAlertSound "300_valuable.wav"
 	MinimapIcon 0 Blue Circle
@@ -1463,7 +1498,7 @@ Show
 
 #Divination Card
 Show
-	BaseType "Abandoned Wealth" "Boon of the First Ones" "Bowyer's Dream" "Heterochromia" "Hunter's Reward" "Perfection" "Pride Before the Fall" "The Artist" "The Brittle Emperor" "The Celestial Justicar" "The Celestial Stone" "The Endless Darkness" "The Enlightened" "The Formless Sea" "The Hunger" "The Iron Bard" "The King's Heart" "The Last One Standing" "The Master" "The Mayor" "The Offering" "The Polymath" "The Porcupine" "The Queen" "The Saint's Treasure" "The Samurai's Eye" "The Sephirot" "The Spark and the Flame" "The Undisputed" "The Vast" "The Wind" "The Wolven King's Bite" "The World Eater" "Wealth and Power"
+	BaseType "Abandoned Wealth" "Boon of the First Ones" "Hunter's Reward" "Perfection" "Pride Before the Fall" "The Artist" "The Celestial Justicar" "The Celestial Stone" "The Dreamer" "The Endless Darkness" "The Enlightened" "The Hale Heart" "The Hunger" "The Iron Bard" "The King's Heart" "The Last One Standing" "The Master" "The Mayor" "The Offering" "The Polymath" "The Porcupine" "The Professor" "The Queen" "The Saint's Treasure" "The Sephirot" "The Spark and the Flame" "The Thaumaturgist" "The Throne" "The Undaunted" "The Wind" "The Wolf" "The Wolven King's Bite" "The World Eater" "Wealth and Power"
 	Class "Divination Card"
 	CustomAlertSound "100_valuable.wav"
 	MinimapIcon 1 Blue Circle
@@ -1475,7 +1510,7 @@ Show
 
 #Divination Card
 Show
-	BaseType "Blessing of God" "Boundless Realms" "Chaotic Disposition" "Earth Drinker" "Emperor of Purity" "Harmony of Souls" "Humility" "Left to Fate" "Lingering Remnants" "Lost Worlds" "Lucky Deck" "Merciless Armament" "Rain Tempter" "Rebirth" "Scholar of the Seas" "The Admirer" "The Aesthete" "The Beast" "The Body" "The Breach" "The Cacophony" "The Cartographer" "The Chains that Bind" "The Cursed King" "The Dapper Prodigy" "The Dark Mage" "The Darkest Dream" "The Dreamer" "The Ethereal" "The Hale Heart" "The Harvester" "The Hoarder" "The Jester" "The Jeweller's Boon" "The Obscured" "The Price of Protection" "The Professor" "The Risk" "The Rite of Elements" "The Road to Power" "The Siren" "The Soul" "The Standoff" "The Surveyor" "The Sword King's Salute" "The Thaumaturgist" "The Throne" "The Trial" "The Twilight Moon" "The Tyrant" "The Undaunted" "The Valkyrie" "The Valley of Steel Boxes" "The Void" "The Warlord" "The Wilted Rose" "The Wolf" "The Wretched" "Time-Lost Relic"
+	BaseType "Boundless Realms" "Bowyer's Dream" "Dialla's Subjugation" "Earth Drinker" "Emperor of Purity" "Harmony of Souls" "Heterochromia" "Hope" "Humility" "Left to Fate" "Lucky Deck" "No Traces" "Rebirth" "Scholar of the Seas" "The Aesthete" "The Avenger" "The Beast" "The Body" "The Breach" "The Brittle Emperor" "The Cacophony" "The Cartographer" "The Chains that Bind" "The Cursed King" "The Dapper Prodigy" "The Dark Mage" "The Darkest Dream" "The Ethereal" "The Formless Sea" "The Garish Power" "The Harvester" "The Hoarder" "The Innocent" "The Jeweller's Boon" "The Obscured" "The Price of Protection" "The Risk" "The Rite of Elements" "The Siren" "The Soul" "The Standoff" "The Surveyor" "The Sword King's Salute" "The Twilight Moon" "The Valkyrie" "The Valley of Steel Boxes" "The Vast" "The Void" "The Warlord" "The Wilted Rose" "The Wretched" "Time-Lost Relic"
 	Class "Divination Card"
 	CustomAlertSound "75_divination.wav"
 	MinimapIcon 1 Blue Circle
@@ -1485,14 +1520,15 @@ Show
 
 #Divination Card
 Show
-	BaseType "Destined to Crumble" "Shard of Fate" "The Endurance" "The Incantation" "The Lover" "The Rabid Rhoa" "The Scholar" "The Twins" "Thunderous Skies"
+	BaseType "Anarchy's Price" "Lantador's Lost Love" "Shard of Fate" "The Endurance" "The Incantation" "The Lover" "The Scholar"
 	Class "Divination Card"
 	SetBackgroundColor 0 0 0 220
+	SetFontSize 25
 	DisableDropSound True
 
 #Divination Card
 Hide
-	BaseType "Prosperity" "Struck by Lightning" "The Carrion Crow" "The Inoculated" "The King's Blade" "The Sigil" "The Surgeon" "The Web"
+	BaseType "Blessing of God" "Destined to Crumble" "Dying Anguish" "Merciless Armament" "Prosperity" "Rain Tempter" "Struck by Lightning" "The Carrion Crow" "The Inoculated" "The Jester" "The King's Blade" "The Lord in Black" "The Metalsmith's Gift" "The Rabid Rhoa" "The Road to Power" "The Scarred Meadow" "The Sigil" "The Spoiled Prince" "The Surgeon" "The Twins" "The Tyrant" "The Undisputed" "The Web" "Thunderous Skies"
 	Class "Divination Card"
 	
 	DisableDropSound True
@@ -1503,7 +1539,6 @@ Show
 	CustomAlertSound "20_divination.wav"
 	MinimapIcon 2 Blue Circle
 	SetBackgroundColor 0 0 0 220
-	SetBorderColor 30 144 255
 	DisableDropSound True
 
 #Flasks
