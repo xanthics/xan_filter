@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 09/28/2018(m/d/y) 21:12:47 UTC from "Hardcore" data
+# Created: 10/01/2018(m/d/y) 01:21:03 UTC from "Hardcore" data
 
 desc = "Divination Card"
 
@@ -8,6 +8,8 @@ desc = "Divination Card"
 items = {
 	"1 House of Mirrors": {"base": "House of Mirrors", "class": "Divination Card", "type": "divination extremely high"},
 	"1 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination extremely high"},
+	"1 The Hunger": {"base": "The Hunger", "class": "Divination Card", "type": "divination extremely high"},
+	"2 Heterochromia": {"base": "Heterochromia", "class": "Divination Card", "type": "divination very high"},
 	"2 The Offering": {"base": "The Offering", "class": "Divination Card", "type": "divination very high"},
 	"2 The Porcupine": {"base": "The Porcupine", "class": "Divination Card", "type": "divination very high"},
 	"2 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination very high"},
@@ -17,7 +19,6 @@ items = {
 	"3 The Dragon": {"base": "The Dragon", "class": "Divination Card", "type": "divination high"},
 	"3 The Obscured": {"base": "The Obscured", "class": "Divination Card", "type": "divination high"},
 	"3 The Trial": {"base": "The Trial", "class": "Divination Card", "type": "divination high"},
-	"3 Vinia's Token": {"base": "Vinia's Token", "class": "Divination Card", "type": "divination high"},
 	"4 Anarchy's Price": {"base": "Anarchy's Price", "class": "Divination Card", "type": "divination low"},
 	"4 Lantador's Lost Love": {"base": "Lantador's Lost Love", "class": "Divination Card", "type": "divination low"},
 	"4 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},

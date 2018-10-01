@@ -162,11 +162,10 @@ def essenceclassify(cur, val, curvals):
 		tier = 'currency very high'
 	elif val > curvals['high']:
 		tier = 'currency high'
-	elif val > curvals['normal']:
+	elif val > curvals['high'] / 2:
 		tier = 'currency normal'
 	else:
-		return
-		# tier = 'currency low'
+		tier = 'currency low'
 
 	return "0 {0}\": {{\"base\": \"{0}\", \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier)
 
@@ -289,7 +288,7 @@ def gen_div(div_list, league, curvals):
 			items['vhigh'].append(c)
 		elif div_list[c] > curvals['high']:
 			items['high'].append(c)
-		elif div_list[c] <= curvals['low']:
+		elif div_list[c] < curvals['high'] / 2:
 			items['low'].append(c)
 	with open('auto_gen\\{}divination.py'.format(name), 'w', encoding='utf-8') as f:
 		f.write(u'''{}\ndesc = "Divination Card"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league)))
@@ -303,7 +302,7 @@ def gen_div(div_list, league, curvals):
 				lvl = 'divination very high'
 			elif div_list[ii] > curvals['high']:
 				lvl = 'divination high'
-			elif div_list[ii] < curvals['low']:
+			elif div_list[ii] < curvals['high'] / 2:
 				lvl = 'divination low'
 			else:
 				lvl = 'divination normal'
@@ -344,7 +343,7 @@ def gen_unique(unique_list, league, curvals):
 			items['vhigh'].append(u)
 		elif unique_list[u] > curvals['high']:
 			items['high'].append(u)
-		elif unique_list[u] <= curvals['low']:
+		elif unique_list[u] < curvals['high'] / 2:
 			items['low'].append(u)
 
 	with open('auto_gen\\{}uniques.py'.format(name), 'w', encoding='utf-8') as f:
