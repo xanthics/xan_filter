@@ -220,5 +220,5 @@ if __name__ == "__main__":
 	import pricetool_ninja
 	league = ['Standard', 'Hardcore', 'tmpstandard', 'tmphardcore']
 #	league = ['tmpstandard']
-#	pricetool_ninja.scrape_ninja(league)
+	pricetool_ninja.scrape_ninja(league)
 	main(league)
