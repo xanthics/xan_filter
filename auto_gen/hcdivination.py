@@ -1,17 +1,20 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/01/2018(m/d/y) 01:21:03 UTC from "Hardcore" data
+# Created: 10/01/2018(m/d/y) 15:20:38 UTC from "Hardcore" data
 
 desc = "Divination Card"
 
 # Base type : settings pair
 items = {
+	"1 Bowyer's Dream": {"base": "Bowyer's Dream", "class": "Divination Card", "type": "divination extremely high"},
 	"1 House of Mirrors": {"base": "House of Mirrors", "class": "Divination Card", "type": "divination extremely high"},
 	"1 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Hunger": {"base": "The Hunger", "class": "Divination Card", "type": "divination extremely high"},
+	"2 Audacity": {"base": "Audacity", "class": "Divination Card", "type": "divination very high"},
 	"2 Heterochromia": {"base": "Heterochromia", "class": "Divination Card", "type": "divination very high"},
 	"2 The Offering": {"base": "The Offering", "class": "Divination Card", "type": "divination very high"},
 	"2 The Porcupine": {"base": "The Porcupine", "class": "Divination Card", "type": "divination very high"},
+	"2 The Watcher": {"base": "The Watcher", "class": "Divination Card", "type": "divination very high"},
 	"2 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination very high"},
 	"3 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination high"},
 	"3 The Cartographer": {"base": "The Cartographer", "class": "Divination Card", "type": "divination high"},

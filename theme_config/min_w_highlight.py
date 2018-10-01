@@ -170,7 +170,7 @@ settings = {
 #					  'MinimapIcon 2 Yellow Circle',
 					  "SetFontSize {}".format(size['normal']),
 					 "SetBackgroundColor {} 220".format(color['black'])],
-	"currency very low": ["SetFontSize {}".format(size['minimum']),
+	"currency very low": ["SetFontSize {}".format(size['small']),
 						  "SetBackgroundColor {} 150".format(color['black'])],
 
 	"divination extremely high": ["SetBorderColor {}".format(color['divinationnew']),

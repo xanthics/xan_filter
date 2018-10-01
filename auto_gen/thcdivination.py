@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/01/2018(m/d/y) 01:21:04 UTC from "tmphardcore" data
+# Created: 10/01/2018(m/d/y) 15:20:49 UTC from "tmphardcore" data
 
 desc = "Divination Card"
 
@@ -56,6 +56,7 @@ items = {
 	"3 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination high"},
 	"3 Harmony of Souls": {"base": "Harmony of Souls", "class": "Divination Card", "type": "divination high"},
 	"3 Heterochromia": {"base": "Heterochromia", "class": "Divination Card", "type": "divination high"},
+	"3 Hope": {"base": "Hope", "class": "Divination Card", "type": "divination high"},
 	"3 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
 	"3 Left to Fate": {"base": "Left to Fate", "class": "Divination Card", "type": "divination high"},
 	"3 Lingering Remnants": {"base": "Lingering Remnants", "class": "Divination Card", "type": "divination high"},
@@ -64,10 +65,12 @@ items = {
 	"3 Rebirth": {"base": "Rebirth", "class": "Divination Card", "type": "divination high"},
 	"3 Scholar of the Seas": {"base": "Scholar of the Seas", "class": "Divination Card", "type": "divination high"},
 	"3 The Aesthete": {"base": "The Aesthete", "class": "Divination Card", "type": "divination high"},
+	"3 The Arena Champion": {"base": "The Arena Champion", "class": "Divination Card", "type": "divination high"},
 	"3 The Beast": {"base": "The Beast", "class": "Divination Card", "type": "divination high"},
 	"3 The Body": {"base": "The Body", "class": "Divination Card", "type": "divination high"},
 	"3 The Breach": {"base": "The Breach", "class": "Divination Card", "type": "divination high"},
 	"3 The Brittle Emperor": {"base": "The Brittle Emperor", "class": "Divination Card", "type": "divination high"},
+	"3 The Cacophony": {"base": "The Cacophony", "class": "Divination Card", "type": "divination high"},
 	"3 The Cartographer": {"base": "The Cartographer", "class": "Divination Card", "type": "divination high"},
 	"3 The Chains that Bind": {"base": "The Chains that Bind", "class": "Divination Card", "type": "divination high"},
 	"3 The Cursed King": {"base": "The Cursed King", "class": "Divination Card", "type": "divination high"},
@@ -75,10 +78,8 @@ items = {
 	"3 The Dark Mage": {"base": "The Dark Mage", "class": "Divination Card", "type": "divination high"},
 	"3 The Darkest Dream": {"base": "The Darkest Dream", "class": "Divination Card", "type": "divination high"},
 	"3 The Dreamer": {"base": "The Dreamer", "class": "Divination Card", "type": "divination high"},
-	"3 The Encroaching Darkness": {"base": "The Encroaching Darkness", "class": "Divination Card", "type": "divination high"},
 	"3 The Ethereal": {"base": "The Ethereal", "class": "Divination Card", "type": "divination high"},
 	"3 The Formless Sea": {"base": "The Formless Sea", "class": "Divination Card", "type": "divination high"},
-	"3 The Forsaken": {"base": "The Forsaken", "class": "Divination Card", "type": "divination high"},
 	"3 The Harvester": {"base": "The Harvester", "class": "Divination Card", "type": "divination high"},
 	"3 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination high"},
 	"3 The Innocent": {"base": "The Innocent", "class": "Divination Card", "type": "divination high"},
@@ -93,6 +94,7 @@ items = {
 	"3 The Standoff": {"base": "The Standoff", "class": "Divination Card", "type": "divination high"},
 	"3 The Surveyor": {"base": "The Surveyor", "class": "Divination Card", "type": "divination high"},
 	"3 The Sword King's Salute": {"base": "The Sword King's Salute", "class": "Divination Card", "type": "divination high"},
+	"3 The Trial": {"base": "The Trial", "class": "Divination Card", "type": "divination high"},
 	"3 The Twilight Moon": {"base": "The Twilight Moon", "class": "Divination Card", "type": "divination high"},
 	"3 The Union": {"base": "The Union", "class": "Divination Card", "type": "divination high"},
 	"3 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination high"},
@@ -104,7 +106,6 @@ items = {
 	"3 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination high"},
 	"4 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "divination low"},
 	"4 Anarchy's Price": {"base": "Anarchy's Price", "class": "Divination Card", "type": "divination low"},
-	"4 Doedre's Madness": {"base": "Doedre's Madness", "class": "Divination Card", "type": "divination low"},
 	"4 Lantador's Lost Love": {"base": "Lantador's Lost Love", "class": "Divination Card", "type": "divination low"},
 	"4 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},
 	"4 The Army of Blood": {"base": "The Army of Blood", "class": "Divination Card", "type": "divination low"},

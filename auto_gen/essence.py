@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/01/2018(m/d/y) 01:21:03 UTC from "Standard" data
+# Created: 10/01/2018(m/d/y) 15:20:33 UTC from "Standard" data
 
 desc = "Essence Autogen"
 
@@ -72,9 +72,9 @@ items = {
 	"0 Shrieking Essence of Misery": {"base": "Shrieking Essence of Misery", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Rage": {"base": "Shrieking Essence of Rage", "class": "Currency", "type": "currency high"},
 	"0 Shrieking Essence of Scorn": {"base": "Shrieking Essence of Scorn", "class": "Currency", "type": "currency high"},
-	"0 Shrieking Essence of Sorrow": {"base": "Shrieking Essence of Sorrow", "class": "Currency", "type": "currency low"},
+	"0 Shrieking Essence of Sorrow": {"base": "Shrieking Essence of Sorrow", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Spite": {"base": "Shrieking Essence of Spite", "class": "Currency", "type": "currency high"},
-	"0 Shrieking Essence of Suffering": {"base": "Shrieking Essence of Suffering", "class": "Currency", "type": "currency low"},
+	"0 Shrieking Essence of Suffering": {"base": "Shrieking Essence of Suffering", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Torment": {"base": "Shrieking Essence of Torment", "class": "Currency", "type": "currency high"},
 	"0 Shrieking Essence of Woe": {"base": "Shrieking Essence of Woe", "class": "Currency", "type": "currency high"},
 	"0 Shrieking Essence of Wrath": {"base": "Shrieking Essence of Wrath", "class": "Currency", "type": "currency high"},
@@ -91,7 +91,7 @@ items = {
 	"0 Wailing Essence of Sorrow": {"base": "Wailing Essence of Sorrow", "class": "Currency", "type": "currency low"},
 	"0 Wailing Essence of Spite": {"base": "Wailing Essence of Spite", "class": "Currency", "type": "currency low"},
 	"0 Wailing Essence of Suffering": {"base": "Wailing Essence of Suffering", "class": "Currency", "type": "currency low"},
-	"0 Wailing Essence of Torment": {"base": "Wailing Essence of Torment", "class": "Currency", "type": "currency normal"},
+	"0 Wailing Essence of Torment": {"base": "Wailing Essence of Torment", "class": "Currency", "type": "currency low"},
 	"0 Wailing Essence of Woe": {"base": "Wailing Essence of Woe", "class": "Currency", "type": "currency low"},
 	"0 Wailing Essence of Wrath": {"base": "Wailing Essence of Wrath", "class": "Currency", "type": "currency low"},
 	"0 Wailing Essence of Zeal": {"base": "Wailing Essence of Zeal", "class": "Currency", "type": "currency low"},
