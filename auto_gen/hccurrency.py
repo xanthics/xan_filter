@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/01/2018(m/d/y) 01:21:03 UTC from "Hardcore" data
+# Created: 10/01/2018(m/d/y) 15:20:38 UTC from "Hardcore" data
 
 desc = "Currency Autogen"
 
@@ -61,7 +61,7 @@ items = {
 	"1 Corroded Fossil": {"base": "Corroded Fossil", "class": "Currency", "type": "currency high"},
 	"1 Dense Fossil": {"base": "Dense Fossil", "class": "Currency", "type": "currency normal"},
 	"1 Divine Orb": {"base": "Divine Orb", "class": "Currency", "type": "currency very high"},
-	"09 Divine Orb": {"base": "Divine Orb", 'other': ['StackSize >= 6'], "class": "Currency", "type": "currency extremely high"},
+	"09 Divine Orb": {"base": "Divine Orb", 'other': ['StackSize >= 5'], "class": "Currency", "type": "currency extremely high"},
 	"1 Enchanted Fossil": {"base": "Enchanted Fossil", "class": "Currency", "type": "currency high"},
 	"1 Encrusted Fossil": {"base": "Encrusted Fossil", "class": "Currency", "type": "currency high"},
 	"1 Engineer's Orb": {"base": "Engineer's Orb", "class": "Currency", "type": "currency normal"},
@@ -122,8 +122,8 @@ items = {
 	"09 Orb of Chance": {"base": "Orb of Chance", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency normal"},
 	"08 Orb of Chance": {"base": "Orb of Chance", 'other': ['StackSize >= 5'], "class": "Currency", "type": "currency high"},
 	"1 Orb of Fusing": {"base": "Orb of Fusing", "class": "Currency", "type": "currency normal"},
-	"09 Orb of Fusing": {"base": "Orb of Fusing", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency high"},
-	"08 Orb of Fusing": {"base": "Orb of Fusing", 'other': ['StackSize >= 18'], "class": "Currency", "type": "currency very high"},
+	"09 Orb of Fusing": {"base": "Orb of Fusing", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency high"},
+	"08 Orb of Fusing": {"base": "Orb of Fusing", 'other': ['StackSize >= 15'], "class": "Currency", "type": "currency very high"},
 	"1 Orb of Horizons": {"base": "Orb of Horizons", "class": "Currency", "type": "currency normal"},
 	"09 Orb of Horizons": {"base": "Orb of Horizons", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency high"},
 	"08 Orb of Horizons": {"base": "Orb of Horizons", 'other': ['StackSize >= 12'], "class": "Currency", "type": "currency very high"},
