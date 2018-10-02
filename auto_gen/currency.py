@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/02/2018(m/d/y) 00:39:00 UTC from "Standard" data
+# Created: 10/02/2018(m/d/y) 01:08:54 UTC from "Standard" data
 
 desc = "Currency Autogen"
 
@@ -39,7 +39,7 @@ items = {
 	"1 Blessing of Chayula": {"base": "Blessing of Chayula", "class": "Currency", "type": "currency extremely high"},
 	"1 Blessing of Esh": {"base": "Blessing of Esh", "class": "Currency", "type": "currency high"},
 	"1 Blessing of Tul": {"base": "Blessing of Tul", "class": "Currency", "type": "currency high"},
-	"1 Blessing of Uul-Netol": {"base": "Blessing of Uul-Netol", "class": "Currency", "type": "currency very high"},
+	"1 Blessing of Uul-Netol": {"base": "Blessing of Uul-Netol", "class": "Currency", "type": "currency high"},
 	"1 Blessing of Xoph": {"base": "Blessing of Xoph", "class": "Currency", "type": "currency high"},
 	"1 Bloodstained Fossil": {"base": "Bloodstained Fossil", "class": "Currency", "type": "currency very high"},
 	"1 Bound Fossil": {"base": "Bound Fossil", "class": "Currency", "type": "currency very high"},
@@ -69,7 +69,7 @@ items = {
 	"1 Eternal Orb": {"base": "Eternal Orb", "class": "Currency", "type": "currency extremely high"},
 	"1 Exalted Orb": {"base": "Exalted Orb", "class": "Currency", "type": "currency extremely high"},
 	"1 Exalted Shard": {"base": "Exalted Shard", "class": "Currency", "type": "currency high"},
-	"09 Exalted Shard": {"base": "Exalted Shard", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency very high"},
+	"09 Exalted Shard": {"base": "Exalted Shard", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency very high"},
 	"1 Faceted Fossil": {"base": "Faceted Fossil", "class": "Currency", "type": "currency very high"},
 	"1 Fractured Fossil ": {"base": "Fractured Fossil ", "class": "Currency", "type": "currency extremely high"},
 	"1 Frigid Fossil": {"base": "Frigid Fossil", "class": "Currency", "type": "currency normal"},

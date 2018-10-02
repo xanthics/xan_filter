@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/02/2018(m/d/y) 00:39:01 UTC from "Hardcore" data
+# Created: 10/02/2018(m/d/y) 01:08:58 UTC from "Hardcore" data
 
 desc = "Unique"
 
@@ -91,7 +91,6 @@ items = {
 	"1 Murder Boots": {"base": "Murder Boots", "type": "unique very high"},
 	"1 Necromancer Silks": {"base": "Necromancer Silks", "type": "unique very high"},
 	"1 Nightmare Bascinet": {"base": "Nightmare Bascinet", "type": "unique very high"},
-	"1 Nubuck Boots": {"base": "Nubuck Boots", "type": "unique very high"},
 	"1 Overgrown Shrine Map": {"base": "Overgrown Shrine Map", "type": "unique very high"},
 	"1 Paua Amulet": {"base": "Paua Amulet", "type": "unique very high"},
 	"1 Praetor Crown": {"base": "Praetor Crown", "type": "unique very high"},
@@ -173,6 +172,7 @@ items = {
 	"2 Moonstone Ring": {"base": "Moonstone Ring", "type": "unique high"},
 	"2 Museum Map": {"base": "Museum Map", "type": "unique high"},
 	"2 Necromancer Circlet": {"base": "Necromancer Circlet", "type": "unique high"},
+	"2 Nubuck Boots": {"base": "Nubuck Boots", "type": "unique high"},
 	"2 Ornate Mace": {"base": "Ornate Mace", "type": "unique high"},
 	"2 Ornate Ringmail": {"base": "Ornate Ringmail", "type": "unique high"},
 	"2 Painted Buckler": {"base": "Painted Buckler", "type": "unique high"},

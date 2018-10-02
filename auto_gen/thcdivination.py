@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/02/2018(m/d/y) 00:39:02 UTC from "tmphardcore" data
+# Created: 10/02/2018(m/d/y) 01:09:03 UTC from "tmphardcore" data
 
 desc = "Divination Card"
 
@@ -105,7 +105,6 @@ items = {
 	"4 Anarchy's Price": {"base": "Anarchy's Price", "class": "Divination Card", "type": "divination low"},
 	"4 Lantador's Lost Love": {"base": "Lantador's Lost Love", "class": "Divination Card", "type": "divination low"},
 	"4 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},
-	"4 The Army of Blood": {"base": "The Army of Blood", "class": "Divination Card", "type": "divination low"},
 	"4 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
 	"4 The Hermit": {"base": "The Hermit", "class": "Divination Card", "type": "divination low"},
 	"4 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination low"},

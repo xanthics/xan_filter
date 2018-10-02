@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/02/2018(m/d/y) 00:39:00 UTC from "Standard" data
+# Created: 10/02/2018(m/d/y) 01:08:54 UTC from "Standard" data
 
 desc = "Unique"
 
@@ -101,7 +101,6 @@ items = {
 	"2 Dunes Map": {"base": "Dunes Map", "type": "unique high"},
 	"2 Ezomyte Burgonet": {"base": "Ezomyte Burgonet", "type": "unique high"},
 	"2 Full Wyrmscale": {"base": "Full Wyrmscale", "type": "unique high"},
-	"2 Gold Ring": {"base": "Gold Ring", "type": "unique high"},
 	"2 Goliath Gauntlets": {"base": "Goliath Gauntlets", "type": "unique high"},
 	"2 Hallowed Hybrid Flask": {"base": "Hallowed Hybrid Flask", "type": "unique high"},
 	"2 Hellion's Paw": {"base": "Hellion's Paw", "type": "unique high"},
@@ -167,6 +166,7 @@ items = {
 	"6 Gavel": {"base": "Gavel", "type": "unique special"},
 	"6 Goathide Boots": {"base": "Goathide Boots", "type": "unique special"},
 	"6 Gold Amulet": {"base": "Gold Amulet", "type": "unique special"},
+	"6 Gold Ring": {"base": "Gold Ring", "type": "unique special"},
 	"6 Golden Plate": {"base": "Golden Plate", "type": "unique special"},
 	"6 Goliath Greaves": {"base": "Goliath Greaves", "type": "unique special"},
 	"6 Granite Flask": {"base": "Granite Flask", "type": "unique special"},
@@ -359,7 +359,6 @@ items = {
 	"7 Sabre": {"base": "Sabre", "type": "unique low"},
 	"7 Sage's Robe": {"base": "Sage's Robe", "type": "unique low"},
 	"7 Samite Gloves": {"base": "Samite Gloves", "type": "unique low"},
-	"7 Samite Helmet": {"base": "Samite Helmet", "type": "unique low"},
 	"7 Scholar Boots": {"base": "Scholar Boots", "type": "unique low"},
 	"7 Scholar's Robe": {"base": "Scholar's Robe", "type": "unique low"},
 	"7 Secutor Helm": {"base": "Secutor Helm", "type": "unique low"},
@@ -375,7 +374,6 @@ items = {
 	"7 Simple Robe": {"base": "Simple Robe", "type": "unique low"},
 	"7 Skinning Knife": {"base": "Skinning Knife", "type": "unique low"},
 	"7 Sledgehammer": {"base": "Sledgehammer", "type": "unique low"},
-	"7 Soldier Boots": {"base": "Soldier Boots", "type": "unique low"},
 	"7 Soldier Helmet": {"base": "Soldier Helmet", "type": "unique low"},
 	"7 Spiked Club": {"base": "Spiked Club", "type": "unique low"},
 	"7 Spiraled Wand": {"base": "Spiraled Wand", "type": "unique low"},
