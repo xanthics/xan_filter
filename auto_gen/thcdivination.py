@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/01/2018(m/d/y) 15:20:49 UTC from "tmphardcore" data
+# Created: 10/02/2018(m/d/y) 00:39:02 UTC from "tmphardcore" data
 
 desc = "Divination Card"
 
@@ -49,7 +49,6 @@ items = {
 	"2 The Wolven King's Bite": {"base": "The Wolven King's Bite", "class": "Divination Card", "type": "divination very high"},
 	"2 The World Eater": {"base": "The World Eater", "class": "Divination Card", "type": "divination very high"},
 	"2 Wealth and Power": {"base": "Wealth and Power", "class": "Divination Card", "type": "divination very high"},
-	"3 Boundless Realms": {"base": "Boundless Realms", "class": "Divination Card", "type": "divination high"},
 	"3 Bowyer's Dream": {"base": "Bowyer's Dream", "class": "Divination Card", "type": "divination high"},
 	"3 Dialla's Subjugation": {"base": "Dialla's Subjugation", "class": "Divination Card", "type": "divination high"},
 	"3 Earth Drinker": {"base": "Earth Drinker", "class": "Divination Card", "type": "divination high"},
@@ -67,7 +66,6 @@ items = {
 	"3 The Aesthete": {"base": "The Aesthete", "class": "Divination Card", "type": "divination high"},
 	"3 The Arena Champion": {"base": "The Arena Champion", "class": "Divination Card", "type": "divination high"},
 	"3 The Beast": {"base": "The Beast", "class": "Divination Card", "type": "divination high"},
-	"3 The Body": {"base": "The Body", "class": "Divination Card", "type": "divination high"},
 	"3 The Breach": {"base": "The Breach", "class": "Divination Card", "type": "divination high"},
 	"3 The Brittle Emperor": {"base": "The Brittle Emperor", "class": "Divination Card", "type": "divination high"},
 	"3 The Cacophony": {"base": "The Cacophony", "class": "Divination Card", "type": "divination high"},
@@ -94,7 +92,6 @@ items = {
 	"3 The Standoff": {"base": "The Standoff", "class": "Divination Card", "type": "divination high"},
 	"3 The Surveyor": {"base": "The Surveyor", "class": "Divination Card", "type": "divination high"},
 	"3 The Sword King's Salute": {"base": "The Sword King's Salute", "class": "Divination Card", "type": "divination high"},
-	"3 The Trial": {"base": "The Trial", "class": "Divination Card", "type": "divination high"},
 	"3 The Twilight Moon": {"base": "The Twilight Moon", "class": "Divination Card", "type": "divination high"},
 	"3 The Union": {"base": "The Union", "class": "Divination Card", "type": "divination high"},
 	"3 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination high"},
@@ -116,7 +113,6 @@ items = {
 	"4 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},
 	"4 The Warden": {"base": "The Warden", "class": "Divination Card", "type": "divination low"},
 	"4 Tranquillity": {"base": "Tranquillity", "class": "Divination Card", "type": "divination low"},
-	"4 Vinia's Token": {"base": "Vinia's Token", "class": "Divination Card", "type": "divination low"},
 	"7 Blessing of God": {"base": "Blessing of God", "class": "Divination Card", "type": "hide"},
 	"7 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "hide"},
 	"7 Dying Anguish": {"base": "Dying Anguish", "class": "Divination Card", "type": "hide"},

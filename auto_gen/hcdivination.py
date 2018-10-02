@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/01/2018(m/d/y) 15:20:38 UTC from "Hardcore" data
+# Created: 10/02/2018(m/d/y) 00:39:01 UTC from "Hardcore" data
 
 desc = "Divination Card"
 
@@ -12,12 +12,15 @@ items = {
 	"1 The Hunger": {"base": "The Hunger", "class": "Divination Card", "type": "divination extremely high"},
 	"2 Audacity": {"base": "Audacity", "class": "Divination Card", "type": "divination very high"},
 	"2 Heterochromia": {"base": "Heterochromia", "class": "Divination Card", "type": "divination very high"},
+	"2 The King's Heart": {"base": "The King's Heart", "class": "Divination Card", "type": "divination very high"},
+	"2 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination very high"},
 	"2 The Offering": {"base": "The Offering", "class": "Divination Card", "type": "divination very high"},
 	"2 The Porcupine": {"base": "The Porcupine", "class": "Divination Card", "type": "divination very high"},
+	"2 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination very high"},
+	"2 The Undaunted": {"base": "The Undaunted", "class": "Divination Card", "type": "divination very high"},
 	"2 The Watcher": {"base": "The Watcher", "class": "Divination Card", "type": "divination very high"},
 	"2 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination very high"},
 	"3 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination high"},
-	"3 The Cartographer": {"base": "The Cartographer", "class": "Divination Card", "type": "divination high"},
 	"3 The Chains that Bind": {"base": "The Chains that Bind", "class": "Divination Card", "type": "divination high"},
 	"3 The Dragon": {"base": "The Dragon", "class": "Divination Card", "type": "divination high"},
 	"3 The Obscured": {"base": "The Obscured", "class": "Divination Card", "type": "divination high"},

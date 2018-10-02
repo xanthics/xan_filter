@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/01/2018(m/d/y) 15:20:33 UTC from "Standard" data
+# Created: 10/02/2018(m/d/y) 00:39:00 UTC from "Standard" data
 
 desc = "Divination Card"
 
@@ -15,6 +15,7 @@ items = {
 	"1 Hunter's Reward": {"base": "Hunter's Reward", "class": "Divination Card", "type": "divination extremely high"},
 	"1 Immortal Resolve": {"base": "Immortal Resolve", "class": "Divination Card", "type": "divination extremely high"},
 	"1 Mawr Blaidd": {"base": "Mawr Blaidd", "class": "Divination Card", "type": "divination extremely high"},
+	"1 The Celestial Stone": {"base": "The Celestial Stone", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Doctor": {"base": "The Doctor", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Fiend": {"base": "The Fiend", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Immortal": {"base": "The Immortal", "class": "Divination Card", "type": "divination extremely high"},
@@ -29,8 +30,6 @@ items = {
 	"2 Pride Before the Fall": {"base": "Pride Before the Fall", "class": "Divination Card", "type": "divination very high"},
 	"2 The Artist": {"base": "The Artist", "class": "Divination Card", "type": "divination very high"},
 	"2 The Brittle Emperor": {"base": "The Brittle Emperor", "class": "Divination Card", "type": "divination very high"},
-	"2 The Celestial Justicar": {"base": "The Celestial Justicar", "class": "Divination Card", "type": "divination very high"},
-	"2 The Celestial Stone": {"base": "The Celestial Stone", "class": "Divination Card", "type": "divination very high"},
 	"2 The Dreamer": {"base": "The Dreamer", "class": "Divination Card", "type": "divination very high"},
 	"2 The Endless Darkness": {"base": "The Endless Darkness", "class": "Divination Card", "type": "divination very high"},
 	"2 The Hale Heart": {"base": "The Hale Heart", "class": "Divination Card", "type": "divination very high"},
@@ -74,12 +73,15 @@ items = {
 	"3 The Breach": {"base": "The Breach", "class": "Divination Card", "type": "divination high"},
 	"3 The Cacophony": {"base": "The Cacophony", "class": "Divination Card", "type": "divination high"},
 	"3 The Cartographer": {"base": "The Cartographer", "class": "Divination Card", "type": "divination high"},
+	"3 The Cataclysm": {"base": "The Cataclysm", "class": "Divination Card", "type": "divination high"},
+	"3 The Celestial Justicar": {"base": "The Celestial Justicar", "class": "Divination Card", "type": "divination high"},
 	"3 The Chains that Bind": {"base": "The Chains that Bind", "class": "Divination Card", "type": "divination high"},
 	"3 The Cursed King": {"base": "The Cursed King", "class": "Divination Card", "type": "divination high"},
 	"3 The Dapper Prodigy": {"base": "The Dapper Prodigy", "class": "Divination Card", "type": "divination high"},
 	"3 The Dark Mage": {"base": "The Dark Mage", "class": "Divination Card", "type": "divination high"},
 	"3 The Darkest Dream": {"base": "The Darkest Dream", "class": "Divination Card", "type": "divination high"},
 	"3 The Dreamland": {"base": "The Dreamland", "class": "Divination Card", "type": "divination high"},
+	"3 The Encroaching Darkness": {"base": "The Encroaching Darkness", "class": "Divination Card", "type": "divination high"},
 	"3 The Enlightened": {"base": "The Enlightened", "class": "Divination Card", "type": "divination high"},
 	"3 The Ethereal": {"base": "The Ethereal", "class": "Divination Card", "type": "divination high"},
 	"3 The Fathomless Depths": {"base": "The Fathomless Depths", "class": "Divination Card", "type": "divination high"},
@@ -140,7 +142,6 @@ items = {
 	"4 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination low"},
 	"4 The Lover": {"base": "The Lover", "class": "Divination Card", "type": "divination low"},
 	"4 The Lunaris Priestess": {"base": "The Lunaris Priestess", "class": "Divination Card", "type": "divination low"},
-	"4 The Opulent": {"base": "The Opulent", "class": "Divination Card", "type": "divination low"},
 	"4 The Pack Leader": {"base": "The Pack Leader", "class": "Divination Card", "type": "divination low"},
 	"4 The Pact": {"base": "The Pact", "class": "Divination Card", "type": "divination low"},
 	"4 The Realm": {"base": "The Realm", "class": "Divination Card", "type": "divination low"},
@@ -150,7 +151,6 @@ items = {
 	"4 The Siren": {"base": "The Siren", "class": "Divination Card", "type": "divination low"},
 	"4 The Summoner": {"base": "The Summoner", "class": "Divination Card", "type": "divination low"},
 	"4 The Warden": {"base": "The Warden", "class": "Divination Card", "type": "divination low"},
-	"4 Three Voices": {"base": "Three Voices", "class": "Divination Card", "type": "divination low"},
 	"4 Turn the Other Cheek": {"base": "Turn the Other Cheek", "class": "Divination Card", "type": "divination low"},
 	"4 Volatile Power": {"base": "Volatile Power", "class": "Divination Card", "type": "divination low"},
 	"7 Blessing of God": {"base": "Blessing of God", "class": "Divination Card", "type": "hide"},

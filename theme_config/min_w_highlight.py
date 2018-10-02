@@ -340,11 +340,13 @@ settings = {
 					"SetBackgroundColor {} 220".format(color['black'])],
 	# Special class of unique that has a low average value buthas some items that are quite valuable
 	"unique special": ["Rarity Unique",
+					   "SetFontSize {}".format(size['vlarge']),
 					   'MinimapIcon 2 Yellow Star',
 					   "SetBorderColor {}".format(color['chaos']),
 	                   'CustomAlertSound "{}_unique.wav"'.format(volume['medium']),
 					   "SetBackgroundColor {} 220".format(color['black'])],
 	"unique normal": ["Rarity Unique",
+					  "SetFontSize {}".format(size['normal']),
 #					  "SetBorderColor {}".format(color['unique']),
 					  'MinimapIcon 2 Yellow Star',
 					  'CustomAlertSound "{}_unique.wav"'.format(volume['low']),
