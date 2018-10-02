@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/02/2018(m/d/y) 00:39:02 UTC from "tmphardcore" data
+# Created: 10/02/2018(m/d/y) 01:09:03 UTC from "tmphardcore" data
 
 desc = "Unique"
 
@@ -130,6 +130,7 @@ items = {
 	"2 Short Bow": {"base": "Short Bow", "type": "unique high"},
 	"2 Siege Helmet": {"base": "Siege Helmet", "type": "unique high"},
 	"2 Steel Ring": {"base": "Steel Ring", "type": "unique high"},
+	"2 Strand Map": {"base": "Strand Map", "type": "unique high"},
 	"2 Temple Map": {"base": "Temple Map", "type": "unique high"},
 	"2 Titan Greaves": {"base": "Titan Greaves", "type": "unique high"},
 	"2 Titanium Spirit Shield": {"base": "Titanium Spirit Shield", "type": "unique high"},
@@ -249,6 +250,7 @@ items = {
 	"7 Chiming Spirit Shield": {"base": "Chiming Spirit Shield", "type": "unique low"},
 	"7 Compound Spiked Shield": {"base": "Compound Spiked Shield", "type": "unique low"},
 	"7 Coral Amulet": {"base": "Coral Amulet", "type": "unique low"},
+	"7 Crystal Wand": {"base": "Crystal Wand", "type": "unique low"},
 	"7 Cutthroat's Garb": {"base": "Cutthroat's Garb", "type": "unique low"},
 	"7 Death Bow": {"base": "Death Bow", "type": "unique low"},
 	"7 Dragonscale Boots": {"base": "Dragonscale Boots", "type": "unique low"},
@@ -280,11 +282,9 @@ items = {
 	"7 Plate Vest": {"base": "Plate Vest", "type": "unique low"},
 	"7 Plated Greaves": {"base": "Plated Greaves", "type": "unique low"},
 	"7 Platinum Kris": {"base": "Platinum Kris", "type": "unique low"},
-	"7 Poleaxe": {"base": "Poleaxe", "type": "unique low"},
 	"7 Prophet Crown": {"base": "Prophet Crown", "type": "unique low"},
 	"7 Quartz Wand": {"base": "Quartz Wand", "type": "unique low"},
 	"7 Recurve Bow": {"base": "Recurve Bow", "type": "unique low"},
-	"7 Riveted Boots": {"base": "Riveted Boots", "type": "unique low"},
 	"7 Rotted Round Shield": {"base": "Rotted Round Shield", "type": "unique low"},
 	"7 Samite Gloves": {"base": "Samite Gloves", "type": "unique low"},
 	"7 Scholar Boots": {"base": "Scholar Boots", "type": "unique low"},

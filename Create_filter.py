@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # Author: Jeremy Parks
 # Note: Requires Python 3.3.x or higher
+import importlib
 from datetime import datetime
 import os
 from io import open
@@ -218,7 +219,13 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 
 if __name__ == "__main__":
 	import pricetool_ninja
-	league = ['Standard', 'Hardcore', 'tmpstandard', 'tmphardcore']
-#	league = ['tmpstandard']
+#	league = ['Standard', 'Hardcore', 'tmpstandard', 'tmphardcore']
+	league = ['tmpstandard']
 	pricetool_ninja.scrape_ninja(league)
+	# reload updated modules
+	for module in [divination, hcdivination, tdivination, thcdivination,
+				   uniques, hcuniques, tuniques, thcuniques,
+				   stcurrency, hccurrency, tcurrency, thccurrency,
+				   stessence, hcessence, tessence, thcessence]:
+		importlib.reload(module)
 	main(league)
