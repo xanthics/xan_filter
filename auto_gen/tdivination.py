@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/08/2018(m/d/y) 01:20:50 UTC from "tmpstandard" data
+# Created: 10/08/2018(m/d/y) 02:32:04 UTC from "tmpstandard" data
 
 desc = "Divination Card"
 
@@ -84,7 +84,6 @@ items = {
 	"3 The Wilted Rose": {"base": "The Wilted Rose", "class": "Divination Card", "type": "divination high"},
 	"3 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination high"},
 	"3 The World Eater": {"base": "The World Eater", "class": "Divination Card", "type": "divination high"},
-	"3 The Wrath": {"base": "The Wrath", "class": "Divination Card", "type": "divination high"},
 	"3 The Wretched": {"base": "The Wretched", "class": "Divination Card", "type": "divination high"},
 	"3 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination high"},
 	"4 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "divination low"},
@@ -106,12 +105,10 @@ items = {
 	"4 The Betrayal": {"base": "The Betrayal", "class": "Divination Card", "type": "divination low"},
 	"4 The Deceiver": {"base": "The Deceiver", "class": "Divination Card", "type": "divination low"},
 	"4 The Doppelganger": {"base": "The Doppelganger", "class": "Divination Card", "type": "divination low"},
-	"4 The Dragon": {"base": "The Dragon", "class": "Divination Card", "type": "divination low"},
 	"4 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
 	"4 The Flora's Gift": {"base": "The Flora's Gift", "class": "Divination Card", "type": "divination low"},
 	"4 The Fox": {"base": "The Fox", "class": "Divination Card", "type": "divination low"},
 	"4 The Gambler": {"base": "The Gambler", "class": "Divination Card", "type": "divination low"},
-	"4 The Gentleman": {"base": "The Gentleman", "class": "Divination Card", "type": "divination low"},
 	"4 The Hermit": {"base": "The Hermit", "class": "Divination Card", "type": "divination low"},
 	"4 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination low"},
 	"4 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination low"},

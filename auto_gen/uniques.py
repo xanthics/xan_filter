@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/08/2018(m/d/y) 01:20:45 UTC from "Standard" data
+# Created: 10/08/2018(m/d/y) 02:31:56 UTC from "Standard" data
 
 desc = "Unique"
 
@@ -24,6 +24,7 @@ items = {
 	"0 Grand Mana Flask": {"base": "Grand Mana Flask", "type": "unique extremely high"},
 	"0 Greatwolf Talisman": {"base": "Greatwolf Talisman", "type": "unique extremely high"},
 	"0 Harbinger Map": {"base": "Harbinger Map", "type": "unique extremely high"},
+	"0 Harlequin Mask": {"base": "Harlequin Mask", "type": "unique extremely high"},
 	"0 Heavy Quiver": {"base": "Heavy Quiver", "type": "unique extremely high"},
 	"0 Hydrascale Gauntlets": {"base": "Hydrascale Gauntlets", "type": "unique extremely high"},
 	"0 Jet Amulet": {"base": "Jet Amulet", "type": "unique extremely high"},
@@ -45,8 +46,8 @@ items = {
 	"1 Cloth Belt Piece": {"base": "Cloth Belt Piece", "type": "unique very high"},
 	"1 Courtyard Map": {"base": "Courtyard Map", "type": "unique very high"},
 	"1 Deicide Mask": {"base": "Deicide Mask", "type": "unique very high"},
+	"1 Ezomyte Burgonet": {"base": "Ezomyte Burgonet", "type": "unique very high"},
 	"1 Glorious Plate": {"base": "Glorious Plate", "type": "unique very high"},
-	"1 Harlequin Mask": {"base": "Harlequin Mask", "type": "unique very high"},
 	"1 Hydrascale Boots": {"base": "Hydrascale Boots", "type": "unique very high"},
 	"1 Imperial Maul": {"base": "Imperial Maul", "type": "unique very high"},
 	"1 Jewelled Foil": {"base": "Jewelled Foil", "type": "unique very high"},
@@ -100,7 +101,6 @@ items = {
 	"2 Dunes Map": {"base": "Dunes Map", "type": "unique high"},
 	"2 Eternal Sword": {"base": "Eternal Sword", "type": "unique high"},
 	"2 Eye Gouger": {"base": "Eye Gouger", "type": "unique high"},
-	"2 Ezomyte Burgonet": {"base": "Ezomyte Burgonet", "type": "unique high"},
 	"2 Full Wyrmscale": {"base": "Full Wyrmscale", "type": "unique high"},
 	"2 Gladiator Plate": {"base": "Gladiator Plate", "type": "unique high"},
 	"2 Goliath Gauntlets": {"base": "Goliath Gauntlets", "type": "unique high"},
@@ -119,7 +119,6 @@ items = {
 	"2 Savant's Robe": {"base": "Savant's Robe", "type": "unique high"},
 	"2 Serpentscale Gauntlets": {"base": "Serpentscale Gauntlets", "type": "unique high"},
 	"2 Shackled Boots": {"base": "Shackled Boots", "type": "unique high"},
-	"2 Strand Map": {"base": "Strand Map", "type": "unique high"},
 	"2 Thorium Spirit Shield": {"base": "Thorium Spirit Shield", "type": "unique high"},
 	"2 Titanium Spirit Shield": {"base": "Titanium Spirit Shield", "type": "unique high"},
 	"2 Torture Chamber Map": {"base": "Torture Chamber Map", "type": "unique high"},
@@ -351,6 +350,7 @@ items = {
 	"7 Royal Skean": {"base": "Royal Skean", "type": "unique low"},
 	"7 Royal Staff": {"base": "Royal Staff", "type": "unique low"},
 	"7 Rusted Sword": {"base": "Rusted Sword", "type": "unique low"},
+	"7 Sabre": {"base": "Sabre", "type": "unique low"},
 	"7 Sage Wand": {"base": "Sage Wand", "type": "unique low"},
 	"7 Sage's Robe": {"base": "Sage's Robe", "type": "unique low"},
 	"7 Samite Gloves": {"base": "Samite Gloves", "type": "unique low"},
