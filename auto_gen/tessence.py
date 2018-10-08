@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/08/2018(m/d/y) 01:20:50 UTC from "tmpstandard" data
+# Created: 10/08/2018(m/d/y) 02:32:04 UTC from "tmpstandard" data
 
 desc = "Essence Autogen"
 
@@ -104,7 +104,7 @@ items = {
 	"0 Weeping Essence of Rage": {"base": "Weeping Essence of Rage", "class": "Currency", "type": "currency low"},
 	"0 Weeping Essence of Sorrow": {"base": "Weeping Essence of Sorrow", "class": "Currency", "type": "currency low"},
 	"0 Weeping Essence of Suffering": {"base": "Weeping Essence of Suffering", "class": "Currency", "type": "currency low"},
-	"0 Weeping Essence of Torment": {"base": "Weeping Essence of Torment", "class": "Currency", "type": "currency low"},
+	"0 Weeping Essence of Torment": {"base": "Weeping Essence of Torment", "class": "Currency", "type": "currency normal"},
 	"0 Weeping Essence of Woe": {"base": "Weeping Essence of Woe", "class": "Currency", "type": "currency low"},
 	"0 Weeping Essence of Wrath": {"base": "Weeping Essence of Wrath", "class": "Currency", "type": "currency low"},
 	"0 Whispering Essence of Contempt": {"base": "Whispering Essence of Contempt", "class": "Currency", "type": "currency low"},

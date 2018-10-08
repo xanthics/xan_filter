@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/08/2018(m/d/y) 01:20:56 UTC from "tmphardcore" data
+# Created: 10/08/2018(m/d/y) 02:32:09 UTC from "tmphardcore" data
 
 desc = "Divination Card"
 
@@ -16,7 +16,6 @@ items = {
 	"1 Mawr Blaidd": {"base": "Mawr Blaidd", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Doctor": {"base": "The Doctor", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Fiend": {"base": "The Fiend", "class": "Divination Card", "type": "divination extremely high"},
-	"1 The Samurai's Eye": {"base": "The Samurai's Eye", "class": "Divination Card", "type": "divination extremely high"},
 	"2 Abandoned Wealth": {"base": "Abandoned Wealth", "class": "Divination Card", "type": "divination very high"},
 	"2 Boon of the First Ones": {"base": "Boon of the First Ones", "class": "Divination Card", "type": "divination very high"},
 	"2 Hunter's Reward": {"base": "Hunter's Reward", "class": "Divination Card", "type": "divination very high"},
@@ -37,6 +36,7 @@ items = {
 	"2 The Professor": {"base": "The Professor", "class": "Divination Card", "type": "divination very high"},
 	"2 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
 	"2 The Saint's Treasure": {"base": "The Saint's Treasure", "class": "Divination Card", "type": "divination very high"},
+	"2 The Samurai's Eye": {"base": "The Samurai's Eye", "class": "Divination Card", "type": "divination very high"},
 	"2 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination very high"},
 	"2 The Spark and the Flame": {"base": "The Spark and the Flame", "class": "Divination Card", "type": "divination very high"},
 	"2 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination very high"},
@@ -57,7 +57,6 @@ items = {
 	"3 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination high"},
 	"3 Perfection": {"base": "Perfection", "class": "Divination Card", "type": "divination high"},
 	"3 Rebirth": {"base": "Rebirth", "class": "Divination Card", "type": "divination high"},
-	"3 Scholar of the Seas": {"base": "Scholar of the Seas", "class": "Divination Card", "type": "divination high"},
 	"3 The Aesthete": {"base": "The Aesthete", "class": "Divination Card", "type": "divination high"},
 	"3 The Avenger": {"base": "The Avenger", "class": "Divination Card", "type": "divination high"},
 	"3 The Beast": {"base": "The Beast", "class": "Divination Card", "type": "divination high"},
@@ -95,6 +94,7 @@ items = {
 	"3 The Throne": {"base": "The Throne", "class": "Divination Card", "type": "divination high"},
 	"3 The Twilight Moon": {"base": "The Twilight Moon", "class": "Divination Card", "type": "divination high"},
 	"3 The Undaunted": {"base": "The Undaunted", "class": "Divination Card", "type": "divination high"},
+	"3 The Union": {"base": "The Union", "class": "Divination Card", "type": "divination high"},
 	"3 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination high"},
 	"3 The Valley of Steel Boxes": {"base": "The Valley of Steel Boxes", "class": "Divination Card", "type": "divination high"},
 	"3 The Vast": {"base": "The Vast", "class": "Divination Card", "type": "divination high"},

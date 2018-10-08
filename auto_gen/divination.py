@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/08/2018(m/d/y) 01:20:45 UTC from "Standard" data
+# Created: 10/08/2018(m/d/y) 02:31:56 UTC from "Standard" data
 
 desc = "Divination Card"
 
@@ -102,6 +102,7 @@ items = {
 	"3 The Porcupine": {"base": "The Porcupine", "class": "Divination Card", "type": "divination high"},
 	"3 The Price of Protection": {"base": "The Price of Protection", "class": "Divination Card", "type": "divination high"},
 	"3 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
+	"3 The Rite of Elements": {"base": "The Rite of Elements", "class": "Divination Card", "type": "divination high"},
 	"3 The Standoff": {"base": "The Standoff", "class": "Divination Card", "type": "divination high"},
 	"3 The Stormcaller": {"base": "The Stormcaller", "class": "Divination Card", "type": "divination high"},
 	"3 The Sun": {"base": "The Sun", "class": "Divination Card", "type": "divination high"},

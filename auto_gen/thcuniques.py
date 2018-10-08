@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/08/2018(m/d/y) 01:20:56 UTC from "tmphardcore" data
+# Created: 10/08/2018(m/d/y) 02:32:09 UTC from "tmphardcore" data
 
 desc = "Unique"
 
@@ -16,7 +16,6 @@ items = {
 	"0 Grand Mana Flask": {"base": "Grand Mana Flask", "type": "unique extremely high"},
 	"0 Hydrascale Gauntlets": {"base": "Hydrascale Gauntlets", "type": "unique extremely high"},
 	"0 Occultist's Vestment": {"base": "Occultist's Vestment", "type": "unique extremely high"},
-	"0 Prismatic Jewel": {"base": "Prismatic Jewel", "type": "unique extremely high"},
 	"0 Prophecy Wand": {"base": "Prophecy Wand", "type": "unique extremely high"},
 	"0 Rawhide Boots": {"base": "Rawhide Boots", "type": "unique extremely high"},
 	"0 Ritual Sceptre": {"base": "Ritual Sceptre", "type": "unique extremely high"},
@@ -53,6 +52,7 @@ items = {
 	"1 Museum Map": {"base": "Museum Map", "type": "unique very high"},
 	"1 Nightmare Mace": {"base": "Nightmare Mace", "type": "unique very high"},
 	"1 Penetrating Arrow Quiver": {"base": "Penetrating Arrow Quiver", "type": "unique very high"},
+	"1 Prismatic Jewel": {"base": "Prismatic Jewel", "type": "unique very high"},
 	"1 Raven Mask": {"base": "Raven Mask", "type": "unique very high"},
 	"1 Rawhide Tower Shield": {"base": "Rawhide Tower Shield", "type": "unique very high"},
 	"1 Ruby Amulet": {"base": "Ruby Amulet", "type": "unique very high"},
@@ -129,7 +129,6 @@ items = {
 	"2 Necropolis Map": {"base": "Necropolis Map", "type": "unique high"},
 	"2 Nubuck Boots": {"base": "Nubuck Boots", "type": "unique high"},
 	"2 Nubuck Gloves": {"base": "Nubuck Gloves", "type": "unique high"},
-	"2 Opal Sceptre": {"base": "Opal Sceptre", "type": "unique high"},
 	"2 Overgrown Shrine Map": {"base": "Overgrown Shrine Map", "type": "unique high"},
 	"2 Promenade Map": {"base": "Promenade Map", "type": "unique high"},
 	"2 Reinforced Greaves": {"base": "Reinforced Greaves", "type": "unique high"},
@@ -147,7 +146,6 @@ items = {
 	"2 Temple Map": {"base": "Temple Map", "type": "unique high"},
 	"2 Thorium Spirit Shield": {"base": "Thorium Spirit Shield", "type": "unique high"},
 	"2 Titanium Spirit Shield": {"base": "Titanium Spirit Shield", "type": "unique high"},
-	"2 Tornado Wand": {"base": "Tornado Wand", "type": "unique high"},
 	"2 Torture Chamber Map": {"base": "Torture Chamber Map", "type": "unique high"},
 	"2 Underground River Map": {"base": "Underground River Map", "type": "unique high"},
 	"2 Vaal Pyramid Map": {"base": "Vaal Pyramid Map", "type": "unique high"},
@@ -268,7 +266,6 @@ items = {
 	"7 Goat's Horn": {"base": "Goat's Horn", "type": "unique low"},
 	"7 Great Helmet": {"base": "Great Helmet", "type": "unique low"},
 	"7 Greater Mana Flask": {"base": "Greater Mana Flask", "type": "unique low"},
-	"7 Gut Ripper": {"base": "Gut Ripper", "type": "unique low"},
 	"7 Harbinger Bow": {"base": "Harbinger Bow", "type": "unique low"},
 	"7 Headsman Axe": {"base": "Headsman Axe", "type": "unique low"},
 	"7 Holy Chainmail": {"base": "Holy Chainmail", "type": "unique low"},
