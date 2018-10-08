@@ -44,6 +44,8 @@ def currencyclassify(cur, val, curvals, stacks=1):
 		  "Chromatic Orb", "Perandus Coin", "Orb of Chance", "Silver Coin", "Cartographer's Chisel", "Jeweller's Orb", "Orb of Alteration"]
 	if ((cur in ah) or 'Fossil' in cur) and val < curvals['normal']:
 		tier = 'currency show'
+	elif 'Alchemical Resonator' in cur and 'Prime' not in cur:
+		tier= 'currency very low'
 	elif val >= curvals['extremely']:
 		tier = 'currency extremely high'
 	elif val >= curvals['very']:
