@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/06/2018(m/d/y) 21:17:02 UTC from "Hardcore" data
+# Created: 10/08/2018(m/d/y) 01:20:50 UTC from "Hardcore" data
 
 desc = "Divination Card"
 
@@ -9,14 +9,17 @@ items = {
 	"1 Bowyer's Dream": {"base": "Bowyer's Dream", "class": "Divination Card", "type": "divination extremely high"},
 	"1 House of Mirrors": {"base": "House of Mirrors", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Doctor": {"base": "The Doctor", "class": "Divination Card", "type": "divination extremely high"},
-	"1 The Hunger": {"base": "The Hunger", "class": "Divination Card", "type": "divination extremely high"},
+	"2 Abandoned Wealth": {"base": "Abandoned Wealth", "class": "Divination Card", "type": "divination very high"},
 	"2 Audacity": {"base": "Audacity", "class": "Divination Card", "type": "divination very high"},
+	"2 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination very high"},
+	"2 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination very high"},
 	"2 The King's Heart": {"base": "The King's Heart", "class": "Divination Card", "type": "divination very high"},
 	"2 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination very high"},
 	"2 The Porcupine": {"base": "The Porcupine", "class": "Divination Card", "type": "divination very high"},
 	"2 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination very high"},
 	"2 The Undaunted": {"base": "The Undaunted", "class": "Divination Card", "type": "divination very high"},
 	"3 Doedre's Madness": {"base": "Doedre's Madness", "class": "Divination Card", "type": "divination high"},
+	"3 The Chains that Bind": {"base": "The Chains that Bind", "class": "Divination Card", "type": "divination high"},
 	"3 The Warden": {"base": "The Warden", "class": "Divination Card", "type": "divination high"},
 	"3 The Watcher": {"base": "The Watcher", "class": "Divination Card", "type": "divination high"},
 	"3 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination high"},
