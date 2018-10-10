@@ -59,8 +59,8 @@ def currencyclassify(cur, val, curvals, stacks=1):
 	elif val >= curvals['min']:
 		tier = 'currency very low'
 	else:
-		tier = 'currency very low'
-		#tier = 'hide'
+		#tier = 'currency very low'
+		tier = 'hide'
 	if stacks > 1:
 		return "$ {0}\": {{\"base\": \"{0}\", 'other': ['StackSize >= {2}'], \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier, stacks)
 	return "1 {0}\": {{\"base\": \"{0}\", \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier)
@@ -268,7 +268,8 @@ def gen_div(div_list, league, curvals):
 	            'The Endurance',
 				'The Lover',
 				'Anarchy\'s Price',
-				'Lantador\'s Lost Love']
+				'Lantador\'s Lost Love',
+				'The Opulent']
 
 	predefinedcards = badcards + lowcards + substringcards + verygoodcards
 

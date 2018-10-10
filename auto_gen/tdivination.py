@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/08/2018(m/d/y) 02:32:04 UTC from "tmpstandard" data
+# Created: 10/08/2018(m/d/y) 06:33:30 UTC from "tmpstandard" data
 
 desc = "Divination Card"
 
@@ -16,6 +16,7 @@ items = {
 	"1 The Fiend": {"base": "The Fiend", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Immortal": {"base": "The Immortal", "class": "Divination Card", "type": "divination extremely high"},
 	"2 Abandoned Wealth": {"base": "Abandoned Wealth", "class": "Divination Card", "type": "divination very high"},
+	"2 Boon of the First Ones": {"base": "Boon of the First Ones", "class": "Divination Card", "type": "divination very high"},
 	"2 Hunter's Reward": {"base": "Hunter's Reward", "class": "Divination Card", "type": "divination very high"},
 	"2 Immortal Resolve": {"base": "Immortal Resolve", "class": "Divination Card", "type": "divination very high"},
 	"2 Mawr Blaidd": {"base": "Mawr Blaidd", "class": "Divination Card", "type": "divination very high"},
@@ -34,10 +35,10 @@ items = {
 	"2 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination very high"},
 	"2 The Spark and the Flame": {"base": "The Spark and the Flame", "class": "Divination Card", "type": "divination very high"},
 	"2 The Undaunted": {"base": "The Undaunted", "class": "Divination Card", "type": "divination very high"},
+	"2 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination very high"},
 	"2 The Wolf": {"base": "The Wolf", "class": "Divination Card", "type": "divination very high"},
 	"2 The Wolven King's Bite": {"base": "The Wolven King's Bite", "class": "Divination Card", "type": "divination very high"},
 	"2 Wealth and Power": {"base": "Wealth and Power", "class": "Divination Card", "type": "divination very high"},
-	"3 Boon of the First Ones": {"base": "Boon of the First Ones", "class": "Divination Card", "type": "divination high"},
 	"3 Bowyer's Dream": {"base": "Bowyer's Dream", "class": "Divination Card", "type": "divination high"},
 	"3 Chaotic Disposition": {"base": "Chaotic Disposition", "class": "Divination Card", "type": "divination high"},
 	"3 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination high"},
@@ -76,7 +77,6 @@ items = {
 	"3 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination high"},
 	"3 The Throne": {"base": "The Throne", "class": "Divination Card", "type": "divination high"},
 	"3 The Twilight Moon": {"base": "The Twilight Moon", "class": "Divination Card", "type": "divination high"},
-	"3 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination high"},
 	"3 The Valley of Steel Boxes": {"base": "The Valley of Steel Boxes", "class": "Divination Card", "type": "divination high"},
 	"3 The Vast": {"base": "The Vast", "class": "Divination Card", "type": "divination high"},
 	"3 The Void": {"base": "The Void", "class": "Divination Card", "type": "divination high"},
@@ -84,6 +84,7 @@ items = {
 	"3 The Wilted Rose": {"base": "The Wilted Rose", "class": "Divination Card", "type": "divination high"},
 	"3 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination high"},
 	"3 The World Eater": {"base": "The World Eater", "class": "Divination Card", "type": "divination high"},
+	"3 The Wrath": {"base": "The Wrath", "class": "Divination Card", "type": "divination high"},
 	"3 The Wretched": {"base": "The Wretched", "class": "Divination Card", "type": "divination high"},
 	"3 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination high"},
 	"4 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "divination low"},
@@ -96,8 +97,10 @@ items = {
 	"4 Doedre's Madness": {"base": "Doedre's Madness", "class": "Divination Card", "type": "divination low"},
 	"4 Her Mask": {"base": "Her Mask", "class": "Divination Card", "type": "divination low"},
 	"4 Lantador's Lost Love": {"base": "Lantador's Lost Love", "class": "Divination Card", "type": "divination low"},
+	"4 Loyalty": {"base": "Loyalty", "class": "Divination Card", "type": "divination low"},
 	"4 Might is Right": {"base": "Might is Right", "class": "Divination Card", "type": "divination low"},
 	"4 Mitts": {"base": "Mitts", "class": "Divination Card", "type": "divination low"},
+	"4 Rain of Chaos": {"base": "Rain of Chaos", "class": "Divination Card", "type": "divination low"},
 	"4 Rats": {"base": "Rats", "class": "Divination Card", "type": "divination low"},
 	"4 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},
 	"4 The Army of Blood": {"base": "The Army of Blood", "class": "Divination Card", "type": "divination low"},
@@ -108,12 +111,13 @@ items = {
 	"4 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
 	"4 The Flora's Gift": {"base": "The Flora's Gift", "class": "Divination Card", "type": "divination low"},
 	"4 The Fox": {"base": "The Fox", "class": "Divination Card", "type": "divination low"},
-	"4 The Gambler": {"base": "The Gambler", "class": "Divination Card", "type": "divination low"},
+	"4 The Gentleman": {"base": "The Gentleman", "class": "Divination Card", "type": "divination low"},
 	"4 The Hermit": {"base": "The Hermit", "class": "Divination Card", "type": "divination low"},
 	"4 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination low"},
 	"4 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination low"},
 	"4 The Lover": {"base": "The Lover", "class": "Divination Card", "type": "divination low"},
 	"4 The Lunaris Priestess": {"base": "The Lunaris Priestess", "class": "Divination Card", "type": "divination low"},
+	"4 The Opulent": {"base": "The Opulent", "class": "Divination Card", "type": "divination low"},
 	"4 The Ruthless Ceinture": {"base": "The Ruthless Ceinture", "class": "Divination Card", "type": "divination low"},
 	"4 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},
 	"4 The Summoner": {"base": "The Summoner", "class": "Divination Card", "type": "divination low"},
