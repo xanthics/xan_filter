@@ -16,7 +16,8 @@ def convert_wav(factor, inpath):
 				'currency': 'gold.wav',
 				'show': 'convert.wav',
 				'valuable': 'portalcast.wav',
-				'gem': 'gem.wav'}
+				'gem': 'gem.wav',
+				'base': 'largemetalweapon.wav'}
 
 	pathout = "{}_{}.wav".format(int(factor), inpath)
 	factor = factor / 100

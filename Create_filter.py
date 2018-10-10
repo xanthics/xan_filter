@@ -30,11 +30,10 @@ from auto_gen import tbases
 from auto_gen import thcbases
 
 
-from item_config import animate_weapon
+from item_config import animate_weapon, show_catchall
 from item_config import challenges
 from item_config import chance
 from item_config import chroma
-from item_config import crafting_bases
 from item_config import currency
 from item_config import essences
 from item_config import flask
@@ -43,10 +42,8 @@ from item_config import general_levelling
 from item_config import hide
 from item_config import labyrinth
 from item_config import maps
-from item_config import rares
 from item_config import recipe_item
 from item_config import show
-from item_config import t1_rares
 from item_config.gen_item_lists import genrareshighlight, genraresleveling, gennonrareleveling
 from item_config.itemmod import itemmods
 
@@ -153,7 +150,6 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 		buffer += gen_list(labyrinth.items, labyrinth.desc, soundlist)
 		buffer += gen_list(lookup_leagues[i][4].items, lookup_leagues[i][4].desc, soundlist)  # Autogen currency values
 		buffer += gen_list(lookup_leagues[i][5].items, lookup_leagues[i][5].desc, soundlist)  # Autogen Essences
-		buffer += gen_list(lookup_leagues[i][6].items, lookup_leagues[i][6].desc, soundlist)  # Autogen Bases
 		buffer += gen_list(currency.items, currency.desc, soundlist)  # Currency
 		buffer += gen_list(gems.items, gems.desc, soundlist)  # Gems
 		buffer += gen_list(lookup_leagues[i][2].items, lookup_leagues[i][2].desc, soundlist)  # uniques
@@ -161,20 +157,18 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 		buffer += gen_list(maps.items, maps.desc, soundlist)  # maps
 		buffer += gen_list(lookup_leagues[i][3].items, lookup_leagues[i][3].desc, soundlist)  # divination cards
 		buffer += gen_list(flask.items, flask.desc, soundlist)  # Flasks
-		#buffer += gen_list(t1_rares.items, t1_rares.desc, soundlist)
+		buffer += gen_list(lookup_leagues[i][6].items, lookup_leagues[i][6].desc, soundlist)  # Autogen Bases
+
 		if leveling:
 			desc = "Rare item for leveling"
 			flags = 'All'  # see item_config/rare_gen - genraresleveling for valid values
 			buffer += gen_list(genraresleveling(flags, overlevel=3, maxlevel=67), desc, soundlist)
 
-		#buffer += gen_list(rare_highlight.items, rare_highlight.desc, soundlist)  # rares highlighting + jewelry
 		buffer += gen_list(genrareshighlight(), 'Rare item highlighting for endgame', soundlist)
-		buffer += gen_list(rares.items, rares.desc, soundlist)  # rares catchall
 		# buffer += gen_list(chroma.items, chroma.desc, soundlist)  # chrome vendor items
 		if leveling:
 			buffer += gen_list(general_levelling.items, general_levelling.desc, soundlist)
 		buffer += gen_list(chance.items, chance.desc, soundlist)  # Chance bases
-		# buffer += gen_list(crafting_bases.items, crafting_bases.desc, soundlist)  # Crafting bases
 		# buffer += gen_list(animate_weapon.items, animate_weapon.desc, soundlist)  # Animate Weapon bases
 
 		if leveling:
@@ -183,6 +177,7 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 			buffer += gen_list(gennonrareleveling(flags, overlevel=2, maxlevel=25), desc, soundlist)
 
 		buffer += gen_list(itemmods(), "Magic Items", soundlist)  # magic base type highlighting
+		buffer += gen_list(show_catchall.items, show_catchall.desc, soundlist)  # Always show these items
 
 		print("Writing files to {}".format(os.path.expanduser("~\\my game\\Path of Exile\\")))
 

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/10/2018(m/d/y) 10:53:03 UTC from "tmphardcore" data
+# Created: 10/10/2018(m/d/y) 19:41:20 UTC from "tmphardcore" data
 
 desc = "Divination Card"
 
@@ -51,7 +51,6 @@ items = {
 	"3 Harmony of Souls": {"base": "Harmony of Souls", "class": "Divination Card", "type": "divination high"},
 	"3 Heterochromia": {"base": "Heterochromia", "class": "Divination Card", "type": "divination high"},
 	"3 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
-	"3 Jack in the Box": {"base": "Jack in the Box", "class": "Divination Card", "type": "divination high"},
 	"3 Left to Fate": {"base": "Left to Fate", "class": "Divination Card", "type": "divination high"},
 	"3 Lingering Remnants": {"base": "Lingering Remnants", "class": "Divination Card", "type": "divination high"},
 	"3 Lucky Connections": {"base": "Lucky Connections", "class": "Divination Card", "type": "divination high"},
@@ -81,7 +80,6 @@ items = {
 	"3 The Innocent": {"base": "The Innocent", "class": "Divination Card", "type": "divination high"},
 	"3 The Insatiable": {"base": "The Insatiable", "class": "Divination Card", "type": "divination high"},
 	"3 The Jeweller's Boon": {"base": "The Jeweller's Boon", "class": "Divination Card", "type": "divination high"},
-	"3 The Mercenary": {"base": "The Mercenary", "class": "Divination Card", "type": "divination high"},
 	"3 The Obscured": {"base": "The Obscured", "class": "Divination Card", "type": "divination high"},
 	"3 The Pact": {"base": "The Pact", "class": "Divination Card", "type": "divination high"},
 	"3 The Porcupine": {"base": "The Porcupine", "class": "Divination Card", "type": "divination high"},
@@ -108,18 +106,18 @@ items = {
 	"4 Anarchy's Price": {"base": "Anarchy's Price", "class": "Divination Card", "type": "divination low"},
 	"4 Lantador's Lost Love": {"base": "Lantador's Lost Love", "class": "Divination Card", "type": "divination low"},
 	"4 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},
+	"4 The Betrayal": {"base": "The Betrayal", "class": "Divination Card", "type": "divination low"},
 	"4 The Conduit": {"base": "The Conduit", "class": "Divination Card", "type": "divination low"},
 	"4 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
 	"4 The Eye of the Dragon": {"base": "The Eye of the Dragon", "class": "Divination Card", "type": "divination low"},
 	"4 The Flora's Gift": {"base": "The Flora's Gift", "class": "Divination Card", "type": "divination low"},
-	"4 The Gemcutter": {"base": "The Gemcutter", "class": "Divination Card", "type": "divination low"},
 	"4 The Hermit": {"base": "The Hermit", "class": "Divination Card", "type": "divination low"},
 	"4 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination low"},
+	"4 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination low"},
 	"4 The Lover": {"base": "The Lover", "class": "Divination Card", "type": "divination low"},
 	"4 The Lunaris Priestess": {"base": "The Lunaris Priestess", "class": "Divination Card", "type": "divination low"},
 	"4 The Opulent": {"base": "The Opulent", "class": "Divination Card", "type": "divination low"},
 	"4 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},
-	"4 The Tower": {"base": "The Tower", "class": "Divination Card", "type": "divination low"},
 	"7 Blessing of God": {"base": "Blessing of God", "class": "Divination Card", "type": "hide"},
 	"7 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "hide"},
 	"7 Dying Anguish": {"base": "Dying Anguish", "class": "Divination Card", "type": "hide"},

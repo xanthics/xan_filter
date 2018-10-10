@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/10/2018(m/d/y) 10:53:00 UTC from "Hardcore" data
+# Created: 10/10/2018(m/d/y) 19:41:18 UTC from "Hardcore" data
 
 desc = "Divination Card"
 
@@ -12,6 +12,7 @@ items = {
 	"2 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination very high"},
 	"2 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination very high"},
 	"3 The Chains that Bind": {"base": "The Chains that Bind", "class": "Divination Card", "type": "divination high"},
+	"3 The Inventor": {"base": "The Inventor", "class": "Divination Card", "type": "divination high"},
 	"4 Anarchy's Price": {"base": "Anarchy's Price", "class": "Divination Card", "type": "divination low"},
 	"4 Lantador's Lost Love": {"base": "Lantador's Lost Love", "class": "Divination Card", "type": "divination low"},
 	"4 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},

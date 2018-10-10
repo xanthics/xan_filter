@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/10/2018(m/d/y) 10:52:59 UTC from "Standard" data
+# Created: 10/10/2018(m/d/y) 19:41:18 UTC from "Standard" data
 
 desc = "Divination Card"
 
@@ -28,7 +28,6 @@ items = {
 	"2 Perfection": {"base": "Perfection", "class": "Divination Card", "type": "divination very high"},
 	"2 Pride Before the Fall": {"base": "Pride Before the Fall", "class": "Divination Card", "type": "divination very high"},
 	"2 The Artist": {"base": "The Artist", "class": "Divination Card", "type": "divination very high"},
-	"2 The Brittle Emperor": {"base": "The Brittle Emperor", "class": "Divination Card", "type": "divination very high"},
 	"2 The Cartographer": {"base": "The Cartographer", "class": "Divination Card", "type": "divination very high"},
 	"2 The Celestial Stone": {"base": "The Celestial Stone", "class": "Divination Card", "type": "divination very high"},
 	"2 The Dreamer": {"base": "The Dreamer", "class": "Divination Card", "type": "divination very high"},
@@ -41,7 +40,6 @@ items = {
 	"2 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
 	"2 The Saint's Treasure": {"base": "The Saint's Treasure", "class": "Divination Card", "type": "divination very high"},
 	"2 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination very high"},
-	"2 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination very high"},
 	"2 The Undaunted": {"base": "The Undaunted", "class": "Divination Card", "type": "divination very high"},
 	"2 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination very high"},
 	"2 The Vast": {"base": "The Vast", "class": "Divination Card", "type": "divination very high"},
@@ -54,6 +52,7 @@ items = {
 	"3 Birth of the Three": {"base": "Birth of the Three", "class": "Divination Card", "type": "divination high"},
 	"3 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination high"},
 	"3 Harmony of Souls": {"base": "Harmony of Souls", "class": "Divination Card", "type": "divination high"},
+	"3 Hope": {"base": "Hope", "class": "Divination Card", "type": "divination high"},
 	"3 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
 	"3 Jack in the Box": {"base": "Jack in the Box", "class": "Divination Card", "type": "divination high"},
 	"3 Left to Fate": {"base": "Left to Fate", "class": "Divination Card", "type": "divination high"},
@@ -70,8 +69,8 @@ items = {
 	"3 The Beast": {"base": "The Beast", "class": "Divination Card", "type": "divination high"},
 	"3 The Body": {"base": "The Body", "class": "Divination Card", "type": "divination high"},
 	"3 The Breach": {"base": "The Breach", "class": "Divination Card", "type": "divination high"},
+	"3 The Brittle Emperor": {"base": "The Brittle Emperor", "class": "Divination Card", "type": "divination high"},
 	"3 The Cacophony": {"base": "The Cacophony", "class": "Divination Card", "type": "divination high"},
-	"3 The Cataclysm": {"base": "The Cataclysm", "class": "Divination Card", "type": "divination high"},
 	"3 The Celestial Justicar": {"base": "The Celestial Justicar", "class": "Divination Card", "type": "divination high"},
 	"3 The Chains that Bind": {"base": "The Chains that Bind", "class": "Divination Card", "type": "divination high"},
 	"3 The Conduit": {"base": "The Conduit", "class": "Divination Card", "type": "divination high"},
@@ -106,6 +105,7 @@ items = {
 	"3 The Stormcaller": {"base": "The Stormcaller", "class": "Divination Card", "type": "divination high"},
 	"3 The Sun": {"base": "The Sun", "class": "Divination Card", "type": "divination high"},
 	"3 The Sword King's Salute": {"base": "The Sword King's Salute", "class": "Divination Card", "type": "divination high"},
+	"3 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination high"},
 	"3 The Throne": {"base": "The Throne", "class": "Divination Card", "type": "divination high"},
 	"3 The Trial": {"base": "The Trial", "class": "Divination Card", "type": "divination high"},
 	"3 The Twilight Moon": {"base": "The Twilight Moon", "class": "Divination Card", "type": "divination high"},

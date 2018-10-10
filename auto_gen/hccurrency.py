@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/10/2018(m/d/y) 10:53:00 UTC from "Hardcore" data
+# Created: 10/10/2018(m/d/y) 19:41:18 UTC from "Hardcore" data
 
 desc = "Currency Autogen"
 
@@ -123,7 +123,7 @@ items = {
 	"08 Orb of Chance": {"base": "Orb of Chance", 'other': ['StackSize >= 5'], "class": "Currency", "type": "currency high"},
 	"1 Orb of Fusing": {"base": "Orb of Fusing", "class": "Currency", "type": "currency normal"},
 	"09 Orb of Fusing": {"base": "Orb of Fusing", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency high"},
-	"08 Orb of Fusing": {"base": "Orb of Fusing", 'other': ['StackSize >= 14'], "class": "Currency", "type": "currency very high"},
+	"08 Orb of Fusing": {"base": "Orb of Fusing", 'other': ['StackSize >= 18'], "class": "Currency", "type": "currency very high"},
 	"1 Orb of Horizons": {"base": "Orb of Horizons", "class": "Currency", "type": "currency very high"},
 	"09 Orb of Horizons": {"base": "Orb of Horizons", 'other': ['StackSize >= 10'], "class": "Currency", "type": "currency extremely high"},
 	"1 Orb of Regret": {"base": "Orb of Regret", "class": "Currency", "type": "currency normal"},
