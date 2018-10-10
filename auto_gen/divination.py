@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/10/2018(m/d/y) 19:41:18 UTC from "Standard" data
+# Created: 10/10/2018(m/d/y) 22:09:22 UTC from "Standard" data
 
 desc = "Divination Card"
 
@@ -121,7 +121,6 @@ items = {
 	"4 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "divination low"},
 	"4 Anarchy's Price": {"base": "Anarchy's Price", "class": "Divination Card", "type": "divination low"},
 	"4 Assassin's Favour": {"base": "Assassin's Favour", "class": "Divination Card", "type": "divination low"},
-	"4 Call to the First Ones": {"base": "Call to the First Ones", "class": "Divination Card", "type": "divination low"},
 	"4 Death": {"base": "Death", "class": "Divination Card", "type": "divination low"},
 	"4 Her Mask": {"base": "Her Mask", "class": "Divination Card", "type": "divination low"},
 	"4 Lantador's Lost Love": {"base": "Lantador's Lost Love", "class": "Divination Card", "type": "divination low"},

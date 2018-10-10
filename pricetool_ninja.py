@@ -467,9 +467,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 			else:
 				for i in data:
 					for ii in data[i]:
-						if 'links' in ii and ii['links']:
-							continue
-						if ii['name'] in fated:
+						if 'links' in ii and ii['links'] or ii['name'] in fated or 'relic' in ii['icon']:
 							continue
 						uniques[ii['baseType']].append(ii['chaosValue'])
 
