@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/10/2018(m/d/y) 19:41:18 UTC from "Hardcore" data
+# Created: 10/10/2018(m/d/y) 22:09:22 UTC from "Hardcore" data
 
 desc = "Unique"
 
@@ -16,6 +16,7 @@ items = {
 	"0 Destiny Leather": {"base": "Destiny Leather", "type": "unique extremely high"},
 	"0 Elegant Ringmail": {"base": "Elegant Ringmail", "type": "unique extremely high"},
 	"0 Ezomyte Tower Shield": {"base": "Ezomyte Tower Shield", "type": "unique extremely high"},
+	"0 Gladiator Plate": {"base": "Gladiator Plate", "type": "unique extremely high"},
 	"0 Glorious Plate": {"base": "Glorious Plate", "type": "unique extremely high"},
 	"0 Goathide Boots": {"base": "Goathide Boots", "type": "unique extremely high"},
 	"0 Grand Mana Flask": {"base": "Grand Mana Flask", "type": "unique extremely high"},
@@ -114,6 +115,7 @@ items = {
 	"1 Vaal Regalia": {"base": "Vaal Regalia", "type": "unique very high"},
 	"1 Void Sceptre": {"base": "Void Sceptre", "type": "unique very high"},
 	"1 War Sword": {"base": "War Sword", "type": "unique very high"},
+	"1 Wool Shoes": {"base": "Wool Shoes", "type": "unique very high"},
 	"1 Wyrmscale Gauntlets": {"base": "Wyrmscale Gauntlets", "type": "unique very high"},
 	"2 Ambusher": {"base": "Ambusher", "type": "unique high"},
 	"2 Antique Rapier": {"base": "Antique Rapier", "type": "unique high"},
@@ -171,7 +173,6 @@ items = {
 	"2 Murder Mitts": {"base": "Murder Mitts", "type": "unique high"},
 	"2 Ornate Mace": {"base": "Ornate Mace", "type": "unique high"},
 	"2 Overgrown Shrine Map": {"base": "Overgrown Shrine Map", "type": "unique high"},
-	"2 Painted Buckler": {"base": "Painted Buckler", "type": "unique high"},
 	"2 Paua Ring": {"base": "Paua Ring", "type": "unique high"},
 	"2 Pine Buckler": {"base": "Pine Buckler", "type": "unique high"},
 	"2 Plague Mask": {"base": "Plague Mask", "type": "unique high"},
@@ -192,8 +193,8 @@ items = {
 	"2 Sage's Robe": {"base": "Sage's Robe", "type": "unique high"},
 	"2 Samite Gloves": {"base": "Samite Gloves", "type": "unique high"},
 	"2 Samite Helmet": {"base": "Samite Helmet", "type": "unique high"},
+	"2 Sapphire Ring": {"base": "Sapphire Ring", "type": "unique high"},
 	"2 Scholar Boots": {"base": "Scholar Boots", "type": "unique high"},
-	"2 Scholar's Robe": {"base": "Scholar's Robe", "type": "unique high"},
 	"2 Secutor Helm": {"base": "Secutor Helm", "type": "unique high"},
 	"2 Sentinel Jacket": {"base": "Sentinel Jacket", "type": "unique high"},
 	"2 Shadow Axe": {"base": "Shadow Axe", "type": "unique high"},
@@ -237,7 +238,6 @@ items = {
 	"6 Moonstone Ring": {"base": "Moonstone Ring", "type": "unique special"},
 	"6 Praetor Crown": {"base": "Praetor Crown", "type": "unique special"},
 	"6 Prismatic Ring": {"base": "Prismatic Ring", "type": "unique special"},
-	"6 Sapphire Ring": {"base": "Sapphire Ring", "type": "unique special"},
 	"6 Turquoise Amulet": {"base": "Turquoise Amulet", "type": "unique special"},
 	"6 Two-Point Arrow Quiver": {"base": "Two-Point Arrow Quiver", "type": "unique special"},
 	"6 Unset Ring": {"base": "Unset Ring", "type": "unique special"},

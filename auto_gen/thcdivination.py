@@ -1,12 +1,12 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/10/2018(m/d/y) 19:41:20 UTC from "tmphardcore" data
+# Created: 10/10/2018(m/d/y) 22:09:24 UTC from "tmphardcore" data
 
 desc = "Divination Card"
 
 # Base type : settings pair
 items = {
-	"000 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination low"},
+	"000 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination normal"},
 	"001 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
 	"002 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination normal"},
 	"003 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination normal"},
@@ -29,7 +29,6 @@ items = {
 	"2 The Hunger": {"base": "The Hunger", "class": "Divination Card", "type": "divination very high"},
 	"2 The Iron Bard": {"base": "The Iron Bard", "class": "Divination Card", "type": "divination very high"},
 	"2 The King's Heart": {"base": "The King's Heart", "class": "Divination Card", "type": "divination very high"},
-	"2 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination very high"},
 	"2 The Master": {"base": "The Master", "class": "Divination Card", "type": "divination very high"},
 	"2 The Mayor": {"base": "The Mayor", "class": "Divination Card", "type": "divination very high"},
 	"2 The Offering": {"base": "The Offering", "class": "Divination Card", "type": "divination very high"},
@@ -45,12 +44,14 @@ items = {
 	"3 Boon of the First Ones": {"base": "Boon of the First Ones", "class": "Divination Card", "type": "divination high"},
 	"3 Boundless Realms": {"base": "Boundless Realms", "class": "Divination Card", "type": "divination high"},
 	"3 Bowyer's Dream": {"base": "Bowyer's Dream", "class": "Divination Card", "type": "divination high"},
+	"3 Chaotic Disposition": {"base": "Chaotic Disposition", "class": "Divination Card", "type": "divination high"},
 	"3 Dialla's Subjugation": {"base": "Dialla's Subjugation", "class": "Divination Card", "type": "divination high"},
 	"3 Earth Drinker": {"base": "Earth Drinker", "class": "Divination Card", "type": "divination high"},
 	"3 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination high"},
 	"3 Harmony of Souls": {"base": "Harmony of Souls", "class": "Divination Card", "type": "divination high"},
 	"3 Heterochromia": {"base": "Heterochromia", "class": "Divination Card", "type": "divination high"},
 	"3 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
+	"3 Jack in the Box": {"base": "Jack in the Box", "class": "Divination Card", "type": "divination high"},
 	"3 Left to Fate": {"base": "Left to Fate", "class": "Divination Card", "type": "divination high"},
 	"3 Lingering Remnants": {"base": "Lingering Remnants", "class": "Divination Card", "type": "divination high"},
 	"3 Lucky Connections": {"base": "Lucky Connections", "class": "Divination Card", "type": "divination high"},
@@ -80,8 +81,10 @@ items = {
 	"3 The Innocent": {"base": "The Innocent", "class": "Divination Card", "type": "divination high"},
 	"3 The Insatiable": {"base": "The Insatiable", "class": "Divination Card", "type": "divination high"},
 	"3 The Jeweller's Boon": {"base": "The Jeweller's Boon", "class": "Divination Card", "type": "divination high"},
+	"3 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination high"},
 	"3 The Obscured": {"base": "The Obscured", "class": "Divination Card", "type": "divination high"},
 	"3 The Pact": {"base": "The Pact", "class": "Divination Card", "type": "divination high"},
+	"3 The Penitent": {"base": "The Penitent", "class": "Divination Card", "type": "divination high"},
 	"3 The Porcupine": {"base": "The Porcupine", "class": "Divination Card", "type": "divination high"},
 	"3 The Price of Protection": {"base": "The Price of Protection", "class": "Divination Card", "type": "divination high"},
 	"3 The Professor": {"base": "The Professor", "class": "Divination Card", "type": "divination high"},
@@ -100,7 +103,6 @@ items = {
 	"3 The Warlord": {"base": "The Warlord", "class": "Divination Card", "type": "divination high"},
 	"3 The Wilted Rose": {"base": "The Wilted Rose", "class": "Divination Card", "type": "divination high"},
 	"3 The Wolf": {"base": "The Wolf", "class": "Divination Card", "type": "divination high"},
-	"3 The Wrath": {"base": "The Wrath", "class": "Divination Card", "type": "divination high"},
 	"3 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination high"},
 	"4 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "divination low"},
 	"4 Anarchy's Price": {"base": "Anarchy's Price", "class": "Divination Card", "type": "divination low"},

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/10/2018(m/d/y) 19:41:20 UTC from "tmphardcore" data
+# Created: 10/10/2018(m/d/y) 22:09:24 UTC from "tmphardcore" data
 
 desc = "Currency Autogen"
 
@@ -175,7 +175,7 @@ items = {
 	"08 Splinter of Tul": {"base": "Splinter of Tul", 'other': ['StackSize >= 17'], "class": "Currency", "type": "currency high"},
 	"1 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", "class": "Currency", "type": "currency show"},
 	"09 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency normal"},
-	"08 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", 'other': ['StackSize >= 8'], "class": "Currency", "type": "currency high"},
+	"08 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", 'other': ['StackSize >= 7'], "class": "Currency", "type": "currency high"},
 	"1 Splinter of Xoph": {"base": "Splinter of Xoph", "class": "Currency", "type": "currency normal"},
 	"09 Splinter of Xoph": {"base": "Splinter of Xoph", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency high"},
 	"1 Tangled Fossil": {"base": "Tangled Fossil", "class": "Currency", "type": "currency very high"},
