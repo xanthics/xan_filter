@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/10/2018(m/d/y) 10:52:59 UTC from "Standard" data
+# Created: 10/10/2018(m/d/y) 19:41:18 UTC from "Standard" data
 
 desc = "Currency Autogen"
 
@@ -64,12 +64,12 @@ items = {
 	"09 Engineer's Orb": {"base": "Engineer's Orb", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency high"},
 	"1 Engineer's Shard": {"base": "Engineer's Shard", "class": "Currency", "type": "hide"},
 	"09 Engineer's Shard": {"base": "Engineer's Shard", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency very low"},
-	"08 Engineer's Shard": {"base": "Engineer's Shard", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency low"},
-	"07 Engineer's Shard": {"base": "Engineer's Shard", 'other': ['StackSize >= 14'], "class": "Currency", "type": "currency normal"},
+	"08 Engineer's Shard": {"base": "Engineer's Shard", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency low"},
+	"07 Engineer's Shard": {"base": "Engineer's Shard", 'other': ['StackSize >= 11'], "class": "Currency", "type": "currency normal"},
 	"1 Eternal Orb": {"base": "Eternal Orb", "class": "Currency", "type": "currency extremely high"},
 	"1 Exalted Orb": {"base": "Exalted Orb", "class": "Currency", "type": "currency extremely high"},
 	"1 Exalted Shard": {"base": "Exalted Shard", "class": "Currency", "type": "currency high"},
-	"09 Exalted Shard": {"base": "Exalted Shard", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency very high"},
+	"09 Exalted Shard": {"base": "Exalted Shard", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency very high"},
 	"1 Faceted Fossil": {"base": "Faceted Fossil", "class": "Currency", "type": "currency very high"},
 	"1 Fractured Fossil ": {"base": "Fractured Fossil ", "class": "Currency", "type": "currency extremely high"},
 	"1 Frigid Fossil": {"base": "Frigid Fossil", "class": "Currency", "type": "currency normal"},
@@ -118,7 +118,7 @@ items = {
 	"08 Orb of Chance": {"base": "Orb of Chance", 'other': ['StackSize >= 9'], "class": "Currency", "type": "currency high"},
 	"1 Orb of Fusing": {"base": "Orb of Fusing", "class": "Currency", "type": "currency normal"},
 	"09 Orb of Fusing": {"base": "Orb of Fusing", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency high"},
-	"08 Orb of Fusing": {"base": "Orb of Fusing", 'other': ['StackSize >= 17'], "class": "Currency", "type": "currency very high"},
+	"08 Orb of Fusing": {"base": "Orb of Fusing", 'other': ['StackSize >= 18'], "class": "Currency", "type": "currency very high"},
 	"1 Orb of Horizons": {"base": "Orb of Horizons", "class": "Currency", "type": "currency normal"},
 	"09 Orb of Horizons": {"base": "Orb of Horizons", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency high"},
 	"08 Orb of Horizons": {"base": "Orb of Horizons", 'other': ['StackSize >= 11'], "class": "Currency", "type": "currency very high"},
@@ -143,7 +143,7 @@ items = {
 	"1 Prime Chaotic Resonator": {"base": "Prime Chaotic Resonator", "class": "Currency", "type": "currency very high"},
 	"1 Primitive Alchemical Resonator": {"base": "Primitive Alchemical Resonator", "class": "Currency", "type": "currency very low"},
 	"1 Primitive Chaotic Resonator": {"base": "Primitive Chaotic Resonator", "class": "Currency", "type": "currency very high"},
-	"1 Prismatic Fossil": {"base": "Prismatic Fossil", "class": "Currency", "type": "currency very high"},
+	"1 Prismatic Fossil": {"base": "Prismatic Fossil", "class": "Currency", "type": "currency high"},
 	"1 Pristine Fossil": {"base": "Pristine Fossil", "class": "Currency", "type": "currency high"},
 	"1 Regal Orb": {"base": "Regal Orb", "class": "Currency", "type": "currency normal"},
 	"09 Regal Orb": {"base": "Regal Orb", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency high"},
@@ -151,7 +151,7 @@ items = {
 	"1 Regal Shard": {"base": "Regal Shard", "class": "Currency", "type": "currency very low"},
 	"09 Regal Shard": {"base": "Regal Shard", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency low"},
 	"08 Regal Shard": {"base": "Regal Shard", 'other': ['StackSize >= 7'], "class": "Currency", "type": "currency normal"},
-	"1 Sanctified Fossil": {"base": "Sanctified Fossil", "class": "Currency", "type": "currency extremely high"},
+	"1 Sanctified Fossil": {"base": "Sanctified Fossil", "class": "Currency", "type": "currency very high"},
 	"1 Scorched Fossil": {"base": "Scorched Fossil", "class": "Currency", "type": "currency very high"},
 	"1 Scroll Fragment": {"base": "Scroll Fragment", "class": "Currency", "type": "hide"},
 	"1 Scroll of Wisdom": {"base": "Scroll of Wisdom", "class": "Currency", "type": "hide"},
@@ -166,13 +166,13 @@ items = {
 	"09 Splinter of Chayula": {"base": "Splinter of Chayula", 'other': ['StackSize >= 6'], "class": "Currency", "type": "currency very high"},
 	"1 Splinter of Esh": {"base": "Splinter of Esh", "class": "Currency", "type": "currency show"},
 	"09 Splinter of Esh": {"base": "Splinter of Esh", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency normal"},
-	"08 Splinter of Esh": {"base": "Splinter of Esh", 'other': ['StackSize >= 10'], "class": "Currency", "type": "currency high"},
+	"08 Splinter of Esh": {"base": "Splinter of Esh", 'other': ['StackSize >= 12'], "class": "Currency", "type": "currency high"},
 	"1 Splinter of Tul": {"base": "Splinter of Tul", "class": "Currency", "type": "currency show"},
 	"09 Splinter of Tul": {"base": "Splinter of Tul", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency normal"},
 	"08 Splinter of Tul": {"base": "Splinter of Tul", 'other': ['StackSize >= 12'], "class": "Currency", "type": "currency high"},
 	"1 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", "class": "Currency", "type": "currency show"},
 	"09 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency normal"},
-	"08 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", 'other': ['StackSize >= 6'], "class": "Currency", "type": "currency high"},
+	"08 Splinter of Uul-Netol": {"base": "Splinter of Uul-Netol", 'other': ['StackSize >= 7'], "class": "Currency", "type": "currency high"},
 	"1 Splinter of Xoph": {"base": "Splinter of Xoph", "class": "Currency", "type": "currency show"},
 	"09 Splinter of Xoph": {"base": "Splinter of Xoph", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency normal"},
 	"08 Splinter of Xoph": {"base": "Splinter of Xoph", 'other': ['StackSize >= 5'], "class": "Currency", "type": "currency high"},

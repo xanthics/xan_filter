@@ -364,34 +364,34 @@ def gen_unique(unique_list, league, curvals):
 		f.write(u'\t"9 Other uniques": {"type": "unique normal"}\n}\n')
 
 
+# Convert a essence value to string.  returns a string
+def baseclassify(val, curvals):
+	if val >= curvals['extremely']:
+		tier = 'base extremely high'
+	elif val >= curvals['very']:
+		tier = 'base very high'
+	else:
+		tier = None
+
+	return tier
+
+
 def gen_bases(bases_list, league, curvals):
 	name = convertname(league)
 
 	items = {'ehigh': {}, 'vhigh': {}}
-	# [ii['baseType'], ii['variant'], ii['levelRequired'], ii['chaosValue']]
-	for u in bases_list.keys():
-		base = bases_list[u]
-		if base[3] >= curvals['extremely']:
-			if base[1] not in items['ehigh']:
-				items['ehigh'][base[1]] = {}
-			if base[0] in items['ehigh'][base[1]] and items['ehigh'][base[1]][base[0]] < base[2]:
-				continue
-			items['ehigh'][base[1]][base[0]] = base[2]
-		elif base[3] > curvals['very']:
-			if base[1] not in items['vhigh']:
-				items['vhigh'][base[1]] = {}
-			if base[0] in items['vhigh'][base[1]] and items['vhigh'][base[1]][base[0]] < base[2]:
-				continue
-			items['vhigh'][base[1]][base[0]] = base[2]
-
+	# bases[ii['levelRequired']][ii['variant']][ii['baseType']] = ii['chaosValue']
 	with open('auto_gen\\{}bases.py'.format(name), 'w', encoding='utf-8') as f:
 		f.write(u'''{}\ndesc = "Bases"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league)))
-		for variant in items['ehigh']:
-			for baseType in sorted(items['ehigh'][variant]):
-				f.write(u'\t"0 {2}{0} {3}": {{"base": "{0}", "other": [{1}"Itemlevel >= {3}"], "type": "base extremely high"}},\n'.format(baseType, '"{} True", '.format(variant) if variant else '', variant+' ' if variant else '', items['ehigh'][variant][baseType]))
-		for variant in items['vhigh']:
-			for baseType in sorted(items['vhigh'][variant]):
-				f.write(u'\t"1 {2}{0} {3}": {{"base": "{0}", "other": [{1}"Itemlevel >= {3}"], "type": "base very high"}},\n'.format(baseType, '"{} True", '.format(variant) if variant else '', variant+' ' if variant else '', items['vhigh'][variant][baseType]))
+		count = 0
+		for level in sorted(bases_list, reverse=True):
+			for variant in ['Shaper', 'Elder', None]:
+				if variant in bases_list[level]:
+					for baseType in sorted(bases_list[level][variant]):
+						value = baseclassify(bases_list[level][variant][baseType], curvals)
+						if value:
+							f.write(u'\t"{4} {2}{0}": {{"base": "{0}", "other": [{1}"ItemLevel >= {3}"], "type": "{5}"}},\n'.format(baseType, '"{}Item True", '.format(variant) if variant else '', variant + ' ' if variant else '', level, count, value))
+			count += 1
 		f.write(u'\n}\n')
 
 
@@ -444,7 +444,11 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 					for ii in data[i]:
 						if ii['baseType'].startswith('Superior ') or ii['count'] < 8:
 							continue
-						bases[ii['id']] = [ii['baseType'], ii['variant'], ii['levelRequired'], ii['chaosValue']]
+						if ii['levelRequired'] not in bases:
+							bases[ii['levelRequired']] = {}
+						if ii['variant'] not in bases[ii['levelRequired']]:
+							bases[ii['levelRequired']][ii['variant']] = {}
+						bases[ii['levelRequired']][ii['variant']][ii['baseType']] = ii['chaosValue']
 
 			elif key in ['resonator', 'fossil']:
 				for i in data:
