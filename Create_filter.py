@@ -24,6 +24,10 @@ from auto_gen import essence as stessence
 from auto_gen import hcessence
 from auto_gen import tessence
 from auto_gen import thcessence
+from auto_gen import bases
+from auto_gen import hcbases
+from auto_gen import tbases
+from auto_gen import thcbases
 
 
 from item_config import animate_weapon
@@ -125,10 +129,10 @@ def gen_list_compact(items, desc, soundlist):
 # main function for creating a filter
 def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 	gen_list = gen_list_compact
-	lookup_leagues = {'Standard': ("st", "Standard", uniques, divination, stcurrency, stessence),
-					  'Hardcore': ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence),
-					  'tmpstandard': ("t", "Temp Sofcore", tuniques, tdivination, tcurrency, tessence),
-					  'tmphardcore': ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence)}
+	lookup_leagues = {'Standard': ("st", "Standard", uniques, divination, stcurrency, stessence, bases),
+					  'Hardcore': ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence, hcbases),
+					  'tmpstandard': ("t", "Temp Sofcore", tuniques, tdivination, tcurrency, tessence, tbases),
+					  'tmphardcore': ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence, thcbases)}
 
 	leveling = True  # toggle to show leveling items
 	soundlist = []
@@ -149,6 +153,7 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 		buffer += gen_list(labyrinth.items, labyrinth.desc, soundlist)
 		buffer += gen_list(lookup_leagues[i][4].items, lookup_leagues[i][4].desc, soundlist)  # Autogen currency values
 		buffer += gen_list(lookup_leagues[i][5].items, lookup_leagues[i][5].desc, soundlist)  # Autogen Essences
+		buffer += gen_list(lookup_leagues[i][6].items, lookup_leagues[i][6].desc, soundlist)  # Autogen Bases
 		buffer += gen_list(currency.items, currency.desc, soundlist)  # Currency
 		buffer += gen_list(gems.items, gems.desc, soundlist)  # Gems
 		buffer += gen_list(lookup_leagues[i][2].items, lookup_leagues[i][2].desc, soundlist)  # uniques
@@ -219,8 +224,8 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 
 if __name__ == "__main__":
 	import pricetool_ninja
-#	league = ['Standard', 'Hardcore', 'tmpstandard', 'tmphardcore']
-	league = ['tmpstandard']
+	league = ['Standard', 'Hardcore', 'tmpstandard', 'tmphardcore']
+#	league = ['tmpstandard']
 	pricetool_ninja.scrape_ninja(league)
 	# reload updated modules
 	for module in [divination, hcdivination, tdivination, thcdivination,

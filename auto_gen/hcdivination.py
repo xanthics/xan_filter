@@ -1,41 +1,24 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/08/2018(m/d/y) 02:31:59 UTC from "Hardcore" data
+# Created: 10/10/2018(m/d/y) 10:53:00 UTC from "Hardcore" data
 
 desc = "Divination Card"
 
 # Base type : settings pair
 items = {
-	"1 Bowyer's Dream": {"base": "Bowyer's Dream", "class": "Divination Card", "type": "divination extremely high"},
 	"1 House of Mirrors": {"base": "House of Mirrors", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Doctor": {"base": "The Doctor", "class": "Divination Card", "type": "divination extremely high"},
 	"2 Abandoned Wealth": {"base": "Abandoned Wealth", "class": "Divination Card", "type": "divination very high"},
-	"2 Audacity": {"base": "Audacity", "class": "Divination Card", "type": "divination very high"},
 	"2 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination very high"},
 	"2 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination very high"},
-	"2 The King's Heart": {"base": "The King's Heart", "class": "Divination Card", "type": "divination very high"},
-	"2 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination very high"},
-	"2 The Porcupine": {"base": "The Porcupine", "class": "Divination Card", "type": "divination very high"},
-	"2 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination very high"},
-	"2 The Undaunted": {"base": "The Undaunted", "class": "Divination Card", "type": "divination very high"},
-	"3 Doedre's Madness": {"base": "Doedre's Madness", "class": "Divination Card", "type": "divination high"},
 	"3 The Chains that Bind": {"base": "The Chains that Bind", "class": "Divination Card", "type": "divination high"},
-	"3 The Warden": {"base": "The Warden", "class": "Divination Card", "type": "divination high"},
-	"3 The Watcher": {"base": "The Watcher", "class": "Divination Card", "type": "divination high"},
-	"3 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination high"},
-	"3 Treasure Hunter": {"base": "Treasure Hunter", "class": "Divination Card", "type": "divination high"},
-	"3 Volatile Power": {"base": "Volatile Power", "class": "Divination Card", "type": "divination high"},
-	"4 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "divination low"},
 	"4 Anarchy's Price": {"base": "Anarchy's Price", "class": "Divination Card", "type": "divination low"},
 	"4 Lantador's Lost Love": {"base": "Lantador's Lost Love", "class": "Divination Card", "type": "divination low"},
 	"4 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},
-	"4 The Betrayal": {"base": "The Betrayal", "class": "Divination Card", "type": "divination low"},
 	"4 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
-	"4 The Feast": {"base": "The Feast", "class": "Divination Card", "type": "divination low"},
-	"4 The Hermit": {"base": "The Hermit", "class": "Divination Card", "type": "divination low"},
 	"4 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination low"},
 	"4 The Lover": {"base": "The Lover", "class": "Divination Card", "type": "divination low"},
-	"4 The Ruthless Ceinture": {"base": "The Ruthless Ceinture", "class": "Divination Card", "type": "divination low"},
+	"4 The Opulent": {"base": "The Opulent", "class": "Divination Card", "type": "divination low"},
 	"4 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},
 	"7 Blessing of God": {"base": "Blessing of God", "class": "Divination Card", "type": "hide"},
 	"7 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "hide"},

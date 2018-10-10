@@ -364,6 +364,37 @@ def gen_unique(unique_list, league, curvals):
 		f.write(u'\t"9 Other uniques": {"type": "unique normal"}\n}\n')
 
 
+def gen_bases(bases_list, league, curvals):
+	name = convertname(league)
+
+	items = {'ehigh': {}, 'vhigh': {}}
+	# [ii['baseType'], ii['variant'], ii['levelRequired'], ii['chaosValue']]
+	for u in bases_list.keys():
+		base = bases_list[u]
+		if base[3] >= curvals['extremely']:
+			if base[1] not in items['ehigh']:
+				items['ehigh'][base[1]] = {}
+			if base[0] in items['ehigh'][base[1]] and items['ehigh'][base[1]][base[0]] < base[2]:
+				continue
+			items['ehigh'][base[1]][base[0]] = base[2]
+		elif base[3] > curvals['very']:
+			if base[1] not in items['vhigh']:
+				items['vhigh'][base[1]] = {}
+			if base[0] in items['vhigh'][base[1]] and items['vhigh'][base[1]][base[0]] < base[2]:
+				continue
+			items['vhigh'][base[1]][base[0]] = base[2]
+
+	with open('auto_gen\\{}bases.py'.format(name), 'w', encoding='utf-8') as f:
+		f.write(u'''{}\ndesc = "Bases"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league)))
+		for variant in items['ehigh']:
+			for baseType in sorted(items['ehigh'][variant]):
+				f.write(u'\t"0 {2}{0} {3}": {{"base": "{0}", "other": [{1}"Itemlevel >= {3}"], "type": "base extremely high"}},\n'.format(baseType, '"{} True", '.format(variant) if variant else '', variant+' ' if variant else '', items['ehigh'][variant][baseType]))
+		for variant in items['vhigh']:
+			for baseType in sorted(items['vhigh'][variant]):
+				f.write(u'\t"1 {2}{0} {3}": {{"base": "{0}", "other": [{1}"Itemlevel >= {3}"], "type": "base very high"}},\n'.format(baseType, '"{} True", '.format(variant) if variant else '', variant+' ' if variant else '', items['vhigh'][variant][baseType]))
+		f.write(u'\n}\n')
+
+
 # Entry point for getting price data from poe.ninja
 def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 	# list of all fated uniques to remove them from unique price consideration
@@ -376,7 +407,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 
 	paths = {
 		'currency': 'http://poe.ninja/api/Data/GetCurrencyOverview?league={}',
-#		'prophecy': 'http://poe.ninja/api/Data/GetProphecyOverview?league={}',
+		'bases': 'http://poe.ninja/api/Data/GetBaseTypeOverview?league={}',
 		'div': 'http://poe.ninja/api/Data/GetDivinationCardsOverview?league={}',
 		'essence': 'http://poe.ninja/api/Data/GetEssenceOverview?league={}',
 		'unique jewel': 'http://poe.ninja/api/Data/GetUniqueJewelOverview?league={}',
@@ -396,6 +427,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		currency = {}
 		divs = {}
 		essences = {}
+		bases = {}
 		uniques = defaultdict(list)
 
 		for key in paths:
@@ -407,7 +439,14 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 						if 'chaosEquivalent' in ii:
 							currency[ii['currencyTypeName']] = ii['chaosEquivalent']
 
-			elif key in ['resonator', 'fossil', 'prophecy']:
+			elif key == 'bases':
+				for i in data:
+					for ii in data[i]:
+						if ii['baseType'].startswith('Superior ') or ii['count'] < 8:
+							continue
+						bases[ii['id']] = [ii['baseType'], ii['variant'], ii['levelRequired'], ii['chaosValue']]
+
+			elif key in ['resonator', 'fossil']:
 				for i in data:
 					for ii in data[i]:
 						currency[ii['name']] = ii['chaosValue']
@@ -432,6 +471,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 
 		curvals = gen_currency(currency, league)
 		gen_div(divs, league, curvals)
+		gen_bases(bases, league, curvals)
 		gen_essence(essences, league, curvals)
 		gen_unique(uniques, league, curvals)
 
