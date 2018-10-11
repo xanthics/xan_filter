@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/10/2018(m/d/y) 22:09:23 UTC from "tmpstandard" data
+# Created: 10/11/2018(m/d/y) 01:27:23 UTC from "tmpstandard" data
 
 desc = "Divination Card"
 
@@ -73,6 +73,7 @@ items = {
 	"3 The Price of Protection": {"base": "The Price of Protection", "class": "Divination Card", "type": "divination high"},
 	"3 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
 	"3 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination high"},
+	"3 The Standoff": {"base": "The Standoff", "class": "Divination Card", "type": "divination high"},
 	"3 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination high"},
 	"3 The Throne": {"base": "The Throne", "class": "Divination Card", "type": "divination high"},
 	"3 The Twilight Moon": {"base": "The Twilight Moon", "class": "Divination Card", "type": "divination high"},
@@ -97,10 +98,9 @@ items = {
 	"4 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},
 	"4 The Battle Born": {"base": "The Battle Born", "class": "Divination Card", "type": "divination low"},
 	"4 The Betrayal": {"base": "The Betrayal", "class": "Divination Card", "type": "divination low"},
-	"4 The Coming Storm": {"base": "The Coming Storm", "class": "Divination Card", "type": "divination low"},
 	"4 The Deceiver": {"base": "The Deceiver", "class": "Divination Card", "type": "divination low"},
 	"4 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
-	"4 The Eye of the Dragon": {"base": "The Eye of the Dragon", "class": "Divination Card", "type": "divination low"},
+	"4 The Flora's Gift": {"base": "The Flora's Gift", "class": "Divination Card", "type": "divination low"},
 	"4 The Fox": {"base": "The Fox", "class": "Divination Card", "type": "divination low"},
 	"4 The Gambler": {"base": "The Gambler", "class": "Divination Card", "type": "divination low"},
 	"4 The Gentleman": {"base": "The Gentleman", "class": "Divination Card", "type": "divination low"},

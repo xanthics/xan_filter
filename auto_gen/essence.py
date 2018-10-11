@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/10/2018(m/d/y) 22:09:22 UTC from "Standard" data
+# Created: 10/11/2018(m/d/y) 01:27:22 UTC from "Standard" data
 
 desc = "Essence Autogen"
 
@@ -52,7 +52,7 @@ items = {
 	"0 Screaming Essence of Misery": {"base": "Screaming Essence of Misery", "class": "Currency", "type": "currency normal"},
 	"0 Screaming Essence of Rage": {"base": "Screaming Essence of Rage", "class": "Currency", "type": "currency normal"},
 	"0 Screaming Essence of Scorn": {"base": "Screaming Essence of Scorn", "class": "Currency", "type": "currency normal"},
-	"0 Screaming Essence of Sorrow": {"base": "Screaming Essence of Sorrow", "class": "Currency", "type": "currency normal"},
+	"0 Screaming Essence of Sorrow": {"base": "Screaming Essence of Sorrow", "class": "Currency", "type": "currency low"},
 	"0 Screaming Essence of Spite": {"base": "Screaming Essence of Spite", "class": "Currency", "type": "currency low"},
 	"0 Screaming Essence of Suffering": {"base": "Screaming Essence of Suffering", "class": "Currency", "type": "currency low"},
 	"0 Screaming Essence of Torment": {"base": "Screaming Essence of Torment", "class": "Currency", "type": "currency normal"},
@@ -82,8 +82,8 @@ items = {
 	"0 Wailing Essence of Anger": {"base": "Wailing Essence of Anger", "class": "Currency", "type": "currency normal"},
 	"0 Wailing Essence of Anguish": {"base": "Wailing Essence of Anguish", "class": "Currency", "type": "currency low"},
 	"0 Wailing Essence of Contempt": {"base": "Wailing Essence of Contempt", "class": "Currency", "type": "currency low"},
-	"0 Wailing Essence of Doubt": {"base": "Wailing Essence of Doubt", "class": "Currency", "type": "currency normal"},
-	"0 Wailing Essence of Fear": {"base": "Wailing Essence of Fear", "class": "Currency", "type": "currency normal"},
+	"0 Wailing Essence of Doubt": {"base": "Wailing Essence of Doubt", "class": "Currency", "type": "currency low"},
+	"0 Wailing Essence of Fear": {"base": "Wailing Essence of Fear", "class": "Currency", "type": "currency low"},
 	"0 Wailing Essence of Greed": {"base": "Wailing Essence of Greed", "class": "Currency", "type": "currency normal"},
 	"0 Wailing Essence of Hatred": {"base": "Wailing Essence of Hatred", "class": "Currency", "type": "currency normal"},
 	"0 Wailing Essence of Loathing": {"base": "Wailing Essence of Loathing", "class": "Currency", "type": "currency low"},
@@ -97,18 +97,18 @@ items = {
 	"0 Wailing Essence of Zeal": {"base": "Wailing Essence of Zeal", "class": "Currency", "type": "currency normal"},
 	"0 Weeping Essence of Anger": {"base": "Weeping Essence of Anger", "class": "Currency", "type": "currency normal"},
 	"0 Weeping Essence of Contempt": {"base": "Weeping Essence of Contempt", "class": "Currency", "type": "currency low"},
-	"0 Weeping Essence of Doubt": {"base": "Weeping Essence of Doubt", "class": "Currency", "type": "currency normal"},
+	"0 Weeping Essence of Doubt": {"base": "Weeping Essence of Doubt", "class": "Currency", "type": "currency low"},
 	"0 Weeping Essence of Fear": {"base": "Weeping Essence of Fear", "class": "Currency", "type": "currency normal"},
-	"0 Weeping Essence of Greed": {"base": "Weeping Essence of Greed", "class": "Currency", "type": "currency low"},
-	"0 Weeping Essence of Hatred": {"base": "Weeping Essence of Hatred", "class": "Currency", "type": "currency normal"},
+	"0 Weeping Essence of Greed": {"base": "Weeping Essence of Greed", "class": "Currency", "type": "currency normal"},
+	"0 Weeping Essence of Hatred": {"base": "Weeping Essence of Hatred", "class": "Currency", "type": "currency low"},
 	"0 Weeping Essence of Rage": {"base": "Weeping Essence of Rage", "class": "Currency", "type": "currency low"},
-	"0 Weeping Essence of Sorrow": {"base": "Weeping Essence of Sorrow", "class": "Currency", "type": "currency normal"},
+	"0 Weeping Essence of Sorrow": {"base": "Weeping Essence of Sorrow", "class": "Currency", "type": "currency low"},
 	"0 Weeping Essence of Suffering": {"base": "Weeping Essence of Suffering", "class": "Currency", "type": "currency low"},
 	"0 Weeping Essence of Torment": {"base": "Weeping Essence of Torment", "class": "Currency", "type": "currency normal"},
-	"0 Weeping Essence of Woe": {"base": "Weeping Essence of Woe", "class": "Currency", "type": "currency normal"},
+	"0 Weeping Essence of Woe": {"base": "Weeping Essence of Woe", "class": "Currency", "type": "currency low"},
 	"0 Weeping Essence of Wrath": {"base": "Weeping Essence of Wrath", "class": "Currency", "type": "currency normal"},
 	"0 Whispering Essence of Contempt": {"base": "Whispering Essence of Contempt", "class": "Currency", "type": "currency low"},
 	"0 Whispering Essence of Greed": {"base": "Whispering Essence of Greed", "class": "Currency", "type": "currency low"},
-	"0 Whispering Essence of Hatred": {"base": "Whispering Essence of Hatred", "class": "Currency", "type": "currency normal"},
-	"0 Whispering Essence of Woe": {"base": "Whispering Essence of Woe", "class": "Currency", "type": "currency normal"},
+	"0 Whispering Essence of Hatred": {"base": "Whispering Essence of Hatred", "class": "Currency", "type": "currency low"},
+	"0 Whispering Essence of Woe": {"base": "Whispering Essence of Woe", "class": "Currency", "type": "currency low"},
 	"7 Essence default": {"base": "Essence", "class": "Currency", "type": "currency low"}}

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/10/2018(m/d/y) 22:09:22 UTC from "Hardcore" data
+# Created: 10/11/2018(m/d/y) 01:27:23 UTC from "Hardcore" data
 
 desc = "Currency Autogen"
 
@@ -80,9 +80,8 @@ items = {
 	"1 Frigid Fossil": {"base": "Frigid Fossil", "class": "Currency", "type": "currency normal"},
 	"1 Gemcutter's Prism": {"base": "Gemcutter's Prism", "class": "Currency", "type": "currency high"},
 	"1 Gilded Fossil": {"base": "Gilded Fossil", "class": "Currency", "type": "currency very high"},
-	"1 Glassblower's Bauble": {"base": "Glassblower's Bauble", "class": "Currency", "type": "currency low"},
-	"09 Glassblower's Bauble": {"base": "Glassblower's Bauble", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency normal"},
-	"08 Glassblower's Bauble": {"base": "Glassblower's Bauble", 'other': ['StackSize >= 5'], "class": "Currency", "type": "currency high"},
+	"1 Glassblower's Bauble": {"base": "Glassblower's Bauble", "class": "Currency", "type": "currency normal"},
+	"09 Glassblower's Bauble": {"base": "Glassblower's Bauble", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency high"},
 	"1 Glyphic Fossil": {"base": "Glyphic Fossil", "class": "Currency", "type": "currency very high"},
 	"1 Harbinger's Orb": {"base": "Harbinger's Orb", "class": "Currency", "type": "currency very high"},
 	"09 Harbinger's Orb": {"base": "Harbinger's Orb", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency extremely high"},
