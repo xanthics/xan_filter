@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/10/2018(m/d/y) 22:09:24 UTC from "tmphardcore" data
+# Created: 10/11/2018(m/d/y) 01:27:24 UTC from "tmphardcore" data
 
 desc = "Currency Autogen"
 
@@ -98,7 +98,7 @@ items = {
 	"1 Lucent Fossil": {"base": "Lucent Fossil", "class": "Currency", "type": "currency high"},
 	"1 Master Cartographer's Sextant": {"base": "Master Cartographer's Sextant", "class": "Currency", "type": "currency high"},
 	"09 Master Cartographer's Sextant": {"base": "Master Cartographer's Sextant", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency very high"},
-	"1 Metallic Fossil": {"base": "Metallic Fossil", "class": "Currency", "type": "currency high"},
+	"1 Metallic Fossil": {"base": "Metallic Fossil", "class": "Currency", "type": "currency normal"},
 	"1 Mirror Shard": {"base": "Mirror Shard", "class": "Currency", "type": "currency very high"},
 	"09 Mirror Shard": {"base": "Mirror Shard", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency extremely high"},
 	"1 Mirror of Kalandra": {"base": "Mirror of Kalandra", "class": "Currency", "type": "currency extremely high"},
@@ -140,7 +140,7 @@ items = {
 	"08 Portal Scroll": {"base": "Portal Scroll", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency low"},
 	"07 Portal Scroll": {"base": "Portal Scroll", 'other': ['StackSize >= 13'], "class": "Currency", "type": "currency normal"},
 	"1 Potent Alchemical Resonator": {"base": "Potent Alchemical Resonator", "class": "Currency", "type": "currency very low"},
-	"1 Potent Chaotic Resonator": {"base": "Potent Chaotic Resonator", "class": "Currency", "type": "currency normal"},
+	"1 Potent Chaotic Resonator": {"base": "Potent Chaotic Resonator", "class": "Currency", "type": "currency high"},
 	"1 Powerful Alchemical Resonator": {"base": "Powerful Alchemical Resonator", "class": "Currency", "type": "currency very low"},
 	"1 Powerful Chaotic Resonator": {"base": "Powerful Chaotic Resonator", "class": "Currency", "type": "currency normal"},
 	"1 Prime Alchemical Resonator": {"base": "Prime Alchemical Resonator", "class": "Currency", "type": "currency very high"},

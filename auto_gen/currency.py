@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/10/2018(m/d/y) 22:09:22 UTC from "Standard" data
+# Created: 10/11/2018(m/d/y) 01:27:22 UTC from "Standard" data
 
 desc = "Currency Autogen"
 
@@ -23,7 +23,7 @@ items = {
 	"09 Annulment Shard": {"base": "Annulment Shard", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency high"},
 	"08 Annulment Shard": {"base": "Annulment Shard", 'other': ['StackSize >= 13'], "class": "Currency", "type": "currency very high"},
 	"1 Apprentice Cartographer's Sextant": {"base": "Apprentice Cartographer's Sextant", "class": "Currency", "type": "currency high"},
-	"09 Apprentice Cartographer's Sextant": {"base": "Apprentice Cartographer's Sextant", 'other': ['StackSize >= 7'], "class": "Currency", "type": "currency very high"},
+	"09 Apprentice Cartographer's Sextant": {"base": "Apprentice Cartographer's Sextant", 'other': ['StackSize >= 8'], "class": "Currency", "type": "currency very high"},
 	"1 Armourer's Scrap": {"base": "Armourer's Scrap", "class": "Currency", "type": "hide"},
 	"09 Armourer's Scrap": {"base": "Armourer's Scrap", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency very low"},
 	"08 Armourer's Scrap": {"base": "Armourer's Scrap", 'other': ['StackSize >= 7'], "class": "Currency", "type": "currency low"},

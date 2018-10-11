@@ -1037,16 +1037,16 @@ def genrareshighlight():
 						ret['1 {}'.format(cur['name'])]['class'] = cur['base']
 						ret['1 {}'.format(cur['name'])]['other'] = ['DropLevel {}'.format(cur['drop'])]
 				elif cur['name'] in t1:
-					ret['2 {}'.format(cur['name'])] = {"base": cur['name'], "type": "rare high"}
+					ret['2 {}'.format(cur['name'])] = {"base": cur['name'], "type": "rare high", "other": ['ItemLevel < 83']}
 					if cur['name'] in substrings:
 						ret['2 {}'.format(cur['name'])]['class'] = cur['base']
-						ret['2 {}'.format(cur['name'])]['other'] = ['DropLevel {}'.format(cur['drop'])]
+						ret['2 {}'.format(cur['name'])]['other'] = ['DropLevel {}'.format(cur['drop']), 'ItemLevel < 83']
 				elif cur['name'] in shown:
-					ret['3 {}'.format(cur['name'])] = {"base": cur['name'], "type": "rare normal"}
+					ret['3 {}'.format(cur['name'])] = {"base": cur['name'], "type": "rare normal", "other": ['ItemLevel < 83']}
 					if cur['name'] in substrings:
 						ret['3 {}'.format(cur['name'])]['class'] = cur['base']
-						ret['3 {}'.format(cur['name'])]['other'] = ['DropLevel {}'.format(cur['drop'])]
-				elif s:
+						ret['3 {}'.format(cur['name'])]['other'] = ['DropLevel {}'.format(cur['drop']), 'ItemLevel < 83']
+				if s and cur['name'] not in highlighted:
 					ret['4 {}'.format(cur['name'])] = {"base": cur['name'], "other": ["ItemLevel >= {}".format(ilvl)], "type": "rare low"}
 					if cur['name'] in substrings:
 						ret['4 {}'.format(cur['name'])]['class'] = cur['base']

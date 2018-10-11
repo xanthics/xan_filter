@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/10/2018(m/d/y) 22:09:22 UTC from "Standard" data
+# Created: 10/11/2018(m/d/y) 01:27:22 UTC from "Standard" data
 
 desc = "Unique"
 
@@ -27,7 +27,6 @@ items = {
 	"0 Heavy Quiver": {"base": "Heavy Quiver", "type": "unique extremely high"},
 	"0 Hydrascale Gauntlets": {"base": "Hydrascale Gauntlets", "type": "unique extremely high"},
 	"0 Jet Amulet": {"base": "Jet Amulet", "type": "unique extremely high"},
-	"0 Legion Gloves": {"base": "Legion Gloves", "type": "unique extremely high"},
 	"0 Maze Map": {"base": "Maze Map", "type": "unique extremely high"},
 	"0 Museum Map": {"base": "Museum Map", "type": "unique extremely high"},
 	"0 Prophecy Wand": {"base": "Prophecy Wand", "type": "unique extremely high"},
@@ -52,9 +51,11 @@ items = {
 	"1 Hydrascale Boots": {"base": "Hydrascale Boots", "type": "unique very high"},
 	"1 Imperial Maul": {"base": "Imperial Maul", "type": "unique very high"},
 	"1 Jewelled Foil": {"base": "Jewelled Foil", "type": "unique very high"},
+	"1 Legion Gloves": {"base": "Legion Gloves", "type": "unique very high"},
 	"1 Magistrate Crown": {"base": "Magistrate Crown", "type": "unique very high"},
 	"1 Moon Temple Map": {"base": "Moon Temple Map", "type": "unique very high"},
 	"1 Nightmare Mace": {"base": "Nightmare Mace", "type": "unique very high"},
+	"1 Nubuck Gloves": {"base": "Nubuck Gloves", "type": "unique very high"},
 	"1 Prismatic Jewel": {"base": "Prismatic Jewel", "type": "unique very high"},
 	"1 Promenade Map": {"base": "Promenade Map", "type": "unique very high"},
 	"1 Rawhide Tower Shield": {"base": "Rawhide Tower Shield", "type": "unique very high"},
@@ -125,7 +126,6 @@ items = {
 	"2 Necromancer Silks": {"base": "Necromancer Silks", "type": "unique high"},
 	"2 Necropolis Map": {"base": "Necropolis Map", "type": "unique high"},
 	"2 Nubuck Boots": {"base": "Nubuck Boots", "type": "unique high"},
-	"2 Nubuck Gloves": {"base": "Nubuck Gloves", "type": "unique high"},
 	"2 Overgrown Shrine Map": {"base": "Overgrown Shrine Map", "type": "unique high"},
 	"2 Platinum Sceptre": {"base": "Platinum Sceptre", "type": "unique high"},
 	"2 Raven Mask": {"base": "Raven Mask", "type": "unique high"},
@@ -173,6 +173,7 @@ items = {
 	"6 Great Crown": {"base": "Great Crown", "type": "unique special"},
 	"6 Hubris Circlet": {"base": "Hubris Circlet", "type": "unique special"},
 	"6 Imperial Bow": {"base": "Imperial Bow", "type": "unique special"},
+	"6 Imperial Skean": {"base": "Imperial Skean", "type": "unique special"},
 	"6 Infernal Sword": {"base": "Infernal Sword", "type": "unique special"},
 	"6 Jade Amulet": {"base": "Jade Amulet", "type": "unique special"},
 	"6 Judgement Staff": {"base": "Judgement Staff", "type": "unique special"},
@@ -238,7 +239,6 @@ items = {
 	"7 Boot Knife": {"base": "Boot Knife", "type": "unique low"},
 	"7 Brass Maul": {"base": "Brass Maul", "type": "unique low"},
 	"7 Bronze Gauntlets": {"base": "Bronze Gauntlets", "type": "unique low"},
-	"7 Bronze Sceptre": {"base": "Bronze Sceptre", "type": "unique low"},
 	"7 Bronzescale Boots": {"base": "Bronzescale Boots", "type": "unique low"},
 	"7 Bronzescale Gauntlets": {"base": "Bronzescale Gauntlets", "type": "unique low"},
 	"7 Buckskin Tunic": {"base": "Buckskin Tunic", "type": "unique low"},
@@ -258,7 +258,6 @@ items = {
 	"7 Decorative Axe": {"base": "Decorative Axe", "type": "unique low"},
 	"7 Deerskin Boots": {"base": "Deerskin Boots", "type": "unique low"},
 	"7 Demon's Horn": {"base": "Demon's Horn", "type": "unique low"},
-	"7 Dragonscale Gauntlets": {"base": "Dragonscale Gauntlets", "type": "unique low"},
 	"7 Dread Maul": {"base": "Dread Maul", "type": "unique low"},
 	"7 Dream Mace": {"base": "Dream Mace", "type": "unique low"},
 	"7 Driftwood Wand": {"base": "Driftwood Wand", "type": "unique low"},
@@ -273,6 +272,8 @@ items = {
 	"7 Gilded Sallet": {"base": "Gilded Sallet", "type": "unique low"},
 	"7 Gnarled Branch": {"base": "Gnarled Branch", "type": "unique low"},
 	"7 Goat's Horn": {"base": "Goat's Horn", "type": "unique low"},
+	"7 Goathide Gloves": {"base": "Goathide Gloves", "type": "unique low"},
+	"7 Golden Buckler": {"base": "Golden Buckler", "type": "unique low"},
 	"7 Golden Mask": {"base": "Golden Mask", "type": "unique low"},
 	"7 Great Helmet": {"base": "Great Helmet", "type": "unique low"},
 	"7 Great Mallet": {"base": "Great Mallet", "type": "unique low"},
@@ -291,14 +292,12 @@ items = {
 	"7 Iron Staff": {"base": "Iron Staff", "type": "unique low"},
 	"7 Ironscale Boots": {"base": "Ironscale Boots", "type": "unique low"},
 	"7 Ivory Spirit Shield": {"base": "Ivory Spirit Shield", "type": "unique low"},
-	"7 Jade Hatchet": {"base": "Jade Hatchet", "type": "unique low"},
 	"7 Jagged Foil": {"base": "Jagged Foil", "type": "unique low"},
 	"7 Jagged Maul": {"base": "Jagged Maul", "type": "unique low"},
 	"7 Karui Chopper": {"base": "Karui Chopper", "type": "unique low"},
 	"7 Karui Maul": {"base": "Karui Maul", "type": "unique low"},
 	"7 Latticed Ringmail": {"base": "Latticed Ringmail", "type": "unique low"},
 	"7 Leather Hood": {"base": "Leather Hood", "type": "unique low"},
-	"7 Legion Boots": {"base": "Legion Boots", "type": "unique low"},
 	"7 Long Bow": {"base": "Long Bow", "type": "unique low"},
 	"7 Lunaris Circlet": {"base": "Lunaris Circlet", "type": "unique low"},
 	"7 Mesh Boots": {"base": "Mesh Boots", "type": "unique low"},
@@ -324,9 +323,9 @@ items = {
 	"7 Riveted Boots": {"base": "Riveted Boots", "type": "unique low"},
 	"7 Rotted Round Shield": {"base": "Rotted Round Shield", "type": "unique low"},
 	"7 Royal Bow": {"base": "Royal Bow", "type": "unique low"},
-	"7 Royal Skean": {"base": "Royal Skean", "type": "unique low"},
 	"7 Royal Staff": {"base": "Royal Staff", "type": "unique low"},
 	"7 Rusted Sword": {"base": "Rusted Sword", "type": "unique low"},
+	"7 Sabre": {"base": "Sabre", "type": "unique low"},
 	"7 Sage Wand": {"base": "Sage Wand", "type": "unique low"},
 	"7 Sage's Robe": {"base": "Sage's Robe", "type": "unique low"},
 	"7 Samite Gloves": {"base": "Samite Gloves", "type": "unique low"},
@@ -375,6 +374,5 @@ items = {
 	"7 Wool Gloves": {"base": "Wool Gloves", "type": "unique low"},
 	"7 Wrapped Mitts": {"base": "Wrapped Mitts", "type": "unique low"},
 	"7 Wyrmscale Gauntlets": {"base": "Wyrmscale Gauntlets", "type": "unique low"},
-	"7 Zealot Helmet": {"base": "Zealot Helmet", "type": "unique low"},
 	"9 Other uniques": {"type": "unique normal"}
 }
