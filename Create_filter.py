@@ -226,6 +226,7 @@ if __name__ == "__main__":
 	for module in [divination, hcdivination, tdivination, thcdivination,
 				   uniques, hcuniques, tuniques, thcuniques,
 				   stcurrency, hccurrency, tcurrency, thccurrency,
-				   stessence, hcessence, tessence, thcessence]:
+				   stessence, hcessence, tessence, thcessence,
+				   bases, hcbases, tbases, thcbases]:
 		importlib.reload(module)
 	main(league)

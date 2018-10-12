@@ -11,7 +11,7 @@ items = {
 #	"03 5L": {"other": ["Rarity < Unique", "Sockets 5", "LinkedSockets 5", 'CustomAlertSound "20_show.wav"'], "type": "show high"},
 	"04 6S": {"other": ["Sockets 6", 'CustomAlertSound "45_show.wav"'], "type": "show high"},
 	"04 Incursion Item": {"other": ['CustomAlertSound "45_show.wav"'], "class": "Incursion Item", "type": "show high"},
-	"04 Timeworn Reliquary Key": {"base": "Timeworn Reliquary Key", "class": "Misc Map Items", "type": "show very high"},
+	"04 Timeworn Reliquary Key": {"base": "Timeworn Reliquary Key", "class": "Misc Map Items", "type": "map very good"},
 	# High value atlas bases.  Show and make noise at any rarity
 	"0 Fishing Rod": {"base": "Fishing Rod", "type": "show very high"},
 	"0 Hideout Doodads": {"class": "Hideout Doodads", "type": "show low"},
