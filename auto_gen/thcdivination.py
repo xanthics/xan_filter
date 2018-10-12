@@ -1,12 +1,12 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/11/2018(m/d/y) 01:27:24 UTC from "tmphardcore" data
+# Created: 10/12/2018(m/d/y) 04:59:39 UTC from "tmphardcore" data
 
 desc = "Divination Card"
 
 # Base type : settings pair
 items = {
-	"000 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination normal"},
+	"000 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination low"},
 	"001 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
 	"002 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination normal"},
 	"003 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination normal"},
@@ -42,7 +42,6 @@ items = {
 	"2 The World Eater": {"base": "The World Eater", "class": "Divination Card", "type": "divination very high"},
 	"2 Wealth and Power": {"base": "Wealth and Power", "class": "Divination Card", "type": "divination very high"},
 	"3 Boon of the First Ones": {"base": "Boon of the First Ones", "class": "Divination Card", "type": "divination high"},
-	"3 Boundless Realms": {"base": "Boundless Realms", "class": "Divination Card", "type": "divination high"},
 	"3 Bowyer's Dream": {"base": "Bowyer's Dream", "class": "Divination Card", "type": "divination high"},
 	"3 Chaotic Disposition": {"base": "Chaotic Disposition", "class": "Divination Card", "type": "divination high"},
 	"3 Dialla's Subjugation": {"base": "Dialla's Subjugation", "class": "Divination Card", "type": "divination high"},
@@ -51,7 +50,6 @@ items = {
 	"3 Harmony of Souls": {"base": "Harmony of Souls", "class": "Divination Card", "type": "divination high"},
 	"3 Heterochromia": {"base": "Heterochromia", "class": "Divination Card", "type": "divination high"},
 	"3 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
-	"3 Jack in the Box": {"base": "Jack in the Box", "class": "Divination Card", "type": "divination high"},
 	"3 Left to Fate": {"base": "Left to Fate", "class": "Divination Card", "type": "divination high"},
 	"3 Lingering Remnants": {"base": "Lingering Remnants", "class": "Divination Card", "type": "divination high"},
 	"3 Lucky Connections": {"base": "Lucky Connections", "class": "Divination Card", "type": "divination high"},
@@ -62,7 +60,6 @@ items = {
 	"3 The Aesthete": {"base": "The Aesthete", "class": "Divination Card", "type": "divination high"},
 	"3 The Avenger": {"base": "The Avenger", "class": "Divination Card", "type": "divination high"},
 	"3 The Beast": {"base": "The Beast", "class": "Divination Card", "type": "divination high"},
-	"3 The Body": {"base": "The Body", "class": "Divination Card", "type": "divination high"},
 	"3 The Breach": {"base": "The Breach", "class": "Divination Card", "type": "divination high"},
 	"3 The Brittle Emperor": {"base": "The Brittle Emperor", "class": "Divination Card", "type": "divination high"},
 	"3 The Cacophony": {"base": "The Cacophony", "class": "Divination Card", "type": "divination high"},
@@ -91,6 +88,7 @@ items = {
 	"3 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
 	"3 The Soul": {"base": "The Soul", "class": "Divination Card", "type": "divination high"},
 	"3 The Standoff": {"base": "The Standoff", "class": "Divination Card", "type": "divination high"},
+	"3 The Surveyor": {"base": "The Surveyor", "class": "Divination Card", "type": "divination high"},
 	"3 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination high"},
 	"3 The Throne": {"base": "The Throne", "class": "Divination Card", "type": "divination high"},
 	"3 The Twilight Moon": {"base": "The Twilight Moon", "class": "Divination Card", "type": "divination high"},
@@ -103,23 +101,22 @@ items = {
 	"3 The Warlord": {"base": "The Warlord", "class": "Divination Card", "type": "divination high"},
 	"3 The Wilted Rose": {"base": "The Wilted Rose", "class": "Divination Card", "type": "divination high"},
 	"3 The Wolf": {"base": "The Wolf", "class": "Divination Card", "type": "divination high"},
+	"3 The Wrath": {"base": "The Wrath", "class": "Divination Card", "type": "divination high"},
 	"3 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination high"},
 	"4 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "divination low"},
 	"4 Anarchy's Price": {"base": "Anarchy's Price", "class": "Divination Card", "type": "divination low"},
 	"4 Lantador's Lost Love": {"base": "Lantador's Lost Love", "class": "Divination Card", "type": "divination low"},
 	"4 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},
 	"4 The Betrayal": {"base": "The Betrayal", "class": "Divination Card", "type": "divination low"},
-	"4 The Conduit": {"base": "The Conduit", "class": "Divination Card", "type": "divination low"},
 	"4 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
-	"4 The Eye of the Dragon": {"base": "The Eye of the Dragon", "class": "Divination Card", "type": "divination low"},
 	"4 The Flora's Gift": {"base": "The Flora's Gift", "class": "Divination Card", "type": "divination low"},
-	"4 The Hermit": {"base": "The Hermit", "class": "Divination Card", "type": "divination low"},
 	"4 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination low"},
-	"4 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination low"},
 	"4 The Lover": {"base": "The Lover", "class": "Divination Card", "type": "divination low"},
 	"4 The Lunaris Priestess": {"base": "The Lunaris Priestess", "class": "Divination Card", "type": "divination low"},
 	"4 The Opulent": {"base": "The Opulent", "class": "Divination Card", "type": "divination low"},
+	"4 The Ruthless Ceinture": {"base": "The Ruthless Ceinture", "class": "Divination Card", "type": "divination low"},
 	"4 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},
+	"4 The Wolverine": {"base": "The Wolverine", "class": "Divination Card", "type": "divination low"},
 	"7 Blessing of God": {"base": "Blessing of God", "class": "Divination Card", "type": "hide"},
 	"7 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "hide"},
 	"7 Dying Anguish": {"base": "Dying Anguish", "class": "Divination Card", "type": "hide"},

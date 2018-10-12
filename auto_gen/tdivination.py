@@ -1,12 +1,12 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/11/2018(m/d/y) 01:27:23 UTC from "tmpstandard" data
+# Created: 10/12/2018(m/d/y) 04:59:38 UTC from "tmpstandard" data
 
 desc = "Divination Card"
 
 # Base type : settings pair
 items = {
-	"000 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination normal"},
+	"000 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination low"},
 	"001 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
 	"002 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination high"},
 	"003 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination normal"},
@@ -32,6 +32,7 @@ items = {
 	"2 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
 	"2 The Saint's Treasure": {"base": "The Saint's Treasure", "class": "Divination Card", "type": "divination very high"},
 	"2 The Samurai's Eye": {"base": "The Samurai's Eye", "class": "Divination Card", "type": "divination very high"},
+	"2 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination very high"},
 	"2 The Spark and the Flame": {"base": "The Spark and the Flame", "class": "Divination Card", "type": "divination very high"},
 	"2 The Undaunted": {"base": "The Undaunted", "class": "Divination Card", "type": "divination very high"},
 	"2 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination very high"},
@@ -53,7 +54,7 @@ items = {
 	"3 The Brittle Emperor": {"base": "The Brittle Emperor", "class": "Divination Card", "type": "divination high"},
 	"3 The Cartographer": {"base": "The Cartographer", "class": "Divination Card", "type": "divination high"},
 	"3 The Celestial Justicar": {"base": "The Celestial Justicar", "class": "Divination Card", "type": "divination high"},
-	"3 The Cursed King": {"base": "The Cursed King", "class": "Divination Card", "type": "divination high"},
+	"3 The Chains that Bind": {"base": "The Chains that Bind", "class": "Divination Card", "type": "divination high"},
 	"3 The Dapper Prodigy": {"base": "The Dapper Prodigy", "class": "Divination Card", "type": "divination high"},
 	"3 The Dark Mage": {"base": "The Dark Mage", "class": "Divination Card", "type": "divination high"},
 	"3 The Dreamer": {"base": "The Dreamer", "class": "Divination Card", "type": "divination high"},
@@ -72,8 +73,6 @@ items = {
 	"3 The Porcupine": {"base": "The Porcupine", "class": "Divination Card", "type": "divination high"},
 	"3 The Price of Protection": {"base": "The Price of Protection", "class": "Divination Card", "type": "divination high"},
 	"3 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
-	"3 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination high"},
-	"3 The Standoff": {"base": "The Standoff", "class": "Divination Card", "type": "divination high"},
 	"3 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination high"},
 	"3 The Throne": {"base": "The Throne", "class": "Divination Card", "type": "divination high"},
 	"3 The Twilight Moon": {"base": "The Twilight Moon", "class": "Divination Card", "type": "divination high"},
@@ -91,10 +90,11 @@ items = {
 	"4 Assassin's Favour": {"base": "Assassin's Favour", "class": "Divination Card", "type": "divination low"},
 	"4 Cartographer's Delight": {"base": "Cartographer's Delight", "class": "Divination Card", "type": "divination low"},
 	"4 Death": {"base": "Death", "class": "Divination Card", "type": "divination low"},
+	"4 Doedre's Madness": {"base": "Doedre's Madness", "class": "Divination Card", "type": "divination low"},
+	"4 Her Mask": {"base": "Her Mask", "class": "Divination Card", "type": "divination low"},
 	"4 Lantador's Lost Love": {"base": "Lantador's Lost Love", "class": "Divination Card", "type": "divination low"},
 	"4 Might is Right": {"base": "Might is Right", "class": "Divination Card", "type": "divination low"},
-	"4 Mitts": {"base": "Mitts", "class": "Divination Card", "type": "divination low"},
-	"4 Rats": {"base": "Rats", "class": "Divination Card", "type": "divination low"},
+	"4 Rain of Chaos": {"base": "Rain of Chaos", "class": "Divination Card", "type": "divination low"},
 	"4 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},
 	"4 The Battle Born": {"base": "The Battle Born", "class": "Divination Card", "type": "divination low"},
 	"4 The Betrayal": {"base": "The Betrayal", "class": "Divination Card", "type": "divination low"},
@@ -102,9 +102,7 @@ items = {
 	"4 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
 	"4 The Flora's Gift": {"base": "The Flora's Gift", "class": "Divination Card", "type": "divination low"},
 	"4 The Fox": {"base": "The Fox", "class": "Divination Card", "type": "divination low"},
-	"4 The Gambler": {"base": "The Gambler", "class": "Divination Card", "type": "divination low"},
 	"4 The Gentleman": {"base": "The Gentleman", "class": "Divination Card", "type": "divination low"},
-	"4 The Gladiator": {"base": "The Gladiator", "class": "Divination Card", "type": "divination low"},
 	"4 The Hermit": {"base": "The Hermit", "class": "Divination Card", "type": "divination low"},
 	"4 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination low"},
 	"4 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination low"},
@@ -117,6 +115,7 @@ items = {
 	"4 The Visionary": {"base": "The Visionary", "class": "Divination Card", "type": "divination low"},
 	"4 The Warden": {"base": "The Warden", "class": "Divination Card", "type": "divination low"},
 	"4 The Wolverine": {"base": "The Wolverine", "class": "Divination Card", "type": "divination low"},
+	"4 Turn the Other Cheek": {"base": "Turn the Other Cheek", "class": "Divination Card", "type": "divination low"},
 	"7 Blessing of God": {"base": "Blessing of God", "class": "Divination Card", "type": "hide"},
 	"7 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "hide"},
 	"7 Dying Anguish": {"base": "Dying Anguish", "class": "Divination Card", "type": "hide"},
