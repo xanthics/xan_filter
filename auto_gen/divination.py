@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/11/2018(m/d/y) 01:27:22 UTC from "Standard" data
+# Created: 10/12/2018(m/d/y) 04:59:37 UTC from "Standard" data
 
 desc = "Divination Card"
 
@@ -18,7 +18,6 @@ items = {
 	"1 The Doctor": {"base": "The Doctor", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Fiend": {"base": "The Fiend", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Immortal": {"base": "The Immortal", "class": "Divination Card", "type": "divination extremely high"},
-	"1 The Samurai's Eye": {"base": "The Samurai's Eye", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Spark and the Flame": {"base": "The Spark and the Flame", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Wolven King's Bite": {"base": "The Wolven King's Bite", "class": "Divination Card", "type": "divination extremely high"},
 	"2 Abandoned Wealth": {"base": "Abandoned Wealth", "class": "Divination Card", "type": "divination very high"},
@@ -39,6 +38,7 @@ items = {
 	"2 The Professor": {"base": "The Professor", "class": "Divination Card", "type": "divination very high"},
 	"2 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
 	"2 The Saint's Treasure": {"base": "The Saint's Treasure", "class": "Divination Card", "type": "divination very high"},
+	"2 The Samurai's Eye": {"base": "The Samurai's Eye", "class": "Divination Card", "type": "divination very high"},
 	"2 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination very high"},
 	"2 The Undaunted": {"base": "The Undaunted", "class": "Divination Card", "type": "divination very high"},
 	"2 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination very high"},
@@ -50,9 +50,9 @@ items = {
 	"2 Wealth and Power": {"base": "Wealth and Power", "class": "Divination Card", "type": "divination very high"},
 	"3 Atziri's Arsenal": {"base": "Atziri's Arsenal", "class": "Divination Card", "type": "divination high"},
 	"3 Birth of the Three": {"base": "Birth of the Three", "class": "Divination Card", "type": "divination high"},
+	"3 Dialla's Subjugation": {"base": "Dialla's Subjugation", "class": "Divination Card", "type": "divination high"},
 	"3 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination high"},
 	"3 Harmony of Souls": {"base": "Harmony of Souls", "class": "Divination Card", "type": "divination high"},
-	"3 Hope": {"base": "Hope", "class": "Divination Card", "type": "divination high"},
 	"3 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
 	"3 Jack in the Box": {"base": "Jack in the Box", "class": "Divination Card", "type": "divination high"},
 	"3 Left to Fate": {"base": "Left to Fate", "class": "Divination Card", "type": "divination high"},
@@ -60,7 +60,6 @@ items = {
 	"3 Lost Worlds": {"base": "Lost Worlds", "class": "Divination Card", "type": "divination high"},
 	"3 Lucky Connections": {"base": "Lucky Connections", "class": "Divination Card", "type": "divination high"},
 	"3 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination high"},
-	"3 No Traces": {"base": "No Traces", "class": "Divination Card", "type": "divination high"},
 	"3 Rebirth": {"base": "Rebirth", "class": "Divination Card", "type": "divination high"},
 	"3 Scholar of the Seas": {"base": "Scholar of the Seas", "class": "Divination Card", "type": "divination high"},
 	"3 The Admirer": {"base": "The Admirer", "class": "Divination Card", "type": "divination high"},
@@ -101,6 +100,7 @@ items = {
 	"3 The Porcupine": {"base": "The Porcupine", "class": "Divination Card", "type": "divination high"},
 	"3 The Price of Protection": {"base": "The Price of Protection", "class": "Divination Card", "type": "divination high"},
 	"3 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
+	"3 The Soul": {"base": "The Soul", "class": "Divination Card", "type": "divination high"},
 	"3 The Standoff": {"base": "The Standoff", "class": "Divination Card", "type": "divination high"},
 	"3 The Stormcaller": {"base": "The Stormcaller", "class": "Divination Card", "type": "divination high"},
 	"3 The Sun": {"base": "The Sun", "class": "Divination Card", "type": "divination high"},
@@ -120,6 +120,8 @@ items = {
 	"3 Vinia's Token": {"base": "Vinia's Token", "class": "Divination Card", "type": "divination high"},
 	"4 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "divination low"},
 	"4 Anarchy's Price": {"base": "Anarchy's Price", "class": "Divination Card", "type": "divination low"},
+	"4 Audacity": {"base": "Audacity", "class": "Divination Card", "type": "divination low"},
+	"4 Call to the First Ones": {"base": "Call to the First Ones", "class": "Divination Card", "type": "divination low"},
 	"4 Death": {"base": "Death", "class": "Divination Card", "type": "divination low"},
 	"4 Her Mask": {"base": "Her Mask", "class": "Divination Card", "type": "divination low"},
 	"4 Lantador's Lost Love": {"base": "Lantador's Lost Love", "class": "Divination Card", "type": "divination low"},
