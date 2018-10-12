@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/12/2018(m/d/y) 04:59:38 UTC from "tmpstandard" data
+# Created: 10/12/2018(m/d/y) 23:52:25 UTC from "tmpstandard" data
 
 desc = "Currency Autogen"
 
@@ -33,17 +33,17 @@ items = {
 	"07 Binding Shard": {"base": "Binding Shard", 'other': ['StackSize >= 12'], "class": "Currency", "type": "currency normal"},
 	"1 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", "class": "Currency", "type": "hide"},
 	"09 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency very low"},
-	"08 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency low"},
-	"07 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", 'other': ['StackSize >= 9'], "class": "Currency", "type": "currency normal"},
+	"08 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency low"},
+	"07 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", 'other': ['StackSize >= 13'], "class": "Currency", "type": "currency normal"},
 	"1 Blessed Orb": {"base": "Blessed Orb", "class": "Currency", "type": "currency low"},
 	"09 Blessed Orb": {"base": "Blessed Orb", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency normal"},
-	"08 Blessed Orb": {"base": "Blessed Orb", 'other': ['StackSize >= 6'], "class": "Currency", "type": "currency high"},
+	"08 Blessed Orb": {"base": "Blessed Orb", 'other': ['StackSize >= 7'], "class": "Currency", "type": "currency high"},
 	"1 Blessing of Chayula": {"base": "Blessing of Chayula", "class": "Currency", "type": "currency extremely high"},
 	"1 Blessing of Esh": {"base": "Blessing of Esh", "class": "Currency", "type": "currency high"},
 	"1 Blessing of Tul": {"base": "Blessing of Tul", "class": "Currency", "type": "currency high"},
 	"1 Blessing of Uul-Netol": {"base": "Blessing of Uul-Netol", "class": "Currency", "type": "currency high"},
 	"1 Blessing of Xoph": {"base": "Blessing of Xoph", "class": "Currency", "type": "currency high"},
-	"1 Bloodstained Fossil": {"base": "Bloodstained Fossil", "class": "Currency", "type": "currency very high"},
+	"1 Bloodstained Fossil": {"base": "Bloodstained Fossil", "class": "Currency", "type": "currency extremely high"},
 	"1 Bound Fossil": {"base": "Bound Fossil", "class": "Currency", "type": "currency high"},
 	"1 Cartographer's Chisel": {"base": "Cartographer's Chisel", "class": "Currency", "type": "currency normal"},
 	"09 Cartographer's Chisel": {"base": "Cartographer's Chisel", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency high"},
@@ -61,7 +61,7 @@ items = {
 	"1 Divine Orb": {"base": "Divine Orb", "class": "Currency", "type": "currency very high"},
 	"09 Divine Orb": {"base": "Divine Orb", 'other': ['StackSize >= 8'], "class": "Currency", "type": "currency extremely high"},
 	"1 Enchanted Fossil": {"base": "Enchanted Fossil", "class": "Currency", "type": "currency high"},
-	"1 Encrusted Fossil": {"base": "Encrusted Fossil", "class": "Currency", "type": "currency very high"},
+	"1 Encrusted Fossil": {"base": "Encrusted Fossil", "class": "Currency", "type": "currency high"},
 	"1 Engineer's Orb": {"base": "Engineer's Orb", "class": "Currency", "type": "currency high"},
 	"09 Engineer's Orb": {"base": "Engineer's Orb", 'other': ['StackSize >= 9'], "class": "Currency", "type": "currency very high"},
 	"1 Engineer's Shard": {"base": "Engineer's Shard", "class": "Currency", "type": "currency low"},
@@ -75,7 +75,7 @@ items = {
 	"1 Fractured Fossil ": {"base": "Fractured Fossil ", "class": "Currency", "type": "currency very high"},
 	"1 Frigid Fossil": {"base": "Frigid Fossil", "class": "Currency", "type": "currency normal"},
 	"1 Gemcutter's Prism": {"base": "Gemcutter's Prism", "class": "Currency", "type": "currency normal"},
-	"1 Gilded Fossil": {"base": "Gilded Fossil", "class": "Currency", "type": "currency very high"},
+	"1 Gilded Fossil": {"base": "Gilded Fossil", "class": "Currency", "type": "currency high"},
 	"1 Glassblower's Bauble": {"base": "Glassblower's Bauble", "class": "Currency", "type": "currency low"},
 	"09 Glassblower's Bauble": {"base": "Glassblower's Bauble", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency normal"},
 	"08 Glassblower's Bauble": {"base": "Glassblower's Bauble", 'other': ['StackSize >= 7'], "class": "Currency", "type": "currency high"},
@@ -88,7 +88,7 @@ items = {
 	"1 Horizon Shard": {"base": "Horizon Shard", "class": "Currency", "type": "currency very low"},
 	"09 Horizon Shard": {"base": "Horizon Shard", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency low"},
 	"08 Horizon Shard": {"base": "Horizon Shard", 'other': ['StackSize >= 5'], "class": "Currency", "type": "currency normal"},
-	"07 Horizon Shard": {"base": "Horizon Shard", 'other': ['StackSize >= 17'], "class": "Currency", "type": "currency high"},
+	"07 Horizon Shard": {"base": "Horizon Shard", 'other': ['StackSize >= 18'], "class": "Currency", "type": "currency high"},
 	"1 Jagged Fossil": {"base": "Jagged Fossil", "class": "Currency", "type": "currency high"},
 	"1 Jeweller's Orb": {"base": "Jeweller's Orb", "class": "Currency", "type": "currency show"},
 	"09 Jeweller's Orb": {"base": "Jeweller's Orb", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency normal"},
@@ -121,7 +121,7 @@ items = {
 	"1 Orb of Fusing": {"base": "Orb of Fusing", "class": "Currency", "type": "currency normal"},
 	"09 Orb of Fusing": {"base": "Orb of Fusing", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency high"},
 	"1 Orb of Horizons": {"base": "Orb of Horizons", "class": "Currency", "type": "currency high"},
-	"09 Orb of Horizons": {"base": "Orb of Horizons", 'other': ['StackSize >= 11'], "class": "Currency", "type": "currency very high"},
+	"09 Orb of Horizons": {"base": "Orb of Horizons", 'other': ['StackSize >= 12'], "class": "Currency", "type": "currency very high"},
 	"1 Orb of Regret": {"base": "Orb of Regret", "class": "Currency", "type": "currency normal"},
 	"09 Orb of Regret": {"base": "Orb of Regret", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency high"},
 	"1 Orb of Scouring": {"base": "Orb of Scouring", "class": "Currency", "type": "currency normal"},
@@ -155,7 +155,7 @@ items = {
 	"08 Regal Shard": {"base": "Regal Shard", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency low"},
 	"07 Regal Shard": {"base": "Regal Shard", 'other': ['StackSize >= 9'], "class": "Currency", "type": "currency normal"},
 	"1 Sanctified Fossil": {"base": "Sanctified Fossil", "class": "Currency", "type": "currency very high"},
-	"1 Scorched Fossil": {"base": "Scorched Fossil", "class": "Currency", "type": "currency show"},
+	"1 Scorched Fossil": {"base": "Scorched Fossil", "class": "Currency", "type": "currency normal"},
 	"1 Scroll Fragment": {"base": "Scroll Fragment", "class": "Currency", "type": "hide"},
 	"1 Scroll of Wisdom": {"base": "Scroll of Wisdom", "class": "Currency", "type": "hide"},
 	"09 Scroll of Wisdom": {"base": "Scroll of Wisdom", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency very low"},
@@ -180,5 +180,5 @@ items = {
 	"1 Tangled Fossil": {"base": "Tangled Fossil", "class": "Currency", "type": "currency very high"},
 	"1 Transmutation Shard": {"base": "Transmutation Shard", "class": "Currency", "type": "hide"},
 	"1 Vaal Orb": {"base": "Vaal Orb", "class": "Currency", "type": "currency high"},
-	"09 Vaal Orb": {"base": "Vaal Orb", 'other': ['StackSize >= 10'], "class": "Currency", "type": "currency very high"},
+	"09 Vaal Orb": {"base": "Vaal Orb", 'other': ['StackSize >= 9'], "class": "Currency", "type": "currency very high"},
 }

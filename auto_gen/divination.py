@@ -1,16 +1,17 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/12/2018(m/d/y) 04:59:37 UTC from "Standard" data
+# Created: 10/12/2018(m/d/y) 23:52:24 UTC from "Standard" data
 
 desc = "Divination Card"
 
 # Base type : settings pair
 items = {
-	"000 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination low"},
+	"000 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination normal"},
 	"001 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
 	"002 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination high"},
 	"003 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination normal"},
 	"004 Beauty Through Death": {"base": "Beauty Through Death", "class": "Divination Card", "type": "divination extremely high"},
+	"1 Chaotic Disposition": {"base": "Chaotic Disposition", "class": "Divination Card", "type": "divination extremely high"},
 	"1 House of Mirrors": {"base": "House of Mirrors", "class": "Divination Card", "type": "divination extremely high"},
 	"1 Hunter's Reward": {"base": "Hunter's Reward", "class": "Divination Card", "type": "divination extremely high"},
 	"1 Immortal Resolve": {"base": "Immortal Resolve", "class": "Divination Card", "type": "divination extremely high"},
@@ -18,6 +19,7 @@ items = {
 	"1 The Doctor": {"base": "The Doctor", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Fiend": {"base": "The Fiend", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Immortal": {"base": "The Immortal", "class": "Divination Card", "type": "divination extremely high"},
+	"1 The Samurai's Eye": {"base": "The Samurai's Eye", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Spark and the Flame": {"base": "The Spark and the Flame", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Wolven King's Bite": {"base": "The Wolven King's Bite", "class": "Divination Card", "type": "divination extremely high"},
 	"2 Abandoned Wealth": {"base": "Abandoned Wealth", "class": "Divination Card", "type": "divination very high"},
@@ -38,7 +40,6 @@ items = {
 	"2 The Professor": {"base": "The Professor", "class": "Divination Card", "type": "divination very high"},
 	"2 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
 	"2 The Saint's Treasure": {"base": "The Saint's Treasure", "class": "Divination Card", "type": "divination very high"},
-	"2 The Samurai's Eye": {"base": "The Samurai's Eye", "class": "Divination Card", "type": "divination very high"},
 	"2 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination very high"},
 	"2 The Undaunted": {"base": "The Undaunted", "class": "Divination Card", "type": "divination very high"},
 	"2 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination very high"},
@@ -53,6 +54,7 @@ items = {
 	"3 Dialla's Subjugation": {"base": "Dialla's Subjugation", "class": "Divination Card", "type": "divination high"},
 	"3 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination high"},
 	"3 Harmony of Souls": {"base": "Harmony of Souls", "class": "Divination Card", "type": "divination high"},
+	"3 Hope": {"base": "Hope", "class": "Divination Card", "type": "divination high"},
 	"3 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
 	"3 Jack in the Box": {"base": "Jack in the Box", "class": "Divination Card", "type": "divination high"},
 	"3 Left to Fate": {"base": "Left to Fate", "class": "Divination Card", "type": "divination high"},
@@ -77,6 +79,8 @@ items = {
 	"3 The Dapper Prodigy": {"base": "The Dapper Prodigy", "class": "Divination Card", "type": "divination high"},
 	"3 The Dark Mage": {"base": "The Dark Mage", "class": "Divination Card", "type": "divination high"},
 	"3 The Darkest Dream": {"base": "The Darkest Dream", "class": "Divination Card", "type": "divination high"},
+	"3 The Demoness": {"base": "The Demoness", "class": "Divination Card", "type": "divination high"},
+	"3 The Dreamland": {"base": "The Dreamland", "class": "Divination Card", "type": "divination high"},
 	"3 The Enlightened": {"base": "The Enlightened", "class": "Divination Card", "type": "divination high"},
 	"3 The Ethereal": {"base": "The Ethereal", "class": "Divination Card", "type": "divination high"},
 	"3 The Fathomless Depths": {"base": "The Fathomless Depths", "class": "Divination Card", "type": "divination high"},
@@ -104,9 +108,11 @@ items = {
 	"3 The Standoff": {"base": "The Standoff", "class": "Divination Card", "type": "divination high"},
 	"3 The Stormcaller": {"base": "The Stormcaller", "class": "Divination Card", "type": "divination high"},
 	"3 The Sun": {"base": "The Sun", "class": "Divination Card", "type": "divination high"},
+	"3 The Surveyor": {"base": "The Surveyor", "class": "Divination Card", "type": "divination high"},
 	"3 The Sword King's Salute": {"base": "The Sword King's Salute", "class": "Divination Card", "type": "divination high"},
 	"3 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination high"},
 	"3 The Throne": {"base": "The Throne", "class": "Divination Card", "type": "divination high"},
+	"3 The Traitor": {"base": "The Traitor", "class": "Divination Card", "type": "divination high"},
 	"3 The Trial": {"base": "The Trial", "class": "Divination Card", "type": "divination high"},
 	"3 The Twilight Moon": {"base": "The Twilight Moon", "class": "Divination Card", "type": "divination high"},
 	"3 The Union": {"base": "The Union", "class": "Divination Card", "type": "divination high"},
@@ -116,12 +122,8 @@ items = {
 	"3 The Wilted Rose": {"base": "The Wilted Rose", "class": "Divination Card", "type": "divination high"},
 	"3 The Wrath": {"base": "The Wrath", "class": "Divination Card", "type": "divination high"},
 	"3 The Wretched": {"base": "The Wretched", "class": "Divination Card", "type": "divination high"},
-	"3 Tranquillity": {"base": "Tranquillity", "class": "Divination Card", "type": "divination high"},
-	"3 Vinia's Token": {"base": "Vinia's Token", "class": "Divination Card", "type": "divination high"},
 	"4 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "divination low"},
 	"4 Anarchy's Price": {"base": "Anarchy's Price", "class": "Divination Card", "type": "divination low"},
-	"4 Audacity": {"base": "Audacity", "class": "Divination Card", "type": "divination low"},
-	"4 Call to the First Ones": {"base": "Call to the First Ones", "class": "Divination Card", "type": "divination low"},
 	"4 Death": {"base": "Death", "class": "Divination Card", "type": "divination low"},
 	"4 Her Mask": {"base": "Her Mask", "class": "Divination Card", "type": "divination low"},
 	"4 Lantador's Lost Love": {"base": "Lantador's Lost Love", "class": "Divination Card", "type": "divination low"},
@@ -145,6 +147,7 @@ items = {
 	"4 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},
 	"4 The Siren": {"base": "The Siren", "class": "Divination Card", "type": "divination low"},
 	"4 The Warden": {"base": "The Warden", "class": "Divination Card", "type": "divination low"},
+	"4 Three Faces in the Dark": {"base": "Three Faces in the Dark", "class": "Divination Card", "type": "divination low"},
 	"4 Turn the Other Cheek": {"base": "Turn the Other Cheek", "class": "Divination Card", "type": "divination low"},
 	"7 Blessing of God": {"base": "Blessing of God", "class": "Divination Card", "type": "hide"},
 	"7 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "hide"},
