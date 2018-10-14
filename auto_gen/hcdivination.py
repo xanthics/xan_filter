@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/12/2018(m/d/y) 23:52:25 UTC from "Hardcore" data
+# Created: 10/14/2018(m/d/y) 07:18:12 UTC from "Hardcore" data
 
 desc = "Divination Card"
 
@@ -20,6 +20,7 @@ items = {
 	"4 The Beast": {"base": "The Beast", "class": "Divination Card", "type": "divination low"},
 	"4 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
 	"4 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination low"},
+	"4 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination low"},
 	"4 The Lover": {"base": "The Lover", "class": "Divination Card", "type": "divination low"},
 	"4 The Opulent": {"base": "The Opulent", "class": "Divination Card", "type": "divination low"},
 	"4 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},
