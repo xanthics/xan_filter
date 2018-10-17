@@ -1,6 +1,6 @@
 #**************************************************************
 # Welcome to xan.filter, a Python generated loot filter for PoE
-# This filter was generated for Standard on 10/14/2018(m/d/y) 07:18:25 UTC
+# This filter was generated for Standard on 10/17/2018(m/d/y) 17:20:57 UTC
 # The most current version of code can always be found at https://github.com/xanthics/poe_filter
 #**************************************************************
 
@@ -136,7 +136,19 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Chaos Shard" "Horizon Shard"
+	BaseType "Horizon Shard"
+	Class "Currency"
+	StackSize >= 19
+	CustomAlertSound "75_currency.wav"
+	MinimapIcon 1 Yellow Circle
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 170 158 130
+	SetFontSize 40
+	DisableDropSound True
+
+#Currency Autogen
+Show
+	BaseType "Chaos Shard"
 	Class "Currency"
 	StackSize >= 20
 	CustomAlertSound "75_currency.wav"
@@ -148,9 +160,9 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Engineer's Shard"
+	BaseType "Blacksmith's Whetstone"
 	Class "Currency"
-	StackSize >= 12
+	StackSize >= 13
 	CustomAlertSound "20_currency.wav"
 	MinimapIcon 2 Yellow Circle
 	SetBackgroundColor 0 0 0 220
@@ -174,7 +186,7 @@ Show
 Show
 	BaseType "Alchemy Shard"
 	Class "Currency"
-	StackSize >= 17
+	StackSize >= 18
 	CustomAlertSound "20_currency.wav"
 	MinimapIcon 2 Yellow Circle
 	SetBackgroundColor 0 0 0 220
@@ -184,7 +196,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Blacksmith's Whetstone" "Orb of Augmentation"
+	BaseType "Engineer's Shard" "Orb of Augmentation"
 	Class "Currency"
 	StackSize >= 9
 	CustomAlertSound "20_currency.wav"
@@ -198,7 +210,7 @@ Show
 Show
 	BaseType "Exalted Shard"
 	Class "Currency"
-	StackSize >= 19
+	StackSize >= 20
 	CustomAlertSound "300_valuable.wav"
 	MinimapIcon 0 Yellow Circle
 	PlayEffect Yellow
@@ -209,7 +221,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Glassblower's Bauble" "Orb of Alteration" "Splinter of Esh" "Splinter of Tul"
+	BaseType "Orb of Alteration"
 	Class "Currency"
 	StackSize >= 10
 	CustomAlertSound "75_currency.wav"
@@ -221,7 +233,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Silver Coin" "Splinter of Uul-Netol"
+	BaseType "Silver Coin" "Splinter of Xoph"
 	Class "Currency"
 	StackSize >= 5
 	CustomAlertSound "75_currency.wav"
@@ -233,7 +245,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Chromatic Orb"
+	BaseType "Chromatic Orb" "Splinter of Esh"
 	Class "Currency"
 	StackSize >= 7
 	CustomAlertSound "75_currency.wav"
@@ -245,7 +257,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Jeweller's Orb"
+	BaseType "Splinter of Tul"
 	Class "Currency"
 	StackSize >= 8
 	CustomAlertSound "75_currency.wav"
@@ -257,7 +269,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Orb of Chance"
+	BaseType "Glassblower's Bauble" "Jeweller's Orb" "Orb of Chance"
 	Class "Currency"
 	StackSize >= 9
 	CustomAlertSound "75_currency.wav"
@@ -278,7 +290,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Blacksmith's Whetstone" "Orb of Augmentation"
+	BaseType "Engineer's Shard" "Orb of Augmentation"
 	Class "Currency"
 	StackSize >= 3
 	SetBackgroundColor 0 0 0 220
@@ -287,7 +299,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Engineer's Shard"
+	BaseType "Blacksmith's Whetstone"
 	Class "Currency"
 	StackSize >= 4
 	SetBackgroundColor 0 0 0 220
@@ -364,9 +376,9 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Orb of Fusing"
+	BaseType "Engineer's Orb"
 	Class "Currency"
-	StackSize >= 20
+	StackSize >= 17
 	CustomAlertSound "100_currency.wav"
 	MinimapIcon 1 Yellow Circle
 	PlayEffect Yellow
@@ -403,7 +415,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Annulment Shard" "Orb of Fusing" "Orb of Regret" "Regal Orb"
+	BaseType "Annulment Shard" "Engineer's Orb" "Orb of Regret" "Regal Orb"
 	Class "Currency"
 	StackSize >= 2
 	CustomAlertSound "75_currency.wav"
@@ -415,7 +427,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Engineer's Orb" "Orb of Scouring"
+	BaseType "Orb of Fusing" "Orb of Scouring"
 	Class "Currency"
 	StackSize >= 3
 	CustomAlertSound "75_currency.wav"
@@ -427,7 +439,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Blessed Orb" "Cartographer's Chisel" "Orb of Alchemy" "Orb of Binding" "Splinter of Xoph"
+	BaseType "Blessed Orb" "Cartographer's Chisel" "Orb of Alchemy" "Orb of Binding" "Splinter of Uul-Netol"
 	Class "Currency"
 	StackSize >= 4
 	CustomAlertSound "75_currency.wav"
@@ -448,7 +460,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Chromatic Orb" "Jeweller's Orb" "Silver Coin" "Splinter of Uul-Netol"
+	BaseType "Chromatic Orb" "Silver Coin" "Splinter of Esh" "Splinter of Tul" "Splinter of Xoph"
 	Class "Currency"
 	StackSize >= 2
 	CustomAlertSound "20_currency.wav"
@@ -460,7 +472,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Glassblower's Bauble" "Orb of Alteration" "Orb of Chance" "Splinter of Esh" "Splinter of Tul"
+	BaseType "Glassblower's Bauble" "Jeweller's Orb" "Orb of Alteration" "Orb of Chance"
 	Class "Currency"
 	StackSize >= 3
 	CustomAlertSound "20_currency.wav"
@@ -619,7 +631,7 @@ Hide
 
 #Currency Autogen
 Show
-	BaseType "Aetheric Fossil" "Blessing of Chayula" "Corroded Fossil" "Eternal Orb" "Exalted Orb" "Fractured Fossil " "Frigid Fossil" "Mirror Shard" "Mirror of Kalandra" "Prismatic Fossil" "Pristine Fossil" "Serrated Fossil"
+	BaseType "Blessing of Chayula" "Eternal Orb" "Exalted Orb" "Fractured Fossil " "Mirror Shard" "Mirror of Kalandra"
 	Class "Currency"
 	CustomAlertSound "300_valuable.wav"
 	MinimapIcon 0 Yellow Circle
@@ -631,7 +643,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Ancient Shard" "Apprentice Cartographer's Sextant" "Blessing of Esh" "Blessing of Tul" "Blessing of Xoph" "Chaos Orb" "Enchanted Fossil" "Encrusted Fossil" "Exalted Shard" "Gemcutter's Prism" "Harbinger's Shard" "Journeyman Cartographer's Sextant" "Lucent Fossil" "Master Cartographer's Sextant" "Orb of Horizons" "Splinter of Chayula" "Vaal Orb"
+	BaseType "Ancient Shard" "Apprentice Cartographer's Sextant" "Blessing of Esh" "Blessing of Tul" "Blessing of Uul-Netol" "Blessing of Xoph" "Chaos Orb" "Enchanted Fossil" "Encrusted Fossil" "Exalted Shard" "Gemcutter's Prism" "Harbinger's Shard" "Journeyman Cartographer's Sextant" "Lucent Fossil" "Master Cartographer's Sextant" "Orb of Horizons" "Primitive Chaotic Resonator" "Splinter of Chayula" "Vaal Orb"
 	Class "Currency"
 	CustomAlertSound "75_currency.wav"
 	MinimapIcon 1 Yellow Circle
@@ -650,7 +662,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Annulment Shard" "Blessed Orb" "Cartographer's Chisel" "Engineer's Orb" "Orb of Alchemy" "Orb of Binding" "Orb of Fusing" "Orb of Regret" "Orb of Scouring" "Potent Chaotic Resonator" "Regal Orb" "Splinter of Xoph"
+	BaseType "Annulment Shard" "Blessed Orb" "Cartographer's Chisel" "Engineer's Orb" "Orb of Alchemy" "Orb of Binding" "Orb of Fusing" "Orb of Regret" "Orb of Scouring" "Regal Orb" "Splinter of Uul-Netol"
 	Class "Currency"
 	CustomAlertSound "20_currency.wav"
 	MinimapIcon 2 Yellow Circle
@@ -661,7 +673,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Chromatic Orb" "Orb of Chance" "Perandus Coin" "Splinter of Esh" "Splinter of Tul" "Splinter of Uul-Netol"
+	BaseType "Chromatic Orb" "Orb of Chance" "Perandus Coin" "Splinter of Esh" "Splinter of Tul" "Splinter of Xoph"
 	Class "Currency"
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 170 158 130 150
@@ -670,7 +682,7 @@ Show
 
 #Currency Autogen
 Show
-	BaseType "Aberrant Fossil" "Ancient Orb" "Blessing of Uul-Netol" "Bloodstained Fossil" "Bound Fossil" "Dense Fossil" "Divine Orb" "Faceted Fossil" "Gilded Fossil" "Glyphic Fossil" "Harbinger's Orb" "Hollow Fossil" "Jagged Fossil" "Metallic Fossil" "Orb of Annulment" "Perfect Fossil" "Powerful Chaotic Resonator" "Prime Alchemical Resonator" "Prime Chaotic Resonator" "Primitive Chaotic Resonator" "Sanctified Fossil" "Scorched Fossil" "Shuddering Fossil" "Tangled Fossil"
+	BaseType "Aberrant Fossil" "Aetheric Fossil" "Ancient Orb" "Bloodstained Fossil" "Bound Fossil" "Corroded Fossil" "Dense Fossil" "Divine Orb" "Faceted Fossil" "Frigid Fossil" "Gilded Fossil" "Glyphic Fossil" "Harbinger's Orb" "Hollow Fossil" "Jagged Fossil" "Metallic Fossil" "Orb of Annulment" "Perfect Fossil" "Potent Chaotic Resonator" "Powerful Chaotic Resonator" "Prime Alchemical Resonator" "Prime Chaotic Resonator" "Prismatic Fossil" "Pristine Fossil" "Sanctified Fossil" "Scorched Fossil" "Serrated Fossil" "Shuddering Fossil" "Tangled Fossil"
 	Class "Currency"
 	CustomAlertSound "100_currency.wav"
 	MinimapIcon 1 Yellow Circle
@@ -690,19 +702,7 @@ Show
 
 #Essence Autogen
 Show
-	BaseType "Essence of Horror"
-	Class "Currency"
-	CustomAlertSound "300_valuable.wav"
-	MinimapIcon 0 Yellow Circle
-	PlayEffect Yellow
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 170 158 130
-	SetFontSize 45
-	DisableDropSound True
-
-#Essence Autogen
-Show
-	BaseType "Deafening Essence of Anguish" "Deafening Essence of Contempt" "Deafening Essence of Dread" "Deafening Essence of Envy" "Deafening Essence of Fear" "Deafening Essence of Greed" "Deafening Essence of Hatred" "Deafening Essence of Loathing" "Deafening Essence of Misery" "Deafening Essence of Rage" "Deafening Essence of Sorrow" "Deafening Essence of Spite" "Deafening Essence of Suffering" "Deafening Essence of Torment" "Deafening Essence of Woe" "Deafening Essence of Wrath" "Deafening Essence of Zeal" "Remnant of Corruption" "Shrieking Essence of Anger" "Shrieking Essence of Contempt" "Shrieking Essence of Dread" "Shrieking Essence of Envy" "Shrieking Essence of Fear" "Shrieking Essence of Greed" "Shrieking Essence of Hatred" "Shrieking Essence of Loathing" "Shrieking Essence of Misery" "Shrieking Essence of Rage" "Shrieking Essence of Scorn" "Shrieking Essence of Spite" "Shrieking Essence of Torment" "Shrieking Essence of Woe" "Shrieking Essence of Wrath" "Shrieking Essence of Zeal"
+	BaseType "Deafening Essence of Anger" "Deafening Essence of Anguish" "Deafening Essence of Contempt" "Deafening Essence of Doubt" "Deafening Essence of Dread" "Deafening Essence of Envy" "Deafening Essence of Fear" "Deafening Essence of Greed" "Deafening Essence of Hatred" "Deafening Essence of Loathing" "Deafening Essence of Misery" "Deafening Essence of Rage" "Deafening Essence of Sorrow" "Deafening Essence of Spite" "Deafening Essence of Suffering" "Deafening Essence of Torment" "Deafening Essence of Woe" "Deafening Essence of Wrath" "Deafening Essence of Zeal" "Remnant of Corruption" "Shrieking Essence of Anger" "Shrieking Essence of Contempt" "Shrieking Essence of Dread" "Shrieking Essence of Envy" "Shrieking Essence of Fear" "Shrieking Essence of Greed" "Shrieking Essence of Rage" "Shrieking Essence of Scorn" "Shrieking Essence of Wrath" "Shrieking Essence of Zeal"
 	Class "Currency"
 	CustomAlertSound "75_currency.wav"
 	MinimapIcon 1 Yellow Circle
@@ -713,7 +713,7 @@ Show
 
 #Essence Autogen
 Show
-	BaseType "Muttering Essence of Fear" "Muttering Essence of Woe" "Screaming Essence of Doubt" "Screaming Essence of Hatred" "Screaming Essence of Loathing" "Screaming Essence of Rage" "Screaming Essence of Spite" "Screaming Essence of Torment" "Screaming Essence of Woe" "Wailing Essence of Contempt" "Wailing Essence of Loathing" "Wailing Essence of Sorrow" "Wailing Essence of Spite" "Wailing Essence of Suffering" "Wailing Essence of Woe" "Weeping Essence of Contempt" "Weeping Essence of Fear" "Weeping Essence of Suffering" "Whispering Essence of Contempt" "Whispering Essence of Greed"
+	BaseType "Muttering Essence of Fear" "Screaming Essence of Doubt" "Screaming Essence of Loathing" "Screaming Essence of Torment" "Screaming Essence of Woe" "Wailing Essence of Contempt" "Wailing Essence of Loathing" "Wailing Essence of Spite" "Weeping Essence of Fear" "Weeping Essence of Hatred"
 	Class "Currency"
 	SetBackgroundColor 0 0 0 220
 	SetFontSize 25
@@ -721,7 +721,7 @@ Show
 
 #Essence Autogen
 Show
-	BaseType "Deafening Essence of Doubt" "Muttering Essence of Anger" "Muttering Essence of Contempt" "Muttering Essence of Greed" "Muttering Essence of Hatred" "Muttering Essence of Sorrow" "Muttering Essence of Torment" "Screaming Essence of Anger" "Screaming Essence of Anguish" "Screaming Essence of Contempt" "Screaming Essence of Dread" "Screaming Essence of Envy" "Screaming Essence of Fear" "Screaming Essence of Greed" "Screaming Essence of Misery" "Screaming Essence of Scorn" "Screaming Essence of Sorrow" "Screaming Essence of Suffering" "Screaming Essence of Wrath" "Screaming Essence of Zeal" "Shrieking Essence of Anguish" "Shrieking Essence of Doubt" "Shrieking Essence of Sorrow" "Shrieking Essence of Suffering" "Wailing Essence of Anger" "Wailing Essence of Anguish" "Wailing Essence of Doubt" "Wailing Essence of Fear" "Wailing Essence of Greed" "Wailing Essence of Hatred" "Wailing Essence of Rage" "Wailing Essence of Torment" "Wailing Essence of Wrath" "Wailing Essence of Zeal" "Weeping Essence of Anger" "Weeping Essence of Doubt" "Weeping Essence of Greed" "Weeping Essence of Hatred" "Weeping Essence of Rage" "Weeping Essence of Sorrow" "Weeping Essence of Torment" "Weeping Essence of Woe" "Weeping Essence of Wrath" "Whispering Essence of Hatred" "Whispering Essence of Woe"
+	BaseType "Muttering Essence of Anger" "Muttering Essence of Contempt" "Muttering Essence of Greed" "Muttering Essence of Hatred" "Muttering Essence of Sorrow" "Muttering Essence of Torment" "Muttering Essence of Woe" "Screaming Essence of Anger" "Screaming Essence of Anguish" "Screaming Essence of Contempt" "Screaming Essence of Dread" "Screaming Essence of Envy" "Screaming Essence of Fear" "Screaming Essence of Greed" "Screaming Essence of Hatred" "Screaming Essence of Misery" "Screaming Essence of Rage" "Screaming Essence of Scorn" "Screaming Essence of Sorrow" "Screaming Essence of Spite" "Screaming Essence of Suffering" "Screaming Essence of Wrath" "Screaming Essence of Zeal" "Shrieking Essence of Anguish" "Shrieking Essence of Doubt" "Shrieking Essence of Hatred" "Shrieking Essence of Loathing" "Shrieking Essence of Misery" "Shrieking Essence of Sorrow" "Shrieking Essence of Spite" "Shrieking Essence of Suffering" "Shrieking Essence of Torment" "Shrieking Essence of Woe" "Wailing Essence of Anger" "Wailing Essence of Anguish" "Wailing Essence of Doubt" "Wailing Essence of Fear" "Wailing Essence of Greed" "Wailing Essence of Hatred" "Wailing Essence of Rage" "Wailing Essence of Sorrow" "Wailing Essence of Suffering" "Wailing Essence of Torment" "Wailing Essence of Woe" "Wailing Essence of Wrath" "Wailing Essence of Zeal" "Weeping Essence of Anger" "Weeping Essence of Contempt" "Weeping Essence of Doubt" "Weeping Essence of Greed" "Weeping Essence of Rage" "Weeping Essence of Sorrow" "Weeping Essence of Suffering" "Weeping Essence of Torment" "Weeping Essence of Woe" "Weeping Essence of Wrath" "Whispering Essence of Contempt" "Whispering Essence of Greed" "Whispering Essence of Hatred" "Whispering Essence of Woe"
 	Class "Currency"
 	CustomAlertSound "20_currency.wav"
 	MinimapIcon 2 Yellow Circle
@@ -732,7 +732,7 @@ Show
 
 #Essence Autogen
 Show
-	BaseType "Deafening Essence of Anger" "Deafening Essence of Scorn" "Essence of Delirium" "Essence of Hysteria" "Essence of Insanity"
+	BaseType "Deafening Essence of Scorn" "Essence of Delirium" "Essence of Horror" "Essence of Hysteria" "Essence of Insanity"
 	Class "Currency"
 	CustomAlertSound "100_currency.wav"
 	MinimapIcon 1 Yellow Circle
@@ -868,7 +868,7 @@ Show
 
 #Unique
 Show
-	BaseType "Blood Sceptre" "Carnal Boots" "Chateau Map" "Crusader Boots" "Ezomyte Tower Shield" "Gemstone Sword" "Glorious Plate" "Golden Bracers" "Golden Hoop" "Golden Mantle" "Golden Obi" "Grand Mana Flask" "Greatwolf Talisman" "Harbinger Map" "Harlequin Mask" "Heavy Quiver" "Hydrascale Gauntlets" "Maze Map" "Museum Map" "Prophecy Wand" "Rawhide Boots" "Rotfeather Talisman" "Royal Axe"
+	BaseType "Ambush Mitts" "Blood Sceptre" "Callous Mask" "Carnal Boots" "Chateau Map" "Crusader Boots" "Ezomyte Tower Shield" "Gemstone Sword" "Glorious Plate" "Golden Bracers" "Golden Hoop" "Golden Mantle" "Golden Obi" "Greatwolf Talisman" "Harbinger Map" "Harlequin Mask" "Hydrascale Gauntlets" "Jet Amulet" "Legion Gloves" "Maze Map" "Museum Map" "Prophecy Wand" "Rawhide Boots" "Rotfeather Talisman" "Royal Axe"
 	CustomAlertSound "300_valuable.wav"
 	MinimapIcon 0 Yellow Star
 	PlayEffect Yellow
@@ -880,7 +880,7 @@ Show
 
 #Unique
 Show
-	BaseType "Ambush Mitts" "Arcanist Gloves" "Arcanist Slippers" "Assassin's Boots" "Blood Raiment" "Callous Mask" "Callous Mask Piece" "Carnal Sceptre" "Clasped Mitts" "Cloth Belt Piece" "Clutching Talisman" "Courtyard Map" "Deicide Mask" "Hydrascale Boots" "Imperial Maul" "Jewelled Foil" "Legion Gloves" "Magistrate Crown" "Moon Temple Map" "Nightmare Mace" "Nubuck Gloves" "Prismatic Jewel" "Rawhide Tower Shield" "Ritual Sceptre" "Ruby Amulet" "Sacrificial Garb" "Sanctified Life Flask" "Sanctified Mana Flask" "Sapphire Flask" "Satin Gloves" "Shackled Boots" "Sharkskin Tunic" "Shore Map" "Siege Axe" "Steel Ring" "Steelhead" "Temple Map" "Thorium Spirit Shield" "Topaz Flask" "Vaal Mask" "Vaal Pyramid Map" "Void Axe" "Wereclaw Talisman" "Zealot Gloves"
+	BaseType "Ancient Spirit Shield" "Arcanist Gloves" "Arcanist Slippers" "Assassin's Boots" "Blood Raiment" "Callous Mask Piece" "Carnal Sceptre" "Clasped Mitts" "Cloth Belt Piece" "Clutching Talisman" "Courtyard Map" "Deicide Mask" "Grand Mana Flask" "Heavy Quiver" "Hydrascale Boots" "Imperial Maul" "Jewelled Foil" "Magistrate Crown" "Moon Temple Map" "Nightmare Mace" "Nubuck Gloves" "Prismatic Jewel" "Rawhide Tower Shield" "Ritual Sceptre" "Ruby Amulet" "Sacrificial Garb" "Sanctified Life Flask" "Sanctified Mana Flask" "Sapphire Flask" "Satin Gloves" "Shackled Boots" "Sharkskin Tunic" "Shore Map" "Siege Axe" "Steel Ring" "Temple Map" "Thorium Spirit Shield" "Vaal Mask" "Vaal Pyramid Map" "Variscite Blade" "Void Axe" "Wereclaw Talisman" "Wyrmscale Doublet" "Zealot Gloves"
 	CustomAlertSound "100_unique.wav"
 	MinimapIcon 1 Yellow Star
 	PlayEffect Yellow
@@ -892,7 +892,7 @@ Show
 
 #Unique
 Show
-	BaseType "Abyssal Axe" "Ancient Gauntlets" "Ancient Spirit Shield" "Assassin's Garb" "Astral Plate" "Atoll Map" "Bismuth Flask" "Black Maw Talisman" "Blue Pearl Amulet" "Bone Crypt Map" "Cardinal Round Shield" "Cedar Tower Shield" "Cemetery Map" "Champion Kite Shield" "Citadel Bow" "Close Helmet" "Coiled Staff" "Conjurer Gloves" "Corsair Sword" "Crusader Helmet" "Crystal Belt" "Cursed Crypt Map" "Demon Dagger" "Destiny Leather" "Dunes Map" "Ezomyte Burgonet" "Full Wyrmscale" "Gladiator Plate" "Gold Ring" "Hallowed Hybrid Flask" "Hellion's Paw" "Highborn Staff" "Imperial Claw" "Imperial Staff" "Iron Gauntlets" "Ironscale Gauntlets" "Jasper Chopper" "Jingling Spirit Shield" "Karui Sceptre" "Labrys" "Leather Cap" "Lion Pelt" "Necropolis Map" "Nubuck Boots" "Overgrown Shrine Map" "Platinum Sceptre" "Promenade Map" "Raven Mask" "Royal Burgonet" "Savant's Robe" "Serpentscale Gauntlets" "Sorcerer Gloves" "Titanium Spirit Shield" "Torture Chamber Map" "Underground River Map" "Ursine Pelt" "Variscite Blade" "Wyrmscale Doublet"
+	BaseType "Abyssal Axe" "Ancient Gauntlets" "Atoll Map" "Bismuth Flask" "Black Maw Talisman" "Blue Pearl Amulet" "Bone Crypt Map" "Cardinal Round Shield" "Cedar Tower Shield" "Cemetery Map" "Champion Kite Shield" "Citadel Bow" "Citrine Amulet" "Coiled Staff" "Conjurer Gloves" "Corsair Sword" "Crusader Helmet" "Crystal Belt" "Cursed Crypt Map" "Destiny Leather" "Destroyer Regalia" "Dunes Map" "Eye Gouger" "Ezomyte Burgonet" "Full Wyrmscale" "Gladiator Plate" "Gold Ring" "Goliath Gauntlets" "Hallowed Hybrid Flask" "Hellion's Paw" "Highborn Staff" "Imperial Staff" "Ironscale Gauntlets" "Jasper Chopper" "Jingling Spirit Shield" "Labrys" "Lion Pelt" "Necropolis Map" "Nubuck Boots" "Overgrown Shrine Map" "Platinum Sceptre" "Promenade Map" "Raven Mask" "Royal Burgonet" "Savant's Robe" "Serpentscale Gauntlets" "Siege Helmet" "Sorcerer Gloves" "Steelhead" "Titanium Spirit Shield" "Topaz Flask" "Torture Chamber Map" "Underground River Map" "Ursine Pelt" "Vanguard Belt" "War Sword"
 	CustomAlertSound "75_unique.wav"
 	MinimapIcon 1 Yellow Star
 	Rarity Unique
@@ -903,7 +903,7 @@ Show
 
 #Unique
 Show
-	BaseType "Agate Amulet" "Amber Amulet" "Archon Kite Shield" "Archon Kite Shield Piece" "Assassin Bow" "Blunt Arrow Quiver" "Blunt Arrow Quiver Piece" "Carnal Armour" "Carnal Mitts" "Carved Wand" "Chain Belt" "Citrine Amulet" "Cloth Belt" "Cobalt Jewel" "Coral Amulet" "Crimson Jewel" "Crusader Gloves" "Cutlass" "Despot Axe" "Diamond Ring" "Ebony Tower Shield" "Elegant Ringmail" "Elegant Sword" "Exquisite Leather" "Ezomyte Staff" "Gavel" "Goathide Boots" "Gold Amulet" "Golden Plate" "Goliath Greaves" "Granite Flask" "Great Crown" "Hubris Circlet" "Imperial Bow" "Infernal Sword" "Iron Ring" "Jade Amulet" "Judgement Staff" "Lapis Amulet" "Large Hybrid Flask" "Leather Belt" "Legion Sword" "Maelström Staff" "Midnight Blade" "Mind Cage" "Moonstone Ring" "Murder Boots" "Necromancer Circlet" "Occultist's Vestment" "Onyx Amulet" "Opal Ring" "Paua Amulet" "Paua Ring" "Penetrating Arrow Quiver" "Pinnacle Tower Shield" "Prismatic Ring" "Quartz Flask" "Ruby Flask" "Rustic Sash" "Sadist Garb" "Silken Hood" "Slink Boots" "Soldier Gloves" "Sorcerer Boots" "Stealth Boots" "Steel Gauntlets" "Steelscale Gauntlets" "Stibnite Flask" "Strapped Mitts" "Titan Gauntlets" "Titan Greaves" "Topaz Ring" "Tornado Wand" "Triumphant Lamellar" "Two-Point Arrow Quiver" "Two-Stone Ring" "Unset Ring" "Vaal Axe" "Vaal Blade" "Vaal Gauntlets" "Vaal Sceptre" "Vaal Spirit Shield" "Viridian Jewel" "Widowsilk Robe"
+	BaseType "Agate Amulet" "Amber Amulet" "Archon Kite Shield" "Archon Kite Shield Piece" "Assassin Bow" "Blunt Arrow Quiver" "Carnal Armour" "Carnal Mitts" "Carved Wand" "Chain Belt" "Cloth Belt" "Cobalt Jewel" "Coral Amulet" "Crimson Jewel" "Crusader Gloves" "Cutlass" "Despot Axe" "Diamond Ring" "Ebony Tower Shield" "Elegant Ringmail" "Elegant Sword" "Exquisite Leather" "Ezomyte Staff" "Gavel" "Goathide Boots" "Gold Amulet" "Golden Plate" "Goliath Greaves" "Granite Flask" "Great Crown" "Hubris Circlet" "Imperial Bow" "Infernal Sword" "Iron Ring" "Jade Amulet" "Judgement Staff" "Lapis Amulet" "Large Hybrid Flask" "Leather Belt" "Legion Sword" "Maelström Staff" "Midnight Blade" "Mind Cage" "Moonstone Ring" "Murder Boots" "Necromancer Circlet" "Occultist's Vestment" "Onyx Amulet" "Opal Ring" "Paua Amulet" "Paua Ring" "Penetrating Arrow Quiver" "Pinnacle Tower Shield" "Prismatic Ring" "Quartz Flask" "Ruby Flask" "Rustic Sash" "Sadist Garb" "Silken Hood" "Slink Boots" "Soldier Gloves" "Sorcerer Boots" "Stealth Boots" "Steel Gauntlets" "Steelscale Gauntlets" "Stibnite Flask" "Strapped Mitts" "Titan Gauntlets" "Titan Greaves" "Topaz Ring" "Tornado Wand" "Triumphant Lamellar" "Two-Point Arrow Quiver" "Two-Stone Ring" "Unset Ring" "Vaal Axe" "Vaal Blade" "Vaal Gauntlets" "Vaal Sceptre" "Vaal Spirit Shield" "Viridian Jewel" "Widowsilk Robe"
 	CustomAlertSound "45_unique.wav"
 	MinimapIcon 2 Yellow Star
 	Rarity Unique
@@ -914,7 +914,7 @@ Show
 
 #Unique
 Show
-	BaseType "Ambusher" "Antique Rapier" "Assassin's Mitts" "Aventail Helmet" "Awl" "Baroque Round Shield" "Basket Rapier" "Bastard Sword" "Bone Circlet" "Boot Blade" "Boot Knife" "Brass Maul" "Brass Spirit Shield" "Bronze Gauntlets" "Bronze Sceptre" "Bronzescale Boots" "Bronzescale Gauntlets" "Buckskin Tunic" "Chain Gloves" "Chiming Spirit Shield" "Clasped Boots" "Cleaver" "Compound Spiked Shield" "Conquest Chainmail" "Copper Plate" "Crude Bow" "Crusader Chainmail" "Crystal Sceptre" "Crystal Wand" "Cutthroat's Garb" "Death Bow" "Decimation Bow" "Decorative Axe" "Deerskin Boots" "Demon's Horn" "Dragonscale Gauntlets" "Dread Maul" "Dream Mace" "Dusk Blade" "Enameled Buckler" "Estoc" "Ezomyte Axe" "Fire Arrow Quiver" "Flaying Knife" "Fright Claw" "Full Dragonscale" "Gilded Sallet" "Gladius" "Gnarled Branch" "Goat's Horn" "Goathide Gloves" "Golden Buckler" "Golden Mask" "Great Helmet" "Great Mallet" "Greater Mana Flask" "Grinning Fetish" "Gut Ripper" "Harbinger Bow" "Headsman Axe" "Heavy Belt" "Highland Blade" "Holy Chainmail" "Imbued Wand" "Imperial Skean" "Infernal Axe" "Iron Circlet" "Iron Hat" "Iron Mask" "Iron Staff" "Ironscale Boots" "Ivory Spirit Shield" "Jade Hatchet" "Jagged Foil" "Jagged Maul" "Karui Chopper" "Karui Maul" "Latticed Ringmail" "Leather Hood" "Long Bow" "Long Staff" "Lunaris Circlet" "Mesh Boots" "Military Staff" "Mirrored Spiked Shield" "Nailed Fist" "Ornate Mace" "Ornate Ringmail" "Ornate Sword" "Painted Buckler" "Pine Buckler" "Plague Mask" "Plank Kite Shield" "Plate Vest" "Plated Greaves" "Platinum Kris" "Poleaxe" "Praetor Crown" "Primordial Staff" "Prophet Crown" "Quartz Wand" "Ranger Bow" "Recurve Bow" "Riveted Boots" "Rotted Round Shield" "Royal Bow" "Royal Skean" "Royal Staff" "Rusted Sword" "Sage Wand" "Sage's Robe" "Samite Gloves" "Samite Helmet" "Scholar Boots" "Scholar's Robe" "Secutor Helm" "Sentinel Jacket" "Serpentine Staff" "Serrated Arrow Quiver" "Shadow Axe" "Shadow Sceptre" "Shagreen Boots" "Silk Gloves" "Silk Slippers" "Simple Robe" "Skinning Knife" "Sledgehammer" "Soldier Helmet" "Spidersilk Robe" "Spike-Point Arrow Quiver" "Spiked Club" "Spine Bow" "Spiraled Wand" "Stiletto" "Strapped Boots" "Strapped Leather" "Studded Belt" "Studded Round Shield" "Sulphur Flask" "Sundering Axe" "Supreme Spiked Shield" "Tarnished Spirit Shield" "Terror Claw" "Thresher Claw" "Tiger Sword" "Timeworn Claw" "Tomahawk" "Tribal Circlet" "Tricorne" "Turquoise Amulet" "Twilight Blade" "Vaal Buckler" "Velvet Gloves" "Velvet Slippers" "Vile Staff" "Vine Circlet" "Visored Sallet" "War Buckler" "War Hammer" "Whalebone Rapier" "Wild Leather" "Woodsplitter" "Wrapped Mitts" "Wyrmscale Gauntlets"
+	BaseType "Ambusher" "Antique Rapier" "Assassin's Mitts" "Auric Mace" "Aventail Helmet" "Awl" "Baroque Round Shield" "Basket Rapier" "Bastard Sword" "Bone Circlet" "Boot Blade" "Boot Knife" "Brass Maul" "Brass Spirit Shield" "Bronze Gauntlets" "Bronze Sceptre" "Bronzescale Boots" "Bronzescale Gauntlets" "Buckskin Tunic" "Chiming Spirit Shield" "Clasped Boots" "Cleaver" "Compound Spiked Shield" "Conquest Chainmail" "Copper Plate" "Crude Bow" "Crystal Sceptre" "Crystal Wand" "Cured Quiver" "Cutthroat's Garb" "Death Bow" "Decimation Bow" "Decorative Axe" "Deerskin Boots" "Deerskin Gloves" "Demon's Horn" "Dragonscale Gauntlets" "Dread Maul" "Dream Mace" "Dusk Blade" "Estoc" "Ezomyte Axe" "Ezomyte Blade" "Fire Arrow Quiver" "Flaying Knife" "Fright Claw" "Full Dragonscale" "Gilded Sallet" "Gnarled Branch" "Goat's Horn" "Golden Buckler" "Golden Mask" "Great Helmet" "Great Mallet" "Greater Mana Flask" "Grinning Fetish" "Gut Ripper" "Harbinger Bow" "Headsman Axe" "Heavy Belt" "Highland Blade" "Holy Chainmail" "Imbued Wand" "Imperial Skean" "Infernal Axe" "Iron Circlet" "Iron Hat" "Iron Mask" "Iron Staff" "Ironscale Boots" "Ivory Spirit Shield" "Jade Hatchet" "Jagged Foil" "Jagged Maul" "Karui Chopper" "Karui Maul" "Latticed Ringmail" "Leather Hood" "Legion Boots" "Long Bow" "Long Staff" "Lunaris Circlet" "Mesh Boots" "Military Staff" "Mirrored Spiked Shield" "Nailed Fist" "Ornate Mace" "Ornate Ringmail" "Ornate Sword" "Painted Buckler" "Pine Buckler" "Plague Mask" "Plank Kite Shield" "Plate Vest" "Plated Greaves" "Platinum Kris" "Poleaxe" "Praetor Crown" "Primordial Staff" "Prophet Crown" "Quartz Wand" "Ranger Bow" "Reaver Sword" "Recurve Bow" "Riveted Boots" "Rotted Round Shield" "Royal Bow" "Royal Staff" "Rusted Sword" "Sage Wand" "Sage's Robe" "Samite Gloves" "Samite Helmet" "Scholar Boots" "Scholar's Robe" "Secutor Helm" "Sentinel Jacket" "Serpentscale Boots" "Serrated Arrow Quiver" "Shadow Axe" "Shadow Sceptre" "Shagreen Boots" "Sharktooth Arrow Quiver" "Silk Gloves" "Silk Slippers" "Simple Robe" "Skinning Knife" "Sledgehammer" "Soldier Helmet" "Spidersilk Robe" "Spike-Point Arrow Quiver" "Spiked Club" "Spiraled Wand" "Stiletto" "Strapped Boots" "Strapped Leather" "Studded Belt" "Studded Round Shield" "Sulphur Flask" "Sundering Axe" "Supreme Spiked Shield" "Tarnished Spirit Shield" "Thresher Claw" "Tiger Sword" "Timeworn Claw" "Tomahawk" "Trapper Boots" "Tribal Circlet" "Tricorne" "Turquoise Amulet" "Twilight Blade" "Vaal Buckler" "Velvet Gloves" "Velvet Slippers" "Vile Staff" "Vine Circlet" "Visored Sallet" "Void Sceptre" "War Buckler" "War Hammer" "Wild Leather" "Woodsplitter" "Wool Gloves" "Wrapped Mitts" "Wyrmscale Gauntlets"
 	Rarity Unique
 	SetBackgroundColor 0 0 0 220
 	SetFontSize 25
@@ -1237,8 +1237,9 @@ Show
 Show
 	BaseType "The Wolf's Shadow"
 	Class "Divination Card"
+	CustomAlertSound "20_divination.wav"
+	MinimapIcon 2 Blue Circle
 	SetBackgroundColor 0 0 0 220
-	SetFontSize 25
 	DisableDropSound True
 
 #Divination Card
@@ -1287,7 +1288,7 @@ Show
 
 #Divination Card
 Show
-	BaseType "Chaotic Disposition" "House of Mirrors" "Hunter's Reward" "Immortal Resolve" "Mawr Blaidd" "The Doctor" "The Fiend" "The Immortal" "The Samurai's Eye" "The Spark and the Flame" "The Wolven King's Bite"
+	BaseType "House of Mirrors" "Hunter's Reward" "Immortal Resolve" "Mawr Blaidd" "The Doctor" "The Fiend" "The Immortal" "The Spark and the Flame" "The Wolven King's Bite"
 	Class "Divination Card"
 	CustomAlertSound "300_valuable.wav"
 	MinimapIcon 0 Blue Circle
@@ -1299,7 +1300,7 @@ Show
 
 #Divination Card
 Show
-	BaseType "Abandoned Wealth" "Boon of the First Ones" "Bowyer's Dream" "Heterochromia" "Perfection" "Pride Before the Fall" "The Artist" "The Cartographer" "The Celestial Justicar" "The Celestial Stone" "The Dreamer" "The Endless Darkness" "The Hale Heart" "The Iron Bard" "The Last One Standing" "The Master" "The Mayor" "The Professor" "The Queen" "The Saint's Treasure" "The Sephirot" "The Undaunted" "The Valkyrie" "The Vast" "The Wind" "The Wolf" "The World Eater" "Time-Lost Relic" "Wealth and Power"
+	BaseType "Abandoned Wealth" "Boon of the First Ones" "Bowyer's Dream" "Chaotic Disposition" "Heterochromia" "Perfection" "Pride Before the Fall" "The Artist" "The Celestial Stone" "The Dreamer" "The Endless Darkness" "The Hale Heart" "The Iron Bard" "The Master" "The Mayor" "The Professor" "The Queen" "The Saint's Treasure" "The Samurai's Eye" "The Sephirot" "The Thaumaturgist" "The Undaunted" "The Valkyrie" "The Vast" "The Wind" "The Wolf" "The World Eater" "Wealth and Power"
 	Class "Divination Card"
 	CustomAlertSound "100_divination.wav"
 	MinimapIcon 1 Blue Circle
@@ -1311,7 +1312,7 @@ Show
 
 #Divination Card
 Show
-	BaseType "Atziri's Arsenal" "Birth of the Three" "Dialla's Subjugation" "Emperor of Purity" "Harmony of Souls" "Humility" "Jack in the Box" "Left to Fate" "Lingering Remnants" "Lost Worlds" "Lucky Connections" "Lucky Deck" "Rebirth" "Scholar of the Seas" "The Admirer" "The Arena Champion" "The Avenger" "The Body" "The Breach" "The Brittle Emperor" "The Cacophony" "The Chains that Bind" "The Conduit" "The Cursed King" "The Dapper Prodigy" "The Dark Mage" "The Darkest Dream" "The Demoness" "The Dreamland" "The Enlightened" "The Ethereal" "The Fathomless Depths" "The Formless Sea" "The Forsaken" "The Harvester" "The Hoarder" "The Hunger" "The Innocent" "The Insatiable" "The Inventor" "The Jeweller's Boon" "The King's Heart" "The Lion" "The Offering" "The One With All" "The Penitent" "The Poet" "The Polymath" "The Porcupine" "The Price of Protection" "The Risk" "The Soul" "The Standoff" "The Sun" "The Sword King's Salute" "The Thaumaturgist" "The Throne" "The Traitor" "The Trial" "The Twilight Moon" "The Valley of Steel Boxes" "The Void" "The Warlord" "The Wilted Rose" "The Wretched" "Treasure Hunter"
+	BaseType "Dialla's Subjugation" "Emperor of Purity" "Harmony of Souls" "Humility" "Jack in the Box" "Left to Fate" "Lingering Remnants" "Lost Worlds" "Lucky Deck" "No Traces" "Rebirth" "Scholar of the Seas" "The Admirer" "The Arena Champion" "The Body" "The Breach" "The Brittle Emperor" "The Cacophony" "The Cartographer" "The Celestial Justicar" "The Chains that Bind" "The Cursed King" "The Dapper Prodigy" "The Dark Mage" "The Darkest Dream" "The Demoness" "The Dreamland" "The Enlightened" "The Ethereal" "The Fathomless Depths" "The Fletcher" "The Formless Sea" "The Forsaken" "The Harvester" "The Hoarder" "The Hunger" "The Innocent" "The Insatiable" "The Inventor" "The Jeweller's Boon" "The King's Heart" "The Last One Standing" "The Lion" "The Obscured" "The Offering" "The One With All" "The Penitent" "The Polymath" "The Porcupine" "The Price of Protection" "The Risk" "The Rite of Elements" "The Standoff" "The Sword King's Salute" "The Throne" "The Traitor" "The Twilight Moon" "The Union" "The Valley of Steel Boxes" "The Void" "The Warlord" "The Wilted Rose" "The Wrath" "The Wretched" "Time-Lost Relic" "Treasure Hunter"
 	Class "Divination Card"
 	CustomAlertSound "75_divination.wav"
 	MinimapIcon 1 Blue Circle
@@ -1321,7 +1322,7 @@ Show
 
 #Divination Card
 Show
-	BaseType "A Mother's Parting Gift" "Anarchy's Price" "Her Mask" "Lantador's Lost Love" "Might is Right" "Rain of Chaos" "Rats" "Shard of Fate" "The Battle Born" "The Betrayal" "The Coming Storm" "The Dragon" "The Endurance" "The Explorer" "The Eye of the Dragon" "The Feast" "The Flora's Gift" "The Hermit" "The Incantation" "The Lich" "The Lover" "The Lunaris Priestess" "The Opulent" "The Pack Leader" "The Realm" "The Scholar" "The Siren" "The Visionary" "The Warden" "Three Faces in the Dark" "Turn the Other Cheek"
+	BaseType "A Mother's Parting Gift" "Anarchy's Price" "Cartographer's Delight" "Her Mask" "Lantador's Lost Love" "Shard of Fate" "The Betrayal" "The Coming Storm" "The Dragon" "The Endurance" "The Flora's Gift" "The Hermit" "The Incantation" "The Lich" "The Lover" "The Lunaris Priestess" "The Opulent" "The Realm" "The Scholar" "The Siren" "The Visionary" "The Witch" "Three Faces in the Dark" "Turn the Other Cheek"
 	Class "Divination Card"
 	SetBackgroundColor 0 0 0 220
 	SetFontSize 25
@@ -1468,7 +1469,7 @@ Show
 
 #Bases
 Show
-	BaseType "Diamond Ring" "Leather Belt" "Onyx Amulet" "Ruby Ring" "Steel Ring" "Two-Stone Ring"
+	BaseType "Leather Belt" "Onyx Amulet" "Steel Ring" "Two-Stone Ring"
 	ElderItem True
 	ItemLevel >= 86
 	CustomAlertSound "300_valuable.wav"
@@ -1482,7 +1483,7 @@ Show
 
 #Bases
 Show
-	BaseType "Marble Amulet" "Opal Ring" "Searching Eye Jewel"
+	BaseType "Marble Amulet" "Murderous Eye Jewel" "Searching Eye Jewel"
 	ItemLevel >= 86
 	CustomAlertSound "300_valuable.wav"
 	MinimapIcon 0 Green Hexagon
@@ -1495,7 +1496,7 @@ Show
 
 #Bases
 Show
-	BaseType "Agate Amulet" "Apex Rapier" "Broadhead Arrow Quiver" "Coral Ring" "Diamond Ring" "Hydrascale Gauntlets" "Imbued Wand" "Jewelled Foil" "Leather Belt" "Onyx Amulet" "Opal Ring" "Penetrating Arrow Quiver" "Royal Sceptre" "Spike-Point Arrow Quiver" "Turquoise Amulet" "Void Sceptre"
+	BaseType "Agate Amulet" "Citrine Amulet" "Coral Ring" "Diamond Ring" "Harpy Rapier" "Jewelled Foil" "Leather Belt" "Onyx Amulet" "Opal Ring" "Penetrating Arrow Quiver" "Spike-Point Arrow Quiver" "Thicket Bow" "Titanium Spirit Shield" "Void Sceptre"
 	ItemLevel >= 86
 	ShaperItem True
 	CustomAlertSound "300_valuable.wav"
@@ -1509,7 +1510,7 @@ Show
 
 #Bases
 Show
-	BaseType "Chain Belt" "Crusader Plate" "Harlequin Mask" "Imbued Wand" "Necromancer Circlet" "Rustic Sash" "Siege Axe" "Solaris Circlet" "Spike-Point Arrow Quiver" "Thicket Bow" "Ursine Pelt"
+	BaseType "Assassin's Mitts" "Harlequin Mask" "Heavy Belt" "Imbued Wand" "Magistrate Crown" "Rustic Sash" "Siege Axe" "Studded Belt"
 	ElderItem True
 	ItemLevel >= 86
 	CustomAlertSound "100_base.wav"
@@ -1523,7 +1524,7 @@ Show
 
 #Bases
 Show
-	BaseType "Agate Amulet" "Bone Helmet" "Colossal Tower Shield" "Crimson Jewel" "Crystal Belt" "Fingerless Silk Gloves" "Ghastly Eye Jewel" "Goliath Greaves" "Gripped Gloves" "Hypnotic Eye Jewel" "Jewelled Foil" "Murderous Eye Jewel" "Prismatic Ring" "Royal Burgonet" "Slink Boots" "Sorcerer Boots" "Sorcerer Gloves" "Spike-Point Arrow Quiver" "Spiked Gloves" "Steel Ring" "Stygian Vise" "Titan Greaves" "Titanium Spirit Shield" "Turquoise Amulet" "Two-Toned Boots" "Viridian Jewel"
+	BaseType "Agate Amulet" "Blue Pearl Amulet" "Bone Helmet" "Crimson Jewel" "Crystal Belt" "Fingerless Silk Gloves" "Ghastly Eye Jewel" "Gripped Gloves" "Hypnotic Eye Jewel" "Jewelled Foil" "Opal Ring" "Paua Amulet" "Prismatic Ring" "Royal Burgonet" "Sambar Sceptre" "Slink Boots" "Sorcerer Boots" "Sorcerer Gloves" "Spike-Point Arrow Quiver" "Spiked Gloves" "Steel Ring" "Studded Belt" "Stygian Vise" "Titan Gauntlets" "Titanium Spirit Shield" "Turquoise Amulet" "Two-Toned Boots" "Vanguard Belt" "Viridian Jewel" "Void Sceptre"
 	ItemLevel >= 86
 	CustomAlertSound "100_base.wav"
 	MinimapIcon 1 Green Hexagon
@@ -1536,7 +1537,7 @@ Show
 
 #Bases
 Show
-	BaseType "Abyssal Sceptre" "Amethyst Ring" "Assassin's Mitts" "Carnal Boots" "Chain Belt" "Cloth Belt" "Conjurer Boots" "Corsair Sword" "Demon Dagger" "Demon's Horn" "Dragonbone Rapier" "Gold Ring" "Heavy Belt" "Hydrascale Boots" "Iron Ring" "Karui Sceptre" "Moonstone Ring" "Royal Skean" "Ruby Ring" "Rustic Sash" "Sapphire Ring" "Sentinel Jacket" "Shagreen Gloves" "Siege Axe" "Slaughter Knife" "Solaris Circlet" "Studded Belt" "Topaz Ring" "Two-Stone Ring" "Tyrant's Sekhem" "Unset Ring" "Ursine Pelt" "Vaal Axe"
+	BaseType "Abyssal Sceptre" "Amethyst Ring" "Apex Rapier" "Assassin's Garb" "Chain Belt" "Cloth Belt" "Corsair Sword" "Demon's Horn" "Eternal Burgonet" "Fluted Bascinet" "Heavy Belt" "Imbued Wand" "Iron Ring" "Karui Sceptre" "Royal Skean" "Ruby Ring" "Rustic Sash" "Sapphire Ring" "Shagreen Gloves" "Slaughter Knife" "Solaris Circlet" "Studded Belt" "Thorium Spirit Shield" "Topaz Ring" "Two-Stone Ring" "Unset Ring"
 	ItemLevel >= 86
 	ShaperItem True
 	CustomAlertSound "100_base.wav"
@@ -1550,7 +1551,7 @@ Show
 
 #Bases
 Show
-	BaseType "Astral Plate" "Citrine Amulet" "Coral Ring" "Diamond Ring" "Eternal Burgonet" "Hubris Circlet" "Jade Amulet" "Leather Belt" "Legion Gloves" "Moonstone Ring" "Onyx Amulet" "Royal Burgonet" "Titanium Spirit Shield" "Turquoise Amulet" "Unset Ring"
+	BaseType "Agate Amulet" "Astral Plate" "Citrine Amulet" "Coral Ring" "Diamond Ring" "Eternal Burgonet" "Lapis Amulet" "Leather Belt" "Onyx Amulet" "Turquoise Amulet" "Unset Ring"
 	ElderItem True
 	ItemLevel >= 85
 	CustomAlertSound "300_valuable.wav"
@@ -1564,7 +1565,7 @@ Show
 
 #Bases
 Show
-	BaseType "Murderous Eye Jewel" "Searching Eye Jewel"
+	BaseType "Searching Eye Jewel"
 	ItemLevel >= 85
 	CustomAlertSound "300_valuable.wav"
 	MinimapIcon 0 Green Hexagon
@@ -1577,7 +1578,7 @@ Show
 
 #Bases
 Show
-	BaseType "Agate Amulet" "Amber Amulet" "Astral Plate" "Citrine Amulet" "Diamond Ring" "Jewelled Foil" "Lapis Amulet" "Leather Belt" "Onyx Amulet" "Opal Sceptre" "Platinum Kris" "Sambar Sceptre" "Spike-Point Arrow Quiver" "Titanium Spirit Shield" "Turquoise Amulet" "Vaal Sceptre" "Void Sceptre"
+	BaseType "Agate Amulet" "Amber Amulet" "Citrine Amulet" "Diamond Ring" "Imperial Claw" "Jewelled Foil" "Lapis Amulet" "Leather Belt" "Onyx Amulet" "Platinum Kris" "Sambar Sceptre" "Sorcerer Gloves" "Titanium Spirit Shield" "Turquoise Amulet" "Vaal Sceptre" "Void Sceptre"
 	ItemLevel >= 85
 	ShaperItem True
 	CustomAlertSound "300_valuable.wav"
@@ -1591,7 +1592,7 @@ Show
 
 #Bases
 Show
-	BaseType "Agate Amulet" "Amber Amulet" "Ambusher" "Amethyst Ring" "Apex Rapier" "Assassin's Garb" "Assassin's Mitts" "Broadhead Arrow Quiver" "Chain Belt" "Cloth Belt" "Colossal Tower Shield" "Conjurer Gloves" "Corsair Sword" "Crypt Armour" "Demon's Horn" "Destiny Leather" "Eclipse Staff" "Fluted Bascinet" "Gemstone Sword" "Glorious Plate" "Gold Amulet" "Gold Ring" "Golden Plate" "Goliath Gauntlets" "Goliath Greaves" "Great Crown" "Harlequin Mask" "Heavy Belt" "Hydrascale Boots" "Hydrascale Gauntlets" "Imbued Wand" "Imperial Claw" "Iron Ring" "Jewelled Foil" "Karui Sceptre" "Lapis Amulet" "Legion Boots" "Lion Pelt" "Magistrate Crown" "Murder Mitts" "Necromancer Circlet" "Omen Wand" "Paua Ring" "Praetor Crown" "Regicide Mask" "Ruby Ring" "Rustic Sash" "Saintly Chainmail" "Samite Helmet" "Sapphire Ring" "Shagreen Gloves" "Siege Helmet" "Slaughter Knife" "Slink Gloves" "Solaris Circlet" "Sorcerer Boots" "Sorcerer Gloves" "Studded Belt" "Tenderizer" "Thicket Bow" "Titan Gauntlets" "Topaz Ring" "Tornado Wand" "Triumphant Lamellar" "Two-Stone Ring" "Tyrant's Sekhem" "Ursine Pelt" "Vaal Regalia" "Wyrmscale Gauntlets" "Zodiac Leather"
+	BaseType "Amber Amulet" "Amethyst Ring" "Apex Rapier" "Assassin's Garb" "Assassin's Mitts" "Broadhead Arrow Quiver" "Chain Belt" "Cloth Belt" "Colossal Tower Shield" "Conjurer Gloves" "Coronal Maul" "Devout Chainmail" "Eclipse Staff" "Fiend Dagger" "Fleshripper" "Fluted Bascinet" "Fossilised Spirit Shield" "Glorious Plate" "Gold Ring" "Golden Plate" "Goliath Gauntlets" "Goliath Greaves" "Great Crown" "Harbinger Bow" "Harlequin Mask" "Harpy Rapier" "Heavy Belt" "Hubris Circlet" "Hydrascale Boots" "Hydrascale Gauntlets" "Imbued Wand" "Imperial Claw" "Jade Amulet" "Jewelled Foil" "Karui Sceptre" "Lacquered Helmet" "Legion Boots" "Legion Gloves" "Lion Pelt" "Magistrate Crown" "Moonstone Ring" "Necromancer Circlet" "Paua Amulet" "Paua Ring" "Penetrating Arrow Quiver" "Ruby Ring" "Rustic Sash" "Saintly Chainmail" "Sambar Sceptre" "Samite Helmet" "Sapphire Ring" "Shagreen Gloves" "Sharkskin Gloves" "Siege Axe" "Siege Helmet" "Slink Gloves" "Solaris Circlet" "Sorcerer Boots" "Sorcerer Gloves" "Spike-Point Arrow Quiver" "Studded Belt" "Tenderizer" "Thicket Bow" "Titan Gauntlets" "Titanium Spirit Shield" "Topaz Ring" "Two-Stone Ring" "Ursine Pelt" "Vaal Regalia" "Void Sceptre" "Wyrmscale Gauntlets" "Zodiac Leather"
 	ElderItem True
 	ItemLevel >= 85
 	CustomAlertSound "100_base.wav"
@@ -1605,7 +1606,7 @@ Show
 
 #Bases
 Show
-	BaseType "Ambusher" "Arcanist Gloves" "Blue Pearl Amulet" "Carnal Mitts" "Conjurer Boots" "Conjurer Gloves" "Coral Ring" "Crystal Belt" "Fluted Bascinet" "Fossilised Spirit Shield" "Ghastly Eye Jewel" "Golden Kris" "Goliath Gauntlets" "Gripped Gloves" "Gutting Knife" "Harbinger Bow" "Hydrascale Gauntlets" "Hypnotic Eye Jewel" "Imbued Wand" "Imperial Buckler" "Imperial Claw" "Imperial Skean" "Lacquered Helmet" "Legion Boots" "Legion Gloves" "Marble Amulet" "Necromancer Circlet" "Nightmare Bascinet" "Opal Ring" "Opal Wand" "Prismatic Ring" "Profane Wand" "Prophecy Wand" "Sai" "Shagreen Gloves" "Sorcerer Boots" "Sorcerer Gloves" "Spiked Gloves" "Steel Ring" "Titan Gauntlets" "Titanium Spirit Shield" "Two-Toned Boots" "Ursine Pelt" "Vaal Gauntlets" "Vaal Greaves"
+	BaseType "Agate Amulet" "Ambusher" "Ancient Gauntlets" "Ancient Greaves" "Arcanist Gloves" "Carnal Mitts" "Conjurer Boots" "Conjurer Gloves" "Crusader Buckler" "Crystal Belt" "Demon's Horn" "Ghastly Eye Jewel" "Golden Kris" "Goliath Gauntlets" "Gripped Gloves" "Harbinger Bow" "Hypnotic Eye Jewel" "Imperial Buckler" "Imperial Claw" "Imperial Skean" "Jewelled Foil" "Karui Sceptre" "Lacquered Helmet" "Legion Gloves" "Marble Amulet" "Murderous Eye Jewel" "Opal Ring" "Platinum Kris" "Primordial Staff" "Prismatic Ring" "Sai" "Samite Gloves" "Solaris Circlet" "Sorcerer Boots" "Sorcerer Gloves" "Spiked Gloves" "Spiraled Foil" "Steel Ring" "Titan Gauntlets" "Titanium Spirit Shield" "Two-Toned Boots" "Ursine Pelt" "Vaal Gauntlets" "Vanguard Belt" "Viridian Jewel" "Void Sceptre"
 	ItemLevel >= 85
 	CustomAlertSound "100_base.wav"
 	MinimapIcon 1 Green Hexagon
@@ -1618,7 +1619,7 @@ Show
 
 #Bases
 Show
-	BaseType "Abyssal Sceptre" "Amethyst Ring" "Apex Rapier" "Assassin's Garb" "Assassin's Mitts" "Behemoth Mace" "Blood Sceptre" "Broadhead Arrow Quiver" "Carnal Sceptre" "Chain Belt" "Cloth Belt" "Colosseum Plate" "Conjurer Gloves" "Coral Ring" "Corsair Sword" "Decimation Bow" "Deicide Mask" "Dragonbone Rapier" "Dragoon Sword" "Eternal Burgonet" "Fancy Foil" "Fiend Dagger" "Gold Ring" "Golden Kris" "Goliath Greaves" "Great White Claw" "Gutting Knife" "Harbinger Bow" "Harlequin Mask" "Harpy Rapier" "Heavy Belt" "Hubris Circlet" "Hydrascale Gauntlets" "Imbued Wand" "Imperial Claw" "Imperial Skean" "Iron Ring" "Karui Sceptre" "Lead Sceptre" "Legion Boots" "Legion Gloves" "Lion Pelt" "Moonstone Ring" "Nightmare Bascinet" "Paua Ring" "Penetrating Arrow Quiver" "Praetor Crown" "Profane Wand" "Royal Burgonet" "Royal Sceptre" "Royal Skean" "Ruby Ring" "Runic Hatchet" "Rustic Sash" "Samite Helmet" "Sapphire Ring" "Shagreen Gloves" "Siege Axe" "Slaughter Knife" "Slink Boots" "Slink Gloves" "Solaris Circlet" "Soldier Gloves" "Sorcerer Boots" "Sorcerer Gloves" "Studded Belt" "Thicket Bow" "Titan Greaves" "Topaz Ring" "Two-Stone Ring" "Tyrant's Sekhem" "Unset Ring" "Ursine Pelt" "Vaal Regalia"
+	BaseType "Abyssal Sceptre" "Amethyst Ring" "Angelic Kite Shield" "Apex Rapier" "Assassin's Garb" "Assassin's Mitts" "Astral Plate" "Behemoth Mace" "Blood Sceptre" "Broadhead Arrow Quiver" "Carnal Sceptre" "Chain Belt" "Cloth Belt" "Conjurer Gloves" "Coral Ring" "Demon Dagger" "Dragonbone Rapier" "Eagle Claw" "Eternal Burgonet" "Fancy Foil" "Fiend Dagger" "Fossilised Spirit Shield" "Gold Ring" "Golden Kris" "Goliath Gauntlets" "Goliath Greaves" "Great White Claw" "Gutting Knife" "Harbinger Bow" "Harlequin Mask" "Harpy Rapier" "Heavy Belt" "Hubris Circlet" "Hydrascale Gauntlets" "Imbued Wand" "Imperial Skean" "Iron Ring" "Ironwood Buckler" "Karui Sceptre" "Lead Sceptre" "Legion Gloves" "Lion Pelt" "Magistrate Crown" "Moonstone Ring" "Noble Claw" "Paua Ring" "Penetrating Arrow Quiver" "Prophecy Wand" "Regicide Mask" "Royal Burgonet" "Royal Sceptre" "Royal Skean" "Ruby Ring" "Runic Hatchet" "Rustic Sash" "Samite Helmet" "Sapphire Ring" "Siege Axe" "Slaughter Knife" "Slink Boots" "Solaris Circlet" "Sorcerer Boots" "Spike-Point Arrow Quiver" "Studded Belt" "Terror Claw" "Thicket Bow" "Titan Gauntlets" "Topaz Ring" "Two-Stone Ring" "Tyrant's Sekhem" "Unset Ring" "Ursine Pelt" "Vaal Claw" "Vaal Regalia"
 	ItemLevel >= 85
 	ShaperItem True
 	CustomAlertSound "100_base.wav"
@@ -1632,7 +1633,7 @@ Show
 
 #Bases
 Show
-	BaseType "Coral Ring" "Diamond Ring" "Hubris Circlet" "Leather Belt" "Onyx Amulet" "Sapphire Ring" "Two-Stone Ring" "Unset Ring"
+	BaseType "Amber Amulet" "Coral Ring" "Diamond Ring" "Leather Belt" "Onyx Amulet" "Royal Burgonet"
 	ElderItem True
 	ItemLevel >= 84
 	CustomAlertSound "300_valuable.wav"
@@ -1646,7 +1647,7 @@ Show
 
 #Bases
 Show
-	BaseType "Diamond Ring" "Golden Kris" "Leather Belt" "Onyx Amulet" "Sambar Sceptre" "Turquoise Amulet" "Void Sceptre"
+	BaseType "Agate Amulet" "Amber Amulet" "Diamond Ring" "Gold Amulet" "Golden Kris" "Leather Belt" "Onyx Amulet" "Sambar Sceptre" "Turquoise Amulet" "Void Sceptre"
 	ItemLevel >= 84
 	ShaperItem True
 	CustomAlertSound "300_valuable.wav"
@@ -1660,7 +1661,7 @@ Show
 
 #Bases
 Show
-	BaseType "Abyssal Sceptre" "Agate Amulet" "Amber Amulet" "Amethyst Ring" "Assassin's Garb" "Chain Belt" "Citrine Amulet" "Cloth Belt" "Conjurer Gloves" "Coral Amulet" "Corsair Sword" "Destiny Leather" "Dragonbone Rapier" "Eternal Burgonet" "Fluted Bascinet" "Gold Amulet" "Gold Ring" "Goliath Gauntlets" "Great Crown" "Gutting Knife" "Harlequin Mask" "Heavy Belt" "Hydrascale Gauntlets" "Imbued Wand" "Imperial Skean" "Iron Ring" "Jade Amulet" "Jewelled Foil" "Lacquered Helmet" "Lapis Amulet" "Legion Gloves" "Lion Pelt" "Magistrate Crown" "Moonstone Ring" "Necromancer Circlet" "Nightmare Bascinet" "Omen Wand" "Paua Amulet" "Paua Ring" "Penetrating Arrow Quiver" "Platinum Kris" "Praetor Crown" "Rustic Sash" "Saintly Chainmail" "Samite Helmet" "Shagreen Gloves" "Siege Axe" "Slink Boots" "Slink Gloves" "Solaris Circlet" "Sorcerer Gloves" "Spike-Point Arrow Quiver" "Studded Belt" "Titanium Spirit Shield" "Topaz Ring" "Turquoise Amulet" "Tyrant's Sekhem" "Ursine Pelt" "Vaal Regalia" "Void Sceptre"
+	BaseType "Agate Amulet" "Amethyst Ring" "Angelic Kite Shield" "Assassin's Mitts" "Broadhead Arrow Quiver" "Carnal Armour" "Chain Belt" "Citrine Amulet" "Cloth Belt" "Coral Amulet" "Corsair Sword" "Crusader Plate" "Deicide Mask" "Dragonbone Rapier" "Eternal Burgonet" "Fiend Dagger" "Fluted Bascinet" "Glorious Plate" "Gold Ring" "Goliath Gauntlets" "Great Crown" "Harlequin Mask" "Heavy Belt" "Hubris Circlet" "Hydrascale Gauntlets" "Imbued Wand" "Imperial Skean" "Iron Ring" "Jade Amulet" "Jewelled Foil" "Karui Sceptre" "Lion Pelt" "Magistrate Crown" "Moonstone Ring" "Paua Amulet" "Paua Ring" "Penetrating Arrow Quiver" "Ruby Ring" "Rustic Sash" "Samite Helmet" "Sinner Tricorne" "Solaris Circlet" "Sorcerer Gloves" "Thicket Bow" "Topaz Ring" "Turquoise Amulet" "Two-Stone Ring" "Tyrant's Sekhem" "Unset Ring" "Ursine Pelt" "Vaal Regalia" "Void Sceptre" "Wyrmscale Gauntlets"
 	ElderItem True
 	ItemLevel >= 84
 	CustomAlertSound "100_base.wav"
@@ -1674,7 +1675,7 @@ Show
 
 #Bases
 Show
-	BaseType "Ambusher" "Conjurer Gloves" "Eclipse Staff" "Fancy Foil" "Fingerless Silk Gloves" "Ghastly Eye Jewel" "Harbinger Bow" "Harmonic Spirit Shield" "Hypnotic Eye Jewel" "Imperial Claw" "Lacewood Spirit Shield" "Lacquered Buckler" "Marble Amulet" "Murderous Eye Jewel" "Noble Tricorne" "Opal Ring" "Opal Wand" "Prismatic Ring" "Sai" "Searching Eye Jewel" "Sorcerer Boots" "Sorcerer Gloves" "Spiked Gloves" "Stealth Boots" "Steel Ring" "Titanium Spirit Shield" "Vaal Axe" "Vaal Greaves" "Vaal Rapier" "Viridian Jewel"
+	BaseType "Ambusher" "Ancient Greaves" "Conjurer Gloves" "Corsair Sword" "Dragonbone Rapier" "Fingerless Silk Gloves" "Hypnotic Eye Jewel" "Imperial Claw" "Jewelled Foil" "Lacewood Spirit Shield" "Lacquered Buckler" "Marble Amulet" "Murder Mitts" "Murderous Eye Jewel" "Omen Wand" "Opal Ring" "Opal Wand" "Profane Wand" "Sai" "Sambar Sceptre" "Searching Eye Jewel" "Sorcerer Boots" "Sorcerer Gloves" "Spiked Gloves" "Stealth Boots" "Steel Ring" "Titanium Spirit Shield" "Two-Toned Boots"
 	ItemLevel >= 84
 	CustomAlertSound "100_base.wav"
 	MinimapIcon 1 Green Hexagon
@@ -1687,7 +1688,7 @@ Show
 
 #Bases
 Show
-	BaseType "Abyssal Sceptre" "Amber Amulet" "Amethyst Ring" "Apex Rapier" "Assassin's Mitts" "Broadhead Arrow Quiver" "Carnal Sceptre" "Chain Belt" "Citrine Amulet" "Cloth Belt" "Coral Ring" "Corsair Sword" "Demon Dagger" "Fancy Foil" "Fiend Dagger" "Fluted Bascinet" "Fossilised Spirit Shield" "Gemini Claw" "Gold Ring" "Goliath Gauntlets" "Harpy Rapier" "Heavy Belt" "Hubris Circlet" "Imbued Wand" "Imperial Skean" "Iron Ring" "Jade Amulet" "Jewelled Foil" "Karui Sceptre" "Lapis Amulet" "Lion Pelt" "Moonstone Ring" "Paua Ring" "Penetrating Arrow Quiver" "Platinum Kris" "Platinum Sceptre" "Prophecy Wand" "Royal Sceptre" "Ruby Ring" "Runic Hatchet" "Samite Gloves" "Sapphire Ring" "Slaughter Knife" "Slink Boots" "Slink Gloves" "Spike-Point Arrow Quiver" "Studded Belt" "Thicket Bow" "Tornado Wand" "Two-Stone Ring" "Tyrant's Sekhem" "Unset Ring" "Vaal Sceptre"
+	BaseType "Abyssal Sceptre" "Amethyst Ring" "Apex Rapier" "Assassin's Mitts" "Broadhead Arrow Quiver" "Carnal Sceptre" "Chain Belt" "Citrine Amulet" "Cloth Belt" "Coral Ring" "Dragonbone Rapier" "Fiend Dagger" "Fluted Bascinet" "Fossilised Spirit Shield" "Gemini Claw" "Gemstone Sword" "Gold Ring" "Goliath Gauntlets" "Harpy Rapier" "Heavy Belt" "Hydrascale Gauntlets" "Imbued Wand" "Imperial Claw" "Imperial Skean" "Iron Ring" "Jade Amulet" "Jewelled Foil" "Karui Sceptre" "Lapis Amulet" "Lion Pelt" "Moonstone Ring" "Paua Ring" "Penetrating Arrow Quiver" "Royal Sceptre" "Royal Skean" "Ruby Ring" "Runic Hatchet" "Rustic Sash" "Samite Helmet" "Sapphire Ring" "Shagreen Gloves" "Siege Axe" "Slink Gloves" "Spike-Point Arrow Quiver" "Studded Belt" "Thicket Bow" "Topaz Ring" "Two-Stone Ring" "Tyrant's Sekhem" "Unset Ring" "Ursine Pelt" "Vaal Regalia" "Vaal Sceptre"
 	ItemLevel >= 84
 	ShaperItem True
 	CustomAlertSound "100_base.wav"
@@ -1701,7 +1702,7 @@ Show
 
 #Bases
 Show
-	BaseType "Coral Ring" "Diamond Ring"
+	BaseType "Diamond Ring" "Topaz Ring"
 	ElderItem True
 	ItemLevel >= 83
 	CustomAlertSound "300_valuable.wav"
@@ -1715,7 +1716,7 @@ Show
 
 #Bases
 Show
-	BaseType "Agate Amulet" "Citrine Amulet" "Gold Amulet" "Jewelled Foil" "Onyx Amulet" "Opal Sceptre"
+	BaseType "Citrine Amulet" "Diamond Ring" "Opal Sceptre" "Platinum Sceptre" "Void Sceptre"
 	ItemLevel >= 83
 	ShaperItem True
 	CustomAlertSound "300_valuable.wav"
@@ -1729,7 +1730,7 @@ Show
 
 #Bases
 Show
-	BaseType "Agate Amulet" "Amber Amulet" "Amethyst Ring" "Assassin's Mitts" "Astral Plate" "Chain Belt" "Citrine Amulet" "Cloth Belt" "Eternal Burgonet" "Fluted Bascinet" "Gold Amulet" "Gold Ring" "Goliath Gauntlets" "Harbinger Bow" "Harlequin Mask" "Heavy Belt" "Hubris Circlet" "Hydrascale Gauntlets" "Imperial Claw" "Iron Ring" "Jade Amulet" "Lacquered Helmet" "Lapis Amulet" "Leather Belt" "Legion Gloves" "Lion Pelt" "Magistrate Crown" "Moonstone Ring" "Onyx Amulet" "Paua Ring" "Praetor Crown" "Ruby Ring" "Rustic Sash" "Samite Helmet" "Sapphire Ring" "Shagreen Boots" "Shagreen Gloves" "Siege Helmet" "Slink Gloves" "Titan Gauntlets" "Titanium Spirit Shield" "Topaz Ring" "Turquoise Amulet" "Two-Stone Ring" "Unset Ring" "Vaal Regalia"
+	BaseType "Agate Amulet" "Amber Amulet" "Amethyst Ring" "Apex Rapier" "Assassin's Mitts" "Astral Plate" "Chain Belt" "Citrine Amulet" "Cloth Belt" "Conjurer Gloves" "Coral Ring" "Eternal Burgonet" "Fluted Bascinet" "Gold Ring" "Golden Kris" "Goliath Gauntlets" "Harbinger Bow" "Harlequin Mask" "Heavy Belt" "Hubris Circlet" "Hydrascale Boots" "Hydrascale Gauntlets" "Imperial Claw" "Iron Ring" "Jade Amulet" "Lacquered Helmet" "Lapis Amulet" "Leather Belt" "Lion Pelt" "Magistrate Crown" "Moonstone Ring" "Necromancer Circlet" "Omen Wand" "Onyx Amulet" "Paua Amulet" "Paua Ring" "Penetrating Arrow Quiver" "Praetor Crown" "Ruby Ring" "Rustic Sash" "Samite Helmet" "Sapphire Ring" "Shagreen Boots" "Sorcerer Gloves" "Studded Belt" "Titan Gauntlets" "Turquoise Amulet" "Two-Stone Ring" "Unset Ring" "Wyrmscale Gauntlets"
 	ElderItem True
 	ItemLevel >= 83
 	CustomAlertSound "100_base.wav"
@@ -1743,7 +1744,7 @@ Show
 
 #Bases
 Show
-	BaseType "Ancient Gauntlets" "Dragonscale Gauntlets" "Hypnotic Eye Jewel" "Imperial Buckler" "Imperial Claw" "Jewelled Foil" "Marble Amulet" "Murderous Eye Jewel" "Opal Ring" "Searching Eye Jewel" "Serpent Wand"
+	BaseType "Carnal Mitts" "Dragonbone Rapier" "Exquisite Blade" "Hypnotic Eye Jewel" "Imperial Claw" "Jewelled Foil" "Marble Amulet" "Murder Mitts" "Murderous Eye Jewel" "Opal Ring" "Searching Eye Jewel" "Serpent Wand" "Steel Ring" "Supreme Spiked Shield" "Terror Claw" "Thorium Spirit Shield" "Vaal Gauntlets" "Wyrmscale Boots"
 	ItemLevel >= 83
 	CustomAlertSound "100_base.wav"
 	MinimapIcon 1 Green Hexagon
@@ -1756,7 +1757,7 @@ Show
 
 #Bases
 Show
-	BaseType "Abyssal Sceptre" "Amber Amulet" "Amethyst Ring" "Apex Rapier" "Blood Sceptre" "Broadhead Arrow Quiver" "Carnal Sceptre" "Coral Ring" "Corsair Sword" "Demon Dagger" "Diamond Ring" "Dragonbone Rapier" "Ezomyte Dagger" "Fancy Foil" "Fiend Dagger" "Gemini Claw" "Golden Kris" "Goliath Gauntlets" "Great White Claw" "Gutting Knife" "Harbinger Bow" "Harpy Rapier" "Heavy Belt" "Hubris Circlet" "Hydrascale Gauntlets" "Imperial Claw" "Imperial Skean" "Iron Ring" "Jade Amulet" "Karui Sceptre" "Lapis Amulet" "Leather Belt" "Moonstone Ring" "Paua Amulet" "Paua Ring" "Pecoraro" "Penetrating Arrow Quiver" "Platinum Kris" "Platinum Sceptre" "Royal Burgonet" "Royal Sceptre" "Royal Skean" "Ruby Ring" "Runic Hatchet" "Sai" "Sambar Sceptre" "Sapphire Ring" "Slink Boots" "Slink Gloves" "Sorcerer Gloves" "Spike-Point Arrow Quiver" "Studded Belt" "Thicket Bow" "Titan Greaves" "Topaz Ring" "Turquoise Amulet" "Two-Stone Ring" "Tyrant's Sekhem" "Unset Ring" "Ursine Pelt" "Vaal Regalia" "Vaal Sceptre" "Void Sceptre"
+	BaseType "Abyssal Sceptre" "Agate Amulet" "Amber Amulet" "Amethyst Ring" "Apex Rapier" "Assassin's Mitts" "Astral Plate" "Behemoth Mace" "Blood Sceptre" "Broadhead Arrow Quiver" "Carnal Sceptre" "Chain Belt" "Coral Amulet" "Coral Ring" "Crystal Sceptre" "Demon Dagger" "Dragonbone Rapier" "Eagle Claw" "Ezomyte Dagger" "Fancy Foil" "Fiend Dagger" "Fluted Bascinet" "Gemini Claw" "Gold Ring" "Golden Kris" "Harbinger Bow" "Harlequin Mask" "Harpy Rapier" "Heavy Belt" "Hubris Circlet" "Hydrascale Gauntlets" "Imbued Wand" "Imperial Claw" "Imperial Skean" "Jade Amulet" "Jewelled Foil" "Karui Sceptre" "Lapis Amulet" "Leather Belt" "Moonstone Ring" "Onyx Amulet" "Paua Amulet" "Paua Ring" "Pecoraro" "Penetrating Arrow Quiver" "Platinum Kris" "Royal Burgonet" "Royal Sceptre" "Royal Skean" "Ruby Ring" "Rustic Sash" "Sambar Sceptre" "Sapphire Ring" "Slink Gloves" "Spike-Point Arrow Quiver" "Spiraled Foil" "Studded Belt" "Thicket Bow" "Topaz Ring" "Turquoise Amulet" "Two-Stone Ring" "Tyrant's Sekhem" "Unset Ring" "Vaal Regalia"
 	ItemLevel >= 83
 	ShaperItem True
 	CustomAlertSound "100_base.wav"
@@ -1770,7 +1771,7 @@ Show
 
 #Bases
 Show
-	BaseType "Citrine Amulet" "Leather Belt"
+	BaseType "Agate Amulet" "Diamond Ring" "Leather Belt" "Onyx Amulet" "Unset Ring"
 	ElderItem True
 	ItemLevel >= 82
 	CustomAlertSound "300_valuable.wav"
@@ -1784,7 +1785,7 @@ Show
 
 #Bases
 Show
-	BaseType "Agate Amulet" "Diamond Ring" "Jade Amulet" "Lapis Amulet" "Onyx Amulet" "Opal Sceptre" "Paua Amulet" "Sambar Sceptre"
+	BaseType "Agate Amulet" "Amber Amulet" "Jade Amulet" "Lapis Amulet" "Onyx Amulet" "Sambar Sceptre" "Turquoise Amulet"
 	ItemLevel >= 82
 	ShaperItem True
 	CustomAlertSound "300_valuable.wav"
@@ -1798,7 +1799,7 @@ Show
 
 #Bases
 Show
-	BaseType "Agate Amulet" "Amber Amulet" "Apex Rapier" "Cloth Belt" "Conjurer Gloves" "Coral Ring" "Diamond Ring" "Fluted Bascinet" "Fossilised Spirit Shield" "Glorious Plate" "Great Crown" "Heavy Belt" "Imbued Wand" "Iron Ring" "Jade Amulet" "Karui Sceptre" "Lapis Amulet" "Lion Pelt" "Magistrate Crown" "Onyx Amulet" "Paua Ring" "Ruby Ring" "Rustic Sash" "Samite Helmet" "Shagreen Gloves" "Solaris Circlet" "Studded Belt" "Turquoise Amulet" "Two-Stone Ring" "Tyrant's Sekhem" "Unset Ring" "Ursine Pelt" "Void Sceptre"
+	BaseType "Amber Amulet" "Carnal Mitts" "Citrine Amulet" "Conjurer Gloves" "Coral Ring" "Fluted Bascinet" "Great Crown" "Great White Claw" "Harlequin Mask" "Heavy Belt" "Hubris Circlet" "Hydrascale Gauntlets" "Jade Amulet" "Karui Sceptre" "Lacquered Helmet" "Lapis Amulet" "Lion Pelt" "Magistrate Crown" "Necromancer Circlet" "Ruby Ring" "Rustic Sash" "Samite Helmet" "Shagreen Gloves" "Siege Helmet" "Slaughter Knife" "Sorcerer Gloves" "Spike-Point Arrow Quiver" "Studded Belt" "Turquoise Amulet" "Two-Stone Ring" "Tyrant's Sekhem" "Ursine Pelt"
 	ElderItem True
 	ItemLevel >= 82
 	CustomAlertSound "100_base.wav"
@@ -1812,7 +1813,7 @@ Show
 
 #Bases
 Show
-	BaseType "Ancient Gauntlets" "Great White Claw" "Imperial Buckler" "Marble Amulet" "Opal Ring" "Prismatic Ring" "Searching Eye Jewel" "Siege Axe" "Sorcerer Gloves" "Steel Ring" "Vaal Greaves"
+	BaseType "Ambusher" "Crystal Belt" "Dragoon Sword" "Goliath Gauntlets" "Great White Claw" "Imperial Buckler" "Imperial Skean" "Marble Amulet" "Opal Ring" "Searching Eye Jewel" "Sharkskin Gloves" "Steel Ring" "Vaal Gauntlets"
 	ItemLevel >= 82
 	CustomAlertSound "100_base.wav"
 	MinimapIcon 1 Green Hexagon
@@ -1825,7 +1826,7 @@ Show
 
 #Bases
 Show
-	BaseType "Abyssal Sceptre" "Amber Amulet" "Amethyst Ring" "Apex Rapier" "Assassin's Mitts" "Astral Plate" "Citrine Amulet" "Coral Amulet" "Coral Ring" "Corsair Sword" "Dragonbone Rapier" "Eagle Claw" "Fancy Foil" "Fossilised Spirit Shield" "Gemini Claw" "Gold Amulet" "Golden Kris" "Harpy Rapier" "Hydrascale Gauntlets" "Imbued Wand" "Imperial Claw" "Imperial Skean" "Iron Ring" "Jewelled Foil" "Karui Sceptre" "Leather Belt" "Legion Gloves" "Moonstone Ring" "Penetrating Arrow Quiver" "Platinum Kris" "Platinum Sceptre" "Prophecy Wand" "Royal Burgonet" "Royal Sceptre" "Royal Skean" "Ruby Ring" "Sai" "Samite Helmet" "Sapphire Ring" "Siege Axe" "Slaughter Knife" "Spike-Point Arrow Quiver" "Thicket Bow" "Topaz Ring" "Tornado Wand" "Turquoise Amulet" "Two-Stone Ring" "Tyrant's Sekhem" "Unset Ring" "Vaal Sceptre" "Void Sceptre"
+	BaseType "Abyssal Sceptre" "Amethyst Ring" "Apex Rapier" "Carnal Sceptre" "Citrine Amulet" "Coral Ring" "Corsair Sword" "Crystal Sceptre" "Diamond Ring" "Fancy Foil" "Fiend Dagger" "Gold Amulet" "Golden Kris" "Gutting Knife" "Harpy Rapier" "Hydrascale Gauntlets" "Imperial Skean" "Iron Ring" "Jewelled Foil" "Karui Axe" "Karui Sceptre" "Leather Belt" "Legion Gloves" "Moonstone Ring" "Noble Claw" "Penetrating Arrow Quiver" "Platinum Kris" "Prophecy Wand" "Royal Sceptre" "Royal Skean" "Ruby Ring" "Sai" "Samite Helmet" "Sapphire Ring" "Siege Axe" "Slaughter Knife" "Spike-Point Arrow Quiver" "Thicket Bow" "Topaz Ring" "Two-Stone Ring" "Tyrant's Sekhem" "Unset Ring" "Void Sceptre"
 	ItemLevel >= 82
 	ShaperItem True
 	CustomAlertSound "100_base.wav"

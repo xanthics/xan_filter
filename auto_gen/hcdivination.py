@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/14/2018(m/d/y) 07:18:12 UTC from "Hardcore" data
+# Created: 10/17/2018(m/d/y) 17:20:43 UTC from "Hardcore" data
 
 desc = "Divination Card"
 
@@ -8,17 +8,23 @@ desc = "Divination Card"
 items = {
 	"1 House of Mirrors": {"base": "House of Mirrors", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Doctor": {"base": "The Doctor", "class": "Divination Card", "type": "divination extremely high"},
-	"2 Abandoned Wealth": {"base": "Abandoned Wealth", "class": "Divination Card", "type": "divination very high"},
 	"2 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination very high"},
-	"2 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination very high"},
-	"3 The Chains that Bind": {"base": "The Chains that Bind", "class": "Divination Card", "type": "divination high"},
+	"2 The Mayor": {"base": "The Mayor", "class": "Divination Card", "type": "divination very high"},
+	"2 The Saint's Treasure": {"base": "The Saint's Treasure", "class": "Divination Card", "type": "divination very high"},
+	"2 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination very high"},
+	"2 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination very high"},
+	"3 Hope": {"base": "Hope", "class": "Divination Card", "type": "divination high"},
 	"3 The Inventor": {"base": "The Inventor", "class": "Divination Card", "type": "divination high"},
+	"3 The Trial": {"base": "The Trial", "class": "Divination Card", "type": "divination high"},
+	"3 The Wretched": {"base": "The Wretched", "class": "Divination Card", "type": "divination high"},
+	"3 Vinia's Token": {"base": "Vinia's Token", "class": "Divination Card", "type": "divination high"},
 	"4 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "divination low"},
 	"4 Anarchy's Price": {"base": "Anarchy's Price", "class": "Divination Card", "type": "divination low"},
 	"4 Lantador's Lost Love": {"base": "Lantador's Lost Love", "class": "Divination Card", "type": "divination low"},
 	"4 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},
 	"4 The Beast": {"base": "The Beast", "class": "Divination Card", "type": "divination low"},
 	"4 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
+	"4 The Flora's Gift": {"base": "The Flora's Gift", "class": "Divination Card", "type": "divination low"},
 	"4 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination low"},
 	"4 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination low"},
 	"4 The Lover": {"base": "The Lover", "class": "Divination Card", "type": "divination low"},
