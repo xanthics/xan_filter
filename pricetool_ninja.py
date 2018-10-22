@@ -344,7 +344,7 @@ def gen_unique(unique_list, league, curvals):
 			items['ehigh'].append(u)
 		elif unique_list[u] > curvals['very']:
 			items['vhigh'].append(u)
-		elif unique_list[u] > curvals['high']:
+#		elif unique_list[u] > curvals['high']:
 			items['high'].append(u)
 		elif unique_list[u] < curvals['high'] / 2:
 			items['low'].append(u)
@@ -370,6 +370,8 @@ def baseclassify(val, curvals):
 		tier = 'base extremely high'
 	elif val >= curvals['very']:
 		tier = 'base very high'
+#	elif val >= curvals['high']*2:
+#		tier = 'rare high'
 	else:
 		tier = None
 
