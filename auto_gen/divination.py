@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/22/2018(m/d/y) 04:25:13 UTC from "Standard" data
+# Created: 10/22/2018(m/d/y) 05:00:38 UTC from "Standard" data
 
 desc = "Divination Card"
 
@@ -45,6 +45,7 @@ items = {
 	"2 The Undaunted": {"base": "The Undaunted", "class": "Divination Card", "type": "divination very high"},
 	"2 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination very high"},
 	"2 The Vast": {"base": "The Vast", "class": "Divination Card", "type": "divination very high"},
+	"2 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination very high"},
 	"2 The Wolf": {"base": "The Wolf", "class": "Divination Card", "type": "divination very high"},
 	"2 The World Eater": {"base": "The World Eater", "class": "Divination Card", "type": "divination very high"},
 	"2 Wealth and Power": {"base": "Wealth and Power", "class": "Divination Card", "type": "divination very high"},
@@ -60,7 +61,6 @@ items = {
 	"3 Left to Fate": {"base": "Left to Fate", "class": "Divination Card", "type": "divination high"},
 	"3 Lost Worlds": {"base": "Lost Worlds", "class": "Divination Card", "type": "divination high"},
 	"3 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination high"},
-	"3 No Traces": {"base": "No Traces", "class": "Divination Card", "type": "divination high"},
 	"3 Rebirth": {"base": "Rebirth", "class": "Divination Card", "type": "divination high"},
 	"3 Scholar of the Seas": {"base": "Scholar of the Seas", "class": "Divination Card", "type": "divination high"},
 	"3 The Admirer": {"base": "The Admirer", "class": "Divination Card", "type": "divination high"},
@@ -70,7 +70,6 @@ items = {
 	"3 The Brittle Emperor": {"base": "The Brittle Emperor", "class": "Divination Card", "type": "divination high"},
 	"3 The Cacophony": {"base": "The Cacophony", "class": "Divination Card", "type": "divination high"},
 	"3 The Cartographer": {"base": "The Cartographer", "class": "Divination Card", "type": "divination high"},
-	"3 The Cataclysm": {"base": "The Cataclysm", "class": "Divination Card", "type": "divination high"},
 	"3 The Celestial Justicar": {"base": "The Celestial Justicar", "class": "Divination Card", "type": "divination high"},
 	"3 The Chains that Bind": {"base": "The Chains that Bind", "class": "Divination Card", "type": "divination high"},
 	"3 The Cursed King": {"base": "The Cursed King", "class": "Divination Card", "type": "divination high"},
@@ -115,13 +114,13 @@ items = {
 	"3 The Void": {"base": "The Void", "class": "Divination Card", "type": "divination high"},
 	"3 The Warlord": {"base": "The Warlord", "class": "Divination Card", "type": "divination high"},
 	"3 The Wilted Rose": {"base": "The Wilted Rose", "class": "Divination Card", "type": "divination high"},
-	"3 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination high"},
 	"3 The Wretched": {"base": "The Wretched", "class": "Divination Card", "type": "divination high"},
 	"3 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination high"},
 	"4 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "divination low"},
 	"4 Anarchy's Price": {"base": "Anarchy's Price", "class": "Divination Card", "type": "divination low"},
 	"4 Cartographer's Delight": {"base": "Cartographer's Delight", "class": "Divination Card", "type": "divination low"},
 	"4 Death": {"base": "Death", "class": "Divination Card", "type": "divination low"},
+	"4 Her Mask": {"base": "Her Mask", "class": "Divination Card", "type": "divination low"},
 	"4 Lantador's Lost Love": {"base": "Lantador's Lost Love", "class": "Divination Card", "type": "divination low"},
 	"4 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},
 	"4 The Catalyst": {"base": "The Catalyst", "class": "Divination Card", "type": "divination low"},

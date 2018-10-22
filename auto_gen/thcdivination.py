@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/22/2018(m/d/y) 04:25:26 UTC from "tmphardcore" data
+# Created: 10/22/2018(m/d/y) 05:00:53 UTC from "tmphardcore" data
 
 desc = "Divination Card"
 
@@ -54,6 +54,7 @@ items = {
 	"3 Heterochromia": {"base": "Heterochromia", "class": "Divination Card", "type": "divination high"},
 	"3 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
 	"3 Left to Fate": {"base": "Left to Fate", "class": "Divination Card", "type": "divination high"},
+	"3 Lingering Remnants": {"base": "Lingering Remnants", "class": "Divination Card", "type": "divination high"},
 	"3 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination high"},
 	"3 No Traces": {"base": "No Traces", "class": "Divination Card", "type": "divination high"},
 	"3 Perfection": {"base": "Perfection", "class": "Divination Card", "type": "divination high"},

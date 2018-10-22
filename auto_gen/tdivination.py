@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/22/2018(m/d/y) 04:25:19 UTC from "tmpstandard" data
+# Created: 10/22/2018(m/d/y) 05:00:47 UTC from "tmpstandard" data
 
 desc = "Divination Card"
 
@@ -63,7 +63,6 @@ items = {
 	"3 The Hale Heart": {"base": "The Hale Heart", "class": "Divination Card", "type": "divination high"},
 	"3 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination high"},
 	"3 The Innocent": {"base": "The Innocent", "class": "Divination Card", "type": "divination high"},
-	"3 The Inventor": {"base": "The Inventor", "class": "Divination Card", "type": "divination high"},
 	"3 The Jeweller's Boon": {"base": "The Jeweller's Boon", "class": "Divination Card", "type": "divination high"},
 	"3 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination high"},
 	"3 The Obscured": {"base": "The Obscured", "class": "Divination Card", "type": "divination high"},

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/22/2018(m/d/y) 04:25:19 UTC from "tmpstandard" data
+# Created: 10/22/2018(m/d/y) 05:00:47 UTC from "tmpstandard" data
 
 desc = "Currency Autogen"
 
@@ -134,7 +134,7 @@ items = {
 	"07 Orb of Transmutation": {"base": "Orb of Transmutation", 'other': ['StackSize >= 13'], "class": "Currency", "type": "currency normal"},
 	"1 Perandus Coin": {"base": "Perandus Coin", "class": "Currency", "type": "currency show"},
 	"09 Perandus Coin": {"base": "Perandus Coin", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency normal"},
-	"08 Perandus Coin": {"base": "Perandus Coin", 'other': ['StackSize >= 6'], "class": "Currency", "type": "currency high"},
+	"08 Perandus Coin": {"base": "Perandus Coin", 'other': ['StackSize >= 7'], "class": "Currency", "type": "currency high"},
 	"1 Perfect Fossil": {"base": "Perfect Fossil", "class": "Currency", "type": "currency high"},
 	"1 Portal Scroll": {"base": "Portal Scroll", "class": "Currency", "type": "hide"},
 	"09 Portal Scroll": {"base": "Portal Scroll", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency very low"},

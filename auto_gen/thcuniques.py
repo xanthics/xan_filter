@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/22/2018(m/d/y) 04:25:26 UTC from "tmphardcore" data
+# Created: 10/22/2018(m/d/y) 05:00:53 UTC from "tmphardcore" data
 
 desc = "Unique"
 
@@ -39,7 +39,6 @@ items = {
 	"1 Cloth Belt Piece": {"base": "Cloth Belt Piece", "type": "unique very high"},
 	"1 Corsair Sword": {"base": "Corsair Sword", "type": "unique very high"},
 	"1 Courtyard Map": {"base": "Courtyard Map", "type": "unique very high"},
-	"1 Cutlass": {"base": "Cutlass", "type": "unique very high"},
 	"1 Deicide Mask": {"base": "Deicide Mask", "type": "unique very high"},
 	"1 Full Wyrmscale": {"base": "Full Wyrmscale", "type": "unique very high"},
 	"1 Gladiator Plate": {"base": "Gladiator Plate", "type": "unique very high"},
@@ -76,7 +75,6 @@ items = {
 	"2 Cloth Belt Piece": {"base": "Cloth Belt Piece", "type": "unique high"},
 	"2 Corsair Sword": {"base": "Corsair Sword", "type": "unique high"},
 	"2 Courtyard Map": {"base": "Courtyard Map", "type": "unique high"},
-	"2 Cutlass": {"base": "Cutlass", "type": "unique high"},
 	"2 Deicide Mask": {"base": "Deicide Mask", "type": "unique high"},
 	"2 Full Wyrmscale": {"base": "Full Wyrmscale", "type": "unique high"},
 	"2 Gladiator Plate": {"base": "Gladiator Plate", "type": "unique high"},
@@ -193,7 +191,6 @@ items = {
 	"7 Dread Maul": {"base": "Dread Maul", "type": "unique low"},
 	"7 Gnarled Branch": {"base": "Gnarled Branch", "type": "unique low"},
 	"7 Goat's Horn": {"base": "Goat's Horn", "type": "unique low"},
-	"7 Golden Mask": {"base": "Golden Mask", "type": "unique low"},
 	"7 Great Helmet": {"base": "Great Helmet", "type": "unique low"},
 	"7 Greater Mana Flask": {"base": "Greater Mana Flask", "type": "unique low"},
 	"7 Holy Chainmail": {"base": "Holy Chainmail", "type": "unique low"},
