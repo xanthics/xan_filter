@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/22/2018(m/d/y) 04:25:26 UTC from "tmphardcore" data
+# Created: 10/22/2018(m/d/y) 05:00:53 UTC from "tmphardcore" data
 
 desc = "Currency Autogen"
 
@@ -70,7 +70,7 @@ items = {
 	"1 Exalted Orb": {"base": "Exalted Orb", "class": "Currency", "type": "currency extremely high"},
 	"1 Exalted Shard": {"base": "Exalted Shard", "class": "Currency", "type": "currency high"},
 	"09 Exalted Shard": {"base": "Exalted Shard", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency very high"},
-	"1 Faceted Fossil": {"base": "Faceted Fossil", "class": "Currency", "type": "currency extremely high"},
+	"1 Faceted Fossil": {"base": "Faceted Fossil", "class": "Currency", "type": "currency very high"},
 	"1 Fractured Fossil ": {"base": "Fractured Fossil ", "class": "Currency", "type": "currency extremely high"},
 	"1 Frigid Fossil": {"base": "Frigid Fossil", "class": "Currency", "type": "currency normal"},
 	"1 Gemcutter's Prism": {"base": "Gemcutter's Prism", "class": "Currency", "type": "currency high"},

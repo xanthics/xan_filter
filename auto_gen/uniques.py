@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/22/2018(m/d/y) 04:25:13 UTC from "Standard" data
+# Created: 10/22/2018(m/d/y) 05:00:38 UTC from "Standard" data
 
 desc = "Unique"
 
@@ -173,6 +173,7 @@ items = {
 	"6 Moonstone Ring": {"base": "Moonstone Ring", "type": "unique special"},
 	"6 Murder Boots": {"base": "Murder Boots", "type": "unique special"},
 	"6 Necromancer Circlet": {"base": "Necromancer Circlet", "type": "unique special"},
+	"6 Nightmare Bascinet": {"base": "Nightmare Bascinet", "type": "unique special"},
 	"6 Occultist's Vestment": {"base": "Occultist's Vestment", "type": "unique special"},
 	"6 Onyx Amulet": {"base": "Onyx Amulet", "type": "unique special"},
 	"6 Opal Ring": {"base": "Opal Ring", "type": "unique special"},
@@ -256,6 +257,7 @@ items = {
 	"7 Gladius": {"base": "Gladius", "type": "unique low"},
 	"7 Gnarled Branch": {"base": "Gnarled Branch", "type": "unique low"},
 	"7 Goat's Horn": {"base": "Goat's Horn", "type": "unique low"},
+	"7 Goathide Gloves": {"base": "Goathide Gloves", "type": "unique low"},
 	"7 Golden Buckler": {"base": "Golden Buckler", "type": "unique low"},
 	"7 Golden Mask": {"base": "Golden Mask", "type": "unique low"},
 	"7 Great Helmet": {"base": "Great Helmet", "type": "unique low"},
@@ -345,7 +347,6 @@ items = {
 	"7 Strapped Leather": {"base": "Strapped Leather", "type": "unique low"},
 	"7 Studded Belt": {"base": "Studded Belt", "type": "unique low"},
 	"7 Studded Round Shield": {"base": "Studded Round Shield", "type": "unique low"},
-	"7 Sulphur Flask": {"base": "Sulphur Flask", "type": "unique low"},
 	"7 Sundering Axe": {"base": "Sundering Axe", "type": "unique low"},
 	"7 Supreme Spiked Shield": {"base": "Supreme Spiked Shield", "type": "unique low"},
 	"7 Tarnished Spirit Shield": {"base": "Tarnished Spirit Shield", "type": "unique low"},

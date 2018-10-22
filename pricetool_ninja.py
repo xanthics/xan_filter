@@ -444,7 +444,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 			elif key == 'bases':
 				for i in data:
 					for ii in data[i]:
-						if ii['baseType'].startswith('Superior ') or ii['count'] < 8:
+						if ii['baseType'].startswith('Superior ') or ii['count'] < 14:
 							continue
 						if ii['levelRequired'] not in bases:
 							bases[ii['levelRequired']] = {}
