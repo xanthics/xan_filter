@@ -249,7 +249,6 @@ def gen_div(div_list, league, curvals):
 	            'The Surgeon',
 	            'Prosperity',
 				'The Metalsmith\'s Gift',
-				'Dying Anguish',
 				'The Road to Power',
 				'The Lord in Black',
 				'The Tyrant',
@@ -425,6 +424,9 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 	os.environ['NO_PROXY'] = 'poe.ninja'
 	requester = requests.session()
 
+	# Minimum number of item that must exist on poe.ninja for it to be considered
+	mincount = 10
+
 	for league in leagues:
 		currency = {}
 		divs = {}
@@ -439,12 +441,16 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 				for i in data:
 					for ii in data[i]:
 						if 'chaosEquivalent' in ii:
+							pc = ii['pay']['count'] if ii['pay'] else 0
+							rc = ii['receive']['count'] if ii['receive'] else 0
+							if pc + rc < mincount:
+								continue
 							currency[ii['currencyTypeName']] = ii['chaosEquivalent']
 
 			elif key == 'bases':
 				for i in data:
 					for ii in data[i]:
-						if ii['baseType'].startswith('Superior ') or ii['count'] < 14:
+						if ii['baseType'].startswith('Superior ') or ii['count'] < mincount:
 							continue
 						if ii['levelRequired'] not in bases:
 							bases[ii['levelRequired']] = {}
@@ -455,20 +461,28 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 			elif key in ['resonator', 'fossil']:
 				for i in data:
 					for ii in data[i]:
+						if ii['count'] < mincount:
+							continue
 						currency[ii['name']] = ii['chaosValue']
 
 			elif key == 'div':
 				for i in data:
 					for ii in data[i]:
+						if ii['count'] < mincount:
+							continue
 						divs[ii['name']] = ii['chaosValue']
 			elif key == 'essence':
 				for i in data:
 					for ii in data[i]:
+						if ii['count'] < mincount:
+							continue
 						essences[ii['name']] = ii['chaosValue']
 
 			else:
 				for i in data:
 					for ii in data[i]:
+						if ii['count'] < mincount:
+							continue
 						if 'links' in ii and ii['links'] or ii['name'] in fated or 'relic' in ii['icon']:
 							continue
 						uniques[ii['baseType']].append(ii['chaosValue'])
