@@ -122,6 +122,14 @@ def gen_list_compact(items, desc, soundlist):
 			b += "\n\n"
 	return b
 
+def get_poe_path():
+	try:
+		from win32com.shell import shell, shellcon
+		userDir = shell.SHGetFolderPath(0, shellcon.CSIDL_PERSONAL, None, 0)
+	except ImportError:
+		userDir = os.path.expanduser('~')
+	poeDir = os.path.join(userDir, "My Games", "Path of Exile")
+	return poeDir
 
 # main function for creating a filter
 def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
@@ -179,13 +187,14 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 		buffer += gen_list(itemmods(), "Magic Items", soundlist)  # magic base type highlighting
 		buffer += gen_list(show_catchall.items, show_catchall.desc, soundlist)  # Always show these items
 
-		print("Writing files to {}".format(os.path.expanduser("~\\my game\\Path of Exile\\")))
+		poeDir = get_poe_path()
+		print("Writing files to: {}".format(poeDir))
 
 		with open("xan.{}.show.filter".format(lookup_leagues[i][0]), "w", encoding='utf-8') as f:
 			f.write(buffer)
 			# Default for all other items
 			f.write("Show\n\tDisableDropSound True\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
-		with open(os.path.expanduser(r"~\Documents\my games\Path of Exile\xan.{}.show.filter".format(lookup_leagues[i][0])), "w", encoding='utf-8') as f:
+		with open(os.path.join(poeDir, "xan.{}.show.filter".format(lookup_leagues[i][0])), "w", encoding='utf-8') as f:
 			f.write(buffer)
 			# Default for all other items
 			f.write("Show\n\tDisableDropSound True\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
@@ -194,7 +203,7 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 			f.write(buffer)
 			# Default for all other items
 			f.write("Hide\n\tDisableDropSound True\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
-		with open(os.path.expanduser(r"~\Documents\my games\Path of Exile\xan.{}.hide.filter".format(lookup_leagues[i][0])), "w", encoding='utf-8') as f:
+		with open(os.path.join(poeDir, "xan.{}.hide.filter".format(lookup_leagues[i][0])), "w", encoding='utf-8') as f:
 			f.write(buffer)
 			# Default for all other items
 			f.write("Hide\n\tDisableDropSound True\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
@@ -204,13 +213,13 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 		os.remove(os.path.join('filter_sounds', file))
 	if os.path.isfile('soundpack.zip'):
 		os.remove('soundpack.zip')
-	for file in os.listdir(os.path.expanduser(r"~\Documents\my games\Path of Exile")):
+	for file in os.listdir(poeDir):
 		if file.endswith('.wav'):
-			os.remove(os.path.join(os.path.expanduser(r"~\Documents\my games\Path of Exile"), file))
+			os.remove(os.path.join(poeDir, file))
 	# Create requested sound files
 	for track in soundlist:
 		i, sound = track.split('_', maxsplit=1)
-		convert_wav(int(i), sound)
+		convert_wav(int(i), sound, poeDir)
 	# Create sound pack
 	with ZipFile('soundpack.zip', 'w') as zipper:
 		for track in soundlist:

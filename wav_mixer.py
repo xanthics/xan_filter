@@ -7,7 +7,7 @@ import wave
 from os import path
 
 
-def convert_wav(factor, inpath):
+def convert_wav(factor, inpath, outpath):
 	soundmap = {'divination': 'scroll.wav',
 				'unique': 'amulet.wav',
 				'map_okay': 'charm.wav',
@@ -22,7 +22,7 @@ def convert_wav(factor, inpath):
 	pathout = "{}_{}.wav".format(int(factor), inpath)
 	factor = factor / 100
 
-	with wave.open('source_sounds/{}'.format(soundmap[inpath]), 'rb') as fin, wave.open('filter_sounds/{}'.format(pathout), 'wb') as fout, wave.open(path.expanduser(r"~\Documents\my games\Path of Exile\{}".format(pathout)), "wb") as f:
+	with wave.open('source_sounds/{}'.format(soundmap[inpath]), 'rb') as fin, wave.open('filter_sounds/{}'.format(pathout), 'wb') as fout, wave.open(path.join(outpath, pathout), "wb") as f:
 		fout.setparams(fin.getparams())
 		f.setparams(fin.getparams())
 		sampwidth = fin.getsampwidth()
