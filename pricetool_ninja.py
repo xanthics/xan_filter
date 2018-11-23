@@ -59,8 +59,9 @@ def currencyclassify(cur, val, curvals, stacks=1):
 	elif val >= curvals['min']:
 		tier = 'currency very low'
 	else:
-		#tier = 'currency very low'
-		tier = 'hide'
+		tier = 'currency very low'
+		#tier = 'hide'
+
 	if stacks > 1:
 		return "$ {0}\": {{\"base\": \"{0}\", 'other': ['StackSize >= {2}'], \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier, stacks)
 	return "1 {0}\": {{\"base\": \"{0}\", \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier)
@@ -70,22 +71,17 @@ def currencyclassify(cur, val, curvals, stacks=1):
 def gen_currency(currency_list, league):
 	stackable = ['Orb', 'Splinter', 'Chisel', 'Coin', 'Bauble', 'Sextant', 'Shard', 'Whetstone', 'Scroll', 'Scrap']
 
-	defaults = {"Exalted Orb": 80.0, "Chaos Orb": 1.0, "Orb of Fusing": 0.5, "Regal Orb": 1, "Orb of Alteration": 1 / 16, "Orb of Alchemy": 1 / 3, "Jeweller's Orb": 1 / 8, "Gemcutter's Prism": 1,
-	            "Divine Orb": 15.0, "Orb of Scouring": 0.5, "Blessed Orb": 0.5, "Vaal Orb": 1, "Orb of Chance": 1 / 8, "Orb of Regret": 1.0, "Chromatic Orb": 1 / 15, "Cartographer's Chisel": 0.25,
-	            "Silver Coin": 1 / 3, "Glassblower's Bauble": 1 / 8, "Orb of Augmentation": 1 / 32, "Orb of Transmutation": 1 / 64, "Perandus Coin": 1 / 45, "Apprentice Cartographer's Sextant": .5,
-	            "Journeyman Cartographer's Sextant": 2, "Master Cartographer's Sextant": 5, 'Eternal Orb': 300, "Blessing of Chayula": 300, "Blessing of Esh": 30, "Blessing of Uul-Netol": 10,
-	            "Blessing of Tul": 2, "Blessing of Xoph": 3, "Splinter of Chayula": 3, "Splinter of Xoph": 0.333, "Splinter of Uul-Netol": 0.5, "Splinter of Tul": 1 / 5, "Splinter of Esh": 0.333,
-	            "Blacksmith's Whetstone": 1 / 30, "Portal Scroll": 1 / 100, "Armourer's Scrap": 1 / 50, "Mirror Shard": 52, "Ancient Orb": 7, "Harbinger's Orb": 4, "Orb of Annulment": 3, "Exalted Shard": 7 / 3,
-	            "Orb of Horizons": 2 / 3, "Engineer's Orb": 0.5, "Annulment Shard": 0.5, "Orb of Binding": 1 / 4, "Scroll of Wisdom": 1 / 100, 'Chaos Shard': 1 / 20, 'Mirror of Kalandra': 30000,
-
-				"Prime Chaotic Resonator": 14.58, "Prime Alchemical Resonator": 13.86, "Powerful Chaotic Resonator": 1.0, "Powerful Alchemical Resonator": 1.0,
-				"Primitive Alchemical Resonator": 0.43, "Primitive Chaotic Resonator": 0.43, "Potent Alchemical Resonator": 0.43, "Potent Chaotic Resonator": 0.43,
-				"Fractured Fossil ": 139.02, "Faceted Fossil": 73.47, "Glyphic Fossil": 60.41, "Hollow Fossil": 37.09, "Tangled Fossil": 35.0, "Shuddering Fossil": 34.5,
-				"Bloodstained Fossil": 27.5, "Gilded Fossil": 15.0, "Sanctified Fossil": 15.0, "Lucent Fossil": 5.0, "Encrusted Fossil": 4.0, "Bound Fossil": 3.0,
-				"Prismatic Fossil": 3.0, "Enchanted Fossil": 3.0, "Perfect Fossil": 2.0, "Serrated Fossil": 1.93, "Aetheric Fossil": 1.14, "Jagged Fossil": 1.0,
-				"Scorched Fossil": 1.0, "Pristine Fossil": 1.0, "Corroded Fossil": 1.0, "Metallic Fossil": 0.88, "Dense Fossil": 0.86, "Aberrant Fossil": 0.43, "Frigid Fossil": 0.43,
-
-				}
+	defaults = {"Mirror of Kalandra": 28558.18, "Blessing of Chayula": 179.76, "Exalted Orb": 119.03, "Ancient Orb": 30.5, "Harbinger's Orb": 27.0, "Divine Orb": 19.68, "Orb of Annulment": 11.5, "Blessing of Uul-Netol": 6.0,
+				"Exalted Shard": 5.75, "Blessing of Esh": 5.0, "Master Cartographer's Sextant": 4.0, "Blessing of Xoph": 3.0, "Journeyman Cartographer's Sextant": 2.9, "Blessing of Tul": 2.0, "Vaal Orb": 1.73,
+				"Apprentice Cartographer's Sextant": 1.37, "Gemcutter's Prism": 1.34, "Splinter of Chayula": 1.32, "Orb of Horizons": 0.9, "Orb of Regret": 0.75, "Annulment Shard": 0.67, "Engineer's Orb": 0.66,
+				"Orb of Alchemy": 0.57, "Regal Orb": 0.53, "Cartographer's Chisel": 0.46, "Orb of Scouring": 0.43, "Splinter of Xoph": 0.42, "Orb of Fusing": 0.38, "Orb of Binding": 0.38, "Silver Coin": 0.19,
+				"Blessed Orb": 0.16, "Chromatic Orb": 0.14, "Splinter of Uul-Netol": 0.13, "Perandus Coin": 0.12, "Splinter of Esh": 0.12, "Orb of Chance": 0.1, "Orb of Alteration": 0.09, "Jeweller's Orb": 0.09,
+				"Glassblower's Bauble": 0.08, "Splinter of Tul": 0.08, "Orb of Augmentation": 0.04, "Blacksmith's Whetstone": 0.03, "Armourer's Scrap": 0.03, "Orb of Transmutation": 0.02, "Portal Scroll": 0.02,
+				"Prime Chaotic Resonator": 334.79, "Prime Alchemical Resonator": 330.29, "Potent Chaotic Resonator": 1.27, "Powerful Chaotic Resonator": 1.0, "Primitive Chaotic Resonator": 0.5, "Potent Alchemical Resonator": 0.5,
+				"Primitive Alchemical Resonator": 0.39, "Powerful Alchemical Resonator": 0.38, "Faceted Fossil": 180.0, "Glyphic Fossil": 180.0, "Bloodstained Fossil": 176.68, "Hollow Fossil": 170.0, "Fractured Fossil ": 169.0,
+				"Tangled Fossil": 166.64, "Sanctified Fossil": 30.27, "Encrusted Fossil": 29.99, "Gilded Fossil": 19.0, "Shuddering Fossil": 7.0, "Enchanted Fossil": 4.0, "Serrated Fossil": 4.0, "Perfect Fossil": 3.0,
+				"Prismatic Fossil": 2.97, "Jagged Fossil": 2.65, "Dense Fossil": 2.0, "Lucent Fossil": 2.0, "Aetheric Fossil": 1.81, "Pristine Fossil": 1.58, "Bound Fossil": 1.0, "Metallic Fossil": 1.0,
+				"Corroded Fossil": 1.0, "Scorched Fossil": 0.35, "Frigid Fossil": 0.23, "Aberrant Fossil": 0.18, "Scroll of Wisdom": 1 / 100}
 
 	shards = {'Binding Shard': 'Orb of Binding', 'Horizon Shard': 'Orb of Horizons', 'Harbinger\'s Shard': 'Harbinger\'s Orb', 'Engineer\'s Shard': 'Engineer\'s Orb', 'Ancient Shard': 'Ancient Orb',
 	          'Regal Shard': 'Regal Orb', 'Alchemy Shard': 'Orb of Alchemy', 'Alteration Shard': 'Orb of Alteration', 'Transmutation Shard': 'Orb of Transmutation', 'Scroll Fragment': 'Scroll of Wisdom'}
@@ -103,13 +99,12 @@ def gen_currency(currency_list, league):
 		if any(stack in cur for stack in stackable):
 			if cur in currency_list:
 				val = currency_list[cur]
-				retstr = currencyclassify(cur, currency_list[cur], curvals)
 			elif cur in shards:
 				val = (currency_list[shards[cur]] if shards[cur] in currency_list else defaults[shards[cur]]) / 20
-				retstr = currencyclassify(cur, (currency_list[shards[cur]] if shards[cur] in currency_list else defaults[shards[cur]]) / 20, curvals)
 			else:
 				val = defaults[cur]
-				retstr = currencyclassify(cur, defaults[cur], curvals)
+
+			retstr = currencyclassify(cur, val, curvals)
 			curval += '\t"{},\n'.format(retstr)
 
 			prevval = retstr[-20:]
@@ -391,7 +386,10 @@ def gen_bases(bases_list, league, curvals):
 					for baseType in sorted(bases_list[level][variant]):
 						value = baseclassify(bases_list[level][variant][baseType], curvals)
 						if value:
-							f.write(u'\t"{4} {2}{0}": {{"base": "{0}", "other": [{1}"ItemLevel >= {3}"], "type": "{5}"}},\n'.format(baseType, '"{}Item True", '.format(variant) if variant else '', variant + ' ' if variant else '', level, count, value))
+							if level == 86:
+								f.write(u'\t"{4} {2}{0}": {{"base": "{0}", "other": [{1}"ItemLevel >= {3}"], "type": "{5}"}},\n'.format(baseType, '"{}Item True", '.format(variant) if variant else '', variant + ' ' if variant else '', level, count, value))
+							else:
+								f.write(u'\t"{4} {2}{0}": {{"base": "{0}", "other": [{1}"ItemLevel {3}"], "type": "{5}"}},\n'.format(baseType, '"{}Item True", '.format(variant) if variant else '', variant + ' ' if variant else '', level, count, value))
 			count += 1
 		f.write(u'\n}\n')
 
@@ -425,7 +423,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 	requester = requests.session()
 
 	# Minimum number of item that must exist on poe.ninja for it to be considered
-	mincount = 10
+	mincount = 8
 
 	for league in leagues:
 		currency = {}
