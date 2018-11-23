@@ -72,8 +72,8 @@ def gen_currency(currency_list, league):
 	stackable = ['Orb', 'Splinter', 'Chisel', 'Coin', 'Bauble', 'Sextant', 'Shard', 'Whetstone', 'Scroll', 'Scrap']
 
 	defaults = {"Mirror of Kalandra": 28558.18, "Blessing of Chayula": 179.76, "Exalted Orb": 119.03, "Ancient Orb": 30.5, "Harbinger's Orb": 27.0, "Divine Orb": 19.68, "Orb of Annulment": 11.5, "Blessing of Uul-Netol": 6.0,
-				"Exalted Shard": 5.75, "Blessing of Esh": 5.0, "Master Cartographer's Sextant": 4.0, "Blessing of Xoph": 3.0, "Journeyman Cartographer's Sextant": 2.9, "Blessing of Tul": 2.0, "Vaal Orb": 1.73,
-				"Apprentice Cartographer's Sextant": 1.37, "Gemcutter's Prism": 1.34, "Splinter of Chayula": 1.32, "Orb of Horizons": 0.9, "Orb of Regret": 0.75, "Annulment Shard": 0.67, "Engineer's Orb": 0.66,
+				"Blessing of Esh": 5.0, "Master Cartographer's Sextant": 4.0, "Blessing of Xoph": 3.0, "Journeyman Cartographer's Sextant": 2.9, "Blessing of Tul": 2.0, "Vaal Orb": 1.73,
+				"Apprentice Cartographer's Sextant": 1.37, "Gemcutter's Prism": 1.34, "Splinter of Chayula": 1.32, "Orb of Horizons": 0.9, "Orb of Regret": 0.75, "Engineer's Orb": 0.66,
 				"Orb of Alchemy": 0.57, "Regal Orb": 0.53, "Cartographer's Chisel": 0.46, "Orb of Scouring": 0.43, "Splinter of Xoph": 0.42, "Orb of Fusing": 0.38, "Orb of Binding": 0.38, "Silver Coin": 0.19,
 				"Blessed Orb": 0.16, "Chromatic Orb": 0.14, "Splinter of Uul-Netol": 0.13, "Perandus Coin": 0.12, "Splinter of Esh": 0.12, "Orb of Chance": 0.1, "Orb of Alteration": 0.09, "Jeweller's Orb": 0.09,
 				"Glassblower's Bauble": 0.08, "Splinter of Tul": 0.08, "Orb of Augmentation": 0.04, "Blacksmith's Whetstone": 0.03, "Armourer's Scrap": 0.03, "Orb of Transmutation": 0.02, "Portal Scroll": 0.02,
@@ -81,10 +81,11 @@ def gen_currency(currency_list, league):
 				"Primitive Alchemical Resonator": 0.39, "Powerful Alchemical Resonator": 0.38, "Faceted Fossil": 180.0, "Glyphic Fossil": 180.0, "Bloodstained Fossil": 176.68, "Hollow Fossil": 170.0, "Fractured Fossil ": 169.0,
 				"Tangled Fossil": 166.64, "Sanctified Fossil": 30.27, "Encrusted Fossil": 29.99, "Gilded Fossil": 19.0, "Shuddering Fossil": 7.0, "Enchanted Fossil": 4.0, "Serrated Fossil": 4.0, "Perfect Fossil": 3.0,
 				"Prismatic Fossil": 2.97, "Jagged Fossil": 2.65, "Dense Fossil": 2.0, "Lucent Fossil": 2.0, "Aetheric Fossil": 1.81, "Pristine Fossil": 1.58, "Bound Fossil": 1.0, "Metallic Fossil": 1.0,
-				"Corroded Fossil": 1.0, "Scorched Fossil": 0.35, "Frigid Fossil": 0.23, "Aberrant Fossil": 0.18, "Scroll of Wisdom": 1 / 100}
+				"Corroded Fossil": 1.0, "Scorched Fossil": 0.35, "Frigid Fossil": 0.23, "Aberrant Fossil": 0.18, "Scroll of Wisdom": 1 / 100, }
 
 	shards = {'Binding Shard': 'Orb of Binding', 'Horizon Shard': 'Orb of Horizons', 'Harbinger\'s Shard': 'Harbinger\'s Orb', 'Engineer\'s Shard': 'Engineer\'s Orb', 'Ancient Shard': 'Ancient Orb',
-	          'Regal Shard': 'Regal Orb', 'Alchemy Shard': 'Orb of Alchemy', 'Alteration Shard': 'Orb of Alteration', 'Transmutation Shard': 'Orb of Transmutation', 'Scroll Fragment': 'Scroll of Wisdom'}
+	          'Regal Shard': 'Regal Orb', 'Alchemy Shard': 'Orb of Alchemy', 'Alteration Shard': 'Orb of Alteration', 'Transmutation Shard': 'Orb of Transmutation', 'Scroll Fragment': 'Scroll of Wisdom',
+			  'Exalted Shard': 'Exalted Orb', 'Annulment Shard': 'Orb of Annulment', 'Mirror Shard': 'Mirror of Kalandra'}
 
 	c_list = list(defaults.keys()) + list(shards.keys())
 	unknown = defaultdict(list)
@@ -141,7 +142,7 @@ def gen_currency(currency_list, league):
 		f.write(curval)
 
 	for v in currency_list.keys():
-		if v not in defaults:
+		if v not in c_list:
 			unknown[v].append(currency_list[v])
 
 	for u in unknown:
@@ -225,6 +226,22 @@ def gen_div_default(div_list):
 
 
 def gen_div(div_list, league, curvals):
+	defaults = {"House of Mirrors": 3145.43, "Beauty Through Death": 881.51, "The Doctor": 583.25, "The Fiend": 368.99, "The Immortal": 286.14, "The Spark and the Flame": 159.04,
+				"Hunter's Reward": 141.25, "The Samurai's Eye": 100.0, "Immortal Resolve": 83.37, "The Queen": 81.58, "The Wolven King's Bite": 80.0, "Abandoned Wealth": 70.0,
+				"The Iron Bard": 65.0, "Mawr Blaidd": 61.44, "The Celestial Stone": 50.0, "The Mayor": 44.0, "Wealth and Power": 40.24, "The Dragon's Heart": 37.83, "The Vast": 27.82,
+				"The Undaunted": 24.61, "The Saint's Treasure": 22.63, "Boon of the First Ones": 20.82, "The Professor": 20.0, "The Sephirot": 18.0, "Pride Before the Fall": 17.81,
+				"The King's Heart": 15.0, "The Wolf": 15.0, "The Hunger": 14.28, "The Artist": 12.34, "Heterochromia": 10.0, "The Hoarder": 9.0, "The Master": 9.0,
+				"The Celestial Justicar": 8.0, "The Hale Heart": 8.0, "The Enlightened": 7.64, "The Breach": 7.0, "The Valkyrie": 6.85, "The Undisputed": 6.65, "The Void": 6.38,
+				"The Valley of Steel Boxes": 6.0, "Perfection": 6.0, "Chaotic Disposition": 5.45, "The Last One Standing": 5.19, "The Polymath": 5.0, "Left to Fate": 5.0,
+				"The Ethereal": 4.66, "The Thaumaturgist": 4.05, "Bowyer's Dream": 4.0, "Last Hope": 4.0, "The Cartographer": 4.0, "The Risk": 4.0, "The Throne": 4.0, "The Wind": 4.0,
+				"The Porcupine": 4.0, "The Dreamer": 4.0, "Time-Lost Relic": 3.75, "Lucky Deck": 3.0, "The Dapper Prodigy": 3.0, "The Inventor": 3.0, "The Warlord": 3.0, "Rebirth": 3.0,
+				"The Obscured": 3.0, "The World Eater": 3.0, "The Twilight Moon": 3.0, "The Endless Darkness": 3.0, "The Price of Protection": 3.0, "The Innocent": 2.98,
+				"Emperor of Purity": 2.0, "Humility": 2.0, "Scholar of the Seas": 2.0, "The Brittle Emperor": 2.0, "The Dark Mage": 2.0, "The Jester": 2.0, "The Wretched": 2.0,
+				"Lingering Remnants": 2.0, "The Jeweller's Boon": 2.0, "The Wilted Rose": 2.0, "The Chains that Bind": 1.95, "The Offering": 1.82, "The Traitor": 1.71, "The Standoff": 1.5}
+
+	for u in set(defaults.keys()) - set(div_list.keys()):
+		div_list[u] = defaults[u]
+
 	substringcards = find_substrings(div_list)
 
 	# Cards that are so rare they may not even be on Standard
