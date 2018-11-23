@@ -122,14 +122,23 @@ def gen_list_compact(items, desc, soundlist):
 			b += "\n\n"
 	return b
 
+
 def get_poe_path():
 	try:
 		from win32com.shell import shell, shellcon
 		userDir = shell.SHGetFolderPath(0, shellcon.CSIDL_PERSONAL, None, 0)
 	except ImportError:
-		userDir = os.path.expanduser('~')
+		import ctypes.wintypes
+		CSIDL_PERSONAL = 5  # My Documents
+		SHGFP_TYPE_CURRENT = 0  # Get current, not default value
+		buf = ctypes.create_unicode_buffer(ctypes.wintypes.MAX_PATH)
+		ctypes.windll.shell32.SHGetFolderPathW(None, CSIDL_PERSONAL, None, SHGFP_TYPE_CURRENT, buf)
+		userDir = buf.value
+		#userDir = os.path.expanduser('~')
+
 	poeDir = os.path.join(userDir, "My Games", "Path of Exile")
 	return poeDir
+
 
 # main function for creating a filter
 def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
