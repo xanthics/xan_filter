@@ -37,6 +37,16 @@ def convertname(l):
 		return "t"
 
 
+# Helper function to find missing items and print a list of them
+def fixmissing(ninja_list, defaults, league, name):
+	# Print all items that were returned by poe.ninja that don't have a default set
+	if set(ninja_list.keys()) - set(defaults.keys()):
+		print("{} Missing defaults for {}: \n{}".format(league, name, ', '.join(['"{}": {}'.format(x, ninja_list[x]) for x in set(ninja_list.keys()) - set(defaults.keys())])))
+	# add missing items to ninja_list
+	for v in set(defaults.keys()) - set(ninja_list.keys()):
+		ninja_list[v] = defaults[v]
+
+
 # Convert a currency shorthand to full name.  returns a string
 def currencyclassify(cur, val, curvals, stacks=1):
 	# list of currency to always give a border to
@@ -87,15 +97,10 @@ def gen_currency(currency_list, league):
 	          'Regal Shard': 'Regal Orb', 'Alchemy Shard': 'Orb of Alchemy', 'Alteration Shard': 'Orb of Alteration', 'Transmutation Shard': 'Orb of Transmutation', 'Scroll Fragment': 'Scroll of Wisdom',
 			  'Exalted Shard': 'Exalted Orb', 'Annulment Shard': 'Orb of Annulment', 'Mirror Shard': 'Mirror of Kalandra'}
 
-	c_list = list(defaults.keys()) + list(shards.keys())
-	# Print all currencies that were returned by poe.ninja that don't have a default set
-	if set(currency_list.keys()) - set(c_list):
-		print("{} Missing defaults for currencies: \n{}".format(league, ', '.join(['"{}": {}'.format(x, currency_list[x]) for x in set(currency_list.keys()) - set(c_list)])))
-	# add missing currencies to currency_list
-	for v in set(defaults.keys()) - set(currency_list.keys()):
-		currency_list[v] = defaults[v]
-	for v in set(shards.keys()) - set(currency_list.keys()):
-		currency_list[v] = currency_list[shards[v]] / 20
+	for s in shards:
+		defaults[s] = defaults[shards[s]] / 20
+
+	fixmissing(currency_list, defaults, league, "currency")
 
 	curval = '''{}\ndesc = "Currency Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
 
@@ -176,12 +181,7 @@ def gen_essence(essence_list, league, curvals):
 				"Essence of Horror": 69.0, "Weeping Essence of Woe": 0.4, "Shrieking Essence of Spite": 1.99, "Screaming Essence of Doubt": 0.55,
 				"Muttering Essence of Contempt": 0.38}
 
-	# Print all essences that were returned by poe.ninja that don't have a default set
-	if set(essence_list.keys()) - set(defaults.keys()):
-		print("{} Missing defaults for essences: \n{}".format(league, ', '.join(['"{}": {}'.format(x, essence_list[x]) for x in set(essence_list.keys()) - set(defaults.keys())])))
-	# add missing essences to div_list
-	for v in set(defaults.keys()) - set(essence_list.keys()):
-		essence_list[v] = defaults[v]
+	fixmissing(essence_list, defaults, league, 'essences')
 
 	curval = '''{}\ndesc = "Essence Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
 
@@ -273,12 +273,7 @@ def gen_div(div_list, league, curvals):
 				"The Flora's Gift": 0.34, "The Hermit": 0.34, "The Lich": 0.34, "The Lover": 0.34, "The Metalsmith's Gift": 0.34, "The Scarred Meadow": 0.34, "The Scholar": 0.34,
 				"Thunderous Skies": 0.34, "The Opulent": 0.34}
 
-	# Print all Divination cards that were returned by poe.ninja that don't have a default set
-	if set(div_list.keys()) - set(defaults.keys()):
-		print("{} Missing defaults for Divination cards: \n{}".format(league, ', '.join(['"{}": {}'.format(x, div_list[x]) for x in set(div_list.keys()) - set(defaults.keys())])))
-	# add missing Divination cards to div_list
-	for v in set(defaults.keys()) - set(div_list.keys()):
-		div_list[v] = defaults[v]
+	fixmissing(div_list, defaults, league, 'Divination cards')
 
 	substringcards = find_substrings(div_list)
 
@@ -373,6 +368,84 @@ def gen_div(div_list, league, curvals):
 
 
 def gen_unique(unique_list, league, curvals):
+	defaults = {"Overgrown Shrine Map": [2.28], "Woodsplitter": [0.34], "Titan Gauntlets": [61.1, 0.75], "Golden Hoop": [4343.43], "Blue Pearl Amulet": [1.0], "Gavel": [35.0, 0.34],
+				"Opal Sceptre": [1.0], "Sanctified Life Flask": [49.22], "Karui Maul": [0.34], "Enameled Buckler": [0.66], "Iron Ring": [7.41, 1.0, 1.0], "Elegant Ringmail": [44.77, 2.0],
+				"Grand Mana Flask": [225.98], "Widowsilk Robe": [103.99, 1.02, 0.34], "Agate Amulet": [76.0, 0.95, 0.38, 0.34], "Hallowed Hybrid Flask": [3.0], "Torture Chamber Map": [3.72],
+				"Royal Axe": [677.94], "Sage Wand": [9.1, 0.34], "Wyrmscale Doublet": [37.41], "Shore Map": [17.0], "Gold Ring": [19.0, 3.0], "Slink Boots": [112.99, 1.0],
+				"Crusader Boots": [436.68], "Archon Kite Shield Piece": [19.9, 9.79, 9.5, 3.89], "Topaz Flask": [35.0, 17.06, 15.0, 12.38], "Supreme Spiked Shield": [0.34],
+				"Exquisite Leather": [47.02, 24.17, 22.44, 1.0], "Titanium Spirit Shield": [1.15], "Bone Bow": [1.0], "Opal Wand": [1.0], "Chain Belt": [225.98, 15.54, 5.0, 4.72, 1.0, 0.34],
+				"Conjurer Gloves": [1.0], "Dunes Map": [1.0], "Scholar Boots": [0.34], "Coiled Staff": [2.0, 1.0], "Strapped Mitts": [10.63, 0.34], "Ebony Tower Shield": [112.99, 0.34],
+				"Spiked Club": [0.34], "Siege Axe": [19.1], "Midnight Blade": [90.4, 5.0, 3.0], "Quartz Wand": [0.34], "Fright Claw": [0.34], "Citadel Bow": [3.2],
+				"Carnal Armour": [10397.43, 162.34, 0.34], "Ambusher": [0.68], "Despot Axe": [45.0, 0.34], "Antique Rapier": [0.34], "Hydrascale Gauntlets": [112.99], "Plague Mask": [0.34],
+				"Stygian Vise": [1.0], "Headsman Axe": [0.34], "Gnarled Branch": [0.34, 0.21], "Callous Mask Piece": [40.0, 30.18, 8.91], "Deerskin Gloves": [0.68], "Tomahawk": [0.34],
+				"Gilded Sallet": [0.34], "Sorcerer Boots": [677.94, 1.0], "Scholar's Robe": [0.34], "Sledgehammer": [0.34], "Blinder": [1.0], "Harbinger Bow": [2.0, 0.34],
+				"Vaal Spirit Shield": [896.59, 7.09], "Prophecy Wand": [276.94], "Platinum Kris": [0.34], "Vaal Gauntlets": [1807.84, 1.0], "Ornate Mace": [0.34], "Boot Blade": [0.34],
+				"Mosaic Kite Shield": [1.0], "Ambush Mitts": [102.63], "Sapphire Flask": [59.99], "Sinner Tricorne": [1.0], "Opal Ring": [50.0, 3.0], "Legion Boots": [0.44],
+				"Shadow Axe": [0.39], "Long Bow": [0.53], "Bronze Sceptre": [0.34], "Dread Maul": [0.3], "Great Mallet": [5.93, 0.34], "Arcanist Slippers": [60.0], "Spiraled Wand": [0.68, 0.34],
+				"Engraved Wand": [1.0], "Jasper Chopper": [4.59], "Royal Staff": [0.34], "Basket Rapier": [0.34], "Great Helmet": [0.34], "Sharkskin Tunic": [19.33],
+				"Jade Amulet": [66.6, 40.0, 1.0, 0.34], "Etched Greatsword": [1.0], "Coronal Leather": [1.0], "Compound Spiked Shield": [0.34], "Buckskin Tunic": [0.33],
+				"Corrugated Buckler": [1.0], "Primordial Staff": [0.34], "Saintly Chainmail": [4.81, 0.96], "Painted Tower Shield": [1.0], "Ancient Spirit Shield": [19.79], "Leather Cap": [1.08],
+				"Desert Brigandine": [0.75], "Iron Sceptre": [1.0], "Boot Knife": [0.34], "Hubris Circlet": [135.7, 111.99, 2.97, 2.0], "Silken Hood": [76.0, 3.96], "Ritual Sceptre": [30.0],
+				"Temple Map": [12.6], "Promenade Map": [8.69], "Plank Kite Shield": [0.34], "Carnal Boots": [338.97], "Diamond Flask": [1.0], "Throat Stabber": [1.0], "Short Bow": [1.0],
+				"Ranger Bow": [3.0, 0.63], "Wool Gloves": [0.68], "Reinforced Greaves": [1.0], "Dream Mace": [0.34], "Serpentine Staff": [0.36], "Gut Ripper": [0.34, 0.34], "Golden Buckler": [0.56],
+				"Velvet Slippers": [0.34], "Iron Circlet": [0.34], "Goat's Horn": [0.34], "War Hammer": [1.0, 0.34], "Rotfeather Talisman": [156.17], "Shadow Sceptre": [1.0, 0.22],
+				"Spidersilk Robe": [0.69, 0.34], "Silk Gloves": [0.34], "Quartz Flask": [2902.9, 2818.5, 1.9, 0.34], "Triumphant Lamellar": [1.0], "Wyrmscale Gauntlets": [0.34], "Bismuth Flask": [10.0],
+				"Iron Hat": [0.34], "Stealth Boots": [25.0, 0.37], "Reaver Sword": [0.96, 0.35], "Lacquered Garb": [15.0, 1.0], "Rotted Round Shield": [0.34], "Cleaver": [0.34],
+				"Brass Spirit Shield": [0.71], "Judgement Staff": [4.0, 1.0], "Blunt Arrow Quiver": [30.0, 1.0], "Bronze Gauntlets": [0.34], "Plate Vest": [0.34], "Stiletto": [0.34],
+				"Turquoise Amulet": [8.58, 1.0, 0.65, 0.34], "Destiny Leather": [3.0], "Ezomyte Staff": [131.35, 0.34], "Flaying Knife": [0.34], "Assassin's Garb": [1.0], "Harlequin Mask": [451.96, 112.99],
+				"Carnal Mitts": [338.97, 0.47], "War Sword": [1.0], "Ornate Ringmail": [0.34], "Ezomyte Axe": [0.34], "Conjurer Boots": [1.0], "Marble Amulet": [0.84], "Vaal Axe": [158.66, 10.0, 0.39],
+				"Goliath Gauntlets": [1.0], "Cloth Belt": [169.48, 0.4, 0.34, 0.34, 0.34], "Hydrascale Boots": [25.26], "Magistrate Crown": [97.29, 54.8], "Steel Ring": [19.18], "Golden Mantle": [1694.85],
+				"Steel Gauntlets": [1.0], "Steelscale Gauntlets": [146.89, 7.99, 1.0], "Auric Mace": [0.85], "Rawhide Boots": [318.97],
+				"Viridian Jewel": [3137.53, 523.21, 399.31, 302.36, 70.0, 60.0, 50.0, 28.0, 18.61, 16.22, 7.67, 4.8, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.8, 0.8, 0.77, 0.42, 0.39, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34],
+				"Iron Mask": [0.34], "Chain Gloves": [0.4], "Praetor Crown": [2.0, 1.0, 0.34], "Destroyer Regalia": [2.31], "Two-Point Arrow Quiver": [1388.65, 0.99, 0.34], "Maelström Staff": [36.57, 1.0],
+				"Paua Amulet": [7317.91, 4.34, 1.0, 0.34], "Coral Amulet": [267.91, 0.34], "Astral Plate": [2.3], "Steelhead": [5.05], "Broadhead Arrow Quiver": [1.0], "Full Scale Armour": [1.0],
+				"Golden Plate": [225.98, 1.0], "Ironscale Gauntlets": [2.0], "Callous Mask": [112.99], "Paua Ring": [35.41, 1.0, 1.0], "Holy Chainmail": [0.18], "Decimation Bow": [0.34], "Death Bow": [0.36, 0.34],
+				"Assassin Bow": [19.34, 3.0, 0.34], "Royal Skean": [0.34], "Conquest Chainmail": [0.34], "Spike-Point Arrow Quiver": [1.0, 0.68], "Pinnacle Tower Shield": [18.61, 2.0], "Visored Sallet": [0.34],
+				"Crusader Chainmail": [0.34], "Ancient Greaves": [1.0], "Samite Helmet": [0.34], "Cedar Tower Shield": [5.0], "Imperial Staff": [12.6, 2.0, 2.0, 2.0, 1.97], "Ivory Spirit Shield": [0.34],
+				"Demon Dagger": [1.0], "Reinforced Tower Shield": [0.34], "Lapis Amulet": [112.99, 45.14, 0.86, 0.34, 0.34], "Deicide Mask": [10.0], "Pine Buckler": [0.34], "Bastard Sword": [0.34], "Estoc": [0.34],
+				"Eternal Sword": [5.15, 4.0, 2.35], "Ornate Sword": [0.34], "Murder Mitts": [1.32, 1.0], "Karui Sceptre": [1.0], "Occultist's Vestment": [22.64, 20.0], "Strapped Boots": [0.34], "War Buckler": [0.34],
+				"Ironscale Boots": [0.34], "Wool Shoes": [1.0], "Void Axe": [30.0], "Baroque Round Shield": [0.34], "Museum Map": [125.44], "Wrapped Mitts": [0.34], "Diamond Ring": [10.0, 1.0],
+				"Crusader Plate": [0.98, 0.91], "Sharkskin Boots": [1.0], "Samite Gloves": [0.34], "Coral Ring": [1.0, 1.0, 0.99], "Vaal Claw": [1.0, 0.77],
+				"Onyx Amulet": [338.97, 325.86, 225.98, 69.76, 51.46, 40.0, 28.62, 28.13, 20.58, 6.51, 1.0], "Slaughter Knife": [1.0], "Nubuck Gloves": [10.0], "Bone Crypt Map": [1.82], "Goathide Boots": [115.6, 1.0],
+				"Ezomyte Blade": [0.34], "Savant's Robe": [5.0], "Imbued Wand": [0.34], "Titan Greaves": [16.38, 5.0], "Rusted Sword": [0.34], "Strapped Leather": [0.28], "Burnished Spiked Shield": [1.0],
+				"Nightmare Bascinet": [4.97, 1.0], "Studded Belt": [3.0, 0.34], "Heavy Quiver": [112.99], "Sulphur Flask": [0.4, 0.34], "Legion Gloves": [130.28], "Lion Sword": [1.0], "Dusk Blade": [0.37],
+				"Murder Boots": [626.73, 3.0, 1.0], "Glorious Plate": [100.96], "Carved Wand": [112.99, 0.34], "Amethyst Ring": [3.66, 1.67], "Strand Map": [1.0], "Serpentscale Boots": [0.81],
+				"Vaal Hatchet": [1.0], "Full Wyrmscale": [5.9], "Vine Circlet": [0.34], "Blood Raiment": [40.0], "Dragonscale Gauntlets": [0.34], "Bronzescale Gauntlets": [1.0, 0.34],
+				"Amber Amulet": [564.95, 535.26, 19.48, 0.34], "Royal Burgonet": [6.36], "Silk Slippers": [0.32], "Raven Mask": [4.21], "Fiend Dagger": [5.0, 1.0], "Goliath Greaves": [44.46, 1.0],
+				"Varnished Coat": [2.0], "Terror Maul": [1.0], "Prismatic Jewel": [509.02, 122.39, 108.57], "Skinning Knife": [0.22], "Poleaxe": [0.34], "Vanguard Belt": [2.0], "Arcanist Gloves": [22.68],
+				"Soldier Boots": [0.87], "Royal Bow": [0.34], "Vaal Pyramid Map": [10.0], "Grinning Fetish": [0.87], "Imperial Claw": [8.18, 2.65, 1.0], "Jade Hatchet": [0.34], "Cemetery Map": [4.0],
+				"Mesh Boots": [0.34], "Prophet Crown": [5.0, 0.34, 0.34], "Unset Ring": [124.68, 16.4, 8.61, 5.0, 4.95, 4.0, 4.0, 2.0, 1.0], "Ezomyte Tower Shield": [169.19, 78.07], "Highland Blade": [0.34],
+				"Elegant Sword": [20.0, 0.72], "Riveted Boots": [0.34], "Soldier Helmet": [0.34], "Penetrating Arrow Quiver": [16.57, 5.0], "Harmonic Spirit Shield": [0.4], "Cardinal Round Shield": [3.0],
+				"Void Sceptre": [3.0, 0.34], "Tornado Wand": [16.11, 3.0, 1.36], "Meatgrinder": [1.0], "Rock Breaker": [1.0], "Vaal Sceptre": [20.0, 3.0], "Infernal Sword": [196.75, 112.99, 1.0], "Full Dragonscale": [0.34],
+				"Greatwolf Talisman": [824.11], "Military Staff": [0.34], "Festival Mask": [1.0], "Courtyard Map": [23.5], "Tarnished Spirit Shield": [1.0, 0.34], "Long Staff": [27.23, 0.34], "Labrys": [2.0],
+				"Tiger Sword": [1.0], "Iron Staff": [1.0, 0.32], "Crusader Helmet": [13.82], "Dragonscale Boots": [0.71], "Chiming Spirit Shield": [0.34], "Serpentscale Gauntlets": [4.0], "Deerskin Boots": [0.34],
+				"Great Crown": [25.0, 1.0, 0.34], "Gemstone Sword": [83.79], "Variscite Blade": [23.89], "Spine Bow": [2.0, 1.0], "Sorcerer Gloves": [1.0], "Cloth Belt Piece": [27.68, 4.75], "Lacquered Helmet": [0.4],
+				"Simple Robe": [0.34], "Cutthroat's Garb": [0.68], "Twilight Blade": [0.34], "Jagged Maul": [0.34], "Granite Flask": [4.0, 2.0], "Sage's Robe": [1.0, 0.34], "Siege Helmet": [1.0], "Gladius": [0.93],
+				"Whalebone Rapier": [1.0], "Karui Chopper": [0.34], "Brass Maul": [0.34], "Vaal Mask": [20.0], "Gladiator Plate": [9.53], "Aventail Helmet": [0.48], "Topaz Ring": [100.0, 1.66], "Jewelled Foil": [20.0],
+				"Shackled Boots": [9.47], "Lunaris Circlet": [0.34], "Bronzescale Boots": [0.34], "Lion Pelt": [2.0], "Prismatic Ring": [564.95, 7.33, 1.0], "Jagged Foil": [0.34], "Abyssal Axe": [2.95],
+				"Moonstone Ring": [204.38, 1.0, 1.0, 1.0], "Quicksilver Flask": [0.34], "Clasped Boots": [0.34], "Clasped Mitts": [29.24], "Studded Round Shield": [0.3], "Stibnite Flask": [189.74, 2.27],
+				"Leather Belt": [4632.59, 1.0, 1.0, 1.0, 0.62, 0.34], "Citrine Amulet": [25.0, 10.0], "Sundering Axe": [0.34], "Polished Spiked Shield": [1.0], "Harbinger Map": [108.63], "Nailed Fist": [0.34],
+				"Nubuck Boots": [5.0], "Trapper Boots": [1.0], "Crude Bow": [0.34], "Painted Buckler": [0.33], "Underground River Map": [1.76], "Platinum Sceptre": [2.0], "Sadist Garb": [25.0, 1.0], "Close Helmet": [3.0],
+				"Nightmare Mace": [50.0], "Demon's Horn": [0.34], "Hellion's Paw": [8.8], "Ancient Gauntlets": [2.0], "Zodiac Leather": [5.0, 1.0], "Iron Gauntlets": [2.0], "Cutlass": [451.96, 5.0], "Terror Claw": [5.0, 1.0],
+				"Infernal Axe": [0.34], "Vaal Regalia": [1.0], "Sharktooth Arrow Quiver": [0.34], "Necropolis Map": [2.0], "Golden Mask": [0.34], "Vaal Buckler": [0.34], "Fire Arrow Quiver": [0.34], "Moon Temple Map": [27.66],
+				"Necromancer Silks": [1.0], "Regicide Mask": [3.0, 0.41], "Velvet Gloves": [0.34], "Colossal Tower Shield": [0.89], "Corsair Sword": [4.2], "Assassin's Mitts": [0.34, 0.34], "Necromancer Circlet": [59.36, 0.34],
+				"Elder Sword": [1.0], "Rawhide Tower Shield": [35.0], "Serrated Arrow Quiver": [0.34], "Thresher Claw": [0.34], "Sanctified Mana Flask": [29.03], "Copper Plate": [0.34], "Atoll Map": [0.98], "Elegant Foil": [1.0],
+				"Wild Leather": [0.34], "Ruby Flask": [130.0, 1.0], "Clutching Talisman": [96.53], "Cursed Crypt Map": [4.0], "Legion Sword": [56.44, 0.39], "Recurve Bow": [0.34], "Gold Amulet": [68.37, 10.0, 2.1, 1.26, 0.34],
+				"Crimson Jewel": [650.75, 338.97, 184.26, 112.99, 73.68, 65.36, 58.0, 25.24, 24.0, 19.0, 15.53, 8.0, 5.0, 1.73, 1.23, 1.01, 1.0, 1.0, 1.0, 1.0, 0.91, 0.87, 0.82, 0.8, 0.68, 0.68, 0.68, 0.66, 0.46, 0.4, 0.38, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34],
+				"Archon Kite Shield": [28.88, 10.0, 5.39, 5.0, 3.31], "Laminated Kite Shield": [1.0], "Wereclaw Talisman": [36.33], "Lathi": [0.79], "Heavy Belt": [5.0, 4.81, 1.37, 1.0, 1.0, 1.0, 1.0, 1.0, 0.79],
+				"Assassin's Boots": [112.99], "Champion Kite Shield": [5.7], "Vaal Blade": [20.0, 0.34], "Imperial Skean": [10.0, 0.34], "Ezomyte Burgonet": [10.0], "Leather Hood": [1.0], "Ruby Amulet": [65.05],
+				"Bone Circlet": [0.29], "Branded Kite Shield": [0.78], "Bone Armour": [2.0], "Secutor Helm": [0.34], "Zealot Gloves": [51.07, 31.96, 25.6], "Black Maw Talisman": [1.64], "Latticed Ringmail": [0.34],
+				"Silver Flask": [2.0], "Greater Mana Flask": [0.34], "Two-Stone Ring": [528.93, 32.74, 30.0, 7.83, 3.7], "Sapphire Ring": [4.28, 3.02, 2.0, 1.0], "Satin Gloves": [30.93], "Sentinel Jacket": [0.34],
+				"Decorative Axe": [0.34], "Thorium Spirit Shield": [5.0], "Ursine Pelt": [3.0], "Mind Cage": [18.96, 0.34], "Vile Staff": [0.34], "Zealot Helmet": [1.0], "Tribal Circlet": [0.34], "Imperial Bow": [130.0, 1.0],
+				"Tricorne": [0.34], "Goathide Gloves": [1.0], "Eye Gouger": [0.96], "Blunt Arrow Quiver Piece": [30.0, 9.75], "Driftwood Wand": [1.0], "Sacrificial Garb": [20.25, 20.0, 20.0, 19.54, 15.79, 15.77],
+				"Cobalt Jewel": [198.35, 112.99, 112.99, 50.74, 47.8, 24.79, 15.89, 15.0, 6.08, 3.56, 3.38, 2.0, 1.78, 1.76, 1.6, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.92, 0.88, 0.82, 0.71, 0.57, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34],
+				"Crusader Gloves": [15.0, 0.62], "Crystal Wand": [0.39], "Plated Greaves": [0.34], "Amethyst Flask": [1.0], "Jingling Spirit Shield": [8.0], "Timeworn Claw": [0.34], "Chateau Map": [190.86],
+				"Carnal Sceptre": [40.0], "Imperial Maul": [30.0], "Highborn Staff": [6.34], "Sabre": [0.34], "Crystal Belt": [4.92], "Awl": [0.34], "Mirrored Spiked Shield": [0.9], "Large Hybrid Flask": [3.0],
+				"Crystal Sceptre": [1.0, 0.34], "Ruby Ring": [8.0, 1.0, 1.0], "Shagreen Boots": [0.34], "Rustic Sash": [78.85, 25.0, 23.92, 0.34], "Soldier Gloves": [25.0, 1.0], "Blood Sceptre": [3.0], "Maze Map": [179.06],
+				"Riveted Gloves": [40.0], "Golden Bracers": [12635.67], "Golden Wreath": [3954.65], "Golden Obi": [8128.36], "Cured Quiver": [0.72], "Jet Amulet": [4915.06], "Leatherscale Boots": [0.1]}
+
+	fixmissing(unique_list, defaults, league, 'uniques')
+
 	name = convertname(league)
 	if 'Catacombs Map' in unique_list:
 		del unique_list['Catacombs Map']
@@ -478,7 +551,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 	requester = requests.session()
 
 	# Minimum number of item that must exist on poe.ninja for it to be considered
-	mincount = 8
+	mincount = 1
 
 	for league in leagues:
 		currency = {}
