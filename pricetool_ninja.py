@@ -81,57 +81,43 @@ def gen_currency(currency_list, league):
 				"Primitive Alchemical Resonator": 0.39, "Powerful Alchemical Resonator": 0.38, "Faceted Fossil": 180.0, "Glyphic Fossil": 180.0, "Bloodstained Fossil": 176.68, "Hollow Fossil": 170.0, "Fractured Fossil ": 169.0,
 				"Tangled Fossil": 166.64, "Sanctified Fossil": 30.27, "Encrusted Fossil": 29.99, "Gilded Fossil": 19.0, "Shuddering Fossil": 7.0, "Enchanted Fossil": 4.0, "Serrated Fossil": 4.0, "Perfect Fossil": 3.0,
 				"Prismatic Fossil": 2.97, "Jagged Fossil": 2.65, "Dense Fossil": 2.0, "Lucent Fossil": 2.0, "Aetheric Fossil": 1.81, "Pristine Fossil": 1.58, "Bound Fossil": 1.0, "Metallic Fossil": 1.0,
-				"Corroded Fossil": 1.0, "Scorched Fossil": 0.35, "Frigid Fossil": 0.23, "Aberrant Fossil": 0.18, "Scroll of Wisdom": 1 / 100, }
+				"Corroded Fossil": 1.0, "Scorched Fossil": 0.35, "Frigid Fossil": 0.23, "Aberrant Fossil": 0.18, "Scroll of Wisdom": 1 / 100, "Eternal Orb": 19323.88}
 
 	shards = {'Binding Shard': 'Orb of Binding', 'Horizon Shard': 'Orb of Horizons', 'Harbinger\'s Shard': 'Harbinger\'s Orb', 'Engineer\'s Shard': 'Engineer\'s Orb', 'Ancient Shard': 'Ancient Orb',
 	          'Regal Shard': 'Regal Orb', 'Alchemy Shard': 'Orb of Alchemy', 'Alteration Shard': 'Orb of Alteration', 'Transmutation Shard': 'Orb of Transmutation', 'Scroll Fragment': 'Scroll of Wisdom',
 			  'Exalted Shard': 'Exalted Orb', 'Annulment Shard': 'Orb of Annulment', 'Mirror Shard': 'Mirror of Kalandra'}
 
 	c_list = list(defaults.keys()) + list(shards.keys())
-	unknown = defaultdict(list)
-	curval = '''{}\ndesc = "Currency Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
+	# Print all currencies that were returned by poe.ninja that don't have a default set
+	if set(currency_list.keys()) - set(c_list):
+		print("{} Missing defaults for currencies: \n{}".format(league, ', '.join(['"{}": {}'.format(x, currency_list[x]) for x in set(currency_list.keys()) - set(c_list)])))
+	# add missing currencies to currency_list
+	for v in set(defaults.keys()) - set(currency_list.keys()):
+		currency_list[v] = defaults[v]
+	for v in set(shards.keys()) - set(currency_list.keys()):
+		currency_list[v] = currency_list[shards[v]] / 20
 
-	if 'Exalted Orb' not in currency_list:
-		currency_list['Exalted Orb'] = defaults['Exalted Orb']
+	curval = '''{}\ndesc = "Currency Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
 
 	curvals = gentierval(currency_list['Exalted Orb'])
 
-	for cur in sorted(c_list):
+	for cur in sorted(currency_list):
 		if any(stack in cur for stack in stackable):
-			if cur in currency_list:
-				val = currency_list[cur]
-			elif cur in shards:
-				val = (currency_list[shards[cur]] if shards[cur] in currency_list else defaults[shards[cur]]) / 20
-			else:
-				val = defaults[cur]
-
+			val = currency_list[cur]
 			retstr = currencyclassify(cur, val, curvals)
 			curval += '\t"{},\n'.format(retstr)
 
 			prevval = retstr[-20:]
 			count = 9
 			for i in range(2, 21):
-				if cur in currency_list:
-					retstr = currencyclassify(cur, currency_list[cur] * i, curvals, i)
-				else:
-					if cur in shards:
-						retstr = currencyclassify(cur, (currency_list[shards[cur]] if shards[cur] in currency_list else defaults[shards[cur]]) / 20 * i, curvals, i)
-					else:
-						retstr = currencyclassify(cur, defaults[cur] * i, curvals, i)
+				retstr = currencyclassify(cur, currency_list[cur] * i, curvals, i)
 				if prevval != retstr[-20:]:
 					curval += '\t"{},\n'.format(retstr.replace('$', '{:02}'.format(count)))
 					count -= 1
 					prevval = retstr[-20:]
 
 		else:
-			if cur in currency_list:
-				retstr = currencyclassify(cur, currency_list[cur], curvals)
-			else:
-				if cur in shards:
-					retstr = currencyclassify(cur, (currency_list[shards[cur]] if shards[cur] in currency_list else defaults[shards[cur]]) / 20, curvals)
-				else:
-					retstr = currencyclassify(cur, defaults[cur], curvals)
-				print('No data for {} in {}.  Using default,'.format(cur, league))
+			retstr = currencyclassify(cur, currency_list[cur], curvals)
 			curval += '\t"{},\n'.format(retstr)
 
 	curval += u'}\n'
@@ -141,14 +127,6 @@ def gen_currency(currency_list, league):
 	with open('auto_gen\\{}currency.py'.format(name), 'w', encoding='utf-8') as f:
 		f.write(curval)
 
-	for v in currency_list.keys():
-		if v not in c_list:
-			unknown[v].append(currency_list[v])
-
-	for u in unknown:
-		#print("Unknown currency: {}".format(u))
-		print('"{}": {},'.format(u, currency_list[u]), end=' ')
-	print()
 	return curvals
 
 
@@ -170,6 +148,41 @@ def essenceclassify(cur, val, curvals):
 
 # given a league grouped list of essences determine all unique entries and then output for each league
 def gen_essence(essence_list, league, curvals):
+	defaults = {"Deafening Essence of Anguish": 1.0, "Screaming Essence of Loathing": 0.68, "Wailing Essence of Suffering": 0.55, "Deafening Essence of Woe": 4.0,
+				"Weeping Essence of Contempt": 0.65, "Muttering Essence of Sorrow": 0.43, "Shrieking Essence of Contempt": 2.0, "Deafening Essence of Spite": 6.0,
+				"Shrieking Essence of Zeal": 3.0, "Weeping Essence of Hatred": 0.55, "Deafening Essence of Fear": 4.0, "Shrieking Essence of Loathing": 1.0,
+				"Wailing Essence of Contempt": 0.51, "Shrieking Essence of Woe": 1.0, "Deafening Essence of Rage": 4.0, "Deafening Essence of Greed": 7.0,
+				"Screaming Essence of Scorn": 0.55, "Deafening Essence of Doubt": 1.0, "Deafening Essence of Wrath": 4.0, "Deafening Essence of Suffering": 1.0,
+				"Screaming Essence of Envy": 1.0, "Screaming Essence of Suffering": 0.43, "Weeping Essence of Wrath": 0.38, "Muttering Essence of Woe": 0.38,
+				"Wailing Essence of Woe": 0.63, "Shrieking Essence of Wrath": 1.0, "Shrieking Essence of Misery": 1.0, "Weeping Essence of Anger": 0.55,
+				"Wailing Essence of Zeal": 0.38, "Shrieking Essence of Doubt": 1.0, "Screaming Essence of Anger": 1.0, "Essence of Hysteria": 19.0,
+				"Wailing Essence of Greed": 0.47, "Deafening Essence of Sorrow": 2.0, "Deafening Essence of Hatred": 2.0, "Deafening Essence of Contempt": 10.0,
+				"Wailing Essence of Anger": 0.54, "Essence of Insanity": 18.0, "Shrieking Essence of Scorn": 3.0, "Shrieking Essence of Envy": 2.0,
+				"Screaming Essence of Sorrow": 0.59, "Screaming Essence of Hatred": 0.87, "Wailing Essence of Loathing": 0.68, "Deafening Essence of Dread": 6.0,
+				"Deafening Essence of Misery": 4.0, "Deafening Essence of Envy": 9.0, "Screaming Essence of Spite": 0.55, "Shrieking Essence of Suffering": 0.92,
+				"Muttering Essence of Torment": 0.38, "Muttering Essence of Hatred": 0.38, "Wailing Essence of Doubt": 0.38, "Muttering Essence of Anger": 0.48,
+				"Weeping Essence of Suffering": 0.38, "Screaming Essence of Dread": 0.97, "Remnant of Corruption": 4.0, "Screaming Essence of Anguish": 0.55,
+				"Deafening Essence of Scorn": 8.08, "Muttering Essence of Fear": 0.38, "Weeping Essence of Greed": 0.53, "Deafening Essence of Loathing": 3.0,
+				"Shrieking Essence of Dread": 4.92, "Screaming Essence of Zeal": 0.53, "Wailing Essence of Torment": 0.55, "Shrieking Essence of Rage": 1.32,
+				"Screaming Essence of Greed": 0.85, "Shrieking Essence of Anguish": 1.0, "Wailing Essence of Wrath": 0.55, "Screaming Essence of Misery": 0.55,
+				"Screaming Essence of Woe": 0.55, "Wailing Essence of Spite": 0.38, "Wailing Essence of Anguish": 0.5, "Shrieking Essence of Hatred": 1.0,
+				"Screaming Essence of Rage": 0.53, "Wailing Essence of Fear": 0.38, "Muttering Essence of Greed": 0.55, "Weeping Essence of Torment": 0.83,
+				"Screaming Essence of Fear": 0.46, "Screaming Essence of Contempt": 0.55, "Shrieking Essence of Anger": 3.0, "Deafening Essence of Anger": 7.0,
+				"Screaming Essence of Torment": 0.43, "Shrieking Essence of Greed": 2.0, "Wailing Essence of Sorrow": 0.55, "Weeping Essence of Rage": 0.55,
+				"Screaming Essence of Wrath": 0.57, "Wailing Essence of Rage": 0.42, "Deafening Essence of Torment": 2.0, "Weeping Essence of Sorrow": 0.38,
+				"Shrieking Essence of Torment": 1.0, "Whispering Essence of Woe": 0.38, "Whispering Essence of Greed": 0.55, "Weeping Essence of Fear": 0.38,
+				"Whispering Essence of Contempt": 0.38, "Weeping Essence of Doubt": 0.55, "Whispering Essence of Hatred": 0.5, "Wailing Essence of Hatred": 0.38,
+				"Essence of Delirium": 9.0, "Deafening Essence of Zeal": 8.0, "Shrieking Essence of Sorrow": 1.0, "Shrieking Essence of Fear": 1.0,
+				"Essence of Horror": 69.0, "Weeping Essence of Woe": 0.4, "Shrieking Essence of Spite": 1.99, "Screaming Essence of Doubt": 0.55,
+				"Muttering Essence of Contempt": 0.38}
+
+	# Print all essences that were returned by poe.ninja that don't have a default set
+	if set(essence_list.keys()) - set(defaults.keys()):
+		print("{} Missing defaults for essences: \n{}".format(league, ', '.join(['"{}": {}'.format(x, essence_list[x]) for x in set(essence_list.keys()) - set(defaults.keys())])))
+	# add missing essences to div_list
+	for v in set(defaults.keys()) - set(essence_list.keys()):
+		essence_list[v] = defaults[v]
+
 	curval = '''{}\ndesc = "Essence Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
 
 	for cur in sorted(essence_list.keys()):
@@ -184,8 +197,6 @@ def gen_essence(essence_list, league, curvals):
 
 	with open('auto_gen\\{}essence.py'.format(name), 'w', encoding='utf-8') as f:
 		f.write(curval)
-
-
 
 
 # Find all divination cards that have cards which are substrings
@@ -226,21 +237,48 @@ def gen_div_default(div_list):
 
 
 def gen_div(div_list, league, curvals):
-	defaults = {"House of Mirrors": 3145.43, "Beauty Through Death": 881.51, "The Doctor": 583.25, "The Fiend": 368.99, "The Immortal": 286.14, "The Spark and the Flame": 159.04,
-				"Hunter's Reward": 141.25, "The Samurai's Eye": 100.0, "Immortal Resolve": 83.37, "The Queen": 81.58, "The Wolven King's Bite": 80.0, "Abandoned Wealth": 70.0,
-				"The Iron Bard": 65.0, "Mawr Blaidd": 61.44, "The Celestial Stone": 50.0, "The Mayor": 44.0, "Wealth and Power": 40.24, "The Dragon's Heart": 37.83, "The Vast": 27.82,
-				"The Undaunted": 24.61, "The Saint's Treasure": 22.63, "Boon of the First Ones": 20.82, "The Professor": 20.0, "The Sephirot": 18.0, "Pride Before the Fall": 17.81,
-				"The King's Heart": 15.0, "The Wolf": 15.0, "The Hunger": 14.28, "The Artist": 12.34, "Heterochromia": 10.0, "The Hoarder": 9.0, "The Master": 9.0,
-				"The Celestial Justicar": 8.0, "The Hale Heart": 8.0, "The Enlightened": 7.64, "The Breach": 7.0, "The Valkyrie": 6.85, "The Undisputed": 6.65, "The Void": 6.38,
-				"The Valley of Steel Boxes": 6.0, "Perfection": 6.0, "Chaotic Disposition": 5.45, "The Last One Standing": 5.19, "The Polymath": 5.0, "Left to Fate": 5.0,
-				"The Ethereal": 4.66, "The Thaumaturgist": 4.05, "Bowyer's Dream": 4.0, "Last Hope": 4.0, "The Cartographer": 4.0, "The Risk": 4.0, "The Throne": 4.0, "The Wind": 4.0,
-				"The Porcupine": 4.0, "The Dreamer": 4.0, "Time-Lost Relic": 3.75, "Lucky Deck": 3.0, "The Dapper Prodigy": 3.0, "The Inventor": 3.0, "The Warlord": 3.0, "Rebirth": 3.0,
-				"The Obscured": 3.0, "The World Eater": 3.0, "The Twilight Moon": 3.0, "The Endless Darkness": 3.0, "The Price of Protection": 3.0, "The Innocent": 2.98,
-				"Emperor of Purity": 2.0, "Humility": 2.0, "Scholar of the Seas": 2.0, "The Brittle Emperor": 2.0, "The Dark Mage": 2.0, "The Jester": 2.0, "The Wretched": 2.0,
-				"Lingering Remnants": 2.0, "The Jeweller's Boon": 2.0, "The Wilted Rose": 2.0, "The Chains that Bind": 1.95, "The Offering": 1.82, "The Traitor": 1.71, "The Standoff": 1.5}
+	defaults = {"House of Mirrors": 3276.71, "Beauty Through Death": 903.92, "The Doctor": 564.95, "The Fiend": 406.76, "The Spark and the Flame": 225.98,
+				"Hunter's Reward": 208.13, "Mawr Blaidd": 191.83, "The Immortal": 169.27, "The Wolven King's Bite": 156.35, "The Samurai's Eye": 141.98,
+				"Immortal Resolve": 102.27, "The Queen": 80.0, "The Iron Bard": 75.0, "Abandoned Wealth": 64.74, "The Celestial Stone": 59.04, "Wealth and Power": 49.33,
+				"The Vast": 40.0, "The Dragon's Heart": 33.46, "Chaotic Disposition": 30.0, "The Hale Heart": 30.0, "The Mayor": 30.0, "The Wolf": 24.76,
+				"The Professor": 24.26, "Boon of the First Ones": 24.0, "The Saint's Treasure": 22.0, "Perfection": 22.0, "The Sephirot": 19.27, "The Endless Darkness": 18.71,
+				"The Undaunted": 18.0, "The Undisputed": 17.08, "The Wind": 15.22, "The Jester": 14.55, "The Artist": 14.2, "Heterochromia": 14.0, "The Master": 13.2,
+				"Pride Before the Fall": 13.0, "The Thaumaturgist": 12.0, "The World Eater": 12.0, "The King's Heart": 11.76, "The Last One Standing": 10.0, "The Valkyrie": 10.0,
+				"Time-Lost Relic": 10.0, "The Hoarder": 9.89, "The Polymath": 9.25, "Last Hope": 9.0, "The Celestial Justicar": 9.0, "The Brittle Emperor": 8.23,
+				"The Dreamer": 8.0, "Left to Fate": 7.72, "The Wilted Rose": 7.1, "The Enlightened": 7.03, "The Hunger": 7.0, "The Void": 6.6, "Merciless Armament": 6.38,
+				"Blessing of God": 6.17, "The Cartographer": 6.1, "The Risk": 6.0, "The Valley of Steel Boxes": 5.63, "Bowyer's Dream": 5.25, "The Ethereal": 5.0,
+				"The Formless Sea": 5.0, "The Standoff": 5.0, "The Porcupine": 5.0, "The Breach": 5.0, "The Price of Protection": 4.67, "The Dapper Prodigy": 4.6,
+				"Lucky Deck": 4.59, "The Innocent": 4.0, "Harmony of Souls": 3.9, "Birth of the Three": 3.0, "Emperor of Purity": 3.0, "The Dark Mage": 3.0, "The Admirer": 3.0,
+				"The Twilight Moon": 2.93, "Humility": 2.82, "The Offering": 2.63, "The Spoiled Prince": 2.33, "The Throne": 2.04, "Scholar of the Seas": 2.0, "The Avenger": 2.0,
+				"The Body": 2.0, "The Chains that Bind": 2.0, "The Conduit": 2.0, "The Fletcher": 2.0, "The Inventor": 2.0, "The Penitent": 2.0, "The Soul": 2.0, "The Surveyor": 2.0,
+				"The Traitor": 2.0, "The Tyrant": 2.0, "The Wrath": 2.0, "Treasure Hunter": 2.0, "Vinia's Token": 2.0, "The Wretched": 2.0, "Lingering Remnants": 2.0,
+				"Atziri's Arsenal": 2.0, "Rebirth": 2.0, "The Obscured": 2.0, "The Dreamland": 2.0, "Gemcutter's Promise": 1.94, "The Union": 1.85, "The Jeweller's Boon": 1.78,
+				"No Traces": 1.74, "The Cursed King": 1.58, "Jack in the Box": 1.57, "The Sword King's Salute": 1.31, "Lysah's Respite": 1.16, "The Rite of Elements": 1.06,
+				"Glimmer of Hope": 1.01, "Assassin's Favour": 1.0, "Audacity": 1.0, "Blind Venture": 1.0, "Boundless Realms": 1.0, "Coveted Possession": 1.0,
+				"Dialla's Subjugation": 1.0, "Doedre's Madness": 1.0, "Earth Drinker": 1.0, "Emperor's Luck": 1.0, "Gift of the Gemling Queen": 1.0, "Hope": 1.0, "Hubris": 1.0,
+				"Hunter's Resolve": 1.0, "Light and Truth": 1.0, "Lost Worlds": 1.0, "Lucky Connections": 1.0, "Rain Tempter": 1.0, "Rats": 1.0, "The Aesthete": 1.0,
+				"The Calling": 1.0, "The Cataclysm": 1.0, "The Demoness": 1.0, "The Drunken Aristocrat": 1.0, "The Encroaching Darkness": 1.0, "The Explorer": 1.0, "The Fox": 1.0,
+				"The Gambler": 1.0, "The Gemcutter": 1.0, "The Gentleman": 1.0, "The Gladiator": 1.0, "The Harvester": 1.0, "The Lion": 1.0, "The Lord in Black": 1.0,
+				"The Mercenary": 1.0, "The Oath": 1.0, "The One With All": 1.0, "The Pack Leader": 1.0, "The Pact": 1.0, "The Poet": 1.0, "The Rabid Rhoa": 1.0, "The Road to Power": 1.0,
+				"The Scavenger": 1.0, "The Siren": 1.0, "The Stormcaller": 1.0, "The Sun": 1.0, "The Survivalist": 1.0, "The Tower": 1.0, "The Trial": 1.0, "The Visionary": 1.0,
+				"The Warlord": 1.0, "Tranquillity": 1.0, "Mitts": 1.0, "Call to the First Ones": 1.0, "The Wolverine": 1.0, "The Garish Power": 1.0, "The Forsaken": 1.0,
+				"The Blazing Fire": 1.0, "The Realm": 1.0, "The Deceiver": 1.0, "Forbidden Power": 1.0, "Three Voices": 1.0, "The Army of Blood": 1.0, "The Beast": 1.0,
+				"The Fathomless Depths": 1.0, "The Witch": 1.0, "The Darkest Dream": 1.0, "The Cacophony": 1.0, "The Dragon": 0.96, "The Eye of the Dragon": 0.96, "The Catalyst": 0.95,
+				"The Coming Storm": 0.91, "The Arena Champion": 0.9, "The Battle Born": 0.89, "The Puzzle": 0.87, "The Insatiable": 0.87, "The Inoculated": 0.86, "Might is Right": 0.84,
+				"The Surgeon": 0.78, "The Watcher": 0.77, "The Feast": 0.75, "The Twins": 0.68, "Dying Anguish": 0.62, "Struck by Lightning": 0.62, "Three Faces in the Dark": 0.6,
+				"The Endurance": 0.58, "Grave Knowledge": 0.56, "Volatile Power": 0.49, "Shard of Fate": 0.4, "The Summoner": 0.4, "The Web": 0.4, "The Wolf's Shadow": 0.4,
+				"The King's Blade": 0.39, "Turn the Other Cheek": 0.39, "Her Mask": 0.38, "Rain of Chaos": 0.38, "The Sigil": 0.38, "The Ruthless Ceinture": 0.38, "Prosperity": 0.37,
+				"The Doppelganger": 0.37, "The Incantation": 0.36, "The Lunaris Priestess": 0.36, "The Warden": 0.35, "A Mother's Parting Gift": 0.34, "Anarchy's Price": 0.34,
+				"Cartographer's Delight": 0.34, "Death": 0.34, "Destined to Crumble": 0.34, "Lantador's Lost Love": 0.34, "Loyalty": 0.34, "The Betrayal": 0.34, "The Carrion Crow": 0.34,
+				"The Flora's Gift": 0.34, "The Hermit": 0.34, "The Lich": 0.34, "The Lover": 0.34, "The Metalsmith's Gift": 0.34, "The Scarred Meadow": 0.34, "The Scholar": 0.34,
+				"Thunderous Skies": 0.34, "The Opulent": 0.34}
 
-	for u in set(defaults.keys()) - set(div_list.keys()):
-		div_list[u] = defaults[u]
+	# Print all Divination cards that were returned by poe.ninja that don't have a default set
+	if set(div_list.keys()) - set(defaults.keys()):
+		print("{} Missing defaults for Divination cards: \n{}".format(league, ', '.join(['"{}": {}'.format(x, div_list[x]) for x in set(div_list.keys()) - set(defaults.keys())])))
+	# add missing Divination cards to div_list
+	for v in set(defaults.keys()) - set(div_list.keys()):
+		div_list[v] = defaults[v]
 
 	substringcards = find_substrings(div_list)
 
