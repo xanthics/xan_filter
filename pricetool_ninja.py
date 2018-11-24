@@ -551,7 +551,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 	requester = requests.session()
 
 	# Minimum number of item that must exist on poe.ninja for it to be considered
-	mincount = 1
+	mincount = 8
 
 	for league in leagues:
 		currency = {}
