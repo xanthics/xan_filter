@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 11/23/2018(m/d/y) 05:09:15 UTC from "Hardcore" data
+# Created: 11/24/2018(m/d/y) 01:08:08 UTC from "Hardcore" data
 
 desc = "Currency Autogen"
 
@@ -19,7 +19,7 @@ items = {
 	"09 Ancient Shard": {"base": "Ancient Shard", 'other': ['StackSize >= 6'], "class": "Currency", "type": "currency very high"},
 	"1 Annulment Shard": {"base": "Annulment Shard", "class": "Currency", "type": "currency normal"},
 	"09 Annulment Shard": {"base": "Annulment Shard", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency high"},
-	"08 Annulment Shard": {"base": "Annulment Shard", 'other': ['StackSize >= 12'], "class": "Currency", "type": "currency very high"},
+	"08 Annulment Shard": {"base": "Annulment Shard", 'other': ['StackSize >= 14'], "class": "Currency", "type": "currency very high"},
 	"1 Apprentice Cartographer's Sextant": {"base": "Apprentice Cartographer's Sextant", "class": "Currency", "type": "currency high"},
 	"09 Apprentice Cartographer's Sextant": {"base": "Apprentice Cartographer's Sextant", 'other': ['StackSize >= 6'], "class": "Currency", "type": "currency very high"},
 	"1 Armourer's Scrap": {"base": "Armourer's Scrap", "class": "Currency", "type": "currency very low"},
@@ -59,6 +59,7 @@ items = {
 	"1 Engineer's Shard": {"base": "Engineer's Shard", "class": "Currency", "type": "currency very low"},
 	"09 Engineer's Shard": {"base": "Engineer's Shard", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency low"},
 	"08 Engineer's Shard": {"base": "Engineer's Shard", 'other': ['StackSize >= 8'], "class": "Currency", "type": "currency normal"},
+	"1 Eternal Orb": {"base": "Eternal Orb", "class": "Currency", "type": "currency extremely high"},
 	"1 Exalted Orb": {"base": "Exalted Orb", "class": "Currency", "type": "currency extremely high"},
 	"1 Exalted Shard": {"base": "Exalted Shard", "class": "Currency", "type": "currency high"},
 	"09 Exalted Shard": {"base": "Exalted Shard", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency very high"},
@@ -90,13 +91,14 @@ items = {
 	"1 Master Cartographer's Sextant": {"base": "Master Cartographer's Sextant", "class": "Currency", "type": "currency high"},
 	"09 Master Cartographer's Sextant": {"base": "Master Cartographer's Sextant", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency very high"},
 	"1 Metallic Fossil": {"base": "Metallic Fossil", "class": "Currency", "type": "currency high"},
+	"1 Mirror Shard": {"base": "Mirror Shard", "class": "Currency", "type": "currency extremely high"},
 	"1 Mirror of Kalandra": {"base": "Mirror of Kalandra", "class": "Currency", "type": "currency extremely high"},
 	"1 Orb of Alchemy": {"base": "Orb of Alchemy", "class": "Currency", "type": "currency normal"},
 	"09 Orb of Alchemy": {"base": "Orb of Alchemy", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency high"},
 	"08 Orb of Alchemy": {"base": "Orb of Alchemy", 'other': ['StackSize >= 15'], "class": "Currency", "type": "currency very high"},
 	"1 Orb of Alteration": {"base": "Orb of Alteration", "class": "Currency", "type": "currency low"},
-	"09 Orb of Alteration": {"base": "Orb of Alteration", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency normal"},
-	"08 Orb of Alteration": {"base": "Orb of Alteration", 'other': ['StackSize >= 12'], "class": "Currency", "type": "currency high"},
+	"09 Orb of Alteration": {"base": "Orb of Alteration", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency normal"},
+	"08 Orb of Alteration": {"base": "Orb of Alteration", 'other': ['StackSize >= 15'], "class": "Currency", "type": "currency high"},
 	"1 Orb of Annulment": {"base": "Orb of Annulment", "class": "Currency", "type": "currency very high"},
 	"09 Orb of Annulment": {"base": "Orb of Annulment", 'other': ['StackSize >= 8'], "class": "Currency", "type": "currency extremely high"},
 	"1 Orb of Augmentation": {"base": "Orb of Augmentation", "class": "Currency", "type": "currency very low"},
