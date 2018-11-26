@@ -1,6 +1,6 @@
 #**************************************************************
 # Welcome to xan.filter, a Python generated loot filter for PoE
-# This filter was generated for Temp Hardcore on 11/24/2018(m/d/y) 01:08:15 UTC
+# This filter was generated for Temp Hardcore on 11/26/2018(m/d/y) 20:34:18 UTC
 # The most current version of code can always be found at https://github.com/xanthics/poe_filter
 #**************************************************************
 
@@ -86,6 +86,17 @@ Show
 Show
 	CustomAlertSound "45_show.wav"
 	Sockets 6
+	MinimapIcon 1 White Square
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 192 128 254
+	SetFontSize 35
+	DisableDropSound True
+
+#Always show
+Show
+	CustomAlertSound "20_show.wav"
+	LinkedSockets 5
+	Rarity < Unique
 	MinimapIcon 1 White Square
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 192 128 254

@@ -8,8 +8,8 @@ desc = "Always show"
 items = {
 	"01 Tabula Exception": {"base": "Simple Robe", "other": ["Rarity Unique", "SocketGroup WWWWWW"], "type": "unique high"},
 	"02 6L": {"other": ["LinkedSockets 6"], "type": "show very high"},
-#	"03 5L": {"other": ["Rarity < Unique", "Sockets 5", "LinkedSockets 5", 'CustomAlertSound "20_show.wav"'], "type": "show high"},
-	"04 6S": {"other": ["Sockets 6", 'CustomAlertSound "45_show.wav"'], "type": "show high"},
+	"03 6S": {"other": ["Sockets 6", 'CustomAlertSound "45_show.wav"'], "type": "show high"},
+	"04 5L": {"other": ["Rarity < Unique", "LinkedSockets 5", 'CustomAlertSound "20_show.wav"'], "type": "show high"},
 	"04 Incursion Item": {"other": ['CustomAlertSound "45_show.wav"'], "class": "Incursion Item", "type": "show high"},
 	"04 Timeworn Reliquary Key": {"base": "Timeworn Reliquary Key", "class": "Misc Map Items", "type": "map very good"},
 	# High value atlas bases.  Show and make noise at any rarity
