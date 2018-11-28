@@ -1,16 +1,16 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 11/24/2018(m/d/y) 01:08:15 UTC from "tmphardcore" data
+# Created: 11/28/2018(m/d/y) 02:21:06 UTC from "tmphardcore" data
 
 desc = "Divination Card"
 
 # Base type : settings pair
 items = {
-	"000 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination low"},
+	"000 Beauty Through Death": {"base": "Beauty Through Death", "class": "Divination Card", "type": "divination extremely high"},
 	"001 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
-	"002 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination very high"},
+	"002 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination low"},
 	"003 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination high"},
-	"004 Beauty Through Death": {"base": "Beauty Through Death", "class": "Divination Card", "type": "divination extremely high"},
+	"004 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination very high"},
 	"1 House of Mirrors": {"base": "House of Mirrors", "class": "Divination Card", "type": "divination extremely high"},
 	"1 Hunter's Reward": {"base": "Hunter's Reward", "class": "Divination Card", "type": "divination extremely high"},
 	"1 Immortal Resolve": {"base": "Immortal Resolve", "class": "Divination Card", "type": "divination extremely high"},
@@ -20,7 +20,6 @@ items = {
 	"1 The Immortal": {"base": "The Immortal", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Iron Bard": {"base": "The Iron Bard", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination extremely high"},
-	"1 The Samurai's Eye": {"base": "The Samurai's Eye", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Spark and the Flame": {"base": "The Spark and the Flame", "class": "Divination Card", "type": "divination extremely high"},
 	"2 Abandoned Wealth": {"base": "Abandoned Wealth", "class": "Divination Card", "type": "divination very high"},
 	"2 Boon of the First Ones": {"base": "Boon of the First Ones", "class": "Divination Card", "type": "divination very high"},
@@ -47,6 +46,7 @@ items = {
 	"2 The Porcupine": {"base": "The Porcupine", "class": "Divination Card", "type": "divination very high"},
 	"2 The Professor": {"base": "The Professor", "class": "Divination Card", "type": "divination very high"},
 	"2 The Saint's Treasure": {"base": "The Saint's Treasure", "class": "Divination Card", "type": "divination very high"},
+	"2 The Samurai's Eye": {"base": "The Samurai's Eye", "class": "Divination Card", "type": "divination very high"},
 	"2 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination very high"},
 	"2 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination very high"},
 	"2 The Undaunted": {"base": "The Undaunted", "class": "Divination Card", "type": "divination very high"},
@@ -67,12 +67,9 @@ items = {
 	"3 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
 	"3 Jack in the Box": {"base": "Jack in the Box", "class": "Divination Card", "type": "divination high"},
 	"3 Lingering Remnants": {"base": "Lingering Remnants", "class": "Divination Card", "type": "divination high"},
-	"3 Lucky Connections": {"base": "Lucky Connections", "class": "Divination Card", "type": "divination high"},
 	"3 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination high"},
 	"3 Lysah's Respite": {"base": "Lysah's Respite", "class": "Divination Card", "type": "divination high"},
 	"3 No Traces": {"base": "No Traces", "class": "Divination Card", "type": "divination high"},
-	"3 Rebirth": {"base": "Rebirth", "class": "Divination Card", "type": "divination high"},
-	"3 Scholar of the Seas": {"base": "Scholar of the Seas", "class": "Divination Card", "type": "divination high"},
 	"3 The Admirer": {"base": "The Admirer", "class": "Divination Card", "type": "divination high"},
 	"3 The Avenger": {"base": "The Avenger", "class": "Divination Card", "type": "divination high"},
 	"3 The Beast": {"base": "The Beast", "class": "Divination Card", "type": "divination high"},
@@ -88,6 +85,7 @@ items = {
 	"3 The Ethereal": {"base": "The Ethereal", "class": "Divination Card", "type": "divination high"},
 	"3 The Fletcher": {"base": "The Fletcher", "class": "Divination Card", "type": "divination high"},
 	"3 The Formless Sea": {"base": "The Formless Sea", "class": "Divination Card", "type": "divination high"},
+	"3 The Gemcutter": {"base": "The Gemcutter", "class": "Divination Card", "type": "divination high"},
 	"3 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination high"},
 	"3 The Innocent": {"base": "The Innocent", "class": "Divination Card", "type": "divination high"},
 	"3 The Inventor": {"base": "The Inventor", "class": "Divination Card", "type": "divination high"},
@@ -111,6 +109,7 @@ items = {
 	"3 The Wrath": {"base": "The Wrath", "class": "Divination Card", "type": "divination high"},
 	"3 The Wretched": {"base": "The Wretched", "class": "Divination Card", "type": "divination high"},
 	"3 Treasure Hunter": {"base": "Treasure Hunter", "class": "Divination Card", "type": "divination high"},
+	"3 Vinia's Token": {"base": "Vinia's Token", "class": "Divination Card", "type": "divination high"},
 	"4 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "divination low"},
 	"4 Anarchy's Price": {"base": "Anarchy's Price", "class": "Divination Card", "type": "divination low"},
 	"4 Cartographer's Delight": {"base": "Cartographer's Delight", "class": "Divination Card", "type": "divination low"},
@@ -135,7 +134,6 @@ items = {
 	"4 The Summoner": {"base": "The Summoner", "class": "Divination Card", "type": "divination low"},
 	"4 The Warden": {"base": "The Warden", "class": "Divination Card", "type": "divination low"},
 	"4 Turn the Other Cheek": {"base": "Turn the Other Cheek", "class": "Divination Card", "type": "divination low"},
-	"4 Vinia's Token": {"base": "Vinia's Token", "class": "Divination Card", "type": "divination low"},
 	"4 Volatile Power": {"base": "Volatile Power", "class": "Divination Card", "type": "divination low"},
 	"7 Blessing of God": {"base": "Blessing of God", "class": "Divination Card", "type": "hide"},
 	"7 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "hide"},

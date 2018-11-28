@@ -218,8 +218,8 @@ def find_substrings(div_defaults):
 
 	badcards = [badcards for substring in substringmatches for badcards in substringmatches[substring]]
 	# distinct values by converting to a set
-	# reverse sort in case any names such as "a", "ab", "abc" exist due to how Python sorts
-	return sorted(set(badcards), reverse=True)
+	# sort based on descending length so that any additional substrings are at the end of the list
+	return sorted(set(badcards), reverse=True, key=lambda s: len(s))
 
 
 # Generate a list of all known cards with their values for setting default values
