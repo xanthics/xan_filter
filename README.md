@@ -5,14 +5,14 @@
 
 
 **HIDE**
-* [Download Delve](xan.t.hide.filter?raw=true)
-* [Download Delve Hardcore](xan.thc.hide.filter?raw=true)
+* [Download Betrayal](xan.t.hide.filter?raw=true)
+* [Download Betrayal Hardcore](xan.thc.hide.filter?raw=true)
 * [Download Standard](xan.st.hide.filter?raw=true)
 * [Download Hardcore](xan.hc.hide.filter?raw=true)
 
 **SHOW**
-* [Download Delve](xan.t.show.filter?raw=true)
-* [Download Delve Hardcore](xan.thc.show.filter?raw=true)
+* [Download Betrayal](xan.t.show.filter?raw=true)
+* [Download Betrayal Hardcore](xan.thc.show.filter?raw=true)
 * [Download Standard](xan.s.show.filter?raw=true)
 * [Download Hardcore](xan.hc.show.filter?raw=true)
 
@@ -30,11 +30,11 @@ See item_config.template.py and theme_config.minimal.py
 
 Hide all
 ========
-![Hide unspecified items](https://i.imgur.com/7Y8tzsz.jpg "Hide")
+![Hide unspecified items](hide.png "Hide")
 
 Show all
 ========
-![Show all items](https://i.imgur.com/HP8IT0p.jpg "Show")
+![Show all items](show.png "Show")
 
 Thanks
 ======

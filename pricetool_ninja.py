@@ -271,7 +271,8 @@ def gen_div(div_list, league, curvals):
 				"The Doppelganger": 0.37, "The Incantation": 0.36, "The Lunaris Priestess": 0.36, "The Warden": 0.35, "A Mother's Parting Gift": 0.34, "Anarchy's Price": 0.34,
 				"Cartographer's Delight": 0.34, "Death": 0.34, "Destined to Crumble": 0.34, "Lantador's Lost Love": 0.34, "Loyalty": 0.34, "The Betrayal": 0.34, "The Carrion Crow": 0.34,
 				"The Flora's Gift": 0.34, "The Hermit": 0.34, "The Lich": 0.34, "The Lover": 0.34, "The Metalsmith's Gift": 0.34, "The Scarred Meadow": 0.34, "The Scholar": 0.34,
-				"Thunderous Skies": 0.34, "The Opulent": 0.34}
+				"Thunderous Skies": 0.34, "The Opulent": 0.34,
+				'The Nurse': 70.61, 'A Dab of Ink': 10.0, 'The Sacrifice': 5.0, 'The Life Thief': 107.86, 'The Master Artisan': 0.5}
 
 	fixmissing(div_list, defaults, league, 'Divination cards')
 
@@ -466,7 +467,7 @@ def gen_unique(unique_list, league, curvals):
 			items['ehigh'].append(u)
 		elif unique_list[u] > curvals['very']:
 			items['vhigh'].append(u)
-#		elif unique_list[u] > curvals['high']:
+		elif unique_list[u] > curvals['high']:
 			items['high'].append(u)
 		elif unique_list[u] < curvals['high'] / 2:
 			items['low'].append(u)
