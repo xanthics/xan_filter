@@ -176,6 +176,8 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 		buffer += gen_list(flask.items, flask.desc, soundlist)  # Flasks
 		buffer += gen_list(lookup_leagues[i][6].items, lookup_leagues[i][6].desc, soundlist)  # Autogen Bases
 
+		buffer += gen_list(itemmods(), "Items Mods", soundlist)  # mod based highlighting
+
 		if leveling:
 			desc = "Rare item for leveling"
 			flags = 'All'  # see item_config/rare_gen - genraresleveling for valid values
@@ -193,7 +195,6 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 			flags = ['Weapon']  # 'All'  # see item_config/rare_gen - genraresleveling for valid values
 			buffer += gen_list(gennonrareleveling(flags, overlevel=2, maxlevel=25), desc, soundlist)
 
-		buffer += gen_list(itemmods(), "Magic Items", soundlist)  # magic base type highlighting
 		buffer += gen_list(show_catchall.items, show_catchall.desc, soundlist)  # Always show these items
 
 		poeDir = get_poe_path()
@@ -237,8 +238,8 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 
 if __name__ == "__main__":
 	import pricetool_ninja
-	league = ['Standard', 'Hardcore', 'tmpstandard', 'tmphardcore']
-#	league = ['tmpstandard']
+#	league = ['Standard', 'Hardcore', 'tmpstandard', 'tmphardcore']
+	league = ['Standard']
 	pricetool_ninja.scrape_ninja(league)
 	# reload updated modules
 	for module in [divination, hcdivination, tdivination, thcdivination,
