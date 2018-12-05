@@ -199,6 +199,100 @@ def gen_essence(essence_list, league, curvals):
 		f.write(curval)
 
 
+# Convert a prophecy value to string.  returns a string
+def prophecyclassify(cur, val, curvals):
+	if val >= curvals['extremely']:
+		tier = 'currency extremely high'
+	elif val > curvals['very']:
+		tier = 'currency very high'
+	elif val > curvals['high']:
+		tier = 'currency high'
+	elif val < curvals['normal']:
+		tier = 'currency very low'
+	else:
+		return
+
+	return "{0}\": {{\"Prophecy\": \"{0}\", \"type\": \"{1}\"}}".format(cur, tier)
+
+
+# given a league grouped list of prophecies determine all unique entries and then output for each league
+def gen_prophecy(prophecy_list, league, curvals):
+	defaults = {"Beyond Sight I": 0.38, "Crimson Hues": 0.44, "Ancient Doom": 1.24, "Day of Sacrifice I": 0.47, "Heart of the Fire": 0.44,
+				"The Unbreathing Queen II": 0.37, "A Prodigious Hand": 0.32, "Mouth of Horrors": 0.33, "The Vanguard": 0.68, "Anarchy's End IV": 4.0,
+				"The Great Mind of the North": 4.0, "Thaumaturgical History III": 0.32, "Notched Flesh": 0.44, "Unbearable Whispers IV": 1.1,
+				"The Prison Guard": 0.43, "Flesh of the Beast": 2.0, "The Four Feral Exiles": 0.6, "Power Magnified": 0.32, "Crushing Squall": 1.0,
+				"Black Devotion": 0.47, "The Feral Lord IV": 0.63, "The Beginning and the End": 0.65, "The Warmongers I": 0.44, "The Undead Brutes": 0.36,
+				"Song of the Sekhema": 14.47, "A Regal Death": 0.33, "The Undead Storm": 1.0, "Deadly Rivalry I": 0.88, "Storm on the Horizon": 0.57,
+				"Lasting Impressions": 0.32, "Day of Sacrifice III": 2.7, "The Ambitious Bandit II": 1.0, "The Walking Mountain": 0.44, "Rebirth": 0.32,
+				"Kalandra's Craft": 0.54, "Darktongue's Shriek": 47.02, "Deadly Rivalry III": 0.92, "Erased from Memory": 0.32, "Deadly Rivalry V": 1.0,
+				"Thaumaturgical History II": 0.84, "Greed's Folly": 0.83, "The Hungering Swarm": 0.88, "The Lost Maps": 0.72, "Gilded Within": 0.44,
+				"The Apex Predator": 1.93, "Smothering Tendrils": 0.4, "The Bloody Flowers Redux": 0.32, "Fear's Wide Reach": 0.44, "Dance of Steel": 2.0,
+				"The Jeweller's Touch": 18.95, "Heavy Blows": 0.32, "Day of Sacrifice II": 0.98, "Twice Enchanted": 18.11, "The King and the Brambles": 0.8,
+				"A Forest of False Idols": 1.0, "The Plaguemaw I": 0.32, "The Bishop's Legacy": 1.0, "Faith Exhumed": 1.0, "End of the Light": 1.0,
+				"The Nest": 0.9, "The Ambitious Bandit III": 7.6, "Blood of the Betrayed": 0.51, "Burning Dread": 0.44, "Beyond Sight II": 0.44,
+				"Wind and Thunder": 42.23, "The Lost Undying": 0.93, "A Valuable Combination": 0.32, "The Invader": 0.32, "Mysterious Invaders": 0.4,
+				"The Watcher's Watcher": 0.44, "The Warmongers IV": 1.0, "The Karui Rebellion": 1.0, "The Plaguemaw V": 3.0, "Unbearable Whispers V": 5.0,
+				"Battle Hardened": 2.0, "Dying Cry": 1.0, "Storm on the Reef": 0.44, "The Hardened Armour": 0.33, "Lightning Falls": 1.0,
+				"Visions of the Drowned": 0.12, "Fire and Brimstone": 1.86, "The Singular Spirit": 0.42, "The Dreamer's Dream": 1.0, "The King's Path": 112.2,
+				"The Feral Lord V": 2.71, "Blind Faith": 4.0, "The Brothers of Necromancy": 0.32, "Risen Blood": 0.48, "The Servant's Heart": 7.0,
+				"The Stockkeeper": 1.0, "Baptism by Death": 0.61, "Fated Connections": 904.92, "The Nightmare Awakens": 1.0, "The Lady in Black": 0.76,
+				"The Sword King's Passion": 0.34, "The Last Watch": 1.0, "The Scout": 1.0, "Resistant to Change": 1.0, "Dark Instincts": 0.64,
+				"A Call into the Void": 0.44, "Fire, Wood and Stone": 2.87, "Against the Tide": 0.45, "The Beautiful Guide": 2.0, "Unbearable Whispers I": 0.32,
+				"The Silverwood": 0.53, "Possessed Foe": 0.98, "The Unbreathing Queen IV": 1.0, "Thaumaturgical History IV": 1.0, "The Petrified": 0.37,
+				"Plague of Frogs": 1.0, "Anarchy's End II": 1.0, "Severed Limbs": 0.95, "The Sharpened Blade": 0.49, "Ancient Rivalries I": 0.34,
+				"The Alchemist": 0.32, "Plague of Rats": 1.0, "The Queen's Sacrifice": 6337.0, "The Bowstring's Music": 3.0, "Waiting in Ambush": 1.0,
+				"The Fortune Teller's Collection": 2.0, "Trapped in the Tower": 1.0, "Blood in the Eyes": 0.94, "Cleanser of Sins": 12.0,
+				"A Vision of Ice and Fire": 97.08, "Last of the Wildmen": 1.0, "Nature's Resilience": 1.0, "A Firm Foothold": 0.54, "Pleasure and Pain": 0.32,
+				"Soil, Worms and Blood": 0.44, "Thaumaturgical History I": 0.42, "The Great Leader of the North": 4.77, "Bountiful Traps": 2.78,
+				"The Brutal Enforcer": 0.8, "Erasmus' Gift": 1.0, "Ice from Above": 1.81, "Fire from the Sky": 1.0, "The Snuffed Flame": 0.32,
+				"A Master Seeks Help": 1.0, "The Feral Lord I": 0.44, "Reforged Bonds": 1.0, "Graceful Flames": 0.44, "Winter's Mournful Melodies": 0.32,
+				"Unbearable Whispers II": 0.62, "Agony at Dusk": 0.32, "The Ward's Ward": 0.41, "The Trembling Earth": 0.44, "Blinding Light": 0.88,
+				"Forceful Exorcism": 0.32, "The Flayed Man": 0.32, "The Plaguemaw IV": 1.0, "Roth's Legacy": 0.88, "Anarchy's End III": 0.96,
+				"Overflowing Riches": 0.95, "The Warmongers II": 0.46, "The Dreaded Rhoa": 1.0, "The Sinner's Stone": 0.6, "The Eagle's Cry": 1.0,
+				"Hunter's Lesson": 0.42, "The Dream Trial": 1.0, "An Unseen Peril": 0.85, "Lost in the Pages": 5.01, "The Ambitious Bandit I": 0.44,
+				"The Mysterious Gift": 1.88, "Deadly Rivalry II": 0.4, "Trash to Treasure": 1013.92, "A Rift in Time": 1.0, "Golden Touch": 0.32,
+				"Sun's Punishment": 0.9, "Anarchy's End I": 0.81, "Custodians of Silence": 0.44, "The Plaguemaw III": 0.44, "The Feral Lord III": 0.37,
+				"The Twins": 0.32, "Monstrous Treasure": 42.32, "The Warmongers III": 0.69, "Touched by the Wind": 1.0, "From Death Springs Life": 0.44,
+				"Hidden Reinforcements": 0.34, "From The Void": 0.44, "The Wealthy Exile": 0.32, "The Flow of Energy": 1.0, "The Prison Key": 0.77,
+				"The God of Misfortune": 0.32, "A Gracious Master": 4.28, "Cold Greed": 1.0, "The Feral Lord II": 0.32, "The Unbreathing Queen I": 0.32,
+				"The Queen's Vaults": 3.0, "The Misunderstood Queen": 2.0, "The Storm Spire": 0.32, "The Malevolent Witch": 1.0, "Nemesis of Greed": 0.88,
+				"The Unbreathing Queen V": 12.24, "The Fall of an Empire": 0.64, "Hidden Vaal Pathways": 0.38, "Cold Blooded Fury": 0.44, "Fire and Ice": 3.03,
+				"Abnormal Effulgence": 0.65, "The Corrupt": 0.33, "Ending the Torment": 0.32, "A Whispered Prayer": 0.37, "A Dishonourable Death": 5.0,
+				"Deadly Twins": 0.44, "Strong as a Bull": 0.33, "Deadly Rivalry IV": 1.0, "Vaal Winds": 27.62, "Unbearable Whispers III": 0.32,
+				"The Plaguemaw II": 0.92, "The Unbreathing Queen III": 0.42, "The Soulless Beast": 0.81, "The Cursed Choir": 0.39, "Weeping Death": 0.64,
+				"Vital Transformation": 1.0, "Living Fires": 251.86, "Ancient Rivalries III": 21.5, "Echoes of Witchcraft": 1.56, "The Emperor's Trove": 31.96,
+				"Undead Uprising": 24.13, "Ancient Rivalries II": 49.12, "Unnatural Energy": 0.32, "In the Grasp of Corruption": 431.69,
+				"Day of Sacrifice IV": 2.94, "The Aesthete's Spirit": 2.06, "The Blacksmith": 10.0, "Vaal Invasion": 9.0, "The Child of Lunaris": 73.82,
+				"Defiled in the Sceptre": 1.0, "Holding the Bridge": 6.11, "Brothers in Arms": 1.0, "Echoes of Mutation": 251.86, "Fallow At Last": 59.7,
+				"Echoes of Lost Love": 140.79, "The Hollow Pledge": 0.95, "Pools of Wealth": 4.93, "The Forgotten Garrison": 0.39, "Beyond Sight III": 3.57,
+				"Beyond Sight IV": 10.3, "Path of Betrayal": 1.0
+}
+
+	fixmissing(prophecy_list, defaults, league, 'prophecy')
+
+	substringprophecy = find_substrings(prophecy_list)
+
+	curval = '''{}\ndesc = "Prophecy Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
+
+	for c, cur in enumerate(substringprophecy):
+		retstr = prophecyclassify(cur, prophecy_list[cur], curvals)
+		if not retstr:
+			retstr = '{0}": {{"Prophecy": "{0}", "type": "currency low"}}'.format(cur)
+		curval += '\t"{:03d} {},\n'.format(c, retstr)
+	for cur in sorted(prophecy_list.keys()):
+		retstr = prophecyclassify(cur, prophecy_list[cur], curvals)
+		if retstr:
+			curval += '\t"1 {},\n'.format(retstr)
+
+	curval += '\t"7 Prophecy default": {"Prophecy": "", "type": "currency low"}'
+	curval += u'}\n'
+
+	name = convertname(league)
+
+	with open('auto_gen\\{}prophecy.py'.format(name), 'w', encoding='utf-8') as f:
+		f.write(curval)
+
+
 # Find all divination cards that have cards which are substrings
 def find_substrings(div_defaults):
 	cardnames = list(div_defaults.keys())
@@ -533,6 +627,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 			 'Hrimnor\'s Dirge', 'Panquetzaliztli', 'Geofri\'s Devotion', 'Voidheart', 'Kaom\'s Way', 'Winterweave', 'Timetwist', 'Ngamahu Tiki', 'Karui Charge', 'The Effigon',
 			 'The Tactician', 'The Nomad', 'The Signal Fire', 'Cragfall', 'Hyrri\'s Demise', 'Chaber Cairn', 'Geofri\'s Legacy', 'The Iron Fortress']
 
+	# TODO: scarab tiers when poe.ninja has data
 	paths = {
 		'currency': 'http://poe.ninja/api/Data/GetCurrencyOverview?league={}',
 		'bases': 'http://poe.ninja/api/Data/GetBaseTypeOverview?league={}',
@@ -545,7 +640,8 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		'unique armor': 'http://poe.ninja/api/Data/GetUniqueArmourOverview?league={}',
 		'unique accessory': 'http://poe.ninja/api/Data/GetUniqueAccessoryOverview?league={}',
 		'resonator': 'https://poe.ninja/api/data/itemoverview?league={}&type=Resonator',
-		'fossil': 'https://poe.ninja/api/data/itemoverview?league={}&type=Fossil'
+		'fossil': 'https://poe.ninja/api/data/itemoverview?league={}&type=Fossil',
+		'prophecy': 'https://poe.ninja/api/data/itemoverview?league={}&type=Prophecy'
 	}
 
 	os.environ['NO_PROXY'] = 'poe.ninja'
@@ -559,6 +655,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		divs = {}
 		essences = {}
 		bases = {}
+		prophecy = {}
 		uniques = defaultdict(list)
 
 		for key in paths:
@@ -592,6 +689,13 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 							continue
 						currency[ii['name']] = ii['chaosValue']
 
+			elif key == 'prophecy':
+				for i in data:
+					for ii in data[i]:
+						if ii['count'] < mincount:
+							continue
+						prophecy[ii['name']] = ii['chaosValue']
+
 			elif key == 'div':
 				for i in data:
 					for ii in data[i]:
@@ -618,6 +722,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		gen_div(divs, league, curvals)
 		gen_bases(bases, league, curvals)
 		gen_essence(essences, league, curvals)
+		gen_prophecy(prophecy, league, curvals)
 		gen_unique(uniques, league, curvals)
 
 
