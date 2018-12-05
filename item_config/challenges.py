@@ -6,5 +6,4 @@ desc = "challenge item"
 
 # Base type : settings pair
 items = {
-	"0 Leaguestone": {"class": "Leaguestone", "type": "challenge normal"},
 }
