@@ -63,7 +63,11 @@ def itemmods():
 				  "Subterranean", "of the Underground", "of Weaponcraft", "of Spellcraft", "of Crafting",
 				  "Citaqualotl's", "Guatelitzi's", "Matatl's", "of Puhuarte", "of Tacati", "Tacati's", "Topotante's", "Xopec's",
 				  "Brinerot", "Mutewind", "Redblade", "Betrayer\'s", "Deceiver\'s", "Turncoat\'s",
-				  "of Farrul", "of Craiceann", "of Fenumus", "of Saqawal"]
+				  "of Farrul", "of Craiceann", "of Fenumus", "of Saqawal",
+				  # TODO: adjust after league start
+				  "Veiled", "Leo's Veiled", "Catarina's Veiled", "Elreon's Veiled", "Vorici's Veiled", "Haku's Veiled", "Tora's Veiled",
+				  "Vagan's Veiled", "Guff's Veiled", "It That Fled's Veiled", "Gravicius' Veiled", "Korell's Veiled", "Rin's Veiled",
+				  "of the Veil", "of Janus' Veil", "of Hillock's Veil", "of Jorgin's Veil", "of Cameria's Veil", "of Aisling's Veil", "of Riker's Veil"]
 
 	ret = {'0 Item Mod': {'other': ['HasExplicitMod "{}"'.format('" "'.join(modanyitem))], "type": "item mod"}}
 
