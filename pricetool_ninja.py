@@ -7,6 +7,7 @@ import os
 import requests
 from collections import defaultdict
 from datetime import datetime
+from ninja_defaults import currencydefaults, essencedefaults, prophecydefaults, divdefaults, uniquedefaults
 
 header = '''#!/usr/bin/python
 # -*- coding: utf-8 -*-
@@ -81,24 +82,11 @@ def currencyclassify(cur, val, curvals, stacks=1):
 def gen_currency(currency_list, league):
 	stackable = ['Orb', 'Splinter', 'Chisel', 'Coin', 'Bauble', 'Sextant', 'Shard', 'Whetstone', 'Scroll', 'Scrap']
 
-	defaults = {"Mirror of Kalandra": 28558.18, "Blessing of Chayula": 179.76, "Exalted Orb": 119.03, "Ancient Orb": 30.5, "Harbinger's Orb": 27.0, "Divine Orb": 19.68, "Orb of Annulment": 11.5, "Blessing of Uul-Netol": 6.0,
-				"Blessing of Esh": 5.0, "Master Cartographer's Sextant": 4.0, "Blessing of Xoph": 3.0, "Journeyman Cartographer's Sextant": 2.9, "Blessing of Tul": 2.0, "Vaal Orb": 1.73,
-				"Apprentice Cartographer's Sextant": 1.37, "Gemcutter's Prism": 1.34, "Splinter of Chayula": 1.32, "Orb of Horizons": 0.9, "Orb of Regret": 0.75, "Engineer's Orb": 0.66,
-				"Orb of Alchemy": 0.57, "Regal Orb": 0.53, "Cartographer's Chisel": 0.46, "Orb of Scouring": 0.43, "Splinter of Xoph": 0.42, "Orb of Fusing": 0.38, "Orb of Binding": 0.38, "Silver Coin": 0.19,
-				"Blessed Orb": 0.16, "Chromatic Orb": 0.14, "Splinter of Uul-Netol": 0.13, "Perandus Coin": 0.12, "Splinter of Esh": 0.12, "Orb of Chance": 0.1, "Orb of Alteration": 0.09, "Jeweller's Orb": 0.09,
-				"Glassblower's Bauble": 0.08, "Splinter of Tul": 0.08, "Orb of Augmentation": 0.04, "Blacksmith's Whetstone": 0.03, "Armourer's Scrap": 0.03, "Orb of Transmutation": 0.02, "Portal Scroll": 0.02,
-				"Prime Chaotic Resonator": 334.79, "Prime Alchemical Resonator": 330.29, "Potent Chaotic Resonator": 1.27, "Powerful Chaotic Resonator": 1.0, "Primitive Chaotic Resonator": 0.5, "Potent Alchemical Resonator": 0.5,
-				"Primitive Alchemical Resonator": 0.39, "Powerful Alchemical Resonator": 0.38, "Faceted Fossil": 180.0, "Glyphic Fossil": 180.0, "Bloodstained Fossil": 176.68, "Hollow Fossil": 170.0, "Fractured Fossil ": 169.0,
-				"Tangled Fossil": 166.64, "Sanctified Fossil": 30.27, "Encrusted Fossil": 29.99, "Gilded Fossil": 19.0, "Shuddering Fossil": 7.0, "Enchanted Fossil": 4.0, "Serrated Fossil": 4.0, "Perfect Fossil": 3.0,
-				"Prismatic Fossil": 2.97, "Jagged Fossil": 2.65, "Dense Fossil": 2.0, "Lucent Fossil": 2.0, "Aetheric Fossil": 1.81, "Pristine Fossil": 1.58, "Bound Fossil": 1.0, "Metallic Fossil": 1.0,
-				"Corroded Fossil": 1.0, "Scorched Fossil": 0.35, "Frigid Fossil": 0.23, "Aberrant Fossil": 0.18, "Scroll of Wisdom": 1 / 100, "Eternal Orb": 19323.88,
-				"Annulment Shard": 1.09, "Exalted Shard": 5.71, "Mirror Shard": 1627.15}
-
 	shards = {'Binding Shard': 'Orb of Binding', 'Horizon Shard': 'Orb of Horizons', 'Harbinger\'s Shard': 'Harbinger\'s Orb', 'Engineer\'s Shard': 'Engineer\'s Orb', 'Ancient Shard': 'Ancient Orb',
 	          'Regal Shard': 'Regal Orb', 'Alchemy Shard': 'Orb of Alchemy', 'Alteration Shard': 'Orb of Alteration', 'Transmutation Shard': 'Orb of Transmutation', 'Scroll Fragment': 'Scroll of Wisdom',
 			  'Exalted Shard': 'Exalted Orb', 'Annulment Shard': 'Orb of Annulment', 'Mirror Shard': 'Mirror of Kalandra'}
 
-	fixmissing(currency_list, defaults, league, "currency")
+	fixmissing(currency_list, currencydefaults, league, "currency")
 
 	for s in shards:
 		if s not in currency_list:
@@ -156,35 +144,8 @@ def essenceclassify(cur, val, curvals):
 
 # given a league grouped list of essences determine all unique entries and then output for each league
 def gen_essence(essence_list, league, curvals):
-	defaults = {"Deafening Essence of Anguish": 1.0, "Screaming Essence of Loathing": 0.68, "Wailing Essence of Suffering": 0.55, "Deafening Essence of Woe": 4.0,
-				"Weeping Essence of Contempt": 0.65, "Muttering Essence of Sorrow": 0.43, "Shrieking Essence of Contempt": 2.0, "Deafening Essence of Spite": 6.0,
-				"Shrieking Essence of Zeal": 3.0, "Weeping Essence of Hatred": 0.55, "Deafening Essence of Fear": 4.0, "Shrieking Essence of Loathing": 1.0,
-				"Wailing Essence of Contempt": 0.51, "Shrieking Essence of Woe": 1.0, "Deafening Essence of Rage": 4.0, "Deafening Essence of Greed": 7.0,
-				"Screaming Essence of Scorn": 0.55, "Deafening Essence of Doubt": 1.0, "Deafening Essence of Wrath": 4.0, "Deafening Essence of Suffering": 1.0,
-				"Screaming Essence of Envy": 1.0, "Screaming Essence of Suffering": 0.43, "Weeping Essence of Wrath": 0.38, "Muttering Essence of Woe": 0.38,
-				"Wailing Essence of Woe": 0.63, "Shrieking Essence of Wrath": 1.0, "Shrieking Essence of Misery": 1.0, "Weeping Essence of Anger": 0.55,
-				"Wailing Essence of Zeal": 0.38, "Shrieking Essence of Doubt": 1.0, "Screaming Essence of Anger": 1.0, "Essence of Hysteria": 19.0,
-				"Wailing Essence of Greed": 0.47, "Deafening Essence of Sorrow": 2.0, "Deafening Essence of Hatred": 2.0, "Deafening Essence of Contempt": 10.0,
-				"Wailing Essence of Anger": 0.54, "Essence of Insanity": 18.0, "Shrieking Essence of Scorn": 3.0, "Shrieking Essence of Envy": 2.0,
-				"Screaming Essence of Sorrow": 0.59, "Screaming Essence of Hatred": 0.87, "Wailing Essence of Loathing": 0.68, "Deafening Essence of Dread": 6.0,
-				"Deafening Essence of Misery": 4.0, "Deafening Essence of Envy": 9.0, "Screaming Essence of Spite": 0.55, "Shrieking Essence of Suffering": 0.92,
-				"Muttering Essence of Torment": 0.38, "Muttering Essence of Hatred": 0.38, "Wailing Essence of Doubt": 0.38, "Muttering Essence of Anger": 0.48,
-				"Weeping Essence of Suffering": 0.38, "Screaming Essence of Dread": 0.97, "Remnant of Corruption": 4.0, "Screaming Essence of Anguish": 0.55,
-				"Deafening Essence of Scorn": 8.08, "Muttering Essence of Fear": 0.38, "Weeping Essence of Greed": 0.53, "Deafening Essence of Loathing": 3.0,
-				"Shrieking Essence of Dread": 4.92, "Screaming Essence of Zeal": 0.53, "Wailing Essence of Torment": 0.55, "Shrieking Essence of Rage": 1.32,
-				"Screaming Essence of Greed": 0.85, "Shrieking Essence of Anguish": 1.0, "Wailing Essence of Wrath": 0.55, "Screaming Essence of Misery": 0.55,
-				"Screaming Essence of Woe": 0.55, "Wailing Essence of Spite": 0.38, "Wailing Essence of Anguish": 0.5, "Shrieking Essence of Hatred": 1.0,
-				"Screaming Essence of Rage": 0.53, "Wailing Essence of Fear": 0.38, "Muttering Essence of Greed": 0.55, "Weeping Essence of Torment": 0.83,
-				"Screaming Essence of Fear": 0.46, "Screaming Essence of Contempt": 0.55, "Shrieking Essence of Anger": 3.0, "Deafening Essence of Anger": 7.0,
-				"Screaming Essence of Torment": 0.43, "Shrieking Essence of Greed": 2.0, "Wailing Essence of Sorrow": 0.55, "Weeping Essence of Rage": 0.55,
-				"Screaming Essence of Wrath": 0.57, "Wailing Essence of Rage": 0.42, "Deafening Essence of Torment": 2.0, "Weeping Essence of Sorrow": 0.38,
-				"Shrieking Essence of Torment": 1.0, "Whispering Essence of Woe": 0.38, "Whispering Essence of Greed": 0.55, "Weeping Essence of Fear": 0.38,
-				"Whispering Essence of Contempt": 0.38, "Weeping Essence of Doubt": 0.55, "Whispering Essence of Hatred": 0.5, "Wailing Essence of Hatred": 0.38,
-				"Essence of Delirium": 9.0, "Deafening Essence of Zeal": 8.0, "Shrieking Essence of Sorrow": 1.0, "Shrieking Essence of Fear": 1.0,
-				"Essence of Horror": 69.0, "Weeping Essence of Woe": 0.4, "Shrieking Essence of Spite": 1.99, "Screaming Essence of Doubt": 0.55,
-				"Muttering Essence of Contempt": 0.38}
 
-	fixmissing(essence_list, defaults, league, 'essences')
+	fixmissing(essence_list, essencedefaults, league, 'essences')
 
 	curval = '''{}\ndesc = "Essence Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
 
@@ -220,58 +181,7 @@ def prophecyclassify(cur, val, curvals):
 
 # given a league grouped list of prophecies determine all unique entries and then output for each league
 def gen_prophecy(prophecy_list, league, curvals):
-	defaults = {"Beyond Sight I": 0.38, "Crimson Hues": 0.44, "Ancient Doom": 1.24, "Day of Sacrifice I": 0.47, "Heart of the Fire": 0.44,
-				"The Unbreathing Queen II": 0.37, "A Prodigious Hand": 0.32, "Mouth of Horrors": 0.33, "The Vanguard": 0.68, "Anarchy's End IV": 4.0,
-				"The Great Mind of the North": 4.0, "Thaumaturgical History III": 0.32, "Notched Flesh": 0.44, "Unbearable Whispers IV": 1.1,
-				"The Prison Guard": 0.43, "Flesh of the Beast": 2.0, "The Four Feral Exiles": 0.6, "Power Magnified": 0.32, "Crushing Squall": 1.0,
-				"Black Devotion": 0.47, "The Feral Lord IV": 0.63, "The Beginning and the End": 0.65, "The Warmongers I": 0.44, "The Undead Brutes": 0.36,
-				"Song of the Sekhema": 14.47, "A Regal Death": 0.33, "The Undead Storm": 1.0, "Deadly Rivalry I": 0.88, "Storm on the Horizon": 0.57,
-				"Lasting Impressions": 0.32, "Day of Sacrifice III": 2.7, "The Ambitious Bandit II": 1.0, "The Walking Mountain": 0.44, "Rebirth": 0.32,
-				"Kalandra's Craft": 0.54, "Darktongue's Shriek": 47.02, "Deadly Rivalry III": 0.92, "Erased from Memory": 0.32, "Deadly Rivalry V": 1.0,
-				"Thaumaturgical History II": 0.84, "Greed's Folly": 0.83, "The Hungering Swarm": 0.88, "The Lost Maps": 0.72, "Gilded Within": 0.44,
-				"The Apex Predator": 1.93, "Smothering Tendrils": 0.4, "The Bloody Flowers Redux": 0.32, "Fear's Wide Reach": 0.44, "Dance of Steel": 2.0,
-				"The Jeweller's Touch": 18.95, "Heavy Blows": 0.32, "Day of Sacrifice II": 0.98, "Twice Enchanted": 18.11, "The King and the Brambles": 0.8,
-				"A Forest of False Idols": 1.0, "The Plaguemaw I": 0.32, "The Bishop's Legacy": 1.0, "Faith Exhumed": 1.0, "End of the Light": 1.0,
-				"The Nest": 0.9, "The Ambitious Bandit III": 7.6, "Blood of the Betrayed": 0.51, "Burning Dread": 0.44, "Beyond Sight II": 0.44,
-				"Wind and Thunder": 42.23, "The Lost Undying": 0.93, "A Valuable Combination": 0.32, "The Invader": 0.32, "Mysterious Invaders": 0.4,
-				"The Watcher's Watcher": 0.44, "The Warmongers IV": 1.0, "The Karui Rebellion": 1.0, "The Plaguemaw V": 3.0, "Unbearable Whispers V": 5.0,
-				"Battle Hardened": 2.0, "Dying Cry": 1.0, "Storm on the Reef": 0.44, "The Hardened Armour": 0.33, "Lightning Falls": 1.0,
-				"Visions of the Drowned": 0.12, "Fire and Brimstone": 1.86, "The Singular Spirit": 0.42, "The Dreamer's Dream": 1.0, "The King's Path": 112.2,
-				"The Feral Lord V": 2.71, "Blind Faith": 4.0, "The Brothers of Necromancy": 0.32, "Risen Blood": 0.48, "The Servant's Heart": 7.0,
-				"The Stockkeeper": 1.0, "Baptism by Death": 0.61, "Fated Connections": 904.92, "The Nightmare Awakens": 1.0, "The Lady in Black": 0.76,
-				"The Sword King's Passion": 0.34, "The Last Watch": 1.0, "The Scout": 1.0, "Resistant to Change": 1.0, "Dark Instincts": 0.64,
-				"A Call into the Void": 0.44, "Fire, Wood and Stone": 2.87, "Against the Tide": 0.45, "The Beautiful Guide": 2.0, "Unbearable Whispers I": 0.32,
-				"The Silverwood": 0.53, "Possessed Foe": 0.98, "The Unbreathing Queen IV": 1.0, "Thaumaturgical History IV": 1.0, "The Petrified": 0.37,
-				"Plague of Frogs": 1.0, "Anarchy's End II": 1.0, "Severed Limbs": 0.95, "The Sharpened Blade": 0.49, "Ancient Rivalries I": 0.34,
-				"The Alchemist": 0.32, "Plague of Rats": 1.0, "The Queen's Sacrifice": 6337.0, "The Bowstring's Music": 3.0, "Waiting in Ambush": 1.0,
-				"The Fortune Teller's Collection": 2.0, "Trapped in the Tower": 1.0, "Blood in the Eyes": 0.94, "Cleanser of Sins": 12.0,
-				"A Vision of Ice and Fire": 97.08, "Last of the Wildmen": 1.0, "Nature's Resilience": 1.0, "A Firm Foothold": 0.54, "Pleasure and Pain": 0.32,
-				"Soil, Worms and Blood": 0.44, "Thaumaturgical History I": 0.42, "The Great Leader of the North": 4.77, "Bountiful Traps": 2.78,
-				"The Brutal Enforcer": 0.8, "Erasmus' Gift": 1.0, "Ice from Above": 1.81, "Fire from the Sky": 1.0, "The Snuffed Flame": 0.32,
-				"A Master Seeks Help": 1.0, "The Feral Lord I": 0.44, "Reforged Bonds": 1.0, "Graceful Flames": 0.44, "Winter's Mournful Melodies": 0.32,
-				"Unbearable Whispers II": 0.62, "Agony at Dusk": 0.32, "The Ward's Ward": 0.41, "The Trembling Earth": 0.44, "Blinding Light": 0.88,
-				"Forceful Exorcism": 0.32, "The Flayed Man": 0.32, "The Plaguemaw IV": 1.0, "Roth's Legacy": 0.88, "Anarchy's End III": 0.96,
-				"Overflowing Riches": 0.95, "The Warmongers II": 0.46, "The Dreaded Rhoa": 1.0, "The Sinner's Stone": 0.6, "The Eagle's Cry": 1.0,
-				"Hunter's Lesson": 0.42, "The Dream Trial": 1.0, "An Unseen Peril": 0.85, "Lost in the Pages": 5.01, "The Ambitious Bandit I": 0.44,
-				"The Mysterious Gift": 1.88, "Deadly Rivalry II": 0.4, "Trash to Treasure": 1013.92, "A Rift in Time": 1.0, "Golden Touch": 0.32,
-				"Sun's Punishment": 0.9, "Anarchy's End I": 0.81, "Custodians of Silence": 0.44, "The Plaguemaw III": 0.44, "The Feral Lord III": 0.37,
-				"The Twins": 0.32, "Monstrous Treasure": 42.32, "The Warmongers III": 0.69, "Touched by the Wind": 1.0, "From Death Springs Life": 0.44,
-				"Hidden Reinforcements": 0.34, "From The Void": 0.44, "The Wealthy Exile": 0.32, "The Flow of Energy": 1.0, "The Prison Key": 0.77,
-				"The God of Misfortune": 0.32, "A Gracious Master": 4.28, "Cold Greed": 1.0, "The Feral Lord II": 0.32, "The Unbreathing Queen I": 0.32,
-				"The Queen's Vaults": 3.0, "The Misunderstood Queen": 2.0, "The Storm Spire": 0.32, "The Malevolent Witch": 1.0, "Nemesis of Greed": 0.88,
-				"The Unbreathing Queen V": 12.24, "The Fall of an Empire": 0.64, "Hidden Vaal Pathways": 0.38, "Cold Blooded Fury": 0.44, "Fire and Ice": 3.03,
-				"Abnormal Effulgence": 0.65, "The Corrupt": 0.33, "Ending the Torment": 0.32, "A Whispered Prayer": 0.37, "A Dishonourable Death": 5.0,
-				"Deadly Twins": 0.44, "Strong as a Bull": 0.33, "Deadly Rivalry IV": 1.0, "Vaal Winds": 27.62, "Unbearable Whispers III": 0.32,
-				"The Plaguemaw II": 0.92, "The Unbreathing Queen III": 0.42, "The Soulless Beast": 0.81, "The Cursed Choir": 0.39, "Weeping Death": 0.64,
-				"Vital Transformation": 1.0, "Living Fires": 251.86, "Ancient Rivalries III": 21.5, "Echoes of Witchcraft": 1.56, "The Emperor's Trove": 31.96,
-				"Undead Uprising": 24.13, "Ancient Rivalries II": 49.12, "Unnatural Energy": 0.32, "In the Grasp of Corruption": 431.69,
-				"Day of Sacrifice IV": 2.94, "The Aesthete's Spirit": 2.06, "The Blacksmith": 10.0, "Vaal Invasion": 9.0, "The Child of Lunaris": 73.82,
-				"Defiled in the Sceptre": 1.0, "Holding the Bridge": 6.11, "Brothers in Arms": 1.0, "Echoes of Mutation": 251.86, "Fallow At Last": 59.7,
-				"Echoes of Lost Love": 140.79, "The Hollow Pledge": 0.95, "Pools of Wealth": 4.93, "The Forgotten Garrison": 0.39, "Beyond Sight III": 3.57,
-				"Beyond Sight IV": 10.3, "Path of Betrayal": 1.0
-}
-
-	fixmissing(prophecy_list, defaults, league, 'prophecy')
+	fixmissing(prophecy_list, prophecydefaults, league, 'prophecy')
 
 	substringprophecy = find_substrings(prophecy_list)
 
@@ -339,44 +249,7 @@ def divclassify(cur, val, curvals, lowcards, badcards):
 
 
 def gen_div(div_list, league, curvals):
-	defaults = {"House of Mirrors": 3276.71, "Beauty Through Death": 903.92, "The Doctor": 564.95, "The Fiend": 406.76, "The Spark and the Flame": 225.98,
-				"Hunter's Reward": 208.13, "Mawr Blaidd": 191.83, "The Immortal": 169.27, "The Wolven King's Bite": 156.35, "The Samurai's Eye": 141.98,
-				"Immortal Resolve": 102.27, "The Queen": 80.0, "The Iron Bard": 75.0, "Abandoned Wealth": 64.74, "The Celestial Stone": 59.04, "Wealth and Power": 49.33,
-				"The Vast": 40.0, "The Dragon's Heart": 33.46, "Chaotic Disposition": 30.0, "The Hale Heart": 30.0, "The Mayor": 30.0, "The Wolf": 24.76,
-				"The Professor": 24.26, "Boon of the First Ones": 24.0, "The Saint's Treasure": 22.0, "Perfection": 22.0, "The Sephirot": 19.27, "The Endless Darkness": 18.71,
-				"The Undaunted": 18.0, "The Undisputed": 17.08, "The Wind": 15.22, "The Jester": 14.55, "The Artist": 14.2, "Heterochromia": 14.0, "The Master": 13.2,
-				"Pride Before the Fall": 13.0, "The Thaumaturgist": 12.0, "The World Eater": 12.0, "The King's Heart": 11.76, "The Last One Standing": 10.0, "The Valkyrie": 10.0,
-				"Time-Lost Relic": 10.0, "The Hoarder": 9.89, "The Polymath": 9.25, "Last Hope": 9.0, "The Celestial Justicar": 9.0, "The Brittle Emperor": 8.23,
-				"The Dreamer": 8.0, "Left to Fate": 7.72, "The Wilted Rose": 7.1, "The Enlightened": 7.03, "The Hunger": 7.0, "The Void": 6.6, "Merciless Armament": 6.38,
-				"Blessing of God": 6.17, "The Cartographer": 6.1, "The Risk": 6.0, "The Valley of Steel Boxes": 5.63, "Bowyer's Dream": 5.25, "The Ethereal": 5.0,
-				"The Formless Sea": 5.0, "The Standoff": 5.0, "The Porcupine": 5.0, "The Breach": 5.0, "The Price of Protection": 4.67, "The Dapper Prodigy": 4.6,
-				"Lucky Deck": 4.59, "The Innocent": 4.0, "Harmony of Souls": 3.9, "Birth of the Three": 3.0, "Emperor of Purity": 3.0, "The Dark Mage": 3.0, "The Admirer": 3.0,
-				"The Twilight Moon": 2.93, "Humility": 2.82, "The Offering": 2.63, "The Spoiled Prince": 2.33, "The Throne": 2.04, "Scholar of the Seas": 2.0, "The Avenger": 2.0,
-				"The Body": 2.0, "The Chains that Bind": 2.0, "The Conduit": 2.0, "The Fletcher": 2.0, "The Inventor": 2.0, "The Penitent": 2.0, "The Soul": 2.0, "The Surveyor": 2.0,
-				"The Traitor": 2.0, "The Tyrant": 2.0, "The Wrath": 2.0, "Treasure Hunter": 2.0, "Vinia's Token": 2.0, "The Wretched": 2.0, "Lingering Remnants": 2.0,
-				"Atziri's Arsenal": 2.0, "Rebirth": 2.0, "The Obscured": 2.0, "The Dreamland": 2.0, "Gemcutter's Promise": 1.94, "The Union": 1.85, "The Jeweller's Boon": 1.78,
-				"No Traces": 1.74, "The Cursed King": 1.58, "Jack in the Box": 1.57, "The Sword King's Salute": 1.31, "Lysah's Respite": 1.16, "The Rite of Elements": 1.06,
-				"Glimmer of Hope": 1.01, "Assassin's Favour": 1.0, "Audacity": 1.0, "Blind Venture": 1.0, "Boundless Realms": 1.0, "Coveted Possession": 1.0,
-				"Dialla's Subjugation": 1.0, "Doedre's Madness": 1.0, "Earth Drinker": 1.0, "Emperor's Luck": 1.0, "Gift of the Gemling Queen": 1.0, "Hope": 1.0, "Hubris": 1.0,
-				"Hunter's Resolve": 1.0, "Light and Truth": 1.0, "Lost Worlds": 1.0, "Lucky Connections": 1.0, "Rain Tempter": 1.0, "Rats": 1.0, "The Aesthete": 1.0,
-				"The Calling": 1.0, "The Cataclysm": 1.0, "The Demoness": 1.0, "The Drunken Aristocrat": 1.0, "The Encroaching Darkness": 1.0, "The Explorer": 1.0, "The Fox": 1.0,
-				"The Gambler": 1.0, "The Gemcutter": 1.0, "The Gentleman": 1.0, "The Gladiator": 1.0, "The Harvester": 1.0, "The Lion": 1.0, "The Lord in Black": 1.0,
-				"The Mercenary": 1.0, "The Oath": 1.0, "The One With All": 1.0, "The Pack Leader": 1.0, "The Pact": 1.0, "The Poet": 1.0, "The Rabid Rhoa": 1.0, "The Road to Power": 1.0,
-				"The Scavenger": 1.0, "The Siren": 1.0, "The Stormcaller": 1.0, "The Sun": 1.0, "The Survivalist": 1.0, "The Tower": 1.0, "The Trial": 1.0, "The Visionary": 1.0,
-				"The Warlord": 1.0, "Tranquillity": 1.0, "Mitts": 1.0, "Call to the First Ones": 1.0, "The Wolverine": 1.0, "The Garish Power": 1.0, "The Forsaken": 1.0,
-				"The Blazing Fire": 1.0, "The Realm": 1.0, "The Deceiver": 1.0, "Forbidden Power": 1.0, "Three Voices": 1.0, "The Army of Blood": 1.0, "The Beast": 1.0,
-				"The Fathomless Depths": 1.0, "The Witch": 1.0, "The Darkest Dream": 1.0, "The Cacophony": 1.0, "The Dragon": 0.96, "The Eye of the Dragon": 0.96, "The Catalyst": 0.95,
-				"The Coming Storm": 0.91, "The Arena Champion": 0.9, "The Battle Born": 0.89, "The Puzzle": 0.87, "The Insatiable": 0.87, "The Inoculated": 0.86, "Might is Right": 0.84,
-				"The Surgeon": 0.78, "The Watcher": 0.77, "The Feast": 0.75, "The Twins": 0.68, "Dying Anguish": 0.62, "Struck by Lightning": 0.62, "Three Faces in the Dark": 0.6,
-				"The Endurance": 0.58, "Grave Knowledge": 0.56, "Volatile Power": 0.49, "Shard of Fate": 0.4, "The Summoner": 0.4, "The Web": 0.4, "The Wolf's Shadow": 0.4,
-				"The King's Blade": 0.39, "Turn the Other Cheek": 0.39, "Her Mask": 0.38, "Rain of Chaos": 0.38, "The Sigil": 0.38, "The Ruthless Ceinture": 0.38, "Prosperity": 0.37,
-				"The Doppelganger": 0.37, "The Incantation": 0.36, "The Lunaris Priestess": 0.36, "The Warden": 0.35, "A Mother's Parting Gift": 0.34, "Anarchy's Price": 0.34,
-				"Cartographer's Delight": 0.34, "Death": 0.34, "Destined to Crumble": 0.34, "Lantador's Lost Love": 0.34, "Loyalty": 0.34, "The Betrayal": 0.34, "The Carrion Crow": 0.34,
-				"The Flora's Gift": 0.34, "The Hermit": 0.34, "The Lich": 0.34, "The Lover": 0.34, "The Metalsmith's Gift": 0.34, "The Scarred Meadow": 0.34, "The Scholar": 0.34,
-				"Thunderous Skies": 0.34, "The Opulent": 0.34,
-				'The Nurse': 70.61, 'A Dab of Ink': 10.0, 'The Sacrifice': 5.0, 'The Life Thief': 107.86, 'The Master Artisan': 0.5}
-
-	fixmissing(div_list, defaults, league, 'Divination cards')
+	fixmissing(div_list, divdefaults, league, 'Divination cards')
 
 	substringcards = find_substrings(div_list)
 
@@ -455,83 +328,7 @@ def uniqueclassify(cur, vals, curvals):
 
 
 def gen_unique(unique_list, league, curvals):
-	defaults = {"Overgrown Shrine Map": [2.28], "Woodsplitter": [0.34], "Titan Gauntlets": [61.1, 0.75], "Golden Hoop": [4343.43], "Blue Pearl Amulet": [1.0], "Gavel": [35.0, 0.34],
-				"Opal Sceptre": [1.0], "Sanctified Life Flask": [49.22], "Karui Maul": [0.34], "Enameled Buckler": [0.66], "Iron Ring": [7.41, 1.0, 1.0], "Elegant Ringmail": [44.77, 2.0],
-				"Grand Mana Flask": [225.98], "Widowsilk Robe": [103.99, 1.02, 0.34], "Agate Amulet": [76.0, 0.95, 0.38, 0.34], "Hallowed Hybrid Flask": [3.0], "Torture Chamber Map": [3.72],
-				"Royal Axe": [677.94], "Sage Wand": [9.1, 0.34], "Wyrmscale Doublet": [37.41], "Shore Map": [17.0], "Gold Ring": [19.0, 3.0], "Slink Boots": [112.99, 1.0],
-				"Crusader Boots": [436.68], "Archon Kite Shield Piece": [19.9, 9.79, 9.5, 3.89], "Topaz Flask": [35.0, 17.06, 15.0, 12.38], "Supreme Spiked Shield": [0.34],
-				"Exquisite Leather": [47.02, 24.17, 22.44, 1.0], "Titanium Spirit Shield": [1.15], "Bone Bow": [1.0], "Opal Wand": [1.0], "Chain Belt": [225.98, 15.54, 5.0, 4.72, 1.0, 0.34],
-				"Conjurer Gloves": [1.0], "Dunes Map": [1.0], "Scholar Boots": [0.34], "Coiled Staff": [2.0, 1.0], "Strapped Mitts": [10.63, 0.34], "Ebony Tower Shield": [112.99, 0.34],
-				"Spiked Club": [0.34], "Siege Axe": [19.1], "Midnight Blade": [90.4, 5.0, 3.0], "Quartz Wand": [0.34], "Fright Claw": [0.34], "Citadel Bow": [3.2],
-				"Carnal Armour": [10397.43, 162.34, 0.34], "Ambusher": [0.68], "Despot Axe": [45.0, 0.34], "Antique Rapier": [0.34], "Hydrascale Gauntlets": [112.99], "Plague Mask": [0.34],
-				"Stygian Vise": [1.0], "Headsman Axe": [0.34], "Gnarled Branch": [0.34, 0.21], "Callous Mask Piece": [40.0, 30.18, 8.91], "Deerskin Gloves": [0.68], "Tomahawk": [0.34],
-				"Gilded Sallet": [0.34], "Sorcerer Boots": [677.94, 1.0], "Scholar's Robe": [0.34], "Sledgehammer": [0.34], "Blinder": [1.0], "Harbinger Bow": [2.0, 0.34],
-				"Vaal Spirit Shield": [896.59, 7.09], "Prophecy Wand": [276.94], "Platinum Kris": [0.34], "Vaal Gauntlets": [1807.84, 1.0], "Ornate Mace": [0.34], "Boot Blade": [0.34],
-				"Mosaic Kite Shield": [1.0], "Ambush Mitts": [102.63], "Sapphire Flask": [59.99], "Sinner Tricorne": [1.0], "Opal Ring": [50.0, 3.0], "Legion Boots": [0.44],
-				"Shadow Axe": [0.39], "Long Bow": [0.53], "Bronze Sceptre": [0.34], "Dread Maul": [0.3], "Great Mallet": [5.93, 0.34], "Arcanist Slippers": [60.0], "Spiraled Wand": [0.68, 0.34],
-				"Engraved Wand": [1.0], "Jasper Chopper": [4.59], "Royal Staff": [0.34], "Basket Rapier": [0.34], "Great Helmet": [0.34], "Sharkskin Tunic": [19.33],
-				"Jade Amulet": [66.6, 40.0, 1.0, 0.34], "Etched Greatsword": [1.0], "Coronal Leather": [1.0], "Compound Spiked Shield": [0.34], "Buckskin Tunic": [0.33],
-				"Corrugated Buckler": [1.0], "Primordial Staff": [0.34], "Saintly Chainmail": [4.81, 0.96], "Painted Tower Shield": [1.0], "Ancient Spirit Shield": [19.79], "Leather Cap": [1.08],
-				"Desert Brigandine": [0.75], "Iron Sceptre": [1.0], "Boot Knife": [0.34], "Hubris Circlet": [135.7, 111.99, 2.97, 2.0], "Silken Hood": [76.0, 3.96], "Ritual Sceptre": [30.0],
-				"Temple Map": [12.6], "Promenade Map": [8.69], "Plank Kite Shield": [0.34], "Carnal Boots": [338.97], "Diamond Flask": [1.0], "Throat Stabber": [1.0], "Short Bow": [1.0],
-				"Ranger Bow": [3.0, 0.63], "Wool Gloves": [0.68], "Reinforced Greaves": [1.0], "Dream Mace": [0.34], "Serpentine Staff": [0.36], "Gut Ripper": [0.34, 0.34], "Golden Buckler": [0.56],
-				"Velvet Slippers": [0.34], "Iron Circlet": [0.34], "Goat's Horn": [0.34], "War Hammer": [1.0, 0.34], "Rotfeather Talisman": [156.17], "Shadow Sceptre": [1.0, 0.22],
-				"Spidersilk Robe": [0.69, 0.34], "Silk Gloves": [0.34], "Quartz Flask": [2902.9, 2818.5, 1.9, 0.34], "Triumphant Lamellar": [1.0], "Wyrmscale Gauntlets": [0.34], "Bismuth Flask": [10.0],
-				"Iron Hat": [0.34], "Stealth Boots": [25.0, 0.37], "Reaver Sword": [0.96, 0.35], "Lacquered Garb": [15.0, 1.0], "Rotted Round Shield": [0.34], "Cleaver": [0.34],
-				"Brass Spirit Shield": [0.71], "Judgement Staff": [4.0, 1.0], "Blunt Arrow Quiver": [30.0, 1.0], "Bronze Gauntlets": [0.34], "Plate Vest": [0.34], "Stiletto": [0.34],
-				"Turquoise Amulet": [8.58, 1.0, 0.65, 0.34], "Destiny Leather": [3.0], "Ezomyte Staff": [131.35, 0.34], "Flaying Knife": [0.34], "Assassin's Garb": [1.0], "Harlequin Mask": [451.96, 112.99],
-				"Carnal Mitts": [338.97, 0.47], "War Sword": [1.0], "Ornate Ringmail": [0.34], "Ezomyte Axe": [0.34], "Conjurer Boots": [1.0], "Marble Amulet": [0.84], "Vaal Axe": [158.66, 10.0, 0.39],
-				"Goliath Gauntlets": [1.0], "Cloth Belt": [169.48, 0.4, 0.34, 0.34, 0.34], "Hydrascale Boots": [25.26], "Magistrate Crown": [97.29, 54.8], "Steel Ring": [19.18], "Golden Mantle": [1694.85],
-				"Steel Gauntlets": [1.0], "Steelscale Gauntlets": [146.89, 7.99, 1.0], "Auric Mace": [0.85], "Rawhide Boots": [318.97],
-				"Viridian Jewel": [3137.53, 523.21, 399.31, 302.36, 70.0, 60.0, 50.0, 28.0, 18.61, 16.22, 7.67, 4.8, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.8, 0.8, 0.77, 0.42, 0.39, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34],
-				"Iron Mask": [0.34], "Chain Gloves": [0.4], "Praetor Crown": [2.0, 1.0, 0.34], "Destroyer Regalia": [2.31], "Two-Point Arrow Quiver": [1388.65, 0.99, 0.34], "Maelström Staff": [36.57, 1.0],
-				"Paua Amulet": [7317.91, 4.34, 1.0, 0.34], "Coral Amulet": [267.91, 0.34], "Astral Plate": [2.3], "Steelhead": [5.05], "Broadhead Arrow Quiver": [1.0], "Full Scale Armour": [1.0],
-				"Golden Plate": [225.98, 1.0], "Ironscale Gauntlets": [2.0], "Callous Mask": [112.99], "Paua Ring": [35.41, 1.0, 1.0], "Holy Chainmail": [0.18], "Decimation Bow": [0.34], "Death Bow": [0.36, 0.34],
-				"Assassin Bow": [19.34, 3.0, 0.34], "Royal Skean": [0.34], "Conquest Chainmail": [0.34], "Spike-Point Arrow Quiver": [1.0, 0.68], "Pinnacle Tower Shield": [18.61, 2.0], "Visored Sallet": [0.34],
-				"Crusader Chainmail": [0.34], "Ancient Greaves": [1.0], "Samite Helmet": [0.34], "Cedar Tower Shield": [5.0], "Imperial Staff": [12.6, 2.0, 2.0, 2.0, 1.97], "Ivory Spirit Shield": [0.34],
-				"Demon Dagger": [1.0], "Reinforced Tower Shield": [0.34], "Lapis Amulet": [112.99, 45.14, 0.86, 0.34, 0.34], "Deicide Mask": [10.0], "Pine Buckler": [0.34], "Bastard Sword": [0.34], "Estoc": [0.34],
-				"Eternal Sword": [5.15, 4.0, 2.35], "Ornate Sword": [0.34], "Murder Mitts": [1.32, 1.0], "Karui Sceptre": [1.0], "Occultist's Vestment": [22.64, 20.0], "Strapped Boots": [0.34], "War Buckler": [0.34],
-				"Ironscale Boots": [0.34], "Wool Shoes": [1.0], "Void Axe": [30.0], "Baroque Round Shield": [0.34], "Museum Map": [125.44], "Wrapped Mitts": [0.34], "Diamond Ring": [10.0, 1.0],
-				"Crusader Plate": [0.98, 0.91], "Sharkskin Boots": [1.0], "Samite Gloves": [0.34], "Coral Ring": [1.0, 1.0, 0.99], "Vaal Claw": [1.0, 0.77],
-				"Onyx Amulet": [338.97, 325.86, 225.98, 69.76, 51.46, 40.0, 28.62, 28.13, 20.58, 6.51, 1.0], "Slaughter Knife": [1.0], "Nubuck Gloves": [10.0], "Bone Crypt Map": [1.82], "Goathide Boots": [115.6, 1.0],
-				"Ezomyte Blade": [0.34], "Savant's Robe": [5.0], "Imbued Wand": [0.34], "Titan Greaves": [16.38, 5.0], "Rusted Sword": [0.34], "Strapped Leather": [0.28], "Burnished Spiked Shield": [1.0],
-				"Nightmare Bascinet": [4.97, 1.0], "Studded Belt": [3.0, 0.34], "Heavy Quiver": [112.99], "Sulphur Flask": [0.4, 0.34], "Legion Gloves": [130.28], "Lion Sword": [1.0], "Dusk Blade": [0.37],
-				"Murder Boots": [626.73, 3.0, 1.0], "Glorious Plate": [100.96], "Carved Wand": [112.99, 0.34], "Amethyst Ring": [3.66, 1.67], "Strand Map": [1.0], "Serpentscale Boots": [0.81],
-				"Vaal Hatchet": [1.0], "Full Wyrmscale": [5.9], "Vine Circlet": [0.34], "Blood Raiment": [40.0], "Dragonscale Gauntlets": [0.34], "Bronzescale Gauntlets": [1.0, 0.34],
-				"Amber Amulet": [564.95, 535.26, 19.48, 0.34], "Royal Burgonet": [6.36], "Silk Slippers": [0.32], "Raven Mask": [4.21], "Fiend Dagger": [5.0, 1.0], "Goliath Greaves": [44.46, 1.0],
-				"Varnished Coat": [2.0], "Terror Maul": [1.0], "Prismatic Jewel": [509.02, 122.39, 108.57], "Skinning Knife": [0.22], "Poleaxe": [0.34], "Vanguard Belt": [2.0], "Arcanist Gloves": [22.68],
-				"Soldier Boots": [0.87], "Royal Bow": [0.34], "Vaal Pyramid Map": [10.0], "Grinning Fetish": [0.87], "Imperial Claw": [8.18, 2.65, 1.0], "Jade Hatchet": [0.34], "Cemetery Map": [4.0],
-				"Mesh Boots": [0.34], "Prophet Crown": [5.0, 0.34, 0.34], "Unset Ring": [124.68, 16.4, 8.61, 5.0, 4.95, 4.0, 4.0, 2.0, 1.0], "Ezomyte Tower Shield": [169.19, 78.07], "Highland Blade": [0.34],
-				"Elegant Sword": [20.0, 0.72], "Riveted Boots": [0.34], "Soldier Helmet": [0.34], "Penetrating Arrow Quiver": [16.57, 5.0], "Harmonic Spirit Shield": [0.4], "Cardinal Round Shield": [3.0],
-				"Void Sceptre": [3.0, 0.34], "Tornado Wand": [16.11, 3.0, 1.36], "Meatgrinder": [1.0], "Rock Breaker": [1.0], "Vaal Sceptre": [20.0, 3.0], "Infernal Sword": [196.75, 112.99, 1.0], "Full Dragonscale": [0.34],
-				"Greatwolf Talisman": [824.11], "Military Staff": [0.34], "Festival Mask": [1.0], "Courtyard Map": [23.5], "Tarnished Spirit Shield": [1.0, 0.34], "Long Staff": [27.23, 0.34], "Labrys": [2.0],
-				"Tiger Sword": [1.0], "Iron Staff": [1.0, 0.32], "Crusader Helmet": [13.82], "Dragonscale Boots": [0.71], "Chiming Spirit Shield": [0.34], "Serpentscale Gauntlets": [4.0], "Deerskin Boots": [0.34],
-				"Great Crown": [25.0, 1.0, 0.34], "Gemstone Sword": [83.79], "Variscite Blade": [23.89], "Spine Bow": [2.0, 1.0], "Sorcerer Gloves": [1.0], "Cloth Belt Piece": [27.68, 4.75], "Lacquered Helmet": [0.4],
-				"Simple Robe": [0.34], "Cutthroat's Garb": [0.68], "Twilight Blade": [0.34], "Jagged Maul": [0.34], "Granite Flask": [4.0, 2.0], "Sage's Robe": [1.0, 0.34], "Siege Helmet": [1.0], "Gladius": [0.93],
-				"Whalebone Rapier": [1.0], "Karui Chopper": [0.34], "Brass Maul": [0.34], "Vaal Mask": [20.0], "Gladiator Plate": [9.53], "Aventail Helmet": [0.48], "Topaz Ring": [100.0, 1.66], "Jewelled Foil": [20.0],
-				"Shackled Boots": [9.47], "Lunaris Circlet": [0.34], "Bronzescale Boots": [0.34], "Lion Pelt": [2.0], "Prismatic Ring": [564.95, 7.33, 1.0], "Jagged Foil": [0.34], "Abyssal Axe": [2.95],
-				"Moonstone Ring": [204.38, 1.0, 1.0, 1.0], "Quicksilver Flask": [0.34], "Clasped Boots": [0.34], "Clasped Mitts": [29.24], "Studded Round Shield": [0.3], "Stibnite Flask": [189.74, 2.27],
-				"Leather Belt": [4632.59, 1.0, 1.0, 1.0, 0.62, 0.34], "Citrine Amulet": [25.0, 10.0], "Sundering Axe": [0.34], "Polished Spiked Shield": [1.0], "Harbinger Map": [108.63], "Nailed Fist": [0.34],
-				"Nubuck Boots": [5.0], "Trapper Boots": [1.0], "Crude Bow": [0.34], "Painted Buckler": [0.33], "Underground River Map": [1.76], "Platinum Sceptre": [2.0], "Sadist Garb": [25.0, 1.0], "Close Helmet": [3.0],
-				"Nightmare Mace": [50.0], "Demon's Horn": [0.34], "Hellion's Paw": [8.8], "Ancient Gauntlets": [2.0], "Zodiac Leather": [5.0, 1.0], "Iron Gauntlets": [2.0], "Cutlass": [451.96, 5.0], "Terror Claw": [5.0, 1.0],
-				"Infernal Axe": [0.34], "Vaal Regalia": [1.0], "Sharktooth Arrow Quiver": [0.34], "Necropolis Map": [2.0], "Golden Mask": [0.34], "Vaal Buckler": [0.34], "Fire Arrow Quiver": [0.34], "Moon Temple Map": [27.66],
-				"Necromancer Silks": [1.0], "Regicide Mask": [3.0, 0.41], "Velvet Gloves": [0.34], "Colossal Tower Shield": [0.89], "Corsair Sword": [4.2], "Assassin's Mitts": [0.34, 0.34], "Necromancer Circlet": [59.36, 0.34],
-				"Elder Sword": [1.0], "Rawhide Tower Shield": [35.0], "Serrated Arrow Quiver": [0.34], "Thresher Claw": [0.34], "Sanctified Mana Flask": [29.03], "Copper Plate": [0.34], "Atoll Map": [0.98], "Elegant Foil": [1.0],
-				"Wild Leather": [0.34], "Ruby Flask": [130.0, 1.0], "Clutching Talisman": [96.53], "Cursed Crypt Map": [4.0], "Legion Sword": [56.44, 0.39], "Recurve Bow": [0.34], "Gold Amulet": [68.37, 10.0, 2.1, 1.26, 0.34],
-				"Crimson Jewel": [650.75, 338.97, 184.26, 112.99, 73.68, 65.36, 58.0, 25.24, 24.0, 19.0, 15.53, 8.0, 5.0, 1.73, 1.23, 1.01, 1.0, 1.0, 1.0, 1.0, 0.91, 0.87, 0.82, 0.8, 0.68, 0.68, 0.68, 0.66, 0.46, 0.4, 0.38, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34],
-				"Archon Kite Shield": [28.88, 10.0, 5.39, 5.0, 3.31], "Laminated Kite Shield": [1.0], "Wereclaw Talisman": [36.33], "Lathi": [0.79], "Heavy Belt": [5.0, 4.81, 1.37, 1.0, 1.0, 1.0, 1.0, 1.0, 0.79],
-				"Assassin's Boots": [112.99], "Champion Kite Shield": [5.7], "Vaal Blade": [20.0, 0.34], "Imperial Skean": [10.0, 0.34], "Ezomyte Burgonet": [10.0], "Leather Hood": [1.0], "Ruby Amulet": [65.05],
-				"Bone Circlet": [0.29], "Branded Kite Shield": [0.78], "Bone Armour": [2.0], "Secutor Helm": [0.34], "Zealot Gloves": [51.07, 31.96, 25.6], "Black Maw Talisman": [1.64], "Latticed Ringmail": [0.34],
-				"Silver Flask": [2.0], "Greater Mana Flask": [0.34], "Two-Stone Ring": [528.93, 32.74, 30.0, 7.83, 3.7], "Sapphire Ring": [4.28, 3.02, 2.0, 1.0], "Satin Gloves": [30.93], "Sentinel Jacket": [0.34],
-				"Decorative Axe": [0.34], "Thorium Spirit Shield": [5.0], "Ursine Pelt": [3.0], "Mind Cage": [18.96, 0.34], "Vile Staff": [0.34], "Zealot Helmet": [1.0], "Tribal Circlet": [0.34], "Imperial Bow": [130.0, 1.0],
-				"Tricorne": [0.34], "Goathide Gloves": [1.0], "Eye Gouger": [0.96], "Blunt Arrow Quiver Piece": [30.0, 9.75], "Driftwood Wand": [1.0], "Sacrificial Garb": [20.25, 20.0, 20.0, 19.54, 15.79, 15.77],
-				"Cobalt Jewel": [198.35, 112.99, 112.99, 50.74, 47.8, 24.79, 15.89, 15.0, 6.08, 3.56, 3.38, 2.0, 1.78, 1.76, 1.6, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.92, 0.88, 0.82, 0.71, 0.57, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34, 0.34],
-				"Crusader Gloves": [15.0, 0.62], "Crystal Wand": [0.39], "Plated Greaves": [0.34], "Amethyst Flask": [1.0], "Jingling Spirit Shield": [8.0], "Timeworn Claw": [0.34], "Chateau Map": [190.86],
-				"Carnal Sceptre": [40.0], "Imperial Maul": [30.0], "Highborn Staff": [6.34], "Sabre": [0.34], "Crystal Belt": [4.92], "Awl": [0.34], "Mirrored Spiked Shield": [0.9], "Large Hybrid Flask": [3.0],
-				"Crystal Sceptre": [1.0, 0.34], "Ruby Ring": [8.0, 1.0, 1.0], "Shagreen Boots": [0.34], "Rustic Sash": [78.85, 25.0, 23.92, 0.34], "Soldier Gloves": [25.0, 1.0], "Blood Sceptre": [3.0], "Maze Map": [179.06],
-				"Riveted Gloves": [40.0], "Golden Bracers": [12635.67], "Golden Wreath": [3954.65], "Golden Obi": [8128.36], "Cured Quiver": [0.72], "Jet Amulet": [4915.06], "Leatherscale Boots": [0.1]}
-
-	fixmissing(unique_list, defaults, league, 'uniques')
+	fixmissing(unique_list, uniquedefaults, league, 'uniques')
 
 	substringunique = find_substrings(unique_list)
 
