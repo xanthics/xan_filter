@@ -28,6 +28,10 @@ from auto_gen import bases
 from auto_gen import hcbases
 from auto_gen import tbases
 from auto_gen import thcbases
+from auto_gen import prophecy
+from auto_gen import hcprophecy
+from auto_gen import tprophecy
+from auto_gen import thcprophecy
 
 
 from item_config import animate_weapon, show_catchall
@@ -76,15 +80,22 @@ def gen_list_compact(items, desc, soundlist):
 			if v not in l:
 				l[v] = {}
 
+			# Prophecy and BaseType will not appear in the same rule (personal choice)
+			# have a flag that is 0(neither), 1(Base), or 2(prophecy)
 			c = ''
 			f = ''
 			o = ''
 			b = ''
+			flag = 0
 			t = 'Show'
 			if s['type'] == "hide":
 				t = "Hide"
 			if 'base' in s:
 				b = s['base']
+				flag = 1
+			elif 'prophecy' in s:
+				b = s['prophecy']
+				flag = 2
 			if 'class' in s:
 				c = s['class']
 			if 'other' in s:
@@ -96,7 +107,7 @@ def gen_list_compact(items, desc, soundlist):
 			else:
 				print("Missing type field {} ** {}".format(items[i], i))
 
-			k = '{},{},{},{}'.format(t, c, f, o)
+			k = '{}|{}|{}|{}|{}'.format(t, c, f, flag, o)
 			if k in l[v]:
 				l[v][k].append(b)
 			else:
@@ -104,18 +115,21 @@ def gen_list_compact(items, desc, soundlist):
 	b = ""
 	for i in sorted(l.keys()):
 		for ii in sorted(l[i].keys()):
-			t, c, f, o = ii.split(',', maxsplit=3)
+			t, c, f, flag, o = ii.split('|')
 			b += "#{}\n".format(desc)
 			b += t
-			if l[i][ii][0]:
+			if flag == '1':
 				b += "\n\tBaseType \"{}\"".format('" "'.join(sorted(l[i][ii])))
+			elif flag == '2':
+				b += "\n\tProphecy \"{}\"".format('" "'.join(sorted(l[i][ii])))
 			if c:
 				b += "\n\tClass \"{}\"".format(c)
 			if o:
 				b += "\n\t{}".format("\n\t".join(sorted(o.split(','))))
 			if formatting.settings[f]:
-				getcustomsound(formatting.settings[f], soundlist)
-				b += "\n\t{}".format("\n\t".join(sorted(formatting.settings[f])))
+				if formatting.settings[f][0]:
+					getcustomsound(formatting.settings[f], soundlist)
+					b += "\n\t{}".format("\n\t".join(sorted(formatting.settings[f])))
 			else:
 				print("Missing type field {} ** {}".format(items[i], i))
 			b += "\n\tDisableDropSound True"
@@ -143,10 +157,10 @@ def get_poe_path():
 # main function for creating a filter
 def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 	gen_list = gen_list_compact
-	lookup_leagues = {'Standard': ("st", "Standard", uniques, divination, stcurrency, stessence, bases),
-					  'Hardcore': ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence, hcbases),
-					  'tmpstandard': ("t", "Temp Sofcore", tuniques, tdivination, tcurrency, tessence, tbases),
-					  'tmphardcore': ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence, thcbases)}
+	lookup_leagues = {'Standard': ("st", "Standard", uniques, divination, stcurrency, stessence, bases, prophecy),
+					  'Hardcore': ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence, hcbases, hcprophecy),
+					  'tmpstandard': ("t", "Temp Sofcore", tuniques, tdivination, tcurrency, tessence, tbases, tprophecy),
+					  'tmphardcore': ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence, thcbases, thcprophecy)}
 
 	leveling = True  # toggle to show leveling items
 	soundlist = []
@@ -195,6 +209,7 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 			flags = ['Weapon']  # 'All'  # see item_config/rare_gen - genraresleveling for valid values
 			buffer += gen_list(gennonrareleveling(flags, overlevel=2, maxlevel=25), desc, soundlist)
 
+		buffer += gen_list(lookup_leagues[i][7].items, lookup_leagues[i][7].desc, soundlist)  # Autogen Prophecy
 		buffer += gen_list(show_catchall.items, show_catchall.desc, soundlist)  # Always show these items
 
 		poeDir = get_poe_path()
@@ -238,8 +253,8 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 
 if __name__ == "__main__":
 	import pricetool_ninja
-#	league = ['Standard', 'Hardcore', 'tmpstandard', 'tmphardcore']
-	league = ['Standard']
+	league = ['Standard', 'Hardcore', 'tmpstandard', 'tmphardcore']
+#	league = ['Standard']
 	pricetool_ninja.scrape_ninja(league)
 	# reload updated modules
 	for module in [divination, hcdivination, tdivination, thcdivination,
