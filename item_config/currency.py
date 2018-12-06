@@ -12,7 +12,7 @@ items = {
 	"0 Journeyman Cartographer's Seal": {"base": "Journeyman Cartographer's Seal", "class": "Currency", "type": "currency normal"},
 	"0 Master Cartographer's Seal": {"base": "Master Cartographer's Seal", "class": "Currency", "type": "currency normal"},
 	"0 Unshaping Orb": {"base": "Unshaping Orb", "class": "Currency", "type": "currency normal"},
-	"0 Prophecy": {"base": "Prophecy", "class": "Currency", "type": "currency low"},
+#	"0 Prophecy": {"base": "Prophecy", "class": "Currency", "type": "currency low"},
 	"6 Shard": {"base": "Shard", "class": "Currency", "type": "currency low"},
 	"9 Currency": {"class": "Currency", "type": "currency normal"}
 }
