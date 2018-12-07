@@ -76,7 +76,7 @@ prophecydefaults = {"Beyond Sight I": 0.38, "Crimson Hues": 0.44, "Ancient Doom"
 					"Sun's Punishment": 0.9, "Anarchy's End I": 0.81, "Custodians of Silence": 0.44, "The Plaguemaw III": 0.44, "The Feral Lord III": 0.37,
 					"The Twins": 0.32, "Monstrous Treasure": 42.32, "The Warmongers III": 0.69, "Touched by the Wind": 1.0, "From Death Springs Life": 0.44,
 					"Hidden Reinforcements": 0.34, "From The Void": 0.44, "The Wealthy Exile": 0.32, "The Flow of Energy": 1.0, "The Prison Key": 0.77,
-					"The God of Misfortune": 0.32, "A Gracious Master": 4.28, "Cold Greed": 1.0, "The Feral Lord II": 0.32, "The Unbreathing Queen I": 0.32,
+					"The God of Misfortune": 0.32, "Cold Greed": 1.0, "The Feral Lord II": 0.32, "The Unbreathing Queen I": 0.32,
 					"The Queen's Vaults": 3.0, "The Misunderstood Queen": 2.0, "The Storm Spire": 0.32, "The Malevolent Witch": 1.0, "Nemesis of Greed": 0.88,
 					"The Unbreathing Queen V": 12.24, "The Fall of an Empire": 0.64, "Hidden Vaal Pathways": 0.38, "Cold Blooded Fury": 0.44, "Fire and Ice": 3.03,
 					"Abnormal Effulgence": 0.65, "The Corrupt": 0.33, "Ending the Torment": 0.32, "A Whispered Prayer": 0.37, "A Dishonourable Death": 5.0,
@@ -84,9 +84,9 @@ prophecydefaults = {"Beyond Sight I": 0.38, "Crimson Hues": 0.44, "Ancient Doom"
 					"The Plaguemaw II": 0.92, "The Unbreathing Queen III": 0.42, "The Soulless Beast": 0.81, "The Cursed Choir": 0.39, "Weeping Death": 0.64,
 					"Vital Transformation": 1.0, "Living Fires": 251.86, "Ancient Rivalries III": 21.5, "Echoes of Witchcraft": 1.56, "The Emperor's Trove": 31.96,
 					"Undead Uprising": 24.13, "Ancient Rivalries II": 49.12, "Unnatural Energy": 0.32, "In the Grasp of Corruption": 431.69,
-					"Day of Sacrifice IV": 2.94, "The Aesthete's Spirit": 2.06, "The Blacksmith": 10.0, "Vaal Invasion": 9.0, "The Child of Lunaris": 73.82,
-					"Defiled in the Sceptre": 1.0, "Holding the Bridge": 6.11, "Brothers in Arms": 1.0, "Echoes of Mutation": 251.86, "Fallow At Last": 59.7,
-					"Echoes of Lost Love": 140.79, "The Hollow Pledge": 0.95, "Pools of Wealth": 4.93, "The Forgotten Garrison": 0.39, "Beyond Sight III": 3.57,
+					"Day of Sacrifice IV": 2.94, "The Blacksmith": 10.0, "Vaal Invasion": 9.0, "The Child of Lunaris": 73.82,
+					"Defiled in the Sceptre": 1.0, "Holding the Bridge": 6.11, "Brothers in Arms": 1.0, "Fallow At Last": 59.7,
+					"The Hollow Pledge": 0.95, "Pools of Wealth": 4.93, "The Forgotten Garrison": 0.39, "Beyond Sight III": 3.57,
 					"Beyond Sight IV": 10.3, "Path of Betrayal": 1.0}
 
 divdefaults = {"House of Mirrors": 3276.71, "Beauty Through Death": 903.92, "The Doctor": 564.95, "The Fiend": 406.76, "The Spark and the Flame": 225.98,

@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/06/2018(m/d/y) 01:36:47 UTC from "tmpstandard" data
+# Created: 12/07/2018(m/d/y) 19:12:48 UTC from "tmpstandard" data
 
 desc = "Unique"
 
 # Base type : settings pair
 items = {
-	"000 Blunt Arrow Quiver Piece": {"base": "Blunt Arrow Quiver Piece", "type": "unique special"},
-	"001 Archon Kite Shield Piece": {"base": "Archon Kite Shield Piece", "type": "unique special"},
+	"000 Archon Kite Shield Piece": {"base": "Archon Kite Shield Piece", "type": "unique special"},
+	"001 Blunt Arrow Quiver Piece": {"base": "Blunt Arrow Quiver Piece", "type": "unique special"},
 	"002 Callous Mask Piece": {"base": "Callous Mask Piece", "type": "unique special"},
 	"003 Cloth Belt Piece": {"base": "Cloth Belt Piece", "type": "unique special"},
 	"004 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique normal"},
@@ -331,7 +331,6 @@ items = {
 	"1 Topaz Flask": {"base": "Topaz Flask", "type": "unique very high"},
 	"1 Topaz Ring": {"base": "Topaz Ring", "type": "unique special"},
 	"1 Tornado Wand": {"base": "Tornado Wand", "type": "unique special"},
-	"1 Torture Chamber Map": {"base": "Torture Chamber Map", "type": "unique high"},
 	"1 Tribal Circlet": {"base": "Tribal Circlet", "type": "unique low"},
 	"1 Tricorne": {"base": "Tricorne", "type": "unique low"},
 	"1 Turquoise Amulet": {"base": "Turquoise Amulet", "type": "unique low"},

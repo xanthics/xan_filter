@@ -332,8 +332,9 @@ def gen_unique(unique_list, league, curvals):
 
 	substringunique = find_substrings(unique_list)
 
-	if 'Catacombs Map' in unique_list:
-		del unique_list['Catacombs Map']
+	for invalid in ['Torture Chamber Map', 'Catacombs Map']:
+		if invalid in unique_list:
+			del unique_list[invalid]
 
 	curval = '{}\ndesc = "Unique"\n\n# Base type : settings pair\nitems = {{\n'.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
 

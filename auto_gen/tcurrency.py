@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/06/2018(m/d/y) 01:36:47 UTC from "tmpstandard" data
+# Created: 12/07/2018(m/d/y) 19:12:48 UTC from "tmpstandard" data
 
 desc = "Currency Autogen"
 
@@ -17,9 +17,8 @@ items = {
 	"09 Ancient Orb": {"base": "Ancient Orb", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency extremely high"},
 	"1 Ancient Shard": {"base": "Ancient Shard", "class": "Currency", "type": "currency high"},
 	"09 Ancient Shard": {"base": "Ancient Shard", 'other': ['StackSize >= 8'], "class": "Currency", "type": "currency very high"},
-	"1 Annulment Shard": {"base": "Annulment Shard", "class": "Currency", "type": "currency normal"},
-	"09 Annulment Shard": {"base": "Annulment Shard", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency high"},
-	"08 Annulment Shard": {"base": "Annulment Shard", 'other': ['StackSize >= 20'], "class": "Currency", "type": "currency very high"},
+	"1 Annulment Shard": {"base": "Annulment Shard", "class": "Currency", "type": "currency high"},
+	"09 Annulment Shard": {"base": "Annulment Shard", 'other': ['StackSize >= 11'], "class": "Currency", "type": "currency very high"},
 	"1 Apprentice Cartographer's Sextant": {"base": "Apprentice Cartographer's Sextant", "class": "Currency", "type": "currency high"},
 	"09 Apprentice Cartographer's Sextant": {"base": "Apprentice Cartographer's Sextant", 'other': ['StackSize >= 9'], "class": "Currency", "type": "currency very high"},
 	"1 Armourer's Scrap": {"base": "Armourer's Scrap", "class": "Currency", "type": "currency very low"},
@@ -62,7 +61,6 @@ items = {
 	"1 Exalted Orb": {"base": "Exalted Orb", "class": "Currency", "type": "currency extremely high"},
 	"1 Exalted Shard": {"base": "Exalted Shard", "class": "Currency", "type": "currency high"},
 	"09 Exalted Shard": {"base": "Exalted Shard", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency very high"},
-	"08 Exalted Shard": {"base": "Exalted Shard", 'other': ['StackSize >= 20'], "class": "Currency", "type": "currency extremely high"},
 	"1 Faceted Fossil": {"base": "Faceted Fossil", "class": "Currency", "type": "currency extremely high"},
 	"1 Fractured Fossil ": {"base": "Fractured Fossil ", "class": "Currency", "type": "currency extremely high"},
 	"1 Frigid Fossil": {"base": "Frigid Fossil", "class": "Currency", "type": "currency show"},

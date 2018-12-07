@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/06/2018(m/d/y) 01:36:47 UTC from "tmpstandard" data
+# Created: 12/07/2018(m/d/y) 19:12:48 UTC from "tmpstandard" data
 
 desc = "Divination Card"
 

@@ -209,7 +209,7 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 			flags = ['Weapon']  # 'All'  # see item_config/rare_gen - genraresleveling for valid values
 			buffer += gen_list(gennonrareleveling(flags, overlevel=2, maxlevel=25), desc, soundlist)
 
-		buffer += gen_list(lookup_leagues[i][7].items, lookup_leagues[i][7].desc, soundlist)  # Autogen Prophecy
+#		buffer += gen_list(lookup_leagues[i][7].items, lookup_leagues[i][7].desc, soundlist)  # Autogen Prophecy
 		buffer += gen_list(show_catchall.items, show_catchall.desc, soundlist)  # Always show these items
 
 		poeDir = get_poe_path()
@@ -254,7 +254,7 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 if __name__ == "__main__":
 	import pricetool_ninja
 	league = ['Standard', 'Hardcore', 'tmpstandard', 'tmphardcore']
-#	league = ['Standard']
+#	league = ['tmpstandard']
 	pricetool_ninja.scrape_ninja(league)
 	# reload updated modules
 	for module in [divination, hcdivination, tdivination, thcdivination,

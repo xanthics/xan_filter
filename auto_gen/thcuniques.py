@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/06/2018(m/d/y) 01:36:50 UTC from "tmphardcore" data
+# Created: 12/07/2018(m/d/y) 19:11:43 UTC from "tmphardcore" data
 
 desc = "Unique"
 
@@ -10,8 +10,8 @@ items = {
 	"001 Archon Kite Shield Piece": {"base": "Archon Kite Shield Piece", "type": "unique special"},
 	"002 Callous Mask Piece": {"base": "Callous Mask Piece", "type": "unique special"},
 	"003 Cloth Belt Piece": {"base": "Cloth Belt Piece", "type": "unique special"},
-	"004 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique normal"},
-	"005 Moon Temple Map": {"base": "Moon Temple Map", "type": "unique very high"},
+	"004 Moon Temple Map": {"base": "Moon Temple Map", "type": "unique very high"},
+	"005 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique normal"},
 	"1 Abyssal Axe": {"base": "Abyssal Axe", "type": "unique high"},
 	"1 Agate Amulet": {"base": "Agate Amulet", "type": "unique special"},
 	"1 Amber Amulet": {"base": "Amber Amulet", "type": "unique special"},
@@ -331,7 +331,6 @@ items = {
 	"1 Topaz Flask": {"base": "Topaz Flask", "type": "unique very high"},
 	"1 Topaz Ring": {"base": "Topaz Ring", "type": "unique special"},
 	"1 Tornado Wand": {"base": "Tornado Wand", "type": "unique special"},
-	"1 Torture Chamber Map": {"base": "Torture Chamber Map", "type": "unique high"},
 	"1 Tribal Circlet": {"base": "Tribal Circlet", "type": "unique low"},
 	"1 Tricorne": {"base": "Tricorne", "type": "unique low"},
 	"1 Turquoise Amulet": {"base": "Turquoise Amulet", "type": "unique low"},
