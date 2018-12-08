@@ -128,7 +128,7 @@ divdefaults = {"House of Mirrors": 3276.71, "Beauty Through Death": 903.92, "The
 
 uniquedefaults = {"Overgrown Shrine Map": [2.28], "Woodsplitter": [0.34], "Titan Gauntlets": [61.1, 0.75], "Golden Hoop": [4343.43], "Blue Pearl Amulet": [1.0], "Gavel": [35.0, 0.34],
 				  "Opal Sceptre": [1.0], "Sanctified Life Flask": [49.22], "Karui Maul": [0.34], "Enameled Buckler": [0.66], "Iron Ring": [7.41, 1.0, 1.0], "Elegant Ringmail": [44.77, 2.0],
-				  "Grand Mana Flask": [225.98], "Widowsilk Robe": [103.99, 1.02, 0.34], "Agate Amulet": [76.0, 0.95, 0.38, 0.34], "Hallowed Hybrid Flask": [3.0], "Torture Chamber Map": [3.72],
+				  "Grand Mana Flask": [225.98], "Widowsilk Robe": [103.99, 1.02, 0.34], "Agate Amulet": [76.0, 0.95, 0.38, 0.34], "Hallowed Hybrid Flask": [3.0],
 				  "Royal Axe": [677.94], "Sage Wand": [9.1, 0.34], "Wyrmscale Doublet": [37.41], "Shore Map": [17.0], "Gold Ring": [19.0, 3.0], "Slink Boots": [112.99, 1.0],
 				  "Crusader Boots": [436.68], "Archon Kite Shield Piece": [19.9, 9.79, 9.5, 3.89], "Topaz Flask": [35.0, 17.06, 15.0, 12.38], "Supreme Spiked Shield": [0.34],
 				  "Exquisite Leather": [47.02, 24.17, 22.44, 1.0], "Titanium Spirit Shield": [1.15], "Bone Bow": [1.0], "Opal Wand": [1.0], "Chain Belt": [225.98, 15.54, 5.0, 4.72, 1.0, 0.34],

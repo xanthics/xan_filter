@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/08/2018(m/d/y) 01:57:16 UTC from "Standard" data
+# Created: 12/08/2018(m/d/y) 17:35:49 UTC from "Standard" data
 
 desc = "Divination Card"
 
 # Base type : settings pair
 items = {
 	"000 Beauty Through Death": {"base": "Beauty Through Death", "class": "Divination Card", "type": "divination extremely high"},
-	"001 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination normal"},
+	"001 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination very high"},
 	"002 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
 	"003 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination low"},
 	"004 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination normal"},
@@ -71,7 +71,6 @@ items = {
 	"1 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
 	"1 The Enlightened": {"base": "The Enlightened", "class": "Divination Card", "type": "divination high"},
 	"1 The Ethereal": {"base": "The Ethereal", "class": "Divination Card", "type": "divination high"},
-	"1 The Feast": {"base": "The Feast", "class": "Divination Card", "type": "divination low"},
 	"1 The Fiend": {"base": "The Fiend", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Flora's Gift": {"base": "The Flora's Gift", "class": "Divination Card", "type": "divination low"},
 	"1 The Formless Sea": {"base": "The Formless Sea", "class": "Divination Card", "type": "divination high"},
@@ -85,7 +84,6 @@ items = {
 	"1 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination low"},
 	"1 The Innocent": {"base": "The Innocent", "class": "Divination Card", "type": "divination high"},
 	"1 The Inoculated": {"base": "The Inoculated", "class": "Divination Card", "type": "hide"},
-	"1 The Inventor": {"base": "The Inventor", "class": "Divination Card", "type": "divination high"},
 	"1 The Iron Bard": {"base": "The Iron Bard", "class": "Divination Card", "type": "divination very high"},
 	"1 The Jester": {"base": "The Jester", "class": "Divination Card", "type": "hide"},
 	"1 The Jeweller's Boon": {"base": "The Jeweller's Boon", "class": "Divination Card", "type": "divination high"},

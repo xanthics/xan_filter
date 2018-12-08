@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/08/2018(m/d/y) 01:57:22 UTC from "Hardcore" data
+# Created: 12/08/2018(m/d/y) 17:35:50 UTC from "Hardcore" data
 
 desc = "Currency Autogen"
 
@@ -35,7 +35,7 @@ items = {
 	"1 Blessing of Esh": {"base": "Blessing of Esh", "class": "Currency", "type": "currency high"},
 	"1 Blessing of Tul": {"base": "Blessing of Tul", "class": "Currency", "type": "currency high"},
 	"1 Blessing of Uul-Netol": {"base": "Blessing of Uul-Netol", "class": "Currency", "type": "currency high"},
-	"1 Blessing of Xoph": {"base": "Blessing of Xoph", "class": "Currency", "type": "currency very high"},
+	"1 Blessing of Xoph": {"base": "Blessing of Xoph", "class": "Currency", "type": "currency high"},
 	"1 Bloodstained Fossil": {"base": "Bloodstained Fossil", "class": "Currency", "type": "currency extremely high"},
 	"1 Bound Fossil": {"base": "Bound Fossil", "class": "Currency", "type": "currency high"},
 	"1 Cartographer's Chisel": {"base": "Cartographer's Chisel", "class": "Currency", "type": "currency show"},
@@ -80,8 +80,8 @@ items = {
 	"08 Horizon Shard": {"base": "Horizon Shard", 'other': ['StackSize >= 6'], "class": "Currency", "type": "currency normal"},
 	"1 Jagged Fossil": {"base": "Jagged Fossil", "class": "Currency", "type": "currency high"},
 	"1 Jeweller's Orb": {"base": "Jeweller's Orb", "class": "Currency", "type": "currency low"},
-	"09 Jeweller's Orb": {"base": "Jeweller's Orb", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency normal"},
-	"08 Jeweller's Orb": {"base": "Jeweller's Orb", 'other': ['StackSize >= 12'], "class": "Currency", "type": "currency high"},
+	"09 Jeweller's Orb": {"base": "Jeweller's Orb", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency normal"},
+	"08 Jeweller's Orb": {"base": "Jeweller's Orb", 'other': ['StackSize >= 7'], "class": "Currency", "type": "currency high"},
 	"1 Journeyman Cartographer's Sextant": {"base": "Journeyman Cartographer's Sextant", "class": "Currency", "type": "currency high"},
 	"09 Journeyman Cartographer's Sextant": {"base": "Journeyman Cartographer's Sextant", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency very high"},
 	"1 Lucent Fossil": {"base": "Lucent Fossil", "class": "Currency", "type": "currency high"},
@@ -114,7 +114,7 @@ items = {
 	"08 Orb of Horizons": {"base": "Orb of Horizons", 'other': ['StackSize >= 10'], "class": "Currency", "type": "currency very high"},
 	"1 Orb of Regret": {"base": "Orb of Regret", "class": "Currency", "type": "currency normal"},
 	"09 Orb of Regret": {"base": "Orb of Regret", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency high"},
-	"08 Orb of Regret": {"base": "Orb of Regret", 'other': ['StackSize >= 14'], "class": "Currency", "type": "currency very high"},
+	"08 Orb of Regret": {"base": "Orb of Regret", 'other': ['StackSize >= 13'], "class": "Currency", "type": "currency very high"},
 	"1 Orb of Scouring": {"base": "Orb of Scouring", "class": "Currency", "type": "currency normal"},
 	"09 Orb of Scouring": {"base": "Orb of Scouring", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency high"},
 	"1 Orb of Transmutation": {"base": "Orb of Transmutation", "class": "Currency", "type": "currency very low"},

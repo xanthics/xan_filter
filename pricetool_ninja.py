@@ -181,6 +181,10 @@ def prophecyclassify(cur, val, curvals):
 
 # given a league grouped list of prophecies determine all unique entries and then output for each league
 def gen_prophecy(prophecy_list, league, curvals):
+	for invalid in ['A Gracious Master', "Echoes of Lost Love", "Echoes of Mutation", "The Emperor's Trove", "The Blacksmith", "The Forgotten Soldiers", "The Mentor", "The Aesthete's Spirit"]:
+		if invalid in prophecy_list:
+			del prophecy_list[invalid]
+
 	fixmissing(prophecy_list, prophecydefaults, league, 'prophecy')
 
 	substringprophecy = find_substrings(prophecy_list)
@@ -328,13 +332,14 @@ def uniqueclassify(cur, vals, curvals):
 
 
 def gen_unique(unique_list, league, curvals):
-	fixmissing(unique_list, uniquedefaults, league, 'uniques')
-
-	substringunique = find_substrings(unique_list)
 
 	for invalid in ['Torture Chamber Map', 'Catacombs Map']:
 		if invalid in unique_list:
 			del unique_list[invalid]
+
+	fixmissing(unique_list, uniquedefaults, league, 'uniques')
+
+	substringunique = find_substrings(unique_list)
 
 	curval = '{}\ndesc = "Unique"\n\n# Base type : settings pair\nitems = {{\n'.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
 

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/08/2018(m/d/y) 01:57:16 UTC from "Standard" data
+# Created: 12/08/2018(m/d/y) 17:35:49 UTC from "Standard" data
 
 desc = "Essence Autogen"
 
@@ -84,7 +84,7 @@ items = {
 	"0 Wailing Essence of Contempt": {"base": "Wailing Essence of Contempt", "class": "Currency", "type": "currency low"},
 	"0 Wailing Essence of Doubt": {"base": "Wailing Essence of Doubt", "class": "Currency", "type": "currency low"},
 	"0 Wailing Essence of Fear": {"base": "Wailing Essence of Fear", "class": "Currency", "type": "currency low"},
-	"0 Wailing Essence of Greed": {"base": "Wailing Essence of Greed", "class": "Currency", "type": "currency normal"},
+	"0 Wailing Essence of Greed": {"base": "Wailing Essence of Greed", "class": "Currency", "type": "currency low"},
 	"0 Wailing Essence of Hatred": {"base": "Wailing Essence of Hatred", "class": "Currency", "type": "currency low"},
 	"0 Wailing Essence of Loathing": {"base": "Wailing Essence of Loathing", "class": "Currency", "type": "currency low"},
 	"0 Wailing Essence of Rage": {"base": "Wailing Essence of Rage", "class": "Currency", "type": "currency low"},
