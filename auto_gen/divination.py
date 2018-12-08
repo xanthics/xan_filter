@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/07/2018(m/d/y) 19:13:20 UTC from "Standard" data
+# Created: 12/08/2018(m/d/y) 01:57:16 UTC from "Standard" data
 
 desc = "Divination Card"
 
 # Base type : settings pair
 items = {
 	"000 Beauty Through Death": {"base": "Beauty Through Death", "class": "Divination Card", "type": "divination extremely high"},
-	"001 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
-	"002 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination normal"},
+	"001 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination normal"},
+	"002 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
 	"003 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination low"},
 	"004 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination normal"},
 	"005 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination high"},
@@ -94,6 +94,7 @@ items = {
 	"1 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination high"},
 	"1 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination low"},
 	"1 The Life Thief": {"base": "The Life Thief", "class": "Divination Card", "type": "divination very high"},
+	"1 The Lion": {"base": "The Lion", "class": "Divination Card", "type": "divination high"},
 	"1 The Lord in Black": {"base": "The Lord in Black", "class": "Divination Card", "type": "hide"},
 	"1 The Lover": {"base": "The Lover", "class": "Divination Card", "type": "divination low"},
 	"1 The Lunaris Priestess": {"base": "The Lunaris Priestess", "class": "Divination Card", "type": "divination low"},

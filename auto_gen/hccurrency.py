@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/07/2018(m/d/y) 19:11:42 UTC from "Hardcore" data
+# Created: 12/08/2018(m/d/y) 01:57:22 UTC from "Hardcore" data
 
 desc = "Currency Autogen"
 
@@ -141,7 +141,7 @@ items = {
 	"1 Regal Shard": {"base": "Regal Shard", "class": "Currency", "type": "currency very low"},
 	"09 Regal Shard": {"base": "Regal Shard", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency low"},
 	"08 Regal Shard": {"base": "Regal Shard", 'other': ['StackSize >= 5'], "class": "Currency", "type": "currency normal"},
-	"07 Regal Shard": {"base": "Regal Shard", 'other': ['StackSize >= 19'], "class": "Currency", "type": "currency high"},
+	"07 Regal Shard": {"base": "Regal Shard", 'other': ['StackSize >= 18'], "class": "Currency", "type": "currency high"},
 	"1 Sanctified Fossil": {"base": "Sanctified Fossil", "class": "Currency", "type": "currency very high"},
 	"1 Scorched Fossil": {"base": "Scorched Fossil", "class": "Currency", "type": "currency normal"},
 	"1 Scroll Fragment": {"base": "Scroll Fragment", "class": "Currency", "type": "currency very low"},

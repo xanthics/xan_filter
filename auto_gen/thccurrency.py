@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/07/2018(m/d/y) 19:11:43 UTC from "tmphardcore" data
+# Created: 12/08/2018(m/d/y) 01:57:26 UTC from "tmphardcore" data
 
 desc = "Currency Autogen"
 
@@ -10,7 +10,7 @@ items = {
 	"1 Aetheric Fossil": {"base": "Aetheric Fossil", "class": "Currency", "type": "currency high"},
 	"1 Alchemy Shard": {"base": "Alchemy Shard", "class": "Currency", "type": "currency very low"},
 	"09 Alchemy Shard": {"base": "Alchemy Shard", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency low"},
-	"08 Alchemy Shard": {"base": "Alchemy Shard", 'other': ['StackSize >= 9'], "class": "Currency", "type": "currency normal"},
+	"08 Alchemy Shard": {"base": "Alchemy Shard", 'other': ['StackSize >= 10'], "class": "Currency", "type": "currency normal"},
 	"1 Alteration Shard": {"base": "Alteration Shard", "class": "Currency", "type": "currency very low"},
 	"09 Alteration Shard": {"base": "Alteration Shard", 'other': ['StackSize >= 15'], "class": "Currency", "type": "currency low"},
 	"1 Ancient Orb": {"base": "Ancient Orb", "class": "Currency", "type": "currency very high"},
@@ -43,8 +43,8 @@ items = {
 	"1 Cartographer's Chisel": {"base": "Cartographer's Chisel", "class": "Currency", "type": "currency normal"},
 	"09 Cartographer's Chisel": {"base": "Cartographer's Chisel", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency high"},
 	"1 Chromatic Orb": {"base": "Chromatic Orb", "class": "Currency", "type": "currency show"},
-	"09 Chromatic Orb": {"base": "Chromatic Orb", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency normal"},
-	"08 Chromatic Orb": {"base": "Chromatic Orb", 'other': ['StackSize >= 8'], "class": "Currency", "type": "currency high"},
+	"09 Chromatic Orb": {"base": "Chromatic Orb", 'other': ['StackSize >= 5'], "class": "Currency", "type": "currency normal"},
+	"08 Chromatic Orb": {"base": "Chromatic Orb", 'other': ['StackSize >= 17'], "class": "Currency", "type": "currency high"},
 	"1 Corroded Fossil": {"base": "Corroded Fossil", "class": "Currency", "type": "currency high"},
 	"1 Dense Fossil": {"base": "Dense Fossil", "class": "Currency", "type": "currency high"},
 	"1 Divine Orb": {"base": "Divine Orb", "class": "Currency", "type": "currency very high"},
@@ -92,7 +92,6 @@ items = {
 	"1 Mirror of Kalandra": {"base": "Mirror of Kalandra", "class": "Currency", "type": "currency extremely high"},
 	"1 Orb of Alchemy": {"base": "Orb of Alchemy", "class": "Currency", "type": "currency normal"},
 	"09 Orb of Alchemy": {"base": "Orb of Alchemy", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency high"},
-	"08 Orb of Alchemy": {"base": "Orb of Alchemy", 'other': ['StackSize >= 20'], "class": "Currency", "type": "currency very high"},
 	"1 Orb of Alteration": {"base": "Orb of Alteration", "class": "Currency", "type": "currency low"},
 	"09 Orb of Alteration": {"base": "Orb of Alteration", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency normal"},
 	"08 Orb of Alteration": {"base": "Orb of Alteration", 'other': ['StackSize >= 12'], "class": "Currency", "type": "currency high"},
@@ -107,7 +106,7 @@ items = {
 	"09 Orb of Chance": {"base": "Orb of Chance", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency normal"},
 	"08 Orb of Chance": {"base": "Orb of Chance", 'other': ['StackSize >= 10'], "class": "Currency", "type": "currency high"},
 	"1 Orb of Fusing": {"base": "Orb of Fusing", "class": "Currency", "type": "currency normal"},
-	"09 Orb of Fusing": {"base": "Orb of Fusing", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency high"},
+	"09 Orb of Fusing": {"base": "Orb of Fusing", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency high"},
 	"1 Orb of Horizons": {"base": "Orb of Horizons", "class": "Currency", "type": "currency normal"},
 	"09 Orb of Horizons": {"base": "Orb of Horizons", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency high"},
 	"08 Orb of Horizons": {"base": "Orb of Horizons", 'other': ['StackSize >= 13'], "class": "Currency", "type": "currency very high"},

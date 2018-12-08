@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/07/2018(m/d/y) 19:11:43 UTC from "tmphardcore" data
+# Created: 12/08/2018(m/d/y) 01:57:26 UTC from "tmphardcore" data
 
 desc = "Bases"
 

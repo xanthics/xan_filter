@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/07/2018(m/d/y) 19:13:20 UTC from "Standard" data
+# Created: 12/08/2018(m/d/y) 01:57:16 UTC from "Standard" data
 
 desc = "Currency Autogen"
 
@@ -28,9 +28,8 @@ items = {
 	"08 Binding Shard": {"base": "Binding Shard", 'other': ['StackSize >= 16'], "class": "Currency", "type": "currency normal"},
 	"1 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", "class": "Currency", "type": "currency very low"},
 	"09 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", 'other': ['StackSize >= 7'], "class": "Currency", "type": "currency low"},
-	"1 Blessed Orb": {"base": "Blessed Orb", "class": "Currency", "type": "currency low"},
-	"09 Blessed Orb": {"base": "Blessed Orb", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency normal"},
-	"08 Blessed Orb": {"base": "Blessed Orb", 'other': ['StackSize >= 5'], "class": "Currency", "type": "currency high"},
+	"1 Blessed Orb": {"base": "Blessed Orb", "class": "Currency", "type": "currency normal"},
+	"09 Blessed Orb": {"base": "Blessed Orb", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency high"},
 	"1 Blessing of Chayula": {"base": "Blessing of Chayula", "class": "Currency", "type": "currency extremely high"},
 	"1 Blessing of Esh": {"base": "Blessing of Esh", "class": "Currency", "type": "currency high"},
 	"1 Blessing of Tul": {"base": "Blessing of Tul", "class": "Currency", "type": "currency high"},

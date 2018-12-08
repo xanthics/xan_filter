@@ -209,7 +209,7 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 			flags = ['Weapon']  # 'All'  # see item_config/rare_gen - genraresleveling for valid values
 			buffer += gen_list(gennonrareleveling(flags, overlevel=2, maxlevel=25), desc, soundlist)
 
-#		buffer += gen_list(lookup_leagues[i][7].items, lookup_leagues[i][7].desc, soundlist)  # Autogen Prophecy
+		buffer += gen_list(lookup_leagues[i][7].items, lookup_leagues[i][7].desc, soundlist)  # Autogen Prophecy
 		buffer += gen_list(show_catchall.items, show_catchall.desc, soundlist)  # Always show these items
 
 		poeDir = get_poe_path()
@@ -261,6 +261,7 @@ if __name__ == "__main__":
 				   uniques, hcuniques, tuniques, thcuniques,
 				   stcurrency, hccurrency, tcurrency, thccurrency,
 				   stessence, hcessence, tessence, thcessence,
-				   bases, hcbases, tbases, thcbases]:
+				   bases, hcbases, tbases, thcbases,
+				   prophecy, hcprophecy, tprophecy, thcprophecy]:
 		importlib.reload(module)
 	main(league)

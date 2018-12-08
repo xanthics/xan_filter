@@ -198,7 +198,7 @@ def gen_prophecy(prophecy_list, league, curvals):
 		if retstr:
 			curval += '\t"1 {},\n'.format(retstr)
 
-	curval += '\t"7 Prophecy default": {"base": "prophecy", "class": "Currency", "type": "currency low"}\n}\n'
+	curval += '\t"7 Prophecy default": {"Prophecy": "", "class": "Currency", "type": "currency low"}\n}\n'
 
 	name = convertname(league)
 

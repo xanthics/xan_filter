@@ -82,9 +82,9 @@ prophecydefaults = {"Beyond Sight I": 0.38, "Crimson Hues": 0.44, "Ancient Doom"
 					"Abnormal Effulgence": 0.65, "The Corrupt": 0.33, "Ending the Torment": 0.32, "A Whispered Prayer": 0.37, "A Dishonourable Death": 5.0,
 					"Deadly Twins": 0.44, "Strong as a Bull": 0.33, "Deadly Rivalry IV": 1.0, "Vaal Winds": 27.62, "Unbearable Whispers III": 0.32,
 					"The Plaguemaw II": 0.92, "The Unbreathing Queen III": 0.42, "The Soulless Beast": 0.81, "The Cursed Choir": 0.39, "Weeping Death": 0.64,
-					"Vital Transformation": 1.0, "Living Fires": 251.86, "Ancient Rivalries III": 21.5, "Echoes of Witchcraft": 1.56, "The Emperor's Trove": 31.96,
+					"Vital Transformation": 1.0, "Living Fires": 251.86, "Ancient Rivalries III": 21.5, "Echoes of Witchcraft": 1.56,
 					"Undead Uprising": 24.13, "Ancient Rivalries II": 49.12, "Unnatural Energy": 0.32, "In the Grasp of Corruption": 431.69,
-					"Day of Sacrifice IV": 2.94, "The Blacksmith": 10.0, "Vaal Invasion": 9.0, "The Child of Lunaris": 73.82,
+					"Day of Sacrifice IV": 2.94, "Vaal Invasion": 9.0, "The Child of Lunaris": 73.82,
 					"Defiled in the Sceptre": 1.0, "Holding the Bridge": 6.11, "Brothers in Arms": 1.0, "Fallow At Last": 59.7,
 					"The Hollow Pledge": 0.95, "Pools of Wealth": 4.93, "The Forgotten Garrison": 0.39, "Beyond Sight III": 3.57,
 					"Beyond Sight IV": 10.3, "Path of Betrayal": 1.0}

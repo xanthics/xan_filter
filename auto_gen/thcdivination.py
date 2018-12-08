@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/07/2018(m/d/y) 19:11:43 UTC from "tmphardcore" data
+# Created: 12/08/2018(m/d/y) 01:57:26 UTC from "tmphardcore" data
 
 desc = "Divination Card"
 
 # Base type : settings pair
 items = {
 	"000 Beauty Through Death": {"base": "Beauty Through Death", "class": "Divination Card", "type": "divination extremely high"},
-	"001 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
-	"002 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination normal"},
+	"001 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination normal"},
+	"002 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
 	"003 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination low"},
 	"004 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination high"},
 	"005 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination high"},
@@ -56,6 +56,7 @@ items = {
 	"1 The Admirer": {"base": "The Admirer", "class": "Divination Card", "type": "divination high"},
 	"1 The Artist": {"base": "The Artist", "class": "Divination Card", "type": "divination very high"},
 	"1 The Avenger": {"base": "The Avenger", "class": "Divination Card", "type": "divination high"},
+	"1 The Beast": {"base": "The Beast", "class": "Divination Card", "type": "divination high"},
 	"1 The Betrayal": {"base": "The Betrayal", "class": "Divination Card", "type": "divination low"},
 	"1 The Body": {"base": "The Body", "class": "Divination Card", "type": "divination high"},
 	"1 The Breach": {"base": "The Breach", "class": "Divination Card", "type": "divination high"},
