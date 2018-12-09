@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/08/2018(m/d/y) 17:35:50 UTC from "Hardcore" data
+# Created: 12/09/2018(m/d/y) 01:35:11 UTC from "Hardcore" data
 
 desc = "Currency Autogen"
 
@@ -41,6 +41,8 @@ items = {
 	"1 Cartographer's Chisel": {"base": "Cartographer's Chisel", "class": "Currency", "type": "currency show"},
 	"09 Cartographer's Chisel": {"base": "Cartographer's Chisel", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency normal"},
 	"08 Cartographer's Chisel": {"base": "Cartographer's Chisel", 'other': ['StackSize >= 5'], "class": "Currency", "type": "currency high"},
+	"1 Chaos Orb": {"base": "Chaos Orb", "class": "Currency", "type": "currency high"},
+	"09 Chaos Orb": {"base": "Chaos Orb", 'other': ['StackSize >= 9'], "class": "Currency", "type": "currency very high"},
 	"1 Chromatic Orb": {"base": "Chromatic Orb", "class": "Currency", "type": "currency show"},
 	"09 Chromatic Orb": {"base": "Chromatic Orb", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency normal"},
 	"08 Chromatic Orb": {"base": "Chromatic Orb", 'other': ['StackSize >= 15'], "class": "Currency", "type": "currency high"},

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/08/2018(m/d/y) 17:35:49 UTC from "Standard" data
+# Created: 12/09/2018(m/d/y) 01:35:10 UTC from "Standard" data
 
 desc = "Divination Card"
 
@@ -50,7 +50,6 @@ items = {
 	"1 The Artist": {"base": "The Artist", "class": "Divination Card", "type": "divination very high"},
 	"1 The Avenger": {"base": "The Avenger", "class": "Divination Card", "type": "divination high"},
 	"1 The Betrayal": {"base": "The Betrayal", "class": "Divination Card", "type": "divination low"},
-	"1 The Blazing Fire": {"base": "The Blazing Fire", "class": "Divination Card", "type": "divination high"},
 	"1 The Body": {"base": "The Body", "class": "Divination Card", "type": "divination high"},
 	"1 The Breach": {"base": "The Breach", "class": "Divination Card", "type": "divination high"},
 	"1 The Brittle Emperor": {"base": "The Brittle Emperor", "class": "Divination Card", "type": "divination high"},
@@ -65,15 +64,16 @@ items = {
 	"1 The Dark Mage": {"base": "The Dark Mage", "class": "Divination Card", "type": "divination high"},
 	"1 The Deceiver": {"base": "The Deceiver", "class": "Divination Card", "type": "divination low"},
 	"1 The Doctor": {"base": "The Doctor", "class": "Divination Card", "type": "divination extremely high"},
-	"1 The Dragon": {"base": "The Dragon", "class": "Divination Card", "type": "divination low"},
 	"1 The Dreamer": {"base": "The Dreamer", "class": "Divination Card", "type": "divination high"},
 	"1 The Endless Darkness": {"base": "The Endless Darkness", "class": "Divination Card", "type": "divination very high"},
 	"1 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
 	"1 The Enlightened": {"base": "The Enlightened", "class": "Divination Card", "type": "divination high"},
 	"1 The Ethereal": {"base": "The Ethereal", "class": "Divination Card", "type": "divination high"},
+	"1 The Feast": {"base": "The Feast", "class": "Divination Card", "type": "divination low"},
 	"1 The Fiend": {"base": "The Fiend", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Flora's Gift": {"base": "The Flora's Gift", "class": "Divination Card", "type": "divination low"},
 	"1 The Formless Sea": {"base": "The Formless Sea", "class": "Divination Card", "type": "divination high"},
+	"1 The Gambler": {"base": "The Gambler", "class": "Divination Card", "type": "divination low"},
 	"1 The Gemcutter": {"base": "The Gemcutter", "class": "Divination Card", "type": "divination low"},
 	"1 The Hale Heart": {"base": "The Hale Heart", "class": "Divination Card", "type": "divination high"},
 	"1 The Harvester": {"base": "The Harvester", "class": "Divination Card", "type": "divination high"},
@@ -92,7 +92,6 @@ items = {
 	"1 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination high"},
 	"1 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination low"},
 	"1 The Life Thief": {"base": "The Life Thief", "class": "Divination Card", "type": "divination very high"},
-	"1 The Lion": {"base": "The Lion", "class": "Divination Card", "type": "divination high"},
 	"1 The Lord in Black": {"base": "The Lord in Black", "class": "Divination Card", "type": "hide"},
 	"1 The Lover": {"base": "The Lover", "class": "Divination Card", "type": "divination low"},
 	"1 The Lunaris Priestess": {"base": "The Lunaris Priestess", "class": "Divination Card", "type": "divination low"},
@@ -107,9 +106,9 @@ items = {
 	"1 The Porcupine": {"base": "The Porcupine", "class": "Divination Card", "type": "divination high"},
 	"1 The Price of Protection": {"base": "The Price of Protection", "class": "Divination Card", "type": "divination high"},
 	"1 The Professor": {"base": "The Professor", "class": "Divination Card", "type": "divination very high"},
-	"1 The Puzzle": {"base": "The Puzzle", "class": "Divination Card", "type": "divination low"},
 	"1 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
 	"1 The Rabid Rhoa": {"base": "The Rabid Rhoa", "class": "Divination Card", "type": "hide"},
+	"1 The Realm": {"base": "The Realm", "class": "Divination Card", "type": "divination low"},
 	"1 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
 	"1 The Road to Power": {"base": "The Road to Power", "class": "Divination Card", "type": "hide"},
 	"1 The Ruthless Ceinture": {"base": "The Ruthless Ceinture", "class": "Divination Card", "type": "divination low"},
@@ -121,7 +120,6 @@ items = {
 	"1 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination very high"},
 	"1 The Sigil": {"base": "The Sigil", "class": "Divination Card", "type": "hide"},
 	"1 The Siren": {"base": "The Siren", "class": "Divination Card", "type": "divination low"},
-	"1 The Soul": {"base": "The Soul", "class": "Divination Card", "type": "divination high"},
 	"1 The Spark and the Flame": {"base": "The Spark and the Flame", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Spoiled Prince": {"base": "The Spoiled Prince", "class": "Divination Card", "type": "hide"},
 	"1 The Standoff": {"base": "The Standoff", "class": "Divination Card", "type": "divination high"},

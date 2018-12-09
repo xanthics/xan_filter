@@ -9,7 +9,7 @@ currencydefaults = {"Mirror of Kalandra": 28558.18, "Blessing of Chayula": 179.7
 					"Tangled Fossil": 166.64, "Sanctified Fossil": 30.27, "Encrusted Fossil": 29.99, "Gilded Fossil": 19.0, "Shuddering Fossil": 7.0, "Enchanted Fossil": 4.0, "Serrated Fossil": 4.0, "Perfect Fossil": 3.0,
 					"Prismatic Fossil": 2.97, "Jagged Fossil": 2.65, "Dense Fossil": 2.0, "Lucent Fossil": 2.0, "Aetheric Fossil": 1.81, "Pristine Fossil": 1.58, "Bound Fossil": 1.0, "Metallic Fossil": 1.0,
 					"Corroded Fossil": 1.0, "Scorched Fossil": 0.35, "Frigid Fossil": 0.23, "Aberrant Fossil": 0.18, "Scroll of Wisdom": 1 / 100, "Eternal Orb": 19323.88,
-					"Annulment Shard": 1.09, "Exalted Shard": 5.71, "Mirror Shard": 1627.15}
+					"Annulment Shard": 1.09, "Exalted Shard": 5.71, "Mirror Shard": 1627.15, "Chaos Orb": 1}
 
 essencedefaults = {"Deafening Essence of Anguish": 1.0, "Screaming Essence of Loathing": 0.68, "Wailing Essence of Suffering": 0.55, "Deafening Essence of Woe": 4.0,
 				   "Weeping Essence of Contempt": 0.65, "Muttering Essence of Sorrow": 0.43, "Shrieking Essence of Contempt": 2.0, "Deafening Essence of Spite": 6.0,

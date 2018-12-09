@@ -1,21 +1,20 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/08/2018(m/d/y) 17:35:50 UTC from "Hardcore" data
+# Created: 12/09/2018(m/d/y) 01:35:11 UTC from "Hardcore" data
 
 desc = "Unique"
 
 # Base type : settings pair
 items = {
-	"000 Blunt Arrow Quiver Piece": {"base": "Blunt Arrow Quiver Piece", "type": "unique very high"},
-	"001 Archon Kite Shield Piece": {"base": "Archon Kite Shield Piece", "type": "unique special"},
+	"000 Archon Kite Shield Piece": {"base": "Archon Kite Shield Piece", "type": "unique special"},
+	"001 Blunt Arrow Quiver Piece": {"base": "Blunt Arrow Quiver Piece", "type": "unique very high"},
 	"002 Callous Mask Piece": {"base": "Callous Mask Piece", "type": "unique special"},
 	"003 Cloth Belt Piece": {"base": "Cloth Belt Piece", "type": "unique special"},
-	"004 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique normal"},
-	"005 Moon Temple Map": {"base": "Moon Temple Map", "type": "unique very high"},
+	"004 Moon Temple Map": {"base": "Moon Temple Map", "type": "unique very high"},
+	"005 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique normal"},
 	"1 Abyssal Axe": {"base": "Abyssal Axe", "type": "unique very high"},
 	"1 Amber Amulet": {"base": "Amber Amulet", "type": "unique high"},
 	"1 Ambush Mitts": {"base": "Ambush Mitts", "type": "unique extremely high"},
-	"1 Amethyst Flask": {"base": "Amethyst Flask", "type": "unique high"},
 	"1 Amethyst Ring": {"base": "Amethyst Ring", "type": "unique very high"},
 	"1 Ancient Gauntlets": {"base": "Ancient Gauntlets", "type": "unique high"},
 	"1 Ancient Spirit Shield": {"base": "Ancient Spirit Shield", "type": "unique very high"},
@@ -39,7 +38,7 @@ items = {
 	"1 Boot Blade": {"base": "Boot Blade", "type": "unique low"},
 	"1 Boot Knife": {"base": "Boot Knife", "type": "unique low"},
 	"1 Branded Kite Shield": {"base": "Branded Kite Shield", "type": "unique high"},
-	"1 Bronzescale Boots": {"base": "Bronzescale Boots", "type": "unique high"},
+	"1 Bronzescale Boots": {"base": "Bronzescale Boots", "type": "unique low"},
 	"1 Callous Mask": {"base": "Callous Mask", "type": "unique extremely high"},
 	"1 Cardinal Round Shield": {"base": "Cardinal Round Shield", "type": "unique high"},
 	"1 Carnal Armour": {"base": "Carnal Armour", "type": "unique special"},
@@ -67,7 +66,7 @@ items = {
 	"1 Crimson Jewel": {"base": "Crimson Jewel", "type": "unique low"},
 	"1 Crusader Boots": {"base": "Crusader Boots", "type": "unique extremely high"},
 	"1 Crusader Chainmail": {"base": "Crusader Chainmail", "type": "unique high"},
-	"1 Crusader Gloves": {"base": "Crusader Gloves", "type": "unique extremely high"},
+	"1 Crusader Gloves": {"base": "Crusader Gloves", "type": "unique special"},
 	"1 Crusader Helmet": {"base": "Crusader Helmet", "type": "unique very high"},
 	"1 Crusader Plate": {"base": "Crusader Plate", "type": "unique very high"},
 	"1 Crystal Belt": {"base": "Crystal Belt", "type": "unique high"},
@@ -83,6 +82,7 @@ items = {
 	"1 Destiny Leather": {"base": "Destiny Leather", "type": "unique very high"},
 	"1 Destroyer Regalia": {"base": "Destroyer Regalia", "type": "unique high"},
 	"1 Diamond Ring": {"base": "Diamond Ring", "type": "unique high"},
+	"1 Dragonscale Gauntlets": {"base": "Dragonscale Gauntlets", "type": "unique low"},
 	"1 Dread Maul": {"base": "Dread Maul", "type": "unique low"},
 	"1 Dusk Blade": {"base": "Dusk Blade", "type": "unique high"},
 	"1 Elder Sword": {"base": "Elder Sword", "type": "unique high"},
@@ -132,7 +132,7 @@ items = {
 	"1 Hydrascale Gauntlets": {"base": "Hydrascale Gauntlets", "type": "unique extremely high"},
 	"1 Imperial Bow": {"base": "Imperial Bow", "type": "unique high"},
 	"1 Imperial Maul": {"base": "Imperial Maul", "type": "unique very high"},
-	"1 Imperial Skean": {"base": "Imperial Skean", "type": "unique special"},
+	"1 Imperial Skean": {"base": "Imperial Skean", "type": "unique high"},
 	"1 Imperial Staff": {"base": "Imperial Staff", "type": "unique high"},
 	"1 Infernal Axe": {"base": "Infernal Axe", "type": "unique low"},
 	"1 Infernal Sword": {"base": "Infernal Sword", "type": "unique high"},
@@ -140,6 +140,7 @@ items = {
 	"1 Iron Hat": {"base": "Iron Hat", "type": "unique low"},
 	"1 Iron Mask": {"base": "Iron Mask", "type": "unique low"},
 	"1 Iron Ring": {"base": "Iron Ring", "type": "unique special"},
+	"1 Ironscale Boots": {"base": "Ironscale Boots", "type": "unique low"},
 	"1 Ironscale Gauntlets": {"base": "Ironscale Gauntlets", "type": "unique high"},
 	"1 Ivory Spirit Shield": {"base": "Ivory Spirit Shield", "type": "unique low"},
 	"1 Jade Amulet": {"base": "Jade Amulet", "type": "unique high"},
@@ -205,6 +206,7 @@ items = {
 	"1 Raven Mask": {"base": "Raven Mask", "type": "unique high"},
 	"1 Rawhide Boots": {"base": "Rawhide Boots", "type": "unique extremely high"},
 	"1 Rawhide Tower Shield": {"base": "Rawhide Tower Shield", "type": "unique very high"},
+	"1 Reaver Sword": {"base": "Reaver Sword", "type": "unique high"},
 	"1 Regicide Mask": {"base": "Regicide Mask", "type": "unique low"},
 	"1 Reinforced Greaves": {"base": "Reinforced Greaves", "type": "unique high"},
 	"1 Reinforced Tower Shield": {"base": "Reinforced Tower Shield", "type": "unique low"},
@@ -304,6 +306,7 @@ items = {
 	"1 War Buckler": {"base": "War Buckler", "type": "unique low"},
 	"1 War Hammer": {"base": "War Hammer", "type": "unique low"},
 	"1 Wereclaw Talisman": {"base": "Wereclaw Talisman", "type": "unique very high"},
+	"1 Wool Gloves": {"base": "Wool Gloves", "type": "unique high"},
 	"1 Wyrmscale Doublet": {"base": "Wyrmscale Doublet", "type": "unique very high"},
 	"1 Wyrmscale Gauntlets": {"base": "Wyrmscale Gauntlets", "type": "unique low"},
 	"1 Zealot Gloves": {"base": "Zealot Gloves", "type": "unique very high"},
