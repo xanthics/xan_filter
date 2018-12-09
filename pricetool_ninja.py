@@ -52,7 +52,7 @@ def fixmissing(ninja_list, defaults, league, name):
 def currencyclassify(cur, val, curvals, stacks=1):
 	# list of currency to always give a border to
 	ah = ["Splinter of Chayula", "Splinter of Xoph", "Splinter of Uul-Netol", "Splinter of Tul", "Splinter of Esh",
-		  "Chromatic Orb", "Perandus Coin", "Orb of Chance", "Cartographer's Chisel"]  # , "Jeweller's Orb", "Orb of Alteration", "Silver Coin"
+		  "Chromatic Orb", "Perandus Coin", "Orb of Chance", "Cartographer's Chisel", "Orb of Fusing", "Orb of Transmutation"]  # , "Jeweller's Orb", "Orb of Alteration", "Silver Coin"
 	if ((cur in ah) or 'Fossil' in cur) and val < curvals['normal']:
 		tier = 'currency show'
 	elif 'Alchemical Resonator' in cur and 'Prime' not in cur:

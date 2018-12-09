@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/09/2018(m/d/y) 01:35:10 UTC from "Standard" data
+# Created: 12/09/2018(m/d/y) 02:36:21 UTC from "Standard" data
 
 desc = "Unique"
 
@@ -65,7 +65,7 @@ items = {
 	"1 Chateau Map": {"base": "Chateau Map", "type": "unique extremely high"},
 	"1 Chiming Spirit Shield": {"base": "Chiming Spirit Shield", "type": "unique low"},
 	"1 Citadel Bow": {"base": "Citadel Bow", "type": "unique high"},
-	"1 Citrine Amulet": {"base": "Citrine Amulet", "type": "unique special"},
+	"1 Citrine Amulet": {"base": "Citrine Amulet", "type": "unique high"},
 	"1 Clasped Boots": {"base": "Clasped Boots", "type": "unique low"},
 	"1 Clasped Mitts": {"base": "Clasped Mitts", "type": "unique very high"},
 	"1 Cleaver": {"base": "Cleaver", "type": "unique low"},
@@ -83,7 +83,6 @@ items = {
 	"1 Crimson Jewel": {"base": "Crimson Jewel", "type": "unique special"},
 	"1 Crude Bow": {"base": "Crude Bow", "type": "unique low"},
 	"1 Crusader Boots": {"base": "Crusader Boots", "type": "unique extremely high"},
-	"1 Crusader Chainmail": {"base": "Crusader Chainmail", "type": "unique low"},
 	"1 Crusader Gloves": {"base": "Crusader Gloves", "type": "unique special"},
 	"1 Crusader Helmet": {"base": "Crusader Helmet", "type": "unique high"},
 	"1 Crystal Belt": {"base": "Crystal Belt", "type": "unique high"},

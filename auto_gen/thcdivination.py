@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/09/2018(m/d/y) 01:35:12 UTC from "tmphardcore" data
+# Created: 12/09/2018(m/d/y) 02:36:36 UTC from "tmphardcore" data
 
 desc = "Divination Card"
 
 # Base type : settings pair
 items = {
 	"000 Beauty Through Death": {"base": "Beauty Through Death", "class": "Divination Card", "type": "divination extremely high"},
-	"001 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination low"},
+	"001 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination normal"},
 	"002 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
 	"003 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination low"},
 	"004 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination high"},
@@ -27,6 +27,7 @@ items = {
 	"1 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination high"},
 	"1 Gemcutter's Promise": {"base": "Gemcutter's Promise", "class": "Divination Card", "type": "divination high"},
 	"1 Harmony of Souls": {"base": "Harmony of Souls", "class": "Divination Card", "type": "divination high"},
+	"1 Her Mask": {"base": "Her Mask", "class": "Divination Card", "type": "divination low"},
 	"1 Heterochromia": {"base": "Heterochromia", "class": "Divination Card", "type": "divination very high"},
 	"1 House of Mirrors": {"base": "House of Mirrors", "class": "Divination Card", "type": "divination extremely high"},
 	"1 Humility": {"base": "Humility", "class": "Divination Card", "type": "divination high"},
@@ -60,7 +61,7 @@ items = {
 	"1 The Chains that Bind": {"base": "The Chains that Bind", "class": "Divination Card", "type": "divination high"},
 	"1 The Conduit": {"base": "The Conduit", "class": "Divination Card", "type": "divination high"},
 	"1 The Cursed King": {"base": "The Cursed King", "class": "Divination Card", "type": "divination high"},
-	"1 The Dapper Prodigy": {"base": "The Dapper Prodigy", "class": "Divination Card", "type": "divination very high"},
+	"1 The Dapper Prodigy": {"base": "The Dapper Prodigy", "class": "Divination Card", "type": "divination high"},
 	"1 The Dark Mage": {"base": "The Dark Mage", "class": "Divination Card", "type": "divination high"},
 	"1 The Doctor": {"base": "The Doctor", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Doppelganger": {"base": "The Doppelganger", "class": "Divination Card", "type": "divination low"},

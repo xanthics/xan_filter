@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/09/2018(m/d/y) 01:35:11 UTC from "Hardcore" data
+# Created: 12/09/2018(m/d/y) 02:36:26 UTC from "Hardcore" data
 
 desc = "Currency Autogen"
 
@@ -119,8 +119,7 @@ items = {
 	"08 Orb of Regret": {"base": "Orb of Regret", 'other': ['StackSize >= 13'], "class": "Currency", "type": "currency very high"},
 	"1 Orb of Scouring": {"base": "Orb of Scouring", "class": "Currency", "type": "currency normal"},
 	"09 Orb of Scouring": {"base": "Orb of Scouring", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency high"},
-	"1 Orb of Transmutation": {"base": "Orb of Transmutation", "class": "Currency", "type": "currency very low"},
-	"09 Orb of Transmutation": {"base": "Orb of Transmutation", 'other': ['StackSize >= 7'], "class": "Currency", "type": "currency low"},
+	"1 Orb of Transmutation": {"base": "Orb of Transmutation", "class": "Currency", "type": "currency show"},
 	"1 Perandus Coin": {"base": "Perandus Coin", "class": "Currency", "type": "currency show"},
 	"09 Perandus Coin": {"base": "Perandus Coin", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency normal"},
 	"08 Perandus Coin": {"base": "Perandus Coin", 'other': ['StackSize >= 9'], "class": "Currency", "type": "currency high"},
