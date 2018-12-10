@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/09/2018(m/d/y) 02:36:21 UTC from "Standard" data
+# Created: 12/10/2018(m/d/y) 08:43:06 UTC from "Standard" data
 
 desc = "Divination Card"
 
 # Base type : settings pair
 items = {
 	"000 Beauty Through Death": {"base": "Beauty Through Death", "class": "Divination Card", "type": "divination extremely high"},
-	"001 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination very high"},
-	"002 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
+	"001 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
+	"002 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination high"},
 	"003 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination low"},
 	"004 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination normal"},
 	"005 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination high"},
@@ -23,6 +23,7 @@ items = {
 	"1 Call to the First Ones": {"base": "Call to the First Ones", "class": "Divination Card", "type": "divination low"},
 	"1 Cartographer's Delight": {"base": "Cartographer's Delight", "class": "Divination Card", "type": "divination low"},
 	"1 Chaotic Disposition": {"base": "Chaotic Disposition", "class": "Divination Card", "type": "divination very high"},
+	"1 Coveted Possession": {"base": "Coveted Possession", "class": "Divination Card", "type": "divination low"},
 	"1 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "hide"},
 	"1 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination high"},
 	"1 Her Mask": {"base": "Her Mask", "class": "Divination Card", "type": "divination low"},
@@ -47,6 +48,7 @@ items = {
 	"1 Rebirth": {"base": "Rebirth", "class": "Divination Card", "type": "divination high"},
 	"1 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},
 	"1 Struck by Lightning": {"base": "Struck by Lightning", "class": "Divination Card", "type": "hide"},
+	"1 The Admirer": {"base": "The Admirer", "class": "Divination Card", "type": "divination high"},
 	"1 The Artist": {"base": "The Artist", "class": "Divination Card", "type": "divination very high"},
 	"1 The Avenger": {"base": "The Avenger", "class": "Divination Card", "type": "divination high"},
 	"1 The Betrayal": {"base": "The Betrayal", "class": "Divination Card", "type": "divination low"},
@@ -69,11 +71,11 @@ items = {
 	"1 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
 	"1 The Enlightened": {"base": "The Enlightened", "class": "Divination Card", "type": "divination high"},
 	"1 The Ethereal": {"base": "The Ethereal", "class": "Divination Card", "type": "divination high"},
+	"1 The Explorer": {"base": "The Explorer", "class": "Divination Card", "type": "divination low"},
 	"1 The Feast": {"base": "The Feast", "class": "Divination Card", "type": "divination low"},
 	"1 The Fiend": {"base": "The Fiend", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Flora's Gift": {"base": "The Flora's Gift", "class": "Divination Card", "type": "divination low"},
 	"1 The Formless Sea": {"base": "The Formless Sea", "class": "Divination Card", "type": "divination high"},
-	"1 The Gambler": {"base": "The Gambler", "class": "Divination Card", "type": "divination low"},
 	"1 The Gemcutter": {"base": "The Gemcutter", "class": "Divination Card", "type": "divination low"},
 	"1 The Hale Heart": {"base": "The Hale Heart", "class": "Divination Card", "type": "divination high"},
 	"1 The Harvester": {"base": "The Harvester", "class": "Divination Card", "type": "divination high"},
@@ -84,6 +86,7 @@ items = {
 	"1 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination low"},
 	"1 The Innocent": {"base": "The Innocent", "class": "Divination Card", "type": "divination high"},
 	"1 The Inoculated": {"base": "The Inoculated", "class": "Divination Card", "type": "hide"},
+	"1 The Inventor": {"base": "The Inventor", "class": "Divination Card", "type": "divination high"},
 	"1 The Iron Bard": {"base": "The Iron Bard", "class": "Divination Card", "type": "divination very high"},
 	"1 The Jester": {"base": "The Jester", "class": "Divination Card", "type": "hide"},
 	"1 The Jeweller's Boon": {"base": "The Jeweller's Boon", "class": "Divination Card", "type": "divination high"},
@@ -92,6 +95,7 @@ items = {
 	"1 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination high"},
 	"1 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination low"},
 	"1 The Life Thief": {"base": "The Life Thief", "class": "Divination Card", "type": "divination very high"},
+	"1 The Lion": {"base": "The Lion", "class": "Divination Card", "type": "divination high"},
 	"1 The Lord in Black": {"base": "The Lord in Black", "class": "Divination Card", "type": "hide"},
 	"1 The Lover": {"base": "The Lover", "class": "Divination Card", "type": "divination low"},
 	"1 The Lunaris Priestess": {"base": "The Lunaris Priestess", "class": "Divination Card", "type": "divination low"},
@@ -123,6 +127,7 @@ items = {
 	"1 The Spark and the Flame": {"base": "The Spark and the Flame", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Spoiled Prince": {"base": "The Spoiled Prince", "class": "Divination Card", "type": "hide"},
 	"1 The Standoff": {"base": "The Standoff", "class": "Divination Card", "type": "divination high"},
+	"1 The Summoner": {"base": "The Summoner", "class": "Divination Card", "type": "divination low"},
 	"1 The Surgeon": {"base": "The Surgeon", "class": "Divination Card", "type": "hide"},
 	"1 The Sword King's Salute": {"base": "The Sword King's Salute", "class": "Divination Card", "type": "divination high"},
 	"1 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination high"},
