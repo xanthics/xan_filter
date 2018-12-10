@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/10/2018(m/d/y) 20:18:08 UTC from "Standard" data
+# Created: 12/10/2018(m/d/y) 22:08:11 UTC from "Standard" data
 
 desc = "Currency Autogen"
 
@@ -12,7 +12,7 @@ items = {
 	"09 Alchemy Shard": {"base": "Alchemy Shard", 'other': ['StackSize >= 5'], "class": "Currency", "type": "currency low"},
 	"08 Alchemy Shard": {"base": "Alchemy Shard", 'other': ['StackSize >= 16'], "class": "Currency", "type": "currency normal"},
 	"1 Alteration Shard": {"base": "Alteration Shard", "class": "Currency", "type": "currency very low"},
-	"09 Alteration Shard": {"base": "Alteration Shard", 'other': ['StackSize >= 9'], "class": "Currency", "type": "currency low"},
+	"09 Alteration Shard": {"base": "Alteration Shard", 'other': ['StackSize >= 8'], "class": "Currency", "type": "currency low"},
 	"1 Ancient Orb": {"base": "Ancient Orb", "class": "Currency", "type": "currency very high"},
 	"09 Ancient Orb": {"base": "Ancient Orb", 'other': ['StackSize >= 5'], "class": "Currency", "type": "currency extremely high"},
 	"1 Ancient Shard": {"base": "Ancient Shard", "class": "Currency", "type": "currency high"},
@@ -93,7 +93,7 @@ items = {
 	"09 Orb of Alchemy": {"base": "Orb of Alchemy", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency high"},
 	"1 Orb of Alteration": {"base": "Orb of Alteration", "class": "Currency", "type": "currency low"},
 	"09 Orb of Alteration": {"base": "Orb of Alteration", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency normal"},
-	"08 Orb of Alteration": {"base": "Orb of Alteration", 'other': ['StackSize >= 7'], "class": "Currency", "type": "currency high"},
+	"08 Orb of Alteration": {"base": "Orb of Alteration", 'other': ['StackSize >= 6'], "class": "Currency", "type": "currency high"},
 	"1 Orb of Annulment": {"base": "Orb of Annulment", "class": "Currency", "type": "currency very high"},
 	"09 Orb of Annulment": {"base": "Orb of Annulment", 'other': ['StackSize >= 11'], "class": "Currency", "type": "currency extremely high"},
 	"1 Orb of Augmentation": {"base": "Orb of Augmentation", "class": "Currency", "type": "currency very low"},
@@ -147,7 +147,7 @@ items = {
 	"09 Silver Coin": {"base": "Silver Coin", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency normal"},
 	"08 Silver Coin": {"base": "Silver Coin", 'other': ['StackSize >= 6'], "class": "Currency", "type": "currency high"},
 	"1 Splinter of Chayula": {"base": "Splinter of Chayula", "class": "Currency", "type": "currency high"},
-	"09 Splinter of Chayula": {"base": "Splinter of Chayula", 'other': ['StackSize >= 8'], "class": "Currency", "type": "currency very high"},
+	"09 Splinter of Chayula": {"base": "Splinter of Chayula", 'other': ['StackSize >= 9'], "class": "Currency", "type": "currency very high"},
 	"1 Splinter of Esh": {"base": "Splinter of Esh", "class": "Currency", "type": "currency show"},
 	"09 Splinter of Esh": {"base": "Splinter of Esh", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency normal"},
 	"08 Splinter of Esh": {"base": "Splinter of Esh", 'other': ['StackSize >= 10'], "class": "Currency", "type": "currency high"},

@@ -228,7 +228,7 @@ def scarabclassify(cur, val, curvals):
 	else:
 		return
 
-	return "{0}\": {{\"BaseType\": \"{0}\", \"class\": \"Map Fragments\", \"type\": \"{1}\"}}".format(cur, tier)
+	return "{0}\": {{\"base\": \"{0}\", \"class\": \"Map Fragments\", \"type\": \"{1}\"}}".format(cur, tier)
 
 
 # given a league grouped list of prophecies determine all unique entries and then output for each league
@@ -242,7 +242,7 @@ def gen_scarab(scarab_list, league, curvals):
 	for c, cur in enumerate(substringscarab):
 		retstr = scarabclassify(cur, scarab_list[cur], curvals)
 		if not retstr:
-			retstr = '{0}": {{"BaseType": "{0}", "class": "Map Fragments", "type": "map yellow"}}'.format(cur)
+			retstr = '{0}": {{"base": "{0}", "class": "Map Fragments", "type": "map yellow"}}'.format(cur)
 		curval += '\t"{:03d} {},\n'.format(c, retstr)
 		del scarab_list[cur]
 	for cur in sorted(scarab_list.keys()):
@@ -250,7 +250,7 @@ def gen_scarab(scarab_list, league, curvals):
 		if retstr:
 			curval += '\t"1 {},\n'.format(retstr)
 
-	curval += '\t"7 scarab default": {"BaseType": "Scarab", "class": "Map Fragments", "type": "map yellow"}\n}\n'
+	curval += '\t"7 scarab default": {"base": "Scarab", "class": "Map Fragments", "type": "map yellow"}\n}\n'
 
 	name = convertname(league)
 

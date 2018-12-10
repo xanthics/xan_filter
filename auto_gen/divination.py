@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/10/2018(m/d/y) 20:18:08 UTC from "Standard" data
+# Created: 12/10/2018(m/d/y) 22:08:11 UTC from "Standard" data
 
 desc = "Divination Card"
 
 # Base type : settings pair
 items = {
 	"000 Beauty Through Death": {"base": "Beauty Through Death", "class": "Divination Card", "type": "divination extremely high"},
-	"001 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
-	"002 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination high"},
+	"001 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination high"},
+	"002 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
 	"003 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination low"},
 	"004 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination normal"},
 	"005 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination high"},
@@ -150,7 +150,7 @@ items = {
 	"1 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination very high"},
 	"1 The Witch": {"base": "The Witch", "class": "Divination Card", "type": "divination low"},
 	"1 The Wolf": {"base": "The Wolf", "class": "Divination Card", "type": "divination very high"},
-	"1 The Wolven King's Bite": {"base": "The Wolven King's Bite", "class": "Divination Card", "type": "divination very high"},
+	"1 The Wolven King's Bite": {"base": "The Wolven King's Bite", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The World Eater": {"base": "The World Eater", "class": "Divination Card", "type": "divination high"},
 	"1 The Wretched": {"base": "The Wretched", "class": "Divination Card", "type": "divination high"},
 	"1 Thunderous Skies": {"base": "Thunderous Skies", "class": "Divination Card", "type": "hide"},

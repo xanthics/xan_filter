@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/10/2018(m/d/y) 20:18:20 UTC from "tmpstandard" data
+# Created: 12/10/2018(m/d/y) 22:08:13 UTC from "tmpstandard" data
 
 desc = "Divination Card"
 
 # Base type : settings pair
 items = {
 	"000 Beauty Through Death": {"base": "Beauty Through Death", "class": "Divination Card", "type": "divination extremely high"},
-	"001 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
-	"002 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination low"},
+	"001 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination normal"},
+	"002 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
 	"003 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination low"},
 	"004 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination normal"},
 	"005 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination high"},
@@ -29,6 +29,8 @@ items = {
 	"1 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination high"},
 	"1 Emperor's Luck": {"base": "Emperor's Luck", "class": "Divination Card", "type": "divination low"},
 	"1 Forbidden Power": {"base": "Forbidden Power", "class": "Divination Card", "type": "divination low"},
+	"1 Gemcutter's Promise": {"base": "Gemcutter's Promise", "class": "Divination Card", "type": "divination low"},
+	"1 Gift of the Gemling Queen": {"base": "Gift of the Gemling Queen", "class": "Divination Card", "type": "divination low"},
 	"1 Grave Knowledge": {"base": "Grave Knowledge", "class": "Divination Card", "type": "divination low"},
 	"1 Harmony of Souls": {"base": "Harmony of Souls", "class": "Divination Card", "type": "divination high"},
 	"1 Her Mask": {"base": "Her Mask", "class": "Divination Card", "type": "divination low"},
@@ -66,6 +68,7 @@ items = {
 	"1 The Blazing Fire": {"base": "The Blazing Fire", "class": "Divination Card", "type": "divination low"},
 	"1 The Breach": {"base": "The Breach", "class": "Divination Card", "type": "divination high"},
 	"1 The Brittle Emperor": {"base": "The Brittle Emperor", "class": "Divination Card", "type": "divination very high"},
+	"1 The Calling": {"base": "The Calling", "class": "Divination Card", "type": "divination low"},
 	"1 The Carrion Crow": {"base": "The Carrion Crow", "class": "Divination Card", "type": "hide"},
 	"1 The Cartographer": {"base": "The Cartographer", "class": "Divination Card", "type": "divination high"},
 	"1 The Cataclysm": {"base": "The Cataclysm", "class": "Divination Card", "type": "divination low"},
@@ -132,6 +135,7 @@ items = {
 	"1 The Realm": {"base": "The Realm", "class": "Divination Card", "type": "divination high"},
 	"1 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination very high"},
 	"1 The Road to Power": {"base": "The Road to Power", "class": "Divination Card", "type": "hide"},
+	"1 The Ruthless Ceinture": {"base": "The Ruthless Ceinture", "class": "Divination Card", "type": "divination low"},
 	"1 The Sacrifice": {"base": "The Sacrifice", "class": "Divination Card", "type": "divination high"},
 	"1 The Saint's Treasure": {"base": "The Saint's Treasure", "class": "Divination Card", "type": "divination very high"},
 	"1 The Samurai's Eye": {"base": "The Samurai's Eye", "class": "Divination Card", "type": "divination very high"},
@@ -155,21 +159,20 @@ items = {
 	"1 The Undisputed": {"base": "The Undisputed", "class": "Divination Card", "type": "hide"},
 	"1 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination high"},
 	"1 The Valley of Steel Boxes": {"base": "The Valley of Steel Boxes", "class": "Divination Card", "type": "divination high"},
-	"1 The Vast": {"base": "The Vast", "class": "Divination Card", "type": "divination high"},
+	"1 The Vast": {"base": "The Vast", "class": "Divination Card", "type": "divination very high"},
 	"1 The Void": {"base": "The Void", "class": "Divination Card", "type": "divination high"},
 	"1 The Warden": {"base": "The Warden", "class": "Divination Card", "type": "divination low"},
 	"1 The Watcher": {"base": "The Watcher", "class": "Divination Card", "type": "divination low"},
 	"1 The Web": {"base": "The Web", "class": "Divination Card", "type": "hide"},
-	"1 The Wilted Rose": {"base": "The Wilted Rose", "class": "Divination Card", "type": "divination high"},
 	"1 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination very high"},
 	"1 The Wolf": {"base": "The Wolf", "class": "Divination Card", "type": "divination high"},
 	"1 The Wolven King's Bite": {"base": "The Wolven King's Bite", "class": "Divination Card", "type": "divination very high"},
 	"1 The World Eater": {"base": "The World Eater", "class": "Divination Card", "type": "divination very high"},
-	"1 The Wretched": {"base": "The Wretched", "class": "Divination Card", "type": "divination low"},
 	"1 Three Faces in the Dark": {"base": "Three Faces in the Dark", "class": "Divination Card", "type": "divination low"},
 	"1 Three Voices": {"base": "Three Voices", "class": "Divination Card", "type": "divination low"},
 	"1 Thunderous Skies": {"base": "Thunderous Skies", "class": "Divination Card", "type": "hide"},
 	"1 Turn the Other Cheek": {"base": "Turn the Other Cheek", "class": "Divination Card", "type": "divination low"},
+	"1 Vinia's Token": {"base": "Vinia's Token", "class": "Divination Card", "type": "divination high"},
 	"1 Volatile Power": {"base": "Volatile Power", "class": "Divination Card", "type": "divination low"},
 	"1 Wealth and Power": {"base": "Wealth and Power", "class": "Divination Card", "type": "divination very high"},
 	"9 Other Divination Cards": {"class": "Divination Card", "type": "divination normal"}

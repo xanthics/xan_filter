@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/10/2018(m/d/y) 20:18:08 UTC from "Standard" data
+# Created: 12/10/2018(m/d/y) 22:08:11 UTC from "Standard" data
 
 desc = "Unique"
 
 # Base type : settings pair
 items = {
-	"000 Blunt Arrow Quiver Piece": {"base": "Blunt Arrow Quiver Piece", "type": "unique special"},
-	"001 Archon Kite Shield Piece": {"base": "Archon Kite Shield Piece", "type": "unique high"},
+	"000 Archon Kite Shield Piece": {"base": "Archon Kite Shield Piece", "type": "unique high"},
+	"001 Blunt Arrow Quiver Piece": {"base": "Blunt Arrow Quiver Piece", "type": "unique special"},
 	"002 Callous Mask Piece": {"base": "Callous Mask Piece", "type": "unique very high"},
 	"003 Cloth Belt Piece": {"base": "Cloth Belt Piece", "type": "unique special"},
 	"004 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique normal"},
@@ -27,7 +27,6 @@ items = {
 	"1 Assassin's Boots": {"base": "Assassin's Boots", "type": "unique extremely high"},
 	"1 Assassin's Mitts": {"base": "Assassin's Mitts", "type": "unique low"},
 	"1 Astral Plate": {"base": "Astral Plate", "type": "unique high"},
-	"1 Atoll Map": {"base": "Atoll Map", "type": "unique high"},
 	"1 Aventail Helmet": {"base": "Aventail Helmet", "type": "unique low"},
 	"1 Awl": {"base": "Awl", "type": "unique low"},
 	"1 Baroque Round Shield": {"base": "Baroque Round Shield", "type": "unique low"},
@@ -74,6 +73,7 @@ items = {
 	"1 Clutching Talisman": {"base": "Clutching Talisman", "type": "unique very high"},
 	"1 Cobalt Jewel": {"base": "Cobalt Jewel", "type": "unique special"},
 	"1 Compound Spiked Shield": {"base": "Compound Spiked Shield", "type": "unique low"},
+	"1 Conjurer Gloves": {"base": "Conjurer Gloves", "type": "unique high"},
 	"1 Conquest Chainmail": {"base": "Conquest Chainmail", "type": "unique low"},
 	"1 Copper Plate": {"base": "Copper Plate", "type": "unique low"},
 	"1 Coral Amulet": {"base": "Coral Amulet", "type": "unique special"},
@@ -100,6 +100,7 @@ items = {
 	"1 Despot Axe": {"base": "Despot Axe", "type": "unique special"},
 	"1 Destiny Leather": {"base": "Destiny Leather", "type": "unique high"},
 	"1 Destroyer Regalia": {"base": "Destroyer Regalia", "type": "unique high"},
+	"1 Dragonscale Boots": {"base": "Dragonscale Boots", "type": "unique low"},
 	"1 Dragonscale Gauntlets": {"base": "Dragonscale Gauntlets", "type": "unique special"},
 	"1 Dread Maul": {"base": "Dread Maul", "type": "unique low"},
 	"1 Dream Mace": {"base": "Dream Mace", "type": "unique low"},
@@ -116,6 +117,7 @@ items = {
 	"1 Ezomyte Burgonet": {"base": "Ezomyte Burgonet", "type": "unique high"},
 	"1 Ezomyte Staff": {"base": "Ezomyte Staff", "type": "unique special"},
 	"1 Ezomyte Tower Shield": {"base": "Ezomyte Tower Shield", "type": "unique very high"},
+	"1 Fiend Dagger": {"base": "Fiend Dagger", "type": "unique low"},
 	"1 Fire Arrow Quiver": {"base": "Fire Arrow Quiver", "type": "unique low"},
 	"1 Flaying Knife": {"base": "Flaying Knife", "type": "unique low"},
 	"1 Fright Claw": {"base": "Fright Claw", "type": "unique low"},
@@ -129,7 +131,7 @@ items = {
 	"1 Goat's Horn": {"base": "Goat's Horn", "type": "unique low"},
 	"1 Goathide Boots": {"base": "Goathide Boots", "type": "unique special"},
 	"1 Gold Amulet": {"base": "Gold Amulet", "type": "unique special"},
-	"1 Gold Ring": {"base": "Gold Ring", "type": "unique special"},
+	"1 Gold Ring": {"base": "Gold Ring", "type": "unique high"},
 	"1 Golden Bracers": {"base": "Golden Bracers", "type": "unique extremely high"},
 	"1 Golden Buckler": {"base": "Golden Buckler", "type": "unique low"},
 	"1 Golden Hoop": {"base": "Golden Hoop", "type": "unique extremely high"},
@@ -208,7 +210,7 @@ items = {
 	"1 Mesh Boots": {"base": "Mesh Boots", "type": "unique low"},
 	"1 Midnight Blade": {"base": "Midnight Blade", "type": "unique special"},
 	"1 Military Staff": {"base": "Military Staff", "type": "unique low"},
-	"1 Mind Cage": {"base": "Mind Cage", "type": "unique special"},
+	"1 Mind Cage": {"base": "Mind Cage", "type": "unique low"},
 	"1 Mirrored Spiked Shield": {"base": "Mirrored Spiked Shield", "type": "unique low"},
 	"1 Moonstone Ring": {"base": "Moonstone Ring", "type": "unique special"},
 	"1 Murder Boots": {"base": "Murder Boots", "type": "unique special"},
@@ -276,7 +278,6 @@ items = {
 	"1 Sage Wand": {"base": "Sage Wand", "type": "unique special"},
 	"1 Sage's Robe": {"base": "Sage's Robe", "type": "unique low"},
 	"1 Samite Gloves": {"base": "Samite Gloves", "type": "unique low"},
-	"1 Samite Helmet": {"base": "Samite Helmet", "type": "unique low"},
 	"1 Sanctified Life Flask": {"base": "Sanctified Life Flask", "type": "unique very high"},
 	"1 Sanctified Mana Flask": {"base": "Sanctified Mana Flask", "type": "unique very high"},
 	"1 Sapphire Flask": {"base": "Sapphire Flask", "type": "unique very high"},
@@ -337,12 +338,14 @@ items = {
 	"1 Timeworn Claw": {"base": "Timeworn Claw", "type": "unique low"},
 	"1 Titan Gauntlets": {"base": "Titan Gauntlets", "type": "unique special"},
 	"1 Titan Greaves": {"base": "Titan Greaves", "type": "unique special"},
+	"1 Titanium Spirit Shield": {"base": "Titanium Spirit Shield", "type": "unique high"},
 	"1 Tomahawk": {"base": "Tomahawk", "type": "unique low"},
 	"1 Topaz Flask": {"base": "Topaz Flask", "type": "unique special"},
 	"1 Topaz Ring": {"base": "Topaz Ring", "type": "unique special"},
 	"1 Tornado Wand": {"base": "Tornado Wand", "type": "unique special"},
 	"1 Tribal Circlet": {"base": "Tribal Circlet", "type": "unique low"},
 	"1 Tricorne": {"base": "Tricorne", "type": "unique low"},
+	"1 Triumphant Lamellar": {"base": "Triumphant Lamellar", "type": "unique special"},
 	"1 Turquoise Amulet": {"base": "Turquoise Amulet", "type": "unique low"},
 	"1 Twilight Blade": {"base": "Twilight Blade", "type": "unique low"},
 	"1 Two-Point Arrow Quiver": {"base": "Two-Point Arrow Quiver", "type": "unique special"},
@@ -380,5 +383,6 @@ items = {
 	"1 Wyrmscale Doublet": {"base": "Wyrmscale Doublet", "type": "unique very high"},
 	"1 Wyrmscale Gauntlets": {"base": "Wyrmscale Gauntlets", "type": "unique low"},
 	"1 Zealot Gloves": {"base": "Zealot Gloves", "type": "unique very high"},
+	"1 Zealot Helmet": {"base": "Zealot Helmet", "type": "unique low"},
 	"9 Other uniques": {"type": "unique normal"}
 }

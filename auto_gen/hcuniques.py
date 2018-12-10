@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/10/2018(m/d/y) 20:18:14 UTC from "Hardcore" data
+# Created: 12/10/2018(m/d/y) 22:08:12 UTC from "Hardcore" data
 
 desc = "Unique"
 
 # Base type : settings pair
 items = {
-	"000 Blunt Arrow Quiver Piece": {"base": "Blunt Arrow Quiver Piece", "type": "unique special"},
-	"001 Archon Kite Shield Piece": {"base": "Archon Kite Shield Piece", "type": "unique high"},
+	"000 Archon Kite Shield Piece": {"base": "Archon Kite Shield Piece", "type": "unique high"},
+	"001 Blunt Arrow Quiver Piece": {"base": "Blunt Arrow Quiver Piece", "type": "unique special"},
 	"002 Callous Mask Piece": {"base": "Callous Mask Piece", "type": "unique very high"},
 	"003 Cloth Belt Piece": {"base": "Cloth Belt Piece", "type": "unique very high"},
 	"004 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique normal"},
