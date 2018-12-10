@@ -32,6 +32,10 @@ from auto_gen import prophecy
 from auto_gen import hcprophecy
 from auto_gen import tprophecy
 from auto_gen import thcprophecy
+from auto_gen import scarab
+from auto_gen import hcscarab
+from auto_gen import tscarab
+from auto_gen import thcscarab
 
 
 from item_config import animate_weapon, show_catchall
@@ -157,11 +161,10 @@ def get_poe_path():
 # main function for creating a filter
 def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 	gen_list = gen_list_compact
-	lookup_leagues = {'Standard': ("st", "Standard", uniques, divination, stcurrency, stessence, bases, prophecy),
-					  'Hardcore': ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence, hcbases, hcprophecy),
-					  'tmpstandard': ("t", "Temp Sofcore", tuniques, tdivination, tcurrency, tessence, tbases, tprophecy),
-					  'tmphardcore': ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence, thcbases, thcprophecy)}
-
+	lookup_leagues = {'Standard': ("st", "Standard", uniques, divination, stcurrency, stessence, bases, prophecy, scarab),
+					  'Hardcore': ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence, hcbases, hcprophecy, hcscarab),
+					  'tmpstandard': ("t", "Temp Sofcore", tuniques, tdivination, tcurrency, tessence, tbases, tprophecy, tscarab),
+					  'tmphardcore': ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence, thcbases, thcprophecy, thcscarab)}
 	leveling = True  # toggle to show leveling items
 	soundlist = []
 	for i in leagues:
@@ -185,6 +188,7 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 		buffer += gen_list(gems.items, gems.desc, soundlist)  # Gems
 		buffer += gen_list(lookup_leagues[i][2].items, lookup_leagues[i][2].desc, soundlist)  # uniques
 		# buffer += gen_list(recipe_item.items, recipe_item.desc, soundlist)  # Items for vendor recipe
+		buffer += gen_list(lookup_leagues[i][8].items, lookup_leagues[i][8].desc, soundlist)  # Autogen Scarabs
 		buffer += gen_list(maps.items, maps.desc, soundlist)  # maps
 		buffer += gen_list(lookup_leagues[i][3].items, lookup_leagues[i][3].desc, soundlist)  # divination cards
 		buffer += gen_list(flask.items, flask.desc, soundlist)  # Flasks
@@ -254,7 +258,7 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 if __name__ == "__main__":
 	import pricetool_ninja
 	league = ['Standard', 'Hardcore', 'tmpstandard', 'tmphardcore']
-#	league = ['tmpstandard']
+#	league = ['Standard']
 	pricetool_ninja.scrape_ninja(league)
 	# reload updated modules
 	for module in [divination, hcdivination, tdivination, thcdivination,
@@ -262,6 +266,7 @@ if __name__ == "__main__":
 				   stcurrency, hccurrency, tcurrency, thccurrency,
 				   stessence, hcessence, tessence, thcessence,
 				   bases, hcbases, tbases, thcbases,
-				   prophecy, hcprophecy, tprophecy, thcprophecy]:
+				   prophecy, hcprophecy, tprophecy, thcprophecy,
+				   scarab, hcscarab, tscarab, thcscarab]:
 		importlib.reload(module)
 	main(league)

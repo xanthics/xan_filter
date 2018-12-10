@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/10/2018(m/d/y) 08:43:06 UTC from "Standard" data
+# Created: 12/10/2018(m/d/y) 11:00:17 UTC from "Standard" data
 
 desc = "Divination Card"
 
@@ -22,7 +22,7 @@ items = {
 	"1 Bowyer's Dream": {"base": "Bowyer's Dream", "class": "Divination Card", "type": "divination high"},
 	"1 Call to the First Ones": {"base": "Call to the First Ones", "class": "Divination Card", "type": "divination low"},
 	"1 Cartographer's Delight": {"base": "Cartographer's Delight", "class": "Divination Card", "type": "divination low"},
-	"1 Chaotic Disposition": {"base": "Chaotic Disposition", "class": "Divination Card", "type": "divination very high"},
+	"1 Chaotic Disposition": {"base": "Chaotic Disposition", "class": "Divination Card", "type": "divination high"},
 	"1 Coveted Possession": {"base": "Coveted Possession", "class": "Divination Card", "type": "divination low"},
 	"1 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "hide"},
 	"1 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination high"},
@@ -94,7 +94,6 @@ items = {
 	"1 The King's Heart": {"base": "The King's Heart", "class": "Divination Card", "type": "divination high"},
 	"1 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination high"},
 	"1 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination low"},
-	"1 The Life Thief": {"base": "The Life Thief", "class": "Divination Card", "type": "divination very high"},
 	"1 The Lion": {"base": "The Lion", "class": "Divination Card", "type": "divination high"},
 	"1 The Lord in Black": {"base": "The Lord in Black", "class": "Divination Card", "type": "hide"},
 	"1 The Lover": {"base": "The Lover", "class": "Divination Card", "type": "divination low"},

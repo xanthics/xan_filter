@@ -7,7 +7,7 @@ import os
 import requests
 from collections import defaultdict
 from datetime import datetime
-from ninja_defaults import currencydefaults, essencedefaults, prophecydefaults, divdefaults, uniquedefaults
+from ninja_defaults import currencydefaults, essencedefaults, prophecydefaults, divdefaults, uniquedefaults, scarabdefaults
 
 header = '''#!/usr/bin/python
 # -*- coding: utf-8 -*-
@@ -80,6 +80,10 @@ def currencyclassify(cur, val, curvals, stacks=1):
 
 # given a league grouped list of currency determine all unique entries and then output for each league
 def gen_currency(currency_list, league):
+	# Add chaos and Scroll of Wisdom to the default list as poe.ninja does not include them
+	currencydefaults["Chaos Orb"] = 1
+	currencydefaults["Scroll of Wisdom"] = 1 / 100
+
 	stackable = ['Orb', 'Splinter', 'Chisel', 'Coin', 'Bauble', 'Sextant', 'Shard', 'Whetstone', 'Scroll', 'Scrap']
 
 	shards = {'Binding Shard': 'Orb of Binding', 'Horizon Shard': 'Orb of Horizons', 'Harbinger\'s Shard': 'Harbinger\'s Orb', 'Engineer\'s Shard': 'Engineer\'s Orb', 'Ancient Shard': 'Ancient Orb',
@@ -181,11 +185,11 @@ def prophecyclassify(cur, val, curvals):
 
 # given a league grouped list of prophecies determine all unique entries and then output for each league
 def gen_prophecy(prophecy_list, league, curvals):
+	fixmissing(prophecy_list, prophecydefaults, league, 'prophecy')
+
 	for invalid in ['A Gracious Master', "Echoes of Lost Love", "Echoes of Mutation", "The Emperor's Trove", "The Blacksmith", "The Forgotten Soldiers", "The Mentor", "The Aesthete's Spirit"]:
 		if invalid in prophecy_list:
 			del prophecy_list[invalid]
-
-	fixmissing(prophecy_list, prophecydefaults, league, 'prophecy')
 
 	substringprophecy = find_substrings(prophecy_list)
 
@@ -207,6 +211,50 @@ def gen_prophecy(prophecy_list, league, curvals):
 	name = convertname(league)
 
 	with open('auto_gen\\{}prophecy.py'.format(name), 'w', encoding='utf-8') as f:
+		f.write(curval)
+
+
+# Find all keys that have other keys which are substrings
+# Convert a scarab value to string.  returns a string
+def scarabclassify(cur, val, curvals):
+	if val >= curvals['extremely']:
+		tier = 'currency extremely high'
+	elif val >= curvals['very']:
+		tier = 'currency very high'
+	elif val >= curvals['high']:
+		tier = 'currency high'
+	elif val <= curvals['normal']:
+		tier = 'currency low'
+	else:
+		return
+
+	return "{0}\": {{\"BaseType\": \"{0}\", \"class\": \"Map Fragments\", \"type\": \"{1}\"}}".format(cur, tier)
+
+
+# given a league grouped list of prophecies determine all unique entries and then output for each league
+def gen_scarab(scarab_list, league, curvals):
+	fixmissing(scarab_list, scarabdefaults, league, 'scarab')
+
+	substringscarab = find_substrings(scarab_list)
+
+	curval = '''{}\ndesc = "scarab Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
+
+	for c, cur in enumerate(substringscarab):
+		retstr = scarabclassify(cur, scarab_list[cur], curvals)
+		if not retstr:
+			retstr = '{0}": {{"BaseType": "{0}", "class": "Map Fragments", "type": "currency normal"}}'.format(cur)
+		curval += '\t"{:03d} {},\n'.format(c, retstr)
+		del scarab_list[cur]
+	for cur in sorted(scarab_list.keys()):
+		retstr = scarabclassify(cur, scarab_list[cur], curvals)
+		if retstr:
+			curval += '\t"1 {},\n'.format(retstr)
+
+	curval += '\t"7 scarab default": {"BaseType": "Scarab", "class": "Map Fragments", "type": "currency normal"}\n}\n'
+
+	name = convertname(league)
+
+	with open('auto_gen\\{}scarab.py'.format(name), 'w', encoding='utf-8') as f:
 		f.write(curval)
 
 
@@ -421,7 +469,8 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		'unique accessory': 'http://poe.ninja/api/Data/GetUniqueAccessoryOverview?league={}',
 		'resonator': 'https://poe.ninja/api/data/itemoverview?league={}&type=Resonator',
 		'fossil': 'https://poe.ninja/api/data/itemoverview?league={}&type=Fossil',
-		'prophecy': 'https://poe.ninja/api/data/itemoverview?league={}&type=Prophecy'
+		'prophecy': 'https://poe.ninja/api/data/itemoverview?league={}&type=Prophecy',
+		'scarab': 'https://poe.ninja/api/data/itemoverview?league={}&type=Scarab'
 	}
 
 	os.environ['NO_PROXY'] = 'poe.ninja'
@@ -436,6 +485,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		essences = {}
 		bases = {}
 		prophecy = {}
+		scarab = {}
 		uniques = defaultdict(list)
 
 		for key in paths:
@@ -489,14 +539,21 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 							continue
 						essences[ii['name']] = ii['chaosValue']
 
-			elif 'unique' in key:
+			elif key == 'scarab':
 				for i in data:
 					for ii in data[i]:
 						if ii['count'] < mincount:
 							continue
-						if 'links' in ii and ii['links'] or ii['name'] in fated or 'relic' in ii['icon']:
-							continue
-						uniques[ii['baseType']].append(ii['chaosValue'])
+						scarab[ii['name']] = ii['chaosValue']
+
+			elif 'unique' in key:
+					for i in data:
+						for ii in data[i]:
+							if ii['count'] < mincount:
+								continue
+							if 'links' in ii and ii['links'] or ii['name'] in fated or 'relic' in ii['icon']:
+								continue
+							uniques[ii['baseType']].append(ii['chaosValue'])
 
 			else:
 				print('Unhandled key: "{}"'.format(key))
@@ -506,6 +563,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		gen_bases(bases, league, curvals)
 		gen_essence(essences, league, curvals)
 		gen_prophecy(prophecy, league, curvals)
+		gen_scarab(scarab, league, curvals)
 		gen_unique(uniques, league, curvals)
 
 

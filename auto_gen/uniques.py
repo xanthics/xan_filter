@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/10/2018(m/d/y) 08:43:06 UTC from "Standard" data
+# Created: 12/10/2018(m/d/y) 11:00:17 UTC from "Standard" data
 
 desc = "Unique"
 
 # Base type : settings pair
 items = {
-	"000 Blunt Arrow Quiver Piece": {"base": "Blunt Arrow Quiver Piece", "type": "unique special"},
-	"001 Archon Kite Shield Piece": {"base": "Archon Kite Shield Piece", "type": "unique high"},
+	"000 Archon Kite Shield Piece": {"base": "Archon Kite Shield Piece", "type": "unique high"},
+	"001 Blunt Arrow Quiver Piece": {"base": "Blunt Arrow Quiver Piece", "type": "unique special"},
 	"002 Callous Mask Piece": {"base": "Callous Mask Piece", "type": "unique very high"},
 	"003 Cloth Belt Piece": {"base": "Cloth Belt Piece", "type": "unique special"},
 	"004 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique normal"},
@@ -24,7 +24,7 @@ items = {
 	"1 Arcanist Slippers": {"base": "Arcanist Slippers", "type": "unique very high"},
 	"1 Archon Kite Shield": {"base": "Archon Kite Shield", "type": "unique special"},
 	"1 Assassin Bow": {"base": "Assassin Bow", "type": "unique special"},
-	"1 Assassin's Boots": {"base": "Assassin's Boots", "type": "unique very high"},
+	"1 Assassin's Boots": {"base": "Assassin's Boots", "type": "unique extremely high"},
 	"1 Assassin's Mitts": {"base": "Assassin's Mitts", "type": "unique low"},
 	"1 Atoll Map": {"base": "Atoll Map", "type": "unique high"},
 	"1 Aventail Helmet": {"base": "Aventail Helmet", "type": "unique low"},
@@ -49,7 +49,7 @@ items = {
 	"1 Bronzescale Gauntlets": {"base": "Bronzescale Gauntlets", "type": "unique low"},
 	"1 Buckskin Tunic": {"base": "Buckskin Tunic", "type": "unique low"},
 	"1 Burnished Spiked Shield": {"base": "Burnished Spiked Shield", "type": "unique low"},
-	"1 Callous Mask": {"base": "Callous Mask", "type": "unique very high"},
+	"1 Callous Mask": {"base": "Callous Mask", "type": "unique extremely high"},
 	"1 Cardinal Round Shield": {"base": "Cardinal Round Shield", "type": "unique high"},
 	"1 Carnal Armour": {"base": "Carnal Armour", "type": "unique special"},
 	"1 Carnal Boots": {"base": "Carnal Boots", "type": "unique extremely high"},
@@ -128,7 +128,7 @@ items = {
 	"1 Gemstone Sword": {"base": "Gemstone Sword", "type": "unique very high"},
 	"1 Gilded Sallet": {"base": "Gilded Sallet", "type": "unique low"},
 	"1 Gladiator Plate": {"base": "Gladiator Plate", "type": "unique high"},
-	"1 Glorious Plate": {"base": "Glorious Plate", "type": "unique very high"},
+	"1 Glorious Plate": {"base": "Glorious Plate", "type": "unique extremely high"},
 	"1 Gnarled Branch": {"base": "Gnarled Branch", "type": "unique low"},
 	"1 Goat's Horn": {"base": "Goat's Horn", "type": "unique low"},
 	"1 Goathide Boots": {"base": "Goathide Boots", "type": "unique special"},
@@ -159,14 +159,14 @@ items = {
 	"1 Harmonic Spirit Shield": {"base": "Harmonic Spirit Shield", "type": "unique low"},
 	"1 Headsman Axe": {"base": "Headsman Axe", "type": "unique low"},
 	"1 Heavy Belt": {"base": "Heavy Belt", "type": "unique low"},
-	"1 Heavy Quiver": {"base": "Heavy Quiver", "type": "unique very high"},
+	"1 Heavy Quiver": {"base": "Heavy Quiver", "type": "unique extremely high"},
 	"1 Hellion's Paw": {"base": "Hellion's Paw", "type": "unique high"},
 	"1 Highborn Staff": {"base": "Highborn Staff", "type": "unique high"},
 	"1 Highland Blade": {"base": "Highland Blade", "type": "unique low"},
 	"1 Holy Chainmail": {"base": "Holy Chainmail", "type": "unique low"},
 	"1 Hubris Circlet": {"base": "Hubris Circlet", "type": "unique special"},
 	"1 Hydrascale Boots": {"base": "Hydrascale Boots", "type": "unique very high"},
-	"1 Hydrascale Gauntlets": {"base": "Hydrascale Gauntlets", "type": "unique very high"},
+	"1 Hydrascale Gauntlets": {"base": "Hydrascale Gauntlets", "type": "unique extremely high"},
 	"1 Imbued Wand": {"base": "Imbued Wand", "type": "unique low"},
 	"1 Imperial Bow": {"base": "Imperial Bow", "type": "unique special"},
 	"1 Imperial Maul": {"base": "Imperial Maul", "type": "unique very high"},
@@ -179,7 +179,6 @@ items = {
 	"1 Iron Mask": {"base": "Iron Mask", "type": "unique low"},
 	"1 Iron Staff": {"base": "Iron Staff", "type": "unique low"},
 	"1 Ironscale Boots": {"base": "Ironscale Boots", "type": "unique low"},
-	"1 Ironscale Gauntlets": {"base": "Ironscale Gauntlets", "type": "unique high"},
 	"1 Ivory Spirit Shield": {"base": "Ivory Spirit Shield", "type": "unique low"},
 	"1 Jade Amulet": {"base": "Jade Amulet", "type": "unique special"},
 	"1 Jade Hatchet": {"base": "Jade Hatchet", "type": "unique low"},
@@ -202,7 +201,7 @@ items = {
 	"1 Leather Hood": {"base": "Leather Hood", "type": "unique low"},
 	"1 Leatherscale Boots": {"base": "Leatherscale Boots", "type": "unique high"},
 	"1 Legion Boots": {"base": "Legion Boots", "type": "unique low"},
-	"1 Legion Gloves": {"base": "Legion Gloves", "type": "unique very high"},
+	"1 Legion Gloves": {"base": "Legion Gloves", "type": "unique extremely high"},
 	"1 Legion Sword": {"base": "Legion Sword", "type": "unique special"},
 	"1 Lion Pelt": {"base": "Lion Pelt", "type": "unique high"},
 	"1 Long Bow": {"base": "Long Bow", "type": "unique low"},
@@ -327,6 +326,7 @@ items = {
 	"1 Steel Ring": {"base": "Steel Ring", "type": "unique high"},
 	"1 Steelhead": {"base": "Steelhead", "type": "unique high"},
 	"1 Steelscale Gauntlets": {"base": "Steelscale Gauntlets", "type": "unique special"},
+	"1 Steelwood Bow": {"base": "Steelwood Bow", "type": "unique high"},
 	"1 Stibnite Flask": {"base": "Stibnite Flask", "type": "unique special"},
 	"1 Stiletto": {"base": "Stiletto", "type": "unique low"},
 	"1 Strand Map": {"base": "Strand Map", "type": "unique high"},
@@ -363,7 +363,7 @@ items = {
 	"1 Vaal Gauntlets": {"base": "Vaal Gauntlets", "type": "unique special"},
 	"1 Vaal Mask": {"base": "Vaal Mask", "type": "unique very high"},
 	"1 Vaal Pyramid Map": {"base": "Vaal Pyramid Map", "type": "unique high"},
-	"1 Vaal Regalia": {"base": "Vaal Regalia", "type": "unique low"},
+	"1 Vaal Rapier": {"base": "Vaal Rapier", "type": "unique very high"},
 	"1 Vaal Sceptre": {"base": "Vaal Sceptre", "type": "unique special"},
 	"1 Vaal Spirit Shield": {"base": "Vaal Spirit Shield", "type": "unique special"},
 	"1 Vanguard Belt": {"base": "Vanguard Belt", "type": "unique high"},
@@ -375,7 +375,6 @@ items = {
 	"1 Viridian Jewel": {"base": "Viridian Jewel", "type": "unique special"},
 	"1 Visored Sallet": {"base": "Visored Sallet", "type": "unique low"},
 	"1 Void Axe": {"base": "Void Axe", "type": "unique very high"},
-	"1 Void Sceptre": {"base": "Void Sceptre", "type": "unique low"},
 	"1 War Buckler": {"base": "War Buckler", "type": "unique low"},
 	"1 War Hammer": {"base": "War Hammer", "type": "unique low"},
 	"1 Wereclaw Talisman": {"base": "Wereclaw Talisman", "type": "unique very high"},
@@ -386,6 +385,5 @@ items = {
 	"1 Wyrmscale Doublet": {"base": "Wyrmscale Doublet", "type": "unique very high"},
 	"1 Wyrmscale Gauntlets": {"base": "Wyrmscale Gauntlets", "type": "unique low"},
 	"1 Zealot Gloves": {"base": "Zealot Gloves", "type": "unique very high"},
-	"1 Zealot Helmet": {"base": "Zealot Helmet", "type": "unique low"},
 	"9 Other uniques": {"type": "unique normal"}
 }

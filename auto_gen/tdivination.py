@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/10/2018(m/d/y) 08:43:17 UTC from "tmpstandard" data
+# Created: 12/10/2018(m/d/y) 11:00:18 UTC from "tmpstandard" data
 
 desc = "Divination Card"
 
@@ -17,12 +17,11 @@ items = {
 	"1 Abandoned Wealth": {"base": "Abandoned Wealth", "class": "Divination Card", "type": "divination very high"},
 	"1 Anarchy's Price": {"base": "Anarchy's Price", "class": "Divination Card", "type": "divination low"},
 	"1 Assassin's Favour": {"base": "Assassin's Favour", "class": "Divination Card", "type": "divination low"},
-	"1 Birth of the Three": {"base": "Birth of the Three", "class": "Divination Card", "type": "divination high"},
 	"1 Blessing of God": {"base": "Blessing of God", "class": "Divination Card", "type": "hide"},
 	"1 Boon of the First Ones": {"base": "Boon of the First Ones", "class": "Divination Card", "type": "divination high"},
 	"1 Bowyer's Dream": {"base": "Bowyer's Dream", "class": "Divination Card", "type": "divination high"},
 	"1 Cartographer's Delight": {"base": "Cartographer's Delight", "class": "Divination Card", "type": "divination low"},
-	"1 Chaotic Disposition": {"base": "Chaotic Disposition", "class": "Divination Card", "type": "divination very high"},
+	"1 Chaotic Disposition": {"base": "Chaotic Disposition", "class": "Divination Card", "type": "divination high"},
 	"1 Coveted Possession": {"base": "Coveted Possession", "class": "Divination Card", "type": "divination low"},
 	"1 Death": {"base": "Death", "class": "Divination Card", "type": "divination low"},
 	"1 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "hide"},
@@ -42,6 +41,7 @@ items = {
 	"1 Immortal Resolve": {"base": "Immortal Resolve", "class": "Divination Card", "type": "divination very high"},
 	"1 Lantador's Lost Love": {"base": "Lantador's Lost Love", "class": "Divination Card", "type": "divination low"},
 	"1 Left to Fate": {"base": "Left to Fate", "class": "Divination Card", "type": "divination high"},
+	"1 Lingering Remnants": {"base": "Lingering Remnants", "class": "Divination Card", "type": "divination high"},
 	"1 Loyalty": {"base": "Loyalty", "class": "Divination Card", "type": "divination low"},
 	"1 Mawr Blaidd": {"base": "Mawr Blaidd", "class": "Divination Card", "type": "divination extremely high"},
 	"1 Merciless Armament": {"base": "Merciless Armament", "class": "Divination Card", "type": "hide"},
@@ -58,6 +58,7 @@ items = {
 	"1 The Army of Blood": {"base": "The Army of Blood", "class": "Divination Card", "type": "divination low"},
 	"1 The Artist": {"base": "The Artist", "class": "Divination Card", "type": "divination very high"},
 	"1 The Battle Born": {"base": "The Battle Born", "class": "Divination Card", "type": "divination low"},
+	"1 The Beast": {"base": "The Beast", "class": "Divination Card", "type": "divination high"},
 	"1 The Betrayal": {"base": "The Betrayal", "class": "Divination Card", "type": "divination low"},
 	"1 The Blazing Fire": {"base": "The Blazing Fire", "class": "Divination Card", "type": "divination low"},
 	"1 The Breach": {"base": "The Breach", "class": "Divination Card", "type": "divination high"},
@@ -72,6 +73,7 @@ items = {
 	"1 The Chains that Bind": {"base": "The Chains that Bind", "class": "Divination Card", "type": "divination high"},
 	"1 The Cursed King": {"base": "The Cursed King", "class": "Divination Card", "type": "divination high"},
 	"1 The Dapper Prodigy": {"base": "The Dapper Prodigy", "class": "Divination Card", "type": "divination high"},
+	"1 The Dark Mage": {"base": "The Dark Mage", "class": "Divination Card", "type": "divination high"},
 	"1 The Deceiver": {"base": "The Deceiver", "class": "Divination Card", "type": "divination low"},
 	"1 The Doctor": {"base": "The Doctor", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Doppelganger": {"base": "The Doppelganger", "class": "Divination Card", "type": "divination low"},
@@ -89,6 +91,7 @@ items = {
 	"1 The Flora's Gift": {"base": "The Flora's Gift", "class": "Divination Card", "type": "divination low"},
 	"1 The Formless Sea": {"base": "The Formless Sea", "class": "Divination Card", "type": "divination high"},
 	"1 The Fox": {"base": "The Fox", "class": "Divination Card", "type": "divination low"},
+	"1 The Gambler": {"base": "The Gambler", "class": "Divination Card", "type": "divination low"},
 	"1 The Gemcutter": {"base": "The Gemcutter", "class": "Divination Card", "type": "divination low"},
 	"1 The Gentleman": {"base": "The Gentleman", "class": "Divination Card", "type": "divination low"},
 	"1 The Gladiator": {"base": "The Gladiator", "class": "Divination Card", "type": "divination high"},
@@ -106,7 +109,6 @@ items = {
 	"1 The King's Blade": {"base": "The King's Blade", "class": "Divination Card", "type": "hide"},
 	"1 The King's Heart": {"base": "The King's Heart", "class": "Divination Card", "type": "divination very high"},
 	"1 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination very high"},
-	"1 The Life Thief": {"base": "The Life Thief", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Lord in Black": {"base": "The Lord in Black", "class": "Divination Card", "type": "hide"},
 	"1 The Lover": {"base": "The Lover", "class": "Divination Card", "type": "divination low"},
 	"1 The Lunaris Priestess": {"base": "The Lunaris Priestess", "class": "Divination Card", "type": "divination low"},
@@ -125,10 +127,9 @@ items = {
 	"1 The Puzzle": {"base": "The Puzzle", "class": "Divination Card", "type": "divination low"},
 	"1 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
 	"1 The Rabid Rhoa": {"base": "The Rabid Rhoa", "class": "Divination Card", "type": "hide"},
-	"1 The Realm": {"base": "The Realm", "class": "Divination Card", "type": "divination high"},
 	"1 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination very high"},
 	"1 The Road to Power": {"base": "The Road to Power", "class": "Divination Card", "type": "hide"},
-	"1 The Sacrifice": {"base": "The Sacrifice", "class": "Divination Card", "type": "divination very high"},
+	"1 The Sacrifice": {"base": "The Sacrifice", "class": "Divination Card", "type": "divination high"},
 	"1 The Saint's Treasure": {"base": "The Saint's Treasure", "class": "Divination Card", "type": "divination very high"},
 	"1 The Samurai's Eye": {"base": "The Samurai's Eye", "class": "Divination Card", "type": "divination very high"},
 	"1 The Scarred Meadow": {"base": "The Scarred Meadow", "class": "Divination Card", "type": "hide"},
@@ -160,8 +161,6 @@ items = {
 	"1 The Wolf": {"base": "The Wolf", "class": "Divination Card", "type": "divination high"},
 	"1 The Wolven King's Bite": {"base": "The Wolven King's Bite", "class": "Divination Card", "type": "divination very high"},
 	"1 The World Eater": {"base": "The World Eater", "class": "Divination Card", "type": "divination very high"},
-	"1 The Wretched": {"base": "The Wretched", "class": "Divination Card", "type": "divination low"},
-	"1 Three Faces in the Dark": {"base": "Three Faces in the Dark", "class": "Divination Card", "type": "divination low"},
 	"1 Three Voices": {"base": "Three Voices", "class": "Divination Card", "type": "divination low"},
 	"1 Thunderous Skies": {"base": "Thunderous Skies", "class": "Divination Card", "type": "hide"},
 	"1 Turn the Other Cheek": {"base": "Turn the Other Cheek", "class": "Divination Card", "type": "divination low"},
