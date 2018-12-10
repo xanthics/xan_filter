@@ -218,13 +218,13 @@ def gen_prophecy(prophecy_list, league, curvals):
 # Convert a scarab value to string.  returns a string
 def scarabclassify(cur, val, curvals):
 	if val >= curvals['extremely']:
-		tier = 'currency extremely high'
+		tier = 'map very good'
 	elif val >= curvals['very']:
-		tier = 'currency very high'
+		tier = 'map red good'
 	elif val >= curvals['high']:
-		tier = 'currency high'
+		tier = 'map yellow good'
 	elif val <= curvals['normal']:
-		tier = 'currency low'
+		tier = 'map white'
 	else:
 		return
 
@@ -242,7 +242,7 @@ def gen_scarab(scarab_list, league, curvals):
 	for c, cur in enumerate(substringscarab):
 		retstr = scarabclassify(cur, scarab_list[cur], curvals)
 		if not retstr:
-			retstr = '{0}": {{"BaseType": "{0}", "class": "Map Fragments", "type": "currency normal"}}'.format(cur)
+			retstr = '{0}": {{"BaseType": "{0}", "class": "Map Fragments", "type": "map yellow"}}'.format(cur)
 		curval += '\t"{:03d} {},\n'.format(c, retstr)
 		del scarab_list[cur]
 	for cur in sorted(scarab_list.keys()):
@@ -250,7 +250,7 @@ def gen_scarab(scarab_list, league, curvals):
 		if retstr:
 			curval += '\t"1 {},\n'.format(retstr)
 
-	curval += '\t"7 scarab default": {"BaseType": "Scarab", "class": "Map Fragments", "type": "currency normal"}\n}\n'
+	curval += '\t"7 scarab default": {"BaseType": "Scarab", "class": "Map Fragments", "type": "map yellow"}\n}\n'
 
 	name = convertname(league)
 
@@ -453,7 +453,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 			 'Sunspite', 'Hrimburn', 'Doedre\'s Malevolence', 'Amplification Rod', 'Corona Solaris', 'Sanguine Gambol', 'The Gryphon', 'Dreadsurge', 'Dreadbeak', 'Cameria\'s Avarice',
 			 'Silverbough', 'The Tempest', 'Doomfletch\'s Prism', 'Death\'s Opus', 'Mirebough', 'Realm Ender', 'The Stormwall', 'The Cauteriser', 'Queen\'s Escape', 'The Dancing Duo',
 			 'Hrimnor\'s Dirge', 'Panquetzaliztli', 'Geofri\'s Devotion', 'Voidheart', 'Kaom\'s Way', 'Winterweave', 'Timetwist', 'Ngamahu Tiki', 'Karui Charge', 'The Effigon',
-			 'The Tactician', 'The Nomad', 'The Signal Fire', 'Cragfall', 'Hyrri\'s Demise', 'Chaber Cairn', 'Geofri\'s Legacy', 'The Iron Fortress']
+			 'The Tactician', 'The Nomad', 'The Signal Fire', 'Cragfall', 'Hyrri\'s Demise', 'Chaber Cairn', 'Geofri\'s Legacy', 'The Iron Fortress', 'Whakatutuki o Matua']
 
 	# TODO: scarab tiers when poe.ninja has data
 	paths = {
