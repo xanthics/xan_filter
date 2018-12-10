@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/10/2018(m/d/y) 11:00:17 UTC from "Standard" data
+# Created: 12/10/2018(m/d/y) 20:18:08 UTC from "Standard" data
 
 desc = "Divination Card"
 
@@ -17,6 +17,7 @@ items = {
 	"1 Abandoned Wealth": {"base": "Abandoned Wealth", "class": "Divination Card", "type": "divination very high"},
 	"1 Anarchy's Price": {"base": "Anarchy's Price", "class": "Divination Card", "type": "divination low"},
 	"1 Assassin's Favour": {"base": "Assassin's Favour", "class": "Divination Card", "type": "divination low"},
+	"1 Birth of the Three": {"base": "Birth of the Three", "class": "Divination Card", "type": "divination high"},
 	"1 Blessing of God": {"base": "Blessing of God", "class": "Divination Card", "type": "hide"},
 	"1 Boon of the First Ones": {"base": "Boon of the First Ones", "class": "Divination Card", "type": "divination very high"},
 	"1 Bowyer's Dream": {"base": "Bowyer's Dream", "class": "Divination Card", "type": "divination high"},
@@ -61,6 +62,7 @@ items = {
 	"1 The Celestial Justicar": {"base": "The Celestial Justicar", "class": "Divination Card", "type": "divination high"},
 	"1 The Celestial Stone": {"base": "The Celestial Stone", "class": "Divination Card", "type": "divination very high"},
 	"1 The Chains that Bind": {"base": "The Chains that Bind", "class": "Divination Card", "type": "divination high"},
+	"1 The Coming Storm": {"base": "The Coming Storm", "class": "Divination Card", "type": "divination low"},
 	"1 The Cursed King": {"base": "The Cursed King", "class": "Divination Card", "type": "divination high"},
 	"1 The Dapper Prodigy": {"base": "The Dapper Prodigy", "class": "Divination Card", "type": "divination high"},
 	"1 The Dark Mage": {"base": "The Dark Mage", "class": "Divination Card", "type": "divination high"},
@@ -94,7 +96,6 @@ items = {
 	"1 The King's Heart": {"base": "The King's Heart", "class": "Divination Card", "type": "divination high"},
 	"1 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination high"},
 	"1 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination low"},
-	"1 The Lion": {"base": "The Lion", "class": "Divination Card", "type": "divination high"},
 	"1 The Lord in Black": {"base": "The Lord in Black", "class": "Divination Card", "type": "hide"},
 	"1 The Lover": {"base": "The Lover", "class": "Divination Card", "type": "divination low"},
 	"1 The Lunaris Priestess": {"base": "The Lunaris Priestess", "class": "Divination Card", "type": "divination low"},
@@ -109,6 +110,7 @@ items = {
 	"1 The Porcupine": {"base": "The Porcupine", "class": "Divination Card", "type": "divination high"},
 	"1 The Price of Protection": {"base": "The Price of Protection", "class": "Divination Card", "type": "divination high"},
 	"1 The Professor": {"base": "The Professor", "class": "Divination Card", "type": "divination very high"},
+	"1 The Puzzle": {"base": "The Puzzle", "class": "Divination Card", "type": "divination low"},
 	"1 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
 	"1 The Rabid Rhoa": {"base": "The Rabid Rhoa", "class": "Divination Card", "type": "hide"},
 	"1 The Realm": {"base": "The Realm", "class": "Divination Card", "type": "divination low"},
