@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/12/2018(m/d/y) 19:42:51 UTC from "Hardcore" data
+# Created: 12/16/2018(m/d/y) 03:36:04 UTC from "Hardcore" data
 
 desc = "Essence Autogen"
 
@@ -38,7 +38,7 @@ items = {
 	"0 Muttering Essence of Sorrow": {"base": "Muttering Essence of Sorrow", "class": "Currency", "type": "currency low"},
 	"0 Muttering Essence of Torment": {"base": "Muttering Essence of Torment", "class": "Currency", "type": "currency low"},
 	"0 Muttering Essence of Woe": {"base": "Muttering Essence of Woe", "class": "Currency", "type": "currency low"},
-	"0 Remnant of Corruption": {"base": "Remnant of Corruption", "class": "Currency", "type": "currency high"},
+	"0 Remnant of Corruption": {"base": "Remnant of Corruption", "class": "Currency", "type": "currency normal"},
 	"0 Screaming Essence of Anger": {"base": "Screaming Essence of Anger", "class": "Currency", "type": "currency normal"},
 	"0 Screaming Essence of Anguish": {"base": "Screaming Essence of Anguish", "class": "Currency", "type": "currency normal"},
 	"0 Screaming Essence of Contempt": {"base": "Screaming Essence of Contempt", "class": "Currency", "type": "currency normal"},

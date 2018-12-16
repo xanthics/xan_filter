@@ -380,12 +380,11 @@ def uniqueclassify(cur, vals, curvals):
 
 
 def gen_unique(unique_list, league, curvals):
+	fixmissing(unique_list, uniquedefaults, league, 'uniques')
 
-	for invalid in ['Torture Chamber Map', 'Catacombs Map']:
+	for invalid in ['Torture Chamber Map', 'Catacombs Map', "Underground Sea Map"]:
 		if invalid in unique_list:
 			del unique_list[invalid]
-
-	fixmissing(unique_list, uniquedefaults, league, 'uniques')
 
 	substringunique = find_substrings(unique_list)
 
@@ -425,25 +424,28 @@ def baseclassify(val, curvals):
 
 def gen_bases(bases_list, league, curvals):
 	name = convertname(league)
-
-	items = {'ehigh': {}, 'vhigh': {}}
+	outbuff = ''
 	# bases[ii['levelRequired']][ii['variant']][ii['baseType']] = ii['chaosValue']
 	with open('auto_gen\\{}bases.py'.format(name), 'w', encoding='utf-8') as f:
-		f.write(u'''{}\ndesc = "Bases"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league)))
+		outbuff += '''{}\ndesc = "Bases"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
 		count = 0
 		for level in sorted(bases_list, reverse=True):
 			for variant in ['Shaper', 'Elder', None]:
 				if variant in bases_list[level]:
+					for ignoreilvl in ['Cobalt Jewel', 'Crimson Jewel', 'Viridian Jewel']:
+						if ignoreilvl in bases_list[level][variant]:
+							del bases_list[level][variant][ignoreilvl]
 					for baseType in sorted(bases_list[level][variant]):
 						value = baseclassify(bases_list[level][variant][baseType], curvals)
 						if value:
 							if level == 86:
-								f.write(u'\t"{4} {2}{0}": {{"base": "{0}", "other": [{1}"ItemLevel >= {3}"], "type": "{5}"}},\n'.format(baseType, '"{}Item True", '.format(variant) if variant else '', variant + ' ' if variant else '', level, count, value))
+								outbuff += '\t"{4} {2}{0}": {{"base": "{0}", "other": [{1}"ItemLevel >= {3}"], "type": "{5}"}},\n'.format(baseType, '"{}Item True", '.format(variant) if variant else '', variant + ' ' if variant else '', level, count, value)
 							else:
-								f.write(u'\t"{4} {2}{0}": {{"base": "{0}", "other": [{1}"ItemLevel {3}"], "type": "{5}"}},\n'.format(baseType, '"{}Item True", '.format(variant) if variant else '', variant + ' ' if variant else '', level, count, value))
+								outbuff += '\t"{4} {2}{0}": {{"base": "{0}", "other": [{1}"ItemLevel {3}"], "type": "{5}"}},\n'.format(baseType, '"{}Item True", '.format(variant) if variant else '', variant + ' ' if variant else '', level, count, value)
 			count += 1
-		f.write(u'\n}\n')
-
+		outbuff += '\n}\n'
+	with open('auto_gen\\{}bases.py'.format(name), 'w', encoding='utf-8') as f:
+		f.write(outbuff)
 
 # Entry point for getting price data from poe.ninja
 def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):

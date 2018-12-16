@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/12/2018(m/d/y) 19:42:51 UTC from "Hardcore" data
+# Created: 12/16/2018(m/d/y) 03:36:04 UTC from "Hardcore" data
 
 desc = "scarab Autogen"
 
