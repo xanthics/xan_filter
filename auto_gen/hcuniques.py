@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/16/2018(m/d/y) 03:36:04 UTC from "Hardcore" data
+# Created: 12/17/2018(m/d/y) 21:48:27 UTC from "Hardcore" data
 
 desc = "Unique"
 
 # Base type : settings pair
 items = {
-	"000 Archon Kite Shield Piece": {"base": "Archon Kite Shield Piece", "type": "unique high"},
-	"001 Blunt Arrow Quiver Piece": {"base": "Blunt Arrow Quiver Piece", "type": "unique special"},
+	"000 Blunt Arrow Quiver Piece": {"base": "Blunt Arrow Quiver Piece", "type": "unique special"},
+	"001 Archon Kite Shield Piece": {"base": "Archon Kite Shield Piece", "type": "unique high"},
 	"002 Callous Mask Piece": {"base": "Callous Mask Piece", "type": "unique very high"},
 	"003 Cloth Belt Piece": {"base": "Cloth Belt Piece", "type": "unique very high"},
 	"004 Moon Temple Map": {"base": "Moon Temple Map", "type": "unique very high"},
@@ -17,7 +17,6 @@ items = {
 	"1 Amber Amulet": {"base": "Amber Amulet", "type": "unique special"},
 	"1 Ambush Mitts": {"base": "Ambush Mitts", "type": "unique extremely high"},
 	"1 Ambusher": {"base": "Ambusher", "type": "unique low"},
-	"1 Amethyst Flask": {"base": "Amethyst Flask", "type": "unique high"},
 	"1 Ancient Gauntlets": {"base": "Ancient Gauntlets", "type": "unique high"},
 	"1 Ancient Spirit Shield": {"base": "Ancient Spirit Shield", "type": "unique very high"},
 	"1 Antique Rapier": {"base": "Antique Rapier", "type": "unique low"},
@@ -48,7 +47,6 @@ items = {
 	"1 Bronze Sceptre": {"base": "Bronze Sceptre", "type": "unique low"},
 	"1 Bronzescale Boots": {"base": "Bronzescale Boots", "type": "unique low"},
 	"1 Bronzescale Gauntlets": {"base": "Bronzescale Gauntlets", "type": "unique low"},
-	"1 Buckskin Tunic": {"base": "Buckskin Tunic", "type": "unique low"},
 	"1 Burnished Spiked Shield": {"base": "Burnished Spiked Shield", "type": "unique low"},
 	"1 Callous Mask": {"base": "Callous Mask", "type": "unique extremely high"},
 	"1 Cardinal Round Shield": {"base": "Cardinal Round Shield", "type": "unique high"},
@@ -76,7 +74,7 @@ items = {
 	"1 Compound Spiked Shield": {"base": "Compound Spiked Shield", "type": "unique low"},
 	"1 Conquest Chainmail": {"base": "Conquest Chainmail", "type": "unique low"},
 	"1 Copper Plate": {"base": "Copper Plate", "type": "unique low"},
-	"1 Coral Amulet": {"base": "Coral Amulet", "type": "unique high"},
+	"1 Coral Amulet": {"base": "Coral Amulet", "type": "unique special"},
 	"1 Coral Ring": {"base": "Coral Ring", "type": "unique high"},
 	"1 Corsair Sword": {"base": "Corsair Sword", "type": "unique high"},
 	"1 Courtyard Map": {"base": "Courtyard Map", "type": "unique very high"},
@@ -97,6 +95,7 @@ items = {
 	"1 Decimation Bow": {"base": "Decimation Bow", "type": "unique low"},
 	"1 Decorative Axe": {"base": "Decorative Axe", "type": "unique low"},
 	"1 Deerskin Boots": {"base": "Deerskin Boots", "type": "unique low"},
+	"1 Deerskin Gloves": {"base": "Deerskin Gloves", "type": "unique high"},
 	"1 Deicide Mask": {"base": "Deicide Mask", "type": "unique very high"},
 	"1 Demon's Horn": {"base": "Demon's Horn", "type": "unique low"},
 	"1 Despot Axe": {"base": "Despot Axe", "type": "unique special"},
@@ -134,6 +133,7 @@ items = {
 	"1 Gnarled Branch": {"base": "Gnarled Branch", "type": "unique low"},
 	"1 Goat's Horn": {"base": "Goat's Horn", "type": "unique low"},
 	"1 Goathide Boots": {"base": "Goathide Boots", "type": "unique special"},
+	"1 Goathide Gloves": {"base": "Goathide Gloves", "type": "unique high"},
 	"1 Gold Amulet": {"base": "Gold Amulet", "type": "unique special"},
 	"1 Gold Ring": {"base": "Gold Ring", "type": "unique high"},
 	"1 Golden Bracers": {"base": "Golden Bracers", "type": "unique extremely high"},
@@ -309,7 +309,7 @@ items = {
 	"1 Shore Map": {"base": "Shore Map", "type": "unique very high"},
 	"1 Siege Axe": {"base": "Siege Axe", "type": "unique very high"},
 	"1 Silk Gloves": {"base": "Silk Gloves", "type": "unique low"},
-	"1 Silk Slippers": {"base": "Silk Slippers", "type": "unique low"},
+	"1 Silk Slippers": {"base": "Silk Slippers", "type": "unique high"},
 	"1 Silken Hood": {"base": "Silken Hood", "type": "unique special"},
 	"1 Simple Robe": {"base": "Simple Robe", "type": "unique special"},
 	"1 Skinning Knife": {"base": "Skinning Knife", "type": "unique low"},
@@ -360,6 +360,7 @@ items = {
 	"1 Two-Point Arrow Quiver": {"base": "Two-Point Arrow Quiver", "type": "unique special"},
 	"1 Two-Stone Ring": {"base": "Two-Stone Ring", "type": "unique special"},
 	"1 Underground River Map": {"base": "Underground River Map", "type": "unique high"},
+	"1 Underground Sea Map": {"base": "Underground Sea Map", "type": "unique high"},
 	"1 Unset Ring": {"base": "Unset Ring", "type": "unique special"},
 	"1 Ursine Pelt": {"base": "Ursine Pelt", "type": "unique high"},
 	"1 Vaal Axe": {"base": "Vaal Axe", "type": "unique special"},
@@ -377,7 +378,6 @@ items = {
 	"1 Velvet Slippers": {"base": "Velvet Slippers", "type": "unique low"},
 	"1 Vile Staff": {"base": "Vile Staff", "type": "unique low"},
 	"1 Vine Circlet": {"base": "Vine Circlet", "type": "unique low"},
-	"1 Viridian Jewel": {"base": "Viridian Jewel", "type": "unique special"},
 	"1 Visored Sallet": {"base": "Visored Sallet", "type": "unique low"},
 	"1 Void Axe": {"base": "Void Axe", "type": "unique very high"},
 	"1 War Buckler": {"base": "War Buckler", "type": "unique low"},

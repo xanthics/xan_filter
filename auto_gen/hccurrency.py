@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/16/2018(m/d/y) 03:36:04 UTC from "Hardcore" data
+# Created: 12/17/2018(m/d/y) 21:48:27 UTC from "Hardcore" data
 
 desc = "Currency Autogen"
 
@@ -60,7 +60,7 @@ items = {
 	"1 Exalted Orb": {"base": "Exalted Orb", "class": "Currency", "type": "currency extremely high"},
 	"1 Exalted Shard": {"base": "Exalted Shard", "class": "Currency", "type": "currency high"},
 	"09 Exalted Shard": {"base": "Exalted Shard", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency very high"},
-	"08 Exalted Shard": {"base": "Exalted Shard", 'other': ['StackSize >= 18'], "class": "Currency", "type": "currency extremely high"},
+	"08 Exalted Shard": {"base": "Exalted Shard", 'other': ['StackSize >= 17'], "class": "Currency", "type": "currency extremely high"},
 	"1 Faceted Fossil": {"base": "Faceted Fossil", "class": "Currency", "type": "currency extremely high"},
 	"1 Fractured Fossil ": {"base": "Fractured Fossil ", "class": "Currency", "type": "currency extremely high"},
 	"1 Frigid Fossil": {"base": "Frigid Fossil", "class": "Currency", "type": "currency normal"},
@@ -96,13 +96,13 @@ items = {
 	"09 Orb of Alteration": {"base": "Orb of Alteration", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency normal"},
 	"08 Orb of Alteration": {"base": "Orb of Alteration", 'other': ['StackSize >= 10'], "class": "Currency", "type": "currency high"},
 	"1 Orb of Annulment": {"base": "Orb of Annulment", "class": "Currency", "type": "currency very high"},
-	"09 Orb of Annulment": {"base": "Orb of Annulment", 'other': ['StackSize >= 9'], "class": "Currency", "type": "currency extremely high"},
+	"09 Orb of Annulment": {"base": "Orb of Annulment", 'other': ['StackSize >= 8'], "class": "Currency", "type": "currency extremely high"},
 	"1 Orb of Augmentation": {"base": "Orb of Augmentation", "class": "Currency", "type": "currency very low"},
 	"09 Orb of Augmentation": {"base": "Orb of Augmentation", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency low"},
 	"08 Orb of Augmentation": {"base": "Orb of Augmentation", 'other': ['StackSize >= 9'], "class": "Currency", "type": "currency normal"},
 	"1 Orb of Binding": {"base": "Orb of Binding", "class": "Currency", "type": "currency normal"},
 	"09 Orb of Binding": {"base": "Orb of Binding", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency high"},
-	"1 Orb of Chance": {"base": "Orb of Chance", "class": "Currency", "type": "currency show"},
+	"1 Orb of Chance": {"base": "Orb of Chance", "class": "Currency", "type": "currency low"},
 	"09 Orb of Chance": {"base": "Orb of Chance", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency normal"},
 	"08 Orb of Chance": {"base": "Orb of Chance", 'other': ['StackSize >= 10'], "class": "Currency", "type": "currency high"},
 	"1 Orb of Fusing": {"base": "Orb of Fusing", "class": "Currency", "type": "currency normal"},
@@ -165,5 +165,5 @@ items = {
 	"1 Tangled Fossil": {"base": "Tangled Fossil", "class": "Currency", "type": "currency extremely high"},
 	"1 Transmutation Shard": {"base": "Transmutation Shard", "class": "Currency", "type": "currency very low"},
 	"1 Vaal Orb": {"base": "Vaal Orb", "class": "Currency", "type": "currency high"},
-	"09 Vaal Orb": {"base": "Vaal Orb", 'other': ['StackSize >= 9'], "class": "Currency", "type": "currency very high"},
+	"09 Vaal Orb": {"base": "Vaal Orb", 'other': ['StackSize >= 6'], "class": "Currency", "type": "currency very high"},
 }
