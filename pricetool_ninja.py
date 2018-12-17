@@ -50,9 +50,16 @@ def fixmissing(ninja_list, defaults, league, name):
 
 # Convert a currency shorthand to full name.  returns a string
 def currencyclassify(cur, val, curvals, stacks=1):
-	# list of currency to always give a border to
-	ah = ["Splinter of Chayula", "Splinter of Xoph", "Splinter of Uul-Netol", "Splinter of Tul", "Splinter of Esh",
-		  "Chromatic Orb", "Perandus Coin", "Orb of Chance", "Cartographer's Chisel", "Orb of Fusing", "Silver Coin"]  # , "Jeweller's Orb", "Orb of Alteration", "Orb of Transmutation"
+	# list of currency to always give a border to if their price is low
+	ah = [
+		"Splinter of Chayula", "Splinter of Xoph", "Splinter of Uul-Netol", "Splinter of Tul", "Splinter of Esh",
+		"Chromatic Orb", "Perandus Coin", "Cartographer's Chisel", "Orb of Fusing", "Silver Coin",
+		#"Orb of Alteration",
+		#"Orb of Augmentation",
+		# "Jeweller's Orb",
+		#"Orb of Transmutation",
+		#"Orb of Chance",
+	]
 	if ((cur in ah) or 'Fossil' in cur) and val < curvals['normal']:
 		tier = 'currency show'
 	elif 'Alchemical Resonator' in cur and 'Prime' not in cur:
@@ -382,7 +389,7 @@ def uniqueclassify(cur, vals, curvals):
 def gen_unique(unique_list, league, curvals):
 	fixmissing(unique_list, uniquedefaults, league, 'uniques')
 
-	for invalid in ['Torture Chamber Map', 'Catacombs Map', "Underground Sea Map"]:
+	for invalid in ['Torture Chamber Map', 'Catacombs Map']:
 		if invalid in unique_list:
 			del unique_list[invalid]
 
@@ -449,13 +456,22 @@ def gen_bases(bases_list, league, curvals):
 
 # Entry point for getting price data from poe.ninja
 def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
-	# list of all fated uniques to remove them from unique price consideration
-	fated = ['Kaltensoul', 'Thirst for Horrors', 'Atziri\'s Reflection', 'The Oak', 'Ezomyte Hold', 'Frostferno', 'Martyr\'s Crown', 'Asenath\'s Chant', 'Deidbellow',
-			 'Malachai\'s Awakening', 'Wall of Brambles', 'Wildwrap', 'Fox\'s Fortune', 'Crystal Vault', 'Windshriek', 'Greedtrap', 'Shavronne\'s Gambit', 'Duskblight',
-			 'Sunspite', 'Hrimburn', 'Doedre\'s Malevolence', 'Amplification Rod', 'Corona Solaris', 'Sanguine Gambol', 'The Gryphon', 'Dreadsurge', 'Dreadbeak', 'Cameria\'s Avarice',
-			 'Silverbough', 'The Tempest', 'Doomfletch\'s Prism', 'Death\'s Opus', 'Mirebough', 'Realm Ender', 'The Stormwall', 'The Cauteriser', 'Queen\'s Escape', 'The Dancing Duo',
-			 'Hrimnor\'s Dirge', 'Panquetzaliztli', 'Geofri\'s Devotion', 'Voidheart', 'Kaom\'s Way', 'Winterweave', 'Timetwist', 'Ngamahu Tiki', 'Karui Charge', 'The Effigon',
-			 'The Tactician', 'The Nomad', 'The Signal Fire', 'Cragfall', 'Hyrri\'s Demise', 'Chaber Cairn', 'Geofri\'s Legacy', 'The Iron Fortress', 'Whakatutuki o Matua']
+	# list of all uniques that can only be acquired through upgrades or vendor recipes to remove them from unique price consideration
+	upgradeded = [
+		# Fated Uniques
+		'Kaltensoul', 'Thirst for Horrors', 'Atziri\'s Reflection', 'The Oak', 'Ezomyte Hold', 'Frostferno', 'Martyr\'s Crown', 'Asenath\'s Chant', 'Deidbellow',
+		'Malachai\'s Awakening', 'Wall of Brambles', 'Wildwrap', 'Fox\'s Fortune', 'Crystal Vault', 'Windshriek', 'Greedtrap', 'Shavronne\'s Gambit', 'Duskblight',
+		'Sunspite', 'Hrimburn', 'Doedre\'s Malevolence', 'Amplification Rod', 'Corona Solaris', 'Sanguine Gambol', 'The Gryphon', 'Dreadsurge', 'Dreadbeak', 'Cameria\'s Avarice',
+		'Silverbough', 'The Tempest', 'Doomfletch\'s Prism', 'Death\'s Opus', 'Mirebough', 'Realm Ender', 'The Stormwall', 'The Cauteriser', 'Queen\'s Escape', 'The Dancing Duo',
+		'Hrimnor\'s Dirge', 'Panquetzaliztli', 'Geofri\'s Devotion', 'Voidheart', 'Kaom\'s Way', 'Winterweave', 'Timetwist', 'Ngamahu Tiki', 'Karui Charge', 'The Effigon',
+		'The Tactician', 'The Nomad', 'The Signal Fire', 'Cragfall', 'Hyrri\'s Demise', 'Chaber Cairn', 'Geofri\'s Legacy', 'The Iron Fortress', 'Whakatutuki o Matua',
+		# Incursion Vial upgrades
+		'Transcendent Flesh', 'Transcendent Mind', 'Transcendent Spirit', 'Soul Ripper', 'Slavedriver\'s Hand', 'Coward\'s Legacy', 'Omeyocan', 'Fate of the Vaal',
+		'Mask of the Stitched Demon', 'Apep\'s Supremacy', 'Zerphi\'s Heart', 'Shadowstitch',
+		# Vendor recipes
+		'The Anima Stone', 'Arborix', 'Duskdawn', 'The Goddess Scorned', 'The Goddess Unleashed', 'Kingmaker', 'Magna Eclipsis', 'The Retch', 'Star of Wraeclast', 'The Taming',
+		'The Vinktar Square', 'Loreweave',
+	]
 
 	# TODO: scarab tiers when poe.ninja has data
 	paths = {
@@ -553,7 +569,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 						for ii in data[i]:
 							if ii['count'] < mincount:
 								continue
-							if 'links' in ii and ii['links'] or ii['name'] in fated or 'relic' in ii['icon']:
+							if 'links' in ii and ii['links'] or ii['name'] in upgradeded or 'relic' in ii['icon']:
 								continue
 							uniques[ii['baseType']].append(ii['chaosValue'])
 
