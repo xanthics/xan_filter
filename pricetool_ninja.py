@@ -56,9 +56,9 @@ def currencyclassify(cur, val, curvals, stacks=1):
 		"Chromatic Orb", "Perandus Coin", "Cartographer's Chisel", "Orb of Fusing", "Silver Coin",
 		#"Orb of Alteration",
 		#"Orb of Augmentation",
-		# "Jeweller's Orb",
+		#"Jeweller's Orb",
 		#"Orb of Transmutation",
-		#"Orb of Chance",
+		"Orb of Chance",
 	]
 	if ((cur in ah) or 'Fossil' in cur) and val < curvals['normal']:
 		tier = 'currency show'
@@ -77,8 +77,8 @@ def currencyclassify(cur, val, curvals, stacks=1):
 	elif val >= curvals['min']:
 		tier = 'currency very low'
 	else:
-		tier = 'currency very low'
-		#tier = 'hide'
+		#tier = 'currency very low'
+		tier = 'hide'
 
 	if stacks > 1:
 		return "$ {0}\": {{\"base\": \"{0}\", 'other': ['StackSize >= {2}'], \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier, stacks)
@@ -471,6 +471,9 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		# Vendor recipes
 		'The Anima Stone', 'Arborix', 'Duskdawn', 'The Goddess Scorned', 'The Goddess Unleashed', 'Kingmaker', 'Magna Eclipsis', 'The Retch', 'Star of Wraeclast', 'The Taming',
 		'The Vinktar Square', 'Loreweave',
+		# Upgraded Breach Uniques
+		'Xoph\'s Nurture', 'The Formless Inferno', 'Xoph\'s Blood', 'Tulfall', 'The Perfect Form', 'The Pandemonius', 'Hand of Wisdom and Action', 'Esh\'s Visage', 'Choir of the Storm',
+		'Uul-Netol\'s Embrace', 'The Red Trail', 'The Surrender', 'United in Dream', 'Skin of the Lords', 'Presence of Chayula', 'The Red Nightmare', 'The Green Nightmare', 'The Blue Nightmare',
 	]
 
 	# TODO: scarab tiers when poe.ninja has data
