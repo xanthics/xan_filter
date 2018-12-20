@@ -238,7 +238,7 @@ settings = {
 					 'MinimapIcon 0 Red Diamond',
 					 'PlayEffect Red',
 					 "SetFontSize {}".format(size['huge']),
-					 'CustomAlertSound "{}_valuable.wav"'.format(volume['high']),
+					 'CustomAlertSound "{}_valuable.wav"'.format(volume['normal']),
 					 "SetBackgroundColor {} 220".format(color['black'])],
 	"map red good": ["SetBorderColor {}".format(color['fire']),
 					 'MinimapIcon 0 Red Diamond',
