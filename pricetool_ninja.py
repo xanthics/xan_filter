@@ -77,8 +77,8 @@ def currencyclassify(cur, val, curvals, stacks=1):
 	elif val >= curvals['min']:
 		tier = 'currency very low'
 	else:
-		#tier = 'currency very low'
-		tier = 'hide'
+		tier = 'currency very low'
+		#tier = 'hide'
 
 	if stacks > 1:
 		return "$ {0}\": {{\"base\": \"{0}\", 'other': ['StackSize >= {2}'], \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier, stacks)
