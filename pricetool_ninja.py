@@ -572,7 +572,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 						for ii in data[i]:
 							if ii['count'] < mincount:
 								continue
-							if 'links' in ii and ii['links'] or ii['name'] in upgradeded or 'relic' in ii['icon']:
+							if ('links' in ii and ii['links']) or ii['name'] in upgradeded or 'relic' in ii['icon'] or ('variant' in ii and ii['variant'] and '2 Jewels' in ii['variant']):
 								continue
 							uniques[ii['baseType']].append(ii['chaosValue'])
 

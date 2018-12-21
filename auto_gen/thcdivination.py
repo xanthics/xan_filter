@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/20/2018(m/d/y) 08:04:56 UTC from "tmphardcore" data
+# Created: 12/21/2018(m/d/y) 01:24:08 UTC from "tmphardcore" data
 
 desc = "Divination Card"
 
@@ -16,13 +16,13 @@ items = {
 	"1 A Mother's Parting Gift": {"base": "A Mother's Parting Gift", "class": "Divination Card", "type": "divination low"},
 	"1 Abandoned Wealth": {"base": "Abandoned Wealth", "class": "Divination Card", "type": "divination very high"},
 	"1 Anarchy's Price": {"base": "Anarchy's Price", "class": "Divination Card", "type": "divination low"},
+	"1 Atziri's Arsenal": {"base": "Atziri's Arsenal", "class": "Divination Card", "type": "divination high"},
 	"1 Blessing of God": {"base": "Blessing of God", "class": "Divination Card", "type": "hide"},
 	"1 Boon of the First Ones": {"base": "Boon of the First Ones", "class": "Divination Card", "type": "divination high"},
 	"1 Bowyer's Dream": {"base": "Bowyer's Dream", "class": "Divination Card", "type": "divination high"},
 	"1 Cartographer's Delight": {"base": "Cartographer's Delight", "class": "Divination Card", "type": "divination low"},
 	"1 Chaotic Disposition": {"base": "Chaotic Disposition", "class": "Divination Card", "type": "divination very high"},
 	"1 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "hide"},
-	"1 Doedre's Madness": {"base": "Doedre's Madness", "class": "Divination Card", "type": "divination low"},
 	"1 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination high"},
 	"1 Harmony of Souls": {"base": "Harmony of Souls", "class": "Divination Card", "type": "divination high"},
 	"1 Heterochromia": {"base": "Heterochromia", "class": "Divination Card", "type": "divination high"},
@@ -34,9 +34,7 @@ items = {
 	"1 Lantador's Lost Love": {"base": "Lantador's Lost Love", "class": "Divination Card", "type": "divination low"},
 	"1 Left to Fate": {"base": "Left to Fate", "class": "Divination Card", "type": "divination high"},
 	"1 Lingering Remnants": {"base": "Lingering Remnants", "class": "Divination Card", "type": "divination high"},
-	"1 Lost Worlds": {"base": "Lost Worlds", "class": "Divination Card", "type": "divination high"},
 	"1 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination high"},
-	"1 Lysah's Respite": {"base": "Lysah's Respite", "class": "Divination Card", "type": "divination high"},
 	"1 Mawr Blaidd": {"base": "Mawr Blaidd", "class": "Divination Card", "type": "divination extremely high"},
 	"1 Merciless Armament": {"base": "Merciless Armament", "class": "Divination Card", "type": "hide"},
 	"1 No Traces": {"base": "No Traces", "class": "Divination Card", "type": "divination high"},
@@ -52,7 +50,6 @@ items = {
 	"1 The Artist": {"base": "The Artist", "class": "Divination Card", "type": "divination very high"},
 	"1 The Avenger": {"base": "The Avenger", "class": "Divination Card", "type": "divination high"},
 	"1 The Beast": {"base": "The Beast", "class": "Divination Card", "type": "divination high"},
-	"1 The Blazing Fire": {"base": "The Blazing Fire", "class": "Divination Card", "type": "divination low"},
 	"1 The Breach": {"base": "The Breach", "class": "Divination Card", "type": "divination high"},
 	"1 The Brittle Emperor": {"base": "The Brittle Emperor", "class": "Divination Card", "type": "divination very high"},
 	"1 The Cacophony": {"base": "The Cacophony", "class": "Divination Card", "type": "divination high"},
@@ -108,7 +105,7 @@ items = {
 	"1 The Professor": {"base": "The Professor", "class": "Divination Card", "type": "divination high"},
 	"1 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
 	"1 The Rabid Rhoa": {"base": "The Rabid Rhoa", "class": "Divination Card", "type": "hide"},
-	"1 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination very high"},
+	"1 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination high"},
 	"1 The Road to Power": {"base": "The Road to Power", "class": "Divination Card", "type": "hide"},
 	"1 The Sacrifice": {"base": "The Sacrifice", "class": "Divination Card", "type": "divination very high"},
 	"1 The Saint's Treasure": {"base": "The Saint's Treasure", "class": "Divination Card", "type": "divination very high"},
@@ -137,6 +134,7 @@ items = {
 	"1 The Void": {"base": "The Void", "class": "Divination Card", "type": "divination very high"},
 	"1 The Warden": {"base": "The Warden", "class": "Divination Card", "type": "divination low"},
 	"1 The Warlord": {"base": "The Warlord", "class": "Divination Card", "type": "divination high"},
+	"1 The Watcher": {"base": "The Watcher", "class": "Divination Card", "type": "divination low"},
 	"1 The Web": {"base": "The Web", "class": "Divination Card", "type": "hide"},
 	"1 The Wilted Rose": {"base": "The Wilted Rose", "class": "Divination Card", "type": "divination high"},
 	"1 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination high"},
@@ -146,6 +144,7 @@ items = {
 	"1 Three Faces in the Dark": {"base": "Three Faces in the Dark", "class": "Divination Card", "type": "divination low"},
 	"1 Thunderous Skies": {"base": "Thunderous Skies", "class": "Divination Card", "type": "hide"},
 	"1 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination high"},
+	"1 Turn the Other Cheek": {"base": "Turn the Other Cheek", "class": "Divination Card", "type": "divination low"},
 	"1 Wealth and Power": {"base": "Wealth and Power", "class": "Divination Card", "type": "divination very high"},
 	"9 Other Divination Cards": {"class": "Divination Card", "type": "divination normal"}
 }
