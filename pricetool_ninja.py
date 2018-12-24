@@ -48,6 +48,24 @@ def fixmissing(ninja_list, defaults, league, name):
 		ninja_list[v] = defaults[v]
 
 
+# Add missing values to data returned by poe.ninja
+def fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uniques):
+	# Add chaos and Scroll of Wisdom to the default list as poe.ninja does not include them
+	currencydefaults["Chaos Orb"] = 1
+	currencydefaults["Scroll of Wisdom"] = 1 / 100
+	fixmissing(currency, currencydefaults, league, "currency")
+
+	fixmissing(essences, essencedefaults, league, 'essences')
+
+	fixmissing(prophecy, prophecydefaults, league, 'prophecy')
+
+	fixmissing(scarab, scarabdefaults, league, 'scarab')
+
+	fixmissing(divs, divdefaults, league, 'Divination cards')
+
+	fixmissing(uniques, uniquedefaults, league, 'uniques')
+
+
 # Convert a currency shorthand to full name.  returns a string
 def currencyclassify(cur, val, curvals, stacks=1):
 	# list of currency to always give a border to if their price is low
@@ -87,9 +105,6 @@ def currencyclassify(cur, val, curvals, stacks=1):
 
 # given a league grouped list of currency determine all unique entries and then output for each league
 def gen_currency(currency_list, league):
-	# Add chaos and Scroll of Wisdom to the default list as poe.ninja does not include them
-	currencydefaults["Chaos Orb"] = 1
-	currencydefaults["Scroll of Wisdom"] = 1 / 100
 
 	stackable = ['Orb', 'Splinter', 'Chisel', 'Coin', 'Bauble', 'Sextant', 'Shard', 'Whetstone', 'Scroll', 'Scrap']
 
@@ -97,7 +112,6 @@ def gen_currency(currency_list, league):
 	          'Regal Shard': 'Regal Orb', 'Alchemy Shard': 'Orb of Alchemy', 'Alteration Shard': 'Orb of Alteration', 'Transmutation Shard': 'Orb of Transmutation', 'Scroll Fragment': 'Scroll of Wisdom',
 			  'Exalted Shard': 'Exalted Orb', 'Annulment Shard': 'Orb of Annulment', 'Mirror Shard': 'Mirror of Kalandra'}
 
-	fixmissing(currency_list, currencydefaults, league, "currency")
 
 	for s in shards:
 		if s not in currency_list:
@@ -155,9 +169,6 @@ def essenceclassify(cur, val, curvals):
 
 # given a league grouped list of essences determine all unique entries and then output for each league
 def gen_essence(essence_list, league, curvals):
-
-	fixmissing(essence_list, essencedefaults, league, 'essences')
-
 	curval = '''{}\ndesc = "Essence Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
 
 	for cur in sorted(essence_list.keys()):
@@ -192,8 +203,6 @@ def prophecyclassify(cur, val, curvals):
 
 # given a league grouped list of prophecies determine all unique entries and then output for each league
 def gen_prophecy(prophecy_list, league, curvals):
-	fixmissing(prophecy_list, prophecydefaults, league, 'prophecy')
-
 	for invalid in ['A Gracious Master', "Echoes of Lost Love", "Echoes of Mutation", "The Emperor's Trove", "The Blacksmith", "The Forgotten Soldiers", "The Mentor", "The Aesthete's Spirit"]:
 		if invalid in prophecy_list:
 			del prophecy_list[invalid]
@@ -240,8 +249,6 @@ def scarabclassify(cur, val, curvals):
 
 # given a league grouped list of prophecies determine all unique entries and then output for each league
 def gen_scarab(scarab_list, league, curvals):
-	fixmissing(scarab_list, scarabdefaults, league, 'scarab')
-
 	substringscarab = find_substrings(scarab_list)
 
 	curval = '''{}\ndesc = "scarab Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
@@ -308,8 +315,6 @@ def divclassify(cur, val, curvals, lowcards, badcards):
 
 
 def gen_div(div_list, league, curvals):
-	fixmissing(div_list, divdefaults, league, 'Divination cards')
-
 	substringcards = find_substrings(div_list)
 
 	# Cards that will never be displayed
@@ -387,8 +392,6 @@ def uniqueclassify(cur, vals, curvals):
 
 
 def gen_unique(unique_list, league, curvals):
-	fixmissing(unique_list, uniquedefaults, league, 'uniques')
-
 	for invalid in ['Torture Chamber Map', 'Catacombs Map']:
 		if invalid in unique_list:
 			del unique_list[invalid]
@@ -397,7 +400,10 @@ def gen_unique(unique_list, league, curvals):
 
 	curval = '{}\ndesc = "Unique"\n\n# Base type : settings pair\nitems = {{\n'.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
 
-	for c, cur in enumerate(substringunique):
+	retstr = uniqueclassify('Reinforced Tower Shield', unique_list['Rawhide Tower Shield'], curvals)
+	curval += '\t"000 {},\n'.format(retstr.replace('"base"', '"other": ["ItemLevel <= 60"], "base"'))
+
+	for c, cur in enumerate(substringunique, 1):
 		retstr = uniqueclassify(cur, unique_list[cur], curvals)
 		if not retstr:
 			retstr = '{0}": {{"base": "{0}", "type": "unique normal"}}'.format(cur)
@@ -476,7 +482,6 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		'Uul-Netol\'s Embrace', 'The Red Trail', 'The Surrender', 'United in Dream', 'Skin of the Lords', 'Presence of Chayula', 'The Red Nightmare', 'The Green Nightmare', 'The Blue Nightmare',
 	]
 
-	# TODO: scarab tiers when poe.ninja has data
 	paths = {
 		'currency': 'http://poe.ninja/api/Data/GetCurrencyOverview?league={}',
 		'bases': 'http://poe.ninja/api/Data/GetBaseTypeOverview?league={}',
@@ -578,6 +583,9 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 
 			else:
 				print('Unhandled key: "{}"'.format(key))
+
+		# Add all missing values to poe.ninja data
+		fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uniques)
 
 		curvals = gen_currency(currency, league)
 		gen_div(divs, league, curvals)
