@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/21/2018(m/d/y) 01:24:07 UTC from "Hardcore" data
+# Created: 12/24/2018(m/d/y) 08:57:40 UTC from "Hardcore" data
 
 desc = "Currency Autogen"
 
@@ -103,8 +103,8 @@ items = {
 	"1 Orb of Binding": {"base": "Orb of Binding", "class": "Currency", "type": "currency normal"},
 	"09 Orb of Binding": {"base": "Orb of Binding", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency high"},
 	"1 Orb of Chance": {"base": "Orb of Chance", "class": "Currency", "type": "currency show"},
-	"09 Orb of Chance": {"base": "Orb of Chance", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency normal"},
-	"08 Orb of Chance": {"base": "Orb of Chance", 'other': ['StackSize >= 5'], "class": "Currency", "type": "currency high"},
+	"09 Orb of Chance": {"base": "Orb of Chance", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency normal"},
+	"08 Orb of Chance": {"base": "Orb of Chance", 'other': ['StackSize >= 10'], "class": "Currency", "type": "currency high"},
 	"1 Orb of Fusing": {"base": "Orb of Fusing", "class": "Currency", "type": "currency normal"},
 	"09 Orb of Fusing": {"base": "Orb of Fusing", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency high"},
 	"08 Orb of Fusing": {"base": "Orb of Fusing", 'other': ['StackSize >= 19'], "class": "Currency", "type": "currency very high"},
@@ -166,4 +166,13 @@ items = {
 	"1 Transmutation Shard": {"base": "Transmutation Shard", "class": "Currency", "type": "currency very low"},
 	"1 Vaal Orb": {"base": "Vaal Orb", "class": "Currency", "type": "currency high"},
 	"09 Vaal Orb": {"base": "Vaal Orb", 'other': ['StackSize >= 6'], "class": "Currency", "type": "currency very high"},
+	"1 Vial of Awakening": {"base": "Vial of Awakening", "class": "Currency", "type": "currency extremely high"},
+	"1 Vial of Consequence": {"base": "Vial of Consequence", "class": "Currency", "type": "currency high"},
+	"1 Vial of Dominance": {"base": "Vial of Dominance", "class": "Currency", "type": "currency high"},
+	"1 Vial of Fate": {"base": "Vial of Fate", "class": "Currency", "type": "currency low"},
+	"1 Vial of Sacrifice": {"base": "Vial of Sacrifice", "class": "Currency", "type": "currency extremely high"},
+	"1 Vial of Summoning": {"base": "Vial of Summoning", "class": "Currency", "type": "currency low"},
+	"1 Vial of Transcendence": {"base": "Vial of Transcendence", "class": "Currency", "type": "currency normal"},
+	"1 Vial of the Ghost": {"base": "Vial of the Ghost", "class": "Currency", "type": "currency extremely high"},
+	"1 Vial of the Ritual": {"base": "Vial of the Ritual", "class": "Currency", "type": "currency normal"},
 }
