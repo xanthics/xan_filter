@@ -55,6 +55,16 @@ def fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uni
 	currencydefaults["Scroll of Wisdom"] = 1 / 100
 	fixmissing(currency, currencydefaults, league, "currency")
 
+	currency["Vial of Awakening"] = currency['Exalted Orb'] * 2
+	currency["Vial of Consequence"] = 3
+	currency["Vial of Dominance"] = 1
+	currency["Vial of Fate"] = 1/5
+	currency["Vial of Summoning"] = 1/5
+	currency["Vial of the Ritual"] = 1/4
+	currency["Vial of Transcendence"] = 1/2
+	currency["Vial of the Ghost"] = currency['Exalted Orb'] * 8
+	currency["Vial of Sacrifice"] = currency['Exalted Orb'] * 18
+
 	fixmissing(essences, essencedefaults, league, 'essences')
 
 	fixmissing(prophecy, prophecydefaults, league, 'prophecy')
