@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/24/2018(m/d/y) 08:57:40 UTC from "Hardcore" data
+# Created: 01/12/2019(m/d/y) 00:32:17 UTC from "Hardcore" data
 
 desc = "scarab Autogen"
 
@@ -8,14 +8,14 @@ desc = "scarab Autogen"
 items = {
 	"1 Gilded Ambush Scarab": {"base": "Gilded Ambush Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Gilded Bestiary Scarab": {"base": "Gilded Bestiary Scarab", "class": "Map Fragments", "type": "map yellow good"},
-	"1 Gilded Breach Scarab": {"base": "Gilded Breach Scarab", "class": "Map Fragments", "type": "map yellow good"},
+	"1 Gilded Breach Scarab": {"base": "Gilded Breach Scarab", "class": "Map Fragments", "type": "map red good"},
 	"1 Gilded Cartography Scarab": {"base": "Gilded Cartography Scarab", "class": "Map Fragments", "type": "map red good"},
-	"1 Gilded Divination Scarab": {"base": "Gilded Divination Scarab", "class": "Map Fragments", "type": "map yellow good"},
+	"1 Gilded Divination Scarab": {"base": "Gilded Divination Scarab", "class": "Map Fragments", "type": "map red good"},
 	"1 Gilded Elder Scarab": {"base": "Gilded Elder Scarab", "class": "Map Fragments", "type": "map yellow good"},
-	"1 Gilded Harbinger Scarab": {"base": "Gilded Harbinger Scarab", "class": "Map Fragments", "type": "map yellow good"},
+	"1 Gilded Harbinger Scarab": {"base": "Gilded Harbinger Scarab", "class": "Map Fragments", "type": "map red good"},
 	"1 Gilded Perandus Scarab": {"base": "Gilded Perandus Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Gilded Reliquary Scarab": {"base": "Gilded Reliquary Scarab", "class": "Map Fragments", "type": "map yellow good"},
-	"1 Gilded Sulphite Scarab": {"base": "Gilded Sulphite Scarab", "class": "Map Fragments", "type": "map yellow good"},
+	"1 Gilded Sulphite Scarab": {"base": "Gilded Sulphite Scarab", "class": "Map Fragments", "type": "map red good"},
 	"1 Gilded Torment Scarab": {"base": "Gilded Torment Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Polished Ambush Scarab": {"base": "Polished Ambush Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Polished Bestiary Scarab": {"base": "Polished Bestiary Scarab", "class": "Map Fragments", "type": "map yellow good"},
