@@ -6,8 +6,9 @@ desc = "maps"
 
 # Base type : settings pair
 items = {
-#	"0 Dig Map": {"base": "Dig Map", "class": "Maps", "type": "challenge high"},
-#	"0 Iceberg Map": {"base": "Iceberg Map", "class": "Maps", "type": "challenge high"},
+	# Maps that have hideouts to unlock :: suggest "challenge high" style to make them stand out
+	"0 Dig Map": {"base": "Dig Map", "class": "Maps", "type": "ignore"},
+	"0 Iceberg Map": {"base": "Iceberg Map", "class": "Maps", "type": "ignore"},
 #	"0 Sunken City Map": {"base": "Sunken City Map", "class": "Maps", "type": "challenge high"},
 #	"0 Tower Map": {"base": "Tower Map", "class": "Maps", "type": "challenge high"},
 #	"0 Terrace Map": {"base": "Terrace Map", "class": "Maps", "type": "challenge high"},
@@ -35,7 +36,7 @@ items = {
 	"1 Divine Vessel": {"other": ['CustomAlertSound "45_show.wav"'], "base": "Divine Vessel", "class": "Map Fragments", "type": "show high"},
 
 	"212 Normal": {"class": "Maps", "other": ["MapTier >= 16"], "type": "map very good"},
-	"213 Normal": {"class": "Maps", "other": ["ItemLevel <= 84", "MapTier = 15"], "type": "map red good"},
+	"213 Normal": {"class": "Maps", "other": ["MapTier = 15"], "type": "map red good"},
 	"214 Normal": {"class": "Maps", "other": ["ItemLevel <= 83", "MapTier = 14"], "type": "map red good"},
 	"215 Normal": {"class": "Maps", "other": ["ItemLevel <= 82", "MapTier = 13"], "type": "map red good"},
 	"216 Normal": {"class": "Maps", "other": ["ItemLevel <= 81", "MapTier = 12"], "type": "map red good"},
