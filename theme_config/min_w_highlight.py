@@ -167,7 +167,7 @@ settings = {
 	"currency low": ["SetFontSize {}".format(size['small']),
 					 "SetBackgroundColor {} 220".format(color['black'])],
 	"currency show": ["SetBorderColor {} 150".format(color['currency']),
-#					  'MinimapIcon 2 Yellow Circle',
+					  'MinimapIcon 2 Red Square',
 					  "SetFontSize {}".format(size['normal']),
 					 "SetBackgroundColor {} 220".format(color['black'])],
 	"currency very low": ["SetFontSize {}".format(size['small']),
@@ -366,6 +366,7 @@ settings = {
 					  'CustomAlertSound "{}_unique.wav"'.format(volume['low']),
 					  "SetBackgroundColor {} 220".format(color['black'])],
 	"unique low": ["Rarity Unique",
+				   'MinimapIcon 2 Red Square',
 				   "SetFontSize {}".format(size['small']),
 				   "SetBackgroundColor {} 220".format(color['black'])],
 
