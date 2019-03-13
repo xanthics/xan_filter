@@ -40,7 +40,9 @@ items = {
 	"6 Shaper belt": {"class": "Belts", 'other': ["ShaperItem True"], "type": "rare highlight"},
 	"7 Elder Item": {'other': ["ElderItem True"], "type": "rare low"},
 	"7 Shaper Item": {'other': ["ShaperItem True"], "type": "rare low"},
-	
+	"7 Fractured Item": {'other': ["FracturedItem True"], "type": "rare low"},
+	"7 Synthesised Item": {'other': ["SynthesisedItem True"], "type": "rare low"},
+
 	"8 5": {"other": ["DropLevel <= 5", "ItemLevel >= 15", "ItemLevel <= 74"], "type": "rare low"},
 	"8 10": {"other": ["DropLevel <= 10", "ItemLevel >= 20", "ItemLevel <= 74"], "type": "rare low"},
 	"8 15": {"other": ["DropLevel <= 15", "ItemLevel >= 25", "ItemLevel <= 74"], "type": "rare low"},

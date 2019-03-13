@@ -82,10 +82,10 @@ def currencyclassify(cur, val, curvals, stacks=1):
 	ah = [
 		"Splinter of Chayula", "Splinter of Xoph", "Splinter of Uul-Netol", "Splinter of Tul", "Splinter of Esh",
 		"Chromatic Orb", "Perandus Coin", "Cartographer's Chisel", "Orb of Fusing", "Silver Coin",
-		#"Orb of Alteration",
-		#"Orb of Augmentation",
-		#"Jeweller's Orb",
-		#"Orb of Transmutation",
+		"Orb of Alteration",
+		"Orb of Augmentation",
+		"Jeweller's Orb",
+		"Orb of Transmutation",
 		"Orb of Chance",
 	]
 	if ((cur in ah) or 'Fossil' in cur) and val < curvals['normal']:
@@ -526,7 +526,11 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 
 		for key in paths:
 			req = requester.get(paths[key].format(league))
+			if req.status_code == 204:
+				print("No {} data for {}".format(key, league))
+				continue
 			data = req.json(encoding='utf-8')
+
 			if key == 'currency':
 				for i in data:
 					for ii in data[i]:

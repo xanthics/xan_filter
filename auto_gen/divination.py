@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/10/2019(m/d/y) 21:41:36 UTC from "Standard" data
+# Created: 03/13/2019(m/d/y) 02:13:06 UTC from "Standard" data
 
 desc = "Divination Card"
 
 # Base type : settings pair
 items = {
 	"000 Beauty Through Death": {"base": "Beauty Through Death", "class": "Divination Card", "type": "divination extremely high"},
-	"001 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
-	"002 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination normal"},
+	"001 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination normal"},
+	"002 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
 	"003 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination low"},
 	"004 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination normal"},
 	"005 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination high"},
@@ -21,11 +21,12 @@ items = {
 	"1 Birth of the Three": {"base": "Birth of the Three", "class": "Divination Card", "type": "divination high"},
 	"1 Blessing of God": {"base": "Blessing of God", "class": "Divination Card", "type": "hide"},
 	"1 Blind Venture": {"base": "Blind Venture", "class": "Divination Card", "type": "divination high"},
+	"1 Boon of Justice": {"base": "Boon of Justice", "class": "Divination Card", "type": "divination high"},
 	"1 Boon of the First Ones": {"base": "Boon of the First Ones", "class": "Divination Card", "type": "divination very high"},
 	"1 Bowyer's Dream": {"base": "Bowyer's Dream", "class": "Divination Card", "type": "divination high"},
 	"1 Cartographer's Delight": {"base": "Cartographer's Delight", "class": "Divination Card", "type": "divination low"},
 	"1 Chaotic Disposition": {"base": "Chaotic Disposition", "class": "Divination Card", "type": "divination high"},
-	"1 Death": {"base": "Death", "class": "Divination Card", "type": "divination low"},
+	"1 Dark Temptation": {"base": "Dark Temptation", "class": "Divination Card", "type": "divination very high"},
 	"1 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "hide"},
 	"1 Emperor of Purity": {"base": "Emperor of Purity", "class": "Divination Card", "type": "divination high"},
 	"1 Harmony of Souls": {"base": "Harmony of Souls", "class": "Divination Card", "type": "divination high"},
@@ -42,12 +43,13 @@ items = {
 	"1 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination high"},
 	"1 Mawr Blaidd": {"base": "Mawr Blaidd", "class": "Divination Card", "type": "divination extremely high"},
 	"1 Merciless Armament": {"base": "Merciless Armament", "class": "Divination Card", "type": "hide"},
+	"1 Monochrome": {"base": "Monochrome", "class": "Divination Card", "type": "divination high"},
 	"1 Perfection": {"base": "Perfection", "class": "Divination Card", "type": "divination high"},
 	"1 Pride Before the Fall": {"base": "Pride Before the Fall", "class": "Divination Card", "type": "divination high"},
 	"1 Prosperity": {"base": "Prosperity", "class": "Divination Card", "type": "hide"},
 	"1 Rain Tempter": {"base": "Rain Tempter", "class": "Divination Card", "type": "hide"},
 	"1 Rebirth": {"base": "Rebirth", "class": "Divination Card", "type": "divination high"},
-	"1 Sambodhi's Vow": {"base": "Sambodhi's Vow", "class": "Divination Card", "type": "divination very high"},
+	"1 Sambodhi's Vow": {"base": "Sambodhi's Vow", "class": "Divination Card", "type": "divination high"},
 	"1 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},
 	"1 Struck by Lightning": {"base": "Struck by Lightning", "class": "Divination Card", "type": "hide"},
 	"1 The Admirer": {"base": "The Admirer", "class": "Divination Card", "type": "divination high"},
@@ -75,6 +77,7 @@ items = {
 	"1 The Fletcher": {"base": "The Fletcher", "class": "Divination Card", "type": "divination high"},
 	"1 The Flora's Gift": {"base": "The Flora's Gift", "class": "Divination Card", "type": "divination low"},
 	"1 The Formless Sea": {"base": "The Formless Sea", "class": "Divination Card", "type": "divination high"},
+	"1 The Forsaken": {"base": "The Forsaken", "class": "Divination Card", "type": "divination high"},
 	"1 The Gentleman": {"base": "The Gentleman", "class": "Divination Card", "type": "divination low"},
 	"1 The Hale Heart": {"base": "The Hale Heart", "class": "Divination Card", "type": "divination high"},
 	"1 The Hermit": {"base": "The Hermit", "class": "Divination Card", "type": "divination low"},
@@ -84,6 +87,7 @@ items = {
 	"1 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination low"},
 	"1 The Innocent": {"base": "The Innocent", "class": "Divination Card", "type": "divination high"},
 	"1 The Inoculated": {"base": "The Inoculated", "class": "Divination Card", "type": "hide"},
+	"1 The Insatiable": {"base": "The Insatiable", "class": "Divination Card", "type": "divination low"},
 	"1 The Inventor": {"base": "The Inventor", "class": "Divination Card", "type": "divination high"},
 	"1 The Iron Bard": {"base": "The Iron Bard", "class": "Divination Card", "type": "divination very high"},
 	"1 The Jester": {"base": "The Jester", "class": "Divination Card", "type": "hide"},
@@ -120,6 +124,7 @@ items = {
 	"1 The Sigil": {"base": "The Sigil", "class": "Divination Card", "type": "hide"},
 	"1 The Spark and the Flame": {"base": "The Spark and the Flame", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Spoiled Prince": {"base": "The Spoiled Prince", "class": "Divination Card", "type": "hide"},
+	"1 The Standoff": {"base": "The Standoff", "class": "Divination Card", "type": "divination high"},
 	"1 The Surgeon": {"base": "The Surgeon", "class": "Divination Card", "type": "hide"},
 	"1 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination high"},
 	"1 The Throne": {"base": "The Throne", "class": "Divination Card", "type": "divination high"},

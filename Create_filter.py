@@ -159,12 +159,12 @@ def get_poe_path():
 
 
 # main function for creating a filter
-def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
+def main(leagues=('Standard', 'Hardcore', 'Synthesis', 'Hardcore Synthesis')):
 	gen_list = gen_list_compact
 	lookup_leagues = {'Standard': ("st", "Standard", uniques, divination, stcurrency, stessence, bases, prophecy, scarab),
 					  'Hardcore': ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence, hcbases, hcprophecy, hcscarab),
-					  'tmpstandard': ("t", "Temp Sofcore", tuniques, tdivination, tcurrency, tessence, tbases, tprophecy, tscarab),
-					  'tmphardcore': ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence, thcbases, thcprophecy, thcscarab)}
+					  'Synthesis': ("t", "Temp Softcore", tuniques, tdivination, tcurrency, tessence, tbases, tprophecy, tscarab),
+					  'Hardcore Synthesis': ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence, thcbases, thcprophecy, thcscarab)}
 	leveling = True  # toggle to show leveling items
 	soundlist = []
 	for i in leagues:
@@ -257,8 +257,8 @@ def main(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 
 if __name__ == "__main__":
 	import pricetool_ninja
-	league = ['Standard', 'Hardcore', 'tmpstandard', 'tmphardcore']
-#	league = ['tmpstandard']
+	league = ['Standard', 'Hardcore', 'Synthesis', 'Hardcore Synthesis']
+#	league = ['Synthesis']
 	pricetool_ninja.scrape_ninja(league)
 	# reload updated modules
 	for module in [divination, hcdivination, tdivination, thcdivination,
