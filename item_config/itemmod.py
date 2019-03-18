@@ -64,7 +64,6 @@ def itemmods():
 					 "Wand",
 					 "Bow",
 					 "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword",
-					 "Shield",
 					 "Body Armour",
 					 "Boots",
 					 "Gloves",
@@ -92,7 +91,6 @@ def itemmods():
 					 "Wand",
 					 "Bow",
 					 "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword",
-					 "Shield",
 					 "Body Armour",
 					 "Boots",
 					 "Gloves",
@@ -131,6 +129,7 @@ def itemmods():
 
 
 	return ret
+
 
 if __name__ == '__main__':
 	rets = itemmods()
