@@ -87,6 +87,7 @@ def currencyclassify(cur, val, curvals, stacks=1):
 		"Jeweller's Orb",
 		"Orb of Transmutation",
 		"Orb of Chance",
+		"Glassblower's Bauble",
 	]
 	if ((cur in ah) or 'Fossil' in cur) and val < curvals['normal']:
 		tier = 'currency show'
