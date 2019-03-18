@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/13/2019(m/d/y) 02:13:12 UTC from "Hardcore" data
+# Created: 03/18/2019(m/d/y) 03:03:05 UTC from "Hardcore" data
 
 desc = "Divination Card"
 
 # Base type : settings pair
 items = {
 	"000 Beauty Through Death": {"base": "Beauty Through Death", "class": "Divination Card", "type": "divination extremely high"},
-	"001 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination very high"},
+	"001 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination high"},
 	"002 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
 	"003 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination low"},
 	"004 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination normal"},
@@ -40,7 +40,7 @@ items = {
 	"1 Mawr Blaidd": {"base": "Mawr Blaidd", "class": "Divination Card", "type": "divination extremely high"},
 	"1 Merciless Armament": {"base": "Merciless Armament", "class": "Divination Card", "type": "hide"},
 	"1 Might is Right": {"base": "Might is Right", "class": "Divination Card", "type": "divination low"},
-	"1 Perfection": {"base": "Perfection", "class": "Divination Card", "type": "divination very high"},
+	"1 Perfection": {"base": "Perfection", "class": "Divination Card", "type": "divination high"},
 	"1 Pride Before the Fall": {"base": "Pride Before the Fall", "class": "Divination Card", "type": "divination very high"},
 	"1 Prosperity": {"base": "Prosperity", "class": "Divination Card", "type": "hide"},
 	"1 Rain Tempter": {"base": "Rain Tempter", "class": "Divination Card", "type": "hide"},
@@ -54,7 +54,7 @@ items = {
 	"1 The Betrayal": {"base": "The Betrayal", "class": "Divination Card", "type": "divination low"},
 	"1 The Body": {"base": "The Body", "class": "Divination Card", "type": "divination high"},
 	"1 The Breach": {"base": "The Breach", "class": "Divination Card", "type": "divination high"},
-	"1 The Brittle Emperor": {"base": "The Brittle Emperor", "class": "Divination Card", "type": "divination very high"},
+	"1 The Brittle Emperor": {"base": "The Brittle Emperor", "class": "Divination Card", "type": "divination high"},
 	"1 The Carrion Crow": {"base": "The Carrion Crow", "class": "Divination Card", "type": "hide"},
 	"1 The Cartographer": {"base": "The Cartographer", "class": "Divination Card", "type": "divination high"},
 	"1 The Catalyst": {"base": "The Catalyst", "class": "Divination Card", "type": "divination low"},
@@ -66,7 +66,7 @@ items = {
 	"1 The Dark Mage": {"base": "The Dark Mage", "class": "Divination Card", "type": "divination high"},
 	"1 The Deceiver": {"base": "The Deceiver", "class": "Divination Card", "type": "divination low"},
 	"1 The Doctor": {"base": "The Doctor", "class": "Divination Card", "type": "divination extremely high"},
-	"1 The Dreamer": {"base": "The Dreamer", "class": "Divination Card", "type": "divination very high"},
+	"1 The Dreamer": {"base": "The Dreamer", "class": "Divination Card", "type": "divination high"},
 	"1 The Endless Darkness": {"base": "The Endless Darkness", "class": "Divination Card", "type": "divination very high"},
 	"1 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
 	"1 The Enlightened": {"base": "The Enlightened", "class": "Divination Card", "type": "divination high"},
@@ -80,7 +80,7 @@ items = {
 	"1 The Hale Heart": {"base": "The Hale Heart", "class": "Divination Card", "type": "divination very high"},
 	"1 The Harvester": {"base": "The Harvester", "class": "Divination Card", "type": "divination high"},
 	"1 The Hermit": {"base": "The Hermit", "class": "Divination Card", "type": "divination low"},
-	"1 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination very high"},
+	"1 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination high"},
 	"1 The Hunger": {"base": "The Hunger", "class": "Divination Card", "type": "divination high"},
 	"1 The Immortal": {"base": "The Immortal", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination low"},
@@ -91,8 +91,8 @@ items = {
 	"1 The Jester": {"base": "The Jester", "class": "Divination Card", "type": "hide"},
 	"1 The Jeweller's Boon": {"base": "The Jeweller's Boon", "class": "Divination Card", "type": "divination high"},
 	"1 The King's Blade": {"base": "The King's Blade", "class": "Divination Card", "type": "hide"},
-	"1 The King's Heart": {"base": "The King's Heart", "class": "Divination Card", "type": "divination very high"},
-	"1 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination very high"},
+	"1 The King's Heart": {"base": "The King's Heart", "class": "Divination Card", "type": "divination high"},
+	"1 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination high"},
 	"1 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination low"},
 	"1 The Lion": {"base": "The Lion", "class": "Divination Card", "type": "divination high"},
 	"1 The Lord in Black": {"base": "The Lord in Black", "class": "Divination Card", "type": "hide"},
@@ -129,7 +129,7 @@ items = {
 	"1 The Summoner": {"base": "The Summoner", "class": "Divination Card", "type": "divination low"},
 	"1 The Surgeon": {"base": "The Surgeon", "class": "Divination Card", "type": "hide"},
 	"1 The Sword King's Salute": {"base": "The Sword King's Salute", "class": "Divination Card", "type": "divination high"},
-	"1 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination very high"},
+	"1 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination high"},
 	"1 The Throne": {"base": "The Throne", "class": "Divination Card", "type": "divination high"},
 	"1 The Twilight Moon": {"base": "The Twilight Moon", "class": "Divination Card", "type": "divination high"},
 	"1 The Twins": {"base": "The Twins", "class": "Divination Card", "type": "hide"},
@@ -152,7 +152,7 @@ items = {
 	"1 The World Eater": {"base": "The World Eater", "class": "Divination Card", "type": "divination very high"},
 	"1 The Wretched": {"base": "The Wretched", "class": "Divination Card", "type": "divination high"},
 	"1 Thunderous Skies": {"base": "Thunderous Skies", "class": "Divination Card", "type": "hide"},
-	"1 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination very high"},
+	"1 Time-Lost Relic": {"base": "Time-Lost Relic", "class": "Divination Card", "type": "divination high"},
 	"1 Treasure Hunter": {"base": "Treasure Hunter", "class": "Divination Card", "type": "divination high"},
 	"1 Turn the Other Cheek": {"base": "Turn the Other Cheek", "class": "Divination Card", "type": "divination low"},
 	"1 Wealth and Power": {"base": "Wealth and Power", "class": "Divination Card", "type": "divination very high"},
