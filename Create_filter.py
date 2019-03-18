@@ -52,7 +52,7 @@ from item_config import labyrinth
 from item_config import maps
 from item_config import recipe_item
 from item_config import show
-from item_config.gen_item_lists import genrareshighlight, genraresleveling, gennonrareleveling
+from item_config.gen_item_lists import genrareshighlight, genraresleveling, gennonrareleveling, genrareshighlighttiered
 from item_config.itemmod import itemmods
 
 from theme_config import formatting
@@ -201,7 +201,9 @@ def main(leagues=('Standard', 'Hardcore', 'Synthesis', 'Hardcore Synthesis')):
 			flags = 'All'  # see item_config/rare_gen - genraresleveling for valid values
 			buffer += gen_list(genraresleveling(flags, overlevel=3, maxlevel=67), desc, soundlist)
 
-		buffer += gen_list(genrareshighlight(), 'Rare item highlighting for endgame', soundlist)
+#		buffer += gen_list(genrareshighlight(), 'Rare item highlighting for endgame', soundlist)
+		buffer += gen_list(genrareshighlighttiered(), 'Rare item highlighting for endgame', soundlist)
+
 		# buffer += gen_list(chroma.items, chroma.desc, soundlist)  # chrome vendor items
 		if leveling:
 			buffer += gen_list(general_levelling.items, general_levelling.desc, soundlist)
@@ -257,8 +259,8 @@ def main(leagues=('Standard', 'Hardcore', 'Synthesis', 'Hardcore Synthesis')):
 
 if __name__ == "__main__":
 	import pricetool_ninja
-	league = ['Standard', 'Hardcore', 'Synthesis', 'Hardcore Synthesis']
-#	league = ['Synthesis']
+#	league = ['Standard', 'Hardcore', 'Synthesis', 'Hardcore Synthesis']
+	league = ['Synthesis']
 	pricetool_ninja.scrape_ninja(league)
 	# reload updated modules
 	for module in [divination, hcdivination, tdivination, thcdivination,
