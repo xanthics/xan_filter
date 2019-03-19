@@ -827,7 +827,7 @@ bases = {
 			{'drop': 1, 'base': 'Ring', 'name': 'Breach Ring', 'tier': 4},  # Local Item Stats Are Doubled In Breach (1)
 			{'drop': 2, 'base': 'Ring', 'name': 'Iron Ring', 'tier': 4},  # Minimum Added Physical Damage (1), Maximum Added Physical Damage (4)
 			{'drop': 4, 'base': 'Ring', 'name': 'Coral Ring', 'tier': 1},  # Base Maximum Life (20 to 30)
-			{'drop': 5, 'base': 'Ring', 'name': 'Paua Ring', 'tier': 3},  # Base Maximum Mana (20 to 25)
+			{'drop': 5, 'base': 'Ring', 'name': 'Paua Ring', 'tier': 4},  # Base Maximum Mana (20 to 25)
 			{'drop': 8, 'base': 'Ring', 'name': 'Sapphire Ring', 'tier': 1},  # Base Cold Damage Resistance (20 to 30)
 			{'drop': 12, 'base': 'Ring', 'name': 'Golden Hoop', 'tier': 0},  # Additional All Attributes (8 to 12)
 			{'drop': 12, 'base': 'Ring', 'name': 'Topaz Ring', 'tier': 1},  # Base Lightning Damage Resistance (20 to 30)
@@ -1063,9 +1063,7 @@ def genrareshighlighttiered():
 	ret = {}
 	substrings = findsubstrings()
 	# Bases that are always shown when a certain ilvl threshold is reached.  Highlighting rules still followed
-	alwaysshow = {'Boots': 86, 'Accessory': 68}
-	# maximum value to show for non-special drops
-	maxnormal = 3
+	alwaysshow = {'Boots': 86, 'Accessory': 68, 'Other': 1}
 	# point penalty to highlighting for different types of items.  Lower is better
 	type_penalty = {
 		'ElderItem': 0,
@@ -1074,11 +1072,13 @@ def genrareshighlighttiered():
 		'SynthesisedItem': 0,
 		None: 1
 	}
+	# maximum value to show for non-special drops
+	maxnormal = 2
 	# maxixum total for each highlighting style
 	style_tiers = {
 		2: 'rare highlight',
-		4: 'rare high',
-		6: 'rare normal',
+		3: 'rare high',
+		5: 'rare normal',
 		99: 'rare low',
 	}
 	# dictionary of base: array where each entry is a mod tier.  -1 means no entry
@@ -1119,6 +1119,8 @@ def genrareshighlighttiered():
 			for i in range(len(bases[category][vals])):
 				cur = bases[category][vals][i]
 				for typ in type_penalty:
+					pidx = ''
+					phl = ''
 					for c, tier in enumerate(base_mod_tiers[cur['base']]):
 						if tier == -1:
 							continue
@@ -1126,20 +1128,26 @@ def genrareshighlighttiered():
 						if not typ and not s and penalty > maxnormal:
 							break
 						hl = minhl(penalty, style_tiers)
+						if typ and hl == 'rare low':
+							break
 						vstr = '{}'.format(86-tier)
-						if s:
+						if s and not typ:
 							if tier < ilvl:
 								tier = ilvl
 							vstr = '{:03d}'.format(86-tier)
 						idx = '{} {} {}'.format(vstr, cur['name'], typ)
+						if hl == phl:
+							del ret[pidx]
 						ret[idx] = {"base": cur['name'], "other": ["ItemLevel >= {}".format(tier)], "type": hl}
 						if cur['name'] in substrings:
 							ret[idx]['class'] = cur['base']
 							ret[idx]['other'].append('DropLevel {}'.format(cur['drop']))
 						if typ:
 							ret[idx]['other'].append('{} True'.format(typ))
-						if s and tier == ilvl:
+						if s and not typ and tier == ilvl:
 							break
+						pidx = idx
+						phl = hl
 
 	return ret
 
