@@ -843,6 +843,18 @@ bases = {
 			{'drop': 78, 'base': 'Ring', 'name': 'Opal Ring', 'tier': 0},  # Elemental Damage +(15 to 25)
 			{'drop': 78, 'base': 'Ring', 'name': 'Steel Ring', 'tier': 0},  # Minimum Added Physical Damage (3 to 4), Maximum Added Physical Damage (10 to 14)
 		],
+		"Quiver": [
+			{'drop': 4, 'base': 'Quiver', 'name': 'Two-Point Arrow Quiver', 'tier': 3},  # (20-30)% increased Global Accuracy Rating
+			{'drop': 5, 'base': 'Quiver', 'name': 'Serrated Arrow Quiver', 'tier': 4},  # Adds 1 to 4 Physical Damage to Bow Attacks
+			{'drop': 10, 'base': 'Quiver', 'name': 'Sharktooth Arrow Quiver', 'tier': 4},  # +(3-4) Life gained for each Enemy hit by your Attacks
+			{'drop': 16, 'base': 'Quiver', 'name': 'Blunt Arrow Quiver', 'tier': 4},  # (25-35)% increased Stun Duration on Enemies
+			{'drop': 22, 'base': 'Quiver', 'name': 'Fire Arrow Quiver', 'tier': 4},  # Adds 4 to 8 Fire Damage to Bow Attacks
+			{'drop': 28, 'base': 'Quiver', 'name': 'Broadhead Arrow Quiver', 'tier': 2},  # Adds 6 to 12 Physical Damage to Bow Attacks
+			{'drop': 36, 'base': 'Quiver', 'name': 'Penetrating Arrow Quiver', 'tier': 1},  # Arrows Pierce an additional Target
+			{'drop': 45, 'base': 'Quiver', 'name': 'Ornate Quiver', 'tier': 0},  # Has 1 Socket
+			{'drop': 45, 'base': 'Quiver', 'name': 'Spike-Point Arrow Quiver', 'tier': 1},  # (20-30)% increased Global Critical Strike Chance
+
+		],
 		"Other": [
 			{'drop': 100, 'base': 'Jewel', 'name': 'Cobalt Jewel', 'tier': 0},
 			{'drop': 100, 'base': 'Jewel', 'name': 'Crimson Jewel', 'tier': 0},
@@ -1104,6 +1116,7 @@ def genrareshighlighttiered():
 		'Amulet': [85, 84, 73, 60],
 		'Belt': [85, 84, 73, 60],
 		'Ring': [-1, 84, 73, 60],
+		'Quiver': [85, 84, 73, 60],
 		'Jewel': [1],
 		'Abyss Jewel': [-1, 83, 72, 63]
 	}
