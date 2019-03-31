@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/30/2019(m/d/y) 20:34:46 UTC from "Synthesis" data
+# Created: 03/31/2019(m/d/y) 00:06:14 UTC from "Synthesis" data
 
 desc = "Essence Autogen"
 
@@ -59,7 +59,7 @@ items = {
 	"0 Screaming Essence of Woe": {"base": "Screaming Essence of Woe", "class": "Currency", "type": "currency normal"},
 	"0 Screaming Essence of Wrath": {"base": "Screaming Essence of Wrath", "class": "Currency", "type": "currency low"},
 	"0 Screaming Essence of Zeal": {"base": "Screaming Essence of Zeal", "class": "Currency", "type": "currency normal"},
-	"0 Shrieking Essence of Anger": {"base": "Shrieking Essence of Anger", "class": "Currency", "type": "currency high"},
+	"0 Shrieking Essence of Anger": {"base": "Shrieking Essence of Anger", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Anguish": {"base": "Shrieking Essence of Anguish", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Contempt": {"base": "Shrieking Essence of Contempt", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Doubt": {"base": "Shrieking Essence of Doubt", "class": "Currency", "type": "currency normal"},

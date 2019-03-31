@@ -84,10 +84,10 @@ def currencyclassify(cur, val, curvals, stacks=1):
 		"Chromatic Orb", "Perandus Coin", "Cartographer's Chisel", "Orb of Fusing", "Silver Coin",
 		"Orb of Alteration",
 		"Orb of Augmentation",
-		"Jeweller's Orb",
-		"Orb of Transmutation",
+		# "Jeweller's Orb",
+		# "Orb of Transmutation",
 		"Orb of Chance",
-		"Glassblower's Bauble",
+		# "Glassblower's Bauble",
 	]
 	if ((cur in ah) or 'Fossil' in cur) and val < curvals['normal']:
 		tier = 'currency show'
@@ -122,7 +122,6 @@ def gen_currency(currency_list, league):
 	shards = {'Binding Shard': 'Orb of Binding', 'Horizon Shard': 'Orb of Horizons', 'Harbinger\'s Shard': 'Harbinger\'s Orb', 'Engineer\'s Shard': 'Engineer\'s Orb', 'Ancient Shard': 'Ancient Orb',
 	          'Regal Shard': 'Regal Orb', 'Alchemy Shard': 'Orb of Alchemy', 'Alteration Shard': 'Orb of Alteration', 'Transmutation Shard': 'Orb of Transmutation', 'Scroll Fragment': 'Scroll of Wisdom',
 			  'Exalted Shard': 'Exalted Orb', 'Annulment Shard': 'Orb of Annulment', 'Mirror Shard': 'Mirror of Kalandra'}
-
 
 	for s in shards:
 		if s not in currency_list:

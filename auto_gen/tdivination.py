@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/30/2019(m/d/y) 20:34:46 UTC from "Synthesis" data
+# Created: 03/31/2019(m/d/y) 00:06:14 UTC from "Synthesis" data
 
 desc = "Divination Card"
 
 # Base type : settings pair
 items = {
 	"000 Beauty Through Death": {"base": "Beauty Through Death", "class": "Divination Card", "type": "divination extremely high"},
-	"001 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
-	"002 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination normal"},
+	"001 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination low"},
+	"002 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
 	"003 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination low"},
 	"004 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination high"},
 	"005 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination high"},
@@ -22,6 +22,7 @@ items = {
 	"1 Boon of Justice": {"base": "Boon of Justice", "class": "Divination Card", "type": "divination low"},
 	"1 Boon of the First Ones": {"base": "Boon of the First Ones", "class": "Divination Card", "type": "divination high"},
 	"1 Bowyer's Dream": {"base": "Bowyer's Dream", "class": "Divination Card", "type": "divination high"},
+	"1 Call to the First Ones": {"base": "Call to the First Ones", "class": "Divination Card", "type": "divination low"},
 	"1 Cartographer's Delight": {"base": "Cartographer's Delight", "class": "Divination Card", "type": "divination low"},
 	"1 Chaotic Disposition": {"base": "Chaotic Disposition", "class": "Divination Card", "type": "divination high"},
 	"1 Dark Temptation": {"base": "Dark Temptation", "class": "Divination Card", "type": "divination low"},
@@ -45,7 +46,7 @@ items = {
 	"1 Light and Truth": {"base": "Light and Truth", "class": "Divination Card", "type": "divination low"},
 	"1 Loyalty": {"base": "Loyalty", "class": "Divination Card", "type": "divination low"},
 	"1 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination high"},
-	"1 Mawr Blaidd": {"base": "Mawr Blaidd", "class": "Divination Card", "type": "divination very high"},
+	"1 Mawr Blaidd": {"base": "Mawr Blaidd", "class": "Divination Card", "type": "divination high"},
 	"1 Merciless Armament": {"base": "Merciless Armament", "class": "Divination Card", "type": "hide"},
 	"1 Might is Right": {"base": "Might is Right", "class": "Divination Card", "type": "divination low"},
 	"1 Mitts": {"base": "Mitts", "class": "Divination Card", "type": "divination low"},
@@ -57,6 +58,7 @@ items = {
 	"1 Rain of Chaos": {"base": "Rain of Chaos", "class": "Divination Card", "type": "divination low"},
 	"1 Rats": {"base": "Rats", "class": "Divination Card", "type": "divination low"},
 	"1 Rebirth": {"base": "Rebirth", "class": "Divination Card", "type": "divination high"},
+	"1 Sambodhi's Vow": {"base": "Sambodhi's Vow", "class": "Divination Card", "type": "divination high"},
 	"1 Scholar of the Seas": {"base": "Scholar of the Seas", "class": "Divination Card", "type": "divination high"},
 	"1 Seven Years Bad Luck": {"base": "Seven Years Bad Luck", "class": "Divination Card", "type": "divination very high"},
 	"1 Shard of Fate": {"base": "Shard of Fate", "class": "Divination Card", "type": "divination low"},
@@ -77,14 +79,12 @@ items = {
 	"1 The Celestial Stone": {"base": "The Celestial Stone", "class": "Divination Card", "type": "divination very high"},
 	"1 The Chains that Bind": {"base": "The Chains that Bind", "class": "Divination Card", "type": "divination high"},
 	"1 The Coming Storm": {"base": "The Coming Storm", "class": "Divination Card", "type": "divination low"},
-	"1 The Cursed King": {"base": "The Cursed King", "class": "Divination Card", "type": "divination high"},
 	"1 The Dapper Prodigy": {"base": "The Dapper Prodigy", "class": "Divination Card", "type": "divination high"},
 	"1 The Dark Mage": {"base": "The Dark Mage", "class": "Divination Card", "type": "divination high"},
 	"1 The Deceiver": {"base": "The Deceiver", "class": "Divination Card", "type": "divination low"},
 	"1 The Doctor": {"base": "The Doctor", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Doppelganger": {"base": "The Doppelganger", "class": "Divination Card", "type": "divination low"},
 	"1 The Dreamer": {"base": "The Dreamer", "class": "Divination Card", "type": "divination high"},
-	"1 The Drunken Aristocrat": {"base": "The Drunken Aristocrat", "class": "Divination Card", "type": "divination low"},
 	"1 The Endless Darkness": {"base": "The Endless Darkness", "class": "Divination Card", "type": "divination high"},
 	"1 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
 	"1 The Enlightened": {"base": "The Enlightened", "class": "Divination Card", "type": "divination very high"},
@@ -101,7 +101,7 @@ items = {
 	"1 The Hermit": {"base": "The Hermit", "class": "Divination Card", "type": "divination low"},
 	"1 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination high"},
 	"1 The Hunger": {"base": "The Hunger", "class": "Divination Card", "type": "divination high"},
-	"1 The Immortal": {"base": "The Immortal", "class": "Divination Card", "type": "divination very high"},
+	"1 The Immortal": {"base": "The Immortal", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Incantation": {"base": "The Incantation", "class": "Divination Card", "type": "divination low"},
 	"1 The Innocent": {"base": "The Innocent", "class": "Divination Card", "type": "divination high"},
 	"1 The Inoculated": {"base": "The Inoculated", "class": "Divination Card", "type": "hide"},
@@ -132,7 +132,6 @@ items = {
 	"1 The Porcupine": {"base": "The Porcupine", "class": "Divination Card", "type": "divination high"},
 	"1 The Price of Protection": {"base": "The Price of Protection", "class": "Divination Card", "type": "divination high"},
 	"1 The Professor": {"base": "The Professor", "class": "Divination Card", "type": "divination high"},
-	"1 The Puzzle": {"base": "The Puzzle", "class": "Divination Card", "type": "divination low"},
 	"1 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
 	"1 The Rabid Rhoa": {"base": "The Rabid Rhoa", "class": "Divination Card", "type": "hide"},
 	"1 The Risk": {"base": "The Risk", "class": "Divination Card", "type": "divination very high"},
@@ -154,6 +153,7 @@ items = {
 	"1 The Sword King's Salute": {"base": "The Sword King's Salute", "class": "Divination Card", "type": "divination low"},
 	"1 The Thaumaturgist": {"base": "The Thaumaturgist", "class": "Divination Card", "type": "divination high"},
 	"1 The Throne": {"base": "The Throne", "class": "Divination Card", "type": "divination high"},
+	"1 The Tower": {"base": "The Tower", "class": "Divination Card", "type": "divination low"},
 	"1 The Twins": {"base": "The Twins", "class": "Divination Card", "type": "hide"},
 	"1 The Tyrant": {"base": "The Tyrant", "class": "Divination Card", "type": "hide"},
 	"1 The Undaunted": {"base": "The Undaunted", "class": "Divination Card", "type": "divination high"},

@@ -261,7 +261,7 @@ if __name__ == "__main__":
 	import pricetool_ninja
 #	league = ['Standard', 'Hardcore', 'Synthesis', 'Hardcore Synthesis']
 	league = ['Synthesis']
-#	pricetool_ninja.scrape_ninja(league)
+	pricetool_ninja.scrape_ninja(league)
 	# reload updated modules
 	for module in [divination, hcdivination, tdivination, thcdivination,
 				   uniques, hcuniques, tuniques, thcuniques,
