@@ -980,88 +980,6 @@ def gennonrareleveling(flags='All', overlevel=0, maxlevel=35, alwayshighlight=()
 	return ret
 
 
-# generate a list of t1, highlighted, and "show anyways" rares
-# alwaysshow shows any items that match the flag at the ilvl specificed or higher
-def genrareshighlight():
-	ret = {}
-	substrings = findsubstrings()
-	# Bases that are always shown when a certain ilvl threshold is reached
-	alwaysshow = {'Helmet': 84, 'Gloves': 84, 'Boots': 84, 'Accessory': 68}
-
-	#  Bases that are always highlighted, supercedes t1 and shown
-	highlighted = {'Two-Toned Boots',
-	               'Spiked Gloves', 'Gripped Gloves', 'Fingerless Silk Gloves',
-	               'Bone Helmet',
-	               'Jade Amulet', 'Amber Amulet', 'Lapis Amulet', 'Agate Amulet', 'Turquoise Amulet', 'Citrine Amulet', 'Onyx Amulet', 'Marble Amulet',
-	               'Stygian Vise', 'Rustic Sash', 'Heavy Belt', 'Leather Belt',
-	               'Coral Ring', 'Sapphire Ring', 'Topaz Ring', 'Ruby Ring', 'Two-Stone Ring', 'Diamond Ring', 'Prismatic Ring', 'Amethyst Ring', 'Unset Ring', 'Opal Ring', 'Steel Ring',
-	               'Cobalt Jewel', 'Crimson Jewel', 'Viridian Jewel', 'Searching Eye Jewel', 'Murderous Eye Jewel', 'Hypnotic Eye Jewel', 'Ghastly Eye Jewel'}
-
-	#  Best bases, supercedes shown
-	t1 = {'Harbinger Bow',
-	      'Eye Gouger', 'Imperial Claw', 'Gemini Claw',
-	      'Demon Dagger', 'Imperial Skean', 'Platinum Kris',
-	      'Void Sceptre', 'Sambar Sceptre',
-	      'Harpy Rapier', 'Jewelled Foil',
-	      'Astral Plate', 'Glorious Plate', "Assassin's Garb", "Saint's Hauberk", 'Saintly Chainmail', 'Triumphant Lamellar',
-	      'Titan Greaves', 'Slink Boots', 'Dragonscale Boots',
-	      'Titan Gauntlets', 'Slink Gloves', 'Dragonscale Gauntlets', 'Crusader Gloves',
-	      'Eternal Burgonet', 'Lion Pelt', 'Nightmare Bascinet',
-	      'Ezomyte Tower Shield', 'Archon Kite Shield', 'Mosaic Kite Shield',
-	      'Paua Amulet', 'Coral Amulet', 'Gold Amulet', 'Blue Pearl Amulet',
-	      'Chain Belt', 'Cloth Belt', 'Studded Belt', 'Vanguard Belt', 'Crystal Belt',
-	      'Breach Ring', 'Iron Ring', 'Paua Ring', 'Moonstone Ring'}
-
-	#  Bases that are always shown
-	shown = {'Throat Stabber', 'Great White Claw', 'Twin Claw', 'Noble Claw', 'Gut Ripper',
-	         'Golden Kris', 'Copper Kris', 'Fiend Dagger', 'Imp Dagger',
-	         'Runic Hatchet',
-	         'Behemoth Mace',
-	         'Apex Rapier', 'Thorn Rapier',
-	         'Fleshripper',
-	         'Coronal Maul',
-	         'Opal Wand', 'Tornado Wand', 'Prophecy Wand', 'Profane Wand',
-	         'Vaal Regalia', 'Carnal Armour', "General's Brigandine",
-	         'Sorcerer Boots', 'Crusader Boots', 'Murder Boots',
-	         'Sorcerer Gloves', 'Murder Mitts',
-	         'Royal Burgonet', 'Sinner Tricorne', 'Hubris Circlet', 'Deicide Mask', 'Pig-Faced Bascinet',
-	         'Crusader Buckler', 'Harmonic Spirit Shield', 'Titanium Spirit Shield', 'Fossilised Spirit Shield', 'Angelic Kite Shield', 'Ceremonial Kite Shield', 'Ivory Spirit Shield', 'Bone Spirit Shield',
-	         }
-
-	askeys = alwaysshow.keys()
-	for category in bases:
-		for vals in bases[category]:
-			f = vals.split('|')
-			l = len(bases[category][vals])
-			s = set(f).intersection(set(askeys))
-			if s:
-				ilvl = min([alwaysshow[x] for x in set(f).intersection(set(askeys))])
-
-			for i in range(l):
-				cur = bases[category][vals][i]
-				if cur['name'] in highlighted:
-					ret['1 {}'.format(cur['name'])] = {"base": cur['name'], "type": "rare highlight"}
-					if cur['name'] in substrings:
-						ret['1 {}'.format(cur['name'])]['class'] = cur['base']
-						ret['1 {}'.format(cur['name'])]['other'] = ['DropLevel {}'.format(cur['drop'])]
-				elif cur['name'] in t1:
-					ret['2 {}'.format(cur['name'])] = {"base": cur['name'], "type": "rare high", "other": ['ItemLevel < 83']}
-					if cur['name'] in substrings:
-						ret['2 {}'.format(cur['name'])]['class'] = cur['base']
-						ret['2 {}'.format(cur['name'])]['other'] = ['DropLevel {}'.format(cur['drop']), 'ItemLevel < 83']
-				elif cur['name'] in shown:
-					ret['3 {}'.format(cur['name'])] = {"base": cur['name'], "type": "rare normal", "other": ['ItemLevel < 83']}
-					if cur['name'] in substrings:
-						ret['3 {}'.format(cur['name'])]['class'] = cur['base']
-						ret['3 {}'.format(cur['name'])]['other'] = ['DropLevel {}'.format(cur['drop']), 'ItemLevel < 83']
-				if s and cur['name'] not in highlighted:
-					ret['4 {}'.format(cur['name'])] = {"base": cur['name'], "other": ["ItemLevel >= {}".format(ilvl)], "type": "rare low"}
-					if cur['name'] in substrings:
-						ret['4 {}'.format(cur['name'])]['class'] = cur['base']
-						ret['4 {}'.format(cur['name'])]['other'].append('DropLevel {}'.format(cur['drop']))
-	return ret
-
-
 # generate a list of rare highlights
 # DO NOT USE with genrareshighlight
 # uses tier data from item list along with tier data for item mods and additional modifiers to determine tiers
@@ -1076,19 +994,34 @@ def genrareshighlighttiered():
 	substrings = findsubstrings()
 	# Bases that are always shown when a certain ilvl threshold is reached.  Highlighting rules still followed
 	alwaysshow = {'Boots': 86, 'Accessory': 68, 'Other': 1}
+	# For items that match rule, override tier.  Mostly for fractured items
+	override_tier = [
+		# type, Base, include, exclude, tier
+		['FracturedItem', 'Boots', set(), {'invalid'}, 1],
+		['FracturedItem', 'Amulet', set(), {'invalid'}, 1],
+		['FracturedItem', 'Ring', set(), {'invalid'}, 1],
+		['FracturedItem', 'Belt', set(), {'invalid'}, 1],
+	]
 	# point penalty to highlighting for different types of items.  Lower is better
 	type_penalty = {
 		'ElderItem': 0,
 		'ShaperItem': 0,
 		'FracturedItem': 0,
-		'SynthesisedItem': 0,
+#		'SynthesisedItem': 0,
 		None: 1
 	}
+	type_pen_idx = [
+		'ElderItem',
+		'ShaperItem',
+		'FracturedItem',
+#		'SynthesisedItem',
+		None
+	]
 	# maximum value to show for non-special drops
 	maxnormal = 2
 	# maxixum total for each highlighting style
 	style_tiers = {
-		2: 'rare highlight',
+		1: 'rare highlight',
 		3: 'rare high',
 		5: 'rare normal',
 		99: 'rare low',
@@ -1121,7 +1054,6 @@ def genrareshighlighttiered():
 		'Abyss Jewel': [-1, 83, 72, 63]
 	}
 	askeys = alwaysshow.keys()
-
 	for category in bases:
 		for vals in bases[category]:
 			f = vals.split('|')
@@ -1132,22 +1064,31 @@ def genrareshighlighttiered():
 			for i in range(len(bases[category][vals])):
 				cur = bases[category][vals][i]
 				for typ in type_penalty:
+					# generate all rules for current item type
+					rules = {}
+					for rule in override_tier:
+						if rule[0] == typ:
+							rules[rule[1]] = [rule[2], rule[3], rule[4]]
 					pidx = ''
 					phl = ''
 					for c, tier in enumerate(base_mod_tiers[cur['base']]):
+						# don't create any rules if tier == -1
 						if tier == -1:
 							continue
-						penalty = c + type_penalty[typ] + cur['tier']
+						# calculate the penalty level of the item
+						penalty = c + type_penalty[typ] + (rules[cur['base']][2] if cur['base'] in rules and rules[cur['base']][0].issubset(f) and not rules[cur['base']][1].issubset(f) else cur['tier'])
+						# if normal item with no special highlight rules and penalty is greater than allowed, do not make a highlight rule
 						if not typ and not s and penalty > maxnormal:
 							break
 						hl = minhl(penalty, style_tiers)
+						# if rule is the same as default highlight rule, skip
 						if typ and hl == 'rare low':
 							break
-						vstr = '{}'.format(86-tier)
+						vstr = '{}{}'.format(type_pen_idx.index(typ), 86-tier)
 						if s and not typ:
 							if tier < ilvl:
 								tier = ilvl
-							vstr = '{:03d}'.format(86-tier)
+							vstr = '{}{:03d}'.format(type_pen_idx.index(typ), 86-tier)
 						idx = '{} {} {}'.format(vstr, cur['name'], typ)
 						if hl == phl:
 							del ret[pidx]
@@ -1157,8 +1098,10 @@ def genrareshighlighttiered():
 							ret[idx]['other'].append('DropLevel {}'.format(cur['drop']))
 						if typ:
 							ret[idx]['other'].append('{} True'.format(typ))
+						# if item is 'always show' with rules, and item type is normal, and tier(ilvl) = show ilvl, break out of loop as we don't need lower tiers
 						if s and not typ and tier == ilvl:
 							break
+						# keep track of the rules we just created
 						pidx = idx
 						phl = hl
 
