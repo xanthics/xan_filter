@@ -52,7 +52,7 @@ from item_config import labyrinth
 from item_config import maps
 from item_config import recipe_item
 from item_config import show
-from item_config.gen_item_lists import genrareshighlight, genraresleveling, gennonrareleveling, genrareshighlighttiered
+from item_config.gen_item_lists import genraresleveling, gennonrareleveling, genrareshighlighttiered
 from item_config.itemmod import itemmods
 
 from theme_config import formatting
@@ -261,7 +261,7 @@ if __name__ == "__main__":
 	import pricetool_ninja
 #	league = ['Standard', 'Hardcore', 'Synthesis', 'Hardcore Synthesis']
 	league = ['Synthesis']
-	pricetool_ninja.scrape_ninja(league)
+#	pricetool_ninja.scrape_ninja(league)
 	# reload updated modules
 	for module in [divination, hcdivination, tdivination, thcdivination,
 				   uniques, hcuniques, tuniques, thcuniques,
