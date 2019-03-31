@@ -7,14 +7,14 @@ desc = "maps"
 # Base type : settings pair
 items = {
 	# Maps that have hideouts to unlock :: suggest "challenge high" style to make them stand out
-#	"0 Dig Map": {"base": "Dig Map", "class": "Maps", "type": "ignore"},
-#	"0 Iceberg Map": {"base": "Iceberg Map", "class": "Maps", "type": "ignore"},
-#	"0 Sunken City Map": {"base": "Sunken City Map", "class": "Maps", "type": "challenge high"},
-#	"0 Tower Map": {"base": "Tower Map", "class": "Maps", "type": "challenge high"},
-#	"0 Terrace Map": {"base": "Terrace Map", "class": "Maps", "type": "challenge high"},
-#	"0 Summit Map": {"base": "Summit Map", "class": "Maps", "type": "challenge high"},
-#	"0 Haunted Mansion Map": {"base": "Haunted Mansion Map", "class": "Maps", "type": "challenge high"},
-#	"0 Crimson Temple Map": {"base": "Crimson Temple Map", "class": "Maps", "type": "challenge high"},
+	"0 Dig Map": {"base": "Dig Map", "class": "Maps", "type": "ignore"},
+	"0 Iceberg Map": {"base": "Iceberg Map", "class": "Maps", "type": "ignore"},
+	"0 Sunken City Map": {"base": "Sunken City Map", "class": "Maps", "type": "ignore"},
+	"0 Tower Map": {"base": "Tower Map", "class": "Maps", "type": "ignore"},
+	"0 Terrace Map": {"base": "Terrace Map", "class": "Maps", "type": "ignore"},
+	"0 Summit Map": {"base": "Summit Map", "class": "Maps", "type": "ignore"},
+	"0 Haunted Mansion Map": {"base": "Haunted Mansion Map", "class": "Maps", "type": "ignore"},
+	"0 Crimson Temple Map": {"base": "Crimson Temple Map", "class": "Maps", "type": "ignore"},
 
 	"1 Sacrifice at Dusk": {"base": "Sacrifice at Dusk", "class": "Map Fragments", "type": "ignore"},
 	"1 Sacrifice at Midnight": {"base": "Sacrifice at Midnight", "class": "Map Fragments", "type": "map white good"},
