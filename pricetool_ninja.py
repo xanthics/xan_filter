@@ -7,7 +7,8 @@ import os
 import requests
 from collections import defaultdict
 from datetime import datetime
-from ninja_defaults import currencydefaults, essencedefaults, prophecydefaults, divdefaults, uniquedefaults, scarabdefaults
+from ninja_defaults import currencydefaults, essencedefaults, prophecydefaults, divdefaults, uniquedefaults, scarabdefaults, helmenchantsdefaults
+from ninja_helm_lookup import helmnames
 
 header = '''#!/usr/bin/python
 # -*- coding: utf-8 -*-
@@ -42,14 +43,14 @@ def convertname(l):
 def fixmissing(ninja_list, defaults, league, name):
 	# Print all items that were returned by poe.ninja that don't have a default set
 	if set(ninja_list.keys()) - set(defaults.keys()):
-		print("{} Missing defaults for {}: \n{}".format(league, name, ', '.join(['"{}": {}'.format(x, ninja_list[x]) for x in set(ninja_list.keys()) - set(defaults.keys())])))
+		print("{} Missing defaults for {}: \n{}".format(league, name, ', '.join(['"{}": {}'.format(x, ninja_list[x]) for x in sorted(set(ninja_list.keys()) - set(defaults.keys()))])))
 	# add missing items to ninja_list
 	for v in set(defaults.keys()) - set(ninja_list.keys()):
 		ninja_list[v] = defaults[v]
 
 
 # Add missing values to data returned by poe.ninja
-def fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uniques):
+def fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uniques, helmenchants):
 	# Add chaos and Scroll of Wisdom to the default list as poe.ninja does not include them
 	currencydefaults["Chaos Orb"] = 1
 	currencydefaults["Scroll of Wisdom"] = 1 / 100
@@ -75,6 +76,8 @@ def fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uni
 
 	fixmissing(uniques, uniquedefaults, league, 'uniques')
 
+	fixmissing(helmenchants, helmenchantsdefaults, league, "helmet enchants")
+
 
 # Convert a currency shorthand to full name.  returns a string
 def currencyclassify(cur, val, curvals, stacks=1):
@@ -82,12 +85,13 @@ def currencyclassify(cur, val, curvals, stacks=1):
 	ah = [
 		"Splinter of Chayula", "Splinter of Xoph", "Splinter of Uul-Netol", "Splinter of Tul", "Splinter of Esh",
 		"Chromatic Orb", "Perandus Coin", "Cartographer's Chisel", "Orb of Fusing", "Silver Coin",
+		"Orb of Alchemy",
 		"Orb of Alteration",
 		"Orb of Augmentation",
-		# "Jeweller's Orb",
-		# "Orb of Transmutation",
+		"Jeweller's Orb",
+		"Orb of Transmutation",
 		"Orb of Chance",
-		# "Glassblower's Bauble",
+		"Glassblower's Bauble",
 	]
 	if ((cur in ah) or 'Fossil' in cur) and val < curvals['normal']:
 		tier = 'currency show'
@@ -283,6 +287,44 @@ def gen_scarab(scarab_list, league, curvals):
 
 
 # Find all keys that have other keys which are substrings
+# Convert a scarab value to string.  returns a string
+def enchantclassify(cur, val, curvals):
+	if val >= curvals['extremely']:
+		tier = 'currency extremely high'
+	elif val >= curvals['very']:
+		tier = 'currency very high'
+	else:
+		return
+
+	return "{0}\": {{\"enchant\": \"{0}\", \"type\": \"{1}\"}}".format(cur, tier)
+
+
+# given a league grouped list of prophecies determine all unique entries and then output for each league
+def gen_enchants(helmenchant_list, league, curvals):
+	substringhelmenchant = find_substrings(helmenchant_list)
+
+	curval = '''{}\ndesc = "Helm Enchant Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
+
+	for c, cur in enumerate(substringhelmenchant):
+		retstr = enchantclassify(cur, helmenchant_list[cur], curvals)
+		if not retstr:
+			retstr = '{0}": {{"enchant": "{0}", "type": "ignore"}}'.format(cur)
+		curval += '\t"{:03d} {},\n'.format(c, retstr)
+		del helmenchant_list[cur]
+	for cur in sorted(helmenchant_list.keys()):
+		retstr = enchantclassify(cur, helmenchant_list[cur], curvals)
+		if retstr:
+			curval += '\t"1 {},\n'.format(retstr)
+
+	curval += '}\n'
+
+	name = convertname(league)
+
+	with open('auto_gen\\{}helmenchant.py'.format(name), 'w', encoding='utf-8') as f:
+		f.write(curval)
+
+
+# Find all keys that have other keys which are substrings
 def find_substrings(source_dict):
 	names = list(source_dict.keys())
 	substringmatches = {}
@@ -306,7 +348,14 @@ def find_substrings(source_dict):
 
 # Convert a div card value to string.  returns a string
 def divclassify(cur, val, curvals, lowcards, badcards):
-	if cur in lowcards:
+	# divination cards that should always show an icon
+	ah = [
+		"Three Faces in the Dark", "Hubris", "Loyalty", "Rain of Chaos", "The Catalyst", "The Doppelganger", "The Gambler", "The Gemcutter",
+	]
+	if cur in ah and val < curvals['high'] / 2:
+		tier = 'divination show'
+
+	elif cur in lowcards:
 		tier = 'divination low'
 	elif cur in badcards:
 		tier = 'hide'
@@ -492,22 +541,23 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		'Uul-Netol\'s Embrace', 'The Red Trail', 'The Surrender', 'United in Dream', 'Skin of the Lords', 'Presence of Chayula', 'The Red Nightmare', 'The Green Nightmare', 'The Blue Nightmare',
 	]
 
-	paths = {
-		'currency': 'http://poe.ninja/api/Data/GetCurrencyOverview?league={}',
-		'bases': 'http://poe.ninja/api/Data/GetBaseTypeOverview?league={}',
-		'div': 'http://poe.ninja/api/Data/GetDivinationCardsOverview?league={}',
-		'essence': 'http://poe.ninja/api/Data/GetEssenceOverview?league={}',
-		'unique jewel': 'http://poe.ninja/api/Data/GetUniqueJewelOverview?league={}',
-		'unique map': 'http://poe.ninja/api/Data/GetUniqueMapOverview?league={}',
-		'unique flask': 'http://poe.ninja/api/Data/GetUniqueFlaskOverview?league={}',
-		'unique weapon': 'http://poe.ninja/api/Data/GetUniqueWeaponOverview?league={}',
-		'unique armor': 'http://poe.ninja/api/Data/GetUniqueArmourOverview?league={}',
-		'unique accessory': 'http://poe.ninja/api/Data/GetUniqueAccessoryOverview?league={}',
-		'resonator': 'https://poe.ninja/api/data/itemoverview?league={}&type=Resonator',
-		'fossil': 'https://poe.ninja/api/data/itemoverview?league={}&type=Fossil',
-		'prophecy': 'https://poe.ninja/api/data/itemoverview?league={}&type=Prophecy',
-		'scarab': 'https://poe.ninja/api/data/itemoverview?league={}&type=Scarab'
-	}
+	keys = [
+		'Currency',
+		'Scarab',
+		'Fossil',
+		'Resonator',
+		'Essence',
+		'DivinationCard',
+		'Prophecy',
+		'BaseType',
+		'HelmetEnchant',
+		'UniqueMap',
+		'UniqueJewel',
+		'UniqueFlask',
+		'UniqueWeapon',
+		'UniqueArmour',
+		'UniqueAccessory'
+	]
 
 	os.environ['NO_PROXY'] = 'poe.ninja'
 	requester = requests.session()
@@ -523,15 +573,20 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		prophecy = {}
 		scarab = {}
 		uniques = defaultdict(list)
+		helmenchants = {}
 
-		for key in paths:
-			req = requester.get(paths[key].format(league))
+		for key in keys:
+			if key in ['Currency']:
+				request = f'https://poe.ninja/api/data/currencyoverview?league={league}&type={key}'
+			else:
+				request = f'https://poe.ninja/api/data/itemoverview?league={league}&type={key}'
+			req = requester.get(request)
 			if req.status_code == 204:
 				print("No {} data for {}".format(key, league))
 				continue
 			data = req.json(encoding='utf-8')
 
-			if key == 'currency':
+			if key == 'Currency':
 				for i in data:
 					for ii in data[i]:
 						if 'chaosEquivalent' in ii:
@@ -541,7 +596,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 								continue
 							currency[ii['currencyTypeName']] = ii['chaosEquivalent']
 
-			elif key == 'bases':
+			elif key == 'BaseType':
 				for i in data:
 					for ii in data[i]:
 						if ii['baseType'].startswith('Superior ') or ii['count'] < mincount:
@@ -552,41 +607,50 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 							bases[ii['levelRequired']][ii['variant']] = {}
 						bases[ii['levelRequired']][ii['variant']][ii['baseType']] = ii['chaosValue']
 
-			elif key in ['resonator', 'fossil']:
+			elif key in ['Resonator', 'Fossil']:
 				for i in data:
 					for ii in data[i]:
 						if ii['count'] < mincount:
 							continue
 						currency[ii['name']] = ii['chaosValue']
 
-			elif key == 'prophecy':
+			elif key == 'HelmetEnchant':
+				for i in data:
+					for ii in data[i]:
+						if ii['count'] < mincount or ii['name'] not in helmnames:
+#							if ii['name'] not in helmnames:
+#								print(repr(ii['name']))
+							continue
+						helmenchants[ii['name']] = ii['chaosValue']
+
+			elif key == 'Prophecy':
 				for i in data:
 					for ii in data[i]:
 						if ii['count'] < mincount:
 							continue
 						prophecy[ii['name']] = ii['chaosValue']
 
-			elif key == 'div':
+			elif key == 'DivinationCard':
 				for i in data:
 					for ii in data[i]:
 						if ii['count'] < mincount:
 							continue
 						divs[ii['name']] = ii['chaosValue']
-			elif key == 'essence':
+			elif key == 'Essence':
 				for i in data:
 					for ii in data[i]:
 						if ii['count'] < mincount:
 							continue
 						essences[ii['name']] = ii['chaosValue']
 
-			elif key == 'scarab':
+			elif key == 'Scarab':
 				for i in data:
 					for ii in data[i]:
 						if ii['count'] < mincount:
 							continue
 						scarab[ii['name']] = ii['chaosValue']
 
-			elif 'unique' in key:
+			elif 'Unique' in key:
 					for i in data:
 						for ii in data[i]:
 							if ii['count'] < mincount:
@@ -599,7 +663,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 				print('Unhandled key: "{}"'.format(key))
 
 		# Add all missing values to poe.ninja data
-		fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uniques)
+		fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uniques, helmenchants)
 
 		curvals = gen_currency(currency, league)
 		gen_div(divs, league, curvals)
@@ -608,6 +672,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		gen_prophecy(prophecy, league, curvals)
 		gen_scarab(scarab, league, curvals)
 		gen_unique(uniques, league, curvals)
+		gen_enchants(helmenchants, league, curvals)
 
 
 if __name__ == '__main__':
