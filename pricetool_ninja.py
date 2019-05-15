@@ -296,7 +296,7 @@ def enchantclassify(cur, val, curvals):
 	else:
 		return
 
-	return ["{0}\": {{\"enchant\": \"{0}\", \"type\": \"{1}\"}}".format(val, tier) for val in helmnames[cur]]
+	return [f"{cur}\": {{\"enchant\": \"{val}\", \"type\": \"{tier}\"}}" for val in helmnames[cur]]
 
 
 # given a league grouped list of prophecies determine all unique entries and then output for each league
@@ -315,8 +315,11 @@ def gen_enchants(helmenchant_list, league, curvals):
 	for cur in sorted(helmenchant_list.keys()):
 		retstr = enchantclassify(cur, helmenchant_list[cur], curvals)
 		if retstr:
-			for val in retstr:
-				curval += '\t"1 {},\n'.format(val)
+			if len(retstr) > 1:
+				for count, val in enumerate(retstr):
+					curval += f'\t"1 {count} {val},\n'
+			else:
+				curval += f'\t"1 {retstr[0]},\n'
 
 	curval += '}\n'
 

@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 05/15/2019(m/d/y) 09:17:17 UTC from "Hardcore" data
+# Created: 05/15/2019(m/d/y) 09:24:51 UTC from "Hardcore" data
 
 desc = "Unique"
 
 # Base type : settings pair
 items = {
 	"000 Reinforced Tower Shield": {"other": ["ItemLevel <= 60"], "base": "Reinforced Tower Shield", "type": "unique very high"},
-	"001 Blunt Arrow Quiver Piece": {"base": "Blunt Arrow Quiver Piece", "type": "unique high"},
-	"002 Archon Kite Shield Piece": {"base": "Archon Kite Shield Piece", "type": "unique high"},
+	"001 Archon Kite Shield Piece": {"base": "Archon Kite Shield Piece", "type": "unique high"},
+	"002 Blunt Arrow Quiver Piece": {"base": "Blunt Arrow Quiver Piece", "type": "unique high"},
 	"003 Callous Mask Piece": {"base": "Callous Mask Piece", "type": "unique high"},
 	"004 Cloth Belt Piece": {"base": "Cloth Belt Piece", "type": "unique high"},
 	"005 Moon Temple Map": {"base": "Moon Temple Map", "type": "unique very high"},
