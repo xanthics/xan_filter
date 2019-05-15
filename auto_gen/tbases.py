@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 05/15/2019(m/d/y) 09:08:00 UTC from "tmpstandard" data
+# Created: 05/15/2019(m/d/y) 09:17:18 UTC from "tmpstandard" data
 
 desc = "Bases"
 
@@ -69,7 +69,6 @@ items = {
 	"0 Shaper Slink Gloves": {"base": "Slink Gloves", "other": ["ShaperItem True", "ItemLevel >= 86"], "type": "base very high"},
 	"0 Shaper Sorcerer Boots": {"base": "Sorcerer Boots", "other": ["ShaperItem True", "ItemLevel >= 86"], "type": "base extremely high"},
 	"0 Shaper Sorcerer Gloves": {"base": "Sorcerer Gloves", "other": ["ShaperItem True", "ItemLevel >= 86"], "type": "base very high"},
-	"0 Shaper Spike-Point Arrow Quiver": {"base": "Spike-Point Arrow Quiver", "other": ["ShaperItem True", "ItemLevel >= 86"], "type": "base very high"},
 	"0 Shaper Stag Sceptre": {"base": "Stag Sceptre", "other": ["ShaperItem True", "ItemLevel >= 86"], "type": "base very high"},
 	"0 Shaper Stealth Boots": {"base": "Stealth Boots", "other": ["ShaperItem True", "ItemLevel >= 86"], "type": "base very high"},
 	"0 Shaper Titan Gauntlets": {"base": "Titan Gauntlets", "other": ["ShaperItem True", "ItemLevel >= 86"], "type": "base very high"},
@@ -136,6 +135,7 @@ items = {
 	"1 Shaper Hubris Circlet": {"base": "Hubris Circlet", "other": ["ShaperItem True", "ItemLevel 85"], "type": "base extremely high"},
 	"1 Shaper Imbued Wand": {"base": "Imbued Wand", "other": ["ShaperItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Shaper Imperial Bow": {"base": "Imperial Bow", "other": ["ShaperItem True", "ItemLevel 85"], "type": "base very high"},
+	"1 Shaper Iron Ring": {"base": "Iron Ring", "other": ["ShaperItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Shaper Jade Amulet": {"base": "Jade Amulet", "other": ["ShaperItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Shaper Karui Sceptre": {"base": "Karui Sceptre", "other": ["ShaperItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Shaper Lapis Amulet": {"base": "Lapis Amulet", "other": ["ShaperItem True", "ItemLevel 85"], "type": "base very high"},
@@ -169,7 +169,6 @@ items = {
 	"1 Shaper Tyrant's Sekhem": {"base": "Tyrant's Sekhem", "other": ["ShaperItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Shaper Vaal Sceptre": {"base": "Vaal Sceptre", "other": ["ShaperItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Shaper Void Sceptre": {"base": "Void Sceptre", "other": ["ShaperItem True", "ItemLevel 85"], "type": "base extremely high"},
-	"1 Elder Agate Amulet": {"base": "Agate Amulet", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Elder Astral Plate": {"base": "Astral Plate", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Elder Citrine Amulet": {"base": "Citrine Amulet", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Elder Coral Ring": {"base": "Coral Ring", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},

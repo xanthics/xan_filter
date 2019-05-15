@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 05/15/2019(m/d/y) 09:08:00 UTC from "tmpstandard" data
+# Created: 05/15/2019(m/d/y) 09:17:18 UTC from "tmpstandard" data
 
 desc = "Currency Autogen"
 
@@ -111,7 +111,7 @@ items = {
 	"09 Orb of Fusing": {"base": "Orb of Fusing", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency high"},
 	"1 Orb of Horizons": {"base": "Orb of Horizons", "class": "Currency", "type": "currency normal"},
 	"09 Orb of Horizons": {"base": "Orb of Horizons", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency high"},
-	"08 Orb of Horizons": {"base": "Orb of Horizons", 'other': ['StackSize >= 18'], "class": "Currency", "type": "currency very high"},
+	"08 Orb of Horizons": {"base": "Orb of Horizons", 'other': ['StackSize >= 17'], "class": "Currency", "type": "currency very high"},
 	"1 Orb of Regret": {"base": "Orb of Regret", "class": "Currency", "type": "currency normal"},
 	"09 Orb of Regret": {"base": "Orb of Regret", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency high"},
 	"08 Orb of Regret": {"base": "Orb of Regret", 'other': ['StackSize >= 20'], "class": "Currency", "type": "currency very high"},

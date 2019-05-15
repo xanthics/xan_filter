@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 05/15/2019(m/d/y) 09:07:58 UTC from "Standard" data
+# Created: 05/15/2019(m/d/y) 09:17:16 UTC from "Standard" data
 
 desc = "Currency Autogen"
 
@@ -64,7 +64,7 @@ items = {
 	"1 Fractured Fossil": {"base": "Fractured Fossil", "class": "Currency", "type": "currency extremely high"},
 	"1 Frigid Fossil": {"base": "Frigid Fossil", "class": "Currency", "type": "currency normal"},
 	"1 Gemcutter's Prism": {"base": "Gemcutter's Prism", "class": "Currency", "type": "currency high"},
-	"1 Gilded Fossil": {"base": "Gilded Fossil", "class": "Currency", "type": "currency high"},
+	"1 Gilded Fossil": {"base": "Gilded Fossil", "class": "Currency", "type": "currency very high"},
 	"1 Glassblower's Bauble": {"base": "Glassblower's Bauble", "class": "Currency", "type": "currency show"},
 	"09 Glassblower's Bauble": {"base": "Glassblower's Bauble", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency normal"},
 	"08 Glassblower's Bauble": {"base": "Glassblower's Bauble", 'other': ['StackSize >= 12'], "class": "Currency", "type": "currency high"},

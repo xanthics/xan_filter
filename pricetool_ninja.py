@@ -296,7 +296,7 @@ def enchantclassify(cur, val, curvals):
 	else:
 		return
 
-	return "{0}\": {{\"enchant\": \"{0}\", \"type\": \"{1}\"}}".format(cur, tier)
+	return ["{0}\": {{\"enchant\": \"{0}\", \"type\": \"{1}\"}}".format(val, tier) for val in helmnames[cur]]
 
 
 # given a league grouped list of prophecies determine all unique entries and then output for each league
@@ -308,13 +308,15 @@ def gen_enchants(helmenchant_list, league, curvals):
 	for c, cur in enumerate(substringhelmenchant):
 		retstr = enchantclassify(cur, helmenchant_list[cur], curvals)
 		if not retstr:
-			retstr = '{0}": {{"enchant": "{0}", "type": "ignore"}}'.format(cur)
+			for val in helmnames[cur]:
+				retstr = '{0}": {{"enchant": "{0}", "type": "ignore"}}'.format(val)
 		curval += '\t"{:03d} {},\n'.format(c, retstr)
 		del helmenchant_list[cur]
 	for cur in sorted(helmenchant_list.keys()):
 		retstr = enchantclassify(cur, helmenchant_list[cur], curvals)
 		if retstr:
-			curval += '\t"1 {},\n'.format(retstr)
+			for val in retstr:
+				curval += '\t"1 {},\n'.format(val)
 
 	curval += '}\n'
 
@@ -518,6 +520,7 @@ def gen_bases(bases_list, league, curvals):
 		outbuff += '\n}\n'
 	with open('auto_gen\\{}bases.py'.format(name), 'w', encoding='utf-8') as f:
 		f.write(outbuff)
+
 
 # Entry point for getting price data from poe.ninja
 def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
