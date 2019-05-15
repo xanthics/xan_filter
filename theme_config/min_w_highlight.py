@@ -192,6 +192,9 @@ settings = {
 	"divination normal": ['MinimapIcon 2 Blue Circle',
 						  'CustomAlertSound "{}_divination.wav"'.format(volume['low']),
 						  "SetBackgroundColor {} 220".format(color['black'])],
+	"divination show": ["SetBackgroundColor {} 220".format(color['black']),
+						'MinimapIcon 2 Red Square',
+						"SetFontSize {}".format(size['normal'])],
 	"divination low": ["SetBackgroundColor {} 220".format(color['black']),
 					   "SetFontSize {}".format(size['small'])],
 

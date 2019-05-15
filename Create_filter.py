@@ -36,6 +36,10 @@ from auto_gen import scarab
 from auto_gen import hcscarab
 from auto_gen import tscarab
 from auto_gen import thcscarab
+from auto_gen import helmenchant
+from auto_gen import hchelmenchant
+from auto_gen import thelmenchant
+from auto_gen import thchelmenchant
 
 
 from item_config import animate_weapon, show_catchall
@@ -100,6 +104,9 @@ def gen_list_compact(items, desc, soundlist):
 			elif 'prophecy' in s:
 				b = s['prophecy']
 				flag = 2
+			elif 'enchant' in s:
+				b = s['enchant']
+				flag = 3
 			if 'class' in s:
 				c = s['class']
 			if 'other' in s:
@@ -126,6 +133,8 @@ def gen_list_compact(items, desc, soundlist):
 				b += "\n\tBaseType \"{}\"".format('" "'.join(sorted(l[i][ii])))
 			elif flag == '2':
 				b += "\n\tProphecy \"{}\"".format('" "'.join(sorted(l[i][ii])))
+			elif flag == '3':
+				b += "\n\tHasEnchantment \"{}\"".format('" "'.join(sorted(l[i][ii])))
 			if c:
 				b += "\n\tClass \"{}\"".format(c)
 			if o:
@@ -161,10 +170,10 @@ def get_poe_path():
 # main function for creating a filter
 def main(leagues=('Standard', 'Hardcore', 'Synthesis', 'Hardcore Synthesis')):
 	gen_list = gen_list_compact
-	lookup_leagues = {'Standard': ("st", "Standard", uniques, divination, stcurrency, stessence, bases, prophecy, scarab),
-					  'Hardcore': ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence, hcbases, hcprophecy, hcscarab),
-					  'Synthesis': ("t", "Temp Softcore", tuniques, tdivination, tcurrency, tessence, tbases, tprophecy, tscarab),
-					  'Hardcore Synthesis': ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence, thcbases, thcprophecy, thcscarab)}
+	lookup_leagues = {'Standard': ("st", "Standard", uniques, divination, stcurrency, stessence, bases, prophecy, scarab, helmenchant),
+					  'Hardcore': ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence, hcbases, hcprophecy, hcscarab, hchelmenchant),
+					  'tmpstandard': ("t", "Temp Softcore", tuniques, tdivination, tcurrency, tessence, tbases, tprophecy, tscarab, thelmenchant),
+					  'tmphardcore': ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence, thcbases, thcprophecy, thcscarab, thchelmenchant)}
 	leveling = True  # toggle to show leveling items
 	soundlist = []
 	for i in leagues:
@@ -186,6 +195,7 @@ def main(leagues=('Standard', 'Hardcore', 'Synthesis', 'Hardcore Synthesis')):
 		buffer += gen_list(lookup_leagues[i][5].items, lookup_leagues[i][5].desc, soundlist)  # Autogen Essences
 		buffer += gen_list(currency.items, currency.desc, soundlist)  # Currency
 		buffer += gen_list(gems.items, gems.desc, soundlist)  # Gems
+		buffer += gen_list(lookup_leagues[i][9].items, lookup_leagues[i][9].desc, soundlist)  # Autogen Helm Enchants
 		buffer += gen_list(lookup_leagues[i][2].items, lookup_leagues[i][2].desc, soundlist)  # uniques
 		# buffer += gen_list(recipe_item.items, recipe_item.desc, soundlist)  # Items for vendor recipe
 		buffer += gen_list(lookup_leagues[i][8].items, lookup_leagues[i][8].desc, soundlist)  # Autogen Scarabs
@@ -201,10 +211,9 @@ def main(leagues=('Standard', 'Hardcore', 'Synthesis', 'Hardcore Synthesis')):
 			flags = 'All'  # see item_config/rare_gen - genraresleveling for valid values
 			buffer += gen_list(genraresleveling(flags, overlevel=3, maxlevel=67), desc, soundlist)
 
-#		buffer += gen_list(genrareshighlight(), 'Rare item highlighting for endgame', soundlist)
 		buffer += gen_list(genrareshighlighttiered(), 'Rare item highlighting for endgame', soundlist)
 
-		# buffer += gen_list(chroma.items, chroma.desc, soundlist)  # chrome vendor items
+		buffer += gen_list(chroma.items, chroma.desc, soundlist)  # chrome vendor items
 		if leveling:
 			buffer += gen_list(general_levelling.items, general_levelling.desc, soundlist)
 		buffer += gen_list(chance.items, chance.desc, soundlist)  # Chance bases
@@ -259,8 +268,8 @@ def main(leagues=('Standard', 'Hardcore', 'Synthesis', 'Hardcore Synthesis')):
 
 if __name__ == "__main__":
 	import pricetool_ninja
-#	league = ['Standard', 'Hardcore', 'Synthesis', 'Hardcore Synthesis']
-	league = ['Synthesis']
+#	league = ['Standard', 'Hardcore', 'tmpstandard', 'tmphardcore']
+	league = ['tmpstandard']
 	pricetool_ninja.scrape_ninja(league)
 	# reload updated modules
 	for module in [divination, hcdivination, tdivination, thcdivination,
@@ -269,6 +278,7 @@ if __name__ == "__main__":
 				   stessence, hcessence, tessence, thcessence,
 				   bases, hcbases, tbases, thcbases,
 				   prophecy, hcprophecy, tprophecy, thcprophecy,
-				   scarab, hcscarab, tscarab, thcscarab]:
+				   scarab, hcscarab, tscarab, thcscarab,
+				   helmenchant, hchelmenchant, thelmenchant, thchelmenchant]:
 		importlib.reload(module)
 	main(league)

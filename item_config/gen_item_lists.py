@@ -1021,7 +1021,7 @@ def genrareshighlighttiered():
 	maxnormal = 2
 	# maxixum total for each highlighting style
 	style_tiers = {
-		1: 'rare highlight',
+		2: 'rare highlight',
 		3: 'rare high',
 		5: 'rare normal',
 		99: 'rare low',
