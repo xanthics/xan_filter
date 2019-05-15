@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/31/2019(m/d/y) 00:06:14 UTC from "Synthesis" data
+# Created: 05/15/2019(m/d/y) 09:08:00 UTC from "tmpstandard" data
 
 desc = "scarab Autogen"
 
@@ -14,14 +14,14 @@ items = {
 	"1 Gilded Elder Scarab": {"base": "Gilded Elder Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Gilded Harbinger Scarab": {"base": "Gilded Harbinger Scarab", "class": "Map Fragments", "type": "map red good"},
 	"1 Gilded Perandus Scarab": {"base": "Gilded Perandus Scarab", "class": "Map Fragments", "type": "map yellow good"},
-	"1 Gilded Reliquary Scarab": {"base": "Gilded Reliquary Scarab", "class": "Map Fragments", "type": "map red good"},
+	"1 Gilded Reliquary Scarab": {"base": "Gilded Reliquary Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Gilded Shaper Scarab": {"base": "Gilded Shaper Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Gilded Sulphite Scarab": {"base": "Gilded Sulphite Scarab", "class": "Map Fragments", "type": "map red good"},
 	"1 Gilded Torment Scarab": {"base": "Gilded Torment Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Polished Ambush Scarab": {"base": "Polished Ambush Scarab", "class": "Map Fragments", "type": "map red good"},
-	"1 Polished Bestiary Scarab": {"base": "Polished Bestiary Scarab", "class": "Map Fragments", "type": "map yellow good"},
+	"1 Polished Bestiary Scarab": {"base": "Polished Bestiary Scarab", "class": "Map Fragments", "type": "map red good"},
 	"1 Polished Breach Scarab": {"base": "Polished Breach Scarab", "class": "Map Fragments", "type": "map yellow good"},
-	"1 Polished Cartography Scarab": {"base": "Polished Cartography Scarab", "class": "Map Fragments", "type": "map red good"},
+	"1 Polished Cartography Scarab": {"base": "Polished Cartography Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Polished Divination Scarab": {"base": "Polished Divination Scarab", "class": "Map Fragments", "type": "map red good"},
 	"1 Polished Elder Scarab": {"base": "Polished Elder Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Polished Harbinger Scarab": {"base": "Polished Harbinger Scarab", "class": "Map Fragments", "type": "map yellow good"},
