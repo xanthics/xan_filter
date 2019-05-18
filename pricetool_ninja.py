@@ -7,7 +7,7 @@ import os
 import requests
 from collections import defaultdict
 from datetime import datetime
-from ninja_defaults import currencydefaults, essencedefaults, prophecydefaults, divdefaults, uniquedefaults, scarabdefaults, helmenchantsdefaults
+from ninja_defaults import currencydefaults, essencedefaults, prophecydefaults, divdefaults, uniquedefaults, scarabdefaults, helmenchantsdefaults, basedefaults
 from ninja_helm_lookup import helmnames
 
 header = '''#!/usr/bin/python
@@ -43,10 +43,31 @@ def convertname(l):
 def fixmissing(ninja_list, defaults, league, name):
 	# Print all items that were returned by poe.ninja that don't have a default set
 	if set(ninja_list.keys()) - set(defaults.keys()):
-		print("{} Missing defaults for {}: \n{}".format(league, name, ', '.join(['"{}": {}'.format(x, ninja_list[x]) for x in sorted(set(ninja_list.keys()) - set(defaults.keys()))])))
+		missing = ', '.join(['"{}": {}'.format(x, ninja_list[x]) for x in sorted(set(ninja_list.keys()) - set(defaults.keys()))])
+		print(f"{league} Missing defaults for {name}: \n{missing}")
 	# add missing items to ninja_list
 	for v in set(defaults.keys()) - set(ninja_list.keys()):
 		ninja_list[v] = defaults[v]
+
+
+# Helper function to fix missing base data
+def fixmissingbases(bases, league):
+	if set(bases.keys()) - set(basedefaults.keys()):
+		joinstr = ': {\n\t"Elder": {},\n\t"Shaper": {},\n\t"Normal": {}\n},\n'
+		vals = joinstr.join([str(x) for x in sorted(set(bases.keys()) - set(basedefaults.keys()), reverse=True)])
+		vals += joinstr
+		print(f"{league} missing default base tiers:\n{vals}")
+	# add missing items to ninja_list
+	for v in set(basedefaults.keys()) - set(bases.keys()):
+		bases[v] = {}
+
+	for level in sorted(bases, reverse=True):
+		for variant in ['Elder', 'Shaper', None]:
+			if variant not in basedefaults[level]:
+				print(f'Missing base default for {level}\n"{variant}": {{}}')
+			if variant not in bases[level]:
+				bases[level][variant] = {}
+			fixmissing(bases[level][variant], basedefaults[level][variant], league, f"bases ({level}-{variant})")
 
 
 # Add missing values to data returned by poe.ninja
@@ -92,11 +113,13 @@ def currencyclassify(cur, val, curvals, stacks=1):
 		"Orb of Transmutation",
 		"Orb of Chance",
 		"Glassblower's Bauble",
+		"Horizon Shard",
+		"Chaos Shard"
 	]
 	if ((cur in ah) or 'Fossil' in cur) and val < curvals['normal']:
 		tier = 'currency show'
-	elif 'Alchemical Resonator' in cur and 'Prime' not in cur:
-		tier = 'currency very low'
+#	elif 'Alchemical Resonator' in cur and 'Prime' not in cur:
+#		tier = 'currency very low'
 	elif val >= curvals['extremely']:
 		tier = 'currency extremely high'
 	elif val >= curvals['very']:
@@ -125,7 +148,7 @@ def gen_currency(currency_list, league):
 
 	shards = {'Binding Shard': 'Orb of Binding', 'Horizon Shard': 'Orb of Horizons', 'Harbinger\'s Shard': 'Harbinger\'s Orb', 'Engineer\'s Shard': 'Engineer\'s Orb', 'Ancient Shard': 'Ancient Orb',
 	          'Regal Shard': 'Regal Orb', 'Alchemy Shard': 'Orb of Alchemy', 'Alteration Shard': 'Orb of Alteration', 'Transmutation Shard': 'Orb of Transmutation', 'Scroll Fragment': 'Scroll of Wisdom',
-			  'Exalted Shard': 'Exalted Orb', 'Annulment Shard': 'Orb of Annulment', 'Mirror Shard': 'Mirror of Kalandra'}
+			  'Chaos Shard': 'Chaos Orb', 'Exalted Shard': 'Exalted Orb', 'Annulment Shard': 'Orb of Annulment', 'Mirror Shard': 'Mirror of Kalandra'}
 
 	for s in shards:
 		if s not in currency_list:
@@ -527,6 +550,7 @@ def gen_bases(bases_list, league, curvals):
 
 # Entry point for getting price data from poe.ninja
 def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
+#	leagues = ["Synthesis Event (SRE001)"]
 	# list of all uniques that can only be acquired through upgrades or vendor recipes to remove them from unique price consideration
 	upgradeded = [
 		# Fated Uniques
@@ -670,6 +694,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 
 		# Add all missing values to poe.ninja data
 		fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uniques, helmenchants)
+		fixmissingbases(bases, league)
 
 		curvals = gen_currency(currency, league)
 		gen_div(divs, league, curvals)
