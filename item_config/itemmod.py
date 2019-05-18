@@ -71,7 +71,8 @@ def itemmods():
 					 "Shield",
 					 "Amulet",
 					 "Belt",
-					 "Ring"
+					 "Ring",
+					 "Quiver"
 				 ],
 				 "Leo's Veiled": ["Ring", "Belt"],
 				 "Catarina's Veiled": ["Claw", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword", "Shield"],
@@ -98,7 +99,8 @@ def itemmods():
 					 "Shield",
 					 "Amulet",
 					 "Belt",
-					 "Ring"
+					 "Ring",
+					 "Quiver"
 				 ],
 				 "of Janus' Veil": ["Helmet"],
 				 "of Hillock's Veil": ["Body Armour"],
