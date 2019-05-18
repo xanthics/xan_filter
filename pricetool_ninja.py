@@ -17,13 +17,15 @@ header = '''#!/usr/bin/python
 
 
 # Helper function to tier items based on value of ex
-def gentierval(exa):
+def gentierval(currencies):
+	exa = currencies['Exalted Orb']
+	alch = currencies['Orb of Alchemy']
 	ret = {'extremely': exa if exa > 50 else 50,
 		   'very': exa // 10 if exa > 50 else 5,
 		   'high': 1,
-		   'normal': 1/4,
-		   'low': 1/15,
-		   'min': 1/30}
+		   'normal': alch if alch < 1/4 else 1/4,
+		   'low': alch / 2 if alch < 1/4 else 1/8,
+		   'min': alch / 4 if alch < 1/4 else 1/16}
 	return ret
 
 
@@ -114,7 +116,11 @@ def currencyclassify(cur, val, curvals, stacks=1):
 		"Orb of Chance",
 		"Glassblower's Bauble",
 		"Horizon Shard",
-		"Chaos Shard"
+		"Chaos Shard",
+		"Engineer's Shard",
+		"Alteration Shard",
+		"Binding Shard",
+		"Alchemy Shard"
 	]
 	if ((cur in ah) or 'Fossil' in cur) and val < curvals['normal']:
 		tier = 'currency show'
@@ -133,8 +139,8 @@ def currencyclassify(cur, val, curvals, stacks=1):
 	elif val >= curvals['min']:
 		tier = 'currency very low'
 	else:
-		tier = 'currency very low'
-		#tier = 'hide'
+		#tier = 'currency very low'
+		tier = 'hide'
 
 	if stacks > 1:
 		return "$ {0}\": {{\"base\": \"{0}\", 'other': ['StackSize >= {2}'], \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier, stacks)
@@ -157,7 +163,7 @@ def gen_currency(currency_list, league):
 
 	curval = '''{}\ndesc = "Currency Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
 
-	curvals = gentierval(currency_list['Exalted Orb'])
+	curvals = gentierval(currency_list)
 
 	for cur in sorted(currency_list):
 		if any(stack in cur for stack in stackable):
@@ -550,7 +556,7 @@ def gen_bases(bases_list, league, curvals):
 
 # Entry point for getting price data from poe.ninja
 def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
-#	leagues = ["Synthesis Event (SRE001)"]
+	leagues = ["Synthesis Event (SRE001)"]
 	# list of all uniques that can only be acquired through upgrades or vendor recipes to remove them from unique price consideration
 	upgradeded = [
 		# Fated Uniques
