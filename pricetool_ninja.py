@@ -18,14 +18,14 @@ header = '''#!/usr/bin/python
 
 # Helper function to tier items based on value of ex
 def gentierval(currencies):
-	exa = currencies['Exalted Orb']
-	alch = currencies['Orb of Alchemy']
-	ret = {'extremely': exa if exa > 50 else 50,
-		   'very': exa // 10 if exa > 50 else 5,
+	maxval = max(currencies['Exalted Orb'], 50)
+	minval = min(currencies['Orb of Alchemy'], currencies["Orb of Scouring"], currencies["Cartographer's Chisel"], 1/4)
+	ret = {'extremely': maxval,
+		   'very': maxval // 10,
 		   'high': 1,
-		   'normal': alch if alch < 1/4 else 1/4,
-		   'low': alch / 2 if alch < 1/4 else 1/8,
-		   'min': alch / 4 if alch < 1/4 else 1/16}
+		   'normal': minval,
+		   'low': minval / 2,
+		   'min': minval / 4}
 	return ret
 
 
@@ -384,7 +384,7 @@ def find_substrings(source_dict):
 def divclassify(cur, val, curvals, lowcards, badcards):
 	# divination cards that should always show an icon
 	ah = [
-		"Three Faces in the Dark", "Hubris", "Loyalty", "Rain of Chaos", "The Catalyst", "The Doppelganger", "The Gambler", "The Gemcutter",
+		"Three Faces in the Dark", "Hubris", "Loyalty", "Rain of Chaos", "The Catalyst", "The Doppelganger", "The Gambler", "The Gemcutter", "The Master Artisan"
 	]
 	if cur in ah and val < curvals['high'] / 2:
 		tier = 'divination show'
