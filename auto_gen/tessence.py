@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 05/18/2019(m/d/y) 19:18:18 UTC from "tmpstandard" data
+# Created: 05/24/2019(m/d/y) 08:03:13 UTC from "tmpstandard" data
 
 desc = "Essence Autogen"
 
@@ -39,7 +39,7 @@ items = {
 	"0 Muttering Essence of Torment": {"base": "Muttering Essence of Torment", "class": "Currency", "type": "currency low"},
 	"0 Muttering Essence of Woe": {"base": "Muttering Essence of Woe", "class": "Currency", "type": "currency low"},
 	"0 Remnant of Corruption": {"base": "Remnant of Corruption", "class": "Currency", "type": "currency high"},
-	"0 Screaming Essence of Anger": {"base": "Screaming Essence of Anger", "class": "Currency", "type": "currency low"},
+	"0 Screaming Essence of Anger": {"base": "Screaming Essence of Anger", "class": "Currency", "type": "currency normal"},
 	"0 Screaming Essence of Anguish": {"base": "Screaming Essence of Anguish", "class": "Currency", "type": "currency low"},
 	"0 Screaming Essence of Contempt": {"base": "Screaming Essence of Contempt", "class": "Currency", "type": "currency low"},
 	"0 Screaming Essence of Doubt": {"base": "Screaming Essence of Doubt", "class": "Currency", "type": "currency low"},
@@ -47,7 +47,7 @@ items = {
 	"0 Screaming Essence of Envy": {"base": "Screaming Essence of Envy", "class": "Currency", "type": "currency normal"},
 	"0 Screaming Essence of Fear": {"base": "Screaming Essence of Fear", "class": "Currency", "type": "currency low"},
 	"0 Screaming Essence of Greed": {"base": "Screaming Essence of Greed", "class": "Currency", "type": "currency normal"},
-	"0 Screaming Essence of Hatred": {"base": "Screaming Essence of Hatred", "class": "Currency", "type": "currency low"},
+	"0 Screaming Essence of Hatred": {"base": "Screaming Essence of Hatred", "class": "Currency", "type": "currency normal"},
 	"0 Screaming Essence of Loathing": {"base": "Screaming Essence of Loathing", "class": "Currency", "type": "currency low"},
 	"0 Screaming Essence of Misery": {"base": "Screaming Essence of Misery", "class": "Currency", "type": "currency low"},
 	"0 Screaming Essence of Rage": {"base": "Screaming Essence of Rage", "class": "Currency", "type": "currency normal"},
@@ -57,7 +57,7 @@ items = {
 	"0 Screaming Essence of Suffering": {"base": "Screaming Essence of Suffering", "class": "Currency", "type": "currency low"},
 	"0 Screaming Essence of Torment": {"base": "Screaming Essence of Torment", "class": "Currency", "type": "currency low"},
 	"0 Screaming Essence of Woe": {"base": "Screaming Essence of Woe", "class": "Currency", "type": "currency normal"},
-	"0 Screaming Essence of Wrath": {"base": "Screaming Essence of Wrath", "class": "Currency", "type": "currency low"},
+	"0 Screaming Essence of Wrath": {"base": "Screaming Essence of Wrath", "class": "Currency", "type": "currency normal"},
 	"0 Screaming Essence of Zeal": {"base": "Screaming Essence of Zeal", "class": "Currency", "type": "currency high"},
 	"0 Shrieking Essence of Anger": {"base": "Shrieking Essence of Anger", "class": "Currency", "type": "currency high"},
 	"0 Shrieking Essence of Anguish": {"base": "Shrieking Essence of Anguish", "class": "Currency", "type": "currency normal"},
@@ -69,7 +69,7 @@ items = {
 	"0 Shrieking Essence of Greed": {"base": "Shrieking Essence of Greed", "class": "Currency", "type": "currency high"},
 	"0 Shrieking Essence of Hatred": {"base": "Shrieking Essence of Hatred", "class": "Currency", "type": "currency high"},
 	"0 Shrieking Essence of Loathing": {"base": "Shrieking Essence of Loathing", "class": "Currency", "type": "currency normal"},
-	"0 Shrieking Essence of Misery": {"base": "Shrieking Essence of Misery", "class": "Currency", "type": "currency high"},
+	"0 Shrieking Essence of Misery": {"base": "Shrieking Essence of Misery", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Rage": {"base": "Shrieking Essence of Rage", "class": "Currency", "type": "currency high"},
 	"0 Shrieking Essence of Scorn": {"base": "Shrieking Essence of Scorn", "class": "Currency", "type": "currency high"},
 	"0 Shrieking Essence of Sorrow": {"base": "Shrieking Essence of Sorrow", "class": "Currency", "type": "currency high"},

@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 05/15/2019(m/d/y) 09:24:51 UTC from "Hardcore" data
+# Created: 05/24/2019(m/d/y) 08:03:12 UTC from "Hardcore" data
 
 desc = "Divination Card"
 
 # Base type : settings pair
 items = {
 	"000 Beauty Through Death": {"base": "Beauty Through Death", "class": "Divination Card", "type": "divination extremely high"},
-	"001 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
-	"002 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination normal"},
+	"001 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination normal"},
+	"002 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
 	"003 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination low"},
 	"004 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination high"},
 	"005 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination high"},

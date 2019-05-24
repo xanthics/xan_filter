@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 05/15/2019(m/d/y) 09:24:51 UTC from "Hardcore" data
+# Created: 05/24/2019(m/d/y) 08:03:12 UTC from "Hardcore" data
 
 desc = "Essence Autogen"
 
@@ -25,7 +25,7 @@ items = {
 	"0 Deafening Essence of Torment": {"base": "Deafening Essence of Torment", "class": "Currency", "type": "currency high"},
 	"0 Deafening Essence of Woe": {"base": "Deafening Essence of Woe", "class": "Currency", "type": "currency high"},
 	"0 Deafening Essence of Wrath": {"base": "Deafening Essence of Wrath", "class": "Currency", "type": "currency high"},
-	"0 Deafening Essence of Zeal": {"base": "Deafening Essence of Zeal", "class": "Currency", "type": "currency extremely high"},
+	"0 Deafening Essence of Zeal": {"base": "Deafening Essence of Zeal", "class": "Currency", "type": "currency very high"},
 	"0 Essence of Delirium": {"base": "Essence of Delirium", "class": "Currency", "type": "currency high"},
 	"0 Essence of Horror": {"base": "Essence of Horror", "class": "Currency", "type": "currency very high"},
 	"0 Essence of Hysteria": {"base": "Essence of Hysteria", "class": "Currency", "type": "currency high"},
