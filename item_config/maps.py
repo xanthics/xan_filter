@@ -16,28 +16,6 @@ items = {
 	"0 Haunted Mansion Map": {"base": "Haunted Mansion Map", "class": "Maps", "type": "ignore"},
 	"0 Crimson Temple Map": {"base": "Crimson Temple Map", "class": "Maps", "type": "ignore"},
 
-	"1 Sacrifice at Dusk": {"base": "Sacrifice at Dusk", "class": "Map Fragments", "type": "ignore"},
-	"1 Sacrifice at Midnight": {"base": "Sacrifice at Midnight", "class": "Map Fragments", "type": "map white good"},
-	"1 Sacrifice at Dawn": {"base": "Sacrifice at Dawn", "class": "Map Fragments", "type": "ignore"},
-	"1 Sacrifice at Noon": {"base": "Sacrifice at Noon", "class": "Map Fragments", "type": "ignore"},
-
-	"1 Mortal Grief": {"base": "Mortal Grief", "class": "Map Fragments", "type": "map yellow"},
-	"1 Mortal Rage": {"base": "Mortal Rage", "class": "Map Fragments", "type": "map yellow"},
-	"1 Mortal Hope": {"base": "Mortal Hope", "class": "Map Fragments", "type": "map yellow good"},
-	"1 Mortal Ignorance": {"base": "Mortal Ignorance", "class": "Map Fragments", "type": "map yellow"},
-
-	"1 Eber's Key": {"base": "Eber's Key", "class": "Map Fragments", "type": "map yellow good"},
-	"1 Yriel's Key": {"base": "Yriel's Key", "class": "Map Fragments", "type": "map yellow good"},
-	"1 Inya's Key": {"base": "Inya's Key", "class": "Map Fragments", "type": "map yellow good"},
-	"1 Volkuur's Key": {"base": "Volkuur's Key", "class": "Map Fragments", "type": "map yellow good"},
-
-	"1 Fragment of the Phoenix": {"base": "Fragment of the Phoenix", "class": "Map Fragments", "type": "map red"},
-	"1 Fragment of the Minotaur": {"base": "Fragment of the Minotaur", "class": "Map Fragments", "type": "map red"},
-	"1 Fragment of the Chimera": {"base": "Fragment of the Chimera", "class": "Map Fragments", "type": "map red"},
-	"1 Fragment of the Hydra": {"base": "Fragment of the Hydra", "class": "Map Fragments", "type": "map red"},
-	
-	"1 Divine Vessel": {"other": ['CustomAlertSound "45_show.wav"'], "base": "Divine Vessel", "class": "Map Fragments", "type": "show high"},
-
 	"212 Normal": {"class": "Maps", "other": ["MapTier >= 16"], "type": "map very good"},
 	"213 Normal": {"class": "Maps", "other": ["MapTier = 15"], "type": "map red good"},
 	"214 Normal": {"class": "Maps", "other": ["ItemLevel <= 83", "MapTier = 14"], "type": "map red good"},
@@ -59,6 +37,5 @@ items = {
 	"229 Normal": {"class": "Maps", "other": ["MapTier <= 5"], "type": "map white"},
 	"230 Normal": {"class": "Maps", "type": "map yellow"},
 
-	"74 Map Fragments": {"class": "Map Fragments", "type": "map white"},
 	"75 Misc map items": {"class": "Misc Map Items", 'other': ['CustomAlertSound "100_show.wav"'], "type": "show high"},
 }

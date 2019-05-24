@@ -7,7 +7,7 @@ import os
 import requests
 from collections import defaultdict
 from datetime import datetime
-from ninja_defaults import currencydefaults, essencedefaults, prophecydefaults, divdefaults, uniquedefaults, scarabdefaults, helmenchantsdefaults, basedefaults
+from ninja_defaults import currencydefaults, essencedefaults, prophecydefaults, divdefaults, uniquedefaults, scarabdefaults, helmenchantsdefaults, basedefaults, fragmentdefaults
 from ninja_helm_lookup import helmnames
 
 header = '''#!/usr/bin/python
@@ -73,7 +73,7 @@ def fixmissingbases(bases, league):
 
 
 # Add missing values to data returned by poe.ninja
-def fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uniques, helmenchants):
+def fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uniques, helmenchants, fragments):
 	# Add chaos and Scroll of Wisdom to the default list as poe.ninja does not include them
 	currencydefaults["Chaos Orb"] = 1
 	currencydefaults["Scroll of Wisdom"] = 1 / 100
@@ -101,6 +101,8 @@ def fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uni
 
 	fixmissing(helmenchants, helmenchantsdefaults, league, "helmet enchants")
 
+	fixmissing(fragments, fragmentdefaults, league, "Fragments")
+
 
 # Convert a currency shorthand to full name.  returns a string
 def currencyclassify(cur, val, curvals, stacks=1):
@@ -108,19 +110,18 @@ def currencyclassify(cur, val, curvals, stacks=1):
 	ah = [
 		"Splinter of Chayula", "Splinter of Xoph", "Splinter of Uul-Netol", "Splinter of Tul", "Splinter of Esh",
 		"Chromatic Orb", "Perandus Coin", "Cartographer's Chisel", "Orb of Fusing", "Silver Coin",
-		"Orb of Alchemy",
-		"Orb of Alteration",
-		"Orb of Augmentation",
-		"Jeweller's Orb",
-		"Orb of Transmutation",
+		"Orb of Alchemy", "Alchemy Shard",
+		"Orb of Alteration", "Alteration Shard",
+		#"Orb of Augmentation",
+		#"Jeweller's Orb",
+		#"Orb of Transmutation",
 		"Orb of Chance",
 		"Glassblower's Bauble",
-		"Horizon Shard",
+		"Horizon Orb", "Horizon Shard",
 		"Chaos Shard",
-		"Engineer's Shard",
-		"Alteration Shard",
-		"Binding Shard",
-		"Alchemy Shard"
+		#"Engineer's Orb", "Engineer's Shard",
+		#"Orb of Binding", "Binding Shard",
+		"Regal Orb", "Regal Shard",
 	]
 	if ((cur in ah) or 'Fossil' in cur) and val < curvals['normal']:
 		tier = 'currency show'
@@ -189,6 +190,60 @@ def gen_currency(currency_list, league):
 	name = convertname(league)
 
 	with open('auto_gen\\{}currency.py'.format(name), 'w', encoding='utf-8') as f:
+		f.write(curval)
+
+	return curvals
+
+
+# Convert a currency shorthand to full name.  returns a string
+def fragmentclassify(cur, val, curvals, stacks=1):
+	if val >= curvals['extremely']:
+		tier = 'map very good'
+	elif val >= curvals['very']:
+		tier = 'map yellow good'
+	elif val >= curvals['high']:
+		tier = 'map white good'
+	else:
+		tier = 'map white'
+
+	if stacks > 1:
+		return "$ {0}\": {{\"base\": \"{0}\", 'other': ['StackSize >= {2}'], \"class\": \"Map Fragments\", \"type\": \"{1}\"}}".format(cur, tier, stacks)
+	return "1 {0}\": {{\"base\": \"{0}\", \"class\": \"Map Fragments\", \"type\": \"{1}\"}}".format(cur, tier)
+
+
+# given a league grouped list of currency determine all unique entries and then output for each league
+def gen_fragments(fragment_list, league, curvals):
+
+	stackable = []
+
+	#	substringunique = find_substrings(currency_list)
+
+	curval = '''{}\ndesc = "Fragment Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
+
+	for frag in sorted(fragment_list):
+		if any(stack in frag for stack in stackable):
+			val = fragment_list[frag]
+			retstr = fragmentclassify(frag, val, curvals)
+			curval += '\t"{},\n'.format(retstr)
+
+			prevval = retstr[-20:]
+			count = 9
+			for i in range(2, 21):
+				retstr = fragmentclassify(frag, fragment_list[frag] * i, curvals, i)
+				if prevval != retstr[-20:]:
+					curval += '\t"{},\n'.format(retstr.replace('$', '{:02}'.format(count)))
+					count -= 1
+					prevval = retstr[-20:]
+
+		else:
+			retstr = fragmentclassify(frag, fragment_list[frag], curvals)
+			curval += '\t"{},\n'.format(retstr)
+
+	curval += u'}\n'
+
+	name = convertname(league)
+
+	with open('auto_gen\\{}fragment.py'.format(name), 'w', encoding='utf-8') as f:
 		f.write(curval)
 
 	return curvals
@@ -556,7 +611,7 @@ def gen_bases(bases_list, league, curvals):
 
 # Entry point for getting price data from poe.ninja
 def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
-	leagues = ["Synthesis Event (SRE001)"]
+#	leagues = ["Synthesis Event (SRE001)"]
 	# list of all uniques that can only be acquired through upgrades or vendor recipes to remove them from unique price consideration
 	upgradeded = [
 		# Fated Uniques
@@ -579,6 +634,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 
 	keys = [
 		'Currency',
+		'Fragment',
 		'Scarab',
 		'Fossil',
 		'Resonator',
@@ -603,6 +659,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 
 	for league in leagues:
 		currency = {}
+		fragments = {}
 		divs = {}
 		essences = {}
 		bases = {}
@@ -612,7 +669,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		helmenchants = {}
 
 		for key in keys:
-			if key in ['Currency']:
+			if key in ['Currency', 'Fragment']:
 				request = f'https://poe.ninja/api/data/currencyoverview?league={league}&type={key}'
 			else:
 				request = f'https://poe.ninja/api/data/itemoverview?league={league}&type={key}'
@@ -631,6 +688,16 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 							if pc + rc < mincount:
 								continue
 							currency[ii['currencyTypeName']] = ii['chaosEquivalent']
+
+			elif key == 'Fragment':
+				for i in data:
+					for ii in data[i]:
+						if 'chaosEquivalent' in ii and ii['currencyTypeName'] != 'Offering to the Goddess':
+							pc = ii['pay']['count'] if ii['pay'] else 0
+							rc = ii['receive']['count'] if ii['receive'] else 0
+							if pc + rc < mincount:
+								continue
+							fragments[ii['currencyTypeName']] = ii['chaosEquivalent']
 
 			elif key == 'BaseType':
 				for i in data:
@@ -699,7 +766,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 				print('Unhandled key: "{}"'.format(key))
 
 		# Add all missing values to poe.ninja data
-		fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uniques, helmenchants)
+		fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uniques, helmenchants, fragments)
 		fixmissingbases(bases, league)
 
 		curvals = gen_currency(currency, league)
@@ -710,6 +777,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		gen_scarab(scarab, league, curvals)
 		gen_unique(uniques, league, curvals)
 		gen_enchants(helmenchants, league, curvals)
+		gen_fragments(fragments, league, curvals)
 
 
 if __name__ == '__main__':
