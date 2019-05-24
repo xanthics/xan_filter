@@ -40,7 +40,10 @@ from auto_gen import helmenchant
 from auto_gen import hchelmenchant
 from auto_gen import thelmenchant
 from auto_gen import thchelmenchant
-
+from auto_gen import fragment
+from auto_gen import hcfragment
+from auto_gen import tfragment
+from auto_gen import thcfragment
 
 from item_config import animate_weapon, show_catchall
 from item_config import challenges
@@ -170,10 +173,10 @@ def get_poe_path():
 # main function for creating a filter
 def main(leagues=('Standard', 'Hardcore', 'Synthesis', 'Hardcore Synthesis')):
 	gen_list = gen_list_compact
-	lookup_leagues = {'Standard': ("st", "Standard", uniques, divination, stcurrency, stessence, bases, prophecy, scarab, helmenchant),
-					  'Hardcore': ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence, hcbases, hcprophecy, hcscarab, hchelmenchant),
-					  'tmpstandard': ("t", "Temp Softcore", tuniques, tdivination, tcurrency, tessence, tbases, tprophecy, tscarab, thelmenchant),
-					  'tmphardcore': ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence, thcbases, thcprophecy, thcscarab, thchelmenchant)}
+	lookup_leagues = {'Standard': ("st", "Standard", uniques, divination, stcurrency, stessence, bases, prophecy, scarab, helmenchant, fragment),
+					  'Hardcore': ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence, hcbases, hcprophecy, hcscarab, hchelmenchant, hcfragment),
+					  'tmpstandard': ("t", "Temp Softcore", tuniques, tdivination, tcurrency, tessence, tbases, tprophecy, tscarab, thelmenchant, tfragment),
+					  'tmphardcore': ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence, thcbases, thcprophecy, thcscarab, thchelmenchant, thcfragment)}
 	leveling = True  # toggle to show leveling items
 	soundlist = []
 	for i in leagues:
@@ -199,6 +202,7 @@ def main(leagues=('Standard', 'Hardcore', 'Synthesis', 'Hardcore Synthesis')):
 		buffer += gen_list(lookup_leagues[i][2].items, lookup_leagues[i][2].desc, soundlist)  # uniques
 		# buffer += gen_list(recipe_item.items, recipe_item.desc, soundlist)  # Items for vendor recipe
 		buffer += gen_list(lookup_leagues[i][8].items, lookup_leagues[i][8].desc, soundlist)  # Autogen Scarabs
+		buffer += gen_list(lookup_leagues[i][10].items, lookup_leagues[i][10].desc, soundlist)  # Autogen Map Fragments
 		buffer += gen_list(maps.items, maps.desc, soundlist)  # maps
 		buffer += gen_list(lookup_leagues[i][3].items, lookup_leagues[i][3].desc, soundlist)  # divination cards
 		buffer += gen_list(flask.items, flask.desc, soundlist)  # Flasks
