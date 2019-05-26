@@ -5,16 +5,10 @@
 
 
 **HIDE**
-* [Download Betrayal](xan.t.hide.filter?raw=true)
-* [Download Betrayal Hardcore](xan.thc.hide.filter?raw=true)
-* [Download Standard](xan.st.hide.filter?raw=true)
-* [Download Hardcore](xan.hc.hide.filter?raw=true)
+* [Download Syndicate](xan.t.hide.filter?raw=true)
 
 **SHOW**
-* [Download Betrayal](xan.t.show.filter?raw=true)
-* [Download Betrayal Hardcore](xan.thc.show.filter?raw=true)
-* [Download Standard](xan.s.show.filter?raw=true)
-* [Download Hardcore](xan.hc.show.filter?raw=true)
+* [Download Syndicate](xan.t.show.filter?raw=true)
 
 This is a script to generate a filter file for Path of Exile using the included config files.
 
