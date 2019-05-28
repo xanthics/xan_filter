@@ -5,10 +5,10 @@
 
 
 **HIDE**
-* [Download Syndicate](xan.t.hide.filter?raw=true)
+* <a href="xan.t.hide.filter?raw=true" download>Download Syndicate</a>
 
 **SHOW**
-* [Download Syndicate](xan.t.show.filter?raw=true)
+* <a href="xan.t.show.filter?raw=true" download>Download Syndicate</a>
 
 This is a script to generate a filter file for Path of Exile using the included config files.
 
