@@ -5,8 +5,8 @@
 
 import os
 import requests
-from collections import defaultdict
 from datetime import datetime
+from collections import defaultdict
 from ninja_defaults import currencydefaults, essencedefaults, prophecydefaults, divdefaults, uniquedefaults, scarabdefaults, helmenchantsdefaults, basedefaults, fragmentdefaults
 from ninja_helm_lookup import helmnames
 
@@ -109,18 +109,19 @@ def currencyclassify(cur, val, curvals, stacks=1):
 	# list of currency to always give a border to if their price is low
 	ah = [
 		"Splinter of Chayula", "Splinter of Xoph", "Splinter of Uul-Netol", "Splinter of Tul", "Splinter of Esh",
-		"Chromatic Orb", "Perandus Coin", "Cartographer's Chisel", "Orb of Fusing", "Silver Coin",
+		"Perandus Coin", "Cartographer's Chisel", "Orb of Fusing", "Silver Coin",
+		"Chromatic Orb",
 		"Orb of Alchemy", "Alchemy Shard",
 		"Orb of Alteration", "Alteration Shard",
-		#"Orb of Augmentation",
-		#"Jeweller's Orb",
-		#"Orb of Transmutation",
+		"Orb of Augmentation",
+		"Jeweller's Orb",
+		"Orb of Transmutation",
 		"Orb of Chance",
 		"Glassblower's Bauble",
 		"Horizon Orb", "Horizon Shard",
 		"Chaos Shard",
-		#"Engineer's Orb", "Engineer's Shard",
-		#"Orb of Binding", "Binding Shard",
+		"Engineer's Orb", "Engineer's Shard",
+		"Orb of Binding", "Binding Shard",
 		"Regal Orb", "Regal Shard",
 	]
 	if ((cur in ah) or 'Fossil' in cur) and val < curvals['normal']:
@@ -140,8 +141,8 @@ def currencyclassify(cur, val, curvals, stacks=1):
 	elif val >= curvals['min']:
 		tier = 'currency very low'
 	else:
-		#tier = 'currency very low'
-		tier = 'hide'
+		tier = 'currency very low'
+		#tier = 'hide'
 
 	if stacks > 1:
 		return "$ {0}\": {{\"base\": \"{0}\", 'other': ['StackSize >= {2}'], \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier, stacks)
@@ -539,7 +540,17 @@ def uniqueclassify(cur, vals, curvals):
 	return "{0}\": {{\"base\": \"{0}\", \"type\": \"{1}\"}}".format(cur, tier)
 
 
-def gen_unique(unique_list, league, curvals):
+# Given a list of all uniques, reformat in to a base:value list
+def compact_uniques(unique_full_list):
+	unique_list = defaultdict(list)
+	for name in unique_full_list:
+		unique_list[unique_full_list[name]['baseType']].append(unique_full_list[name]['chaosValue'])
+	return unique_list
+
+
+def gen_unique(unique_full_list, league, curvals):
+	unique_list = compact_uniques(unique_full_list)
+
 	for invalid in ['Torture Chamber Map', 'Catacombs Map']:
 		if invalid in unique_list:
 			del unique_list[invalid]
@@ -611,7 +622,7 @@ def gen_bases(bases_list, league, curvals):
 
 # Entry point for getting price data from poe.ninja
 def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
-#	leagues = ["Synthesis Event (SRE001)"]
+	#leagues = ["Synthesis Event (SRE001)"]
 	# list of all uniques that can only be acquired through upgrades or vendor recipes to remove them from unique price consideration
 	upgradeded = [
 		# Fated Uniques
@@ -630,6 +641,8 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		# Upgraded Breach Uniques
 		'Xoph\'s Nurture', 'The Formless Inferno', 'Xoph\'s Blood', 'Tulfall', 'The Perfect Form', 'The Pandemonius', 'Hand of Wisdom and Action', 'Esh\'s Visage', 'Choir of the Storm',
 		'Uul-Netol\'s Embrace', 'The Red Trail', 'The Surrender', 'United in Dream', 'Skin of the Lords', 'Presence of Chayula', 'The Red Nightmare', 'The Green Nightmare', 'The Blue Nightmare',
+		# Harbinger Uniques -- Currently only drops as pieces
+		"The Flow Untethered", "The Fracturing Spinner", "The Tempest's Binding", "The Rippling Thoughts", "The Enmity Divine", "The Unshattered Will",
 	]
 
 	keys = [
@@ -665,7 +678,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		bases = {}
 		prophecy = {}
 		scarab = {}
-		uniques = defaultdict(list)
+		uniques = {}
 		helmenchants = {}
 
 		for key in keys:
@@ -702,7 +715,8 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 			elif key == 'BaseType':
 				for i in data:
 					for ii in data[i]:
-						if ii['baseType'].startswith('Superior ') or ii['count'] < mincount:
+						if ii['baseType'].startswith('Superior ') or ii['count'] < mincount \
+								or (not ii['variant'] and ii['baseType'] not in ['Searching Eye Jewel', 'Murderous Eye Jewel', 'Hypnotic Eye Jewel', 'Ghastly Eye Jewel', 'Opal Ring', 'Steel Ring', 'Crystal Belt', 'Marble Amulet']):
 							continue
 						if ii['levelRequired'] not in bases:
 							bases[ii['levelRequired']] = {}
@@ -760,7 +774,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 								continue
 							if ('links' in ii and ii['links']) or ii['name'] in upgradeded or 'relic' in ii['icon'] or ('variant' in ii and ii['variant'] and '2 Jewels' in ii['variant']):
 								continue
-							uniques[ii['baseType']].append(ii['chaosValue'])
+							uniques[ii['name']] = {'baseType': ii['baseType'], 'chaosValue': ii['chaosValue']}
 
 			else:
 				print('Unhandled key: "{}"'.format(key))

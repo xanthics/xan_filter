@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 05/24/2019(m/d/y) 08:03:13 UTC from "tmpstandard" data
+# Created: 06/03/2019(m/d/y) 07:05:57 UTC from "tmpstandard" data
 
 desc = "scarab Autogen"
 
@@ -8,7 +8,7 @@ desc = "scarab Autogen"
 items = {
 	"1 Gilded Ambush Scarab": {"base": "Gilded Ambush Scarab", "class": "Map Fragments", "type": "map red good"},
 	"1 Gilded Bestiary Scarab": {"base": "Gilded Bestiary Scarab", "class": "Map Fragments", "type": "map red good"},
-	"1 Gilded Breach Scarab": {"base": "Gilded Breach Scarab", "class": "Map Fragments", "type": "map yellow good"},
+	"1 Gilded Breach Scarab": {"base": "Gilded Breach Scarab", "class": "Map Fragments", "type": "map red good"},
 	"1 Gilded Cartography Scarab": {"base": "Gilded Cartography Scarab", "class": "Map Fragments", "type": "map red good"},
 	"1 Gilded Divination Scarab": {"base": "Gilded Divination Scarab", "class": "Map Fragments", "type": "map red good"},
 	"1 Gilded Elder Scarab": {"base": "Gilded Elder Scarab", "class": "Map Fragments", "type": "map yellow good"},
