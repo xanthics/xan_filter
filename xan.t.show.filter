@@ -1,6 +1,6 @@
 #**************************************************************
 # Welcome to xan.filter, a Python generated loot filter for PoE
-# This filter was generated for Temp Softcore on 06/03/2019(m/d/y) 07:05:57 UTC
+# This filter was generated for Temp Softcore on 06/07/2019(m/d/y) 16:25:14 UTC
 # The most current version of code can always be found at https://github.com/xanthics/poe_filter
 #**************************************************************
 
@@ -122,6 +122,16 @@ Show
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 192 128 254
 	SetFontSize 30
+	DisableDropSound True
+
+#challenge item
+Show
+	Class "Incubator"
+	CustomAlertSound "20_currency.wav"
+	MinimapIcon 2 Yellow Circle
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 170 158 130
+	SetFontSize 35
 	DisableDropSound True
 
 #Labyrinth
@@ -1047,7 +1057,7 @@ Show
 
 #Fragment Autogen
 Show
-	BaseType "Chayula's Pure Breachstone" "Tul's Pure Breachstone" "Uul-Netol's Pure Breachstone" "Xoph's Pure Breachstone"
+	BaseType "Chayula's Breachstone" "Chayula's Pure Breachstone" "Uul-Netol's Pure Breachstone"
 	Class "Map Fragments"
 	CustomAlertSound "75_valuable.wav"
 	MinimapIcon 0 Red Diamond
@@ -1059,7 +1069,7 @@ Show
 
 #Fragment Autogen
 Show
-	BaseType "Divine Vessel" "Esh's Breachstone" "Fragment of the Chimera" "Fragment of the Hydra" "Fragment of the Minotaur" "Fragment of the Phoenix" "Mortal Grief" "Mortal Rage" "Sacrifice at Dawn" "Sacrifice at Dusk" "Sacrifice at Midnight" "Sacrifice at Noon" "Tul's Breachstone" "Uul-Netol's Breachstone" "Xoph's Breachstone"
+	BaseType "Divine Vessel" "Eber's Key" "Esh's Breachstone" "Esh's Charged Breachstone" "Fragment of the Hydra" "Fragment of the Minotaur" "Fragment of the Phoenix" "Mortal Grief" "Mortal Rage" "Sacrifice at Dawn" "Sacrifice at Midnight" "Sacrifice at Noon" "Tul's Breachstone" "Tul's Charged Breachstone" "Xoph's Breachstone" "Xoph's Charged Breachstone"
 	Class "Map Fragments"
 	CustomAlertSound "20_map_good.wav"
 	MinimapIcon 1 White Diamond
@@ -1070,7 +1080,16 @@ Show
 
 #Fragment Autogen
 Show
-	BaseType "Chayula's Breachstone" "Eber's Key" "Esh's Charged Breachstone" "Esh's Enriched Breachstone" "Esh's Pure Breachstone" "Inya's Key" "Mortal Hope" "Mortal Ignorance" "Tul's Charged Breachstone" "Tul's Enriched Breachstone" "Uul-Netol's Charged Breachstone" "Uul-Netol's Enriched Breachstone" "Volkuur's Key" "Xoph's Charged Breachstone" "Xoph's Enriched Breachstone" "Yriel's Key"
+	BaseType "Sacrifice at Dusk"
+	Class "Map Fragments"
+	MinimapIcon 2 White Diamond
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 200 200 200 150
+	DisableDropSound True
+
+#Fragment Autogen
+Show
+	BaseType "Esh's Enriched Breachstone" "Esh's Pure Breachstone" "Fragment of the Chimera" "Inya's Key" "Mortal Hope" "Mortal Ignorance" "Tul's Enriched Breachstone" "Tul's Pure Breachstone" "Uul-Netol's Breachstone" "Uul-Netol's Charged Breachstone" "Uul-Netol's Enriched Breachstone" "Volkuur's Key" "Xoph's Enriched Breachstone" "Xoph's Pure Breachstone" "Yriel's Key"
 	Class "Map Fragments"
 	CustomAlertSound "45_map_good.wav"
 	MinimapIcon 1 Yellow Diamond
