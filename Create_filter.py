@@ -44,6 +44,10 @@ from auto_gen import fragment
 from auto_gen import hcfragment
 from auto_gen import tfragment
 from auto_gen import thcfragment
+from auto_gen import incubator
+from auto_gen import hcincubator
+from auto_gen import tincubator
+from auto_gen import thcincubator
 
 from item_config import animate_weapon, show_catchall
 from item_config import challenges
@@ -171,12 +175,12 @@ def get_poe_path():
 
 
 # main function for creating a filter
-def main(leagues=('Standard', 'Hardcore', 'Synthesis', 'Hardcore Synthesis')):
+def main(leagues=('tmpstandard')):
 	gen_list = gen_list_compact
-	lookup_leagues = {'Standard': ("st", "Standard", uniques, divination, stcurrency, stessence, bases, prophecy, scarab, helmenchant, fragment),
-					  'Hardcore': ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence, hcbases, hcprophecy, hcscarab, hchelmenchant, hcfragment),
-					  'tmpstandard': ("t", "Temp Softcore", tuniques, tdivination, tcurrency, tessence, tbases, tprophecy, tscarab, thelmenchant, tfragment),
-					  'tmphardcore': ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence, thcbases, thcprophecy, thcscarab, thchelmenchant, thcfragment)}
+	lookup_leagues = {'Standard': ("st", "Standard", uniques, divination, stcurrency, stessence, bases, prophecy, scarab, helmenchant, fragment, incubator),
+					  'Hardcore': ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence, hcbases, hcprophecy, hcscarab, hchelmenchant, hcfragment, hcincubator),
+					  'tmpstandard': ("t", "Temp Softcore", tuniques, tdivination, tcurrency, tessence, tbases, tprophecy, tscarab, thelmenchant, tfragment, tincubator),
+					  'tmphardcore': ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence, thcbases, thcprophecy, thcscarab, thchelmenchant, thcfragment, thcincubator)}
 	leveling = True  # toggle to show leveling items
 	soundlist = []
 	for i in leagues:
@@ -206,26 +210,26 @@ def main(leagues=('Standard', 'Hardcore', 'Synthesis', 'Hardcore Synthesis')):
 		buffer += gen_list(maps.items, maps.desc, soundlist)  # maps
 		buffer += gen_list(lookup_leagues[i][3].items, lookup_leagues[i][3].desc, soundlist)  # divination cards
 		buffer += gen_list(flask.items, flask.desc, soundlist)  # Flasks
+		buffer += gen_list(chance.items, chance.desc, soundlist)  # Chance bases
 		buffer += gen_list(lookup_leagues[i][6].items, lookup_leagues[i][6].desc, soundlist)  # Autogen Bases
-
 		buffer += gen_list(itemmods(), "Items Mods", soundlist)  # mod based highlighting
+		buffer += gen_list(lookup_leagues[i][11].items, lookup_leagues[i][11].desc, soundlist)  # Autogen Incubator
 
 		if leveling:
 			desc = "Rare item for leveling"
 			flags = 'All'  # see item_config/rare_gen - genraresleveling for valid values
-			buffer += gen_list(genraresleveling(flags, overlevel=3, maxlevel=67), desc, soundlist)
+			buffer += gen_list(genraresleveling(flags, overlevel=3, maxlevel=64), desc, soundlist)
 
 		buffer += gen_list(genrareshighlighttiered(), 'Rare item highlighting for endgame', soundlist)
 
 		buffer += gen_list(chroma.items, chroma.desc, soundlist)  # chrome vendor items
 		if leveling:
 			buffer += gen_list(general_levelling.items, general_levelling.desc, soundlist)
-		buffer += gen_list(chance.items, chance.desc, soundlist)  # Chance bases
 		# buffer += gen_list(animate_weapon.items, animate_weapon.desc, soundlist)  # Animate Weapon bases
 
 		if leveling:
 			desc = 'item for leveling'
-			flags = ['Weapon']  # 'All'  # see item_config/rare_gen - genraresleveling for valid values
+			flags = ['All']  # 'All'  # see item_config/rare_gen - genraresleveling for valid values
 			buffer += gen_list(gennonrareleveling(flags, overlevel=2, maxlevel=25), desc, soundlist)
 
 		buffer += gen_list(lookup_leagues[i][7].items, lookup_leagues[i][7].desc, soundlist)  # Autogen Prophecy

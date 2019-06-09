@@ -7,7 +7,7 @@ import os
 import requests
 from datetime import datetime
 from collections import defaultdict
-from ninja_defaults import currencydefaults, essencedefaults, prophecydefaults, divdefaults, uniquedefaults, scarabdefaults, helmenchantsdefaults, basedefaults, fragmentdefaults
+from ninja_defaults import currencydefaults, essencedefaults, prophecydefaults, divdefaults, uniquedefaults, scarabdefaults, helmenchantsdefaults, basedefaults, fragmentdefaults, incubatordefaults
 from ninja_helm_lookup import helmnames
 
 header = '''#!/usr/bin/python
@@ -73,7 +73,7 @@ def fixmissingbases(bases, league):
 
 
 # Add missing values to data returned by poe.ninja
-def fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uniques, helmenchants, fragments):
+def fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uniques, helmenchants, fragments, incubator):
 	# Add chaos and Scroll of Wisdom to the default list as poe.ninja does not include them
 	currencydefaults["Chaos Orb"] = 1
 	currencydefaults["Scroll of Wisdom"] = 1 / 100
@@ -88,6 +88,8 @@ def fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uni
 	currency["Vial of Transcendence"] = 1/2
 	currency["Vial of the Ghost"] = currency['Exalted Orb'] * 8
 	currency["Vial of Sacrifice"] = currency['Exalted Orb'] * 18
+
+	fixmissing(incubator, incubatordefaults, league, 'incubator')
 
 	fixmissing(essences, essencedefaults, league, 'essences')
 
@@ -248,6 +250,40 @@ def gen_fragments(fragment_list, league, curvals):
 		f.write(curval)
 
 	return curvals
+
+
+# Convert a essence value to string.  returns a string
+def incubatorclassify(cur, val, curvals):
+	if val >= curvals['extremely']:
+		tier = 'currency extremely high'
+	elif val > curvals['very']:
+		tier = 'currency very high'
+	elif val > curvals['high']:
+		tier = 'currency high'
+	elif val < curvals['normal']:
+		tier = 'currency low'
+	else:
+		return
+
+	return "0 {0}\": {{\"base\": \"{0}\", \"class\": \"Incubator\", \"type\": \"{1}\"}}".format(cur, tier)
+
+
+# given a league grouped list of essences determine all unique entries and then output for each league
+def gen_incubator(incubator_list, league, curvals):
+	curval = '''{}\ndesc = "Incubator Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
+
+	for cur in sorted(incubator_list.keys()):
+		retstr = incubatorclassify(cur, incubator_list[cur], curvals)
+		if retstr:
+			curval += '\t"{},\n'.format(retstr)
+
+	curval += '\t"7 incubator default": {"base": "Incubator", "class": "Incubator", "type": "currency normal"}'
+	curval += u'}\n'
+
+	name = convertname(league)
+
+	with open('auto_gen\\{}incubator.py'.format(name), 'w', encoding='utf-8') as f:
+		f.write(curval)
 
 
 # Convert a essence value to string.  returns a string
@@ -651,6 +687,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		'Scarab',
 		'Fossil',
 		'Resonator',
+		"Incubator",
 		'Essence',
 		'DivinationCard',
 		'Prophecy',
@@ -664,6 +701,13 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		'UniqueAccessory'
 	]
 
+	leaguelookup = {
+		"Standard": "Standard",
+		"Hardcore": "Hardcore",
+		"tmpstandard": "Legion",
+		"tmphardcore": "Hardcore Legion",
+	}
+
 	os.environ['NO_PROXY'] = 'poe.ninja'
 	requester = requests.session()
 
@@ -674,6 +718,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		currency = {}
 		fragments = {}
 		divs = {}
+		incubator = {}
 		essences = {}
 		bases = {}
 		prophecy = {}
@@ -683,9 +728,9 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 
 		for key in keys:
 			if key in ['Currency', 'Fragment']:
-				request = f'https://poe.ninja/api/data/currencyoverview?league={league}&type={key}'
+				request = f'https://poe.ninja/api/data/currencyoverview?league={leaguelookup[league]}&type={key}'
 			else:
-				request = f'https://poe.ninja/api/data/itemoverview?league={league}&type={key}'
+				request = f'https://poe.ninja/api/data/itemoverview?league={leaguelookup[league]}&type={key}'
 			req = requester.get(request)
 			if req.status_code == 204:
 				print("No {} data for {}".format(key, league))
@@ -753,6 +798,14 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 						if ii['count'] < mincount:
 							continue
 						divs[ii['name']] = ii['chaosValue']
+
+			elif key == 'Incubator':
+				for i in data:
+					for ii in data[i]:
+						if ii['count'] < mincount:
+							continue
+						incubator[ii['name']] = ii['chaosValue']
+
 			elif key == 'Essence':
 				for i in data:
 					for ii in data[i]:
@@ -780,12 +833,13 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 				print('Unhandled key: "{}"'.format(key))
 
 		# Add all missing values to poe.ninja data
-		fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uniques, helmenchants, fragments)
+		fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uniques, helmenchants, fragments, incubator)
 		fixmissingbases(bases, league)
 
 		curvals = gen_currency(currency, league)
 		gen_div(divs, league, curvals)
 		gen_bases(bases, league, curvals)
+		gen_incubator(incubator, league, curvals)
 		gen_essence(essences, league, curvals)
 		gen_prophecy(prophecy, league, curvals)
 		gen_scarab(scarab, league, curvals)

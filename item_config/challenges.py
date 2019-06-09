@@ -6,5 +6,4 @@ desc = "challenge item"
 
 # Base type : settings pair
 items = {
-	"9 Incubator": {"class": "Incubator", "type": "currency normal"}
 }
