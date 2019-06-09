@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 05/24/2019(m/d/y) 08:03:12 UTC from "Hardcore" data
+# Created: 06/09/2019(m/d/y) 20:45:11 UTC from "Hardcore" data
 
 desc = "Divination Card"
 
 # Base type : settings pair
 items = {
 	"000 Beauty Through Death": {"base": "Beauty Through Death", "class": "Divination Card", "type": "divination extremely high"},
-	"001 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination normal"},
-	"002 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
+	"001 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
+	"002 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination normal"},
 	"003 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination low"},
 	"004 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination high"},
 	"005 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination high"},
@@ -103,7 +103,7 @@ items = {
 	"1 The Journey": {"base": "The Journey", "class": "Divination Card", "type": "divination high"},
 	"1 The King's Blade": {"base": "The King's Blade", "class": "Divination Card", "type": "hide"},
 	"1 The King's Heart": {"base": "The King's Heart", "class": "Divination Card", "type": "divination high"},
-	"1 The Landing": {"base": "The Landing", "class": "Divination Card", "type": "divination high"},
+	"1 The Landing": {"base": "The Landing", "class": "Divination Card", "type": "divination very high"},
 	"1 The Last One Standing": {"base": "The Last One Standing", "class": "Divination Card", "type": "divination high"},
 	"1 The Lich": {"base": "The Lich", "class": "Divination Card", "type": "divination low"},
 	"1 The Life Thief": {"base": "The Life Thief", "class": "Divination Card", "type": "divination extremely high"},
@@ -122,7 +122,7 @@ items = {
 	"1 The Polymath": {"base": "The Polymath", "class": "Divination Card", "type": "divination high"},
 	"1 The Porcupine": {"base": "The Porcupine", "class": "Divination Card", "type": "divination high"},
 	"1 The Price of Protection": {"base": "The Price of Protection", "class": "Divination Card", "type": "divination high"},
-	"1 The Professor": {"base": "The Professor", "class": "Divination Card", "type": "divination high"},
+	"1 The Professor": {"base": "The Professor", "class": "Divination Card", "type": "divination very high"},
 	"1 The Puzzle": {"base": "The Puzzle", "class": "Divination Card", "type": "divination low"},
 	"1 The Queen": {"base": "The Queen", "class": "Divination Card", "type": "divination very high"},
 	"1 The Rabid Rhoa": {"base": "The Rabid Rhoa", "class": "Divination Card", "type": "hide"},
@@ -134,7 +134,7 @@ items = {
 	"1 The Scarred Meadow": {"base": "The Scarred Meadow", "class": "Divination Card", "type": "hide"},
 	"1 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination low"},
 	"1 The Seeker": {"base": "The Seeker", "class": "Divination Card", "type": "divination very high"},
-	"1 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination high"},
+	"1 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination very high"},
 	"1 The Sigil": {"base": "The Sigil", "class": "Divination Card", "type": "hide"},
 	"1 The Spark and the Flame": {"base": "The Spark and the Flame", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Spoiled Prince": {"base": "The Spoiled Prince", "class": "Divination Card", "type": "hide"},
