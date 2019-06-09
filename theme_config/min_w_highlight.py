@@ -133,6 +133,11 @@ settings = {
 			   "SetBorderColor {} 150".format(color['premiumorange']),
 			   "SetBackgroundColor {} 220".format(color['premiumdpurple'])],
 
+	"chance any": ['Corrupted False',
+				   "SetFontSize {}".format(size['large']),
+				   "SetBorderColor {} 150".format(color['premiumorange']),
+				   "SetBackgroundColor {} 220".format(color['premiumdpurple'])],
+
 	"chromatic": ["SocketGroup RGB",
 				  "SetBorderColor {}".format(color['premiumgreen']),
 				  "SetFontSize {}".format(size['normal']),

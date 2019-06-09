@@ -32,19 +32,19 @@ items = {
 
 	"74 Map Fragments": {"class": "Map Fragments", "type": "map white"},
 
-	"8 5": {"other": ["DropLevel <= 5", "ItemLevel >= 15", "ItemLevel <= 69"], "type": "rare low"},
-	"8 10": {"other": ["DropLevel <= 10", "ItemLevel >= 20", "ItemLevel <= 69"], "type": "rare low"},
-	"8 15": {"other": ["DropLevel <= 15", "ItemLevel >= 25", "ItemLevel <= 69"], "type": "rare low"},
-	"8 20": {"other": ["DropLevel <= 20", "ItemLevel >= 30", "ItemLevel <= 69"], "type": "rare low"},
-	"8 25": {"other": ["DropLevel <= 25", "ItemLevel >= 35", "ItemLevel <= 69"], "type": "rare low"},
-	"8 30": {"other": ["DropLevel <= 30", "ItemLevel >= 40", "ItemLevel <= 69"], "type": "rare low"},
-	"8 35": {"other": ["DropLevel <= 35", "ItemLevel >= 45", "ItemLevel <= 69"], "type": "rare low"},
-	"8 40": {"other": ["DropLevel <= 40", "ItemLevel >= 50", "ItemLevel <= 69"], "type": "rare low"},
-	"8 45": {"other": ["DropLevel <= 45", "ItemLevel >= 55", "ItemLevel <= 69"], "type": "rare low"},
-	"8 50": {"other": ["DropLevel <= 50", "ItemLevel >= 60", "ItemLevel <= 69"], "type": "rare low"},
-	"8 55": {"other": ["DropLevel <= 55", "ItemLevel >= 65", "ItemLevel <= 69"], "type": "rare low"},
+	"8 5": {"other": ["DropLevel <= 5", "ItemLevel >= 15", "ItemLevel <= 67"], "type": "rare low"},
+	"8 10": {"other": ["DropLevel <= 10", "ItemLevel >= 20", "ItemLevel <= 67"], "type": "rare low"},
+	"8 15": {"other": ["DropLevel <= 15", "ItemLevel >= 25", "ItemLevel <= 67"], "type": "rare low"},
+	"8 20": {"other": ["DropLevel <= 20", "ItemLevel >= 30", "ItemLevel <= 67"], "type": "rare low"},
+	"8 25": {"other": ["DropLevel <= 25", "ItemLevel >= 35", "ItemLevel <= 67"], "type": "rare low"},
+	"8 30": {"other": ["DropLevel <= 30", "ItemLevel >= 40", "ItemLevel <= 67"], "type": "rare low"},
+	"8 35": {"other": ["DropLevel <= 35", "ItemLevel >= 45", "ItemLevel <= 67"], "type": "rare low"},
+	"8 40": {"other": ["DropLevel <= 40", "ItemLevel >= 50", "ItemLevel <= 67"], "type": "rare low"},
+	"8 45": {"other": ["DropLevel <= 45", "ItemLevel >= 55", "ItemLevel <= 67"], "type": "rare low"},
+	"8 50": {"other": ["DropLevel <= 50", "ItemLevel >= 60", "ItemLevel <= 67"], "type": "rare low"},
+	"8 55": {"other": ["DropLevel <= 55", "ItemLevel >= 65", "ItemLevel <= 67"], "type": "rare low"},
 
-	"91 Other rares": {"other": ["ItemLevel <= 69"], "type": "rare normal"},
+	"91 Other rares": {"other": ["ItemLevel <= 67"], "type": "rare normal"},
 	"92 identified rares": {"other": ["Identified True"], "type": "rare low"},
 
 }

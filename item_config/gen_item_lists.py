@@ -993,7 +993,7 @@ def genrareshighlighttiered():
 	ret = {}
 	substrings = findsubstrings()
 	# Bases that are always shown when a certain ilvl threshold is reached.  Highlighting rules still followed
-	alwaysshow = {'Boots': 86, 'Accessory': 68, 'Other': 1}
+	alwaysshow = {'Boots': 68, 'Accessory': 68, 'Other': 1}
 	# For items that match rule, override tier.  Mostly for fractured items
 	override_tier = [
 		# type, Base, include, exclude, tier
