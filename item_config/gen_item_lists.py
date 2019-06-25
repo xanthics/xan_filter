@@ -809,7 +809,7 @@ bases = {
 			{'drop': 35, 'base': 'Amulet', 'name': 'Chrysalis Talisman', 'tier': 2},  # Spell Damage +(20 to 30)
 			{'drop': 50, 'base': 'Amulet', 'name': 'Ruby Amulet', 'tier': 0},  # Base Fire Damage Resistance (20 to 30)
 			{'drop': 74, 'base': 'Amulet', 'name': 'Marble Amulet', 'tier': 0},  # Life Regeneration Rate Per Minute (72 to 96)
-			{'drop': 77, 'base': 'Amulet', 'name': 'Blue Pearl Amulet', 'tier': 1},  # Mana Regeneration Rate +(48 to 56)
+			{'drop': 77, 'base': 'Amulet', 'name': 'Blue Pearl Amulet', 'tier': 2},  # Mana Regeneration Rate +(48 to 56)
 		],
 		"Accessory|Belt": [
 			{'drop': 1, 'base': 'Belt', 'name': 'Stygian Vise', 'tier': 0},  # Local Has (1) Abyss Sockets
@@ -993,7 +993,23 @@ def genrareshighlighttiered():
 	ret = {}
 	substrings = findsubstrings()
 	# Bases that are always shown when a certain ilvl threshold is reached.  Highlighting rules still followed
-	alwaysshow = {'Boots': 68, 'Accessory': 68, 'Other': 1}
+	alwaysshow = {'Boots': 73, 'Accessory': 68, 'Other': 1}
+	#alwaysshow = {'Boots': 86, 'Accessory': 84, 'Other': 1}
+	# list of bases that should be ignored, even for always show
+	bad_bases = [
+		'Gold Amulet',
+		'Paua Amulet',
+		'Coral Amulet',
+		'Gold Ring',
+		'Blue Pearl Amulet',
+		'Chain Belt',
+		'Cloth Belt',
+		'Studded Belt',
+		'Vanguard Belt',
+		'Iron Ring',
+		'Breach Ring',
+		'Paua Ring'
+	]
 	# For items that match rule, override tier.  Mostly for fractured items
 	override_tier = [
 		# type, Base, include, exclude, tier
@@ -1060,7 +1076,6 @@ def genrareshighlighttiered():
 			s = set(f).intersection(set(askeys))
 			if s:
 				ilvl = min([alwaysshow[x] for x in set(f).intersection(set(askeys))])
-
 			for i in range(len(bases[category][vals])):
 				cur = bases[category][vals][i]
 				for typ in type_penalty:
@@ -1078,7 +1093,7 @@ def genrareshighlighttiered():
 						# calculate the penalty level of the item
 						penalty = c + type_penalty[typ] + (rules[cur['base']][2] if cur['base'] in rules and rules[cur['base']][0].issubset(f) and not rules[cur['base']][1].issubset(f) else cur['tier'])
 						# if normal item with no special highlight rules and penalty is greater than allowed, do not make a highlight rule
-						if not typ and not s and penalty > maxnormal:
+						if not typ and (not s or cur['name'] in bad_bases) and penalty > maxnormal:
 							break
 						hl = minhl(penalty, style_tiers)
 						# if rule is the same as default highlight rule, skip
