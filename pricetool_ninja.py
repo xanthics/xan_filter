@@ -19,7 +19,7 @@ header = '''#!/usr/bin/python
 # Helper function to tier items based on value of ex
 def gentierval(currencies):
 	maxval = max(currencies['Exalted Orb'], 50)
-	minval = min(currencies['Orb of Alchemy'], currencies["Orb of Scouring"], currencies["Cartographer's Chisel"], 1/4)
+	minval = 1/4  # min(currencies['Orb of Alchemy'], currencies["Orb of Scouring"], currencies["Cartographer's Chisel"], 1/4)
 	ret = {'extremely': maxval,
 		   'very': maxval // 10,
 		   'high': 1,
@@ -111,13 +111,13 @@ def currencyclassify(cur, val, curvals, stacks=1):
 	# list of currency to always give a border to if their price is low
 	ah = [
 		"Splinter of Chayula", "Splinter of Xoph", "Splinter of Uul-Netol", "Splinter of Tul", "Splinter of Esh",
-		"Perandus Coin", "Cartographer's Chisel", "Orb of Fusing", "Silver Coin",
+		"Perandus Coin", "Orb of Fusing", "Silver Coin",
 		"Chromatic Orb",
-		"Orb of Alchemy", "Alchemy Shard",
+		"Alchemy Shard",
 		"Orb of Alteration", "Alteration Shard",
-		"Orb of Augmentation",
-		"Jeweller's Orb",
-		"Orb of Transmutation",
+		#"Orb of Augmentation",
+		#"Jeweller's Orb",
+		#"Orb of Transmutation",
 		"Orb of Chance",
 		"Glassblower's Bauble",
 		"Horizon Orb", "Horizon Shard",
@@ -125,9 +125,19 @@ def currencyclassify(cur, val, curvals, stacks=1):
 		"Engineer's Orb", "Engineer's Shard",
 		"Orb of Binding", "Binding Shard",
 		"Regal Orb", "Regal Shard",
+		"Blessed Orb",
+		"Timeless Eternal Empire Splinter", "Timeless Karui Splinter", "Timeless Maraketh Splinter", "Timeless Templar Splinter", "Timeless Vaal Splinter"
+	]
+	# list of currencies to always make sound if their value is low
+	ahn = [
+		'Orb of Alchemy',
+		"Orb of Scouring",
+		"Cartographer's Chisel"
 	]
 	if ((cur in ah) or 'Fossil' in cur) and val < curvals['normal']:
 		tier = 'currency show'
+	elif cur in ahn and val < curvals['normal']:
+		tier = 'currency normal'
 #	elif 'Alchemical Resonator' in cur and 'Prime' not in cur:
 #		tier = 'currency very low'
 	elif val >= curvals['extremely']:
@@ -143,8 +153,8 @@ def currencyclassify(cur, val, curvals, stacks=1):
 	elif val >= curvals['min']:
 		tier = 'currency very low'
 	else:
-		tier = 'currency very low'
-		#tier = 'hide'
+		#tier = 'currency very low'
+		tier = 'hide'
 
 	if stacks > 1:
 		return "$ {0}\": {{\"base\": \"{0}\", 'other': ['StackSize >= {2}'], \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier, stacks)
@@ -177,7 +187,18 @@ def gen_currency(currency_list, league):
 
 			prevval = retstr[-20:]
 			count = 9
-			for i in range(2, 21):
+			maxval = 20
+			if cur == "Perandus Coin":
+				maxval = 1000
+			elif "Splinter" in cur:
+				maxval = 99
+			elif cur in ["Orb of Transmutation", "Scroll of Wisdom", "Portal Scroll", "Armourer's Scrap", "Orb of Regret"]:
+				maxval = 40
+			elif cur in ["Orb of Augmentation", "Orb of Scouring", "Silver Coin"]:
+				maxval = 30
+			elif cur in ["Chaos Orb", "Orb of Alchemy", "Regal Orb", "Divine Orb", "Vaal Orb", "Apprentice Cartographer's Sextant", "Journeyman Cartographer's Sextant", "Master Cartographer's Sextant"]:
+				maxval = 10
+			for i in range(2, maxval+1):
 				retstr = currencyclassify(cur, currency_list[cur] * i, curvals, i)
 				if prevval != retstr[-20:]:
 					curval += '\t"{},\n'.format(retstr.replace('$', '{:02}'.format(count)))
@@ -429,9 +450,14 @@ def gen_enchants(helmenchant_list, league, curvals):
 	for c, cur in enumerate(substringhelmenchant):
 		retstr = enchantclassify(cur, helmenchant_list[cur], curvals)
 		if not retstr:
+			retstr = []
 			for val in helmnames[cur]:
-				retstr = '{0}": {{"enchant": "{0}", "type": "ignore"}}'.format(val)
-		curval += '\t"{:03d} {},\n'.format(c, retstr)
+				retstr.append('{0}": {{"enchant": "{0}", "type": "ignore"}}'.format(val))
+		if len(retstr) > 1:
+			for count, val in enumerate(retstr):
+				curval += f'\t"1 {count} {val},\n'
+		else:
+			curval += f'\t"{c:03d} {retstr[0]},\n'
 		del helmenchant_list[cur]
 	for cur in sorted(helmenchant_list.keys()):
 		retstr = enchantclassify(cur, helmenchant_list[cur], curvals)
@@ -442,7 +468,7 @@ def gen_enchants(helmenchant_list, league, curvals):
 			else:
 				curval += f'\t"1 {retstr[0]},\n'
 
-	curval += '}\n'
+	curval += '\t"7 enchant default": {"other": ["AnyEnchantment True"], "type": "item mod"}\n}\n'
 
 	name = convertname(league)
 
@@ -473,14 +499,32 @@ def find_substrings(source_dict):
 
 
 # Convert a div card value to string.  returns a string
-def divclassify(cur, val, curvals, lowcards, badcards):
+def divclassify(cur, val, curvals):
 	# divination cards that should always show an icon
 	ah = [
-		"Three Faces in the Dark", "Hubris", "Loyalty", "Rain of Chaos", "The Catalyst", "The Doppelganger", "The Gambler", "The Gemcutter", "The Master Artisan"
+		"Three Faces in the Dark", "Hubris", "Loyalty", "Rain of Chaos", "The Catalyst", "The Doppelganger", "The Gambler", "The Gemcutter", "The Master Artisan", "Emperor's Luck", "Jack in the Box", "Her Mask", "The Scholar"
+		"House of Mirrors", "Alluring Bounty", "Abandoned Wealth", "Seven Years Bad Luck", "The Saint's Treasure", "The Hoarder", "The Sephirot", "Chaotic Disposition", "The Cartographer", "Monochrome", "The Seeker", "The Journey",
+		"Lucky Connections", "Lucky Deck", "The Innocent", "The Wrath", "Emperor's Luck", "Loyalty", "The Inventor", "The Scholar", "The Survivalist", "The Union", "Vinia's Token", "The Puzzle", "Demigod's Wager", "No Traces", "Three Faces in the Dark",
+		"The Master Artisan", "The Fool", "Coveted Possession", "Rain of Chaos", "The Catalyst", "The Gemcutter",
+		"The Doctor", "The Fiend", "The World Eater", "Pride of the First Ones", "The Last One Standing", "The Wolven King's Bite", "The Samurai's Eye", "Pride Before the Fall", "The Life Thief", "Burning Blood", "The King's Heart",
+		"The Queen", "The Undaunted", "The Mayor", "The Endless Darkness", "The Professor", "The Valkyrie", "Humility", "Time-Lost Relic", "Jack in the Box", "The Twilight Moon", "Arrogance of the Vaal", "Vanity", "The Dreamland",
+		"The Nurse", "The Immortal", "Immortal Resolve", "Beauty Through Death", "The Dragon's Heart", "The Iron Bard", "Wealth and Power", "The Celestial Justicar", "The Enlightened", "The Celestial Stone", "The Sacrifice",
+		"The Porcupine", "Last Hope", "The Artist", "The Dapper Prodigy", "Sambodhi's Vow", "Buried Treasure", "The Jeweller's Boon", "Bowyer's Dream", "Emperor of Purity", "The Chains that Bind", "The Ethereal",
+		"Perfection", "The Warlord", "The Dark Mage", "The Valley of Steel Boxes", "Lingering Remnants", "The Realm", "The Obscured", "The Price of Protection", "Imperial Legacy", "The Flora's Gift",
 	]
+	# Cards that will never be displayed
+	badcards = [
+		"The Twins", "Destined to Crumble", "The Rabid Rhoa", "Thunderous Skies", "The Carrion Crow", "The King's Blade", "The Inoculated", "Struck by Lightning", 'The Sigil', 'The Surgeon', 'Prosperity',
+		'The Metalsmith\'s Gift', 'The Road to Power', 'The Lord in Black', 'The Tyrant', 'Merciless Armament', 'The Jester', 'The Spoiled Prince', 'The Undisputed', 'Blessing of God', 'The Scarred Meadow',
+		'Rain Tempter', 'The Lover', 'Lantador\'s Lost Love', 'The Opulent', "Death"
+	]
+	# Cards that will never make a drop noise
+	lowcards = [
+		'The Web', 'The Incantation', 'Shard of Fate', 'The Endurance', 'Anarchy\'s Price', "The Dragon"
+	]
+
 	if cur in ah and val < curvals['high'] / 2:
 		tier = 'divination show'
-
 	elif cur in lowcards:
 		tier = 'divination low'
 	elif cur in badcards:
@@ -502,51 +546,16 @@ def divclassify(cur, val, curvals, lowcards, badcards):
 def gen_div(div_list, league, curvals):
 	substringcards = find_substrings(div_list)
 
-	# Cards that will never be displayed
-	badcards = ["The Twins",
-				"Destined to Crumble",
-				"The Rabid Rhoa",
-				"Thunderous Skies",
-				"The Carrion Crow",
-				"The King's Blade",
-				"The Inoculated",
-				"Struck by Lightning",
-	            'The Web',
-	            'The Sigil',
-	            'The Surgeon',
-	            'Prosperity',
-				'The Metalsmith\'s Gift',
-				'The Road to Power',
-				'The Lord in Black',
-				'The Tyrant',
-				'Merciless Armament',
-				'The Jester',
-				'The Spoiled Prince',
-				'The Undisputed',
-				'Blessing of God',
-				'The Scarred Meadow',
-				'Rain Tempter']
-
-	# Cards that will never make a drop noise
-	lowcards = ["The Scholar",
-				'The Incantation',
-	            'Shard of Fate',
-	            'The Endurance',
-				'The Lover',
-				'Anarchy\'s Price',
-				'Lantador\'s Lost Love',
-				'The Opulent']
-
 	curval = '{}\ndesc = "Divination Card"\n\n# Base type : settings pair\nitems = {{\n'.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
 
 	for c, cur in enumerate(substringcards):
-		retstr = divclassify(cur, div_list[cur], curvals, lowcards, badcards)
+		retstr = divclassify(cur, div_list[cur], curvals)
 		if not retstr:
 			retstr = '{0}": {{"base": "{0}", "class": "Divination Card", "type": "divination normal"}}'.format(cur)
 		curval += '\t"{:03d} {},\n'.format(c, retstr)
 		del div_list[cur]
 	for cur in sorted(div_list.keys()):
-		retstr = divclassify(cur, div_list[cur], curvals, lowcards, badcards)
+		retstr = divclassify(cur, div_list[cur], curvals)
 		if retstr:
 			curval += '\t"1 {},\n'.format(retstr)
 
@@ -566,7 +575,7 @@ def uniqueclassify(cur, vals, curvals):
 		tier = 'unique extremely high'
 	elif val > curvals['very']:
 		tier = 'unique very high'
-	elif val > curvals['high']:
+	elif val > curvals['high']*2:
 		tier = 'unique high'
 	elif val < curvals['high'] / 2:
 		tier = 'unique low'
@@ -657,7 +666,7 @@ def gen_bases(bases_list, league, curvals):
 
 
 # Entry point for getting price data from poe.ninja
-def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
+def scrape_ninja(leagues=('tmpstandard',)):
 	#leagues = ["Synthesis Event (SRE001)"]
 	# list of all uniques that can only be acquired through upgrades or vendor recipes to remove them from unique price consideration
 	upgradeded = [
@@ -732,6 +741,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 			else:
 				request = f'https://poe.ninja/api/data/itemoverview?league={leaguelookup[league]}&type={key}'
 			req = requester.get(request)
+			print(f"Status code: {req.status_code}")
 			if req.status_code == 204:
 				print("No {} data for {}".format(key, league))
 				continue
@@ -755,7 +765,10 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 							rc = ii['receive']['count'] if ii['receive'] else 0
 							if pc + rc < mincount:
 								continue
-							fragments[ii['currencyTypeName']] = ii['chaosEquivalent']
+							if "Splinter" in ii['currencyTypeName']:
+								currency[ii['currencyTypeName']] = ii['chaosEquivalent']
+							else:
+								fragments[ii['currencyTypeName']] = ii['chaosEquivalent']
 
 			elif key == 'BaseType':
 				for i in data:
