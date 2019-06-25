@@ -181,8 +181,10 @@ def main(leagues=('tmpstandard')):
 					  'Hardcore': ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence, hcbases, hcprophecy, hcscarab, hchelmenchant, hcfragment, hcincubator),
 					  'tmpstandard': ("t", "Temp Softcore", tuniques, tdivination, tcurrency, tessence, tbases, tprophecy, tscarab, thelmenchant, tfragment, tincubator),
 					  'tmphardcore': ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence, thcbases, thcprophecy, thcscarab, thchelmenchant, thcfragment, thcincubator)}
-	leveling = True  # toggle to show leveling items
+	leveling = False  # toggle to show leveling items
 	soundlist = []
+	poeDir = get_poe_path()
+
 	for i in leagues:
 
 		buffer = """#**************************************************************
@@ -204,7 +206,7 @@ def main(leagues=('tmpstandard')):
 		buffer += gen_list(gems.items, gems.desc, soundlist)  # Gems
 		buffer += gen_list(lookup_leagues[i][9].items, lookup_leagues[i][9].desc, soundlist)  # Autogen Helm Enchants
 		buffer += gen_list(lookup_leagues[i][2].items, lookup_leagues[i][2].desc, soundlist)  # uniques
-		# buffer += gen_list(recipe_item.items, recipe_item.desc, soundlist)  # Items for vendor recipe
+		buffer += gen_list(recipe_item.items, recipe_item.desc, soundlist)  # Items for vendor recipe
 		buffer += gen_list(lookup_leagues[i][8].items, lookup_leagues[i][8].desc, soundlist)  # Autogen Scarabs
 		buffer += gen_list(lookup_leagues[i][10].items, lookup_leagues[i][10].desc, soundlist)  # Autogen Map Fragments
 		buffer += gen_list(maps.items, maps.desc, soundlist)  # maps
@@ -235,7 +237,6 @@ def main(leagues=('tmpstandard')):
 		buffer += gen_list(lookup_leagues[i][7].items, lookup_leagues[i][7].desc, soundlist)  # Autogen Prophecy
 		buffer += gen_list(show_catchall.items, show_catchall.desc, soundlist)  # Always show these items
 
-		poeDir = get_poe_path()
 		print("Writing files to: {}".format(poeDir))
 
 		with open("xan.{}.show.filter".format(lookup_leagues[i][0]), "w", encoding='utf-8') as f:
