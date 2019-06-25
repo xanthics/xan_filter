@@ -9,9 +9,6 @@ items = {
 	# High value atlas bases.  Show and make noise at any rarity
 	"04 Stygian Vise": {"other": ['CustomAlertSound "45_show.wav"', "Rarity <= Magic"], "base": "Stygian Vise", "type": "show high"},
 	"05 Abyss Jewel": {"class": "Abyss Jewel", "other": ["Rarity <= Magic"], "type": "normal"},
-	"10 Talisman": {"class": "Amulets", 'other': ["Rarity >= Rare", "ItemLevel >= 70"], "base": "Talisman", "type": "show high"},
-	"11 Talisman": {"class": "Amulets", 'other': ["ItemLevel >= 70"], "base": "Talisman", "type": "show high"},
-	"12 Talisman": {"class": "Amulets", "base": "Talisman", "type": "show low"},
 	"0 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "show normal"},
 	"1 Magic Jewel": {"class": "Jewel", "other": ["Rarity <= Magic", "ItemLevel <= 70"], "type": "normal"},
 
@@ -45,6 +42,7 @@ items = {
 	"8 55": {"other": ["DropLevel <= 55", "ItemLevel >= 65", "ItemLevel <= 67"], "type": "rare low"},
 
 	"91 Other rares": {"other": ["ItemLevel <= 67"], "type": "rare normal"},
-	"92 identified rares": {"other": ["Identified True"], "type": "rare low"},
+	"92 corrupted rares": {"other": ["Corrupted True"], "type": "rare corrupted"},
+#	"93 identified rares": {"other": ["Identified True"], "type": "rare low"},
 
 }
