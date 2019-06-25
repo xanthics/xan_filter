@@ -32,6 +32,6 @@ items = {
 	"0 Chin Sol": {"base": "Assassin Bow", "type": "ignore"},
 	"0 Quill Rain": {"base": "Short Bow", "type": "ignore"},
 	"0 Skirmish": {"base": "Two-Point Arrow Quiver", "type": "ignore"},
-	"0 Malachai": {"base": "Iron Mask", "other": ["ShaperItem True"], "type": "chance any"},
+	"0 Malachai": {"base": "Iron Mask", "other": ["ShaperItem True"], "type": "ignore"},
 
 }
