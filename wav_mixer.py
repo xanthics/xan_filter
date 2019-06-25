@@ -10,9 +10,9 @@ from os import path
 def convert_wav(factor, inpath, outpath):
 	soundmap = {'divination': 'scroll.wav',
 				'unique': 'amulet.wav',
+				'map_good': 'flippy.wav',
 				'map_okay': 'charm.wav',
 				'challenge': 'defiance.wav',
-				'map_good': 'flippy.wav',
 				'currency': 'gold.wav',
 				'show': 'convert.wav',
 				'valuable': 'portalcast.wav',
