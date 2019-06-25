@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 06/25/2019(m/d/y) 04:12:38 UTC from "tmpstandard" data
+# Created: 06/25/2019(m/d/y) 21:28:01 UTC from "tmpstandard" data
 
 desc = "Fragment Autogen"
 
@@ -29,11 +29,6 @@ items = {
 	"1 Sacrifice at Dusk": {"base": "Sacrifice at Dusk", "class": "Map Fragments", "type": "map white"},
 	"1 Sacrifice at Midnight": {"base": "Sacrifice at Midnight", "class": "Map Fragments", "type": "map white good"},
 	"1 Sacrifice at Noon": {"base": "Sacrifice at Noon", "class": "Map Fragments", "type": "map white good"},
-	"1 Timeless Eternal Emblem": {"base": "Timeless Eternal Emblem", "class": "Map Fragments", "type": "map white good"},
-	"1 Timeless Karui Emblem": {"base": "Timeless Karui Emblem", "class": "Map Fragments", "type": "map white good"},
-	"1 Timeless Maraketh Emblem": {"base": "Timeless Maraketh Emblem", "class": "Map Fragments", "type": "map yellow good"},
-	"1 Timeless Templar Emblem": {"base": "Timeless Templar Emblem", "class": "Map Fragments", "type": "map yellow good"},
-	"1 Timeless Vaal Emblem": {"base": "Timeless Vaal Emblem", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Tul's Breachstone": {"base": "Tul's Breachstone", "class": "Map Fragments", "type": "map white good"},
 	"1 Tul's Charged Breachstone": {"base": "Tul's Charged Breachstone", "class": "Map Fragments", "type": "map white good"},
 	"1 Tul's Enriched Breachstone": {"base": "Tul's Enriched Breachstone", "class": "Map Fragments", "type": "map yellow good"},

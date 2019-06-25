@@ -12,12 +12,16 @@ def convert_wav(factor, inpath, outpath):
 				'unique': 'amulet.wav',
 				'map_good': 'flippy.wav',
 				'map_okay': 'charm.wav',
-				'challenge': 'defiance.wav',
+				'challenge1': 'gethit1.wav',
+				'challenge2': 'gethit2.wav',
+				'challenge3': 'gethit3.wav',
+				'challenge4': 'gethit4.wav',
 				'currency': 'gold.wav',
 				'show': 'convert.wav',
 				'valuable': 'portalcast.wav',
 				'gem': 'gem.wav',
-				'base': 'largemetalweapon.wav'}
+				'base': 'charge.wav',
+				'mirror': 'neutral3.wav'}
 
 	pathout = "{}_{}.wav".format(int(factor), inpath)
 	factor = factor / 100

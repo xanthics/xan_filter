@@ -7,7 +7,7 @@ import os
 import requests
 from datetime import datetime
 from collections import defaultdict
-from ninja_defaults import currencydefaults, essencedefaults, prophecydefaults, divdefaults, uniquedefaults, scarabdefaults, helmenchantsdefaults, basedefaults, fragmentdefaults, incubatordefaults
+from ninja_defaults import currencydefaults, essencedefaults, prophecydefaults, divdefaults, uniquedefaults, scarabdefaults, helmenchantsdefaults, basedefaults, fragmentdefaults, challengesdefaults
 from ninja_helm_lookup import helmnames
 
 header = '''#!/usr/bin/python
@@ -73,7 +73,7 @@ def fixmissingbases(bases, league):
 
 
 # Add missing values to data returned by poe.ninja
-def fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uniques, helmenchants, fragments, incubator):
+def fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uniques, helmenchants, fragments, challenges):
 	# Add chaos and Scroll of Wisdom to the default list as poe.ninja does not include them
 	currencydefaults["Chaos Orb"] = 1
 	currencydefaults["Scroll of Wisdom"] = 1 / 100
@@ -89,7 +89,7 @@ def fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uni
 	currency["Vial of the Ghost"] = currency['Exalted Orb'] * 8
 	currency["Vial of Sacrifice"] = currency['Exalted Orb'] * 18
 
-	fixmissing(incubator, incubatordefaults, league, 'incubator')
+	fixmissing(challenges, challengesdefaults, league, 'challenges')
 
 	fixmissing(essences, essencedefaults, league, 'essences')
 
@@ -217,6 +217,77 @@ def gen_currency(currency_list, league):
 		f.write(curval)
 
 	return curvals
+
+
+# Convert a currency shorthand to full name.  returns a string
+def challengeclassify(cur, val, curvals, base, stacks=1):
+	from random import randint
+	sound = randint(1, 4) # for random moos
+
+	if val >= curvals['extremely']:
+		tier = 'challenge extremely high'
+		other = 'CustomAlertSound "{}_challenge{}.wav"'.format(175, sound)
+	elif val >= curvals['very']:
+		tier = 'challenge very high'
+		other = 'CustomAlertSound "{}_challenge{}.wav"'.format(100, sound)
+	elif val >= curvals['high']:
+		tier = 'challenge high'
+		other = 'CustomAlertSound "{}_challenge{}.wav"'.format(75, sound)
+	elif val >= curvals['normal']:
+		tier = 'challenge normal'
+		other = 'CustomAlertSound "{}_challenge{}.wav"'.format(45, sound)
+	else:
+		tier = 'challenge show'
+		other = 'CustomAlertSound "{}_challenge{}.wav"'.format(20, sound)
+
+	if stacks > 1:
+		return f"$ {cur}\": {{\"base\": \"{cur}\", 'other': ['StackSize >= {stacks}', '{other}'], \"class\": \"{base}\", \"type\": \"{tier}\"}}"
+	return f"1 {cur}\": {{\"base\": \"{cur}\", 'other': ['{other}'], \"class\": \"{base}\", \"type\": \"{tier}\"}}"
+
+
+# given a league grouped list of currency determine all unique entries and then output for each league
+def gen_challenge(challenge_list, league, curvals):
+
+	stackable = ['Splinter']
+
+	#	substringunique = find_substrings(currency_list)
+
+	curval = '''{}\ndesc = "Challenge Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
+
+	for cur in sorted(challenge_list):
+		if "Incubator" in cur:
+			base = "Incubator"
+		elif 'Emblem' in cur:
+			base = "Map Fragments"
+		else:
+			base = "Currency"
+		if any(stack in cur for stack in stackable):
+			val = challenge_list[cur]
+			retstr = challengeclassify(cur, val, curvals, base)
+			curval += '\t"{},\n'.format(retstr)
+
+			prevval = retstr[-20:]
+			count = 9
+			maxval = 20
+			if "Splinter" in cur:
+				maxval = 99
+			for i in range(2, maxval+1):
+				retstr = challengeclassify(cur, challenge_list[cur] * i, curvals, base, i)
+				if prevval != retstr[-20:]:
+					curval += '\t"{},\n'.format(retstr.replace('$', '{:02}'.format(count)))
+					count -= 1
+					prevval = retstr[-20:]
+
+		else:
+			retstr = challengeclassify(cur, challenge_list[cur], curvals, base)
+			curval += '\t"{},\n'.format(retstr)
+
+	curval += u'}\n'
+
+	name = convertname(league)
+
+	with open('auto_gen\\{}challenge.py'.format(name), 'w', encoding='utf-8') as f:
+		f.write(curval)
 
 
 # Convert a currency shorthand to full name.  returns a string
@@ -666,7 +737,7 @@ def gen_bases(bases_list, league, curvals):
 
 
 # Entry point for getting price data from poe.ninja
-def scrape_ninja(leagues=('tmpstandard',)):
+def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
 	#leagues = ["Synthesis Event (SRE001)"]
 	# list of all uniques that can only be acquired through upgrades or vendor recipes to remove them from unique price consideration
 	upgradeded = [
@@ -725,9 +796,10 @@ def scrape_ninja(leagues=('tmpstandard',)):
 
 	for league in leagues:
 		currency = {}
+		challenges = {}
 		fragments = {}
 		divs = {}
-		incubator = {}
+#		incubator = {}
 		essences = {}
 		bases = {}
 		prophecy = {}
@@ -765,8 +837,8 @@ def scrape_ninja(leagues=('tmpstandard',)):
 							rc = ii['receive']['count'] if ii['receive'] else 0
 							if pc + rc < mincount:
 								continue
-							if "Splinter" in ii['currencyTypeName']:
-								currency[ii['currencyTypeName']] = ii['chaosEquivalent']
+							if "Timeless" in ii['currencyTypeName']:
+								challenges[ii['currencyTypeName']] = ii['chaosEquivalent']
 							else:
 								fragments[ii['currencyTypeName']] = ii['chaosEquivalent']
 
@@ -817,7 +889,8 @@ def scrape_ninja(leagues=('tmpstandard',)):
 					for ii in data[i]:
 						if ii['count'] < mincount:
 							continue
-						incubator[ii['name']] = ii['chaosValue']
+#						incubator[ii['name']] = ii['chaosValue']
+						challenges[ii['name']] = ii['chaosValue']
 
 			elif key == 'Essence':
 				for i in data:
@@ -834,26 +907,27 @@ def scrape_ninja(leagues=('tmpstandard',)):
 						scarab[ii['name']] = ii['chaosValue']
 
 			elif 'Unique' in key:
-					for i in data:
-						for ii in data[i]:
-							if ii['count'] < mincount:
-								continue
-							if ('links' in ii and ii['links']) or ii['name'] in upgradeded or 'relic' in ii['icon'] or ('variant' in ii and ii['variant'] and '2 Jewels' in ii['variant']):
-								continue
-							uniques[ii['name']] = {'baseType': ii['baseType'], 'chaosValue': ii['chaosValue']}
+				for i in data:
+					for ii in data[i]:
+						if ii['count'] < mincount:
+							continue
+						if ('links' in ii and ii['links']) or ii['name'] in upgradeded or 'relic' in ii['icon'] or ('variant' in ii and ii['variant'] and '2 Jewels' in ii['variant']):
+							continue
+						uniques[ii['name']] = {'baseType': ii['baseType'], 'chaosValue': ii['chaosValue']}
 
 			else:
 				print('Unhandled key: "{}"'.format(key))
 
 		# Add all missing values to poe.ninja data
-		fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uniques, helmenchants, fragments, incubator)
+		fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uniques, helmenchants, fragments, challenges)
 		fixmissingbases(bases, league)
 
 		curvals = gen_currency(currency, league)
 		gen_div(divs, league, curvals)
 		gen_bases(bases, league, curvals)
-		gen_incubator(incubator, league, curvals)
+#		gen_incubator(incubator, league, curvals)
 		gen_essence(essences, league, curvals)
+		gen_challenge(challenges, league, curvals)
 		gen_prophecy(prophecy, league, curvals)
 		gen_scarab(scarab, league, curvals)
 		gen_unique(uniques, league, curvals)

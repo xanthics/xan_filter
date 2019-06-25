@@ -48,13 +48,16 @@ from auto_gen import incubator
 from auto_gen import hcincubator
 from auto_gen import tincubator
 from auto_gen import thcincubator
+from auto_gen import challenge
+from auto_gen import hcchallenge
+from auto_gen import tchallenge
+from auto_gen import thcchallenge
 
 from item_config import animate_weapon, show_catchall
 from item_config import challenges
 from item_config import chance
 from item_config import chroma
 from item_config import currency
-from item_config import essences
 from item_config import flask
 from item_config import gems
 from item_config import general_levelling
@@ -177,10 +180,10 @@ def get_poe_path():
 # main function for creating a filter
 def main(leagues=('tmpstandard')):
 	gen_list = gen_list_compact
-	lookup_leagues = {'Standard': ("st", "Standard", uniques, divination, stcurrency, stessence, bases, prophecy, scarab, helmenchant, fragment, incubator),
-					  'Hardcore': ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence, hcbases, hcprophecy, hcscarab, hchelmenchant, hcfragment, hcincubator),
-					  'tmpstandard': ("t", "Temp Softcore", tuniques, tdivination, tcurrency, tessence, tbases, tprophecy, tscarab, thelmenchant, tfragment, tincubator),
-					  'tmphardcore': ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence, thcbases, thcprophecy, thcscarab, thchelmenchant, thcfragment, thcincubator)}
+	lookup_leagues = {'Standard': ("st", "Standard", uniques, divination, stcurrency, stessence, bases, prophecy, scarab, helmenchant, fragment, incubator, challenge),
+					  'Hardcore': ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence, hcbases, hcprophecy, hcscarab, hchelmenchant, hcfragment, hcincubator, hcchallenge),
+					  'tmpstandard': ("t", "Temp Softcore", tuniques, tdivination, tcurrency, tessence, tbases, tprophecy, tscarab, thelmenchant, tfragment, tincubator, tchallenge),
+					  'tmphardcore': ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence, thcbases, thcprophecy, thcscarab, thchelmenchant, thcfragment, thcincubator, thcchallenge)}
 	leveling = False  # toggle to show leveling items
 	soundlist = []
 	poeDir = get_poe_path()
@@ -198,7 +201,8 @@ def main(leagues=('tmpstandard')):
 		buffer += gen_list(show.items, show.desc, soundlist)  # Always show these items
 		buffer += gen_list(hide.items, hide.desc, soundlist)  # Always hide these items
 		if lookup_leagues[i][0] not in ['st', 'hc']:
-			buffer += gen_list(challenges.items, challenges.desc, soundlist)
+#			buffer += gen_list(challenges.items, challenges.desc, soundlist)
+			buffer += gen_list(lookup_leagues[i][12].items, lookup_leagues[i][12].desc, soundlist)  # Autogen challenges
 		buffer += gen_list(labyrinth.items, labyrinth.desc, soundlist)
 		buffer += gen_list(lookup_leagues[i][4].items, lookup_leagues[i][4].desc, soundlist)  # Autogen currency values
 		buffer += gen_list(lookup_leagues[i][5].items, lookup_leagues[i][5].desc, soundlist)  # Autogen Essences
@@ -288,6 +292,9 @@ if __name__ == "__main__":
 				   bases, hcbases, tbases, thcbases,
 				   prophecy, hcprophecy, tprophecy, thcprophecy,
 				   scarab, hcscarab, tscarab, thcscarab,
+				   challenge, hcchallenge, tchallenge, thcchallenge,
+				   incubator, hcincubator, tincubator, thcincubator,
+				   fragment, hcfragment, tfragment, thcfragment,
 				   helmenchant, hchelmenchant, thelmenchant, thchelmenchant]:
 		importlib.reload(module)
 	main(league)

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 06/09/2019(m/d/y) 20:45:11 UTC from "Standard" data
+# Created: 06/25/2019(m/d/y) 21:27:34 UTC from "Standard" data
 
 desc = "scarab Autogen"
 
@@ -17,21 +17,21 @@ items = {
 	"1 Gilded Reliquary Scarab": {"base": "Gilded Reliquary Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Gilded Shaper Scarab": {"base": "Gilded Shaper Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Gilded Sulphite Scarab": {"base": "Gilded Sulphite Scarab", "class": "Map Fragments", "type": "map red good"},
-	"1 Gilded Torment Scarab": {"base": "Gilded Torment Scarab", "class": "Map Fragments", "type": "map yellow good"},
+	"1 Gilded Torment Scarab": {"base": "Gilded Torment Scarab", "class": "Map Fragments", "type": "map red good"},
 	"1 Polished Ambush Scarab": {"base": "Polished Ambush Scarab", "class": "Map Fragments", "type": "map red good"},
 	"1 Polished Bestiary Scarab": {"base": "Polished Bestiary Scarab", "class": "Map Fragments", "type": "map red good"},
 	"1 Polished Breach Scarab": {"base": "Polished Breach Scarab", "class": "Map Fragments", "type": "map yellow good"},
-	"1 Polished Cartography Scarab": {"base": "Polished Cartography Scarab", "class": "Map Fragments", "type": "map red good"},
+	"1 Polished Cartography Scarab": {"base": "Polished Cartography Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Polished Divination Scarab": {"base": "Polished Divination Scarab", "class": "Map Fragments", "type": "map red good"},
 	"1 Polished Elder Scarab": {"base": "Polished Elder Scarab", "class": "Map Fragments", "type": "map yellow good"},
-	"1 Polished Harbinger Scarab": {"base": "Polished Harbinger Scarab", "class": "Map Fragments", "type": "map yellow good"},
+	"1 Polished Harbinger Scarab": {"base": "Polished Harbinger Scarab", "class": "Map Fragments", "type": "map red good"},
 	"1 Polished Perandus Scarab": {"base": "Polished Perandus Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Polished Reliquary Scarab": {"base": "Polished Reliquary Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Polished Shaper Scarab": {"base": "Polished Shaper Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Polished Sulphite Scarab": {"base": "Polished Sulphite Scarab", "class": "Map Fragments", "type": "map red good"},
-	"1 Polished Torment Scarab": {"base": "Polished Torment Scarab", "class": "Map Fragments", "type": "map yellow good"},
+	"1 Polished Torment Scarab": {"base": "Polished Torment Scarab", "class": "Map Fragments", "type": "map red good"},
 	"1 Rusted Ambush Scarab": {"base": "Rusted Ambush Scarab", "class": "Map Fragments", "type": "map yellow good"},
-	"1 Rusted Bestiary Scarab": {"base": "Rusted Bestiary Scarab", "class": "Map Fragments", "type": "map red good"},
+	"1 Rusted Bestiary Scarab": {"base": "Rusted Bestiary Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Rusted Breach Scarab": {"base": "Rusted Breach Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Rusted Cartography Scarab": {"base": "Rusted Cartography Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Rusted Divination Scarab": {"base": "Rusted Divination Scarab", "class": "Map Fragments", "type": "map yellow good"},
