@@ -1,14 +1,13 @@
 # poe_filter
-**SoundPack**
+**SoundPack** [Download](soundpack.zip?raw=true) 
 
-[soundpack](soundpack.zip?raw=true) Download, unzip archive, and place wav files in same directory as the filter
+Download, unzip archive, and place wav files in same directory as the filter
 
+**HIDE** <a href="xan.t.hide.filter?raw=true" download>Download</a>
 
-**HIDE**
-* <a href="xan.t.hide.filter?raw=true" download>Download Syndicate</a>
+*Or*
 
-**SHOW**
-* <a href="xan.t.show.filter?raw=true" download>Download Syndicate</a>
+**SHOW** <a href="xan.t.show.filter?raw=true" download>Download</a>
 
 This is a script to generate a filter file for Path of Exile using the included config files.
 
