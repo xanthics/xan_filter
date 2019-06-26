@@ -19,24 +19,22 @@ header = '''#!/usr/bin/python
 
 # Helper function to tier items based on value of ex
 def gentierval(currencies):
-	maxval = max(currencies['Exalted Orb'], 50)
-	minval = 1/4  # min(currencies['Orb of Alchemy'], currencies["Orb of Scouring"], currencies["Cartographer's Chisel"], 1/4)
-	ret = {'extremely': maxval,
-		   'very': maxval // 10,
+	ret = {'extremely': currencies['Exalted Orb'],
+		   'very': currencies['Exalted Orb'] // 10,
 		   'high': 1,
-		   'normal': minval,
-		   'low': minval / 2,
-		   'min': minval / 4}
+		   'normal': 1/4,
+		   'low': 1/8,
+		   'min': 1/16}
 	return ret
 
 
 # Helper function to convert a league name to a file prefix
-def convertname(l):
-	if l == 'Standard':
+def convertname(league):
+	if league == 'Standard':
 		return ""
-	elif l == 'Hardcore':
+	elif league == 'Hardcore':
 		return "hc"
-	elif 'tmphardcore' in l:
+	elif 'tmphardcore' in league:
 		return "thc"
 	else:
 		return "t"
@@ -73,8 +71,54 @@ def fixmissingbases(bases, league):
 			fixmissing(bases[level][variant], basedefaults[level][variant], league, f"bases ({level}-{variant})")
 
 
+def lessthan(a, b):
+	return a < b
+
+
+def greaterthanequal(a, b):
+	return a >= b
+
+
+# Sanity check for item prices
+# Will be updated as I notice discrepancies
+def price_sanity(item_list, curvals):
+	lessthanmin = ['The Web', 'The Incantation', 'Shard of Fate', 'The Endurance', "Anarchy's Price", "The Dragon"]
+	lessthanlow = ["Blacksmith's Whetstone", "Armourer's Scrap", "Orb of Chance", "Orb of Transmutation", "The Hermit"]
+	lessthannormal = ["Her Mask", "The Gambler", "Orb of Alteration", "Jeweller's Orb", "Silver Coin", "Chromatic Orb", "Blessed Orb"]
+	lessthanhigh = []
+	lessthanvery = []
+	lessthanextremely = []
+
+	atleastnormal = ['Orb of Alchemy', "Orb of Scouring", "Cartographer's Chisel"]
+	atleasthigh = ["Ancient Orb", "Exalted Shard", "Master Cartographer's Sextant", "Journeyman Cartographer's Sextant", "Apprentice Cartographer's Sextant"]
+	atleastvery = ["Divine Orb", "Orb of Annulment", "Harbinger's Orb"]
+	atleastextremely = ["Mirror of Kalandra", "Mirror Shard", "The Doctor", "House of Mirrors", "The Fiend", "The Nurse", "Alluring Bounty", "The Spark and the Flame", "Pride of the First Ones", "Beauty Through Death", "Immortal Resolve", "The Immortal"]
+
+	lookupmapping = [
+		(lessthanmin, curvals['min'] * .95, lessthan),
+		(lessthanlow, curvals['low'] * .95, lessthan),
+		(lessthannormal, curvals['normal'] * .95, lessthan),
+		(lessthanhigh, curvals['high'] * .95, lessthan),
+		(lessthanvery, curvals['very'] * .95, lessthan),
+		(lessthanextremely, curvals['extremely'] * .95, lessthan),
+
+		(atleastnormal, curvals['normal'], greaterthanequal),
+		(atleasthigh, curvals['high'], greaterthanequal),
+		(atleastvery, curvals['very'], greaterthanequal),
+		(atleastextremely, curvals['extremely'], greaterthanequal),
+	]
+
+	for item in item_list:
+		for items, val, funct in lookupmapping:
+			if not items:
+				continue
+			if item in items and not funct(item_list[item], val):
+				item_list[item] = val
+				break
+
+
 # Add missing values to data returned by poe.ninja
-def fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uniques, helmenchants, fragments, challenges):
+def fixallmissing(league, currency, divs, essences, prophecy, scarab, uniques, helmenchants, fragments, challenges):
 	# Add chaos and Scroll of Wisdom to the default list as poe.ninja does not include them
 	currencydefaults["Chaos Orb"] = 1
 	currencydefaults["Scroll of Wisdom"] = 1 / 100
@@ -91,20 +135,20 @@ def fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uni
 	currency["Vial of Sacrifice"] = currency['Exalted Orb'] * 18
 
 	fixmissing(challenges, challengesdefaults, league, 'challenges')
-
 	fixmissing(essences, essencedefaults, league, 'essences')
-
 	fixmissing(prophecy, prophecydefaults, league, 'prophecy')
-
 	fixmissing(scarab, scarabdefaults, league, 'scarab')
-
 	fixmissing(divs, divdefaults, league, 'Divination cards')
-
 	fixmissing(uniques, uniquedefaults, league, 'uniques')
-
 	fixmissing(helmenchants, helmenchantsdefaults, league, "helmet enchants")
-
 	fixmissing(fragments, fragmentdefaults, league, "Fragments")
+
+	# Sanity check for ex value
+	currency['Exalted Orb'] = 80 if currency['Exalted Orb'] < 80 else currency['Exalted Orb']
+	curvals = gentierval(currency)
+	for item_list in [currency, divs]:
+		price_sanity(item_list, curvals)
+	return curvals
 
 
 # Convert a currency shorthand to full name.  returns a string
@@ -165,7 +209,7 @@ def currencyclassify(cur, val, curvals, stacks=1):
 
 
 # given a league grouped list of currency determine all unique entries and then output for each league
-def gen_currency(currency_list, league):
+def gen_currency(currency_list, league, curvals):
 
 	stackable = ['Orb', 'Splinter', 'Chisel', 'Coin', 'Bauble', 'Sextant', 'Shard', 'Whetstone', 'Scroll', 'Scrap']
 
@@ -179,8 +223,6 @@ def gen_currency(currency_list, league):
 	#	substringunique = find_substrings(currency_list)
 
 	curval = '''{}\ndesc = "Currency Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
-
-	curvals = gentierval(currency_list)
 
 	for cur in sorted(currency_list):
 		if any(stack in cur for stack in stackable):
@@ -218,8 +260,6 @@ def gen_currency(currency_list, league):
 
 	with open('auto_gen\\{}currency.py'.format(name), 'w', encoding='utf-8') as f:
 		f.write(curval)
-
-	return curvals
 
 
 # Convert a currency shorthand to full name.  returns a string
@@ -591,15 +631,10 @@ def divclassify(cur, val, curvals):
 		'The Metalsmith\'s Gift', 'The Road to Power', 'The Lord in Black', 'The Tyrant', 'Merciless Armament', 'The Jester', 'The Spoiled Prince', 'The Undisputed', 'Blessing of God', 'The Scarred Meadow',
 		'Rain Tempter', 'The Lover', 'Lantador\'s Lost Love', 'The Opulent', "Death"
 	]
-	# Cards that will never make a drop noise
-	lowcards = [
-		'The Web', 'The Incantation', 'Shard of Fate', 'The Endurance', 'Anarchy\'s Price', "The Dragon"
-	]
-
-	if cur in ah and val < curvals['high'] / 2:
+	if cur in ["House of Mirrors"]:
+		tier = 'currency mirror'
+	elif cur in ah and val < curvals['high'] / 2:
 		tier = 'divination show'
-	elif cur in lowcards:
-		tier = 'divination low'
 	elif cur in badcards:
 		tier = 'hide'
 	elif val >= curvals['extremely']:
@@ -921,10 +956,10 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 				print('Unhandled key: "{}"'.format(key))
 
 		# Add all missing values to poe.ninja data
-		fixallmissing(league, currency, divs, bases, essences, prophecy, scarab, uniques, helmenchants, fragments, challenges)
+		curvals = fixallmissing(league, currency, divs, essences, prophecy, scarab, uniques, helmenchants, fragments, challenges)
 		fixmissingbases(bases, league)
 
-		curvals = gen_currency(currency, league)
+		gen_currency(currency, league, curvals)
 		gen_div(divs, league, curvals)
 		gen_bases(bases, league, curvals)
 #		gen_incubator(incubator, league, curvals)

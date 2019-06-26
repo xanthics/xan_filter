@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 06/26/2019(m/d/y) 03:24:19 UTC from "tmpstandard" data
+# Created: 06/26/2019(m/d/y) 20:45:50 UTC from "tmpstandard" data
 
 desc = "Helm Enchant Autogen"
 
@@ -8,10 +8,9 @@ desc = "Helm Enchant Autogen"
 items = {
 	"000 Enchantment Flame Surge Vs Burning Enemies 1": {"enchant": "Enchantment Flame Surge Vs Burning Enemies 1", "type": "ignore"},
 	"1 15% increased Cyclone Attack Speed": {"enchant": "Enchantment Cyclone Attack Speed 2", "type": "currency extremely high"},
-	"1 30% increased Temporal Chains Curse Effect": {"enchant": "Enchantment Temporal Chains Curse Effect 2", "type": "currency extremely high"},
+	"1 30% increased Temporal Chains Curse Effect": {"enchant": "Enchantment Temporal Chains Curse Effect 2", "type": "currency very high"},
 	"1 30% reduced Earthquake Duration": {"enchant": "Enchantment Earthquake Duration 2", "type": "currency very high"},
 	"1 30% reduced Storm Call Duration": {"enchant": "Enchantment Storm Call Duration 2", "type": "currency very high"},
-	"1 40% increased Blade Flurry Damage": {"enchant": "Enchantment Blade Flurry Damage 2", "type": "currency very high"},
 	"1 40% increased Cyclone Damage": {"enchant": "Enchantment Cyclone Damage 2", "type": "currency extremely high"},
 	"1 40% increased Essence Drain Damage": {"enchant": "Enchantment Essence Drain Damage 2", "type": "currency extremely high"},
 	"1 40% increased Frost Blades Damage": {"enchant": "Enchantment Frost Blades Damage 2", "type": "currency very high"},

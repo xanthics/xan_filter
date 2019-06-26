@@ -6,7 +6,7 @@ import importlib
 from datetime import datetime
 import os
 from io import open
-from zipfile import ZipFile
+from zipfile import ZipFile, ZIP_LZMA
 
 from auto_gen import divination
 from auto_gen import hcdivination
@@ -277,7 +277,7 @@ def main(leagues=('tmpstandard')):
 		i, sound = track.split('_', maxsplit=1)
 		convert_wav(int(i), sound, poeDir)
 	# Create sound pack
-	with ZipFile('soundpack.zip', 'w') as zipper:
+	with ZipFile('soundpack.zip', mode='w', compression=ZIP_LZMA) as zipper:
 		for track in soundlist:
 			zipper.write('filter_sounds/{}.wav'.format(track), arcname='{}.wav'.format(track))
 
