@@ -1,12 +1,12 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 06/26/2019(m/d/y) 01:03:57 UTC from "tmpstandard" data
+# Created: 06/26/2019(m/d/y) 03:24:19 UTC from "tmpstandard" data
 
 desc = "Currency Autogen"
 
 # Base type : settings pair
 items = {
-	"1 Aberrant Fossil": {"base": "Aberrant Fossil", "class": "Currency", "type": "currency normal"},
+	"1 Aberrant Fossil": {"base": "Aberrant Fossil", "class": "Currency", "type": "currency high"},
 	"1 Aetheric Fossil": {"base": "Aetheric Fossil", "class": "Currency", "type": "currency high"},
 	"1 Alchemy Shard": {"base": "Alchemy Shard", "class": "Currency", "type": "currency show"},
 	"09 Alchemy Shard": {"base": "Alchemy Shard", 'other': ['StackSize >= 13'], "class": "Currency", "type": "currency normal"},
@@ -34,7 +34,7 @@ items = {
 	"06 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", 'other': ['StackSize >= 17'], "class": "Currency", "type": "currency high"},
 	"1 Blessed Orb": {"base": "Blessed Orb", "class": "Currency", "type": "currency show"},
 	"09 Blessed Orb": {"base": "Blessed Orb", 'other': ['StackSize >= 5'], "class": "Currency", "type": "currency normal"},
-	"08 Blessed Orb": {"base": "Blessed Orb", 'other': ['StackSize >= 20'], "class": "Currency", "type": "currency high"},
+	"08 Blessed Orb": {"base": "Blessed Orb", 'other': ['StackSize >= 17'], "class": "Currency", "type": "currency high"},
 	"1 Blessing of Chayula": {"base": "Blessing of Chayula", "class": "Currency", "type": "currency very high"},
 	"1 Blessing of Esh": {"base": "Blessing of Esh", "class": "Currency", "type": "currency high"},
 	"1 Blessing of Tul": {"base": "Blessing of Tul", "class": "Currency", "type": "currency high"},
@@ -164,7 +164,7 @@ items = {
 	"08 Silver Coin": {"base": "Silver Coin", 'other': ['StackSize >= 6'], "class": "Currency", "type": "currency high"},
 	"1 Splinter of Chayula": {"base": "Splinter of Chayula", "class": "Currency", "type": "currency normal"},
 	"09 Splinter of Chayula": {"base": "Splinter of Chayula", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency high"},
-	"08 Splinter of Chayula": {"base": "Splinter of Chayula", 'other': ['StackSize >= 20'], "class": "Currency", "type": "currency very high"},
+	"08 Splinter of Chayula": {"base": "Splinter of Chayula", 'other': ['StackSize >= 21'], "class": "Currency", "type": "currency very high"},
 	"1 Splinter of Esh": {"base": "Splinter of Esh", "class": "Currency", "type": "currency show"},
 	"09 Splinter of Esh": {"base": "Splinter of Esh", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency normal"},
 	"08 Splinter of Esh": {"base": "Splinter of Esh", 'other': ['StackSize >= 15'], "class": "Currency", "type": "currency high"},

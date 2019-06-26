@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 06/26/2019(m/d/y) 01:03:57 UTC from "tmpstandard" data
+# Created: 06/26/2019(m/d/y) 03:24:19 UTC from "tmpstandard" data
 
 desc = "Fragment Autogen"
 
@@ -9,7 +9,7 @@ items = {
 	"1 Chayula's Breachstone": {"base": "Chayula's Breachstone", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Chayula's Charged Breachstone": {"base": "Chayula's Charged Breachstone", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Chayula's Enriched Breachstone": {"base": "Chayula's Enriched Breachstone", "class": "Map Fragments", "type": "map yellow good"},
-	"1 Chayula's Pure Breachstone": {"base": "Chayula's Pure Breachstone", "class": "Map Fragments", "type": "map very good"},
+	"1 Chayula's Pure Breachstone": {"base": "Chayula's Pure Breachstone", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Divine Vessel": {"base": "Divine Vessel", "class": "Map Fragments", "type": "map white good"},
 	"1 Eber's Key": {"base": "Eber's Key", "class": "Map Fragments", "type": "map white good"},
 	"1 Esh's Breachstone": {"base": "Esh's Breachstone", "class": "Map Fragments", "type": "map white good"},

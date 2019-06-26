@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 06/26/2019(m/d/y) 01:03:57 UTC from "tmpstandard" data
+# Created: 06/26/2019(m/d/y) 03:24:19 UTC from "tmpstandard" data
 
 desc = "Bases"
 
@@ -16,7 +16,6 @@ items = {
 	"0 Shaper Coral Amulet": {"base": "Coral Amulet", "other": ["ShaperItem True", "ItemLevel >= 86"], "type": "base very high"},
 	"0 Shaper Coral Ring": {"base": "Coral Ring", "other": ["ShaperItem True", "ItemLevel >= 86"], "type": "base very high"},
 	"0 Shaper Diamond Ring": {"base": "Diamond Ring", "other": ["ShaperItem True", "ItemLevel >= 86"], "type": "base very high"},
-	"0 Shaper Ebony Tower Shield": {"base": "Ebony Tower Shield", "other": ["ShaperItem True", "ItemLevel >= 86"], "type": "base very high"},
 	"0 Shaper Eclipse Staff": {"base": "Eclipse Staff", "other": ["ShaperItem True", "ItemLevel >= 86"], "type": "base very high"},
 	"0 Shaper Exquisite Blade": {"base": "Exquisite Blade", "other": ["ShaperItem True", "ItemLevel >= 86"], "type": "base very high"},
 	"0 Shaper Gold Amulet": {"base": "Gold Amulet", "other": ["ShaperItem True", "ItemLevel >= 86"], "type": "base very high"},
@@ -129,6 +128,7 @@ items = {
 	"2 Elder Vaal Axe": {"base": "Vaal Axe", "other": ["ElderItem True", "ItemLevel 84"], "type": "base extremely high"},
 	"3 Shaper Crystal Belt": {"base": "Crystal Belt", "other": ["ShaperItem True", "ItemLevel 83"], "type": "base very high"},
 	"3 Shaper Diamond Ring": {"base": "Diamond Ring", "other": ["ShaperItem True", "ItemLevel 83"], "type": "base very high"},
+	"3 Shaper Fingerless Silk Gloves": {"base": "Fingerless Silk Gloves", "other": ["ShaperItem True", "ItemLevel 83"], "type": "base very high"},
 	"3 Shaper Gripped Gloves": {"base": "Gripped Gloves", "other": ["ShaperItem True", "ItemLevel 83"], "type": "base very high"},
 	"3 Shaper Marble Amulet": {"base": "Marble Amulet", "other": ["ShaperItem True", "ItemLevel 83"], "type": "base very high"},
 	"3 Shaper Penetrating Arrow Quiver": {"base": "Penetrating Arrow Quiver", "other": ["ShaperItem True", "ItemLevel 83"], "type": "base very high"},
