@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 06/26/2019(m/d/y) 20:45:50 UTC from "tmpstandard" data
+# Created: 06/26/2019(m/d/y) 21:02:11 UTC from "tmpstandard" data
 
 desc = "scarab Autogen"
 
@@ -38,5 +38,6 @@ items = {
 	"1 Rusted Perandus Scarab": {"base": "Rusted Perandus Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Rusted Reliquary Scarab": {"base": "Rusted Reliquary Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Rusted Sulphite Scarab": {"base": "Rusted Sulphite Scarab", "class": "Map Fragments", "type": "map red good"},
+	"1 Rusted Torment Scarab": {"base": "Rusted Torment Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"7 scarab default": {"base": "Scarab", "class": "Map Fragments", "type": "map yellow"}
 }

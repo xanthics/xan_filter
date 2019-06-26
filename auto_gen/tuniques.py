@@ -1,17 +1,17 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 06/26/2019(m/d/y) 20:45:50 UTC from "tmpstandard" data
+# Created: 06/26/2019(m/d/y) 21:02:11 UTC from "tmpstandard" data
 
 desc = "Unique"
 
 # Base type : settings pair
 items = {
 	"000 Reinforced Tower Shield": {"other": ["ItemLevel <= 60"], "base": "Reinforced Tower Shield", "type": "unique high"},
-	"001 Archon Kite Shield Piece": {"base": "Archon Kite Shield Piece", "type": "unique high"},
-	"002 Blunt Arrow Quiver Piece": {"base": "Blunt Arrow Quiver Piece", "type": "unique normal"},
+	"001 Blunt Arrow Quiver Piece": {"base": "Blunt Arrow Quiver Piece", "type": "unique normal"},
+	"002 Archon Kite Shield Piece": {"base": "Archon Kite Shield Piece", "type": "unique high"},
 	"003 Cloth Belt Piece": {"base": "Cloth Belt Piece", "type": "unique high"},
-	"004 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique normal"},
-	"005 Moon Temple Map": {"base": "Moon Temple Map", "type": "unique very high"},
+	"004 Moon Temple Map": {"base": "Moon Temple Map", "type": "unique very high"},
+	"005 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique normal"},
 	"1 Agate Amulet": {"base": "Agate Amulet", "type": "unique low"},
 	"1 Amber Amulet": {"base": "Amber Amulet", "type": "unique special"},
 	"1 Ambusher": {"base": "Ambusher", "type": "unique low"},
@@ -65,7 +65,6 @@ items = {
 	"1 Copper Plate": {"base": "Copper Plate", "type": "unique low"},
 	"1 Coral Amulet": {"base": "Coral Amulet", "type": "unique low"},
 	"1 Coral Ring": {"base": "Coral Ring", "type": "unique low"},
-	"1 Coronal Leather": {"base": "Coronal Leather", "type": "unique high"},
 	"1 Crimson Jewel": {"base": "Crimson Jewel", "type": "unique special"},
 	"1 Crude Bow": {"base": "Crude Bow", "type": "unique low"},
 	"1 Crusader Boots": {"base": "Crusader Boots", "type": "unique extremely high"},
@@ -76,7 +75,6 @@ items = {
 	"1 Crystal Wand": {"base": "Crystal Wand", "type": "unique low"},
 	"1 Cursed Crypt Map": {"base": "Cursed Crypt Map", "type": "unique high"},
 	"1 Cutlass": {"base": "Cutlass", "type": "unique high"},
-	"1 Cutthroat's Garb": {"base": "Cutthroat's Garb", "type": "unique low"},
 	"1 Death Bow": {"base": "Death Bow", "type": "unique low"},
 	"1 Decimation Bow": {"base": "Decimation Bow", "type": "unique low"},
 	"1 Decorative Axe": {"base": "Decorative Axe", "type": "unique low"},
@@ -234,6 +232,7 @@ items = {
 	"1 Rotted Round Shield": {"base": "Rotted Round Shield", "type": "unique low"},
 	"1 Royal Axe": {"base": "Royal Axe", "type": "unique very high"},
 	"1 Royal Bow": {"base": "Royal Bow", "type": "unique low"},
+	"1 Royal Skean": {"base": "Royal Skean", "type": "unique low"},
 	"1 Royal Staff": {"base": "Royal Staff", "type": "unique low"},
 	"1 Ruby Flask": {"base": "Ruby Flask", "type": "unique special"},
 	"1 Ruby Ring": {"base": "Ruby Ring", "type": "unique special"},
@@ -290,7 +289,6 @@ items = {
 	"1 Stiletto": {"base": "Stiletto", "type": "unique low"},
 	"1 Strapped Boots": {"base": "Strapped Boots", "type": "unique low"},
 	"1 Strapped Leather": {"base": "Strapped Leather", "type": "unique low"},
-	"1 Strapped Mitts": {"base": "Strapped Mitts", "type": "unique low"},
 	"1 Studded Belt": {"base": "Studded Belt", "type": "unique special"},
 	"1 Studded Round Shield": {"base": "Studded Round Shield", "type": "unique low"},
 	"1 Sulphur Flask": {"base": "Sulphur Flask", "type": "unique special"},
@@ -301,7 +299,6 @@ items = {
 	"1 Terror Claw": {"base": "Terror Claw", "type": "unique low"},
 	"1 Terror Maul": {"base": "Terror Maul", "type": "unique low"},
 	"1 Thresher Claw": {"base": "Thresher Claw", "type": "unique low"},
-	"1 Throat Stabber": {"base": "Throat Stabber", "type": "unique low"},
 	"1 Timeless Jewel": {"base": "Timeless Jewel", "type": "unique special"},
 	"1 Timeworn Claw": {"base": "Timeworn Claw", "type": "unique high"},
 	"1 Titan Gauntlets": {"base": "Titan Gauntlets", "type": "unique low"},

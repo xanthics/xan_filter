@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 06/26/2019(m/d/y) 20:45:50 UTC from "tmpstandard" data
+# Created: 06/26/2019(m/d/y) 21:02:11 UTC from "tmpstandard" data
 
 desc = "Helm Enchant Autogen"
 

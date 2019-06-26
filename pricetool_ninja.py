@@ -163,7 +163,7 @@ def currencyclassify(cur, val, curvals, stacks=1):
 		#"Orb of Augmentation",
 		#"Jeweller's Orb",
 		#"Orb of Transmutation",
-		"Orb of Chance",
+		#"Orb of Chance",
 		"Glassblower's Bauble",
 		"Horizon Orb", "Horizon Shard",
 		"Chaos Shard",

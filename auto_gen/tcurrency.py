@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 06/26/2019(m/d/y) 20:45:50 UTC from "tmpstandard" data
+# Created: 06/26/2019(m/d/y) 21:02:11 UTC from "tmpstandard" data
 
 desc = "Currency Autogen"
 
@@ -108,9 +108,10 @@ items = {
 	"06 Orb of Augmentation": {"base": "Orb of Augmentation", 'other': ['StackSize >= 25'], "class": "Currency", "type": "currency high"},
 	"1 Orb of Binding": {"base": "Orb of Binding", "class": "Currency", "type": "currency normal"},
 	"09 Orb of Binding": {"base": "Orb of Binding", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency high"},
-	"1 Orb of Chance": {"base": "Orb of Chance", "class": "Currency", "type": "currency show"},
-	"09 Orb of Chance": {"base": "Orb of Chance", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency normal"},
-	"08 Orb of Chance": {"base": "Orb of Chance", 'other': ['StackSize >= 15'], "class": "Currency", "type": "currency high"},
+	"1 Orb of Chance": {"base": "Orb of Chance", "class": "Currency", "type": "currency very low"},
+	"09 Orb of Chance": {"base": "Orb of Chance", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency low"},
+	"08 Orb of Chance": {"base": "Orb of Chance", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency normal"},
+	"07 Orb of Chance": {"base": "Orb of Chance", 'other': ['StackSize >= 15'], "class": "Currency", "type": "currency high"},
 	"1 Orb of Fusing": {"base": "Orb of Fusing", "class": "Currency", "type": "currency normal"},
 	"09 Orb of Fusing": {"base": "Orb of Fusing", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency high"},
 	"1 Orb of Horizons": {"base": "Orb of Horizons", "class": "Currency", "type": "currency normal"},
@@ -142,7 +143,7 @@ items = {
 	"1 Prime Alchemical Resonator": {"base": "Prime Alchemical Resonator", "class": "Currency", "type": "currency high"},
 	"1 Prime Chaotic Resonator": {"base": "Prime Chaotic Resonator", "class": "Currency", "type": "currency high"},
 	"1 Primitive Alchemical Resonator": {"base": "Primitive Alchemical Resonator", "class": "Currency", "type": "currency normal"},
-	"1 Primitive Chaotic Resonator": {"base": "Primitive Chaotic Resonator", "class": "Currency", "type": "currency high"},
+	"1 Primitive Chaotic Resonator": {"base": "Primitive Chaotic Resonator", "class": "Currency", "type": "currency normal"},
 	"1 Prismatic Fossil": {"base": "Prismatic Fossil", "class": "Currency", "type": "currency high"},
 	"1 Pristine Fossil": {"base": "Pristine Fossil", "class": "Currency", "type": "currency high"},
 	"1 Regal Orb": {"base": "Regal Orb", "class": "Currency", "type": "currency normal"},
