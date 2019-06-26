@@ -70,6 +70,7 @@ from item_config.gen_item_lists import genraresleveling, gennonrareleveling, gen
 from item_config.itemmod import itemmods
 
 from theme_config import formatting
+from theme_config.min_w_highlight import volume
 from wav_mixer import convert_wav
 
 
@@ -185,7 +186,9 @@ def main(leagues=('tmpstandard')):
 					  'tmpstandard': ("t", "Temp Softcore", tuniques, tdivination, tcurrency, tessence, tbases, tprophecy, tscarab, thelmenchant, tfragment, tincubator, tchallenge),
 					  'tmphardcore': ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence, thcbases, thcprophecy, thcscarab, thchelmenchant, thcfragment, thcincubator, thcchallenge)}
 	leveling = False  # toggle to show leveling items
-	soundlist = []
+	soundlist = [f"{x}_challenge{y}" for x in [volume['low'], volume['medium']] for y in range(1, 5)] +\
+				[f"{x}_challenge{y}" for x in [volume['normal']] for y in range(5, 11)] +\
+				[f"{x}_challenge{y}" for x in [volume['high'], volume['max']] for y in range(11, 16)]
 	poeDir = get_poe_path()
 
 	for i in leagues:

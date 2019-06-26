@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 06/25/2019(m/d/y) 21:28:01 UTC from "tmpstandard" data
+# Created: 06/26/2019(m/d/y) 01:03:57 UTC from "tmpstandard" data
 
 desc = "Currency Autogen"
 
@@ -24,7 +24,7 @@ items = {
 	"09 Armourer's Scrap": {"base": "Armourer's Scrap", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency very low"},
 	"08 Armourer's Scrap": {"base": "Armourer's Scrap", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency low"},
 	"07 Armourer's Scrap": {"base": "Armourer's Scrap", 'other': ['StackSize >= 5'], "class": "Currency", "type": "currency normal"},
-	"06 Armourer's Scrap": {"base": "Armourer's Scrap", 'other': ['StackSize >= 20'], "class": "Currency", "type": "currency high"},
+	"06 Armourer's Scrap": {"base": "Armourer's Scrap", 'other': ['StackSize >= 17'], "class": "Currency", "type": "currency high"},
 	"1 Binding Shard": {"base": "Binding Shard", "class": "Currency", "type": "currency show"},
 	"09 Binding Shard": {"base": "Binding Shard", 'other': ['StackSize >= 16'], "class": "Currency", "type": "currency normal"},
 	"1 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", "class": "Currency", "type": "hide"},
@@ -34,7 +34,7 @@ items = {
 	"06 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", 'other': ['StackSize >= 17'], "class": "Currency", "type": "currency high"},
 	"1 Blessed Orb": {"base": "Blessed Orb", "class": "Currency", "type": "currency show"},
 	"09 Blessed Orb": {"base": "Blessed Orb", 'other': ['StackSize >= 5'], "class": "Currency", "type": "currency normal"},
-	"08 Blessed Orb": {"base": "Blessed Orb", 'other': ['StackSize >= 17'], "class": "Currency", "type": "currency high"},
+	"08 Blessed Orb": {"base": "Blessed Orb", 'other': ['StackSize >= 20'], "class": "Currency", "type": "currency high"},
 	"1 Blessing of Chayula": {"base": "Blessing of Chayula", "class": "Currency", "type": "currency very high"},
 	"1 Blessing of Esh": {"base": "Blessing of Esh", "class": "Currency", "type": "currency high"},
 	"1 Blessing of Tul": {"base": "Blessing of Tul", "class": "Currency", "type": "currency high"},
@@ -64,7 +64,7 @@ items = {
 	"08 Engineer's Shard": {"base": "Engineer's Shard", 'other': ['StackSize >= 13'], "class": "Currency", "type": "currency high"},
 	"1 Exalted Orb": {"base": "Exalted Orb", "class": "Currency", "type": "currency extremely high"},
 	"1 Exalted Shard": {"base": "Exalted Shard", "class": "Currency", "type": "currency high"},
-	"09 Exalted Shard": {"base": "Exalted Shard", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency very high"},
+	"09 Exalted Shard": {"base": "Exalted Shard", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency very high"},
 	"1 Faceted Fossil": {"base": "Faceted Fossil", "class": "Currency", "type": "currency very high"},
 	"1 Fractured Fossil": {"base": "Fractured Fossil", "class": "Currency", "type": "currency extremely high"},
 	"1 Frigid Fossil": {"base": "Frigid Fossil", "class": "Currency", "type": "currency normal"},
@@ -90,10 +90,10 @@ items = {
 	"09 Journeyman Cartographer's Sextant": {"base": "Journeyman Cartographer's Sextant", 'other': ['StackSize >= 5'], "class": "Currency", "type": "currency very high"},
 	"1 Lucent Fossil": {"base": "Lucent Fossil", "class": "Currency", "type": "currency normal"},
 	"1 Master Cartographer's Sextant": {"base": "Master Cartographer's Sextant", "class": "Currency", "type": "currency high"},
-	"09 Master Cartographer's Sextant": {"base": "Master Cartographer's Sextant", 'other': ['StackSize >= 5'], "class": "Currency", "type": "currency very high"},
+	"09 Master Cartographer's Sextant": {"base": "Master Cartographer's Sextant", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency very high"},
 	"1 Metallic Fossil": {"base": "Metallic Fossil", "class": "Currency", "type": "currency normal"},
-	"1 Mirror Shard": {"base": "Mirror Shard", "class": "Currency", "type": "currency extremely high"},
-	"1 Mirror of Kalandra": {"base": "Mirror of Kalandra", "class": "Currency", "type": "currency extremely high"},
+	"1 Mirror Shard": {"base": "Mirror Shard", "class": "Currency", "type": "currency mirror"},
+	"1 Mirror of Kalandra": {"base": "Mirror of Kalandra", "class": "Currency", "type": "currency mirror"},
 	"1 Orb of Alchemy": {"base": "Orb of Alchemy", "class": "Currency", "type": "currency normal"},
 	"09 Orb of Alchemy": {"base": "Orb of Alchemy", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency high"},
 	"1 Orb of Alteration": {"base": "Orb of Alteration", "class": "Currency", "type": "currency show"},
@@ -161,7 +161,7 @@ items = {
 	"1 Shuddering Fossil": {"base": "Shuddering Fossil", "class": "Currency", "type": "currency high"},
 	"1 Silver Coin": {"base": "Silver Coin", "class": "Currency", "type": "currency show"},
 	"09 Silver Coin": {"base": "Silver Coin", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency normal"},
-	"08 Silver Coin": {"base": "Silver Coin", 'other': ['StackSize >= 7'], "class": "Currency", "type": "currency high"},
+	"08 Silver Coin": {"base": "Silver Coin", 'other': ['StackSize >= 6'], "class": "Currency", "type": "currency high"},
 	"1 Splinter of Chayula": {"base": "Splinter of Chayula", "class": "Currency", "type": "currency normal"},
 	"09 Splinter of Chayula": {"base": "Splinter of Chayula", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency high"},
 	"08 Splinter of Chayula": {"base": "Splinter of Chayula", 'other': ['StackSize >= 20'], "class": "Currency", "type": "currency very high"},

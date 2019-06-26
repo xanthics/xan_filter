@@ -144,6 +144,12 @@ settings = {
 				   "SetBorderColor {} 150".format(color['premiumorange']),
 				   "SetBackgroundColor {} 220".format(color['premiumdpurple'])],
 
+	"currency mirror": ["SetBorderColor {}".format(color['currency']),
+						'MinimapIcon 0 Yellow Circle',
+						'PlayEffect Yellow',
+						"SetFontSize {}".format(size['huge']),
+						'CustomAlertSound "{}_mirror.wav"'.format(300),
+						"SetBackgroundColor {} 220".format(color['highlight'])],
 	"currency extremely high": ["SetBorderColor {}".format(color['currency']),
 								'MinimapIcon 0 Yellow Circle',
 								'PlayEffect Yellow',

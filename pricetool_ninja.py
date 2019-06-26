@@ -9,6 +9,7 @@ from datetime import datetime
 from collections import defaultdict
 from ninja_defaults import currencydefaults, essencedefaults, prophecydefaults, divdefaults, uniquedefaults, scarabdefaults, helmenchantsdefaults, basedefaults, fragmentdefaults, challengesdefaults
 from ninja_helm_lookup import helmnames
+from theme_config.min_w_highlight import volume
 
 header = '''#!/usr/bin/python
 # -*- coding: utf-8 -*-
@@ -134,7 +135,9 @@ def currencyclassify(cur, val, curvals, stacks=1):
 		"Orb of Scouring",
 		"Cartographer's Chisel"
 	]
-	if ((cur in ah) or 'Fossil' in cur) and val < curvals['normal']:
+	if cur in ["Mirror of Kalandra", "Mirror Shard"]:
+		tier = 'currency mirror'
+	elif ((cur in ah) or 'Fossil' in cur) and val < curvals['normal']:
 		tier = 'currency show'
 	elif cur in ahn and val < curvals['normal']:
 		tier = 'currency normal'
@@ -221,24 +224,23 @@ def gen_currency(currency_list, league):
 
 # Convert a currency shorthand to full name.  returns a string
 def challengeclassify(cur, val, curvals, base, stacks=1):
-	from random import randint
-	sound = randint(1, 4) # for random moos
+	from random import randint  # for random moos
 
 	if val >= curvals['extremely']:
 		tier = 'challenge extremely high'
-		other = 'CustomAlertSound "{}_challenge{}.wav"'.format(175, sound)
+		other = 'CustomAlertSound "{}_challenge{}.wav"'.format(volume['max'], randint(11, 15))
 	elif val >= curvals['very']:
 		tier = 'challenge very high'
-		other = 'CustomAlertSound "{}_challenge{}.wav"'.format(100, sound)
+		other = 'CustomAlertSound "{}_challenge{}.wav"'.format(volume['high'], randint(11, 15))
 	elif val >= curvals['high']:
 		tier = 'challenge high'
-		other = 'CustomAlertSound "{}_challenge{}.wav"'.format(75, sound)
+		other = 'CustomAlertSound "{}_challenge{}.wav"'.format(volume['normal'], randint(5, 10))
 	elif val >= curvals['normal']:
 		tier = 'challenge normal'
-		other = 'CustomAlertSound "{}_challenge{}.wav"'.format(45, sound)
+		other = 'CustomAlertSound "{}_challenge{}.wav"'.format(volume['medium'], randint(1, 4))
 	else:
 		tier = 'challenge show'
-		other = 'CustomAlertSound "{}_challenge{}.wav"'.format(20, sound)
+		other = 'CustomAlertSound "{}_challenge{}.wav"'.format(volume['low'], randint(1, 4))
 
 	if stacks > 1:
 		return f"$ {cur}\": {{\"base\": \"{cur}\", 'other': ['StackSize >= {stacks}', '{other}'], \"class\": \"{base}\", \"type\": \"{tier}\"}}"
