@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 07/02/2019(m/d/y) 04:52:48 UTC from "tmpstandard" data
+# Created: 07/02/2019(m/d/y) 19:41:19 UTC from "tmpstandard" data
 
 desc = "scarab Autogen"
 
@@ -12,7 +12,7 @@ items = {
 	"1 Gilded Cartography Scarab": {"base": "Gilded Cartography Scarab", "class": "Map Fragments", "type": "map red good"},
 	"1 Gilded Divination Scarab": {"base": "Gilded Divination Scarab", "class": "Map Fragments", "type": "map red good"},
 	"1 Gilded Elder Scarab": {"base": "Gilded Elder Scarab", "class": "Map Fragments", "type": "map yellow good"},
-	"1 Gilded Harbinger Scarab": {"base": "Gilded Harbinger Scarab", "class": "Map Fragments", "type": "map red good"},
+	"1 Gilded Harbinger Scarab": {"base": "Gilded Harbinger Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Gilded Perandus Scarab": {"base": "Gilded Perandus Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Gilded Reliquary Scarab": {"base": "Gilded Reliquary Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Gilded Shaper Scarab": {"base": "Gilded Shaper Scarab", "class": "Map Fragments", "type": "map yellow good"},
@@ -36,8 +36,6 @@ items = {
 	"1 Rusted Divination Scarab": {"base": "Rusted Divination Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Rusted Harbinger Scarab": {"base": "Rusted Harbinger Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Rusted Perandus Scarab": {"base": "Rusted Perandus Scarab", "class": "Map Fragments", "type": "map yellow good"},
-	"1 Rusted Reliquary Scarab": {"base": "Rusted Reliquary Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Rusted Sulphite Scarab": {"base": "Rusted Sulphite Scarab", "class": "Map Fragments", "type": "map yellow good"},
-	"1 Rusted Torment Scarab": {"base": "Rusted Torment Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"7 scarab default": {"base": "Scarab", "class": "Map Fragments", "type": "map yellow"}
 }

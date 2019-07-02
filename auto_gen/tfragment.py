@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 07/02/2019(m/d/y) 04:52:49 UTC from "tmpstandard" data
+# Created: 07/02/2019(m/d/y) 19:41:19 UTC from "tmpstandard" data
 
 desc = "Fragment Autogen"
 
@@ -34,7 +34,7 @@ items = {
 	"1 Tul's Enriched Breachstone": {"base": "Tul's Enriched Breachstone", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Tul's Pure Breachstone": {"base": "Tul's Pure Breachstone", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Uul-Netol's Breachstone": {"base": "Uul-Netol's Breachstone", "class": "Map Fragments", "type": "map white good"},
-	"1 Uul-Netol's Charged Breachstone": {"base": "Uul-Netol's Charged Breachstone", "class": "Map Fragments", "type": "map yellow good"},
+	"1 Uul-Netol's Charged Breachstone": {"base": "Uul-Netol's Charged Breachstone", "class": "Map Fragments", "type": "map white good"},
 	"1 Uul-Netol's Enriched Breachstone": {"base": "Uul-Netol's Enriched Breachstone", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Uul-Netol's Pure Breachstone": {"base": "Uul-Netol's Pure Breachstone", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Volkuur's Key": {"base": "Volkuur's Key", "class": "Map Fragments", "type": "map white good"},
