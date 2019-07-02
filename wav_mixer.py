@@ -32,7 +32,8 @@ def convert_wav(factor, inpath, outpath):
 				'valuable': 'portalcast.wav',
 				'gem': 'gem.wav',
 				'base': 'charge.wav',
-				'mirror': 'neutral3.wav'}
+				'mirror': 'neutral3.wav',
+				'5link': '5link.wav'}
 
 	pathout = "{}_{}.wav".format(int(factor), inpath)
 	factor = factor / 100
