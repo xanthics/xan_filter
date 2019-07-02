@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 06/30/2019(m/d/y) 04:53:27 UTC from "tmpstandard" data
+# Created: 07/02/2019(m/d/y) 04:52:48 UTC from "tmpstandard" data
 
 desc = "scarab Autogen"
 
@@ -31,13 +31,13 @@ items = {
 	"1 Polished Torment Scarab": {"base": "Polished Torment Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Rusted Ambush Scarab": {"base": "Rusted Ambush Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Rusted Bestiary Scarab": {"base": "Rusted Bestiary Scarab", "class": "Map Fragments", "type": "map yellow good"},
+	"1 Rusted Breach Scarab": {"base": "Rusted Breach Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Rusted Cartography Scarab": {"base": "Rusted Cartography Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Rusted Divination Scarab": {"base": "Rusted Divination Scarab", "class": "Map Fragments", "type": "map yellow good"},
-	"1 Rusted Elder Scarab": {"base": "Rusted Elder Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Rusted Harbinger Scarab": {"base": "Rusted Harbinger Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Rusted Perandus Scarab": {"base": "Rusted Perandus Scarab", "class": "Map Fragments", "type": "map yellow good"},
-	"1 Rusted Shaper Scarab": {"base": "Rusted Shaper Scarab", "class": "Map Fragments", "type": "map yellow good"},
-	"1 Rusted Sulphite Scarab": {"base": "Rusted Sulphite Scarab", "class": "Map Fragments", "type": "map red good"},
+	"1 Rusted Reliquary Scarab": {"base": "Rusted Reliquary Scarab", "class": "Map Fragments", "type": "map yellow good"},
+	"1 Rusted Sulphite Scarab": {"base": "Rusted Sulphite Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Rusted Torment Scarab": {"base": "Rusted Torment Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"7 scarab default": {"base": "Scarab", "class": "Map Fragments", "type": "map yellow"}
 }

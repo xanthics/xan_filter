@@ -52,6 +52,10 @@ from auto_gen import challenge
 from auto_gen import hcchallenge
 from auto_gen import tchallenge
 from auto_gen import thcchallenge
+from auto_gen import skillgem
+from auto_gen import hcskillgem
+from auto_gen import tskillgem
+from auto_gen import thcskillgem
 
 from item_config import animate_weapon, show_catchall
 from item_config import challenges
@@ -181,10 +185,10 @@ def get_poe_path():
 # main function for creating a filter
 def main(leagues=('tmpstandard')):
 	gen_list = gen_list_compact
-	lookup_leagues = {'Standard': ("st", "Standard", uniques, divination, stcurrency, stessence, bases, prophecy, scarab, helmenchant, fragment, incubator, challenge),
-					  'Hardcore': ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence, hcbases, hcprophecy, hcscarab, hchelmenchant, hcfragment, hcincubator, hcchallenge),
-					  'tmpstandard': ("t", "Temp Softcore", tuniques, tdivination, tcurrency, tessence, tbases, tprophecy, tscarab, thelmenchant, tfragment, tincubator, tchallenge),
-					  'tmphardcore': ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence, thcbases, thcprophecy, thcscarab, thchelmenchant, thcfragment, thcincubator, thcchallenge)}
+	lookup_leagues = {'Standard': ("st", "Standard", uniques, divination, stcurrency, stessence, bases, prophecy, scarab, helmenchant, fragment, incubator, challenge, skillgem),
+					  'Hardcore': ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence, hcbases, hcprophecy, hcscarab, hchelmenchant, hcfragment, hcincubator, hcchallenge, hcskillgem),
+					  'tmpstandard': ("t", "Temp Softcore", tuniques, tdivination, tcurrency, tessence, tbases, tprophecy, tscarab, thelmenchant, tfragment, tincubator, tchallenge, tskillgem),
+					  'tmphardcore': ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence, thcbases, thcprophecy, thcscarab, thchelmenchant, thcfragment, thcincubator, thcchallenge, thcskillgem)}
 	leveling = False  # toggle to show leveling items
 	soundlist = [f"{x}_challenge{y}" for x in [volume['low'], volume['medium']] for y in range(1, 5)] +\
 				[f"{x}_challenge{y}" for x in [volume['normal']] for y in range(5, 11)] +\
@@ -210,6 +214,7 @@ def main(leagues=('tmpstandard')):
 		buffer += gen_list(lookup_leagues[i][4].items, lookup_leagues[i][4].desc, soundlist)  # Autogen currency values
 		buffer += gen_list(lookup_leagues[i][5].items, lookup_leagues[i][5].desc, soundlist)  # Autogen Essences
 		buffer += gen_list(currency.items, currency.desc, soundlist)  # Currency
+		buffer += gen_list(lookup_leagues[i][13].items, lookup_leagues[i][13].desc, soundlist)  # Autogen gems
 		buffer += gen_list(gems.items, gems.desc, soundlist)  # Gems
 		buffer += gen_list(lookup_leagues[i][9].items, lookup_leagues[i][9].desc, soundlist)  # Autogen Helm Enchants
 		buffer += gen_list(lookup_leagues[i][2].items, lookup_leagues[i][2].desc, soundlist)  # uniques
@@ -298,6 +303,7 @@ if __name__ == "__main__":
 				   challenge, hcchallenge, tchallenge, thcchallenge,
 				   incubator, hcincubator, tincubator, thcincubator,
 				   fragment, hcfragment, tfragment, thcfragment,
+				   skillgem, hcskillgem, tskillgem, thcskillgem,
 				   helmenchant, hchelmenchant, thelmenchant, thchelmenchant]:
 		importlib.reload(module)
 	main(league)

@@ -1,12 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 06/25/2019(m/d/y) 21:27:34 UTC from "Standard" data
+# Created: 07/02/2019(m/d/y) 04:49:25 UTC from "Standard" data
 
 desc = "Fragment Autogen"
 
 # Base type : settings pair
 items = {
-	"1 Ancient Reliquary Key": {"base": "Ancient Reliquary Key", "class": "Map Fragments", "type": "map very good"},
 	"1 Chayula's Breachstone": {"base": "Chayula's Breachstone", "class": "Map Fragments", "type": "map very good"},
 	"1 Chayula's Charged Breachstone": {"base": "Chayula's Charged Breachstone", "class": "Map Fragments", "type": "map very good"},
 	"1 Chayula's Enriched Breachstone": {"base": "Chayula's Enriched Breachstone", "class": "Map Fragments", "type": "map very good"},
@@ -30,7 +29,6 @@ items = {
 	"1 Sacrifice at Dusk": {"base": "Sacrifice at Dusk", "class": "Map Fragments", "type": "map white"},
 	"1 Sacrifice at Midnight": {"base": "Sacrifice at Midnight", "class": "Map Fragments", "type": "map white good"},
 	"1 Sacrifice at Noon": {"base": "Sacrifice at Noon", "class": "Map Fragments", "type": "map white good"},
-	"1 Timeworn Reliquary Key": {"base": "Timeworn Reliquary Key", "class": "Map Fragments", "type": "map very good"},
 	"1 Tul's Breachstone": {"base": "Tul's Breachstone", "class": "Map Fragments", "type": "map white good"},
 	"1 Tul's Charged Breachstone": {"base": "Tul's Charged Breachstone", "class": "Map Fragments", "type": "map white good"},
 	"1 Tul's Enriched Breachstone": {"base": "Tul's Enriched Breachstone", "class": "Map Fragments", "type": "map yellow good"},

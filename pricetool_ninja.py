@@ -84,12 +84,12 @@ def greaterthanequal(a, b):
 def price_sanity(item_list, curvals):
 	lessthanmin = ['The Web', 'The Incantation', 'Shard of Fate', 'The Endurance', "Anarchy's Price", "The Dragon"]
 	lessthanlow = ["Blacksmith's Whetstone", "Armourer's Scrap", "Orb of Chance", "Orb of Transmutation", "The Hermit"]
-	lessthannormal = ["Her Mask", "The Gambler", "Orb of Alteration", "Jeweller's Orb", "Silver Coin", "Chromatic Orb", "Blessed Orb"]
+	lessthannormal = ["Her Mask", "The Gambler", "Jeweller's Orb", "Silver Coin", "Chromatic Orb", "Blessed Orb"]
 	lessthanhigh = []
 	lessthanvery = []
 	lessthanextremely = []
 
-	atleastnormal = ['Orb of Alchemy', "Orb of Scouring", "Cartographer's Chisel"]
+	atleastnormal = ["Orb of Alteration", 'Orb of Alchemy', "Orb of Scouring", "Cartographer's Chisel"]
 	atleasthigh = ["Ancient Orb", "Exalted Shard", "Master Cartographer's Sextant", "Journeyman Cartographer's Sextant", "Apprentice Cartographer's Sextant"]
 	atleastvery = ["Divine Orb", "Orb of Annulment", "Harbinger's Orb"]
 	atleastextremely = ["Mirror of Kalandra", "Mirror Shard", "The Doctor", "House of Mirrors", "The Fiend", "The Nurse", "Alluring Bounty", "The Spark and the Flame", "Pride of the First Ones", "Beauty Through Death", "Immortal Resolve", "The Immortal"]
@@ -156,14 +156,17 @@ def currencyclassify(cur, val, curvals, stacks=1):
 	# list of currency to always give a border to if their price is low
 	ah = [
 		"Splinter of Chayula", "Splinter of Xoph", "Splinter of Uul-Netol", "Splinter of Tul", "Splinter of Esh",
-		"Perandus Coin", "Orb of Fusing", "Silver Coin",
+		"Perandus Coin", "Orb of Fusing",
+		#"Silver Coin",
+		#"Blacksmith's Whetstone",
+		#"Armourer's Scrap",
 		"Chromatic Orb",
 		"Alchemy Shard",
 		"Orb of Alteration", "Alteration Shard",
 		#"Orb of Augmentation",
 		#"Jeweller's Orb",
 		#"Orb of Transmutation",
-		#"Orb of Chance",
+		"Orb of Chance",
 		"Glassblower's Bauble",
 		"Horizon Orb", "Horizon Shard",
 		"Chaos Shard",
@@ -499,6 +502,52 @@ def gen_prophecy(prophecy_list, league, curvals):
 		f.write(curval)
 
 
+# Convert a prophecy value to string.  returns a string
+def gemclassify(cur, val, curvals, level, qual, corrupt):
+	if val >= curvals['extremely']:
+		tier = 'gem extremely high'
+	elif val > curvals['very']:
+		tier = 'gem very high'
+	elif val > curvals['high']:
+		tier = 'gem high'
+	else:
+		return
+
+	return f'{cur}\": {{\"base\": \"{cur}\", \"class\": \"Gems\", "other": ["GemLevel >= {level}", "Quality >= {qual}", "Corrupted {corrupt}"], \"type\": \"{tier}\"}}'
+
+
+# given a league grouped list of prophecies determine all unique entries and then output for each league
+def gen_gems(gem_list, league, curvals):
+
+	curval = '''{}\ndesc = "Skill Gems Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
+
+	for cl, level in enumerate(sorted(gem_list, reverse=True)):
+		for cq, qual in enumerate(sorted(gem_list[level], reverse=True)):
+			for corrupt in gem_list[level][qual]:
+				substringgem = find_substrings(gem_list[level][qual][corrupt])
+
+				for c, cur in enumerate(substringgem):
+					retstr = gemclassify(cur, gem_list[level][qual][corrupt][cur], curvals, level, qual, corrupt)
+					if not retstr:
+						if qual < 10:
+							retstr = f'{cur}": {{"base": "{cur}", "class": "Gems", "other": ["GemLevel >= {level}", "Quality >= {qual}", "Corrupted {corrupt}"], "type": "hide"}}'
+						else:
+							retstr = f'{cur}": {{"base": "{cur}", "class": "Gems", "other": ["GemLevel >= {level}", "Quality >= {qual}", "Corrupted {corrupt}"], "type": "gem normal"}}'
+					curval += f'\t"{cl}{cq} {corrupt} {c:03d} {retstr},\n'
+					del gem_list[level][qual][corrupt][cur]
+				for cur in sorted(gem_list[level][qual][corrupt].keys()):
+					retstr = gemclassify(cur, gem_list[level][qual][corrupt][cur], curvals, level, qual, corrupt)
+					if retstr:
+						curval += f'\t"{cl}{cq} {corrupt} 1 {retstr},\n'
+
+	curval += '}\n'
+
+	name = convertname(league)
+
+	with open('auto_gen\\{}skillgem.py'.format(name), 'w', encoding='utf-8') as f:
+		f.write(curval)
+
+
 # Find all keys that have other keys which are substrings
 # Convert a scarab value to string.  returns a string
 def scarabclassify(cur, val, curvals):
@@ -799,6 +848,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 	]
 
 	keys = [
+		'SkillGem',
 		'Currency',
 		'Fragment',
 		'Scarab',
@@ -833,10 +883,11 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 
 	for league in leagues:
 		currency = {}
+		skillgem = {}
 		challenges = {}
 		fragments = {}
 		divs = {}
-#		incubator = {}
+		incubator = {}
 		essences = {}
 		bases = {}
 		prophecy = {}
@@ -850,7 +901,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 			else:
 				request = f'https://poe.ninja/api/data/itemoverview?league={leaguelookup[league]}&type={key}'
 			req = requester.get(request)
-			print(f"Status code: {req.status_code}")
+			print(f"{league} {key} Status code: {req.status_code}")
 			if req.status_code == 204:
 				print("No {} data for {}".format(key, league))
 				continue
@@ -878,6 +929,20 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 								challenges[ii['currencyTypeName']] = ii['chaosEquivalent']
 							else:
 								fragments[ii['currencyTypeName']] = ii['chaosEquivalent']
+
+			elif key == 'SkillGem':
+				for i in data['lines']:
+					if i['count'] < mincount:
+						continue
+					if i['name'] in ['Enlighten Support', 'Enhance Support', 'Empower Support']:
+						i['gemQuality'] = 0
+					if i['gemLevel'] not in skillgem:
+						skillgem[i['gemLevel']] = {}
+					if i['gemQuality'] not in skillgem[i['gemLevel']]:
+						skillgem[i['gemLevel']][i['gemQuality']] = {}
+					if i['corrupted'] not in skillgem[i['gemLevel']][i['gemQuality']]:
+						skillgem[i['gemLevel']][i['gemQuality']][i['corrupted']] = {}
+					skillgem[i['gemLevel']][i['gemQuality']][i['corrupted']][i['name']] = i['chaosValue']
 
 			elif key == 'BaseType':
 				for i in data:
@@ -960,6 +1025,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		fixmissingbases(bases, league)
 
 		gen_currency(currency, league, curvals)
+		gen_gems(skillgem, league, curvals)
 		gen_div(divs, league, curvals)
 		gen_bases(bases, league, curvals)
 #		gen_incubator(incubator, league, curvals)
