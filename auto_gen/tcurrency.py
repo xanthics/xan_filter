@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 07/03/2019(m/d/y) 22:53:16 UTC from "tmpstandard" data
+# Created: 07/03/2019(m/d/y) 22:58:03 UTC from "tmpstandard" data
 
 desc = "Currency Autogen"
 
@@ -29,9 +29,11 @@ items = {
 	"06 Armourer's Scrap": {"base": "Armourer's Scrap", 'other': ['StackSize >= 20'], "class": "Currency", "type": "currency high"},
 	"1 Binding Shard": {"base": "Binding Shard", "class": "Currency", "type": "currency show"},
 	"09 Binding Shard": {"base": "Binding Shard", 'other': ['StackSize >= 13'], "class": "Currency", "type": "currency normal"},
-	"1 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", "class": "Currency", "type": "currency show"},
-	"09 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", 'other': ['StackSize >= 5'], "class": "Currency", "type": "currency normal"},
-	"08 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", 'other': ['StackSize >= 17'], "class": "Currency", "type": "currency high"},
+	"1 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", "class": "Currency", "type": "hide"},
+	"09 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency very low"},
+	"08 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency low"},
+	"07 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", 'other': ['StackSize >= 5'], "class": "Currency", "type": "currency normal"},
+	"06 Blacksmith's Whetstone": {"base": "Blacksmith's Whetstone", 'other': ['StackSize >= 17'], "class": "Currency", "type": "currency high"},
 	"1 Blessed Orb": {"base": "Blessed Orb", "class": "Currency", "type": "currency show"},
 	"09 Blessed Orb": {"base": "Blessed Orb", 'other': ['StackSize >= 5'], "class": "Currency", "type": "currency normal"},
 	"08 Blessed Orb": {"base": "Blessed Orb", 'other': ['StackSize >= 20'], "class": "Currency", "type": "currency high"},

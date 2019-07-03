@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 07/03/2019(m/d/y) 22:53:16 UTC from "tmpstandard" data
+# Created: 07/03/2019(m/d/y) 22:58:03 UTC from "tmpstandard" data
 
 desc = "Divination Card"
 
@@ -19,6 +19,7 @@ items = {
 	"1 Blessing of God": {"base": "Blessing of God", "class": "Divination Card", "type": "hide"},
 	"1 Boon of Justice": {"base": "Boon of Justice", "class": "Divination Card", "type": "divination low"},
 	"1 Boon of the First Ones": {"base": "Boon of the First Ones", "class": "Divination Card", "type": "divination high"},
+	"1 Boundless Realms": {"base": "Boundless Realms", "class": "Divination Card", "type": "divination low"},
 	"1 Bowyer's Dream": {"base": "Bowyer's Dream", "class": "Divination Card", "type": "divination high"},
 	"1 Buried Treasure": {"base": "Buried Treasure", "class": "Divination Card", "type": "divination high"},
 	"1 Burning Blood": {"base": "Burning Blood", "class": "Divination Card", "type": "divination very high"},
@@ -62,10 +63,8 @@ items = {
 	"1 The Army of Blood": {"base": "The Army of Blood", "class": "Divination Card", "type": "divination low"},
 	"1 The Artist": {"base": "The Artist", "class": "Divination Card", "type": "divination high"},
 	"1 The Blazing Fire": {"base": "The Blazing Fire", "class": "Divination Card", "type": "divination low"},
-	"1 The Breach": {"base": "The Breach", "class": "Divination Card", "type": "divination high"},
 	"1 The Carrion Crow": {"base": "The Carrion Crow", "class": "Divination Card", "type": "hide"},
 	"1 The Cartographer": {"base": "The Cartographer", "class": "Divination Card", "type": "divination high"},
-	"1 The Cataclysm": {"base": "The Cataclysm", "class": "Divination Card", "type": "divination low"},
 	"1 The Catalyst": {"base": "The Catalyst", "class": "Divination Card", "type": "divination high"},
 	"1 The Celestial Justicar": {"base": "The Celestial Justicar", "class": "Divination Card", "type": "divination very high"},
 	"1 The Celestial Stone": {"base": "The Celestial Stone", "class": "Divination Card", "type": "divination very high"},
@@ -87,7 +86,6 @@ items = {
 	"1 The Feast": {"base": "The Feast", "class": "Divination Card", "type": "divination low"},
 	"1 The Fiend": {"base": "The Fiend", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Flora's Gift": {"base": "The Flora's Gift", "class": "Divination Card", "type": "divination show"},
-	"1 The Fox": {"base": "The Fox", "class": "Divination Card", "type": "divination low"},
 	"1 The Gambler": {"base": "The Gambler", "class": "Divination Card", "type": "divination show"},
 	"1 The Gentleman": {"base": "The Gentleman", "class": "Divination Card", "type": "divination low"},
 	"1 The Gladiator": {"base": "The Gladiator", "class": "Divination Card", "type": "divination high"},

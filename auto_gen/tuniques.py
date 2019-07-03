@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 07/03/2019(m/d/y) 22:53:16 UTC from "tmpstandard" data
+# Created: 07/03/2019(m/d/y) 22:58:03 UTC from "tmpstandard" data
 
 desc = "Unique"
 
@@ -124,7 +124,7 @@ items = {
 	"1 Grinning Fetish": {"base": "Grinning Fetish", "type": "unique low"},
 	"1 Gut Ripper": {"base": "Gut Ripper", "type": "unique low"},
 	"1 Harbinger Bow": {"base": "Harbinger Bow", "type": "unique low"},
-	"1 Harbinger Map": {"base": "Harbinger Map", "type": "unique high"},
+	"1 Harbinger Map": {"base": "Harbinger Map", "type": "unique very high"},
 	"1 Harmonic Spirit Shield": {"base": "Harmonic Spirit Shield", "type": "unique low"},
 	"1 Headsman Axe": {"base": "Headsman Axe", "type": "unique low"},
 	"1 Heavy Belt": {"base": "Heavy Belt", "type": "unique special"},

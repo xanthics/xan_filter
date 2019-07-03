@@ -164,7 +164,7 @@ def currencyclassify(cur, val, curvals, stacks=1):
 		"Splinter of Chayula", "Splinter of Xoph", "Splinter of Uul-Netol", "Splinter of Tul", "Splinter of Esh",
 		"Perandus Coin", "Orb of Fusing",
 		#"Silver Coin",
-		"Blacksmith's Whetstone",
+		#"Blacksmith's Whetstone",
 		#"Armourer's Scrap",
 		"Chromatic Orb",
 		"Alchemy Shard",
