@@ -10,6 +10,7 @@ items = {
 	"01 Quality Gem 20": {"class": "Gems", "other": ["Quality 20"], "type": "ignore"},
 	"02 Quality Gem High": {"class": "Gems", "other": ["Quality >= 10"], "type": "gem normal"},
 	"03 Quality Gem": {"class": "Gems", "other": ["Quality >= 1"], "type": "ignore"},
+	"04 Leveled Gem ": {"class": "Gems", "other": ["GemLevel >= 2"], "type": "gem low"},
 	"1 Portal": {"base": "Portal", "class": "Gems", "type": "gem normal"},
 	"1 Empower": {"base": "Empower Support", "class": "Gems", "type": "ignore"},
 	"1 Enhance": {"base": "Enhance Support", "class": "Gems", "type": "ignore"},

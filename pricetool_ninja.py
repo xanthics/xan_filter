@@ -84,7 +84,7 @@ def greaterthanequal(a, b):
 def price_sanity(item_list, curvals):
 	lessthanmin = ['The Web', 'The Incantation', 'Shard of Fate', 'The Endurance', "Anarchy's Price", "The Dragon"]
 	lessthanlow = ["Blacksmith's Whetstone", "Armourer's Scrap", "Orb of Chance", "Orb of Transmutation", "The Hermit"]
-	lessthannormal = ["Her Mask", "The Gambler", "Jeweller's Orb", "Silver Coin", "Chromatic Orb", "Blessed Orb"]
+	lessthannormal = ["The Scholar", "Her Mask", "The Gambler", "Jeweller's Orb", "Silver Coin", "Chromatic Orb", "Blessed Orb"]
 	lessthanhigh = []
 	lessthanvery = []
 	lessthanextremely = []
@@ -277,10 +277,10 @@ def challengeclassify(cur, val, curvals, base, stacks=1):
 		other = 'CustomAlertSound "{}_challenge{}.wav"'.format(volume['high'], randint(11, 15))
 	elif val >= curvals['high']:
 		tier = 'challenge high'
-		other = 'CustomAlertSound "{}_challenge{}.wav"'.format(volume['normal'], randint(5, 10))
+		other = 'CustomAlertSound "{}_challenge{}.wav"'.format(volume['normal'], randint(11, 15))
 	elif val >= curvals['normal']:
 		tier = 'challenge normal'
-		other = 'CustomAlertSound "{}_challenge{}.wav"'.format(volume['medium'], randint(1, 4))
+		other = 'CustomAlertSound "{}_challenge{}.wav"'.format(volume['medium'], randint(5, 10))
 	else:
 		tier = 'challenge show'
 		other = 'CustomAlertSound "{}_challenge{}.wav"'.format(volume['low'], randint(1, 4))
@@ -510,6 +510,8 @@ def gemclassify(cur, val, curvals, level, qual, corrupt):
 		tier = 'gem very high'
 	elif val > curvals['high']:
 		tier = 'gem high'
+	elif level > 1 and qual < 10:
+		tier = 'gem low'
 	else:
 		return
 
@@ -529,10 +531,12 @@ def gen_gems(gem_list, league, curvals):
 				for c, cur in enumerate(substringgem):
 					retstr = gemclassify(cur, gem_list[level][qual][corrupt][cur], curvals, level, qual, corrupt)
 					if not retstr:
-						if qual < 10:
-							retstr = f'{cur}": {{"base": "{cur}", "class": "Gems", "other": ["GemLevel >= {level}", "Quality >= {qual}", "Corrupted {corrupt}"], "type": "hide"}}'
-						else:
+						if level > 1 and qual < 10:
+							retstr = f'{cur}": {{"base": "{cur}", "class": "Gems", "other": ["GemLevel >= {level}", "Quality >= {qual}", "Corrupted {corrupt}"], "type": "gem low"}}'
+						elif qual >= 10:
 							retstr = f'{cur}": {{"base": "{cur}", "class": "Gems", "other": ["GemLevel >= {level}", "Quality >= {qual}", "Corrupted {corrupt}"], "type": "gem normal"}}'
+						else:
+							retstr = f'{cur}": {{"base": "{cur}", "class": "Gems", "other": ["GemLevel >= {level}", "Quality >= {qual}", "Corrupted {corrupt}"], "type": "hide"}}'
 					curval += f'\t"{cl}{cq} {corrupt} {c:03d} {retstr},\n'
 					del gem_list[level][qual][corrupt][cur]
 				for cur in sorted(gem_list[level][qual][corrupt].keys()):
@@ -664,9 +668,9 @@ def find_substrings(source_dict):
 def divclassify(cur, val, curvals):
 	# divination cards that should always show an icon
 	ah = [
-		"Three Faces in the Dark", "Hubris", "Loyalty", "Rain of Chaos", "The Catalyst", "The Doppelganger", "The Gambler", "The Gemcutter", "The Master Artisan", "Emperor's Luck", "Jack in the Box", "Her Mask", "The Scholar"
+		"Three Faces in the Dark", "Hubris", "Loyalty", "Rain of Chaos", "The Catalyst", "The Doppelganger", "The Gambler", "The Gemcutter", "The Master Artisan", "Emperor's Luck", "Jack in the Box", "Her Mask", "The Scholar",
 		"House of Mirrors", "Alluring Bounty", "Abandoned Wealth", "Seven Years Bad Luck", "The Saint's Treasure", "The Hoarder", "The Sephirot", "Chaotic Disposition", "The Cartographer", "Monochrome", "The Seeker", "The Journey",
-		"Lucky Connections", "Lucky Deck", "The Innocent", "The Wrath", "Emperor's Luck", "Loyalty", "The Inventor", "The Scholar", "The Survivalist", "The Union", "Vinia's Token", "The Puzzle", "Demigod's Wager", "No Traces", "Three Faces in the Dark",
+		"Lucky Connections", "Lucky Deck", "The Innocent", "The Wrath", "Emperor's Luck", "Loyalty", "The Inventor", "The Survivalist", "The Union", "Vinia's Token", "The Puzzle", "Demigod's Wager", "No Traces", "Three Faces in the Dark",
 		"The Master Artisan", "The Fool", "Coveted Possession", "Rain of Chaos", "The Catalyst", "The Gemcutter",
 		"The Doctor", "The Fiend", "The World Eater", "Pride of the First Ones", "The Last One Standing", "The Wolven King's Bite", "The Samurai's Eye", "Pride Before the Fall", "The Life Thief", "Burning Blood", "The King's Heart",
 		"The Queen", "The Undaunted", "The Mayor", "The Endless Darkness", "The Professor", "The Valkyrie", "Humility", "Time-Lost Relic", "Jack in the Box", "The Twilight Moon", "Arrogance of the Vaal", "Vanity", "The Dreamland",
@@ -682,8 +686,6 @@ def divclassify(cur, val, curvals):
 	]
 	if cur in ["House of Mirrors"]:
 		tier = 'currency mirror'
-	elif cur in ah and val < curvals['high'] / 2:
-		tier = 'divination show'
 	elif cur in badcards:
 		tier = 'hide'
 	elif val >= curvals['extremely']:
@@ -692,6 +694,8 @@ def divclassify(cur, val, curvals):
 		tier = 'divination very high'
 	elif val > curvals['high']:
 		tier = 'divination high'
+	elif cur in ah and val < curvals['high'] / 2:
+		tier = 'divination show'
 	elif val < curvals['high'] / 2:
 		tier = 'divination low'
 	else:

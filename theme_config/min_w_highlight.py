@@ -226,7 +226,6 @@ settings = {
 				 "SetFontSize {}".format(size['normal']),
 				 "SetBackgroundColor {} 220".format(color['black'])],
 	"gem normal": ["SetBorderColor {} 220".format(color['gem']),
-				   'CustomAlertSound "{}_gem.wav"'.format(volume['low']),
 				   "SetBackgroundColor {} 220".format(color['black']),
 				   "SetFontSize {}".format(size['normal'])],
 	"gem low": ["SetFontSize {}".format(size['small']),
