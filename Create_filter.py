@@ -183,16 +183,26 @@ def get_poe_path():
 
 
 # main function for creating a filter
-def main(leagues=('tmpstandard')):
+def main(leagues=('tmpstandard',)):
 	gen_list = gen_list_compact
 	lookup_leagues = {'Standard': ("st", "Standard", uniques, divination, stcurrency, stessence, bases, prophecy, scarab, helmenchant, fragment, incubator, challenge, skillgem),
 					  'Hardcore': ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence, hcbases, hcprophecy, hcscarab, hchelmenchant, hcfragment, hcincubator, hcchallenge, hcskillgem),
 					  'tmpstandard': ("t", "Temp Softcore", tuniques, tdivination, tcurrency, tessence, tbases, tprophecy, tscarab, thelmenchant, tfragment, tincubator, tchallenge, tskillgem),
 					  'tmphardcore': ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence, thcbases, thcprophecy, thcscarab, thchelmenchant, thcfragment, thcincubator, thcchallenge, thcskillgem)}
 	leveling = False  # toggle to show leveling items
-	soundlist = [f"{x}_challenge{y}" for x in [volume['low'], volume['medium']] for y in range(1, 5)] +\
-				[f"{x}_challenge{y}" for x in [volume['normal']] for y in range(5, 11)] +\
-				[f"{x}_challenge{y}" for x in [volume['high'], volume['max']] for y in range(11, 16)]
+	# prime our soundlist with known sounds so that git doesn't keep getting sounds added/deleted as prices change
+	soundlist = [f"{x}_challenge{y}" for x in [volume['low']] for y in range(1, 5)] +\
+				[f"{x}_challenge{y}" for x in [volume['medium']] for y in range(5, 11)] +\
+				[f"{x}_challenge{y}" for x in [volume['normal'], volume['high'], volume['max']] for y in range(11, 16)] +\
+				[f"{x}_currency" for x in [volume['low'], volume['medium'], volume['normal'], volume['high']]] +\
+				[f"{x}_divination" for x in [volume['low'], volume['medium'], volume['normal'], volume['high']]] +\
+				[f"{x}_gem" for x in [volume['low'], volume['medium'], volume['normal'], volume['high']]] +\
+				[f"{x}_base" for x in [volume['low'], volume['medium'], volume['normal'], volume['high']]] +\
+				[f"{x}_unique" for x in [volume['low'], volume['medium'], volume['normal'], volume['high']]] +\
+				[f"{x}_show" for x in [volume['low'], volume['medium'], volume['normal'], volume['high']]] +\
+				[f"{x}_map_okay" for x in [volume['low'], volume['medium'], volume['normal'], volume['high']]] +\
+				[f"{x}_map_good" for x in [volume['low'], volume['medium'], volume['normal'], volume['high'], volume['max']]] +\
+				[f"{x}_valuable" for x in [volume['max']]]
 	poeDir = get_poe_path()
 
 	for i in leagues:
