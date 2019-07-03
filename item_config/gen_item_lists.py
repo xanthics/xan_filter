@@ -1122,3 +1122,21 @@ def genrareshighlighttiered():
 
 	return ret
 
+
+# Returns a list of all t0 and t1 bases
+def highbases():
+	ret = {"Elder": [], "Shaper": [], None: []}
+	# item bases that cannot naturally drop
+	cannotdrop = ['Ruby Amulet', 'Golden Obi', 'Jet Amulet', 'Golden Hoop', 'Ornate Quiver', 'Jet Ring']
+	for typ in bases:
+		for meta in bases[typ]:
+			for item in bases[typ][meta]:
+				if item['tier'] <= 1 and item['name'] not in cannotdrop:
+					ret[None].append(item['name'])
+					if "Other" != meta and "Talisman" not in item['name'] and item['name'] != "Stygian Vise":
+						ret['Elder'].append(item['name'])
+						ret['Shaper'].append(item['name'])
+	return ret
+
+
+

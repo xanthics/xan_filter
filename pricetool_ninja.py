@@ -10,6 +10,7 @@ from collections import defaultdict
 from ninja_defaults import currencydefaults, essencedefaults, prophecydefaults, divdefaults, uniquedefaults, scarabdefaults, helmenchantsdefaults, basedefaults, fragmentdefaults, challengesdefaults
 from ninja_helm_lookup import helmnames
 from theme_config.min_w_highlight import volume
+from item_config.gen_item_lists import highbases
 
 header = '''#!/usr/bin/python
 # -*- coding: utf-8 -*-
@@ -61,14 +62,19 @@ def fixmissingbases(bases, league):
 	# add missing items to ninja_list
 	for v in set(basedefaults.keys()) - set(bases.keys()):
 		bases[v] = {}
-
+	goodbases = highbases()
+	missingstr = ""
 	for level in sorted(bases, reverse=True):
 		for variant in ['Elder', 'Shaper', None]:
 			if variant not in basedefaults[level]:
 				print(f'Missing base default for {level}\n"{variant}": {{}}')
 			if variant not in bases[level]:
 				bases[level][variant] = {}
+			if not set(goodbases[variant]).issubset(set(basedefaults[level][variant].keys())):
+				missingstr += f"bases ({level}-{variant}) missing values for {set(goodbases[variant]) - set(basedefaults[level][variant].keys())}\n"
 			fixmissing(bases[level][variant], basedefaults[level][variant], league, f"bases ({level}-{variant})")
+	if missingstr:
+		print(missingstr)
 
 
 def lessthan(a, b):
@@ -158,7 +164,7 @@ def currencyclassify(cur, val, curvals, stacks=1):
 		"Splinter of Chayula", "Splinter of Xoph", "Splinter of Uul-Netol", "Splinter of Tul", "Splinter of Esh",
 		"Perandus Coin", "Orb of Fusing",
 		#"Silver Coin",
-		#"Blacksmith's Whetstone",
+		"Blacksmith's Whetstone",
 		#"Armourer's Scrap",
 		"Chromatic Orb",
 		"Alchemy Shard",
@@ -884,6 +890,8 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 
 	# Minimum number of item that must exist on poe.ninja for it to be considered
 	mincount = 8
+	# items that always show for elder/shaper and can show for normal
+	goodbases = highbases()
 
 	for league in leagues:
 		currency = {}
@@ -951,8 +959,9 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 			elif key == 'BaseType':
 				for i in data:
 					for ii in data[i]:
-						if ii['baseType'].startswith('Superior ') or ii['count'] < mincount \
-								or (not ii['variant'] and ii['baseType'] not in ['Searching Eye Jewel', 'Murderous Eye Jewel', 'Hypnotic Eye Jewel', 'Ghastly Eye Jewel', 'Opal Ring', 'Steel Ring', 'Crystal Belt', 'Marble Amulet']):
+						if ii['baseType'].startswith('Superior ') or \
+								(ii['count'] < mincount and ii['variant'] and ii['baseType'] not in goodbases[ii['variant']]) or \
+								(not ii['variant'] and ii['baseType'] not in goodbases[ii['variant']]):
 							continue
 						if ii['levelRequired'] not in bases:
 							bases[ii['levelRequired']] = {}
