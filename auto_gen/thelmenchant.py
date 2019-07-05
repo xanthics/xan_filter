@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 07/03/2019(m/d/y) 22:58:03 UTC from "tmpstandard" data
+# Created: 07/05/2019(m/d/y) 23:06:52 UTC from "tmpstandard" data
 
 desc = "Helm Enchant Autogen"
 
@@ -12,15 +12,15 @@ items = {
 	"1 30% increased Temporal Chains Curse Effect": {"enchant": "Enchantment Temporal Chains Curse Effect 2", "type": "currency extremely high"},
 	"1 30% reduced Earthquake Duration": {"enchant": "Enchantment Earthquake Duration 2", "type": "currency very high"},
 	"1 30% reduced Storm Call Duration": {"enchant": "Enchantment Storm Call Duration 2", "type": "currency very high"},
-	"1 40% increased Blade Flurry Damage": {"enchant": "Enchantment Blade Flurry Damage 2", "type": "currency very high"},
 	"1 40% increased Cyclone Damage": {"enchant": "Enchantment Cyclone Damage 2", "type": "currency extremely high"},
-	"1 40% increased Essence Drain Damage": {"enchant": "Enchantment Essence Drain Damage 2", "type": "currency very high"},
+	"1 40% increased Essence Drain Damage": {"enchant": "Enchantment Essence Drain Damage 2", "type": "currency extremely high"},
 	"1 40% increased Flicker Strike Damage": {"enchant": "Enchantment Flicker Strike Damage 2", "type": "currency very high"},
 	"1 40% increased Frost Blades Damage": {"enchant": "Enchantment Frost Blades Damage 2", "type": "currency very high"},
 	"1 40% increased Ice Nova Damage": {"enchant": "Enchantment Ice Nova Damage 2", "type": "currency extremely high"},
 	"1 Arc Chains an additional time": {"enchant": "Enchantment Arc Num Of Additional Projectiles In Chain 1", "type": "currency very high"},
 	"1 Barrage fires an additional Projectile": {"enchant": "Enchantment Barrage Num Of Additional Projectiles 1", "type": "currency very high"},
 	"1 Blood Rage grants additional 12% increased Attack Speed": {"enchant": "Enchantment Blood Rage Attack Speed 2", "type": "currency very high"},
+	"1 Kinetic Blast has a 75% chance for an additional explosion": {"enchant": "Enchantment Kinetic Blast Explosions 2", "type": "currency very high"},
 	"1 Lightning Trap Damage Penetrates 10% Lightning Resistance": {"enchant": "Enchantment Lightning Trap Penetration 2", "type": "currency very high"},
 	"1 Magma Orb Chains an additional 2 times": {"enchant": "Enchantment Magma Orb Num Of Additional Projectiles In Chain 2", "type": "currency very high"},
 	"1 Malevolence has 15% reduced Mana Reservation": {"enchant": "Enchantment Malevolence Mana Reservation 2", "type": "currency very high"},

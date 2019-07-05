@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 07/03/2019(m/d/y) 22:58:03 UTC from "tmpstandard" data
+# Created: 07/05/2019(m/d/y) 23:06:52 UTC from "tmpstandard" data
 
 desc = "Fragment Autogen"
 
@@ -14,7 +14,7 @@ items = {
 	"1 Eber's Key": {"base": "Eber's Key", "class": "Map Fragments", "type": "map white good"},
 	"1 Esh's Breachstone": {"base": "Esh's Breachstone", "class": "Map Fragments", "type": "map white good"},
 	"1 Esh's Charged Breachstone": {"base": "Esh's Charged Breachstone", "class": "Map Fragments", "type": "map white good"},
-	"1 Esh's Enriched Breachstone": {"base": "Esh's Enriched Breachstone", "class": "Map Fragments", "type": "map yellow good"},
+	"1 Esh's Enriched Breachstone": {"base": "Esh's Enriched Breachstone", "class": "Map Fragments", "type": "map white good"},
 	"1 Esh's Pure Breachstone": {"base": "Esh's Pure Breachstone", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Fragment of the Chimera": {"base": "Fragment of the Chimera", "class": "Map Fragments", "type": "map white good"},
 	"1 Fragment of the Hydra": {"base": "Fragment of the Hydra", "class": "Map Fragments", "type": "map white good"},
@@ -25,7 +25,7 @@ items = {
 	"1 Mortal Hope": {"base": "Mortal Hope", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Mortal Ignorance": {"base": "Mortal Ignorance", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Mortal Rage": {"base": "Mortal Rage", "class": "Map Fragments", "type": "map white good"},
-	"1 Sacrifice at Dawn": {"base": "Sacrifice at Dawn", "class": "Map Fragments", "type": "map white good"},
+	"1 Sacrifice at Dawn": {"base": "Sacrifice at Dawn", "class": "Map Fragments", "type": "map white"},
 	"1 Sacrifice at Dusk": {"base": "Sacrifice at Dusk", "class": "Map Fragments", "type": "map white"},
 	"1 Sacrifice at Midnight": {"base": "Sacrifice at Midnight", "class": "Map Fragments", "type": "map white good"},
 	"1 Sacrifice at Noon": {"base": "Sacrifice at Noon", "class": "Map Fragments", "type": "map white good"},
@@ -40,7 +40,7 @@ items = {
 	"1 Volkuur's Key": {"base": "Volkuur's Key", "class": "Map Fragments", "type": "map white good"},
 	"1 Xoph's Breachstone": {"base": "Xoph's Breachstone", "class": "Map Fragments", "type": "map white good"},
 	"1 Xoph's Charged Breachstone": {"base": "Xoph's Charged Breachstone", "class": "Map Fragments", "type": "map white good"},
-	"1 Xoph's Enriched Breachstone": {"base": "Xoph's Enriched Breachstone", "class": "Map Fragments", "type": "map yellow good"},
+	"1 Xoph's Enriched Breachstone": {"base": "Xoph's Enriched Breachstone", "class": "Map Fragments", "type": "map white good"},
 	"1 Xoph's Pure Breachstone": {"base": "Xoph's Pure Breachstone", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Yriel's Key": {"base": "Yriel's Key", "class": "Map Fragments", "type": "map white good"},
 }

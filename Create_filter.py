@@ -223,13 +223,15 @@ def main(leagues=('tmpstandard',)):
 		buffer += gen_list(labyrinth.items, labyrinth.desc, soundlist)
 		buffer += gen_list(lookup_leagues[i][4].items, lookup_leagues[i][4].desc, soundlist)  # Autogen currency values
 		buffer += gen_list(lookup_leagues[i][5].items, lookup_leagues[i][5].desc, soundlist)  # Autogen Essences
+		buffer += gen_list(lookup_leagues[i][11].items, lookup_leagues[i][11].desc, soundlist)  # Autogen Incubator
+		buffer += gen_list(lookup_leagues[i][8].items, lookup_leagues[i][8].desc, soundlist)  # Autogen Scarabs
+		buffer += gen_list(lookup_leagues[i][7].items, lookup_leagues[i][7].desc, soundlist)  # Autogen Prophecy
 		buffer += gen_list(currency.items, currency.desc, soundlist)  # Currency
 		buffer += gen_list(lookup_leagues[i][13].items, lookup_leagues[i][13].desc, soundlist)  # Autogen gems
 		buffer += gen_list(gems.items, gems.desc, soundlist)  # Gems
 		buffer += gen_list(lookup_leagues[i][9].items, lookup_leagues[i][9].desc, soundlist)  # Autogen Helm Enchants
 		buffer += gen_list(lookup_leagues[i][2].items, lookup_leagues[i][2].desc, soundlist)  # uniques
 		buffer += gen_list(recipe_item.items, recipe_item.desc, soundlist)  # Items for vendor recipe
-		buffer += gen_list(lookup_leagues[i][8].items, lookup_leagues[i][8].desc, soundlist)  # Autogen Scarabs
 		buffer += gen_list(lookup_leagues[i][10].items, lookup_leagues[i][10].desc, soundlist)  # Autogen Map Fragments
 		buffer += gen_list(maps.items, maps.desc, soundlist)  # maps
 		buffer += gen_list(lookup_leagues[i][3].items, lookup_leagues[i][3].desc, soundlist)  # divination cards
@@ -237,7 +239,6 @@ def main(leagues=('tmpstandard',)):
 		buffer += gen_list(chance.items, chance.desc, soundlist)  # Chance bases
 		buffer += gen_list(lookup_leagues[i][6].items, lookup_leagues[i][6].desc, soundlist)  # Autogen Bases
 		buffer += gen_list(itemmods(), "Items Mods", soundlist)  # mod based highlighting
-		buffer += gen_list(lookup_leagues[i][11].items, lookup_leagues[i][11].desc, soundlist)  # Autogen Incubator
 
 		if leveling:
 			desc = "Rare item for leveling"
@@ -256,7 +257,6 @@ def main(leagues=('tmpstandard',)):
 			flags = ['All']  # 'All'  # see item_config/rare_gen - genraresleveling for valid values
 			buffer += gen_list(gennonrareleveling(flags, overlevel=2, maxlevel=25), desc, soundlist)
 
-		buffer += gen_list(lookup_leagues[i][7].items, lookup_leagues[i][7].desc, soundlist)  # Autogen Prophecy
 		buffer += gen_list(show_catchall.items, show_catchall.desc, soundlist)  # Always show these items
 
 		print("Writing files to: {}".format(poeDir))

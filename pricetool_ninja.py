@@ -173,13 +173,13 @@ def currencyclassify(cur, val, curvals, stacks=1):
 		#"Jeweller's Orb",
 		#"Orb of Transmutation",
 		"Orb of Chance",
-		"Glassblower's Bauble",
+		#"Glassblower's Bauble",
 		"Horizon Orb", "Horizon Shard",
 		"Chaos Shard",
 		"Engineer's Orb", "Engineer's Shard",
 		"Orb of Binding", "Binding Shard",
 		"Regal Orb", "Regal Shard",
-		"Blessed Orb",
+		#"Blessed Orb",
 		"Timeless Eternal Empire Splinter", "Timeless Karui Splinter", "Timeless Maraketh Splinter", "Timeless Templar Splinter", "Timeless Vaal Splinter"
 	]
 	# list of currencies to always make sound if their value is low
@@ -469,12 +469,12 @@ def prophecyclassify(cur, val, curvals):
 		tier = 'currency extremely high'
 	elif val > curvals['very']:
 		tier = 'currency very high'
-	elif val > curvals['high']:
+	elif val > curvals['high']*2:
 		tier = 'currency high'
 	elif val < curvals['normal']:
 		tier = 'currency very low'
 	else:
-		return
+		tier = 'currency low'
 
 	return "{0}\": {{\"prophecy\": \"{0}\", \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier)
 
@@ -500,7 +500,7 @@ def gen_prophecy(prophecy_list, league, curvals):
 		if retstr:
 			curval += '\t"1 {},\n'.format(retstr)
 
-	curval += '\t"7 Prophecy default": {"Prophecy": "", "class": "Currency", "type": "currency low"}\n}\n'
+	curval += '}\n'
 
 	name = convertname(league)
 
