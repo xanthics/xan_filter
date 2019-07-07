@@ -87,18 +87,6 @@ def magicmods():
 					 "Ring",
 					 "Quiver"
 				 ],
-				 "Leo's Veiled": ["Ring", "Belt"],
-				 "Catarina's Veiled": ["Claw", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword", "Shield"],
-				 "Elreon's Veiled": ["Amulet", "Ring"],
-				 "Vorici's Veiled": ["Claw", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"],
-				 "Haku's Veiled": ["Claw", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword", "Shield"],
-				 "Tora's Veiled": ["Claw", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"],
-				 "Vagan's Veiled": ["Gloves", "Amulet"],
-				 "Guff's Veiled": ["Gloves"],
-				 "It That Fled's Veiled": ["Claw", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword", "Shield"],
-				 "Gravicius' Veiled": ["Body Armour"],
-				 "Korell's Veiled": ["Helmet"],
-				 "Rin's Veiled": ["Boots"],
 
 				 "of the Veil": [
 					 "Claw", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword",
@@ -115,18 +103,33 @@ def magicmods():
 					 "Ring",
 					 "Quiver"
 				 ],
-				 "of Janus' Veil": ["Helmet"],
-				 "of Hillock's Veil": ["Body Armour"],
-				 "of Jorgin's Veil": ["Amulet"],
-				 "of Cameria's Veil": ["Ring"],
-				 "of Aisling's Veil": ["Ring"],
-				 "of Riker's Veil": ["Ring"],
 				 }
 
 	modanyitem = ['Eldritch', "The Shaper's", 'of the Elder', 'of Shaping',
 				  "Subterranean", "of the Underground",
 				  # "of Weaponcraft", "of Spellcraft",
 				  "of Crafting",
+
+				  "Catarina's Veiled",
+				  "Elreon's Veiled",
+				  "Gravicius' Veiled",
+				  "Guff's Veiled",
+				  "Haku's Veiled",
+				  "It That Fled's Veiled",
+				  "Korell's Veiled",
+				  "Leo's Veiled",
+				  "Rin's Veiled",
+				  "Tora's Veiled",
+				  "Vagan's Veiled",
+				  "Vorici's Veiled",
+
+				  "of Aisling's Veil",
+				  "of Cameria's Veil",
+				  "of Hillock's Veil",
+				  "of Janus' Veil",
+				  "of Jorgin's Veil",
+				  "of Riker's Veil",
+
 				  "Citaqualotl's", "Guatelitzi's", "Matatl's", "of Puhuarte", "of Tacati", "Tacati's", "Topotante's", "Xopec's",
 				  "Brinerot", "Mutewind", "Redblade", "Betrayer\'s", "Deceiver\'s", "Turncoat\'s",
 				  "of Farrul", "of Craiceann", "of Fenumus", "of Saqawal",

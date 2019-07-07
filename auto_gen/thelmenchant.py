@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 07/05/2019(m/d/y) 23:06:52 UTC from "tmpstandard" data
+# Created: 07/07/2019(m/d/y) 21:23:01 UTC from "tmpstandard" data
 
 desc = "Helm Enchant Autogen"
 
@@ -16,11 +16,11 @@ items = {
 	"1 40% increased Essence Drain Damage": {"enchant": "Enchantment Essence Drain Damage 2", "type": "currency extremely high"},
 	"1 40% increased Flicker Strike Damage": {"enchant": "Enchantment Flicker Strike Damage 2", "type": "currency very high"},
 	"1 40% increased Frost Blades Damage": {"enchant": "Enchantment Frost Blades Damage 2", "type": "currency very high"},
-	"1 40% increased Ice Nova Damage": {"enchant": "Enchantment Ice Nova Damage 2", "type": "currency extremely high"},
+	"1 40% increased Ice Nova Damage": {"enchant": "Enchantment Ice Nova Damage 2", "type": "currency very high"},
+	"1 9% increased Flicker Strike Damage per Frenzy Charge": {"enchant": "Enchantment Flicker Strike Damage Per Frenzy Charge 2", "type": "currency very high"},
 	"1 Arc Chains an additional time": {"enchant": "Enchantment Arc Num Of Additional Projectiles In Chain 1", "type": "currency very high"},
 	"1 Barrage fires an additional Projectile": {"enchant": "Enchantment Barrage Num Of Additional Projectiles 1", "type": "currency very high"},
 	"1 Blood Rage grants additional 12% increased Attack Speed": {"enchant": "Enchantment Blood Rage Attack Speed 2", "type": "currency very high"},
-	"1 Kinetic Blast has a 75% chance for an additional explosion": {"enchant": "Enchantment Kinetic Blast Explosions 2", "type": "currency very high"},
 	"1 Lightning Trap Damage Penetrates 10% Lightning Resistance": {"enchant": "Enchantment Lightning Trap Penetration 2", "type": "currency very high"},
 	"1 Magma Orb Chains an additional 2 times": {"enchant": "Enchantment Magma Orb Num Of Additional Projectiles In Chain 2", "type": "currency very high"},
 	"1 Malevolence has 15% reduced Mana Reservation": {"enchant": "Enchantment Malevolence Mana Reservation 2", "type": "currency very high"},
@@ -31,5 +31,5 @@ items = {
 	"1 Tornado Shot fires an additional secondary Projectile": {"enchant": "Enchantment Tornado Shot Num Of Secondary Projectiles 1", "type": "currency very high"},
 	"1 Toxic Rain deals 40% increased Damage": {"enchant": "Enchantment Toxic Rain Damage 2", "type": "currency very high"},
 	"1 Toxic Rain fires 1 additional Arrow": {"enchant": "Enchantment Toxic Rain Num Of Additional Projectiles 1", "type": "currency very high"},
-	"7 enchant default": {"other": ["AnyEnchantment True"], "type": "item mod"}
+	"7 enchant default": {"class": "Helmet", "other": ["AnyEnchantment True"], "type": "item mod"}
 }

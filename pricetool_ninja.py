@@ -95,7 +95,7 @@ def price_sanity(item_list, curvals):
 	lessthanvery = []
 	lessthanextremely = []
 
-	atleastnormal = ["Orb of Alteration", 'Orb of Alchemy', "Orb of Scouring", "Cartographer's Chisel"]
+	atleastnormal = ["Orb of Alteration", 'Orb of Alchemy', "Orb of Scouring", "Cartographer's Chisel", "Orb of Binding"]
 	atleasthigh = ["Ancient Orb", "Exalted Shard", "Master Cartographer's Sextant", "Journeyman Cartographer's Sextant", "Apprentice Cartographer's Sextant"]
 	atleastvery = ["Divine Orb", "Orb of Annulment", "Harbinger's Orb"]
 	atleastextremely = ["Mirror of Kalandra", "Mirror Shard", "The Doctor", "House of Mirrors", "The Fiend", "The Nurse", "Alluring Bounty", "The Spark and the Flame", "Pride of the First Ones", "Beauty Through Death", "Immortal Resolve", "The Immortal"]
@@ -172,12 +172,12 @@ def currencyclassify(cur, val, curvals, stacks=1):
 		#"Orb of Augmentation",
 		#"Jeweller's Orb",
 		#"Orb of Transmutation",
-		"Orb of Chance",
+		#"Orb of Chance",
 		#"Glassblower's Bauble",
 		"Horizon Orb", "Horizon Shard",
 		"Chaos Shard",
 		"Engineer's Orb", "Engineer's Shard",
-		"Orb of Binding", "Binding Shard",
+		"Binding Shard",
 		"Regal Orb", "Regal Shard",
 		#"Blessed Orb",
 		"Timeless Eternal Empire Splinter", "Timeless Karui Splinter", "Timeless Maraketh Splinter", "Timeless Templar Splinter", "Timeless Vaal Splinter"
@@ -640,7 +640,7 @@ def gen_enchants(helmenchant_list, league, curvals):
 			else:
 				curval += f'\t"1 {retstr[0]},\n'
 
-	curval += '\t"7 enchant default": {"other": ["AnyEnchantment True"], "type": "item mod"}\n}\n'
+	curval += '\t"7 enchant default": {"class": "Helmet", "other": ["AnyEnchantment True"], "type": "item mod"}\n}\n'
 
 	name = convertname(league)
 
