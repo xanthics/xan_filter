@@ -129,23 +129,30 @@ def fixallmissing(league, currency, divs, essences, prophecy, scarab, uniques, h
 	currencydefaults["Chaos Orb"] = 1
 	currencydefaults["Scroll of Wisdom"] = 1 / 100
 	fixmissing(currency, currencydefaults, league, "currency")
-
-	currency["Vial of Awakening"] = currency['Exalted Orb'] * 2
-	currency["Vial of Consequence"] = 3
-	currency["Vial of Dominance"] = 1
-	currency["Vial of Fate"] = 1/5
-	currency["Vial of Summoning"] = 1/5
-	currency["Vial of the Ritual"] = 1/4
-	currency["Vial of Transcendence"] = 1/2
-	currency["Vial of the Ghost"] = currency['Exalted Orb'] * 8
-	currency["Vial of Sacrifice"] = currency['Exalted Orb'] * 18
-
 	fixmissing(challenges, challengesdefaults, league, 'challenges')
 	fixmissing(essences, essencedefaults, league, 'essences')
 	fixmissing(prophecy, prophecydefaults, league, 'prophecy')
 	fixmissing(scarab, scarabdefaults, league, 'scarab')
 	fixmissing(divs, divdefaults, league, 'Divination cards')
 	fixmissing(uniques, uniquedefaults, league, 'uniques')
+	# reverse engineer vial values based on difference from uniques + "opportunity cost"
+	op_cost = 5
+	print(uniques["Apep's Supremacy"])
+	currency["Vial of Awakening"] = uniques["Apep's Supremacy"]['chaosValue'] - uniques["Apep's Slumber"]['chaosValue'] - op_cost  # currency['Exalted Orb'] * 2
+	currency["Vial of Consequence"] = uniques["Coward's Legacy"]['chaosValue'] - uniques["Coward's Chains"]['chaosValue'] - op_cost  # 3
+	currency["Vial of Dominance"] = uniques["Slavedriver's Hand"]['chaosValue'] - uniques["Architect's Hand"]['chaosValue'] - op_cost  # 1
+	currency["Vial of Fate"] = uniques["Fate of the Vaal"]['chaosValue'] - uniques["Story of the Vaal"]['chaosValue'] - op_cost  # 1/5
+	currency["Vial of Summoning"] = uniques["Mask of the Stitched Demon"]['chaosValue'] - uniques["Mask of the Spirit Drinker"]['chaosValue'] - op_cost  # 1/5
+	currency["Vial of the Ritual"] = uniques["Omeyocan"]['chaosValue'] - uniques["Dance of the Offered"]['chaosValue'] - op_cost  # 1/4
+
+	currency["Vial of Transcendence"] = (uniques["Transcendent Mind"]['chaosValue'] + uniques["Transcendent Flesh"]['chaosValue'] + uniques["Transcendent Spirit"]['chaosValue'])/3 - \
+										(uniques["Tempered Mind"]['chaosValue'] + uniques["Tempered Flesh"]['chaosValue'] + uniques["Tempered Spirit"]['chaosValue'])/3 - op_cost  # 1/2
+
+	currency["Vial of the Ghost"] = uniques["Soul Ripper"]['chaosValue'] - uniques["Soul Catcher"]['chaosValue'] - op_cost  # currency['Exalted Orb'] * 8
+	currency["Vial of Sacrifice"] = uniques["Zerphi's Heart"]['chaosValue'] - uniques["Sacrificial Heart"]['chaosValue'] - op_cost  # currency['Exalted Orb'] * 18
+	# remove the upgraded incursion uniques from consideration for filter as we don't need them anymore
+	for uni in ['Transcendent Flesh', 'Transcendent Mind', 'Transcendent Spirit', 'Soul Ripper', 'Slavedriver\'s Hand', 'Coward\'s Legacy', 'Omeyocan', 'Fate of the Vaal', 'Mask of the Stitched Demon', 'Apep\'s Supremacy', 'Zerphi\'s Heart']:
+		del uniques[uni]
 	fixmissing(helmenchants, helmenchantsdefaults, league, "helmet enchants")
 	fixmissing(fragments, fragmentdefaults, league, "Fragments")
 
@@ -516,7 +523,7 @@ def gemclassify(cur, val, curvals, level, qual, corrupt):
 		tier = 'gem very high'
 	elif val > curvals['high']:
 		tier = 'gem high'
-	elif level > 1 and qual < 10:
+	elif (level > 1 and qual < 10) or cur in ["Enlighten Support", "Empower Support"]:
 		tier = 'gem low'
 	else:
 		return
@@ -674,7 +681,7 @@ def find_substrings(source_dict):
 def divclassify(cur, val, curvals):
 	# divination cards that should always show an icon
 	ah = [
-		"Three Faces in the Dark", "Hubris", "Loyalty", "Rain of Chaos", "The Catalyst", "The Doppelganger", "The Gambler", "The Gemcutter", "The Master Artisan", "Emperor's Luck", "Jack in the Box", "Her Mask", "The Scholar",
+		"Three Faces in the Dark", "Hubris", "Loyalty", "Rain of Chaos", "The Catalyst", "The Doppelganger", "The Gambler", "The Gemcutter", "The Master Artisan", "Emperor's Luck", "Jack in the Box", "The Scholar",  # "Her Mask",
 		"House of Mirrors", "Alluring Bounty", "Abandoned Wealth", "Seven Years Bad Luck", "The Saint's Treasure", "The Hoarder", "The Sephirot", "Chaotic Disposition", "The Cartographer", "Monochrome", "The Seeker", "The Journey",
 		"Lucky Connections", "Lucky Deck", "The Innocent", "The Wrath", "Emperor's Luck", "Loyalty", "The Inventor", "The Survivalist", "The Union", "Vinia's Token", "The Puzzle", "Demigod's Wager", "No Traces", "Three Faces in the Dark",
 		"The Master Artisan", "The Fool", "Coveted Possession", "Rain of Chaos", "The Catalyst", "The Gemcutter",
@@ -844,12 +851,11 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		'Silverbough', 'The Tempest', 'Doomfletch\'s Prism', 'Death\'s Opus', 'Mirebough', 'Realm Ender', 'The Stormwall', 'The Cauteriser', 'Queen\'s Escape', 'The Dancing Duo',
 		'Hrimnor\'s Dirge', 'Panquetzaliztli', 'Geofri\'s Devotion', 'Voidheart', 'Kaom\'s Way', 'Winterweave', 'Timetwist', 'Ngamahu Tiki', 'Karui Charge', 'The Effigon',
 		'The Tactician', 'The Nomad', 'The Signal Fire', 'Cragfall', 'Hyrri\'s Demise', 'Chaber Cairn', 'Geofri\'s Legacy', 'The Iron Fortress', 'Whakatutuki o Matua',
-		# Incursion Vial upgrades
-		'Transcendent Flesh', 'Transcendent Mind', 'Transcendent Spirit', 'Soul Ripper', 'Slavedriver\'s Hand', 'Coward\'s Legacy', 'Omeyocan', 'Fate of the Vaal',
-		'Mask of the Stitched Demon', 'Apep\'s Supremacy', 'Zerphi\'s Heart', 'Shadowstitch',
 		# Vendor recipes
 		'The Anima Stone', 'Arborix', 'Duskdawn', 'The Goddess Scorned', 'The Goddess Unleashed', 'Kingmaker', 'Magna Eclipsis', 'The Retch', 'Star of Wraeclast', 'The Taming',
 		'The Vinktar Square', 'Loreweave',
+		# Other incursion uniques are removed after calculating vial values
+		'Shadowstitch',
 		# Upgraded Breach Uniques
 		'Xoph\'s Nurture', 'The Formless Inferno', 'Xoph\'s Blood', 'Tulfall', 'The Perfect Form', 'The Pandemonius', 'Hand of Wisdom and Action', 'Esh\'s Visage', 'Choir of the Storm',
 		'Uul-Netol\'s Embrace', 'The Red Trail', 'The Surrender', 'United in Dream', 'Skin of the Lords', 'Presence of Chayula', 'The Red Nightmare', 'The Green Nightmare', 'The Blue Nightmare',

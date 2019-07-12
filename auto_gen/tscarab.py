@@ -1,12 +1,12 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 07/07/2019(m/d/y) 21:23:01 UTC from "tmpstandard" data
+# Created: 07/12/2019(m/d/y) 07:37:04 UTC from "tmpstandard" data
 
 desc = "scarab Autogen"
 
 # Base type : settings pair
 items = {
-	"1 Gilded Ambush Scarab": {"base": "Gilded Ambush Scarab", "class": "Map Fragments", "type": "map yellow good"},
+	"1 Gilded Ambush Scarab": {"base": "Gilded Ambush Scarab", "class": "Map Fragments", "type": "map red good"},
 	"1 Gilded Bestiary Scarab": {"base": "Gilded Bestiary Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Gilded Breach Scarab": {"base": "Gilded Breach Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Gilded Cartography Scarab": {"base": "Gilded Cartography Scarab", "class": "Map Fragments", "type": "map yellow good"},
@@ -32,11 +32,11 @@ items = {
 	"1 Polished Torment Scarab": {"base": "Polished Torment Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Rusted Ambush Scarab": {"base": "Rusted Ambush Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Rusted Bestiary Scarab": {"base": "Rusted Bestiary Scarab", "class": "Map Fragments", "type": "map yellow good"},
-	"1 Rusted Breach Scarab": {"base": "Rusted Breach Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Rusted Cartography Scarab": {"base": "Rusted Cartography Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Rusted Divination Scarab": {"base": "Rusted Divination Scarab", "class": "Map Fragments", "type": "map yellow good"},
+	"1 Rusted Elder Scarab": {"base": "Rusted Elder Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Rusted Harbinger Scarab": {"base": "Rusted Harbinger Scarab", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Rusted Perandus Scarab": {"base": "Rusted Perandus Scarab", "class": "Map Fragments", "type": "map yellow good"},
-	"1 Rusted Sulphite Scarab": {"base": "Rusted Sulphite Scarab", "class": "Map Fragments", "type": "map yellow good"},
+	"1 Rusted Sulphite Scarab": {"base": "Rusted Sulphite Scarab", "class": "Map Fragments", "type": "map red good"},
 	"7 scarab default": {"base": "Scarab", "class": "Map Fragments", "type": "map yellow"}
 }
