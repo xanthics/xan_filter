@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 07/12/2019(m/d/y) 07:37:04 UTC from "tmpstandard" data
+# Created: 07/14/2019(m/d/y) 01:27:10 UTC from "tmpstandard" data
 
 desc = "Fragment Autogen"
 
@@ -9,7 +9,7 @@ items = {
 	"1 Chayula's Breachstone": {"base": "Chayula's Breachstone", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Chayula's Charged Breachstone": {"base": "Chayula's Charged Breachstone", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Chayula's Enriched Breachstone": {"base": "Chayula's Enriched Breachstone", "class": "Map Fragments", "type": "map yellow good"},
-	"1 Chayula's Pure Breachstone": {"base": "Chayula's Pure Breachstone", "class": "Map Fragments", "type": "map yellow good"},
+	"1 Chayula's Pure Breachstone": {"base": "Chayula's Pure Breachstone", "class": "Map Fragments", "type": "map very good"},
 	"1 Divine Vessel": {"base": "Divine Vessel", "class": "Map Fragments", "type": "map white good"},
 	"1 Eber's Key": {"base": "Eber's Key", "class": "Map Fragments", "type": "map white good"},
 	"1 Esh's Breachstone": {"base": "Esh's Breachstone", "class": "Map Fragments", "type": "map white good"},
@@ -31,7 +31,7 @@ items = {
 	"1 Sacrifice at Noon": {"base": "Sacrifice at Noon", "class": "Map Fragments", "type": "map white good"},
 	"1 Tul's Breachstone": {"base": "Tul's Breachstone", "class": "Map Fragments", "type": "map white good"},
 	"1 Tul's Charged Breachstone": {"base": "Tul's Charged Breachstone", "class": "Map Fragments", "type": "map white good"},
-	"1 Tul's Enriched Breachstone": {"base": "Tul's Enriched Breachstone", "class": "Map Fragments", "type": "map yellow good"},
+	"1 Tul's Enriched Breachstone": {"base": "Tul's Enriched Breachstone", "class": "Map Fragments", "type": "map white good"},
 	"1 Tul's Pure Breachstone": {"base": "Tul's Pure Breachstone", "class": "Map Fragments", "type": "map yellow good"},
 	"1 Uul-Netol's Breachstone": {"base": "Uul-Netol's Breachstone", "class": "Map Fragments", "type": "map white good"},
 	"1 Uul-Netol's Charged Breachstone": {"base": "Uul-Netol's Charged Breachstone", "class": "Map Fragments", "type": "map white good"},
