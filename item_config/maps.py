@@ -6,7 +6,7 @@ desc = "maps"
 
 # Base type : settings pair
 items = {
-	# Maps that have hideouts to unlock :: suggest "challenge high" style to make them stand out
+	# Maps that have hideouts to unlock :: suggest "map highlight" style to make them stand out
 	"0 Dig Map": {"base": "Dig Map", "class": "Maps", "type": "ignore"},
 	"0 Iceberg Map": {"base": "Iceberg Map", "class": "Maps", "type": "ignore"},
 	"0 Sunken City Map": {"base": "Sunken City Map", "class": "Maps", "type": "ignore"},
@@ -15,6 +15,9 @@ items = {
 	"0 Summit Map": {"base": "Summit Map", "class": "Maps", "type": "ignore"},
 	"0 Haunted Mansion Map": {"base": "Haunted Mansion Map", "class": "Maps", "type": "ignore"},
 	"0 Crimson Temple Map": {"base": "Crimson Temple Map", "class": "Maps", "type": "ignore"},
+
+	# If you are shaped for a specific map drop, put it here so you don't miss it
+#	"0 Burial Chambers Map": {"base": "Burial Chambers Map", "class": "Maps", "type": "map highlight"},
 
 	"212 Normal": {"class": "Maps", "other": ["MapTier >= 16"], "type": "map very good"},
 	"213 Normal": {"class": "Maps", "other": ["MapTier = 15"], "type": "map red good"},

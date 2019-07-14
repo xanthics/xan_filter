@@ -245,6 +245,13 @@ settings = {
 				  "SetFontSize {}".format(size['normal']),
 				  "SetBackgroundColor {} 220".format(color['black'])],
 
+	"map highlight": ["SetBorderColor {}".format(color['gem']),
+					  'MinimapIcon 0 Green Diamond',
+					  'PlayEffect Green',
+					  "SetFontSize {}".format(size['vlarge']),
+					  'CustomAlertSound "{}_map_good.wav"'.format(volume['high']),
+					  "SetBackgroundColor {} 220".format(color['supporterpack'])],
+
 	"map very good": ["SetBorderColor {}".format(color['fire']),
 					 'MinimapIcon 0 Red Diamond',
 					 'PlayEffect Red',
