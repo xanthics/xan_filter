@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 07/15/2019(m/d/y) 02:54:10 UTC from "tmpstandard" data
+# Created: 07/15/2019(m/d/y) 03:37:04 UTC from "tmpstandard" data
 
 desc = "Divination Card"
 
 # Base type : settings pair
 items = {
 	"000 Beauty Through Death": {"base": "Beauty Through Death", "class": "Divination Card", "type": "divination extremely high"},
-	"001 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination normal"},
-	"002 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
+	"001 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
+	"002 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination normal"},
 	"003 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination low"},
 	"004 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination normal"},
 	"005 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination normal"},
@@ -19,7 +19,8 @@ items = {
 	"1 Audacity": {"base": "Audacity", "class": "Divination Card", "type": "divination low"},
 	"1 Blessing of God": {"base": "Blessing of God", "class": "Divination Card", "type": "hide"},
 	"1 Buried Treasure": {"base": "Buried Treasure", "class": "Divination Card", "type": "divination high"},
-	"1 Burning Blood": {"base": "Burning Blood", "class": "Divination Card", "type": "divination very high"},
+	"1 Burning Blood": {"base": "Burning Blood", "class": "Divination Card", "type": "divination high"},
+	"1 Chaotic Disposition": {"base": "Chaotic Disposition", "class": "Divination Card", "type": "divination high"},
 	"1 Coveted Possession": {"base": "Coveted Possession", "class": "Divination Card", "type": "divination show"},
 	"1 Dark Dreams": {"base": "Dark Dreams", "class": "Divination Card", "type": "divination high"},
 	"1 Dark Temptation": {"base": "Dark Temptation", "class": "Divination Card", "type": "divination low"},
@@ -34,6 +35,8 @@ items = {
 	"1 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination high"},
 	"1 Merciless Armament": {"base": "Merciless Armament", "class": "Divination Card", "type": "hide"},
 	"1 Might is Right": {"base": "Might is Right", "class": "Divination Card", "type": "divination low"},
+	"1 Monochrome": {"base": "Monochrome", "class": "Divination Card", "type": "divination high"},
+	"1 Perfection": {"base": "Perfection", "class": "Divination Card", "type": "divination high"},
 	"1 Pride Before the Fall": {"base": "Pride Before the Fall", "class": "Divination Card", "type": "divination very high"},
 	"1 Pride of the First Ones": {"base": "Pride of the First Ones", "class": "Divination Card", "type": "divination extremely high"},
 	"1 Prosperity": {"base": "Prosperity", "class": "Divination Card", "type": "hide"},
@@ -116,6 +119,7 @@ items = {
 	"1 The Valkyrie": {"base": "The Valkyrie", "class": "Divination Card", "type": "divination very high"},
 	"1 The Vast": {"base": "The Vast", "class": "Divination Card", "type": "divination high"},
 	"1 The Visionary": {"base": "The Visionary", "class": "Divination Card", "type": "divination low"},
+	"1 The Void": {"base": "The Void", "class": "Divination Card", "type": "divination high"},
 	"1 The Watcher": {"base": "The Watcher", "class": "Divination Card", "type": "divination low"},
 	"1 The Web": {"base": "The Web", "class": "Divination Card", "type": "divination low"},
 	"1 The Wind": {"base": "The Wind", "class": "Divination Card", "type": "divination high"},

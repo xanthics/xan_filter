@@ -295,7 +295,7 @@ def incubatorclassify(cur, val, curvals):
 		tier = 'currency extremely high'
 	elif val > curvals['very']:
 		tier = 'currency very high'
-	elif val > curvals['show high']:
+	elif val >= curvals['show high']:
 		tier = 'currency high'
 	elif val < curvals['normal']:
 		tier = 'currency low'
@@ -329,8 +329,10 @@ def essenceclassify(cur, val, curvals):
 		tier = 'currency extremely high'
 	elif val > curvals['very']:
 		tier = 'currency very high'
-	elif val > curvals['show high']:
+	elif val >= curvals['show high']:
 		tier = 'currency high'
+	elif val >= curvals['high']:
+		tier = 'currency normal'
 	else:
 		return
 
@@ -361,7 +363,7 @@ def prophecyclassify(cur, val, curvals):
 		tier = 'currency extremely high'
 	elif val > curvals['very']:
 		tier = 'currency very high'
-	elif val > curvals['show high']:
+	elif val >= curvals['show high']:
 		tier = 'currency high'
 	elif val < curvals['normal']:
 		tier = 'currency very low'
@@ -406,7 +408,7 @@ def gemclassify(cur, val, curvals, level, qual, corrupt):
 		tier = 'gem extremely high'
 	elif val > curvals['very']:
 		tier = 'gem very high'
-	elif val > curvals['show high']:
+	elif val >= curvals['show high']:
 		tier = 'gem high'
 	elif (level > 1 and qual < 10) or cur in ["Enlighten Support", "Empower Support"]:
 		tier = 'gem low'
@@ -568,7 +570,7 @@ def divclassify(cur, val, curvals):
 		tier = 'divination extremely high'
 	elif val > curvals['very']:
 		tier = 'divination very high'
-	elif val > curvals['show high']:
+	elif val >= curvals['show high']:
 		tier = 'divination high'
 	elif cur in ah and val < curvals['normal']:
 		tier = 'divination show'
@@ -612,7 +614,7 @@ def uniqueclassify(cur, vals, curvals):
 		tier = 'unique extremely high'
 	elif val > curvals['very']:
 		tier = 'unique very high'
-	elif val > curvals['show high']:
+	elif val >= curvals['show high']:
 		tier = 'unique high'
 	elif val < curvals['normal']:
 		tier = 'unique low'
