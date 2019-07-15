@@ -8,60 +8,24 @@ import os
 from io import open
 from zipfile import ZipFile, ZIP_LZMA
 
-from auto_gen import divination
-from auto_gen import hcdivination
-from auto_gen import tdivination
-from auto_gen import thcdivination
-from auto_gen import uniques
-from auto_gen import hcuniques
-from auto_gen import tuniques
-from auto_gen import thcuniques
-from auto_gen import currency as stcurrency
-from auto_gen import hccurrency
-from auto_gen import tcurrency
-from auto_gen import thccurrency
-from auto_gen import essence as stessence
-from auto_gen import hcessence
-from auto_gen import tessence
-from auto_gen import thcessence
-from auto_gen import bases
-from auto_gen import hcbases
-from auto_gen import tbases
-from auto_gen import thcbases
-from auto_gen import prophecy
-from auto_gen import hcprophecy
-from auto_gen import tprophecy
-from auto_gen import thcprophecy
-from auto_gen import scarab
-from auto_gen import hcscarab
-from auto_gen import tscarab
-from auto_gen import thcscarab
-from auto_gen import helmenchant
-from auto_gen import hchelmenchant
-from auto_gen import thelmenchant
-from auto_gen import thchelmenchant
-from auto_gen import fragment
-from auto_gen import hcfragment
-from auto_gen import tfragment
-from auto_gen import thcfragment
-from auto_gen import incubator
-from auto_gen import hcincubator
-from auto_gen import tincubator
-from auto_gen import thcincubator
-from auto_gen import challenge
-from auto_gen import hcchallenge
-from auto_gen import tchallenge
-from auto_gen import thcchallenge
-from auto_gen import skillgem
-from auto_gen import hcskillgem
-from auto_gen import tskillgem
-from auto_gen import thcskillgem
+from auto_gen import divination, hcdivination, tdivination, thcdivination
+from auto_gen import uniques, hcuniques, tuniques, thcuniques
+from auto_gen import currency, hccurrency, tcurrency, thccurrency
+from auto_gen import essence, hcessence, tessence, thcessence
+from auto_gen import bases, hcbases, tbases, thcbases
+from auto_gen import prophecy, hcprophecy, tprophecy, thcprophecy
+from auto_gen import scarab, hcscarab, tscarab, thcscarab
+from auto_gen import helmenchant, hchelmenchant, thelmenchant, thchelmenchant
+from auto_gen import fragment, hcfragment, tfragment, thcfragment
+from auto_gen import incubator, hcincubator, tincubator, thcincubator
+from auto_gen import challenge, hcchallenge, tchallenge, thcchallenge
+from auto_gen import skillgem, hcskillgem, tskillgem, thcskillgem
 
 from item_config import animate_weapon, show_catchall
 from item_config import challenges
 from item_config import chance
 from item_config import chroma
-from item_config import currency
+from item_config import defaultcurrency
 from item_config import flask
 from item_config import gems
 from item_config import general_levelling
@@ -185,7 +149,7 @@ def get_poe_path():
 # main function for creating a filter
 def main(leagues=('tmpstandard',)):
 	gen_list = gen_list_compact
-	lookup_leagues = {'Standard': ("st", "Standard", uniques, divination, stcurrency, stessence, bases, prophecy, scarab, helmenchant, fragment, incubator, challenge, skillgem),
+	lookup_leagues = {'Standard': ("st", "Standard", uniques, divination, currency, essence, bases, prophecy, scarab, helmenchant, fragment, incubator, challenge, skillgem),
 					  'Hardcore': ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence, hcbases, hcprophecy, hcscarab, hchelmenchant, hcfragment, hcincubator, hcchallenge, hcskillgem),
 					  'tmpstandard': ("t", "Temp Softcore", tuniques, tdivination, tcurrency, tessence, tbases, tprophecy, tscarab, thelmenchant, tfragment, tincubator, tchallenge, tskillgem),
 					  'tmphardcore': ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence, thcbases, thcprophecy, thcscarab, thchelmenchant, thcfragment, thcincubator, thcchallenge, thcskillgem)}
@@ -226,7 +190,7 @@ def main(leagues=('tmpstandard',)):
 		buffer += gen_list(lookup_leagues[i][11].items, lookup_leagues[i][11].desc, soundlist)  # Autogen Incubator
 		buffer += gen_list(lookup_leagues[i][8].items, lookup_leagues[i][8].desc, soundlist)  # Autogen Scarabs
 		buffer += gen_list(lookup_leagues[i][7].items, lookup_leagues[i][7].desc, soundlist)  # Autogen Prophecy
-		buffer += gen_list(currency.items, currency.desc, soundlist)  # Currency
+		buffer += gen_list(defaultcurrency.items, defaultcurrency.desc, soundlist)  # Currency
 		buffer += gen_list(lookup_leagues[i][13].items, lookup_leagues[i][13].desc, soundlist)  # Autogen gems
 		buffer += gen_list(gems.items, gems.desc, soundlist)  # Gems
 		buffer += gen_list(lookup_leagues[i][9].items, lookup_leagues[i][9].desc, soundlist)  # Autogen Helm Enchants
@@ -305,8 +269,8 @@ if __name__ == "__main__":
 	# reload updated modules
 	for module in [divination, hcdivination, tdivination, thcdivination,
 				   uniques, hcuniques, tuniques, thcuniques,
-				   stcurrency, hccurrency, tcurrency, thccurrency,
-				   stessence, hcessence, tessence, thcessence,
+				   currency, hccurrency, tcurrency, thccurrency,
+				   essence, hcessence, tessence, thcessence,
 				   bases, hcbases, tbases, thcbases,
 				   prophecy, hcprophecy, tprophecy, thcprophecy,
 				   scarab, hcscarab, tscarab, thcscarab,

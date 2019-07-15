@@ -1,17 +1,17 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 07/15/2019(m/d/y) 02:45:16 UTC from "tmpstandard" data
+# Created: 07/15/2019(m/d/y) 02:54:10 UTC from "tmpstandard" data
 
 desc = "Unique"
 
 # Base type : settings pair
 items = {
 	"000 Reinforced Tower Shield": {"other": ["ItemLevel <= 60"], "base": "Reinforced Tower Shield", "type": "unique high"},
-	"001 Blunt Arrow Quiver Piece": {"base": "Blunt Arrow Quiver Piece", "type": "unique normal"},
-	"002 Archon Kite Shield Piece": {"base": "Archon Kite Shield Piece", "type": "unique normal"},
+	"001 Archon Kite Shield Piece": {"base": "Archon Kite Shield Piece", "type": "unique normal"},
+	"002 Blunt Arrow Quiver Piece": {"base": "Blunt Arrow Quiver Piece", "type": "unique normal"},
 	"003 Cloth Belt Piece": {"base": "Cloth Belt Piece", "type": "unique high"},
-	"004 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique normal"},
-	"005 Moon Temple Map": {"base": "Moon Temple Map", "type": "unique very high"},
+	"004 Moon Temple Map": {"base": "Moon Temple Map", "type": "unique very high"},
+	"005 Sinner Tricorne": {"base": "Sinner Tricorne", "type": "unique normal"},
 	"1 Agate Amulet": {"base": "Agate Amulet", "type": "unique special"},
 	"1 Amber Amulet": {"base": "Amber Amulet", "type": "unique special"},
 	"1 Archon Kite Shield": {"base": "Archon Kite Shield", "type": "unique special"},
@@ -25,7 +25,6 @@ items = {
 	"1 Cobalt Jewel": {"base": "Cobalt Jewel", "type": "unique special"},
 	"1 Crimson Jewel": {"base": "Crimson Jewel", "type": "unique special"},
 	"1 Crusader Boots": {"base": "Crusader Boots", "type": "unique extremely high"},
-	"1 Crystal Sceptre": {"base": "Crystal Sceptre", "type": "unique low"},
 	"1 Cursed Crypt Map": {"base": "Cursed Crypt Map", "type": "unique high"},
 	"1 Elegant Foil": {"base": "Elegant Foil", "type": "unique high"},
 	"1 Eternal Sword": {"base": "Eternal Sword", "type": "unique special"},
@@ -85,6 +84,7 @@ items = {
 	"1 Shadow Sceptre": {"base": "Shadow Sceptre", "type": "unique low"},
 	"1 Siege Axe": {"base": "Siege Axe", "type": "unique very high"},
 	"1 Silver Flask": {"base": "Silver Flask", "type": "unique special"},
+	"1 Skinning Knife": {"base": "Skinning Knife", "type": "unique low"},
 	"1 Sledgehammer": {"base": "Sledgehammer", "type": "unique low"},
 	"1 Sorcerer Boots": {"base": "Sorcerer Boots", "type": "unique special"},
 	"1 Stealth Boots": {"base": "Stealth Boots", "type": "unique special"},
@@ -93,6 +93,7 @@ items = {
 	"1 Strapped Leather": {"base": "Strapped Leather", "type": "unique low"},
 	"1 Studded Belt": {"base": "Studded Belt", "type": "unique special"},
 	"1 Temple Map": {"base": "Temple Map", "type": "unique high"},
+	"1 Timeless Jewel": {"base": "Timeless Jewel", "type": "unique high"},
 	"1 Topaz Ring": {"base": "Topaz Ring", "type": "unique special"},
 	"1 Tricorne": {"base": "Tricorne", "type": "unique low"},
 	"1 Triumphant Lamellar": {"base": "Triumphant Lamellar", "type": "unique special"},
@@ -104,7 +105,6 @@ items = {
 	"1 Vaal Rapier": {"base": "Vaal Rapier", "type": "unique very high"},
 	"1 Varnished Coat": {"base": "Varnished Coat", "type": "unique high"},
 	"1 Viridian Jewel": {"base": "Viridian Jewel", "type": "unique special"},
-	"1 Void Axe": {"base": "Void Axe", "type": "unique high"},
 	"1 War Buckler": {"base": "War Buckler", "type": "unique low"},
 	"1 Widowsilk Robe": {"base": "Widowsilk Robe", "type": "unique special"},
 	"1 Wild Leather": {"base": "Wild Leather", "type": "unique low"},
