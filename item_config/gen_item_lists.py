@@ -1131,9 +1131,9 @@ def highbases():
 	for typ in bases:
 		for meta in bases[typ]:
 			for item in bases[typ][meta]:
-				if item['tier'] <= 1 and item['name'] not in cannotdrop:
+				if item['tier'] <= 1 and item['name'] not in cannotdrop and "Talisman" not in item['name'] :
 					ret[None].append(item['name'])
-					if "Other" != meta and "Talisman" not in item['name'] and item['name'] != "Stygian Vise":
+					if "Other" != meta and item['name'] != "Stygian Vise":
 						ret['Elder'].append(item['name'])
 						ret['Shaper'].append(item['name'])
 	return ret

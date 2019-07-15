@@ -18,6 +18,7 @@ items = {
 
 	# If you are shaped for a specific map drop, put it here so you don't miss it
 #	"0 Burial Chambers Map": {"base": "Burial Chambers Map", "class": "Maps", "type": "map highlight"},
+#	"0 Glacier Map": {"base": "Glacier Map", "class": "Maps", "type": "map highlight"},
 
 	"212 Normal": {"class": "Maps", "other": ["MapTier >= 16"], "type": "map very good"},
 	"213 Normal": {"class": "Maps", "other": ["MapTier = 15"], "type": "map red good"},

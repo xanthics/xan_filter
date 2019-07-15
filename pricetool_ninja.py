@@ -18,6 +18,28 @@ header = '''#!/usr/bin/python
 '''
 
 
+# Find all keys that have other keys which are substrings
+def find_substrings(source_dict):
+	names = list(source_dict.keys())
+	substringmatches = {}
+	for index in range(len(names) - 1):
+		for name in names[index + 1:]:
+			if names[index] in name or name in names[index]:
+				if name in names[index]:
+					sub, full = name, names[index]
+				else:
+					sub, full = names[index], name
+				if sub not in substringmatches:
+					substringmatches[sub] = [full]
+				else:
+					substringmatches[sub].append(full)
+
+	badnames = [badname for substring in substringmatches for badname in substringmatches[substring]]
+	# distinct values by converting to a set
+	# sort based on descending length so that any additional substrings are at the end of the list
+	return sorted(set(badnames), reverse=True, key=lambda s: len(s))
+
+
 # Helper function to convert a league name to a file prefix
 def convertname(league):
 	if league == 'Standard':
@@ -216,13 +238,13 @@ def gen_challenge(challenge_list, league, curvals):
 # Convert a currency shorthand to full name.  returns a string
 def fragmentclassify(cur, val, curvals, stacks=1):
 	if val >= curvals['extremely']:
-		tier = 'map very good'
+		tier = 'fragment extremely high'
 	elif val >= curvals['very']:
-		tier = 'map yellow good'
-	elif val >= curvals['high']:
-		tier = 'map white good'
+		tier = 'fragment very high'
+	elif val >= curvals['show high']:
+		tier = 'fragment high'
 	else:
-		tier = 'map white'
+		tier = 'fragment normal'
 
 	if stacks > 1:
 		return "$ {0}\": {{\"base\": \"{0}\", 'other': ['StackSize >= {2}'], \"class\": \"Map Fragments\", \"type\": \"{1}\"}}".format(cur, tier, stacks)
@@ -273,7 +295,7 @@ def incubatorclassify(cur, val, curvals):
 		tier = 'currency extremely high'
 	elif val > curvals['very']:
 		tier = 'currency very high'
-	elif val > curvals['high']:
+	elif val > curvals['show high']:
 		tier = 'currency high'
 	elif val < curvals['normal']:
 		tier = 'currency low'
@@ -307,12 +329,10 @@ def essenceclassify(cur, val, curvals):
 		tier = 'currency extremely high'
 	elif val > curvals['very']:
 		tier = 'currency very high'
-	elif val > curvals['high']:
+	elif val > curvals['show high']:
 		tier = 'currency high'
-	elif val > curvals['high'] / 2:
-		tier = 'currency normal'
 	else:
-		tier = 'currency low'
+		return
 
 	return "0 {0}\": {{\"base\": \"{0}\", \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier)
 
@@ -341,7 +361,7 @@ def prophecyclassify(cur, val, curvals):
 		tier = 'currency extremely high'
 	elif val > curvals['very']:
 		tier = 'currency very high'
-	elif val > curvals['high']*2:
+	elif val > curvals['show high']:
 		tier = 'currency high'
 	elif val < curvals['normal']:
 		tier = 'currency very low'
@@ -364,7 +384,7 @@ def gen_prophecy(prophecy_list, league, curvals):
 	for c, cur in enumerate(substringprophecy):
 		retstr = prophecyclassify(cur, prophecy_list[cur], curvals)
 		if not retstr:
-			retstr = '{0}": {{"prophecy": "{0}", "class": "Currency", "type": "currency low"}}'.format(cur)
+			retstr = '{0}": {{"prophecy": "{0}", "class": "Currency", "type": "currency very low"}}'.format(cur)
 		curval += '\t"{:03d} {},\n'.format(c, retstr)
 		del prophecy_list[cur]
 	for cur in sorted(prophecy_list.keys()):
@@ -386,7 +406,7 @@ def gemclassify(cur, val, curvals, level, qual, corrupt):
 		tier = 'gem extremely high'
 	elif val > curvals['very']:
 		tier = 'gem very high'
-	elif val > curvals['high']:
+	elif val > curvals['show high']:
 		tier = 'gem high'
 	elif (level > 1 and qual < 10) or cur in ["Enlighten Support", "Empower Support"]:
 		tier = 'gem low'
@@ -434,13 +454,13 @@ def gen_gems(gem_list, league, curvals):
 # Convert a scarab value to string.  returns a string
 def scarabclassify(cur, val, curvals):
 	if val >= curvals['extremely']:
-		tier = 'map very good'
+		tier = 'fragment extremely high'
 	elif val >= curvals['very']:
-		tier = 'map red good'
-	elif val >= curvals['high']:
-		tier = 'map yellow good'
+		tier = 'fragment very high'
+	elif val >= curvals['show high']:
+		tier = 'fragment high'
 	elif val <= curvals['normal']:
-		tier = 'map white'
+		tier = 'fragment low'
 	else:
 		return
 
@@ -456,7 +476,7 @@ def gen_scarab(scarab_list, league, curvals):
 	for c, cur in enumerate(substringscarab):
 		retstr = scarabclassify(cur, scarab_list[cur], curvals)
 		if not retstr:
-			retstr = '{0}": {{"base": "{0}", "class": "Map Fragments", "type": "map yellow"}}'.format(cur)
+			retstr = '{0}": {{"base": "{0}", "class": "Map Fragments", "type": "fragment normal"}}'.format(cur)
 		curval += '\t"{:03d} {},\n'.format(c, retstr)
 		del scarab_list[cur]
 	for cur in sorted(scarab_list.keys()):
@@ -464,7 +484,7 @@ def gen_scarab(scarab_list, league, curvals):
 		if retstr:
 			curval += '\t"1 {},\n'.format(retstr)
 
-	curval += '\t"7 scarab default": {"base": "Scarab", "class": "Map Fragments", "type": "map yellow"}\n}\n'
+	curval += '\t"7 scarab default": {"base": "Scarab", "class": "Map Fragments", "type": "fragment normal"}\n}\n'
 
 	name = convertname(league)
 
@@ -476,9 +496,9 @@ def gen_scarab(scarab_list, league, curvals):
 # Convert a scarab value to string.  returns a string
 def enchantclassify(cur, val, curvals):
 	if val >= curvals['extremely']:
-		tier = 'currency extremely high'
+		tier = 'base extremely high'
 	elif val >= curvals['very']:
-		tier = 'currency very high'
+		tier = 'base very high'
 	else:
 		return
 
@@ -520,33 +540,11 @@ def gen_enchants(helmenchant_list, league, curvals):
 		f.write(curval)
 
 
-# Find all keys that have other keys which are substrings
-def find_substrings(source_dict):
-	names = list(source_dict.keys())
-	substringmatches = {}
-	for index in range(len(names) - 1):
-		for name in names[index + 1:]:
-			if names[index] in name or name in names[index]:
-				if name in names[index]:
-					sub, full = name, names[index]
-				else:
-					sub, full = names[index], name
-				if sub not in substringmatches:
-					substringmatches[sub] = [full]
-				else:
-					substringmatches[sub].append(full)
-
-	badnames = [badname for substring in substringmatches for badname in substringmatches[substring]]
-	# distinct values by converting to a set
-	# sort based on descending length so that any additional substrings are at the end of the list
-	return sorted(set(badnames), reverse=True, key=lambda s: len(s))
-
-
 # Convert a div card value to string.  returns a string
 def divclassify(cur, val, curvals):
 	# divination cards that should always show an icon
 	ah = [
-		"Three Faces in the Dark", "Hubris", "Loyalty", "Rain of Chaos", "The Catalyst", "The Doppelganger", "The Gambler", "The Gemcutter", "The Master Artisan", "Emperor's Luck", "Jack in the Box", "The Scholar",  # "Her Mask",
+		"Three Faces in the Dark", "Hubris", "Loyalty", "Rain of Chaos", "The Catalyst", "The Doppelganger", "The Gemcutter", "The Master Artisan", "Emperor's Luck", "Jack in the Box", "The Scholar",  # "Her Mask", "The Gambler",
 		"House of Mirrors", "Alluring Bounty", "Abandoned Wealth", "Seven Years Bad Luck", "The Saint's Treasure", "The Hoarder", "The Sephirot", "Chaotic Disposition", "The Cartographer", "Monochrome", "The Seeker", "The Journey",
 		"Lucky Connections", "Lucky Deck", "The Innocent", "The Wrath", "Emperor's Luck", "Loyalty", "The Inventor", "The Survivalist", "The Union", "Vinia's Token", "The Puzzle", "Demigod's Wager", "No Traces", "Three Faces in the Dark",
 		"The Master Artisan", "The Fool", "Coveted Possession", "Rain of Chaos", "The Catalyst", "The Gemcutter",
@@ -570,11 +568,11 @@ def divclassify(cur, val, curvals):
 		tier = 'divination extremely high'
 	elif val > curvals['very']:
 		tier = 'divination very high'
-	elif val > curvals['high']:
+	elif val > curvals['show high']:
 		tier = 'divination high'
-	elif cur in ah and val < curvals['high'] / 2:
+	elif cur in ah and val < curvals['normal']:
 		tier = 'divination show'
-	elif val < curvals['high'] / 2:
+	elif val < curvals['normal']:
 		tier = 'divination low'
 	else:
 		return
@@ -608,15 +606,15 @@ def gen_div(div_list, league, curvals):
 # Convert a unique value to string.  returns a string
 def uniqueclassify(cur, vals, curvals):
 	val = min(vals)
-	if max(vals) > curvals['very'] > min(vals):
+	if max(vals) > curvals['show high'] > min(vals):
 		tier = 'unique special'
 	elif val >= curvals['extremely']:
 		tier = 'unique extremely high'
 	elif val > curvals['very']:
 		tier = 'unique very high'
-	elif val > curvals['high']*2:
+	elif val > curvals['show high']:
 		tier = 'unique high'
-	elif val < curvals['high'] / 2:
+	elif val < curvals['normal']:
 		tier = 'unique low'
 	else:
 		return

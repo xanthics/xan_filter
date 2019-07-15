@@ -95,6 +95,7 @@ def price_sanity(item_list, curvals):
 def gentierval(currencies):
 	ret = {'extremely': currencies['Exalted Orb'],
 		   'very': currencies['Exalted Orb'] // 10,
+		   'show high': 5,  # Used for uniques, essences, divination, fragments, incubators, prophecy, scarabs
 		   'high': 1,
 		   'normal': 1/4,
 		   'low': 1/8,
