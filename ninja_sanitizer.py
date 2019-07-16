@@ -56,7 +56,7 @@ def greaterthanequal(a, b):
 # Sanity check for item prices
 # Will be updated as I notice discrepancies
 def price_sanity(item_list, curvals):
-	lessthanmin = ['The Web', 'The Incantation', 'Shard of Fate', 'The Endurance', "Anarchy's Price", "The Dragon"]
+	lessthanmin = ['The Web', 'The Incantation', 'Shard of Fate', 'The Endurance', "Anarchy's Price", "The Dragon", "Doedre's Madness"]
 	lessthanlow = ["Blacksmith's Whetstone", "Armourer's Scrap", "Orb of Chance", "Orb of Transmutation", "The Hermit"]
 	lessthannormal = ["The Scholar", "Her Mask", "The Gambler", "Jeweller's Orb", "Silver Coin", "Chromatic Orb", "Blessed Orb"]
 	lessthanhigh = []

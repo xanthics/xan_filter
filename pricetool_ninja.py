@@ -88,8 +88,6 @@ def currencyclassify(cur, val, curvals, stacks=1):
 		tier = 'currency show'
 	elif cur in ahn and val < curvals['normal']:
 		tier = 'currency normal'
-#	elif 'Alchemical Resonator' in cur and 'Prime' not in cur:
-#		tier = 'currency very low'
 	elif val >= curvals['extremely']:
 		tier = 'currency extremely high'
 	elif val >= curvals['very']:
@@ -331,8 +329,10 @@ def essenceclassify(cur, val, curvals):
 		tier = 'currency very high'
 	elif val >= curvals['show high']:
 		tier = 'currency high'
-	elif val >= curvals['high']:
+	elif val > curvals['high']:
 		tier = 'currency normal'
+	elif "Resonator" in cur or "Fossil" in cur:
+		tier = 'currency show'
 	else:
 		return
 
@@ -608,14 +608,14 @@ def gen_div(div_list, league, curvals):
 # Convert a unique value to string.  returns a string
 def uniqueclassify(cur, vals, curvals):
 	val = min(vals)
-	if max(vals) > curvals['show high'] > min(vals):
-		tier = 'unique special'
-	elif val >= curvals['extremely']:
+	if val >= curvals['extremely']:
 		tier = 'unique extremely high'
 	elif val > curvals['very']:
 		tier = 'unique very high'
 	elif val >= curvals['show high']:
 		tier = 'unique high'
+	elif max(vals) > curvals['show high'] > min(vals) or "Map" in cur:
+		tier = 'unique special'
 	elif val < curvals['normal']:
 		tier = 'unique low'
 	else:
@@ -783,7 +783,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 			elif key == 'Fragment':
 				for i in data:
 					for ii in data[i]:
-						if 'chaosEquivalent' in ii and ii['currencyTypeName'] != 'Offering to the Goddess':
+						if 'chaosEquivalent' in ii:
 							pc = ii['pay']['count'] if ii['pay'] else 0
 							rc = ii['receive']['count'] if ii['receive'] else 0
 							if pc + rc < mincount:
@@ -825,7 +825,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 					for ii in data[i]:
 						if ii['count'] < mincount:
 							continue
-						currency[ii['name']] = ii['chaosValue']
+						essences[ii['name']] = ii['chaosValue']
 
 			elif key == 'HelmetEnchant':
 				for i in data:

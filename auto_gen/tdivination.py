@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 07/15/2019(m/d/y) 03:37:04 UTC from "tmpstandard" data
+# Created: 07/15/2019(m/d/y) 23:54:31 UTC from "tmpstandard" data
 
 desc = "Divination Card"
 
 # Base type : settings pair
 items = {
 	"000 Beauty Through Death": {"base": "Beauty Through Death", "class": "Divination Card", "type": "divination extremely high"},
-	"001 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
-	"002 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination normal"},
+	"001 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination normal"},
+	"002 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
 	"003 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination low"},
 	"004 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination normal"},
 	"005 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination normal"},
@@ -19,15 +19,17 @@ items = {
 	"1 Audacity": {"base": "Audacity", "class": "Divination Card", "type": "divination low"},
 	"1 Blessing of God": {"base": "Blessing of God", "class": "Divination Card", "type": "hide"},
 	"1 Buried Treasure": {"base": "Buried Treasure", "class": "Divination Card", "type": "divination high"},
-	"1 Burning Blood": {"base": "Burning Blood", "class": "Divination Card", "type": "divination high"},
+	"1 Burning Blood": {"base": "Burning Blood", "class": "Divination Card", "type": "divination very high"},
 	"1 Chaotic Disposition": {"base": "Chaotic Disposition", "class": "Divination Card", "type": "divination high"},
 	"1 Coveted Possession": {"base": "Coveted Possession", "class": "Divination Card", "type": "divination show"},
 	"1 Dark Dreams": {"base": "Dark Dreams", "class": "Divination Card", "type": "divination high"},
 	"1 Dark Temptation": {"base": "Dark Temptation", "class": "Divination Card", "type": "divination low"},
 	"1 Death": {"base": "Death", "class": "Divination Card", "type": "hide"},
 	"1 Destined to Crumble": {"base": "Destined to Crumble", "class": "Divination Card", "type": "hide"},
+	"1 Doedre's Madness": {"base": "Doedre's Madness", "class": "Divination Card", "type": "divination low"},
 	"1 Echoes of Love": {"base": "Echoes of Love", "class": "Divination Card", "type": "divination low"},
 	"1 Her Mask": {"base": "Her Mask", "class": "Divination Card", "type": "divination low"},
+	"1 Heterochromia": {"base": "Heterochromia", "class": "Divination Card", "type": "divination high"},
 	"1 House of Mirrors": {"base": "House of Mirrors", "class": "Divination Card", "type": "currency mirror"},
 	"1 Hunter's Reward": {"base": "Hunter's Reward", "class": "Divination Card", "type": "divination very high"},
 	"1 Immortal Resolve": {"base": "Immortal Resolve", "class": "Divination Card", "type": "divination very high"},
@@ -35,7 +37,6 @@ items = {
 	"1 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination high"},
 	"1 Merciless Armament": {"base": "Merciless Armament", "class": "Divination Card", "type": "hide"},
 	"1 Might is Right": {"base": "Might is Right", "class": "Divination Card", "type": "divination low"},
-	"1 Monochrome": {"base": "Monochrome", "class": "Divination Card", "type": "divination high"},
 	"1 Perfection": {"base": "Perfection", "class": "Divination Card", "type": "divination high"},
 	"1 Pride Before the Fall": {"base": "Pride Before the Fall", "class": "Divination Card", "type": "divination very high"},
 	"1 Pride of the First Ones": {"base": "Pride of the First Ones", "class": "Divination Card", "type": "divination extremely high"},
@@ -127,6 +128,7 @@ items = {
 	"1 The Wolf": {"base": "The Wolf", "class": "Divination Card", "type": "divination high"},
 	"1 The Wolven King's Bite": {"base": "The Wolven King's Bite", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The World Eater": {"base": "The World Eater", "class": "Divination Card", "type": "divination very high"},
+	"1 The Wretched": {"base": "The Wretched", "class": "Divination Card", "type": "divination high"},
 	"1 Thirst for Knowledge": {"base": "Thirst for Knowledge", "class": "Divination Card", "type": "divination low"},
 	"1 Thunderous Skies": {"base": "Thunderous Skies", "class": "Divination Card", "type": "hide"},
 	"1 Tranquillity": {"base": "Tranquillity", "class": "Divination Card", "type": "divination low"},
