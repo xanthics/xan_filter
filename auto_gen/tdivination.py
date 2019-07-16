@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 07/15/2019(m/d/y) 23:54:31 UTC from "tmpstandard" data
+# Created: 07/16/2019(m/d/y) 04:47:22 UTC from "tmpstandard" data
 
 desc = "Divination Card"
 
@@ -19,7 +19,7 @@ items = {
 	"1 Audacity": {"base": "Audacity", "class": "Divination Card", "type": "divination low"},
 	"1 Blessing of God": {"base": "Blessing of God", "class": "Divination Card", "type": "hide"},
 	"1 Buried Treasure": {"base": "Buried Treasure", "class": "Divination Card", "type": "divination high"},
-	"1 Burning Blood": {"base": "Burning Blood", "class": "Divination Card", "type": "divination very high"},
+	"1 Burning Blood": {"base": "Burning Blood", "class": "Divination Card", "type": "divination high"},
 	"1 Chaotic Disposition": {"base": "Chaotic Disposition", "class": "Divination Card", "type": "divination high"},
 	"1 Coveted Possession": {"base": "Coveted Possession", "class": "Divination Card", "type": "divination show"},
 	"1 Dark Dreams": {"base": "Dark Dreams", "class": "Divination Card", "type": "divination high"},
@@ -53,11 +53,10 @@ items = {
 	"1 The Blazing Fire": {"base": "The Blazing Fire", "class": "Divination Card", "type": "divination low"},
 	"1 The Carrion Crow": {"base": "The Carrion Crow", "class": "Divination Card", "type": "hide"},
 	"1 The Catalyst": {"base": "The Catalyst", "class": "Divination Card", "type": "divination show"},
-	"1 The Celestial Justicar": {"base": "The Celestial Justicar", "class": "Divination Card", "type": "divination very high"},
+	"1 The Celestial Justicar": {"base": "The Celestial Justicar", "class": "Divination Card", "type": "divination high"},
 	"1 The Celestial Stone": {"base": "The Celestial Stone", "class": "Divination Card", "type": "divination very high"},
 	"1 The Coming Storm": {"base": "The Coming Storm", "class": "Divination Card", "type": "divination low"},
 	"1 The Conduit": {"base": "The Conduit", "class": "Divination Card", "type": "divination low"},
-	"1 The Deceiver": {"base": "The Deceiver", "class": "Divination Card", "type": "divination low"},
 	"1 The Demoness": {"base": "The Demoness", "class": "Divination Card", "type": "divination low"},
 	"1 The Doctor": {"base": "The Doctor", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},

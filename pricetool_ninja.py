@@ -616,7 +616,7 @@ def uniqueclassify(cur, vals, curvals):
 		tier = 'unique high'
 	elif max(vals) > curvals['show high'] > min(vals) or "Map" in cur:
 		tier = 'unique special'
-	elif val < curvals['normal']:
+	elif val <= curvals['high']:
 		tier = 'unique low'
 	else:
 		return

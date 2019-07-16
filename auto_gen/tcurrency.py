@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 07/15/2019(m/d/y) 23:54:31 UTC from "tmpstandard" data
+# Created: 07/16/2019(m/d/y) 04:47:22 UTC from "tmpstandard" data
 
 desc = "Currency Autogen"
 
@@ -10,14 +10,13 @@ items = {
 	"09 Alchemy Shard": {"base": "Alchemy Shard", 'other': ['StackSize >= 9'], "class": "Currency", "type": "currency normal"},
 	"1 Alteration Shard": {"base": "Alteration Shard", "class": "Currency", "type": "currency show"},
 	"09 Alteration Shard": {"base": "Alteration Shard", 'other': ['StackSize >= 20'], "class": "Currency", "type": "currency normal"},
-	"1 Ancient Orb": {"base": "Ancient Orb", "class": "Currency", "type": "currency very high"},
-	"09 Ancient Orb": {"base": "Ancient Orb", 'other': ['StackSize >= 11'], "class": "Currency", "type": "currency extremely high"},
+	"1 Ancient Orb": {"base": "Ancient Orb", "class": "Currency", "type": "currency high"},
+	"09 Ancient Orb": {"base": "Ancient Orb", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency very high"},
+	"08 Ancient Orb": {"base": "Ancient Orb", 'other': ['StackSize >= 12'], "class": "Currency", "type": "currency extremely high"},
 	"1 Ancient Shard": {"base": "Ancient Shard", "class": "Currency", "type": "currency normal"},
 	"09 Ancient Shard": {"base": "Ancient Shard", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency high"},
-	"08 Ancient Shard": {"base": "Ancient Shard", 'other': ['StackSize >= 20'], "class": "Currency", "type": "currency very high"},
 	"1 Annulment Shard": {"base": "Annulment Shard", "class": "Currency", "type": "currency normal"},
 	"09 Annulment Shard": {"base": "Annulment Shard", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency high"},
-	"08 Annulment Shard": {"base": "Annulment Shard", 'other': ['StackSize >= 20'], "class": "Currency", "type": "currency very high"},
 	"1 Apprentice Cartographer's Sextant": {"base": "Apprentice Cartographer's Sextant", "class": "Currency", "type": "currency high"},
 	"09 Apprentice Cartographer's Sextant": {"base": "Apprentice Cartographer's Sextant", 'other': ['StackSize >= 10'], "class": "Currency", "type": "currency very high"},
 	"1 Armourer's Scrap": {"base": "Armourer's Scrap", "class": "Currency", "type": "hide"},
@@ -59,7 +58,7 @@ items = {
 	"08 Engineer's Shard": {"base": "Engineer's Shard", 'other': ['StackSize >= 13'], "class": "Currency", "type": "currency high"},
 	"1 Exalted Orb": {"base": "Exalted Orb", "class": "Currency", "type": "currency extremely high"},
 	"1 Exalted Shard": {"base": "Exalted Shard", "class": "Currency", "type": "currency high"},
-	"09 Exalted Shard": {"base": "Exalted Shard", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency very high"},
+	"09 Exalted Shard": {"base": "Exalted Shard", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency very high"},
 	"1 Gemcutter's Prism": {"base": "Gemcutter's Prism", "class": "Currency", "type": "currency high"},
 	"1 Glassblower's Bauble": {"base": "Glassblower's Bauble", "class": "Currency", "type": "currency low"},
 	"09 Glassblower's Bauble": {"base": "Glassblower's Bauble", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency normal"},
@@ -77,7 +76,7 @@ items = {
 	"1 Journeyman Cartographer's Sextant": {"base": "Journeyman Cartographer's Sextant", "class": "Currency", "type": "currency high"},
 	"09 Journeyman Cartographer's Sextant": {"base": "Journeyman Cartographer's Sextant", 'other': ['StackSize >= 6'], "class": "Currency", "type": "currency very high"},
 	"1 Master Cartographer's Sextant": {"base": "Master Cartographer's Sextant", "class": "Currency", "type": "currency high"},
-	"09 Master Cartographer's Sextant": {"base": "Master Cartographer's Sextant", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency very high"},
+	"09 Master Cartographer's Sextant": {"base": "Master Cartographer's Sextant", 'other': ['StackSize >= 5'], "class": "Currency", "type": "currency very high"},
 	"1 Mirror Shard": {"base": "Mirror Shard", "class": "Currency", "type": "currency mirror"},
 	"1 Mirror of Kalandra": {"base": "Mirror of Kalandra", "class": "Currency", "type": "currency mirror"},
 	"1 Orb of Alchemy": {"base": "Orb of Alchemy", "class": "Currency", "type": "currency normal"},
@@ -103,7 +102,7 @@ items = {
 	"09 Orb of Horizons": {"base": "Orb of Horizons", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency high"},
 	"1 Orb of Regret": {"base": "Orb of Regret", "class": "Currency", "type": "currency normal"},
 	"09 Orb of Regret": {"base": "Orb of Regret", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency high"},
-	"08 Orb of Regret": {"base": "Orb of Regret", 'other': ['StackSize >= 24'], "class": "Currency", "type": "currency very high"},
+	"08 Orb of Regret": {"base": "Orb of Regret", 'other': ['StackSize >= 25'], "class": "Currency", "type": "currency very high"},
 	"1 Orb of Scouring": {"base": "Orb of Scouring", "class": "Currency", "type": "currency normal"},
 	"09 Orb of Scouring": {"base": "Orb of Scouring", 'other': ['StackSize >= 3'], "class": "Currency", "type": "currency high"},
 	"1 Orb of Transmutation": {"base": "Orb of Transmutation", "class": "Currency", "type": "hide"},
@@ -114,7 +113,7 @@ items = {
 	"1 Perandus Coin": {"base": "Perandus Coin", "class": "Currency", "type": "currency show"},
 	"09 Perandus Coin": {"base": "Perandus Coin", 'other': ['StackSize >= 9'], "class": "Currency", "type": "currency normal"},
 	"08 Perandus Coin": {"base": "Perandus Coin", 'other': ['StackSize >= 34'], "class": "Currency", "type": "currency high"},
-	"07 Perandus Coin": {"base": "Perandus Coin", 'other': ['StackSize >= 534'], "class": "Currency", "type": "currency very high"},
+	"07 Perandus Coin": {"base": "Perandus Coin", 'other': ['StackSize >= 567'], "class": "Currency", "type": "currency very high"},
 	"1 Portal Scroll": {"base": "Portal Scroll", "class": "Currency", "type": "hide"},
 	"09 Portal Scroll": {"base": "Portal Scroll", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency very low"},
 	"08 Portal Scroll": {"base": "Portal Scroll", 'other': ['StackSize >= 4'], "class": "Currency", "type": "currency low"},
@@ -134,7 +133,7 @@ items = {
 	"08 Silver Coin": {"base": "Silver Coin", 'other': ['StackSize >= 7'], "class": "Currency", "type": "currency high"},
 	"1 Splinter of Chayula": {"base": "Splinter of Chayula", "class": "Currency", "type": "currency normal"},
 	"09 Splinter of Chayula": {"base": "Splinter of Chayula", 'other': ['StackSize >= 2'], "class": "Currency", "type": "currency high"},
-	"08 Splinter of Chayula": {"base": "Splinter of Chayula", 'other': ['StackSize >= 20'], "class": "Currency", "type": "currency very high"},
+	"08 Splinter of Chayula": {"base": "Splinter of Chayula", 'other': ['StackSize >= 21'], "class": "Currency", "type": "currency very high"},
 	"1 Splinter of Esh": {"base": "Splinter of Esh", "class": "Currency", "type": "currency show"},
 	"09 Splinter of Esh": {"base": "Splinter of Esh", 'other': ['StackSize >= 5'], "class": "Currency", "type": "currency normal"},
 	"08 Splinter of Esh": {"base": "Splinter of Esh", 'other': ['StackSize >= 20'], "class": "Currency", "type": "currency high"},

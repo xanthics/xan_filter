@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 07/15/2019(m/d/y) 23:54:31 UTC from "tmpstandard" data
+# Created: 07/16/2019(m/d/y) 04:47:23 UTC from "tmpstandard" data
 
 desc = "Fragment Autogen"
 
@@ -22,7 +22,7 @@ items = {
 	"1 Fragment of the Phoenix": {"base": "Fragment of the Phoenix", "class": "Map Fragments", "type": "fragment high"},
 	"1 Inya's Key": {"base": "Inya's Key", "class": "Map Fragments", "type": "fragment high"},
 	"1 Mortal Grief": {"base": "Mortal Grief", "class": "Map Fragments", "type": "fragment normal"},
-	"1 Mortal Hope": {"base": "Mortal Hope", "class": "Map Fragments", "type": "fragment very high"},
+	"1 Mortal Hope": {"base": "Mortal Hope", "class": "Map Fragments", "type": "fragment high"},
 	"1 Mortal Ignorance": {"base": "Mortal Ignorance", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Mortal Rage": {"base": "Mortal Rage", "class": "Map Fragments", "type": "fragment high"},
 	"1 Offering to the Goddess": {"base": "Offering to the Goddess", "class": "Map Fragments", "type": "fragment normal"},

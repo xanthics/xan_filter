@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 07/15/2019(m/d/y) 23:54:31 UTC from "tmpstandard" data
+# Created: 07/16/2019(m/d/y) 04:47:22 UTC from "tmpstandard" data
 
 desc = "Essence Autogen"
 
@@ -41,10 +41,10 @@ items = {
 	"0 Gilded Fossil": {"base": "Gilded Fossil", "class": "Currency", "type": "currency high"},
 	"0 Glyphic Fossil": {"base": "Glyphic Fossil", "class": "Currency", "type": "currency very high"},
 	"0 Hollow Fossil": {"base": "Hollow Fossil", "class": "Currency", "type": "currency extremely high"},
-	"0 Jagged Fossil": {"base": "Jagged Fossil", "class": "Currency", "type": "currency show"},
+	"0 Jagged Fossil": {"base": "Jagged Fossil", "class": "Currency", "type": "currency normal"},
 	"0 Lucent Fossil": {"base": "Lucent Fossil", "class": "Currency", "type": "currency show"},
 	"0 Metallic Fossil": {"base": "Metallic Fossil", "class": "Currency", "type": "currency show"},
-	"0 Perfect Fossil": {"base": "Perfect Fossil", "class": "Currency", "type": "currency very high"},
+	"0 Perfect Fossil": {"base": "Perfect Fossil", "class": "Currency", "type": "currency high"},
 	"0 Potent Alchemical Resonator": {"base": "Potent Alchemical Resonator", "class": "Currency", "type": "currency normal"},
 	"0 Potent Chaotic Resonator": {"base": "Potent Chaotic Resonator", "class": "Currency", "type": "currency normal"},
 	"0 Powerful Alchemical Resonator": {"base": "Powerful Alchemical Resonator", "class": "Currency", "type": "currency show"},
@@ -53,8 +53,8 @@ items = {
 	"0 Prime Chaotic Resonator": {"base": "Prime Chaotic Resonator", "class": "Currency", "type": "currency very high"},
 	"0 Primitive Alchemical Resonator": {"base": "Primitive Alchemical Resonator", "class": "Currency", "type": "currency show"},
 	"0 Primitive Chaotic Resonator": {"base": "Primitive Chaotic Resonator", "class": "Currency", "type": "currency show"},
-	"0 Prismatic Fossil": {"base": "Prismatic Fossil", "class": "Currency", "type": "currency normal"},
-	"0 Pristine Fossil": {"base": "Pristine Fossil", "class": "Currency", "type": "currency normal"},
+	"0 Prismatic Fossil": {"base": "Prismatic Fossil", "class": "Currency", "type": "currency high"},
+	"0 Pristine Fossil": {"base": "Pristine Fossil", "class": "Currency", "type": "currency high"},
 	"0 Sanctified Fossil": {"base": "Sanctified Fossil", "class": "Currency", "type": "currency very high"},
 	"0 Scorched Fossil": {"base": "Scorched Fossil", "class": "Currency", "type": "currency show"},
 	"0 Screaming Essence of Dread": {"base": "Screaming Essence of Dread", "class": "Currency", "type": "currency high"},
@@ -69,5 +69,5 @@ items = {
 	"0 Shrieking Essence of Wrath": {"base": "Shrieking Essence of Wrath", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Zeal": {"base": "Shrieking Essence of Zeal", "class": "Currency", "type": "currency high"},
 	"0 Shuddering Fossil": {"base": "Shuddering Fossil", "class": "Currency", "type": "currency normal"},
-	"0 Tangled Fossil": {"base": "Tangled Fossil", "class": "Currency", "type": "currency very high"},
+	"0 Tangled Fossil": {"base": "Tangled Fossil", "class": "Currency", "type": "currency high"},
 	"7 Essence default": {"base": "Essence", "class": "Currency", "type": "currency low"}}

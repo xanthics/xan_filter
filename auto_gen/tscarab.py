@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 07/15/2019(m/d/y) 23:54:31 UTC from "tmpstandard" data
+# Created: 07/16/2019(m/d/y) 04:47:22 UTC from "tmpstandard" data
 
 desc = "scarab Autogen"
 
@@ -9,7 +9,7 @@ items = {
 	"1 Gilded Ambush Scarab": {"base": "Gilded Ambush Scarab", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Gilded Bestiary Scarab": {"base": "Gilded Bestiary Scarab", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Gilded Breach Scarab": {"base": "Gilded Breach Scarab", "class": "Map Fragments", "type": "fragment high"},
-	"1 Gilded Cartography Scarab": {"base": "Gilded Cartography Scarab", "class": "Map Fragments", "type": "fragment very high"},
+	"1 Gilded Cartography Scarab": {"base": "Gilded Cartography Scarab", "class": "Map Fragments", "type": "fragment high"},
 	"1 Gilded Divination Scarab": {"base": "Gilded Divination Scarab", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Gilded Elder Scarab": {"base": "Gilded Elder Scarab", "class": "Map Fragments", "type": "fragment high"},
 	"1 Gilded Harbinger Scarab": {"base": "Gilded Harbinger Scarab", "class": "Map Fragments", "type": "fragment high"},
