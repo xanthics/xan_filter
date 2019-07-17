@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 07/16/2019(m/d/y) 04:47:22 UTC from "tmpstandard" data
+# Created: 07/17/2019(m/d/y) 21:51:32 UTC from "tmpstandard" data
 
 desc = "Divination Card"
 
 # Base type : settings pair
 items = {
 	"000 Beauty Through Death": {"base": "Beauty Through Death", "class": "Divination Card", "type": "divination extremely high"},
-	"001 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination normal"},
-	"002 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
+	"001 The Dragon's Heart": {"base": "The Dragon's Heart", "class": "Divination Card", "type": "divination very high"},
+	"002 The Master Artisan": {"base": "The Master Artisan", "class": "Divination Card", "type": "divination normal"},
 	"003 The Wolf's Shadow": {"base": "The Wolf's Shadow", "class": "Divination Card", "type": "divination low"},
 	"004 Glimmer of Hope": {"base": "Glimmer of Hope", "class": "Divination Card", "type": "divination normal"},
 	"005 Last Hope": {"base": "Last Hope", "class": "Divination Card", "type": "divination normal"},
@@ -37,6 +37,7 @@ items = {
 	"1 Lucky Deck": {"base": "Lucky Deck", "class": "Divination Card", "type": "divination high"},
 	"1 Merciless Armament": {"base": "Merciless Armament", "class": "Divination Card", "type": "hide"},
 	"1 Might is Right": {"base": "Might is Right", "class": "Divination Card", "type": "divination low"},
+	"1 Monochrome": {"base": "Monochrome", "class": "Divination Card", "type": "divination high"},
 	"1 Perfection": {"base": "Perfection", "class": "Divination Card", "type": "divination high"},
 	"1 Pride Before the Fall": {"base": "Pride Before the Fall", "class": "Divination Card", "type": "divination very high"},
 	"1 Pride of the First Ones": {"base": "Pride of the First Ones", "class": "Divination Card", "type": "divination extremely high"},
@@ -49,14 +50,14 @@ items = {
 	"1 Struck by Lightning": {"base": "Struck by Lightning", "class": "Divination Card", "type": "hide"},
 	"1 The Army of Blood": {"base": "The Army of Blood", "class": "Divination Card", "type": "divination low"},
 	"1 The Artist": {"base": "The Artist", "class": "Divination Card", "type": "divination high"},
-	"1 The Beast": {"base": "The Beast", "class": "Divination Card", "type": "divination low"},
 	"1 The Blazing Fire": {"base": "The Blazing Fire", "class": "Divination Card", "type": "divination low"},
 	"1 The Carrion Crow": {"base": "The Carrion Crow", "class": "Divination Card", "type": "hide"},
 	"1 The Catalyst": {"base": "The Catalyst", "class": "Divination Card", "type": "divination show"},
-	"1 The Celestial Justicar": {"base": "The Celestial Justicar", "class": "Divination Card", "type": "divination high"},
+	"1 The Celestial Justicar": {"base": "The Celestial Justicar", "class": "Divination Card", "type": "divination very high"},
 	"1 The Celestial Stone": {"base": "The Celestial Stone", "class": "Divination Card", "type": "divination very high"},
 	"1 The Coming Storm": {"base": "The Coming Storm", "class": "Divination Card", "type": "divination low"},
 	"1 The Conduit": {"base": "The Conduit", "class": "Divination Card", "type": "divination low"},
+	"1 The Deceiver": {"base": "The Deceiver", "class": "Divination Card", "type": "divination low"},
 	"1 The Demoness": {"base": "The Demoness", "class": "Divination Card", "type": "divination low"},
 	"1 The Doctor": {"base": "The Doctor", "class": "Divination Card", "type": "divination extremely high"},
 	"1 The Endurance": {"base": "The Endurance", "class": "Divination Card", "type": "divination low"},
@@ -67,7 +68,6 @@ items = {
 	"1 The Forsaken": {"base": "The Forsaken", "class": "Divination Card", "type": "divination low"},
 	"1 The Gambler": {"base": "The Gambler", "class": "Divination Card", "type": "divination low"},
 	"1 The Gladiator": {"base": "The Gladiator", "class": "Divination Card", "type": "divination high"},
-	"1 The Harvester": {"base": "The Harvester", "class": "Divination Card", "type": "divination low"},
 	"1 The Hermit": {"base": "The Hermit", "class": "Divination Card", "type": "divination low"},
 	"1 The Hoarder": {"base": "The Hoarder", "class": "Divination Card", "type": "divination high"},
 	"1 The Immortal": {"base": "The Immortal", "class": "Divination Card", "type": "divination extremely high"},
@@ -104,6 +104,7 @@ items = {
 	"1 The Saint's Treasure": {"base": "The Saint's Treasure", "class": "Divination Card", "type": "divination very high"},
 	"1 The Samurai's Eye": {"base": "The Samurai's Eye", "class": "Divination Card", "type": "divination very high"},
 	"1 The Scarred Meadow": {"base": "The Scarred Meadow", "class": "Divination Card", "type": "hide"},
+	"1 The Scholar": {"base": "The Scholar", "class": "Divination Card", "type": "divination show"},
 	"1 The Seeker": {"base": "The Seeker", "class": "Divination Card", "type": "divination high"},
 	"1 The Sephirot": {"base": "The Sephirot", "class": "Divination Card", "type": "divination very high"},
 	"1 The Sigil": {"base": "The Sigil", "class": "Divination Card", "type": "hide"},
@@ -126,6 +127,7 @@ items = {
 	"1 The Witch": {"base": "The Witch", "class": "Divination Card", "type": "divination low"},
 	"1 The Wolf": {"base": "The Wolf", "class": "Divination Card", "type": "divination high"},
 	"1 The Wolven King's Bite": {"base": "The Wolven King's Bite", "class": "Divination Card", "type": "divination extremely high"},
+	"1 The Wolverine": {"base": "The Wolverine", "class": "Divination Card", "type": "divination low"},
 	"1 The World Eater": {"base": "The World Eater", "class": "Divination Card", "type": "divination very high"},
 	"1 The Wretched": {"base": "The Wretched", "class": "Divination Card", "type": "divination high"},
 	"1 Thirst for Knowledge": {"base": "Thirst for Knowledge", "class": "Divination Card", "type": "divination low"},

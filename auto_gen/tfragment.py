@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 07/16/2019(m/d/y) 04:47:23 UTC from "tmpstandard" data
+# Created: 07/17/2019(m/d/y) 21:51:32 UTC from "tmpstandard" data
 
 desc = "Fragment Autogen"
 

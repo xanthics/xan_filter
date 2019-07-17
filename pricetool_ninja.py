@@ -359,12 +359,20 @@ def gen_essence(essence_list, league, curvals):
 
 # Convert a prophecy value to string.  returns a string
 def prophecyclassify(cur, val, curvals):
+	# Prophecies to always highlight
+	ah = [
+		'A Master Seeks Help', 'Fated Connections', 'The Beautiful Guide', 'The Hardened Armour', "The Jeweller's Touch", 'The Sharpened Blade', 'Trash to Treasure', 'Twice Enchanted', "The Queen's Sacrifice", 'Vaal Winds', 'Cleanser of Sins', 'Lost in the Pages', "The Queen's Vaults", 'A Regal Death', 'Wind and Thunder', 'Erased from Memory',
+		'Overflowing Riches', 'Reforged Bonds', 'The God of Misfortune', 'An Unseen Peril', 'Deadly Twins', 'Monstrous Treasure', 'Mysterious Invaders', 'Plague of Frogs', 'Plague of Rats', 'Rebirth', 'The Cursed Choir', 'The Four Feral Exiles', 'The Hungering Swarm', 'The Invader', 'The Trembling Earth', 'The Twins', 'The Undead Brutes',
+		'The Brothers of Necromancy', 'Waiting in Ambush', 'Bountiful Traps', "Erasmus' Gift", "Hunter's Lesson", 'The Scout', 'The Plaguemaw IV'
+	]
 	if val >= curvals['extremely']:
 		tier = 'currency extremely high'
 	elif val > curvals['very']:
 		tier = 'currency very high'
 	elif val >= curvals['show high']:
 		tier = 'currency high'
+	elif cur in ah:
+		tier = 'currency show'
 	elif val < curvals['normal']:
 		tier = 'currency very low'
 	else:
