@@ -155,7 +155,9 @@ def magicmods():
 # , "Amulet", "Belt", "Ring"
 # , "Jewel", "Abyss Jewel"
 def itemmods():
-	return {**magicmods(), **raremods()}
+	veiled = ["Leo's Veiled", "Vagan's Veiled", "Catarina's Veiled", "Elreon's Veiled"]
+
+	return {'9 Item Mod': {'other': ['HasExplicitMod "{}"'.format('" "'.join(veiled))], "type": "rare highlight"}, **magicmods(), **raremods()}
 
 
 if __name__ == '__main__':
