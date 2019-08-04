@@ -60,19 +60,23 @@ def currencyclassify(cur, val, curvals, stacks=1):
 		#"Silver Coin",
 		#"Blacksmith's Whetstone",
 		#"Armourer's Scrap",
-		"Chromatic Orb",
-		"Alchemy Shard",
-		"Orb of Alteration", "Alteration Shard",
+		#"Chromatic Orb",
+		#"Alchemy Shard",
+		"Orb of Alteration",
+		#"Alteration Shard",
 		#"Orb of Augmentation",
 		#"Jeweller's Orb",
 		#"Orb of Transmutation",
 		#"Orb of Chance",
 		#"Glassblower's Bauble",
-		"Horizon Orb", "Horizon Shard",
+		"Horizon Orb",
+		#"Horizon Shard",
 		"Chaos Shard",
-		"Engineer's Orb", "Engineer's Shard",
-		"Binding Shard",
-		"Regal Orb", "Regal Shard",
+		"Engineer's Orb",
+		#"Engineer's Shard",
+		#"Binding Shard",
+		"Regal Orb",
+		#"Regal Shard",
 		#"Blessed Orb",
 		"Timeless Eternal Empire Splinter", "Timeless Karui Splinter", "Timeless Maraketh Splinter", "Timeless Templar Splinter", "Timeless Vaal Splinter"
 	]
@@ -614,16 +618,17 @@ def gen_div(div_list, league, curvals):
 
 
 # Convert a unique value to string.  returns a string
-def uniqueclassify(cur, vals, curvals):
-	val = min(vals)
+def uniqueclassify(cur, val, curvals):
 	if val >= curvals['extremely']:
 		tier = 'unique extremely high'
 	elif val > curvals['very']:
 		tier = 'unique very high'
 	elif val >= curvals['show high']:
 		tier = 'unique high'
-	elif max(vals) > curvals['show high'] > min(vals) or "Map" in cur:
+	elif val == -1:
 		tier = 'unique special'
+	elif val == -2:
+		tier = 'unique limited'
 	elif val <= curvals['high']:
 		tier = 'unique low'
 	else:
@@ -633,15 +638,8 @@ def uniqueclassify(cur, vals, curvals):
 
 
 # Given a list of all uniques, reformat in to a base:value list
-def compact_uniques(unique_full_list):
-	unique_list = defaultdict(list)
-	for name in unique_full_list:
-		unique_list[unique_full_list[name]['baseType']].append(unique_full_list[name]['chaosValue'])
-	return unique_list
-
-
-def gen_unique(unique_full_list, league, curvals):
-	unique_list = compact_uniques(unique_full_list)
+def gen_unique(unique_list, league, curvals):
+#	unique_list = compact_uniques(unique_full_list)
 
 	for invalid in ['Torture Chamber Map', 'Catacombs Map']:
 		if invalid in unique_list:
@@ -652,7 +650,8 @@ def gen_unique(unique_full_list, league, curvals):
 	curval = '{}\ndesc = "Unique"\n\n# Base type : settings pair\nitems = {{\n'.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
 
 	retstr = uniqueclassify('Reinforced Tower Shield', unique_list['Rawhide Tower Shield'], curvals)
-	curval += '\t"000 {},\n'.format(retstr.replace('"base"', '"other": ["ItemLevel <= 60"], "base"'))
+	if retstr:
+		curval += '\t"000 {},\n'.format(retstr.replace('"base"', '"other": ["ItemLevel <= 60"], "base"'))
 
 	for c, cur in enumerate(substringunique, 1):
 		retstr = uniqueclassify(cur, unique_list[cur], curvals)
@@ -820,7 +819,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 					for ii in data[i]:
 						if ii['baseType'].startswith('Superior ') or \
 								(ii['count'] < mincount and ii['variant'] and ii['baseType'] not in goodbases[ii['variant']]) or \
-								(not ii['variant'] and ii['baseType'] not in goodbases[ii['variant']]):
+								(not ii['variant'] and (ii['baseType'] not in goodbases[ii['variant']] or ii['count'] < mincount)):
 							continue
 						if ii['levelRequired'] not in bases:
 							bases[ii['levelRequired']] = {}
@@ -889,8 +888,12 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 							continue
 						if ii['count'] < mincount:
 							continue
-						if ('links' in ii and ii['links']) or 'relic' in ii['icon'] or ('variant' in ii and ii['variant'] and '2 Jewels' in ii['variant']):
+						if ('links' in ii and ii['links']) or 'relic' in ii['icon']:
 							continue
+						# Some uniques can have multiple variants, only consider the least valuable
+						if ii['name'] in uniques:
+							while ii['name'] in uniques:
+								ii['name'] += "§"
 						uniques[ii['name']] = {'baseType': ii['baseType'], 'chaosValue': ii['chaosValue']}
 
 			else:
@@ -898,7 +901,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 
 		# Add all missing values to poe.ninja data
 		fixmissingbases(bases, league)
-		curvals = fixallmissing(league, currency, divs, essences, prophecy, scarab, uniques, helmenchants, fragments, challenges)
+		curvals, uniques = fixallmissing(league, currency, divs, essences, prophecy, scarab, uniques, helmenchants, fragments, challenges)
 
 		gen_currency(currency, league, curvals)
 		gen_gems(skillgem, league, curvals)
