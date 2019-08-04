@@ -14,7 +14,7 @@ def fixmissing(ninja_list, defaults, league, name):
 	# Print all items that were returned by poe.ninja that don't have a default set
 	if set(ninja_list.keys()) - set(defaults.keys()):
 		missing = ', '.join(['"{}": {}'.format(x, ninja_list[x]) for x in sorted(set(ninja_list.keys()) - set(defaults.keys()))])
-		print(f"{league} Missing defaults for {name}: \n{missing}")
+		print(f"{league} Missing defaults for {name}: \n{missing}\n")
 	# add missing items to ninja_list
 	for v in set(defaults.keys()) - set(ninja_list.keys()):
 		ninja_list[v] = defaults[v]
@@ -103,6 +103,114 @@ def gentierval(currencies):
 	return ret
 
 
+# Collapse uniques list so that it is base:value pairs, with -1 for "special" bases and -2 for "only boss drop is valuable" bases
+def compact_uniques(unique_full_list, curvals):
+	# drops that are restricted to specific areas or leagues
+	# limited highlighting is only used if the only high drops are limited and there is at least 1 low drop
+	limiteddrop = [
+		# Guardians, Shaper, and Elder
+		"Obscurantis", "The Brass Dome", "The Scourge", "Razor of the Seventh Sun", "Slivertongue", "Brain Rattler", "Snakepit", "Eye of Innocence",
+		"Voidwalker", "Shaper's Touch", "Starforge", "Dying Sun",
+		"Leper's Alms", "Memory Vault", "Vulconus", "Beltimber Blade", "Grelwood Shank", "Augyre", "Yoke of Suffering", "Gloomfang",
+		"Blasphemer's Grasp", "Shimmeron", "Nebuloch", "Hopeshredder", "Impresence", "Cyclopean Coil",
+		"Indigon", "The Eternity Shroud", "Disintegrator", "Voidforge", "Mark of the Elder", "Mark of the Shaper", "Voidfletcher",
+		"Watcher's Eye",
+		# Atziri
+		"Atziri's Step", "Doryani's Catalyst", "Doryani's Invitation", "Atziri's Promise",
+		"The Vertex", "Atziri's Splendour", "Atziri's Acuity", "Atziri's Disfavour",
+		# Bestiary League
+		"Saqawal's Flock", "Saqawal's Nest", "Saqawal's Talons", "Saqawal's Winds",
+		"Fenumus' Toxins", "Fenumus' Shroud", "Fenumus' Spinnerets", "Fenumus' Weave",
+		"Craiceann's Chitin", "Craiceann's Carapace", "Craiceann's Tracks", "Craiceann's Pincers",
+		"Farrul's Bite", "Farrul's Fur", "Farrul's Chase", "Farrul's Pounce",
+		# Pale Court
+		"Mind of the Council", "Grip of the Council", "Breath of the Council", "Reach of the Council",
+		"Eber's Unification", "Yriel's Fostering", "Inya's Epiphany", "Volkuur's Guidance",
+		# Pillars of Arun
+		"Gorgon's Gaze",
+		# Doryani's Machinarium
+		"Doryani's Delusion",
+		# Talisman League
+		"Rigwald's Savagery", "Rigwald's Command", "Rigwald's Crest", "Rigwald's Quills", "Night's Hold", "Rigwald's Curse", "Blightwell", "Natural Hierarchy", "Eyes of the Greatwolf", "Feastbind", "Faminebind",
+		# Incursion League
+		"String of Servitude", "Apep's Slumber", "Mask of the Spirit Drinker", "Dance of the Offered", "Architect's Hand", "Story of the Vaal", "Sacrificial Heart", "Coward's Chains", "Soul Catcher", "Tempered Flesh", "Tempered Spirit", "Tempered Mind",
+		# Synthesis League
+		"Bottled Faith", "Perepiteia", "Mask of the Tribunal", "Garb of the Ephemeral", "Offering to the Serpent", "Storm's Gift", "Nebulis", "Circle of Guilt", "Circle of Regret", "Circle of Fear", "Circle of Anguish", "Circle of Nostalgia", "Maloney's Mechanism",
+		# Labyrinth
+		"Glitterdisc", "Viper's Scales", "Death's Door", "Winds of Change", "Izaro's Dilemma", "Chitus' Needle", "Spine of the First Claimant", "Xirgil's Crank", "Izaro's Turmoil",
+		# Breach League
+		"The Anticipation", "Esh's Mirror", "The Formless Flame", "Skin of the Loyal", "The Snowblind Grace", "The Infinite Pursuit", "The Infinite Pursuit", "	Hand of Thought and Motion", "Severed in Sleep", "Xoph's Inception", "Uul-Netol's Kiss", "Xoph's Heart", "The Halcyon", "Voice of the Storm",
+		"The Red Dream", "The Green Dream", "The Blue Dream",
+		# Legion League
+		"Rathpith Globe", "Wreath of Phrecia", "Maw of Conquest", "Honourhome", "Voll's Protector", "Lioneye's Paws", "March of the Legion", "Maligaro's Virtuosity", "Asenath's Gentle Touch", "Aukuna's Will", "Divinarius", "Al Dhih", "Rebuke of the Vaal", "Lavianga's Wisdom", "Sign of the Sin Eater", "Darkscorn", "Pledge of Hands", "Kaom's Primacy",
+		"Marohi Erqi", "Tavukai", "The Sorrow of the Divine", "Glorious Vanity", "Militant Faith", "Brutal Restraint", "Elegant Hubris", "Lethal Pride",
+		# Abyss League
+		"Lightpoacher", "Shroud of the Lightless", "Bubonic Trail", "Tombfist", "Darkness Enthroned",
+		# Delve League
+		"Hale Negator", "Crown of the Tyrant", "Command of the Pit", "Cerberus Limb", "Aul's Uprising", "Doryani's Machinarium",
+		"Putembo's Valley", "Putembo's Mountain", "Putembo's Meadow",
+		"Uzaza's Meadow", "Uzaza's Mountain", "Uzaza's Valley",
+		"Ahkeli's Mountain", "Ahkeli's Meadow", "Ahkeli's Valley",
+		# Domination & Nemesis League
+		"Berek's Grip", "Berek's Pass", "Berek's Respite", "Blood of the Karui", "Lavianga's Spirit",
+		# Domination League
+		"The Gull",
+		# Nemesis League
+		"Headhunter",
+		# Ambush & Invasion League
+		"Vaal Caress", "Voideye",
+		# Anarchy & Onslaught League
+		"Shavronne's Revelation", "Voll's Devotion",
+		# Anarchy League
+		"Gifts from Above", "Daresso's Salute",
+		# Onslaught League
+		"Death Rush", "Victario's Acuity",
+		# Tempest League
+		"Shadows and Dust", "Crown of the Pale King", "Trolltimber Spire", "Ylfeban's Trickery",
+		# Warbands League
+		"Brinerot Flag", "Brinerot Mark", "Brinerot Whalers", "Broken Faith", "Mutewind Pennant", "Mutewind Seal", "Mutewind Whispersteps", "Redblade Band", "Redblade Banner", "Redblade Tramplers", "Steppan Eard", "The Pariah",
+		# Betrayal League
+		"Bitterbind Point", "The Devouring Diadem", "The Queen's Hunger", "Cinderswallow", "Paradoxica", "The Crimson Storm", "The Crimson Storm", "Hyperboreus",
+		# Torment League
+		"Brutus' Lead Sprinkler", "Scold's Bridle", "The Rat Cage",
+		# Perandus League
+		"Seven-League Step", "Trypanon", "Umbilicus Immortalis", "Varunastra", "Zerphi's Last Breath",
+		# Rampage League
+		"Flesh and Spirit", "Null and Void", "Shadows and Dust",
+		# Beyond League
+		"Edge of Madness", "The Dark Seer", "The Harvest",
+		# Bloodlines League
+		"Ngamahu's Sign", "Tasalio's Sign", "Tasalio's Sign"
+	]
+	from collections import defaultdict
+	unique_list = defaultdict(list)
+	unique_list_limited = defaultdict(list)
+	unique_clean = {}
+	for name in unique_full_list:
+		if name in limiteddrop:
+			unique_list_limited[unique_full_list[name]['baseType']].append(unique_full_list[name]['chaosValue'])
+		else:
+			unique_list[unique_full_list[name]['baseType']].append(unique_full_list[name]['chaosValue'])
+	for base in unique_list:
+		# If map < show high or there is a high value base that is non-restricted that shares a base with any low value unique
+		if ("Map" in base and min(unique_list[base]) < curvals['show high']) or min(unique_list[base]) < curvals['show high'] <= max(unique_list[base]) or (base in unique_list_limited and min(unique_list_limited[base]) < curvals['show high'] <= max(unique_list[base])):
+			unique_clean[base] = -1
+		# High value drop restricted unique that shares a base with a low value unrestricted base
+		elif base in unique_list_limited and min(unique_list[base]) < curvals['show high'] <= max(unique_list_limited[base]):
+			unique_clean[base] = -2
+		else:
+			unique_clean[base] = min(unique_list[base] + unique_list_limited[base]) if base in unique_list_limited else min(unique_list[base])
+
+	for base in set(unique_list_limited.keys()) - set(unique_list.keys()):
+		# High value drop restricted unique that shares a base with a low value unrestricted base
+		if min(unique_list_limited[base]) < curvals['show high'] <= max(unique_list_limited[base]):
+			unique_clean[base] = -2
+		else:
+			unique_clean[base] = min(unique_list_limited[base])
+
+	return unique_clean
+
+
 # Add missing values to data returned by poe.ninja
 def fixallmissing(league, currency, divs, essences, prophecy, scarab, uniques, helmenchants, fragments, challenges):
 	# Add chaos and Scroll of Wisdom to the default list as poe.ninja does not include them
@@ -129,6 +237,9 @@ def fixallmissing(league, currency, divs, essences, prophecy, scarab, uniques, h
 
 	currency["Vial of the Ghost"] = uniques["Soul Ripper"]['chaosValue'] - uniques["Soul Catcher"]['chaosValue'] - op_cost  # currency['Exalted Orb'] * 8
 	currency["Vial of Sacrifice"] = uniques["Zerphi's Heart"]['chaosValue'] - uniques["Sacrificial Heart"]['chaosValue'] - op_cost  # currency['Exalted Orb'] * 18
+
+	for vial in ["Vial of Awakening", "Vial of Consequence", "Vial of Dominance", "Vial of Fate", "Vial of Summoning", "Vial of the Ritual", "Vial of Transcendence", "Vial of the Ghost", "Vial of Sacrifice"]:
+		currency[vial] = currency[vial] if currency[vial] > 0 else 0
 
 	fixmissing(helmenchants, helmenchantsdefaults, league, "helmet enchants")
 	fixmissing(fragments, fragmentdefaults, league, "Fragments")
@@ -182,4 +293,4 @@ def fixallmissing(league, currency, divs, essences, prophecy, scarab, uniques, h
 		if uni in uniques:
 			del uniques[uni]
 
-	return curvals
+	return curvals, compact_uniques(uniques, curvals)
