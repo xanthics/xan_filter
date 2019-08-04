@@ -13,4 +13,4 @@ Scarabs are classified the same as fragments
 
 Fossils and Resonators are treated the same as Essences but also have a show tier
 
-Uniques have 2 special highlight rules.  Unique Show (white star, purple border) means that at least 1 drop of that basetype is worth 5+ chaos.  Unique Boss has the same triangle as Unique Low, but a green border to indicate that the 5c+ drop is boss only.
+Uniques have 2 special highlight rules.  Unique Show (white star, chaos border) means that at least 1 drop of that basetype is worth 5+ chaos.  Unique Limited has the same triangle as Unique Low, but a blue border to indicate that the 5c+ drop is limited only and has special conditions for dropping such as specific bosses or league mods.
