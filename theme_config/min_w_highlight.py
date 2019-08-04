@@ -361,9 +361,9 @@ settings = {
 						       "SetBackgroundColor {} 220".format(color['cold'])],
 
 	"item mod": ["SetBorderColor {}".format(color['premiumlpurple']),
-					'MinimapIcon 2 Yellow Square',
-					"SetFontSize {}".format(size['normal']),
-					"SetBackgroundColor {} 220".format(color['black'])],
+				 'MinimapIcon 2 Yellow Square',
+				 "SetFontSize {}".format(size['normal']),
+				 "SetBackgroundColor {} 220".format(color['black'])],
 
 	"base extremely high": ["Rarity < Unique",
 							'MinimapIcon 0 Green Square',
@@ -406,6 +406,12 @@ settings = {
 					   'MinimapIcon 2 White Star',
 					   "SetBorderColor {}".format(color['chaos']),
 	                   'CustomAlertSound "{}_unique.wav"'.format(volume['medium']),
+					   "SetBackgroundColor {} 220".format(color['black'])],
+	# Special class of unique where only a restricted drop is valuable
+	"unique limited": ["Rarity Unique",
+					   "SetFontSize {}".format(size['normal']),
+					   "SetBorderColor {}".format(color['premiumblue']),
+					   'MinimapIcon 2 Brown Star',
 					   "SetBackgroundColor {} 220".format(color['black'])],
 	"unique normal": ["Rarity Unique",
 					  "SetFontSize {}".format(size['normal']),
