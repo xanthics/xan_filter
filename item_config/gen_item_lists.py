@@ -1029,7 +1029,7 @@ def genrareshighlighttiered():
 	type_pen_idx = [
 		'ElderItem',
 		'ShaperItem',
-		'FracturedItem',
+#		'FracturedItem',
 #		'SynthesisedItem',
 		None
 	]
@@ -1077,8 +1077,14 @@ def genrareshighlighttiered():
 			if s:
 				ilvl = min([alwaysshow[x] for x in set(f).intersection(set(askeys))])
 			for i in range(len(bases[category][vals])):
+				if bases[category][vals][i]['name'] in ['Ruby Amulet', 'Golden Obi', 'Jet Amulet', 'Golden Hoop', 'Ornate Quiver', 'Jet Ring']:
+					continue
 				cur = bases[category][vals][i]
 				for typ in type_penalty:
+					if typ in ['ElderItem', 'ShaperItem'] and (bases[category][vals][i]['name'] == 'Stygian Vise' or
+															   "Other" == vals or
+															   "Talisman" in bases[category][vals][i]['name']):
+						continue
 					# generate all rules for current item type
 					rules = {}
 					for rule in override_tier:
@@ -1131,9 +1137,9 @@ def highbases():
 	for typ in bases:
 		for meta in bases[typ]:
 			for item in bases[typ][meta]:
-				if item['tier'] <= 1 and item['name'] not in cannotdrop and "Talisman" not in item['name'] :
+				if item['tier'] <= 1 and item['name'] not in cannotdrop and "Talisman" not in item['name']:
 					ret[None].append(item['name'])
-					if "Other" != meta and item['name'] != "Stygian Vise":
+					if "Other" != meta and item['name'] not in ["Stygian Vise"]:
 						ret['Elder'].append(item['name'])
 						ret['Shaper'].append(item['name'])
 	return ret
