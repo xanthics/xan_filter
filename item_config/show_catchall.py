@@ -6,8 +6,7 @@ desc = "Always show"
 
 # Base type : settings pair
 items = {
-	# High value atlas bases.  Show and make noise at any rarity
-	"04 Stygian Vise": {"other": ['CustomAlertSound "45_show.wav"', "Rarity <= Magic"], "base": "Stygian Vise", "type": "show high"},
+	# High value veiled mods, so that they still show after removing them from itemmod.py when finished
 	"05 Abyss Jewel": {"class": "Abyss Jewel", "other": ["Rarity <= Magic"], "type": "normal"},
 	"0 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "show normal"},
 	"1 Magic Jewel": {"class": "Jewel", "other": ["Rarity <= Magic", "ItemLevel <= 70"], "type": "normal"},
