@@ -51,24 +51,25 @@ def convertname(league):
 	else:
 		return "t"
 
+
 # Convert a currency shorthand to full name.  returns a string
 def currencyclassify(cur, val, curvals, stacks=1):
 	# list of currency to always give a border to if their price is low
 	ah = [
 		"Splinter of Chayula", "Splinter of Xoph", "Splinter of Uul-Netol", "Splinter of Tul", "Splinter of Esh",
 		"Perandus Coin", "Orb of Fusing",
-		#"Silver Coin",
-		#"Blacksmith's Whetstone",
-		#"Armourer's Scrap",
-		#"Chromatic Orb",
+		"Silver Coin",
+		"Blacksmith's Whetstone",
+		"Armourer's Scrap",
+		"Chromatic Orb",
 		#"Alchemy Shard",
 		"Orb of Alteration",
 		#"Alteration Shard",
-		#"Orb of Augmentation",
-		#"Jeweller's Orb",
-		#"Orb of Transmutation",
-		#"Orb of Chance",
-		#"Glassblower's Bauble",
+		"Orb of Augmentation",
+		"Jeweller's Orb",
+		"Orb of Transmutation",
+		"Orb of Chance",
+		"Glassblower's Bauble",
 		"Horizon Orb",
 		#"Horizon Shard",
 		"Chaos Shard",
@@ -77,21 +78,13 @@ def currencyclassify(cur, val, curvals, stacks=1):
 		#"Binding Shard",
 		"Regal Orb",
 		#"Regal Shard",
-		#"Blessed Orb",
+		"Blessed Orb",
 		"Timeless Eternal Empire Splinter", "Timeless Karui Splinter", "Timeless Maraketh Splinter", "Timeless Templar Splinter", "Timeless Vaal Splinter"
-	]
-	# list of currencies to always make sound if their value is low
-	ahn = [
-		'Orb of Alchemy',
-		"Orb of Scouring",
-		"Cartographer's Chisel"
 	]
 	if cur in ["Mirror of Kalandra", "Mirror Shard"]:
 		tier = 'currency mirror'
 	elif ((cur in ah) or 'Fossil' in cur) and val < curvals['normal']:
 		tier = 'currency show'
-	elif cur in ahn and val < curvals['normal']:
-		tier = 'currency normal'
 	elif val >= curvals['extremely']:
 		tier = 'currency extremely high'
 	elif val >= curvals['very']:
@@ -105,8 +98,8 @@ def currencyclassify(cur, val, curvals, stacks=1):
 	elif val >= curvals['min']:
 		tier = 'currency very low'
 	else:
-		#tier = 'currency very low'
-		tier = 'hide'
+		tier = 'currency very low'
+		#tier = 'hide'
 
 	if stacks > 1:
 		return "$ {0}\": {{\"base\": \"{0}\", 'other': ['StackSize >= {2}'], \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier, stacks)
@@ -572,7 +565,7 @@ def divclassify(cur, val, curvals):
 	badcards = [
 		"The Twins", "Destined to Crumble", "The Rabid Rhoa", "Thunderous Skies", "The Carrion Crow", "The King's Blade", "The Inoculated", "Struck by Lightning", 'The Sigil', 'The Surgeon', 'Prosperity',
 		'The Metalsmith\'s Gift', 'The Road to Power', 'The Lord in Black', 'The Tyrant', 'Merciless Armament', 'The Jester', 'The Spoiled Prince', 'The Undisputed', 'Blessing of God', 'The Scarred Meadow',
-		'Rain Tempter', 'The Lover', 'Lantador\'s Lost Love', 'The Opulent', "Death"
+		'Rain Tempter', 'The Lover', 'Lantador\'s Lost Love', 'The Opulent', "Death", "The Mountain", "Vile Power"
 	]
 	if cur in ["House of Mirrors"]:
 		tier = 'currency mirror'
@@ -766,6 +759,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		helmenchants = {}
 
 		for key in keys:
+			break
 			if key in ['Currency', 'Fragment']:
 				request = f'https://poe.ninja/api/data/currencyoverview?league={leaguelookup[league]}&type={key}'
 			else:
@@ -795,10 +789,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 							rc = ii['receive']['count'] if ii['receive'] else 0
 							if pc + rc < mincount:
 								continue
-							if "Timeless" in ii['currencyTypeName']:
-								challenges[ii['currencyTypeName']] = ii['chaosEquivalent']
-							else:
-								fragments[ii['currencyTypeName']] = ii['chaosEquivalent']
+							fragments[ii['currencyTypeName']] = ii['chaosEquivalent']
 
 			elif key == 'SkillGem':
 				for i in data['lines']:
@@ -862,8 +853,8 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 					for ii in data[i]:
 						if ii['count'] < mincount:
 							continue
-#						incubator[ii['name']] = ii['chaosValue']
-						challenges[ii['name']] = ii['chaosValue']
+						incubator[ii['name']] = ii['chaosValue']
+#						challenges[ii['name']] = ii['chaosValue']
 
 			elif key == 'Essence':
 				for i in data:
@@ -907,9 +898,9 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		gen_gems(skillgem, league, curvals)
 		gen_div(divs, league, curvals)
 		gen_bases(bases, league, curvals)
-#		gen_incubator(incubator, league, curvals)
+		gen_incubator(incubator, league, curvals)
 		gen_essence(essences, league, curvals)
-		gen_challenge(challenges, league, curvals)
+#		gen_challenge(challenges, league, curvals)
 		gen_prophecy(prophecy, league, curvals)
 		gen_scarab(scarab, league, curvals)
 		gen_unique(uniques, league, curvals)

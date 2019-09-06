@@ -153,7 +153,7 @@ def main(leagues=('tmpstandard',)):
 					  'Hardcore': ("hc", "Hardcore", hcuniques, hcdivination, hccurrency, hcessence, hcbases, hcprophecy, hcscarab, hchelmenchant, hcfragment, hcincubator, hcchallenge, hcskillgem),
 					  'tmpstandard': ("t", "Temp Softcore", tuniques, tdivination, tcurrency, tessence, tbases, tprophecy, tscarab, thelmenchant, tfragment, tincubator, tchallenge, tskillgem),
 					  'tmphardcore': ("thc", "Temp Hardcore", thcuniques, thcdivination, thccurrency, thcessence, thcbases, thcprophecy, thcscarab, thchelmenchant, thcfragment, thcincubator, thcchallenge, thcskillgem)}
-	leveling = False  # toggle to show leveling items
+	leveling = True  # toggle to show leveling items
 	# prime our soundlist with known sounds so that git doesn't keep getting sounds added/deleted as prices change
 	soundlist = [f"{x}_challenge{y}" for x in [volume['low']] for y in range(1, 5)] +\
 				[f"{x}_challenge{y}" for x in [volume['medium']] for y in range(5, 11)] +\
@@ -182,7 +182,7 @@ def main(leagues=('tmpstandard',)):
 		buffer += gen_list(show.items, show.desc, soundlist)  # Always show these items
 		buffer += gen_list(hide.items, hide.desc, soundlist)  # Always hide these items
 		if lookup_leagues[i][0] not in ['st', 'hc']:
-#			buffer += gen_list(challenges.items, challenges.desc, soundlist)
+			buffer += gen_list(challenges.items, challenges.desc, soundlist)
 			buffer += gen_list(lookup_leagues[i][12].items, lookup_leagues[i][12].desc, soundlist)  # Autogen challenges
 		buffer += gen_list(labyrinth.items, labyrinth.desc, soundlist)
 		buffer += gen_list(lookup_leagues[i][4].items, lookup_leagues[i][4].desc, soundlist)  # Autogen currency values

@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 08/04/2019(m/d/y) 01:18:10 UTC from "tmpstandard" data
+# Created: 09/06/2019(m/d/y) 21:26:49 UTC from "tmpstandard" data
 
 desc = "Essence Autogen"
 
 # Base type : settings pair
 items = {
 	"0 Aberrant Fossil": {"base": "Aberrant Fossil", "class": "Currency", "type": "currency show"},
-	"0 Aetheric Fossil": {"base": "Aetheric Fossil", "class": "Currency", "type": "currency normal"},
+	"0 Aetheric Fossil": {"base": "Aetheric Fossil", "class": "Currency", "type": "currency show"},
 	"0 Bloodstained Fossil": {"base": "Bloodstained Fossil", "class": "Currency", "type": "currency extremely high"},
 	"0 Bound Fossil": {"base": "Bound Fossil", "class": "Currency", "type": "currency normal"},
 	"0 Corroded Fossil": {"base": "Corroded Fossil", "class": "Currency", "type": "currency show"},
@@ -33,7 +33,7 @@ items = {
 	"0 Encrusted Fossil": {"base": "Encrusted Fossil", "class": "Currency", "type": "currency show"},
 	"0 Essence of Delirium": {"base": "Essence of Delirium", "class": "Currency", "type": "currency normal"},
 	"0 Essence of Horror": {"base": "Essence of Horror", "class": "Currency", "type": "currency very high"},
-	"0 Essence of Hysteria": {"base": "Essence of Hysteria", "class": "Currency", "type": "currency high"},
+	"0 Essence of Hysteria": {"base": "Essence of Hysteria", "class": "Currency", "type": "currency normal"},
 	"0 Essence of Insanity": {"base": "Essence of Insanity", "class": "Currency", "type": "currency high"},
 	"0 Faceted Fossil": {"base": "Faceted Fossil", "class": "Currency", "type": "currency extremely high"},
 	"0 Fractured Fossil": {"base": "Fractured Fossil", "class": "Currency", "type": "currency extremely high"},
@@ -61,12 +61,15 @@ items = {
 	"0 Serrated Fossil": {"base": "Serrated Fossil", "class": "Currency", "type": "currency very high"},
 	"0 Shrieking Essence of Anger": {"base": "Shrieking Essence of Anger", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Contempt": {"base": "Shrieking Essence of Contempt", "class": "Currency", "type": "currency normal"},
-	"0 Shrieking Essence of Dread": {"base": "Shrieking Essence of Dread", "class": "Currency", "type": "currency very high"},
+	"0 Shrieking Essence of Dread": {"base": "Shrieking Essence of Dread", "class": "Currency", "type": "currency high"},
 	"0 Shrieking Essence of Envy": {"base": "Shrieking Essence of Envy", "class": "Currency", "type": "currency high"},
+	"0 Shrieking Essence of Fear": {"base": "Shrieking Essence of Fear", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Greed": {"base": "Shrieking Essence of Greed", "class": "Currency", "type": "currency normal"},
+	"0 Shrieking Essence of Hatred": {"base": "Shrieking Essence of Hatred", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Rage": {"base": "Shrieking Essence of Rage", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Scorn": {"base": "Shrieking Essence of Scorn", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Spite": {"base": "Shrieking Essence of Spite", "class": "Currency", "type": "currency normal"},
+	"0 Shrieking Essence of Wrath": {"base": "Shrieking Essence of Wrath", "class": "Currency", "type": "currency normal"},
 	"0 Shrieking Essence of Zeal": {"base": "Shrieking Essence of Zeal", "class": "Currency", "type": "currency high"},
 	"0 Shuddering Fossil": {"base": "Shuddering Fossil", "class": "Currency", "type": "currency high"},
 	"0 Tangled Fossil": {"base": "Tangled Fossil", "class": "Currency", "type": "currency very high"},

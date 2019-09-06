@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 08/04/2019(m/d/y) 01:18:10 UTC from "tmpstandard" data
+# Created: 09/06/2019(m/d/y) 21:26:50 UTC from "tmpstandard" data
 
 desc = "Fragment Autogen"
 
@@ -30,18 +30,28 @@ items = {
 	"1 Sacrifice at Dusk": {"base": "Sacrifice at Dusk", "class": "Map Fragments", "type": "fragment normal"},
 	"1 Sacrifice at Midnight": {"base": "Sacrifice at Midnight", "class": "Map Fragments", "type": "fragment normal"},
 	"1 Sacrifice at Noon": {"base": "Sacrifice at Noon", "class": "Map Fragments", "type": "fragment normal"},
+	"1 Timeless Eternal Emblem": {"base": "Timeless Eternal Emblem", "class": "Map Fragments", "type": "fragment high"},
+	"1 Timeless Eternal Empire Splinter": {"base": "Timeless Eternal Empire Splinter", "class": "Map Fragments", "type": "fragment normal"},
+	"1 Timeless Karui Emblem": {"base": "Timeless Karui Emblem", "class": "Map Fragments", "type": "fragment high"},
+	"1 Timeless Karui Splinter": {"base": "Timeless Karui Splinter", "class": "Map Fragments", "type": "fragment normal"},
+	"1 Timeless Maraketh Emblem": {"base": "Timeless Maraketh Emblem", "class": "Map Fragments", "type": "fragment extremely high"},
+	"1 Timeless Maraketh Splinter": {"base": "Timeless Maraketh Splinter", "class": "Map Fragments", "type": "fragment normal"},
+	"1 Timeless Templar Emblem": {"base": "Timeless Templar Emblem", "class": "Map Fragments", "type": "fragment very high"},
+	"1 Timeless Templar Splinter": {"base": "Timeless Templar Splinter", "class": "Map Fragments", "type": "fragment normal"},
+	"1 Timeless Vaal Emblem": {"base": "Timeless Vaal Emblem", "class": "Map Fragments", "type": "fragment very high"},
+	"1 Timeless Vaal Splinter": {"base": "Timeless Vaal Splinter", "class": "Map Fragments", "type": "fragment normal"},
 	"1 Tul's Breachstone": {"base": "Tul's Breachstone", "class": "Map Fragments", "type": "fragment normal"},
-	"1 Tul's Charged Breachstone": {"base": "Tul's Charged Breachstone", "class": "Map Fragments", "type": "fragment normal"},
+	"1 Tul's Charged Breachstone": {"base": "Tul's Charged Breachstone", "class": "Map Fragments", "type": "fragment high"},
 	"1 Tul's Enriched Breachstone": {"base": "Tul's Enriched Breachstone", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Tul's Pure Breachstone": {"base": "Tul's Pure Breachstone", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Uul-Netol's Breachstone": {"base": "Uul-Netol's Breachstone", "class": "Map Fragments", "type": "fragment normal"},
 	"1 Uul-Netol's Charged Breachstone": {"base": "Uul-Netol's Charged Breachstone", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Uul-Netol's Enriched Breachstone": {"base": "Uul-Netol's Enriched Breachstone", "class": "Map Fragments", "type": "fragment very high"},
-	"1 Uul-Netol's Pure Breachstone": {"base": "Uul-Netol's Pure Breachstone", "class": "Map Fragments", "type": "fragment very high"},
+	"1 Uul-Netol's Pure Breachstone": {"base": "Uul-Netol's Pure Breachstone", "class": "Map Fragments", "type": "fragment extremely high"},
 	"1 Volkuur's Key": {"base": "Volkuur's Key", "class": "Map Fragments", "type": "fragment high"},
 	"1 Xoph's Breachstone": {"base": "Xoph's Breachstone", "class": "Map Fragments", "type": "fragment normal"},
 	"1 Xoph's Charged Breachstone": {"base": "Xoph's Charged Breachstone", "class": "Map Fragments", "type": "fragment normal"},
-	"1 Xoph's Enriched Breachstone": {"base": "Xoph's Enriched Breachstone", "class": "Map Fragments", "type": "fragment very high"},
+	"1 Xoph's Enriched Breachstone": {"base": "Xoph's Enriched Breachstone", "class": "Map Fragments", "type": "fragment high"},
 	"1 Xoph's Pure Breachstone": {"base": "Xoph's Pure Breachstone", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Yriel's Key": {"base": "Yriel's Key", "class": "Map Fragments", "type": "fragment high"},
 }

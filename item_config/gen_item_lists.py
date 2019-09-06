@@ -59,32 +59,34 @@ bases = {
 			{'drop': 70, 'base': 'Claw', 'name': 'Terror Claw', 'tier': 3},  # Local Life Leech From Physical Damage (2.0)
 			{'drop': 72, 'base': 'Claw', 'name': 'Gemini Claw', 'tier': 1},  # Local Mana Gain Per Target (14), Local Life Gain Per Target (38)
 		],
-		"Caster|Dagger|Dex|Int|Melee|One|Weapon": [
+		"Dagger|Dex|Int|Melee|One|Weapon": [
 			{'drop': 1, 'base': 'Dagger', 'name': 'Glass Shank', 'tier': 4},  # Critical Strike Chance +(30)
 			{'drop': 5, 'base': 'Dagger', 'name': 'Skinning Knife', 'tier': 4},  # Critical Strike Chance +(30)
-			{'drop': 10, 'base': 'Dagger', 'name': 'Carving Knife', 'tier': 4},  # Critical Strike Chance +(30)
 			{'drop': 15, 'base': 'Dagger', 'name': 'Stiletto', 'tier': 4},  # Critical Strike Chance +(30)
-			{'drop': 20, 'base': 'Dagger', 'name': 'Boot Knife', 'tier': 4},  # Critical Strike Chance +(30)
-			{'drop': 24, 'base': 'Dagger', 'name': 'Copper Kris', 'tier': 3},  # Critical Strike Chance +(50)
-			{'drop': 28, 'base': 'Dagger', 'name': 'Skean', 'tier': 4},  # Critical Strike Chance +(30)
-			{'drop': 32, 'base': 'Dagger', 'name': 'Imp Dagger', 'tier': 4},  # Critical Strike Chance +(40)
 			{'drop': 35, 'base': 'Dagger', 'name': 'Flaying Knife', 'tier': 4},  # Critical Strike Chance +(30)
 			{'drop': 36, 'base': 'Dagger', 'name': 'Prong Dagger', 'tier': 4},  # Monster Base Block (4)
-			{'drop': 38, 'base': 'Dagger', 'name': 'Butcher Knife', 'tier': 4},  # Critical Strike Chance +(30)
 			{'drop': 41, 'base': 'Dagger', 'name': 'Poignard', 'tier': 4},  # Critical Strike Chance +(30)
-			{'drop': 44, 'base': 'Dagger', 'name': 'Boot Blade', 'tier': 4},  # Critical Strike Chance +(30)
-			{'drop': 47, 'base': 'Dagger', 'name': 'Golden Kris', 'tier': 3},  # Critical Strike Chance +(50)
-			{'drop': 50, 'base': 'Dagger', 'name': 'Royal Skean', 'tier': 4},  # Critical Strike Chance +(30)
-			{'drop': 53, 'base': 'Dagger', 'name': 'Fiend Dagger', 'tier': 4},  # Critical Strike Chance +(40)
 			{'drop': 55, 'base': 'Dagger', 'name': 'Trisula', 'tier': 4},  # Monster Base Block (4)
 			{'drop': 56, 'base': 'Dagger', 'name': 'Gutting Knife', 'tier': 4},  # Critical Strike Chance +(30)
-			{'drop': 58, 'base': 'Dagger', 'name': 'Slaughter Knife', 'tier': 4},  # Critical Strike Chance +(30)
 			{'drop': 60, 'base': 'Dagger', 'name': 'Ambusher', 'tier': 3},  # Critical Strike Chance +(30)
-			{'drop': 62, 'base': 'Dagger', 'name': 'Ezomyte Dagger', 'tier': 2},  # Critical Strike Chance +(30)
-			{'drop': 64, 'base': 'Dagger', 'name': 'Platinum Kris', 'tier': 1},  # Critical Strike Chance +(50)
-			{'drop': 66, 'base': 'Dagger', 'name': 'Imperial Skean', 'tier': 2},  # Critical Strike Chance +(30)
-			{'drop': 68, 'base': 'Dagger', 'name': 'Demon Dagger', 'tier': 1},  # Critical Strike Chance +(40)
 			{'drop': 70, 'base': 'Dagger', 'name': 'Sai', 'tier': 2},  # Monster Base Block (6)
+		],
+		"Caster|Rune Dagger|Dex|Int|Melee|One|Weapon": [
+			{'drop': 10, 'base': 'Rune Dagger', 'name': 'Carving Knife', 'tier': 4},  # Critical Strike Chance +(30)
+			{'drop': 20, 'base': 'Rune Dagger', 'name': 'Boot Knife', 'tier': 4},  # Critical Strike Chance +(30)
+			{'drop': 24, 'base': 'Rune Dagger', 'name': 'Copper Kris', 'tier': 3},  # Critical Strike Chance +(50)
+			{'drop': 28, 'base': 'Rune Dagger', 'name': 'Skean', 'tier': 4},  # Critical Strike Chance +(30)
+			{'drop': 32, 'base': 'Rune Dagger', 'name': 'Imp Dagger', 'tier': 4},  # Critical Strike Chance +(40)
+			{'drop': 38, 'base': 'Rune Dagger', 'name': 'Butcher Knife', 'tier': 4},  # Critical Strike Chance +(30)
+			{'drop': 44, 'base': 'Rune Dagger', 'name': 'Boot Blade', 'tier': 4},  # Critical Strike Chance +(30)
+			{'drop': 47, 'base': 'Rune Dagger', 'name': 'Golden Kris', 'tier': 3},  # Critical Strike Chance +(50)
+			{'drop': 50, 'base': 'Rune Dagger', 'name': 'Royal Skean', 'tier': 4},  # Critical Strike Chance +(30)
+			{'drop': 53, 'base': 'Rune Dagger', 'name': 'Fiend Dagger', 'tier': 4},  # Critical Strike Chance +(40)
+			{'drop': 58, 'base': 'Rune Dagger', 'name': 'Slaughter Knife', 'tier': 4},  # Critical Strike Chance +(30)
+			{'drop': 62, 'base': 'Rune Dagger', 'name': 'Ezomyte Dagger', 'tier': 2},  # Critical Strike Chance +(30)
+			{'drop': 64, 'base': 'Rune Dagger', 'name': 'Platinum Kris', 'tier': 1},  # Critical Strike Chance +(50)
+			{'drop': 66, 'base': 'Rune Dagger', 'name': 'Imperial Skean', 'tier': 2},  # Critical Strike Chance +(30)
+			{'drop': 68, 'base': 'Rune Dagger', 'name': 'Demon Dagger', 'tier': 1},  # Critical Strike Chance +(40)
 		],
 		"Dex|Melee|One|One Hand Axe|Str|Weapon": [
 			{'drop': 2, 'base': 'One Hand Axe', 'name': 'Rusted Hatchet', 'tier': 4},
@@ -194,28 +196,30 @@ bases = {
 			{'drop': 68, 'base': 'Sceptre', 'name': 'Void Sceptre', 'tier': 1},  # Elemental Damage +(40)
 			{'drop': 70, 'base': 'Sceptre', 'name': 'Sambar Sceptre', 'tier': 1},  # Reduce Enemy Elemental Resistance (6)
 		],
+		"Int|Melee|Warstaff|Str|Two|Weapon": [
+			{'drop': 18, 'base': 'Warstaff', 'name': 'Iron Staff', 'tier': 4},  # Staff Block (18)
+			{'drop': 23, 'base': 'Warstaff', 'name': 'Coiled Staff', 'tier': 4},  # Staff Block (20)
+			{'drop': 33, 'base': 'Warstaff', 'name': 'Vile Staff', 'tier': 4},  # Staff Block (18)
+			{'drop': 45, 'base': 'Warstaff', 'name': 'Military Staff', 'tier': 4},  # Staff Block (18)
+			{'drop': 49, 'base': 'Warstaff', 'name': 'Serpentine Staff', 'tier': 4},  # Staff Block (20)
+			{'drop': 55, 'base': 'Warstaff', 'name': 'Foul Staff', 'tier': 4},  # Staff Block (18)
+			{'drop': 62, 'base': 'Warstaff', 'name': 'Ezomyte Staff', 'tier': 4},  # Staff Block (18)
+			{'drop': 64, 'base': 'Warstaff', 'name': 'Maelström Staff', 'tier': 3},  # Staff Block (20)
+			{'drop': 68, 'base': 'Warstaff', 'name': 'Judgement Staff', 'tier': 2},  # Staff Block (18)
+		],
 		"Caster|Int|Melee|Stave|Str|Two|Weapon": [
 			{'drop': 4, 'base': 'Stave', 'name': 'Gnarled Branch', 'tier': 4},  # Staff Block (18)
 			{'drop': 9, 'base': 'Stave', 'name': 'Primitive Staff', 'tier': 4},  # Staff Block (18)
 			{'drop': 13, 'base': 'Stave', 'name': 'Long Staff', 'tier': 4},  # Staff Block (18)
-			{'drop': 18, 'base': 'Stave', 'name': 'Iron Staff', 'tier': 4},  # Staff Block (18)
-			{'drop': 23, 'base': 'Stave', 'name': 'Coiled Staff', 'tier': 4},  # Staff Block (20)
 			{'drop': 28, 'base': 'Stave', 'name': 'Royal Staff', 'tier': 4},  # Staff Block (18)
-			{'drop': 33, 'base': 'Stave', 'name': 'Vile Staff', 'tier': 4},  # Staff Block (18)
 			{'drop': 36, 'base': 'Stave', 'name': 'Crescent Staff', 'tier': 2},  # Critical Strike Chance +(80)
 			{'drop': 37, 'base': 'Stave', 'name': 'Woodful Staff', 'tier': 4},  # Staff Block (18)
 			{'drop': 41, 'base': 'Stave', 'name': 'Quarterstaff', 'tier': 4},  # Staff Block (18)
-			{'drop': 45, 'base': 'Stave', 'name': 'Military Staff', 'tier': 4},  # Staff Block (18)
-			{'drop': 49, 'base': 'Stave', 'name': 'Serpentine Staff', 'tier': 4},  # Staff Block (20)
 			{'drop': 52, 'base': 'Stave', 'name': 'Highborn Staff', 'tier': 4},  # Staff Block (18)
-			{'drop': 55, 'base': 'Stave', 'name': 'Foul Staff', 'tier': 4},  # Staff Block (18)
 			{'drop': 57, 'base': 'Stave', 'name': 'Moon Staff', 'tier': 2},  # Critical Strike Chance +(80)
 			{'drop': 58, 'base': 'Stave', 'name': 'Primordial Staff', 'tier': 4},  # Staff Block (18)
 			{'drop': 60, 'base': 'Stave', 'name': 'Lathi', 'tier': 4},  # Staff Block (18)
-			{'drop': 62, 'base': 'Stave', 'name': 'Ezomyte Staff', 'tier': 4},  # Staff Block (18)
-			{'drop': 64, 'base': 'Stave', 'name': 'Maelström Staff', 'tier': 3},  # Staff Block (20)
 			{'drop': 66, 'base': 'Stave', 'name': 'Imperial Staff', 'tier': 3},  # Staff Block (18)
-			{'drop': 68, 'base': 'Stave', 'name': 'Judgement Staff', 'tier': 2},  # Staff Block (18)
 			{'drop': 70, 'base': 'Stave', 'name': 'Eclipse Staff', 'tier': 1},  # Critical Strike Chance +(100)
 		],
 		"Dex|Melee|One|Thrusting One Hand Sword|Weapon": [
@@ -337,6 +341,7 @@ bases = {
 			{'drop': 65, 'base': 'Wand', 'name': 'Tornado Wand', 'tier': 2},  # Spell Damage +(35 to 39)
 			{'drop': 68, 'base': 'Wand', 'name': 'Prophecy Wand', 'tier': 2},  # Spell Damage +(36 to 40)
 			{'drop': 70, 'base': 'Wand', 'name': 'Profane Wand', 'tier': 1},  # Cast Speed +(14)
+			{'drop': 70, 'base': 'Wand', 'name': 'Convoking Wand', 'tier': 0},  # Can have minion modifiers
 		],
 	},
 	"Armour": {
@@ -842,6 +847,8 @@ bases = {
 			{'drop': 45, 'base': 'Ring', 'name': 'Unset Ring', 'tier': 1},  # Local Has (1) Sockets
 			{'drop': 78, 'base': 'Ring', 'name': 'Opal Ring', 'tier': 0},  # Elemental Damage +(15 to 25)
 			{'drop': 78, 'base': 'Ring', 'name': 'Steel Ring', 'tier': 0},  # Minimum Added Physical Damage (3 to 4), Maximum Added Physical Damage (10 to 14)
+			{'drop': 1, 'base': 'Ring', 'name': 'Vermillion Ring', 'tier': 0},  # ?
+			{'drop': 1, 'base': 'Ring', 'name': 'Cerulean Ring', 'tier': 0},  # ?
 		],
 		"Quiver": [
 			{'drop': 4, 'base': 'Quiver', 'name': 'Two-Point Arrow Quiver', 'tier': 4},  # (20-30)% increased Global Accuracy Rating
@@ -1046,6 +1053,7 @@ def genrareshighlighttiered():
 	base_mod_tiers = {
 		'Claw': [-1, 83, 73, 60],
 		'Dagger': [-1, 83, 73, 60],
+		'Rune Dagger': [-1, 83, 73, 60],
 		'One Hand Axe': [-1, 83, 73, 60],
 		'One Hand Mace': [-1, 83, 73, 60],
 		'One Hand Sword': [-1, 83, 73, 60],
@@ -1054,6 +1062,7 @@ def genrareshighlighttiered():
 		'Wand': [-1, 84, 73, 60],
 		'Bow': [-1, 83, 73, 60],
 		'Stave': [-1, 83, 73, 60],
+		'Warstaff': [-1, 83, 73, 60],
 		'Two Hand Axe': [-1, 83, 73, 60],
 		'Two Hand Mace': [-1, 83, 73, 60],
 		'Two Hand Sword': [-1, 83, 73, 60],

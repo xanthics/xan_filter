@@ -7,18 +7,18 @@ desc = "Magic items"
 
 # Mods for rare only
 def raremods():
-	modtoitem = {'Entombing': ["Dagger", "Sceptre", "Wand"],
-				 'Cremating': ["Dagger", "Sceptre", "Wand"],
-				 'Electrocuting': ["Dagger", "Sceptre", "Wand"],
-				 'Crystalising': ["Claw", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"],
-				 'Carbonising': ["Claw", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"],
-				 'Heart-Stopping': ["Claw", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"],
-				 'Malicious': ["Claw", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"],
-				 'Tul\'s': ["Sceptre", "Wand", "Stave"],
-				 'Xoph\'s': ["Sceptre", "Wand", "Stave"],
-				 'Esh\'s': ["Sceptre", "Wand", "Stave"],
-				 'Runic': ["Sceptre", "Wand", "Stave"],
-				 'of Unmaking': ["Sceptre", "Wand", "Stave"],
+	modtoitem = {'Entombing': ["Rune Dagger", "Dagger", "Sceptre", "Wand"],
+				 'Cremating': ["Rune Dagger", "Dagger", "Sceptre", "Wand"],
+				 'Electrocuting': ["Rune Dagger", "Dagger", "Sceptre", "Wand"],
+				 'Crystalising': ["Claw", "Rune Dagger", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Warstaff", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"],
+				 'Carbonising': ["Claw", "Rune Dagger", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Warstaff", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"],
+				 'Vapourising': ["Claw", "Rune Dagger", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Warstaff", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"],
+				 'Malicious': ["Claw", "Rune Dagger", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Warstaff", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"],
+				 'Tul\'s': ["Sceptre", "Wand", "Dagger", "Stave"],
+				 'Xoph\'s': ["Sceptre", "Wand", "Dagger", "Stave"],
+				 'Esh\'s': ["Sceptre", "Wand", "Dagger", "Stave"],
+				 'Runic': ["Sceptre", "Wand", "Dagger", "Stave"],
+				 'of Unmaking': ["Sceptre", "Wand", "Dagger", "Stave"],
 
 				 'Prime': ["Body Armour"],
 				 'Athlete\'s': ["Boots", "Gloves", "Amulet"],
@@ -67,16 +67,16 @@ def raremods():
 
 # mods for any rarity
 def magicmods():
-	modtoitem = {'Dictator\'s': ["Claw", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"],
-				 'Merciless': ["Claw", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"],
-				 'Flaring': ["Claw", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword", "Amulet"],
+	modtoitem = {'Dictator\'s': ["Claw", "Rune Dagger", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Warstaff", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"],
+				 'Merciless': ["Claw", "Rune Dagger", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Warstaff", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"],
+				 'Flaring': ["Claw", "Rune Dagger", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Warstaff", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword", "Amulet"],
 
 				 # Veiled mods so they can be eventually disabled when unlocked
 				 "Veiled": [
-					 "Claw", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword",
+					 "Claw", "Rune Dagger", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword",
 					 "Wand",
 					 "Bow",
-					 "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword",
+					 "Warstaff", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword",
 					 "Body Armour",
 					 "Boots",
 					 "Gloves",
@@ -89,10 +89,10 @@ def magicmods():
 				 ],
 
 				 "of the Veil": [
-					 "Claw", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword",
+					 "Claw", "Rune Dagger", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword",
 					 "Wand",
 					 "Bow",
-					 "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword",
+					 "Warstaff", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword",
 					 "Body Armour",
 					 "Boots",
 					 "Gloves",
@@ -132,7 +132,8 @@ def magicmods():
 
 				  "Citaqualotl's", "Guatelitzi's", "Matatl's", "of Puhuarte", "of Tacati", "Tacati's", "Topotante's", "Xopec's",
 				  "Brinerot", "Mutewind", "Redblade", "Betrayer\'s", "Deceiver\'s", "Turncoat\'s",
-				  "of Farrul", "of Craiceann", "of Fenumus", "of Saqawal",
+				  # Bestiary mods by themselves are not that useful
+				  # "of Farrul", "of Craiceann", "of Fenumus", "of Saqawal",
 				 ]
 
 	ret = {'0 Item Mod': {'other': ['HasExplicitMod "{}"'.format('" "'.join(modanyitem))], "type": "item mod"}}
@@ -150,7 +151,7 @@ def magicmods():
 	return ret
 
 
-# "Claw", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"
+# "Claw", "Rune Dagger", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Warstaff", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"
 # , "Body Armour", "Boots", "Gloves", "Helmet", "Shield"
 # , "Amulet", "Belt", "Ring"
 # , "Jewel", "Abyss Jewel"

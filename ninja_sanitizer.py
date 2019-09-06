@@ -63,9 +63,9 @@ def price_sanity(item_list, curvals):
 	lessthanvery = []
 	lessthanextremely = []
 
-	atleastnormal = ["Orb of Alteration", 'Orb of Alchemy', "Orb of Scouring", "Cartographer's Chisel", "Orb of Binding"]
-	atleasthigh = ["Ancient Orb", "Exalted Shard", "Master Cartographer's Sextant", "Journeyman Cartographer's Sextant", "Apprentice Cartographer's Sextant"]
-	atleastvery = ["Divine Orb", "Orb of Annulment", "Harbinger's Orb"]
+	atleastnormal = ['Orb of Alchemy', "Orb of Scouring", "Cartographer's Chisel", "Orb of Binding"]  # "Orb of Alteration",
+	atleasthigh = ["Ancient Orb", "Exalted Shard", "Master Cartographer's Sextant", "Journeyman Cartographer's Sextant", "Apprentice Cartographer's Sextant", "Divine Orb", "Orb of Annulment", "Harbinger's Orb"]
+	atleastvery = []
 	atleastextremely = ["Mirror of Kalandra", "Mirror Shard", "The Doctor", "House of Mirrors", "The Fiend", "The Nurse", "Alluring Bounty", "The Spark and the Flame", "Pride of the First Ones", "Beauty Through Death", "Immortal Resolve", "The Immortal"]
 
 	lookupmapping = [
