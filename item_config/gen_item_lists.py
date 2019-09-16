@@ -341,7 +341,7 @@ bases = {
 			{'drop': 65, 'base': 'Wand', 'name': 'Tornado Wand', 'tier': 2},  # Spell Damage +(35 to 39)
 			{'drop': 68, 'base': 'Wand', 'name': 'Prophecy Wand', 'tier': 2},  # Spell Damage +(36 to 40)
 			{'drop': 70, 'base': 'Wand', 'name': 'Profane Wand', 'tier': 1},  # Cast Speed +(14)
-			{'drop': 70, 'base': 'Wand', 'name': 'Convoking Wand', 'tier': 0},  # Can have minion modifiers
+			{'drop': 72, 'base': 'Wand', 'name': 'Convoking Wand', 'tier': 0},  # Can have minion modifiers
 		],
 	},
 	"Armour": {
@@ -847,8 +847,8 @@ bases = {
 			{'drop': 45, 'base': 'Ring', 'name': 'Unset Ring', 'tier': 1},  # Local Has (1) Sockets
 			{'drop': 78, 'base': 'Ring', 'name': 'Opal Ring', 'tier': 0},  # Elemental Damage +(15 to 25)
 			{'drop': 78, 'base': 'Ring', 'name': 'Steel Ring', 'tier': 0},  # Minimum Added Physical Damage (3 to 4), Maximum Added Physical Damage (10 to 14)
-			{'drop': 1, 'base': 'Ring', 'name': 'Vermillion Ring', 'tier': 0},  # ?
-			{'drop': 1, 'base': 'Ring', 'name': 'Cerulean Ring', 'tier': 0},  # ?
+			{'drop': 80, 'base': 'Ring', 'name': 'Vermillion Ring', 'tier': 0},  # (5 to 7)% increased maximum Life
+			{'drop': 80, 'base': 'Ring', 'name': 'Cerulean Ring', 'tier': 2},  # (8 to 10)% increased maximum Mana
 		],
 		"Quiver": [
 			{'drop': 4, 'base': 'Quiver', 'name': 'Two-Point Arrow Quiver', 'tier': 4},  # (20-30)% increased Global Accuracy Rating
@@ -1000,8 +1000,8 @@ def genrareshighlighttiered():
 	ret = {}
 	substrings = findsubstrings()
 	# Bases that are always shown when a certain ilvl threshold is reached.  Highlighting rules still followed
-	#alwaysshow = {'Boots': 73, 'Accessory': 68, 'Other': 1}
-	alwaysshow = {'Boots': 86, 'Accessory': 84, 'Other': 1}
+	alwaysshow = {'Armour': 73, 'Accessory': 68, 'Other': 1, 'Wand': 72}
+	#alwaysshow = {'Boots': 86, 'Accessory': 84, 'Other': 1}
 	# list of bases that should be ignored, even for always show
 	bad_bases = [
 		'Gold Amulet',
@@ -1029,15 +1029,15 @@ def genrareshighlighttiered():
 	type_penalty = {
 		'ElderItem': 0,
 		'ShaperItem': 0,
-#		'FracturedItem': 0,
-#		'SynthesisedItem': 0,
+		'FracturedItem': 0,
+		'SynthesisedItem': 0,
 		None: 2
 	}
 	type_pen_idx = [
 		'ElderItem',
 		'ShaperItem',
-#		'FracturedItem',
-#		'SynthesisedItem',
+		'FracturedItem',
+		'SynthesisedItem',
 		None
 	]
 	# maximum value to show for non-special drops

@@ -59,14 +59,15 @@ def currencyclassify(cur, val, curvals, stacks=1):
 		"Splinter of Chayula", "Splinter of Xoph", "Splinter of Uul-Netol", "Splinter of Tul", "Splinter of Esh",
 		"Perandus Coin", "Orb of Fusing",
 		"Silver Coin",
-		"Blacksmith's Whetstone",
-		"Armourer's Scrap",
+		#"Blacksmith's Whetstone",
+		#"Armourer's Scrap",
+		#"Portal Scroll",
 		"Chromatic Orb",
 		#"Alchemy Shard",
 		"Orb of Alteration",
 		#"Alteration Shard",
 		"Orb of Augmentation",
-		"Jeweller's Orb",
+		#"Jeweller's Orb",
 		"Orb of Transmutation",
 		"Orb of Chance",
 		"Glassblower's Bauble",
@@ -182,13 +183,13 @@ def challengeclassify(cur, val, curvals, base, stacks=1):
 
 	if stacks > 1:
 		return f"$ {cur}\": {{\"base\": \"{cur}\", 'other': ['StackSize >= {stacks}', '{other}'], \"class\": \"{base}\", \"type\": \"{tier}\"}}"
-	return f"1 {cur}\": {{\"base\": \"{cur}\", 'other': ['{other}'], \"class\": \"{base}\", \"type\": \"{tier}\"}}"
+	return f"10 {cur}\": {{\"base\": \"{cur}\", 'other': ['{other}'], \"class\": \"{base}\", \"type\": \"{tier}\"}}"
 
 
 # given a league grouped list of currency determine all unique entries and then output for each league
 def gen_challenge(challenge_list, league, curvals):
 
-	stackable = ['Splinter']
+	stackable = ['Oil']
 
 	#	substringunique = find_substrings(currency_list)
 
@@ -559,7 +560,7 @@ def divclassify(cur, val, curvals):
 		"The Queen", "The Undaunted", "The Mayor", "The Endless Darkness", "The Professor", "The Valkyrie", "Humility", "Time-Lost Relic", "Jack in the Box", "The Twilight Moon", "Arrogance of the Vaal", "Vanity", "The Dreamland",
 		"The Nurse", "The Immortal", "Immortal Resolve", "Beauty Through Death", "The Dragon's Heart", "The Iron Bard", "Wealth and Power", "The Celestial Justicar", "The Enlightened", "The Celestial Stone", "The Sacrifice",
 		"The Porcupine", "Last Hope", "The Artist", "The Dapper Prodigy", "Sambodhi's Vow", "Buried Treasure", "The Jeweller's Boon", "Bowyer's Dream", "Emperor of Purity", "The Chains that Bind", "The Ethereal",
-		"Perfection", "The Warlord", "The Dark Mage", "The Valley of Steel Boxes", "Lingering Remnants", "The Realm", "The Obscured", "The Price of Protection", "Imperial Legacy", "The Flora's Gift",
+		"Perfection", "The Warlord", "The Dark Mage", "The Valley of Steel Boxes", "Lingering Remnants", "The Realm", "The Obscured", "The Price of Protection", "Imperial Legacy", "The Flora's Gift", 'The Heroic Shot'
 	]
 	# Cards that will never be displayed
 	badcards = [
@@ -706,9 +707,10 @@ def gen_bases(bases_list, league, curvals):
 
 # Entry point for getting price data from poe.ninja
 def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
-	#leagues = ["Synthesis Event (SRE001)"]
+#	leagues = ["Blight"]
 
 	keys = [
+		'Oil',
 		'SkillGem',
 		'Currency',
 		'Fragment',
@@ -732,8 +734,8 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 	leaguelookup = {
 		"Standard": "Standard",
 		"Hardcore": "Hardcore",
-		"tmpstandard": "Legion",
-		"tmphardcore": "Hardcore Legion",
+		"tmpstandard": "Blight",
+		"tmphardcore": "Hardcore Blight",
 	}
 
 	os.environ['NO_PROXY'] = 'poe.ninja'
@@ -759,7 +761,6 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		helmenchants = {}
 
 		for key in keys:
-			break
 			if key in ['Currency', 'Fragment']:
 				request = f'https://poe.ninja/api/data/currencyoverview?league={leaguelookup[league]}&type={key}'
 			else:
@@ -841,6 +842,13 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 							continue
 						prophecy[ii['name']] = ii['chaosValue']
 
+			elif key == 'Oil':
+				for i in data:
+					for ii in data[i]:
+						if ii['count'] < mincount:
+							continue
+						challenges[ii['name']] = ii['chaosValue']
+
 			elif key == 'DivinationCard':
 				for i in data:
 					for ii in data[i]:
@@ -900,7 +908,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		gen_bases(bases, league, curvals)
 		gen_incubator(incubator, league, curvals)
 		gen_essence(essences, league, curvals)
-#		gen_challenge(challenges, league, curvals)
+		gen_challenge(challenges, league, curvals)
 		gen_prophecy(prophecy, league, curvals)
 		gen_scarab(scarab, league, curvals)
 		gen_unique(uniques, league, curvals)

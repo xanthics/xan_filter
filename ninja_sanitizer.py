@@ -5,6 +5,7 @@
 # Enforces certain rules on prices returned from poe.ninja, such as divinations being capped at a fraction of the price of their output item (I'm looking at you "The Witch" and "Kiara's Determination")
 # Also adds missing values
 
+from collections import defaultdict
 from item_config.gen_item_lists import highbases
 from ninja_defaults import currencydefaults, essencedefaults, prophecydefaults, divdefaults, uniquedefaults, scarabdefaults, helmenchantsdefaults, basedefaults, fragmentdefaults, challengesdefaults, cardlookup, knowncards
 
@@ -66,7 +67,7 @@ def price_sanity(item_list, curvals):
 	atleastnormal = ['Orb of Alchemy', "Orb of Scouring", "Cartographer's Chisel", "Orb of Binding"]  # "Orb of Alteration",
 	atleasthigh = ["Ancient Orb", "Exalted Shard", "Master Cartographer's Sextant", "Journeyman Cartographer's Sextant", "Apprentice Cartographer's Sextant", "Divine Orb", "Orb of Annulment", "Harbinger's Orb"]
 	atleastvery = []
-	atleastextremely = ["Mirror of Kalandra", "Mirror Shard", "The Doctor", "House of Mirrors", "The Fiend", "The Nurse", "Alluring Bounty", "The Spark and the Flame", "Pride of the First Ones", "Beauty Through Death", "Immortal Resolve", "The Immortal"]
+	atleastextremely = ["Mirror of Kalandra", "Mirror Shard", "The Doctor", "House of Mirrors", "The Fiend", "The Nurse", "Alluring Bounty", "The Spark and the Flame", "Pride of the First Ones", "Beauty Through Death", "Immortal Resolve", "The Immortal", "The Demon"]
 
 	lookupmapping = [
 		(lessthanmin, curvals['min'] * .95, lessthan),
@@ -180,9 +181,10 @@ def compact_uniques(unique_full_list, curvals):
 		# Beyond League
 		"Edge of Madness", "The Dark Seer", "The Harvest",
 		# Bloodlines League
-		"Ngamahu's Sign", "Tasalio's Sign", "Tasalio's Sign"
+		"Ngamahu's Sign", "Tasalio's Sign", "Tasalio's Sign",
+		# Blight League
+		"Badge of the Brotherhood", "Breathstealer", "Cowl of the Ceraunophile", "Cowl of the Cryophile", "Cowl of the Thermophile", "Icefang", "Machina Mitts", "Rotting Legion", "Sporeguard", "The Stampede", "Venopuncture"
 	]
-	from collections import defaultdict
 	unique_list = defaultdict(list)
 	unique_list_limited = defaultdict(list)
 	unique_clean = {}
