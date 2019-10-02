@@ -68,7 +68,7 @@ def gen_list_compact(items, desc, soundlist):
 				l[v] = {}
 
 			# Prophecy and BaseType will not appear in the same rule (personal choice)
-			# have a flag that is 0(neither), 1(Base), or 2(prophecy)
+			# have a flag that is 0(neither), 1(Base), 2(prophecy), 3(enchant)
 			c = ''
 			f = ''
 			o = ''
@@ -86,6 +86,9 @@ def gen_list_compact(items, desc, soundlist):
 			elif 'enchant' in s:
 				b = s['enchant']
 				flag = 3
+			elif 'baseexact' in s:
+				b = s['baseexact']
+				flag = 4
 			if 'class' in s:
 				c = s['class']
 			if 'other' in s:
@@ -111,9 +114,11 @@ def gen_list_compact(items, desc, soundlist):
 			if flag == '1':
 				b += "\n\tBaseType \"{}\"".format('" "'.join(sorted(l[i][ii])))
 			elif flag == '2':
-				b += "\n\tProphecy \"{}\"".format('" "'.join(sorted(l[i][ii])))
+				b += "\n\tProphecy == \"{}\"".format('" "'.join(sorted(l[i][ii])))
 			elif flag == '3':
-				b += "\n\tHasEnchantment \"{}\"".format('" "'.join(sorted(l[i][ii])))
+				b += "\n\tHasEnchantment == \"{}\"".format('" "'.join(sorted(l[i][ii])))
+			elif flag == '4':
+				b += "\n\tBaseType == \"{}\"".format('" "'.join(sorted(l[i][ii])))
 			if c:
 				b += "\n\tClass \"{}\"".format(c)
 			if o:

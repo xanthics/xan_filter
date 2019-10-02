@@ -103,8 +103,8 @@ def currencyclassify(cur, val, curvals, stacks=1):
 		#tier = 'hide'
 
 	if stacks > 1:
-		return "$ {0}\": {{\"base\": \"{0}\", 'other': ['StackSize >= {2}'], \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier, stacks)
-	return "1 {0}\": {{\"base\": \"{0}\", \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier)
+		return "$ {0}\": {{\"baseexact\": \"{0}\", 'other': ['StackSize >= {2}'], \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier, stacks)
+	return "1 {0}\": {{\"baseexact\": \"{0}\", \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier)
 
 
 # given a league grouped list of currency determine all unique entries and then output for each league
@@ -182,8 +182,8 @@ def challengeclassify(cur, val, curvals, base, stacks=1):
 		other = 'CustomAlertSound "{}_challenge{}.wav"'.format(volume['low'], randint(1, 4))
 
 	if stacks > 1:
-		return f"$ {cur}\": {{\"base\": \"{cur}\", 'other': ['StackSize >= {stacks}', '{other}'], \"class\": \"{base}\", \"type\": \"{tier}\"}}"
-	return f"10 {cur}\": {{\"base\": \"{cur}\", 'other': ['{other}'], \"class\": \"{base}\", \"type\": \"{tier}\"}}"
+		return f"$ {cur}\": {{\"baseexact\": \"{cur}\", 'other': ['StackSize >= {stacks}', '{other}'], \"class\": \"{base}\", \"type\": \"{tier}\"}}"
+	return f"10 {cur}\": {{\"baseexact\": \"{cur}\", 'other': ['{other}'], \"class\": \"{base}\", \"type\": \"{tier}\"}}"
 
 
 # given a league grouped list of currency determine all unique entries and then output for each league
@@ -243,17 +243,13 @@ def fragmentclassify(cur, val, curvals, stacks=1):
 		tier = 'fragment normal'
 
 	if stacks > 1:
-		return "$ {0}\": {{\"base\": \"{0}\", 'other': ['StackSize >= {2}'], \"class\": \"Map Fragments\", \"type\": \"{1}\"}}".format(cur, tier, stacks)
-	return "1 {0}\": {{\"base\": \"{0}\", \"class\": \"Map Fragments\", \"type\": \"{1}\"}}".format(cur, tier)
+		return "$ {0}\": {{\"baseexact\": \"{0}\", 'other': ['StackSize >= {2}'], \"class\": \"Map Fragments\", \"type\": \"{1}\"}}".format(cur, tier, stacks)
+	return "1 {0}\": {{\"baseexact\": \"{0}\", \"class\": \"Map Fragments\", \"type\": \"{1}\"}}".format(cur, tier)
 
 
 # given a league grouped list of currency determine all unique entries and then output for each league
 def gen_fragments(fragment_list, league, curvals):
-
 	stackable = []
-
-	#	substringunique = find_substrings(currency_list)
-
 	curval = '''{}\ndesc = "Fragment Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
 
 	for frag in sorted(fragment_list):
@@ -298,7 +294,7 @@ def incubatorclassify(cur, val, curvals):
 	else:
 		return
 
-	return "0 {0}\": {{\"base\": \"{0}\", \"class\": \"Incubator\", \"type\": \"{1}\"}}".format(cur, tier)
+	return "0 {0}\": {{\"baseexact\": \"{0}\", \"class\": \"Incubator\", \"type\": \"{1}\"}}".format(cur, tier)
 
 
 # given a league grouped list of essences determine all unique entries and then output for each league
@@ -334,7 +330,7 @@ def essenceclassify(cur, val, curvals):
 	else:
 		return
 
-	return "0 {0}\": {{\"base\": \"{0}\", \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier)
+	return "0 {0}\": {{\"baseexact\": \"{0}\", \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier)
 
 
 # given a league grouped list of essences determine all unique entries and then output for each league
@@ -385,16 +381,8 @@ def gen_prophecy(prophecy_list, league, curvals):
 		if invalid in prophecy_list:
 			del prophecy_list[invalid]
 
-	substringprophecy = find_substrings(prophecy_list)
-
 	curval = '''{}\ndesc = "Prophecy Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
 
-	for c, cur in enumerate(substringprophecy):
-		retstr = prophecyclassify(cur, prophecy_list[cur], curvals)
-		if not retstr:
-			retstr = '{0}": {{"prophecy": "{0}", "class": "Currency", "type": "currency very low"}}'.format(cur)
-		curval += '\t"{:03d} {},\n'.format(c, retstr)
-		del prophecy_list[cur]
 	for cur in sorted(prophecy_list.keys()):
 		retstr = prophecyclassify(cur, prophecy_list[cur], curvals)
 		if retstr:
@@ -421,7 +409,7 @@ def gemclassify(cur, val, curvals, level, qual, corrupt):
 	else:
 		return
 
-	return f'{cur}\": {{\"base\": \"{cur}\", \"class\": \"Gems\", "other": ["GemLevel >= {level}", "Quality >= {qual}", "Corrupted {corrupt}"], \"type\": \"{tier}\"}}'
+	return f'{cur}\": {{\"baseexact\": \"{cur}\", \"class\": \"Gems\", "other": ["GemLevel >= {level}", "Quality >= {qual}", "Corrupted {corrupt}"], \"type\": \"{tier}\"}}'
 
 
 # given a league grouped list of prophecies determine all unique entries and then output for each league
@@ -432,19 +420,6 @@ def gen_gems(gem_list, league, curvals):
 	for cl, level in enumerate(sorted(gem_list, reverse=True)):
 		for cq, qual in enumerate(sorted(gem_list[level], reverse=True)):
 			for corrupt in gem_list[level][qual]:
-				substringgem = find_substrings(gem_list[level][qual][corrupt])
-
-				for c, cur in enumerate(substringgem):
-					retstr = gemclassify(cur, gem_list[level][qual][corrupt][cur], curvals, level, qual, corrupt)
-					if not retstr:
-						if level > 1 and qual < 10:
-							retstr = f'{cur}": {{"base": "{cur}", "class": "Gems", "other": ["GemLevel >= {level}", "Quality >= {qual}", "Corrupted {corrupt}"], "type": "gem low"}}'
-						elif qual >= 10:
-							retstr = f'{cur}": {{"base": "{cur}", "class": "Gems", "other": ["GemLevel >= {level}", "Quality >= {qual}", "Corrupted {corrupt}"], "type": "gem normal"}}'
-						else:
-							retstr = f'{cur}": {{"base": "{cur}", "class": "Gems", "other": ["GemLevel >= {level}", "Quality >= {qual}", "Corrupted {corrupt}"], "type": "hide"}}'
-					curval += f'\t"{cl}{cq} {corrupt} {c:03d} {retstr},\n'
-					del gem_list[level][qual][corrupt][cur]
 				for cur in sorted(gem_list[level][qual][corrupt].keys()):
 					retstr = gemclassify(cur, gem_list[level][qual][corrupt][cur], curvals, level, qual, corrupt)
 					if retstr:
@@ -472,21 +447,13 @@ def scarabclassify(cur, val, curvals):
 	else:
 		return
 
-	return "{0}\": {{\"base\": \"{0}\", \"class\": \"Map Fragments\", \"type\": \"{1}\"}}".format(cur, tier)
+	return "{0}\": {{\"baseexact\": \"{0}\", \"class\": \"Map Fragments\", \"type\": \"{1}\"}}".format(cur, tier)
 
 
 # given a league grouped list of prophecies determine all unique entries and then output for each league
 def gen_scarab(scarab_list, league, curvals):
-	substringscarab = find_substrings(scarab_list)
-
 	curval = '''{}\ndesc = "scarab Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
 
-	for c, cur in enumerate(substringscarab):
-		retstr = scarabclassify(cur, scarab_list[cur], curvals)
-		if not retstr:
-			retstr = '{0}": {{"base": "{0}", "class": "Map Fragments", "type": "fragment normal"}}'.format(cur)
-		curval += '\t"{:03d} {},\n'.format(c, retstr)
-		del scarab_list[cur]
 	for cur in sorted(scarab_list.keys()):
 		retstr = scarabclassify(cur, scarab_list[cur], curvals)
 		if retstr:
@@ -515,22 +482,8 @@ def enchantclassify(cur, val, curvals):
 
 # given a league grouped list of prophecies determine all unique entries and then output for each league
 def gen_enchants(helmenchant_list, league, curvals):
-	substringhelmenchant = find_substrings(helmenchant_list)
-
 	curval = '''{}\ndesc = "Helm Enchant Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
 
-	for c, cur in enumerate(substringhelmenchant):
-		retstr = enchantclassify(cur, helmenchant_list[cur], curvals)
-		if not retstr:
-			retstr = []
-			for val in helmnames[cur]:
-				retstr.append('{0}": {{"enchant": "{0}", "type": "ignore"}}'.format(val))
-		if len(retstr) > 1:
-			for count, val in enumerate(retstr):
-				curval += f'\t"1 {count} {val},\n'
-		else:
-			curval += f'\t"{c:03d} {retstr[0]},\n'
-		del helmenchant_list[cur]
 	for cur in sorted(helmenchant_list.keys()):
 		retstr = enchantclassify(cur, helmenchant_list[cur], curvals)
 		if retstr:
@@ -585,20 +538,12 @@ def divclassify(cur, val, curvals):
 	else:
 		return
 
-	return '{0}": {{"base": "{0}", "class": "Divination Card", "type": "{1}"}}'.format(cur, tier)
+	return '{0}": {{"baseexact": "{0}", "class": "Divination Card", "type": "{1}"}}'.format(cur, tier)
 
 
 def gen_div(div_list, league, curvals):
-	substringcards = find_substrings(div_list)
-
 	curval = '{}\ndesc = "Divination Card"\n\n# Base type : settings pair\nitems = {{\n'.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
 
-	for c, cur in enumerate(substringcards):
-		retstr = divclassify(cur, div_list[cur], curvals)
-		if not retstr:
-			retstr = '{0}": {{"base": "{0}", "class": "Divination Card", "type": "divination normal"}}'.format(cur)
-		curval += '\t"{:03d} {},\n'.format(c, retstr)
-		del div_list[cur]
 	for cur in sorted(div_list.keys()):
 		retstr = divclassify(cur, div_list[cur], curvals)
 		if retstr:
@@ -628,18 +573,14 @@ def uniqueclassify(cur, val, curvals):
 	else:
 		return
 
-	return "{0}\": {{\"base\": \"{0}\", \"type\": \"{1}\"}}".format(cur, tier)
+	return "{0}\": {{\"baseexact\": \"{0}\", \"type\": \"{1}\"}}".format(cur, tier)
 
 
 # Given a list of all uniques, reformat in to a base:value list
 def gen_unique(unique_list, league, curvals):
-#	unique_list = compact_uniques(unique_full_list)
-
 	for invalid in ['Torture Chamber Map', 'Catacombs Map']:
 		if invalid in unique_list:
 			del unique_list[invalid]
-
-	substringunique = find_substrings(unique_list)
 
 	curval = '{}\ndesc = "Unique"\n\n# Base type : settings pair\nitems = {{\n'.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
 
@@ -647,12 +588,6 @@ def gen_unique(unique_list, league, curvals):
 	if retstr:
 		curval += '\t"000 {},\n'.format(retstr.replace('"base"', '"other": ["ItemLevel <= 60"], "base"'))
 
-	for c, cur in enumerate(substringunique, 1):
-		retstr = uniqueclassify(cur, unique_list[cur], curvals)
-		if not retstr:
-			retstr = '{0}": {{"base": "{0}", "type": "unique normal"}}'.format(cur)
-		curval += '\t"{:03d} {},\n'.format(c, retstr)
-		del unique_list[cur]
 	for cur in sorted(unique_list.keys()):
 		retstr = uniqueclassify(cur, unique_list[cur], curvals)
 		if retstr:
@@ -696,9 +631,9 @@ def gen_bases(bases_list, league, curvals):
 						value = baseclassify(bases_list[level][variant][baseType], curvals)
 						if value:
 							if level == 86:
-								outbuff += '\t"{4} {2}{0}": {{"base": "{0}", "other": [{1}"ItemLevel >= {3}"], "type": "{5}"}},\n'.format(baseType, '"{}Item True", '.format(variant) if variant else '', variant + ' ' if variant else '', level, count, value)
+								outbuff += '\t"{4} {2}{0}": {{"baseexact": "{0}", "other": [{1}"ItemLevel >= {3}"], "type": "{5}"}},\n'.format(baseType, '"{}Item True", '.format(variant) if variant else '', variant + ' ' if variant else '', level, count, value)
 							else:
-								outbuff += '\t"{4} {2}{0}": {{"base": "{0}", "other": [{1}"ItemLevel {3}"], "type": "{5}"}},\n'.format(baseType, '"{}Item True", '.format(variant) if variant else '', variant + ' ' if variant else '', level, count, value)
+								outbuff += '\t"{4} {2}{0}": {{"baseexact": "{0}", "other": [{1}"ItemLevel {3}"], "type": "{5}"}},\n'.format(baseType, '"{}Item True", '.format(variant) if variant else '', variant + ' ' if variant else '', level, count, value)
 			count += 1
 		outbuff += '\n}\n'
 	with open('auto_gen\\{}bases.py'.format(name), 'w', encoding='utf-8') as f:
@@ -798,6 +733,8 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 						continue
 					if i['name'] in ['Enlighten Support', 'Enhance Support', 'Empower Support']:
 						i['gemQuality'] = 0
+					if i['name'] in ['Deathmark', 'Shockwave'] and 'Support' not in i['name']:
+						i['name'] += ' Support'
 					if i['gemLevel'] not in skillgem:
 						skillgem[i['gemLevel']] = {}
 					if i['gemQuality'] not in skillgem[i['gemLevel']]:

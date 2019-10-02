@@ -909,8 +909,6 @@ def findsubstrings():
 # alwayshighlight is a list of bases to always highlight while leveling regardless of drop level (Up to maxlevel)
 def genraresleveling(flags='All', overlevel=3, maxlevel=67, alwayshighlight=('Accessory',)):
 	ret = {}
-	substrings = findsubstrings()
-
 	for category in bases:
 		for vals in bases[category]:
 			f = vals.split('|')
@@ -919,26 +917,17 @@ def genraresleveling(flags='All', overlevel=3, maxlevel=67, alwayshighlight=('Ac
 				for i in range(l):
 					cur = bases[category][vals][i]
 					if cur['drop'] <= maxlevel:
-						ret[cur['name']] = {"base": cur['name'], "other": ["ItemLevel <= {}".format(maxlevel)], "type": "levelling rare normal"}
-						if cur['name'] in substrings:
-							ret[cur['name']]['class'] = cur['base']
-							ret[cur['name']]['other'].append('DropLevel {}'.format(cur['drop']))
+						ret[cur['name']] = {"baseexact": cur['name'], "other": ["ItemLevel <= {}".format(maxlevel)], "type": "levelling rare normal"}
 			elif flags == 'All' or set(f).intersection(set(flags)) or set(f).intersection(set(alwayshighlight)):
 				for i in range(l-1):
 					cur = bases[category][vals][i]
 					if cur['drop'] <= maxlevel:
 						cap = bases[category][vals][i+1]['drop'] + overlevel
 						cap = cap if cap < maxlevel else maxlevel
-						ret[cur['name']] = {"base": cur['name'], "other": ["ItemLevel <= {}".format(cap)], "type": "levelling rare normal"}
-						if cur['name'] in substrings:
-							ret[cur['name']]['class'] = cur['base']
-							ret[cur['name']]['other'].append('DropLevel {}'.format(cur['drop']))
+						ret[cur['name']] = {"baseexact": cur['name'], "other": ["ItemLevel <= {}".format(cap)], "type": "levelling rare normal"}
 				cur = bases[category][vals][l-1]
 				if cur['drop'] <= maxlevel:
-					ret[cur['name']] = {"base": cur['name'], "other": ["ItemLevel <= {}".format(maxlevel)], "type": "levelling rare normal"}
-					if cur['name'] in substrings:
-						ret[cur['name']]['class'] = cur['base']
-						ret[cur['name']]['other'].append('DropLevel {}'.format(cur['drop']))
+					ret[cur['name']] = {"baseexact": cur['name'], "other": ["ItemLevel <= {}".format(maxlevel)], "type": "levelling rare normal"}
 	return ret
 
 
@@ -954,8 +943,6 @@ def genraresleveling(flags='All', overlevel=3, maxlevel=67, alwayshighlight=('Ac
 # alwayshighlight is a list of bases to always highlight while leveling regardless of drop level (Up to maxlevel)
 def gennonrareleveling(flags='All', overlevel=0, maxlevel=35, alwayshighlight=()):
 	ret = {}
-	substrings = findsubstrings()
-
 	for category in bases:
 		for vals in bases[category]:
 			f = vals.split('|')
@@ -964,26 +951,17 @@ def gennonrareleveling(flags='All', overlevel=0, maxlevel=35, alwayshighlight=()
 				for i in range(l):
 					cur = bases[category][vals][i]
 					if cur['drop'] <= maxlevel:
-						ret[cur['name']] = {"base": cur['name'], "other": ["Rarity <= Normal", "ItemLevel <= {}".format(maxlevel)], "type": "leveling low"}
-						if cur['name'] in substrings:
-							ret[cur['name']]['class'] = cur['base']
-							ret[cur['name']]['other'].append('DropLevel {}'.format(cur['drop']))
+						ret[cur['name']] = {"baseexact": cur['name'], "other": ["Rarity <= Normal", "ItemLevel <= {}".format(maxlevel)], "type": "leveling low"}
 			elif flags == 'All' or set(f).intersection(set(flags)) or set(f).intersection(set(alwayshighlight)):
 				for i in range(l-1):
 					cur = bases[category][vals][i]
 					if cur['drop'] <= maxlevel:
 						cap = bases[category][vals][i+1]['drop'] + overlevel
 						cap = cap if cap < maxlevel else maxlevel
-						ret[cur['name']] = {"base": cur['name'], "other": ["Rarity <= Normal", "ItemLevel <= {}".format(cap)], "type": "leveling low"}
-						if cur['name'] in substrings:
-							ret[cur['name']]['class'] = cur['base']
-							ret[cur['name']]['other'].append('DropLevel {}'.format(cur['drop']))
+						ret[cur['name']] = {"baseexact": cur['name'], "other": ["Rarity <= Normal", "ItemLevel <= {}".format(cap)], "type": "leveling low"}
 				cur = bases[category][vals][l-1]
 				if cur['drop'] <= maxlevel:
-					ret[cur['name']] = {"base": cur['name'], "other": ["Rarity <= Normal", "ItemLevel <= {}".format(maxlevel)], "type": "leveling low"}
-					if cur['name'] in substrings:
-						ret[cur['name']]['class'] = cur['base']
-						ret[cur['name']]['other'].append('DropLevel {}'.format(cur['drop']))
+					ret[cur['name']] = {"baseexact": cur['name'], "other": ["Rarity <= Normal", "ItemLevel <= {}".format(maxlevel)], "type": "leveling low"}
 	return ret
 
 
@@ -998,10 +976,9 @@ def genrareshighlighttiered():
 				return st[sv]
 
 	ret = {}
-	substrings = findsubstrings()
 	# Bases that are always shown when a certain ilvl threshold is reached.  Highlighting rules still followed
-	alwaysshow = {'Armour': 73, 'Accessory': 68, 'Other': 1, 'Wand': 72}
-	#alwaysshow = {'Boots': 86, 'Accessory': 84, 'Other': 1}
+	#alwaysshow = {'Armour': 73, 'Accessory': 68, 'Other': 1, 'Wand': 72}
+	alwaysshow = {'Boots': 86, 'Accessory': 84, 'Other': 1}
 	# list of bases that should be ignored, even for always show
 	bad_bases = [
 		'Gold Amulet',
@@ -1122,10 +1099,7 @@ def genrareshighlighttiered():
 						idx = '{} {} {}'.format(vstr, cur['name'], typ)
 						if hl == phl:
 							del ret[pidx]
-						ret[idx] = {"base": cur['name'], "other": ["ItemLevel >= {}".format(tier)], "type": hl}
-						if cur['name'] in substrings:
-							ret[idx]['class'] = cur['base']
-							ret[idx]['other'].append('DropLevel {}'.format(cur['drop']))
+						ret[idx] = {"baseexact": cur['name'], "other": ["ItemLevel >= {}".format(tier)], "type": hl}
 						if typ:
 							ret[idx]['other'].append('{} True'.format(typ))
 						# if item is 'always show' with rules, and item type is normal, and tier(ilvl) = show ilvl, break out of loop as we don't need lower tiers
