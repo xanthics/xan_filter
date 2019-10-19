@@ -6,11 +6,11 @@
 import os
 import requests
 from datetime import datetime
-from collections import defaultdict
 from theme_config.min_w_highlight import volume
 from item_config.gen_item_lists import highbases
 from ninja_helm_lookup import helmnames
 from ninja_sanitizer import fixallmissing, fixmissingbases
+from auto_gen import always_highlight
 
 header = '''#!/usr/bin/python
 # -*- coding: utf-8 -*-
@@ -57,31 +57,9 @@ def currencyclassify(cur, val, curvals, stacks=1):
 	# list of currency to always give a border to if their price is low
 	ah = [
 		"Splinter of Chayula", "Splinter of Xoph", "Splinter of Uul-Netol", "Splinter of Tul", "Splinter of Esh",
-		"Perandus Coin", "Orb of Fusing",
-		"Silver Coin",
-		#"Blacksmith's Whetstone",
-		#"Armourer's Scrap",
-		#"Portal Scroll",
-		"Chromatic Orb",
-		#"Alchemy Shard",
-		"Orb of Alteration",
-		#"Alteration Shard",
-		"Orb of Augmentation",
-		#"Jeweller's Orb",
-		"Orb of Transmutation",
-		"Orb of Chance",
-		"Glassblower's Bauble",
-		"Horizon Orb",
-		#"Horizon Shard",
-		"Chaos Shard",
-		"Engineer's Orb",
-		#"Engineer's Shard",
-		#"Binding Shard",
-		"Regal Orb",
-		#"Regal Shard",
-		"Blessed Orb",
 		"Timeless Eternal Empire Splinter", "Timeless Karui Splinter", "Timeless Maraketh Splinter", "Timeless Templar Splinter", "Timeless Vaal Splinter"
 	]
+	ah.extend(always_highlight.auto_ah)
 	if cur in ["Mirror of Kalandra", "Mirror Shard"]:
 		tier = 'currency mirror'
 	elif ((cur in ah) or 'Fossil' in cur) and val < curvals['normal']:
@@ -99,8 +77,8 @@ def currencyclassify(cur, val, curvals, stacks=1):
 	elif val >= curvals['min']:
 		tier = 'currency very low'
 	else:
-		tier = 'currency very low'
-		#tier = 'hide'
+		#tier = 'currency very low'
+		tier = 'hide'
 
 	if stacks > 1:
 		return "$ {0}\": {{\"baseexact\": \"{0}\", 'other': ['StackSize >= {2}'], \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier, stacks)
@@ -119,7 +97,6 @@ def gen_currency(currency_list, league, curvals):
 	for s in shards:
 		if s not in currency_list:
 			currency_list[s] = currency_list[shards[s]] / 20
-	#	substringunique = find_substrings(currency_list)
 
 	curval = '''{}\ndesc = "Currency Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
 
@@ -733,8 +710,8 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 						continue
 					if i['name'] in ['Enlighten Support', 'Enhance Support', 'Empower Support']:
 						i['gemQuality'] = 0
-					if i['name'] in ['Deathmark', 'Shockwave'] and 'Support' not in i['name']:
-						i['name'] += ' Support'
+#					if i['name'] in ['Deathmark', 'Shockwave'] and 'Support' not in i['name']:
+#						i['name'] += ' Support'
 					if i['gemLevel'] not in skillgem:
 						skillgem[i['gemLevel']] = {}
 					if i['gemQuality'] not in skillgem[i['gemLevel']]:
@@ -767,8 +744,8 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 				for i in data:
 					for ii in data[i]:
 						if ii['count'] < mincount or ii['name'] not in helmnames:
-#							if ii['name'] not in helmnames:
-#								print(repr(ii['name']))
+							if not ii['name'].startswith('Allocates') and ii['name'] not in helmnames:
+								print(repr(ii['name']))
 							continue
 						helmenchants[ii['name']] = ii['chaosValue']
 
@@ -826,7 +803,9 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 							continue
 						if ('links' in ii and ii['links']) or 'relic' in ii['icon']:
 							continue
-						# Some uniques can have multiple variants, only consider the least valuable
+						if 'Synthesised' in ii['baseType']:
+							ii['baseType'] = ii['baseType'][12:]
+						# Some uniques can have multiple variants
 						if ii['name'] in uniques:
 							while ii['name'] in uniques:
 								ii['name'] += "§"
