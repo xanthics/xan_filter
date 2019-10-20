@@ -1,22 +1,23 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/02/2019(m/d/y) 02:19:38 UTC from "tmpstandard" data
+# Created: 10/20/2019(m/d/y) 06:11:43 UTC from "tmpstandard" data
 
 desc = "scarab Autogen"
 
 # Base type : settings pair
 items = {
-	"1 Gilded Ambush Scarab": {"baseexact": "Gilded Ambush Scarab", "class": "Map Fragments", "type": "fragment high"},
+	"1 Gilded Ambush Scarab": {"baseexact": "Gilded Ambush Scarab", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Gilded Bestiary Scarab": {"baseexact": "Gilded Bestiary Scarab", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Gilded Breach Scarab": {"baseexact": "Gilded Breach Scarab", "class": "Map Fragments", "type": "fragment high"},
-	"1 Gilded Cartography Scarab": {"baseexact": "Gilded Cartography Scarab", "class": "Map Fragments", "type": "fragment very high"},
+	"1 Gilded Cartography Scarab": {"baseexact": "Gilded Cartography Scarab", "class": "Map Fragments", "type": "fragment high"},
 	"1 Gilded Divination Scarab": {"baseexact": "Gilded Divination Scarab", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Gilded Elder Scarab": {"baseexact": "Gilded Elder Scarab", "class": "Map Fragments", "type": "fragment high"},
 	"1 Gilded Harbinger Scarab": {"baseexact": "Gilded Harbinger Scarab", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Gilded Legion Scarab": {"baseexact": "Gilded Legion Scarab", "class": "Map Fragments", "type": "fragment very high"},
+	"1 Gilded Perandus Scarab": {"baseexact": "Gilded Perandus Scarab", "class": "Map Fragments", "type": "fragment high"},
 	"1 Gilded Reliquary Scarab": {"baseexact": "Gilded Reliquary Scarab", "class": "Map Fragments", "type": "fragment high"},
 	"1 Gilded Sulphite Scarab": {"baseexact": "Gilded Sulphite Scarab", "class": "Map Fragments", "type": "fragment very high"},
-	"1 Gilded Torment Scarab": {"baseexact": "Gilded Torment Scarab", "class": "Map Fragments", "type": "fragment high"},
+	"1 Gilded Torment Scarab": {"baseexact": "Gilded Torment Scarab", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Polished Ambush Scarab": {"baseexact": "Polished Ambush Scarab", "class": "Map Fragments", "type": "fragment high"},
 	"1 Polished Bestiary Scarab": {"baseexact": "Polished Bestiary Scarab", "class": "Map Fragments", "type": "fragment high"},
 	"1 Polished Cartography Scarab": {"baseexact": "Polished Cartography Scarab", "class": "Map Fragments", "type": "fragment high"},
@@ -24,9 +25,9 @@ items = {
 	"1 Polished Harbinger Scarab": {"baseexact": "Polished Harbinger Scarab", "class": "Map Fragments", "type": "fragment high"},
 	"1 Polished Legion Scarab": {"baseexact": "Polished Legion Scarab", "class": "Map Fragments", "type": "fragment high"},
 	"1 Polished Sulphite Scarab": {"baseexact": "Polished Sulphite Scarab", "class": "Map Fragments", "type": "fragment very high"},
-	"1 Polished Torment Scarab": {"baseexact": "Polished Torment Scarab", "class": "Map Fragments", "type": "fragment high"},
+	"1 Rusted Bestiary Scarab": {"baseexact": "Rusted Bestiary Scarab", "class": "Map Fragments", "type": "fragment high"},
 	"1 Rusted Harbinger Scarab": {"baseexact": "Rusted Harbinger Scarab", "class": "Map Fragments", "type": "fragment high"},
 	"1 Rusted Legion Scarab": {"baseexact": "Rusted Legion Scarab", "class": "Map Fragments", "type": "fragment high"},
-	"1 Rusted Sulphite Scarab": {"baseexact": "Rusted Sulphite Scarab", "class": "Map Fragments", "type": "fragment high"},
+	"1 Rusted Sulphite Scarab": {"baseexact": "Rusted Sulphite Scarab", "class": "Map Fragments", "type": "fragment very high"},
 	"7 scarab default": {"base": "Scarab", "class": "Map Fragments", "type": "fragment normal"}
 }

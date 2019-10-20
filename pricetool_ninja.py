@@ -168,8 +168,6 @@ def gen_challenge(challenge_list, league, curvals):
 
 	stackable = ['Oil']
 
-	#	substringunique = find_substrings(currency_list)
-
 	curval = '''{}\ndesc = "Challenge Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
 
 	for cur in sorted(challenge_list):

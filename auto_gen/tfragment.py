@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/02/2019(m/d/y) 02:19:38 UTC from "tmpstandard" data
+# Created: 10/20/2019(m/d/y) 06:11:43 UTC from "tmpstandard" data
 
 desc = "Fragment Autogen"
 
 # Base type : settings pair
 items = {
 	"1 Chayula's Breachstone": {"baseexact": "Chayula's Breachstone", "class": "Map Fragments", "type": "fragment extremely high"},
-	"1 Chayula's Charged Breachstone": {"baseexact": "Chayula's Charged Breachstone", "class": "Map Fragments", "type": "fragment extremely high"},
+	"1 Chayula's Charged Breachstone": {"baseexact": "Chayula's Charged Breachstone", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Chayula's Enriched Breachstone": {"baseexact": "Chayula's Enriched Breachstone", "class": "Map Fragments", "type": "fragment extremely high"},
 	"1 Chayula's Pure Breachstone": {"baseexact": "Chayula's Pure Breachstone", "class": "Map Fragments", "type": "fragment extremely high"},
 	"1 Divine Vessel": {"baseexact": "Divine Vessel", "class": "Map Fragments", "type": "fragment normal"},
@@ -17,10 +17,10 @@ items = {
 	"1 Esh's Enriched Breachstone": {"baseexact": "Esh's Enriched Breachstone", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Esh's Pure Breachstone": {"baseexact": "Esh's Pure Breachstone", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Fragment of the Chimera": {"baseexact": "Fragment of the Chimera", "class": "Map Fragments", "type": "fragment high"},
-	"1 Fragment of the Hydra": {"baseexact": "Fragment of the Hydra", "class": "Map Fragments", "type": "fragment high"},
-	"1 Fragment of the Minotaur": {"baseexact": "Fragment of the Minotaur", "class": "Map Fragments", "type": "fragment high"},
-	"1 Fragment of the Phoenix": {"baseexact": "Fragment of the Phoenix", "class": "Map Fragments", "type": "fragment high"},
-	"1 Inya's Key": {"baseexact": "Inya's Key", "class": "Map Fragments", "type": "fragment very high"},
+	"1 Fragment of the Hydra": {"baseexact": "Fragment of the Hydra", "class": "Map Fragments", "type": "fragment normal"},
+	"1 Fragment of the Minotaur": {"baseexact": "Fragment of the Minotaur", "class": "Map Fragments", "type": "fragment normal"},
+	"1 Fragment of the Phoenix": {"baseexact": "Fragment of the Phoenix", "class": "Map Fragments", "type": "fragment normal"},
+	"1 Inya's Key": {"baseexact": "Inya's Key", "class": "Map Fragments", "type": "fragment high"},
 	"1 Mortal Grief": {"baseexact": "Mortal Grief", "class": "Map Fragments", "type": "fragment high"},
 	"1 Mortal Hope": {"baseexact": "Mortal Hope", "class": "Map Fragments", "type": "fragment high"},
 	"1 Mortal Ignorance": {"baseexact": "Mortal Ignorance", "class": "Map Fragments", "type": "fragment very high"},
@@ -41,7 +41,7 @@ items = {
 	"1 Timeless Vaal Emblem": {"baseexact": "Timeless Vaal Emblem", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Timeless Vaal Splinter": {"baseexact": "Timeless Vaal Splinter", "class": "Map Fragments", "type": "fragment normal"},
 	"1 Tul's Breachstone": {"baseexact": "Tul's Breachstone", "class": "Map Fragments", "type": "fragment high"},
-	"1 Tul's Charged Breachstone": {"baseexact": "Tul's Charged Breachstone", "class": "Map Fragments", "type": "fragment high"},
+	"1 Tul's Charged Breachstone": {"baseexact": "Tul's Charged Breachstone", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Tul's Enriched Breachstone": {"baseexact": "Tul's Enriched Breachstone", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Tul's Pure Breachstone": {"baseexact": "Tul's Pure Breachstone", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Uul-Netol's Breachstone": {"baseexact": "Uul-Netol's Breachstone", "class": "Map Fragments", "type": "fragment very high"},
