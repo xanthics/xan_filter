@@ -20,6 +20,7 @@ from auto_gen import fragment, hcfragment, tfragment, thcfragment
 from auto_gen import incubator, hcincubator, tincubator, thcincubator
 from auto_gen import challenge, hcchallenge, tchallenge, thcchallenge
 from auto_gen import skillgem, hcskillgem, tskillgem, thcskillgem
+from auto_gen import custom_challenge
 
 from item_config import animate_weapon, show_catchall
 from item_config import challenges
@@ -40,6 +41,7 @@ from item_config.itemmod import itemmods
 from theme_config import formatting
 from theme_config.min_w_highlight import volume
 from wav_mixer import convert_wav
+from gen_always_highlight_currency import create_always_highlight
 
 
 # Input is a list
@@ -188,6 +190,7 @@ def main(leagues=('tmpstandard',)):
 		buffer += gen_list(hide.items, hide.desc, soundlist)  # Always hide these items
 		if lookup_leagues[i][0] not in ['st', 'hc']:
 			buffer += gen_list(challenges.items, challenges.desc, soundlist)
+			buffer += gen_list(custom_challenge.items, custom_challenge.desc, soundlist)
 			buffer += gen_list(lookup_leagues[i][12].items, lookup_leagues[i][12].desc, soundlist)  # Autogen challenges
 		buffer += gen_list(labyrinth.items, labyrinth.desc, soundlist)
 		buffer += gen_list(lookup_leagues[i][4].items, lookup_leagues[i][4].desc, soundlist)  # Autogen currency values
@@ -267,6 +270,7 @@ def main(leagues=('tmpstandard',)):
 
 
 if __name__ == "__main__":
+	create_always_highlight()
 	import pricetool_ninja
 #	league = ['Standard', 'Hardcore', 'tmpstandard', 'tmphardcore']
 	league = ['tmpstandard']
@@ -283,6 +287,7 @@ if __name__ == "__main__":
 				   incubator, hcincubator, tincubator, thcincubator,
 				   fragment, hcfragment, tfragment, thcfragment,
 				   skillgem, hcskillgem, tskillgem, thcskillgem,
-				   helmenchant, hchelmenchant, thelmenchant, thchelmenchant]:
+				   helmenchant, hchelmenchant, thelmenchant, thchelmenchant,
+				   custom_challenge]:
 		importlib.reload(module)
 	main(league)
