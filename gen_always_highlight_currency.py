@@ -79,7 +79,7 @@ def create_highlight_currency(currencytab, league, accountname, cookies, request
 		data = json.loads(req.content)
 		skipped = set()
 		for item in data['items']:
-			if item['typeLine'] in currencyvals and (currencyvals[item['typeLine']] == -1 or currencyvals[item['typeLine']] < item['stackSize']):
+			if item['typeLine'] in currencyvals and currencyvals[item['typeLine']] < item['stackSize'] and currencyvals[item['typeLine']] != -1:
 				currency.pop(currency.index(item['typeLine']))
 			elif item['typeLine'] not in currencyvals and 'Oil' not in item['typeLine'] and 'Shard' not in item['typeLine'] and 'Fragment' not in item['typeLine']:
 				skipped.add(item['typeLine'])
