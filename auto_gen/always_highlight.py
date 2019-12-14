@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/20/2019(m/d/y) 06:11:41 UTC from "Blight" data
+# Created: 12/14/2019(m/d/y) 00:06:39 UTC from "Metamorph" data
 
 auto_ah = [
 	"Alchemy Shard",
 	"Alteration Shard",
 	"Ancient Orb",
-	"Apprentice Cartographer's Sextant",
 	"Armourer's Scrap",
+	"Awakened Sextant",
 	"Binding Shard",
 	"Blacksmith's Whetstone",
 	"Blessed Orb",
@@ -15,6 +15,7 @@ auto_ah = [
 	"Chaos Orb",
 	"Chaos Shard",
 	"Chromatic Orb",
+	"Divine Orb",
 	"Engineer's Orb",
 	"Engineer's Shard",
 	"Exalted Orb",
@@ -22,8 +23,6 @@ auto_ah = [
 	"Glassblower's Bauble",
 	"Horizon Shard",
 	"Jeweller's Orb",
-	"Journeyman Cartographer's Sextant",
-	"Master Cartographer's Sextant",
 	"Orb of Alchemy",
 	"Orb of Alteration",
 	"Orb of Annulment",
@@ -37,9 +36,11 @@ auto_ah = [
 	"Orb of Transmutation",
 	"Perandus Coin",
 	"Portal Scroll",
+	"Prime Sextant",
 	"Regal Orb",
 	"Regal Shard",
 	"Scroll of Wisdom",
 	"Silver Coin",
+	"Simple Sextant",
 	"Vaal Orb"
 ]

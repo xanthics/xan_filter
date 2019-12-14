@@ -24,11 +24,12 @@ def create_always_highlight():
 # Uses your session id (if provided) to change always highlight settings for currency
 def create_highlight_currency(currencytab, league, accountname, cookies, requester):
 	currencyvals = {  # update to currencies that you want to have shown and thresholds for them. -1 to always highlight
-		"Apprentice Cartographer's Sextant": -1,
+		"Simple Sextant": -1,
 		"Cartographer's Chisel": -1,
 		'Exalted Orb': -1,
-		"Journeyman Cartographer's Sextant": -1,
-		"Master Cartographer's Sextant": -1,
+		'Divine Orb': -1,
+		"Prime Sextant": -1,
+		"Awakened Sextant": -1,
 		'Orb of Annulment': -1,
 		'Orb of Binding': 5,
 		"Ancient Orb": -1,
@@ -78,6 +79,7 @@ def create_highlight_currency(currencytab, league, accountname, cookies, request
 
 		data = json.loads(req.content)
 		skipped = set()
+		print(data)
 		for item in data['items']:
 			if item['typeLine'] in currencyvals and currencyvals[item['typeLine']] < item['stackSize'] and currencyvals[item['typeLine']] != -1:
 				currency.pop(currency.index(item['typeLine']))

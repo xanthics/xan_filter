@@ -19,5 +19,8 @@ items = {
 	"0 Microtransactions": {"class": "Microtransactions", "type": "show low"},
 	"0 Quest": {"class": "Quest", "type": "quest"},
 
+	"0 Metamorph Sample": {"class": "Metamorph Sample", "type": "quest"},
+	"0 Atlas Region Upgrade Item": {"class": "Atlas Region Upgrade Item", "type": "quest"},
+
 	"9 Starter weapon": {"other": ["Class Dagger Wand \"One Hand\" Bow Stave \"Two Hand\" Sceptre Claws", "ItemLevel < 2"], "type": "show normal"},
 }

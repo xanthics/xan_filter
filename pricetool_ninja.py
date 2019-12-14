@@ -117,7 +117,7 @@ def gen_currency(currency_list, league, curvals):
 				maxval = 40
 			elif cur in ["Orb of Augmentation", "Orb of Scouring", "Silver Coin"]:
 				maxval = 30
-			elif cur in ["Chaos Orb", "Orb of Alchemy", "Regal Orb", "Divine Orb", "Vaal Orb", "Apprentice Cartographer's Sextant", "Journeyman Cartographer's Sextant", "Master Cartographer's Sextant"]:
+			elif cur in ["Chaos Orb", "Orb of Alchemy", "Regal Orb", "Divine Orb", "Vaal Orb", "Simple Sextant", "Prime Sextant", "Awakened Sextant"]:
 				maxval = 10
 			for i in range(2, maxval+1):
 				retstr = currencyclassify(cur, currency_list[cur] * i, curvals, i)
@@ -617,7 +617,7 @@ def gen_bases(bases_list, league, curvals):
 
 # Entry point for getting price data from poe.ninja
 def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
-#	leagues = ["Blight"]
+#	leagues = ["Metamorph"]
 
 	keys = [
 		'Oil',
@@ -644,8 +644,8 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 	leaguelookup = {
 		"Standard": "Standard",
 		"Hardcore": "Hardcore",
-		"tmpstandard": "Blight",
-		"tmphardcore": "Hardcore Blight",
+		"tmpstandard": "Metamorph",
+		"tmphardcore": "Hardcore Metamorph",
 	}
 
 	os.environ['NO_PROXY'] = 'poe.ninja'

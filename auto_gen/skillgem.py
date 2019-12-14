@@ -788,7 +788,7 @@ items = {
 	"12 False 1 Purity of Fire": {"base": "Purity of Fire", "class": "Gems", "other": ["GemLevel >= 20", "Quality >= 0", "Corrupted False"], "type": "gem high"},
 	"12 False 1 Purity of Ice": {"base": "Purity of Ice", "class": "Gems", "other": ["GemLevel >= 20", "Quality >= 0", "Corrupted False"], "type": "gem high"},
 	"12 False 1 Rage Support": {"base": "Rage Support", "class": "Gems", "other": ["GemLevel >= 20", "Quality >= 0", "Corrupted False"], "type": "gem very high"},
-	"12 False 1 Ranged Attack Totem Support": {"base": "Ranged Attack Totem Support", "class": "Gems", "other": ["GemLevel >= 20", "Quality >= 0", "Corrupted False"], "type": "gem very high"},
+	"12 False 1 Ballista Totem Support": {"base": "Ballista Totem Support", "class": "Gems", "other": ["GemLevel >= 20", "Quality >= 0", "Corrupted False"], "type": "gem very high"},
 	"12 False 1 Shield Charge": {"base": "Shield Charge", "class": "Gems", "other": ["GemLevel >= 20", "Quality >= 0", "Corrupted False"], "type": "gem high"},
 	"12 False 1 Soulrend": {"base": "Soulrend", "class": "Gems", "other": ["GemLevel >= 20", "Quality >= 0", "Corrupted False"], "type": "gem very high"},
 	"12 False 1 Spell Echo Support": {"base": "Spell Echo Support", "class": "Gems", "other": ["GemLevel >= 20", "Quality >= 0", "Corrupted False"], "type": "gem high"},

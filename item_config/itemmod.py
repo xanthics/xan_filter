@@ -7,13 +7,13 @@ desc = "Magic items"
 
 # Mods for rare only
 def raremods():
-	modtoitem = {'Entombing': ["Rune Dagger", "Dagger", "Sceptre", "Wand"],
-				 'Cremating': ["Rune Dagger", "Dagger", "Sceptre", "Wand"],
-				 'Electrocuting': ["Rune Dagger", "Dagger", "Sceptre", "Wand"],
-				 'Crystalising': ["Claw", "Rune Dagger", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Warstaff", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"],
-				 'Carbonising': ["Claw", "Rune Dagger", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Warstaff", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"],
-				 'Vapourising': ["Claw", "Rune Dagger", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Warstaff", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"],
-				 'Malicious': ["Claw", "Rune Dagger", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Warstaff", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"],
+	modtoitem = {'Entombing': ["Rune Daggers", "Dagger", "Sceptre", "Wand"],
+				 'Cremating': ["Rune Daggers", "Dagger", "Sceptre", "Wand"],
+				 'Electrocuting': ["Rune Daggers", "Dagger", "Sceptre", "Wand"],
+				 'Crystalising': ["Claw", "Rune Daggers", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Warstaves", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"],
+				 'Carbonising': ["Claw", "Rune Daggers", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Warstaves", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"],
+				 'Vapourising': ["Claw", "Rune Daggers", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Warstaves", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"],
+				 'Malicious': ["Claw", "Rune Daggers", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Warstaves", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"],
 				 'Tul\'s': ["Sceptre", "Wand", "Dagger", "Stave"],
 				 'Xoph\'s': ["Sceptre", "Wand", "Dagger", "Stave"],
 				 'Esh\'s': ["Sceptre", "Wand", "Dagger", "Stave"],
@@ -67,16 +67,16 @@ def raremods():
 
 # mods for any rarity
 def magicmods():
-	modtoitem = {'Dictator\'s': ["Claw", "Rune Dagger", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Warstaff", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"],
-				 'Merciless': ["Claw", "Rune Dagger", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Warstaff", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"],
-				 'Flaring': ["Claw", "Rune Dagger", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Warstaff", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword", "Amulet"],
+	modtoitem = {'Dictator\'s': ["Claw", "Rune Daggers", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Warstaves", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"],
+				 'Merciless': ["Claw", "Rune Daggers", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Warstaves", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"],
+				 'Flaring': ["Claw", "Rune Daggers", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Warstaves", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword", "Amulet"],
 
 				 # Veiled mods so they can be eventually disabled when unlocked
 				 "Veiled": [
-					 "Claw", "Rune Dagger", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword",
+					 "Claw", "Rune Daggers", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword",
 					 "Wand",
 					 "Bow",
-					 "Warstaff", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword",
+					 "Warstaves", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword",
 					 "Body Armour",
 					 "Boots",
 					 "Gloves",
@@ -89,10 +89,10 @@ def magicmods():
 				 ],
 
 				 "of the Veil": [
-					 "Claw", "Rune Dagger", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword",
+					 "Claw", "Rune Daggers", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword",
 					 "Wand",
 					 "Bow",
-					 "Warstaff", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword",
+					 "Warstaves", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword",
 					 "Body Armour",
 					 "Boots",
 					 "Gloves",
@@ -151,7 +151,7 @@ def magicmods():
 	return ret
 
 
-# "Claw", "Rune Dagger", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Warstaff", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"
+# "Claw", "Rune Daggers", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword", "Wand", "Bow", "Warstaves", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword"
 # , "Body Armour", "Boots", "Gloves", "Helmet", "Shield"
 # , "Amulet", "Belt", "Ring"
 # , "Jewel", "Abyss Jewel"

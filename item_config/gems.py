@@ -232,7 +232,7 @@ items = {
 	"1 Raise Spectre": {"base": "Raise Spectre", "class": "Gems", "type": "ignore"},
 	"1 Raise Zombie": {"base": "Raise Zombie", "class": "Gems", "type": "ignore"},
 	"1 Rallying Cry": {"base": "Rallying Cry", "class": "Gems", "type": "ignore"},
-	"1 Ranged Attack Totem Support": {"base": "Ranged Attack Totem Support", "class": "Gems", "type": "ignore"},
+	"1 Ballista Totem Support": {"base": "Ballista Totem Support", "class": "Gems", "type": "ignore"},
 	"1 Reave": {"base": "Reave", "class": "Gems", "type": "ignore"},
 	"1 Reckoning": {"base": "Reckoning", "class": "Gems", "type": "ignore"},
 	"1 Reduced Mana Support": {"base": "Reduced Mana Support", "class": "Gems", "type": "ignore"},

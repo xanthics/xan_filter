@@ -71,22 +71,22 @@ bases = {
 			{'drop': 60, 'base': 'Dagger', 'name': 'Ambusher', 'tier': 3},  # Critical Strike Chance +(30)
 			{'drop': 70, 'base': 'Dagger', 'name': 'Sai', 'tier': 2},  # Monster Base Block (6)
 		],
-		"Caster|Rune Dagger|Dex|Int|Melee|One|Weapon": [
-			{'drop': 10, 'base': 'Rune Dagger', 'name': 'Carving Knife', 'tier': 4},  # Critical Strike Chance +(30)
-			{'drop': 20, 'base': 'Rune Dagger', 'name': 'Boot Knife', 'tier': 4},  # Critical Strike Chance +(30)
-			{'drop': 24, 'base': 'Rune Dagger', 'name': 'Copper Kris', 'tier': 3},  # Critical Strike Chance +(50)
-			{'drop': 28, 'base': 'Rune Dagger', 'name': 'Skean', 'tier': 4},  # Critical Strike Chance +(30)
-			{'drop': 32, 'base': 'Rune Dagger', 'name': 'Imp Dagger', 'tier': 4},  # Critical Strike Chance +(40)
-			{'drop': 38, 'base': 'Rune Dagger', 'name': 'Butcher Knife', 'tier': 4},  # Critical Strike Chance +(30)
-			{'drop': 44, 'base': 'Rune Dagger', 'name': 'Boot Blade', 'tier': 4},  # Critical Strike Chance +(30)
-			{'drop': 47, 'base': 'Rune Dagger', 'name': 'Golden Kris', 'tier': 3},  # Critical Strike Chance +(50)
-			{'drop': 50, 'base': 'Rune Dagger', 'name': 'Royal Skean', 'tier': 4},  # Critical Strike Chance +(30)
-			{'drop': 53, 'base': 'Rune Dagger', 'name': 'Fiend Dagger', 'tier': 4},  # Critical Strike Chance +(40)
-			{'drop': 58, 'base': 'Rune Dagger', 'name': 'Slaughter Knife', 'tier': 4},  # Critical Strike Chance +(30)
-			{'drop': 62, 'base': 'Rune Dagger', 'name': 'Ezomyte Dagger', 'tier': 2},  # Critical Strike Chance +(30)
-			{'drop': 64, 'base': 'Rune Dagger', 'name': 'Platinum Kris', 'tier': 1},  # Critical Strike Chance +(50)
-			{'drop': 66, 'base': 'Rune Dagger', 'name': 'Imperial Skean', 'tier': 2},  # Critical Strike Chance +(30)
-			{'drop': 68, 'base': 'Rune Dagger', 'name': 'Demon Dagger', 'tier': 1},  # Critical Strike Chance +(40)
+		"Caster|Rune Daggers|Dex|Int|Melee|One|Weapon": [
+			{'drop': 10, 'base': 'Rune Daggers', 'name': 'Carving Knife', 'tier': 4},  # Critical Strike Chance +(30)
+			{'drop': 20, 'base': 'Rune Daggers', 'name': 'Boot Knife', 'tier': 4},  # Critical Strike Chance +(30)
+			{'drop': 24, 'base': 'Rune Daggers', 'name': 'Copper Kris', 'tier': 3},  # Critical Strike Chance +(50)
+			{'drop': 28, 'base': 'Rune Daggers', 'name': 'Skean', 'tier': 4},  # Critical Strike Chance +(30)
+			{'drop': 32, 'base': 'Rune Daggers', 'name': 'Imp Dagger', 'tier': 4},  # Critical Strike Chance +(40)
+			{'drop': 38, 'base': 'Rune Daggers', 'name': 'Butcher Knife', 'tier': 4},  # Critical Strike Chance +(30)
+			{'drop': 44, 'base': 'Rune Daggers', 'name': 'Boot Blade', 'tier': 4},  # Critical Strike Chance +(30)
+			{'drop': 47, 'base': 'Rune Daggers', 'name': 'Golden Kris', 'tier': 3},  # Critical Strike Chance +(50)
+			{'drop': 50, 'base': 'Rune Daggers', 'name': 'Royal Skean', 'tier': 4},  # Critical Strike Chance +(30)
+			{'drop': 53, 'base': 'Rune Daggers', 'name': 'Fiend Dagger', 'tier': 4},  # Critical Strike Chance +(40)
+			{'drop': 58, 'base': 'Rune Daggers', 'name': 'Slaughter Knife', 'tier': 4},  # Critical Strike Chance +(30)
+			{'drop': 62, 'base': 'Rune Daggers', 'name': 'Ezomyte Dagger', 'tier': 2},  # Critical Strike Chance +(30)
+			{'drop': 64, 'base': 'Rune Daggers', 'name': 'Platinum Kris', 'tier': 1},  # Critical Strike Chance +(50)
+			{'drop': 66, 'base': 'Rune Daggers', 'name': 'Imperial Skean', 'tier': 2},  # Critical Strike Chance +(30)
+			{'drop': 68, 'base': 'Rune Daggers', 'name': 'Demon Dagger', 'tier': 1},  # Critical Strike Chance +(40)
 		],
 		"Dex|Melee|One|One Hand Axe|Str|Weapon": [
 			{'drop': 2, 'base': 'One Hand Axe', 'name': 'Rusted Hatchet', 'tier': 4},
@@ -196,16 +196,16 @@ bases = {
 			{'drop': 68, 'base': 'Sceptre', 'name': 'Void Sceptre', 'tier': 1},  # Elemental Damage +(40)
 			{'drop': 70, 'base': 'Sceptre', 'name': 'Sambar Sceptre', 'tier': 1},  # Reduce Enemy Elemental Resistance (6)
 		],
-		"Int|Melee|Warstaff|Str|Two|Weapon": [
-			{'drop': 18, 'base': 'Warstaff', 'name': 'Iron Staff', 'tier': 4},  # Staff Block (18)
-			{'drop': 23, 'base': 'Warstaff', 'name': 'Coiled Staff', 'tier': 4},  # Staff Block (20)
-			{'drop': 33, 'base': 'Warstaff', 'name': 'Vile Staff', 'tier': 4},  # Staff Block (18)
-			{'drop': 45, 'base': 'Warstaff', 'name': 'Military Staff', 'tier': 4},  # Staff Block (18)
-			{'drop': 49, 'base': 'Warstaff', 'name': 'Serpentine Staff', 'tier': 4},  # Staff Block (20)
-			{'drop': 55, 'base': 'Warstaff', 'name': 'Foul Staff', 'tier': 4},  # Staff Block (18)
-			{'drop': 62, 'base': 'Warstaff', 'name': 'Ezomyte Staff', 'tier': 4},  # Staff Block (18)
-			{'drop': 64, 'base': 'Warstaff', 'name': 'Maelström Staff', 'tier': 3},  # Staff Block (20)
-			{'drop': 68, 'base': 'Warstaff', 'name': 'Judgement Staff', 'tier': 2},  # Staff Block (18)
+		"Int|Melee|Warstaves|Str|Two|Weapon": [
+			{'drop': 18, 'base': 'Warstaves', 'name': 'Iron Staff', 'tier': 4},  # Staff Block (18)
+			{'drop': 23, 'base': 'Warstaves', 'name': 'Coiled Staff', 'tier': 4},  # Staff Block (20)
+			{'drop': 33, 'base': 'Warstaves', 'name': 'Vile Staff', 'tier': 4},  # Staff Block (18)
+			{'drop': 45, 'base': 'Warstaves', 'name': 'Military Staff', 'tier': 4},  # Staff Block (18)
+			{'drop': 49, 'base': 'Warstaves', 'name': 'Serpentine Staff', 'tier': 4},  # Staff Block (20)
+			{'drop': 55, 'base': 'Warstaves', 'name': 'Foul Staff', 'tier': 4},  # Staff Block (18)
+			{'drop': 62, 'base': 'Warstaves', 'name': 'Ezomyte Staff', 'tier': 4},  # Staff Block (18)
+			{'drop': 64, 'base': 'Warstaves', 'name': 'Maelström Staff', 'tier': 3},  # Staff Block (20)
+			{'drop': 68, 'base': 'Warstaves', 'name': 'Judgement Staff', 'tier': 2},  # Staff Block (18)
 		],
 		"Caster|Int|Melee|Stave|Str|Two|Weapon": [
 			{'drop': 4, 'base': 'Stave', 'name': 'Gnarled Branch', 'tier': 4},  # Staff Block (18)
@@ -1030,7 +1030,7 @@ def genrareshighlighttiered():
 	base_mod_tiers = {
 		'Claw': [-1, 83, 73, 60],
 		'Dagger': [-1, 83, 73, 60],
-		'Rune Dagger': [-1, 83, 73, 60],
+		'Rune Daggers': [-1, 83, 73, 60],
 		'One Hand Axe': [-1, 83, 73, 60],
 		'One Hand Mace': [-1, 83, 73, 60],
 		'One Hand Sword': [-1, 83, 73, 60],
@@ -1039,7 +1039,7 @@ def genrareshighlighttiered():
 		'Wand': [-1, 84, 73, 60],
 		'Bow': [-1, 83, 73, 60],
 		'Stave': [-1, 83, 73, 60],
-		'Warstaff': [-1, 83, 73, 60],
+		'Warstaves': [-1, 83, 73, 60],
 		'Two Hand Axe': [-1, 83, 73, 60],
 		'Two Hand Mace': [-1, 83, 73, 60],
 		'Two Hand Sword': [-1, 83, 73, 60],
