@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/14/2019(m/d/y) 00:06:41 UTC from "tmpstandard" data
+# Created: 12/15/2019(m/d/y) 05:21:44 UTC from "tmpstandard" data
 
 desc = "Bases"
 
@@ -151,8 +151,8 @@ items = {
 	"0 Elder Leather Belt": {"baseexact": "Leather Belt", "other": ["ElderItem True", "ItemLevel >= 86"], "type": "base very high"},
 	"0 Elder Lithe Blade": {"baseexact": "Lithe Blade", "other": ["ElderItem True", "ItemLevel >= 86"], "type": "base very high"},
 	"0 Elder Marble Amulet": {"baseexact": "Marble Amulet", "other": ["ElderItem True", "ItemLevel >= 86"], "type": "base extremely high"},
-	"0 Elder Onyx Amulet": {"baseexact": "Onyx Amulet", "other": ["ElderItem True", "ItemLevel >= 86"], "type": "base very high"},
-	"0 Elder Opal Ring": {"baseexact": "Opal Ring", "other": ["ElderItem True", "ItemLevel >= 86"], "type": "base extremely high"},
+	"0 Elder Onyx Amulet": {"baseexact": "Onyx Amulet", "other": ["ElderItem True", "ItemLevel >= 86"], "type": "base extremely high"},
+	"0 Elder Opal Ring": {"baseexact": "Opal Ring", "other": ["ElderItem True", "ItemLevel >= 86"], "type": "base very high"},
 	"0 Elder Opal Wand": {"baseexact": "Opal Wand", "other": ["ElderItem True", "ItemLevel >= 86"], "type": "base very high"},
 	"0 Elder Ornate Spiked Shield": {"baseexact": "Ornate Spiked Shield", "other": ["ElderItem True", "ItemLevel >= 86"], "type": "base very high"},
 	"0 Elder Pagan Wand": {"baseexact": "Pagan Wand", "other": ["ElderItem True", "ItemLevel >= 86"], "type": "base very high"},
@@ -281,6 +281,7 @@ items = {
 	"1 Elder Coral Ring": {"baseexact": "Coral Ring", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Elder Crystal Belt": {"baseexact": "Crystal Belt", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Elder Diamond Ring": {"baseexact": "Diamond Ring", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
+	"1 Elder Eclipse Staff": {"baseexact": "Eclipse Staff", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Elder Eelskin Gloves": {"baseexact": "Eelskin Gloves", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Elder Eternal Burgonet": {"baseexact": "Eternal Burgonet", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Elder Exquisite Blade": {"baseexact": "Exquisite Blade", "other": ["ElderItem True", "ItemLevel 85"], "type": "base extremely high"},
@@ -290,11 +291,14 @@ items = {
 	"1 Elder Glorious Plate": {"baseexact": "Glorious Plate", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Elder Gold Amulet": {"baseexact": "Gold Amulet", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Elder Gripped Gloves": {"baseexact": "Gripped Gloves", "other": ["ElderItem True", "ItemLevel 85"], "type": "base extremely high"},
+	"1 Elder Harbinger Bow": {"baseexact": "Harbinger Bow", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
+	"1 Elder Harpy Rapier": {"baseexact": "Harpy Rapier", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Elder Heavy Belt": {"baseexact": "Heavy Belt", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Elder Jade Amulet": {"baseexact": "Jade Amulet", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Elder Jewelled Foil": {"baseexact": "Jewelled Foil", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
-	"1 Elder Lapis Amulet": {"baseexact": "Lapis Amulet", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
+	"1 Elder Lapis Amulet": {"baseexact": "Lapis Amulet", "other": ["ElderItem True", "ItemLevel 85"], "type": "base extremely high"},
 	"1 Elder Leather Belt": {"baseexact": "Leather Belt", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
+	"1 Elder Lion Pelt": {"baseexact": "Lion Pelt", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Elder Marble Amulet": {"baseexact": "Marble Amulet", "other": ["ElderItem True", "ItemLevel 85"], "type": "base extremely high"},
 	"1 Elder Moon Staff": {"baseexact": "Moon Staff", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Elder Onyx Amulet": {"baseexact": "Onyx Amulet", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
@@ -303,7 +307,9 @@ items = {
 	"1 Elder Prismatic Ring": {"baseexact": "Prismatic Ring", "other": ["ElderItem True", "ItemLevel 85"], "type": "base extremely high"},
 	"1 Elder Royal Burgonet": {"baseexact": "Royal Burgonet", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Elder Ruby Ring": {"baseexact": "Ruby Ring", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
+	"1 Elder Rustic Sash": {"baseexact": "Rustic Sash", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Elder Sapphire Ring": {"baseexact": "Sapphire Ring", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
+	"1 Elder Siege Axe": {"baseexact": "Siege Axe", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Elder Slink Gloves": {"baseexact": "Slink Gloves", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Elder Soldier's Brigandine": {"baseexact": "Soldier's Brigandine", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Elder Sorcerer Gloves": {"baseexact": "Sorcerer Gloves", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
@@ -319,7 +325,6 @@ items = {
 	"1 Elder Vaal Axe": {"baseexact": "Vaal Axe", "other": ["ElderItem True", "ItemLevel 85"], "type": "base extremely high"},
 	"1 Elder Vanguard Belt": {"baseexact": "Vanguard Belt", "other": ["ElderItem True", "ItemLevel 85"], "type": "base very high"},
 	"1 Elder Vermillion Ring": {"baseexact": "Vermillion Ring", "other": ["ElderItem True", "ItemLevel 85"], "type": "base extremely high"},
-	"1 Jewelled Foil": {"baseexact": "Jewelled Foil", "other": ["ItemLevel 85"], "type": "base very high"},
 	"1 Lacquered Buckler": {"baseexact": "Lacquered Buckler", "other": ["ItemLevel 85"], "type": "base very high"},
 	"1 Opal Wand": {"baseexact": "Opal Wand", "other": ["ItemLevel 85"], "type": "base very high"},
 	"1 Searching Eye Jewel": {"baseexact": "Searching Eye Jewel", "other": ["ItemLevel 85"], "type": "base very high"},
@@ -400,6 +405,7 @@ items = {
 	"2 Elder Exquisite Blade": {"baseexact": "Exquisite Blade", "other": ["ElderItem True", "ItemLevel 84"], "type": "base extremely high"},
 	"2 Elder Fingerless Silk Gloves": {"baseexact": "Fingerless Silk Gloves", "other": ["ElderItem True", "ItemLevel 84"], "type": "base extremely high"},
 	"2 Elder Fleshripper": {"baseexact": "Fleshripper", "other": ["ElderItem True", "ItemLevel 84"], "type": "base very high"},
+	"2 Elder Full Dragonscale": {"baseexact": "Full Dragonscale", "other": ["ElderItem True", "ItemLevel 84"], "type": "base very high"},
 	"2 Elder Gripped Gloves": {"baseexact": "Gripped Gloves", "other": ["ElderItem True", "ItemLevel 84"], "type": "base extremely high"},
 	"2 Elder Jade Amulet": {"baseexact": "Jade Amulet", "other": ["ElderItem True", "ItemLevel 84"], "type": "base very high"},
 	"2 Elder Jewelled Foil": {"baseexact": "Jewelled Foil", "other": ["ElderItem True", "ItemLevel 84"], "type": "base very high"},
@@ -573,5 +579,6 @@ items = {
 	"4 Elder Two-Toned Boots": {"baseexact": "Two-Toned Boots", "other": ["ElderItem True", "ItemLevel 82"], "type": "base very high"},
 	"4 Elder Vaal Axe": {"baseexact": "Vaal Axe", "other": ["ElderItem True", "ItemLevel 82"], "type": "base extremely high"},
 	"4 Elder Vermillion Ring": {"baseexact": "Vermillion Ring", "other": ["ElderItem True", "ItemLevel 82"], "type": "base extremely high"},
+	"4 Vermillion Ring": {"baseexact": "Vermillion Ring", "other": ["ItemLevel 82"], "type": "base very high"},
 
 }

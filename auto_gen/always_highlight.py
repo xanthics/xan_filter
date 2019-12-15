@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/14/2019(m/d/y) 00:06:39 UTC from "Metamorph" data
+# Created: 12/15/2019(m/d/y) 05:21:43 UTC from "Metamorph" data
 
 auto_ah = [
 	"Alchemy Shard",
@@ -35,11 +35,9 @@ auto_ah = [
 	"Orb of Scouring",
 	"Orb of Transmutation",
 	"Perandus Coin",
-	"Portal Scroll",
 	"Prime Sextant",
 	"Regal Orb",
 	"Regal Shard",
-	"Scroll of Wisdom",
 	"Silver Coin",
 	"Simple Sextant",
 	"Vaal Orb"

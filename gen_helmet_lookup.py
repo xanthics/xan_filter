@@ -11,9 +11,9 @@ def validate(state, conditions):
 
 
 def main():
-	with open(r'C:\git\RePoE\data\mods.json', 'r') as f:
+	with open(r'C:\git\RePoE\RePoE\data\mods.json', 'r') as f:
 		mods = json.load(f)
-	with open(r'C:\git\RePoE\data\stat_translations.json', 'r') as f:
+	with open(r'C:\git\RePoE\RePoE\data\stat_translations.json', 'r') as f:
 		translation = json.load(f)
 
 	transmod = {}
