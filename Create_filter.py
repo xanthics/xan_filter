@@ -59,81 +59,110 @@ def gen_list_compact(items, desc, soundlist):
 
 	# gen our string
 	l = {}
-	for i in items:
-		s = items[i]
-		if s['type'] != "ignore":
-			if not i.split()[0].isdigit():
+	from pprint import pprint
+	for item in items:
+		sitem = items[item]
+		if sitem['type'] != "ignore":
+			if not item.split()[0].isdigit():
 				v = '1'
 			else:
-				v = i.split()[0]
+				v = item.split()[0]
 			if v not in l:
 				l[v] = {}
 
 			# Prophecy and BaseType will not appear in the same rule (personal choice)
 			# have a flag that is 0(neither), 1(Base), 2(prophecy), 3(enchant)
-			c = ''
-			f = ''
-			o = ''
-			b = ''
+			class_ = ''
+			type_ = ''
+			other = ''
+			base = ''
 			flag = 0
+			influence = None
 			t = 'Show'
-			if s['type'] == "hide":
+			if sitem['type'] == "hide":
 				t = "Hide"
-			if 'base' in s:
-				b = s['base']
+			if 'base' in sitem:
+				base = sitem['base']
 				flag = 1
-			elif 'prophecy' in s:
-				b = s['prophecy']
+			elif 'prophecy' in sitem:
+				base = sitem['prophecy']
 				flag = 2
-			elif 'enchant' in s:
-				b = s['enchant']
+			elif 'enchant' in sitem:
+				base = sitem['enchant']
 				flag = 3
-			elif 'baseexact' in s:
-				b = s['baseexact']
+			elif 'baseexact' in sitem:
+				base = sitem['baseexact']
 				flag = 4
-			if 'class' in s:
-				c = s['class']
-			if 'other' in s:
-				getcustomsound(s['other'], soundlist)
-				o = ",".join(s['other'])
+			if 'class' in sitem:
+				class_ = sitem['class']
+			if 'other' in sitem:
+				getcustomsound(sitem['other'], soundlist)
+				other = ",".join(sitem['other'])
+			if 'influence' in sitem:
+				influence = sitem['influence']
 
-			if formatting.settings[s['type']]:
-				f = s['type']
+			if formatting.settings[sitem['type']]:
+				type_ = sitem['type']
 			else:
-				print("Missing type field {} ** {}".format(items[i], i))
+				print("Missing type field {} ** {}".format(items[item], item))
 
-			k = '{}|{}|{}|{}|{}'.format(t, c, f, flag, o)
-			if k in l[v]:
-				l[v][k].append(b)
+			k = '{}|{}|{}|{}|{}'.format(t, class_, type_, flag, other)
+			if k not in l[v]:
+				l[v][k] = {}
+			if influence in l[v][k]:
+				l[v][k][influence].append(base)
 			else:
-				l[v][k] = [b]
-	b = ""
-	for i in sorted(l.keys()):
-		for ii in sorted(l[i].keys()):
-			t, c, f, flag, o = ii.split('|')
-			b += "#{}\n".format(desc)
-			b += t
-			if flag == '1':
-				b += "\n\tBaseType \"{}\"".format('" "'.join(sorted(l[i][ii])))
-			elif flag == '2':
-				b += "\n\tProphecy == \"{}\"".format('" "'.join(sorted(l[i][ii])))
-			elif flag == '3':
-				b += "\n\tHasEnchantment == \"{}\"".format('" "'.join(sorted(l[i][ii])))
-			elif flag == '4':
-				b += "\n\tBaseType == \"{}\"".format('" "'.join(sorted(l[i][ii])))
-			if c:
-				b += "\n\tClass \"{}\"".format(c)
-			if o:
-				b += "\n\t{}".format("\n\t".join(sorted(o.split(','))))
-			if formatting.settings[f]:
-				if formatting.settings[f][0]:
-					getcustomsound(formatting.settings[f], soundlist)
-					b += "\n\t{}".format("\n\t".join(sorted(formatting.settings[f])))
-			else:
-				print("Missing type field {} ** {}".format(items[i], i))
-			b += "\n\tDisableDropSound True"
-			b += "\n\n"
-	return b
+				l[v][k][influence] = [base]
+	base = ""
+	for item in sorted(l.keys()):
+		for ii in sorted(l[item].keys()):
+			# build item->influence lists
+			itemlist = {}
+			influencelist = {}
+			for influence in l[item][ii]:
+				if influence:
+					for ba in l[item][ii][influence]:
+						if ba not in itemlist:
+							itemlist[ba] = []
+						itemlist[ba].append(influence)
+				else:
+					influencelist[None] = l[item][ii][None][:]
+			# convert previous list to influences->bases
+			for itl in itemlist:
+				key = " ".join(sorted(itemlist[itl]))
+				if key in influencelist:
+					influencelist[key].append(itl)
+				else:
+					influencelist[key] = [itl]
+
+			t, class_, type_, flag, other = ii.split('|')
+
+			for influence in influencelist:
+				base += "#{}\n".format(desc)
+				base += t
+				if flag == '1':
+					base += "\n\tBaseType \"{}\"".format('" "'.join(influencelist[influence]))
+				elif flag == '2':
+					base += "\n\tProphecy == \"{}\"".format('" "'.join(influencelist[influence]))
+				elif flag == '3':
+					base += "\n\tHasEnchantment == \"{}\"".format('" "'.join(influencelist[influence]))
+				elif flag == '4':
+					base += "\n\tBaseType == \"{}\"".format('" "'.join(influencelist[influence]))
+				if class_:
+					base += "\n\tClass \"{}\"".format(class_)
+				if influence:
+					base += "\n\tHasInfluence {}".format(influence)
+				if other:
+					base += "\n\t{}".format("\n\t".join(sorted(other.split(','))))
+				if formatting.settings[type_]:
+					if formatting.settings[type_][0]:
+						getcustomsound(formatting.settings[type_], soundlist)
+						base += "\n\t{}".format("\n\t".join(sorted(formatting.settings[type_])))
+				else:
+					print("Missing type field {} ** {}".format(items[item], item))
+				base += "\n\tDisableDropSound True"
+				base += "\n\n"
+	return base
 
 
 def get_poe_path():
@@ -185,7 +214,6 @@ def main(leagues=('tmpstandard',)):
 #**************************************************************
 
 """.format(lookup_leagues[i][1], datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'))
-
 		buffer += gen_list(show.items, show.desc, soundlist)  # Always show these items
 		buffer += gen_list(hide.items, hide.desc, soundlist)  # Always hide these items
 		if lookup_leagues[i][0] not in ['st', 'hc']:
