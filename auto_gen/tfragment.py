@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/15/2019(m/d/y) 05:21:44 UTC from "tmpstandard" data
+# Created: 12/16/2019(m/d/y) 00:30:31 UTC from "tmpstandard" data
 
 desc = "Fragment Autogen"
 
@@ -9,27 +9,27 @@ items = {
 	"1 Chayula's Breachstone": {"baseexact": "Chayula's Breachstone", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Chayula's Charged Breachstone": {"baseexact": "Chayula's Charged Breachstone", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Chayula's Enriched Breachstone": {"baseexact": "Chayula's Enriched Breachstone", "class": "Map Fragments", "type": "fragment extremely high"},
-	"1 Chayula's Pure Breachstone": {"baseexact": "Chayula's Pure Breachstone", "class": "Map Fragments", "type": "fragment very high"},
+	"1 Chayula's Pure Breachstone": {"baseexact": "Chayula's Pure Breachstone", "class": "Map Fragments", "type": "fragment extremely high"},
 	"1 Divine Vessel": {"baseexact": "Divine Vessel", "class": "Map Fragments", "type": "fragment normal"},
 	"1 Eber's Key": {"baseexact": "Eber's Key", "class": "Map Fragments", "type": "fragment normal"},
 	"1 Esh's Breachstone": {"baseexact": "Esh's Breachstone", "class": "Map Fragments", "type": "fragment normal"},
-	"1 Esh's Charged Breachstone": {"baseexact": "Esh's Charged Breachstone", "class": "Map Fragments", "type": "fragment very high"},
+	"1 Esh's Charged Breachstone": {"baseexact": "Esh's Charged Breachstone", "class": "Map Fragments", "type": "fragment high"},
 	"1 Esh's Enriched Breachstone": {"baseexact": "Esh's Enriched Breachstone", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Esh's Pure Breachstone": {"baseexact": "Esh's Pure Breachstone", "class": "Map Fragments", "type": "fragment very high"},
-	"1 Fragment of Constriction": {"baseexact": "Fragment of Constriction", "class": "Map Fragments", "type": "fragment high"},
+	"1 Fragment of Constriction": {"baseexact": "Fragment of Constriction", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Fragment of Emptiness": {"baseexact": "Fragment of Emptiness", "class": "Map Fragments", "type": "fragment very high"},
-	"1 Fragment of Enslavement": {"baseexact": "Fragment of Enslavement", "class": "Map Fragments", "type": "fragment high"},
-	"1 Fragment of Eradication": {"baseexact": "Fragment of Eradication", "class": "Map Fragments", "type": "fragment high"},
-	"1 Fragment of Purification": {"baseexact": "Fragment of Purification", "class": "Map Fragments", "type": "fragment high"},
+	"1 Fragment of Enslavement": {"baseexact": "Fragment of Enslavement", "class": "Map Fragments", "type": "fragment very high"},
+	"1 Fragment of Eradication": {"baseexact": "Fragment of Eradication", "class": "Map Fragments", "type": "fragment very high"},
+	"1 Fragment of Purification": {"baseexact": "Fragment of Purification", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Fragment of Terror": {"baseexact": "Fragment of Terror", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Fragment of the Chimera": {"baseexact": "Fragment of the Chimera", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Fragment of the Hydra": {"baseexact": "Fragment of the Hydra", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Fragment of the Minotaur": {"baseexact": "Fragment of the Minotaur", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Fragment of the Phoenix": {"baseexact": "Fragment of the Phoenix", "class": "Map Fragments", "type": "fragment very high"},
-	"1 Inya's Key": {"baseexact": "Inya's Key", "class": "Map Fragments", "type": "fragment normal"},
+	"1 Inya's Key": {"baseexact": "Inya's Key", "class": "Map Fragments", "type": "fragment high"},
 	"1 Mortal Grief": {"baseexact": "Mortal Grief", "class": "Map Fragments", "type": "fragment normal"},
-	"1 Mortal Hope": {"baseexact": "Mortal Hope", "class": "Map Fragments", "type": "fragment high"},
-	"1 Mortal Ignorance": {"baseexact": "Mortal Ignorance", "class": "Map Fragments", "type": "fragment high"},
+	"1 Mortal Hope": {"baseexact": "Mortal Hope", "class": "Map Fragments", "type": "fragment very high"},
+	"1 Mortal Ignorance": {"baseexact": "Mortal Ignorance", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Mortal Rage": {"baseexact": "Mortal Rage", "class": "Map Fragments", "type": "fragment normal"},
 	"1 Offering to the Goddess": {"baseexact": "Offering to the Goddess", "class": "Map Fragments", "type": "fragment normal"},
 	"1 Sacrifice at Dawn": {"baseexact": "Sacrifice at Dawn", "class": "Map Fragments", "type": "fragment normal"},
@@ -46,7 +46,7 @@ items = {
 	"1 Timeless Templar Splinter": {"baseexact": "Timeless Templar Splinter", "class": "Map Fragments", "type": "fragment normal"},
 	"1 Timeless Vaal Emblem": {"baseexact": "Timeless Vaal Emblem", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Timeless Vaal Splinter": {"baseexact": "Timeless Vaal Splinter", "class": "Map Fragments", "type": "fragment normal"},
-	"1 Tul's Breachstone": {"baseexact": "Tul's Breachstone", "class": "Map Fragments", "type": "fragment normal"},
+	"1 Tul's Breachstone": {"baseexact": "Tul's Breachstone", "class": "Map Fragments", "type": "fragment high"},
 	"1 Tul's Charged Breachstone": {"baseexact": "Tul's Charged Breachstone", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Tul's Enriched Breachstone": {"baseexact": "Tul's Enriched Breachstone", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Tul's Pure Breachstone": {"baseexact": "Tul's Pure Breachstone", "class": "Map Fragments", "type": "fragment very high"},

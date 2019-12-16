@@ -1,12 +1,12 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 12/15/2019(m/d/y) 05:21:44 UTC from "tmpstandard" data
+# Created: 12/16/2019(m/d/y) 00:30:31 UTC from "tmpstandard" data
 
 desc = "Prophecy Autogen"
 
 # Base type : settings pair
 items = {
-	"1 A Call into the Void": {"prophecy": "A Call into the Void", "class": "Currency", "type": "currency low"},
+	"1 A Call into the Void": {"prophecy": "A Call into the Void", "class": "Currency", "type": "currency very high"},
 	"1 A Dishonourable Death": {"prophecy": "A Dishonourable Death", "class": "Currency", "type": "currency very high"},
 	"1 A Firm Foothold": {"prophecy": "A Firm Foothold", "class": "Currency", "type": "currency low"},
 	"1 A Forest of False Idols": {"prophecy": "A Forest of False Idols", "class": "Currency", "type": "currency low"},
@@ -25,7 +25,7 @@ items = {
 	"1 Anarchy's End II": {"prophecy": "Anarchy's End II", "class": "Currency", "type": "currency low"},
 	"1 Anarchy's End III": {"prophecy": "Anarchy's End III", "class": "Currency", "type": "currency low"},
 	"1 Anarchy's End IV": {"prophecy": "Anarchy's End IV", "class": "Currency", "type": "currency low"},
-	"1 Ancient Doom": {"prophecy": "Ancient Doom", "class": "Currency", "type": "currency high"},
+	"1 Ancient Doom": {"prophecy": "Ancient Doom", "class": "Currency", "type": "currency low"},
 	"1 Baptism by Death": {"prophecy": "Baptism by Death", "class": "Currency", "type": "currency low"},
 	"1 Battle Hardened": {"prophecy": "Battle Hardened", "class": "Currency", "type": "currency low"},
 	"1 Beyond Sight I": {"prophecy": "Beyond Sight I", "class": "Currency", "type": "currency low"},
@@ -47,7 +47,7 @@ items = {
 	"1 Custodians of Silence": {"prophecy": "Custodians of Silence", "class": "Currency", "type": "currency low"},
 	"1 Dance of Steel": {"prophecy": "Dance of Steel", "class": "Currency", "type": "currency low"},
 	"1 Dark Instincts": {"prophecy": "Dark Instincts", "class": "Currency", "type": "currency low"},
-	"1 Darktongue's Shriek": {"prophecy": "Darktongue's Shriek", "class": "Currency", "type": "currency very high"},
+	"1 Darktongue's Shriek": {"prophecy": "Darktongue's Shriek", "class": "Currency", "type": "currency extremely high"},
 	"1 Day of Sacrifice I": {"prophecy": "Day of Sacrifice I", "class": "Currency", "type": "currency low"},
 	"1 Day of Sacrifice II": {"prophecy": "Day of Sacrifice II", "class": "Currency", "type": "currency low"},
 	"1 Day of Sacrifice III": {"prophecy": "Day of Sacrifice III", "class": "Currency", "type": "currency low"},
@@ -129,13 +129,13 @@ items = {
 	"1 The Alchemist": {"prophecy": "The Alchemist", "class": "Currency", "type": "currency low"},
 	"1 The Ambitious Bandit I": {"prophecy": "The Ambitious Bandit I", "class": "Currency", "type": "currency low"},
 	"1 The Ambitious Bandit II": {"prophecy": "The Ambitious Bandit II", "class": "Currency", "type": "currency low"},
-	"1 The Ambitious Bandit III": {"prophecy": "The Ambitious Bandit III", "class": "Currency", "type": "currency low"},
+	"1 The Ambitious Bandit III": {"prophecy": "The Ambitious Bandit III", "class": "Currency", "type": "currency high"},
 	"1 The Apex Predator": {"prophecy": "The Apex Predator", "class": "Currency", "type": "currency low"},
 	"1 The Beautiful Guide": {"prophecy": "The Beautiful Guide", "class": "Currency", "type": "currency show"},
 	"1 The Beginning and the End": {"prophecy": "The Beginning and the End", "class": "Currency", "type": "currency low"},
-	"1 The Bishop's Legacy": {"prophecy": "The Bishop's Legacy", "class": "Currency", "type": "currency low"},
+	"1 The Bishop's Legacy": {"prophecy": "The Bishop's Legacy", "class": "Currency", "type": "currency very high"},
 	"1 The Bloody Flowers Redux": {"prophecy": "The Bloody Flowers Redux", "class": "Currency", "type": "currency low"},
-	"1 The Bowstring's Music": {"prophecy": "The Bowstring's Music", "class": "Currency", "type": "currency very high"},
+	"1 The Bowstring's Music": {"prophecy": "The Bowstring's Music", "class": "Currency", "type": "currency extremely high"},
 	"1 The Brothers of Necromancy": {"prophecy": "The Brothers of Necromancy", "class": "Currency", "type": "currency show"},
 	"1 The Brutal Enforcer": {"prophecy": "The Brutal Enforcer", "class": "Currency", "type": "currency low"},
 	"1 The Child of Lunaris": {"prophecy": "The Child of Lunaris", "class": "Currency", "type": "currency low"},
@@ -168,14 +168,14 @@ items = {
 	"1 The King and the Brambles": {"prophecy": "The King and the Brambles", "class": "Currency", "type": "currency low"},
 	"1 The King's Path": {"prophecy": "The King's Path", "class": "Currency", "type": "currency high"},
 	"1 The Lady in Black": {"prophecy": "The Lady in Black", "class": "Currency", "type": "currency low"},
-	"1 The Last Watch": {"prophecy": "The Last Watch", "class": "Currency", "type": "currency low"},
+	"1 The Last Watch": {"prophecy": "The Last Watch", "class": "Currency", "type": "currency high"},
 	"1 The Lost Maps": {"prophecy": "The Lost Maps", "class": "Currency", "type": "currency low"},
 	"1 The Lost Undying": {"prophecy": "The Lost Undying", "class": "Currency", "type": "currency low"},
-	"1 The Malevolent Witch": {"prophecy": "The Malevolent Witch", "class": "Currency", "type": "currency very high"},
+	"1 The Malevolent Witch": {"prophecy": "The Malevolent Witch", "class": "Currency", "type": "currency high"},
 	"1 The Misunderstood Queen": {"prophecy": "The Misunderstood Queen", "class": "Currency", "type": "currency very high"},
 	"1 The Mysterious Gift": {"prophecy": "The Mysterious Gift", "class": "Currency", "type": "currency low"},
 	"1 The Nest": {"prophecy": "The Nest", "class": "Currency", "type": "currency low"},
-	"1 The Nightmare Awakens": {"prophecy": "The Nightmare Awakens", "class": "Currency", "type": "currency high"},
+	"1 The Nightmare Awakens": {"prophecy": "The Nightmare Awakens", "class": "Currency", "type": "currency low"},
 	"1 The Petrified": {"prophecy": "The Petrified", "class": "Currency", "type": "currency low"},
 	"1 The Plaguemaw I": {"prophecy": "The Plaguemaw I", "class": "Currency", "type": "currency low"},
 	"1 The Plaguemaw II": {"prophecy": "The Plaguemaw II", "class": "Currency", "type": "currency low"},
