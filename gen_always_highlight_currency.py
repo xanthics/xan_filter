@@ -9,7 +9,7 @@ from item_config.challenges import gen_moo
 
 def create_always_highlight():
 	currencytab = "0"  # Update to the tabid(s) where you keep your currency
-	league = "Blight"
+	league = "Metamorph"
 	accountname = ""
 	cookies = {'POESESSID': ''}  # update to your session id, blank session id will use default(on) highlighting rules
 
@@ -79,7 +79,6 @@ def create_highlight_currency(currencytab, league, accountname, cookies, request
 
 		data = json.loads(req.content)
 		skipped = set()
-		print(data)
 		for item in data['items']:
 			if item['typeLine'] in currencyvals and currencyvals[item['typeLine']] < item['stackSize'] and currencyvals[item['typeLine']] != -1:
 				currency.pop(currency.index(item['typeLine']))
@@ -175,7 +174,12 @@ def create_highlight_challenge(accountname, league, cookies, requester):
 				"Essence": [{"baseexact": "Harmony of Souls"}, {"baseexact": "The Cacophony"}, {"baseexact": "Three Voices"}],
 				"Gem": [{"baseexact": "Volatile Power"}, {"baseexact": "Dialla's Subjugation"}, {"baseexact": "Gemcutter's Promise"}, {"baseexact": "The Summoner"}, {"baseexact": "The Cataclysm"}, {"baseexact": "Gift of the Gemling Queen"}, {"baseexact": "The Fox"}, {"baseexact": "The Skeleton"}, {"baseexact": "Grave Knowledge"}, {"baseexact": "The Realm"}, {"baseexact": "The Doppelganger"}],
 				"Map": [{"baseexact": "Rain Tempter"}, {"baseexact": "Boundless Realms"}, {"baseexact": "The Surveyor"}, {"baseexact": "Cartographer's Delight"}, {"baseexact": "Scholar of the Seas"}, {"baseexact": "The Dreamland"}, {"baseexact": "The Twilight Moon"}, {"baseexact": "The Wolf's Legacy"}, {"baseexact": "Treasure Hunter"}, {"baseexact": "The Encroaching Darkness"}],
-				"Ring": [{"baseexact": "The Metalsmith's Gift"}, {"baseexact": "Lantador's Lost Love"}, {"baseexact": "The Opulent"}, {"baseexact": "Glimmer of Hope"}, {"baseexact": "The Penitent"}, {"baseexact": "Hubris"}, {"baseexact": "Blind Venture"}, {"baseexact": "Prosperity"}]
+				"Ring": [{"baseexact": "The Metalsmith's Gift"}, {"baseexact": "Lantador's Lost Love"}, {"baseexact": "The Opulent"}, {"baseexact": "Glimmer of Hope"}, {"baseexact": "The Penitent"}, {"baseexact": "Hubris"}, {"baseexact": "Blind Venture"}, {"baseexact": "Prosperity"}],
+				"Corrupted Gem": [{"baseexact": "The Dragon's Heart"}, {"baseexact": "The Artist"}, {"baseexact": "Wealth and Power"}, {"baseexact": "The Skeleton"}, {"baseexact": "The Wilted Rose"}, {"baseexact": "The Rite of Elements"}, {"baseexact": "The Cataclysm"}, {"baseexact": "The Bones"}, {"baseexact": "Deathly Designs"}, {"baseexact": "Dialla's Subjugation"}, {"baseexact": "Volatile Power"}],
+				"Itemlevel 100 Item": [{"baseexact": "Imperial Legacy"}, {"baseexact": "The Celestial Stone"}, {"baseexact": "The Sacrifice"}, {"baseexact": "The Dapper Prodigy"}, {"baseexact": "Nook's Crown"}, {"baseexact": "Destined to Crumble"}, {"baseexact": "The Hale Heart"}, {"baseexact": "Perfection"}, {"baseexact": "The Opulent"}, {"baseexact": "The Golden Era"}, {"baseexact": "The Undisputed"}, {"baseexact": "The Jester"}, {"baseexact": "Merciless Armament"}, {"baseexact": "The Tyrant"}, {"baseexact": "The Spoiled Prince"}, {"baseexact": "The Archmage's Right Hand"}, {"baseexact": "The Road to Power"}, {"baseexact": "Void of the Elements"}],
+				"Jewel": [{"baseexact": "The Mountain"}, {"baseexact": "Azyran's Reward"}, {"baseexact": "The Garish Power"}, {"baseexact": "The Eye of the Dragon"}, {"baseexact": "The Primordial"}, {"baseexact": "The Endurance"}, {"baseexact": "Shard of Fate"}],
+				"Prophecy": [{"baseexact": "Friendship"}, {"baseexact": "The Side Quest"}, {"baseexact": "Vile Power"}, {"baseexact": "Immortal Resolve"}, {"baseexact": "The Valley of Steel Boxes"}, {"baseexact": "The Jeweller's Boon"}, {"baseexact": "The Mad King"}, {"baseexact": "The Iron Bard"}, {"baseexact": "Beauty Through Death"}],
+				"Rare Item": [{"baseexact": "Nook's Crown"}, {"baseexact": "Destined to Crumble"}, {"baseexact": "The Hale Heart"}, {"baseexact": "Perfection"}, {"baseexact": "The Opulent"}, {"baseexact": "Dark Dreams"}, {"baseexact": "Lingering Remnants"}, {"baseexact": "Lantador's Lost Love"}, {"baseexact": "The Warden"}, {"baseexact": "The Lover"}, {"baseexact": "The Explorer"}, {"baseexact": "The Trial"}, {"baseexact": "Left to Fate"}, {"baseexact": "Call to the First Ones"}]
 			}
 		}
 	}
