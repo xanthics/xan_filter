@@ -21,8 +21,7 @@ items = {
 	#"0 corrupted shield": {"class": "Shield", "other": ["Corrupted True", "Rarity Normal", "ItemLevel >= 60"], "type": "ignore"},
 	#"0 Crafting helm": {"class": "Helmets", "other": ["Rarity Normal", "ItemLevel >= 84"], "type": "show normal"},
 
-	"7 Elder Item": {'other': ["ElderItem True"], "type": "rare low"},
-	"7 Shaper Item": {'other': ["ShaperItem True"], "type": "rare low"},
+	"7 Influenced Item": {'other': ["HasInfluence Elder Shaper Crusader Hunter Redeemer Warlord"], "type": "rare low"},
 	"7 Fractured Item": {'other': ["FracturedItem True"], "type": "rare low"},
 	"7 Synthesised Item": {'other': ["SynthesisedItem True"], "type": "rare low"},
 

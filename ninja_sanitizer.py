@@ -24,7 +24,7 @@ def fixmissing(ninja_list, defaults, league, name):
 # Helper function to fix missing base data
 def fixmissingbases(bases, league):
 	if set(bases.keys()) - set(basedefaults.keys()):
-		joinstr = ': {\n\t"Elder": {},\n\t"Shaper": {},\n\t"Normal": {}\n},\n'
+		joinstr = ': {\n\t"Elder": {},\n\t"Shaper": {},\n\t"Crusader": {},\n\t"Hunter": {},\n\t"Redeemer": {},\n\t"Warlord": {},\n\t"Normal": {}\n},\n'
 		vals = joinstr.join([str(x) for x in sorted(set(bases.keys()) - set(basedefaults.keys()), reverse=True)])
 		vals += joinstr
 		print(f"{league} missing default base tiers:\n{vals}")
@@ -34,7 +34,7 @@ def fixmissingbases(bases, league):
 	goodbases = highbases()
 	missingstr = ""
 	for level in sorted(bases, reverse=True):
-		for variant in ['Elder', 'Shaper', None]:
+		for variant in goodbases:
 			if variant not in basedefaults[level]:
 				print(f'Missing base default for {level}\n"{variant}": {{}}')
 			if variant not in bases[level]:

@@ -977,8 +977,8 @@ def genrareshighlighttiered():
 
 	ret = {}
 	# Bases that are always shown when a certain ilvl threshold is reached.  Highlighting rules still followed
-	#alwaysshow = {'Armour': 73, 'Accessory': 68, 'Other': 1, 'Wand': 72}
-	alwaysshow = {'Boots': 86, 'Accessory': 84, 'Other': 1}
+	alwaysshow = {'Armour': 73, 'Accessory': 68, 'Other': 1, 'Wand': 72}
+	#alwaysshow = {'Boots': 86, 'Accessory': 84, 'Other': 1}
 	# list of bases that should be ignored, even for always show
 	bad_bases = [
 		'Gold Amulet',
@@ -1004,17 +1004,21 @@ def genrareshighlighttiered():
 	]
 	# point penalty to highlighting for different types of items.  Lower is better
 	type_penalty = {
-		'ElderItem': 0,
-		'ShaperItem': 0,
-		'FracturedItem': 0,
-		'SynthesisedItem': 0,
+		'Elder': 0,
+		'Shaper': 0,
+		'Crusader': 0,
+		'Hunter': 0,
+		'Redeemer': 0,
+		'Warlord': 0,
 		None: 2
 	}
 	type_pen_idx = [
-		'ElderItem',
-		'ShaperItem',
-		'FracturedItem',
-		'SynthesisedItem',
+		'Elder',
+		'Shaper',
+		'Crusader',
+		'Hunter',
+		'Redeemer',
+		'Warlord',
 		None
 	]
 	# maximum value to show for non-special drops
@@ -1067,9 +1071,10 @@ def genrareshighlighttiered():
 					continue
 				cur = bases[category][vals][i]
 				for typ in type_penalty:
-					if typ in ['ElderItem', 'ShaperItem'] and (bases[category][vals][i]['name'] == 'Stygian Vise' or
-															   "Other" == vals or
-															   "Talisman" in bases[category][vals][i]['name']):
+					if typ in ['Elder', 'Shaper', 'Crusader', 'Hunter', 'Redeemer', 'Warlord'] \
+							and (bases[category][vals][i]['name'] == 'Stygian Vise'
+								 or "Other" == vals
+								 or "Talisman" in bases[category][vals][i]['name']):
 						continue
 					# generate all rules for current item type
 					rules = {}
@@ -1091,30 +1096,31 @@ def genrareshighlighttiered():
 						# if rule is the same as default highlight rule, skip
 						if typ and hl == 'rare low':
 							break
-						vstr = '{}{}'.format(type_pen_idx.index(typ), 86-tier)
+						vstr = '{} {}'.format(86-tier, type_pen_idx.index(typ))
 						if s and not typ:
 							if tier < ilvl:
 								tier = ilvl
-							vstr = '{}{:03d}'.format(type_pen_idx.index(typ), 86-tier)
+							vstr = '{:03d} {}'.format(86-tier, type_pen_idx.index(typ))
 						idx = '{} {} {}'.format(vstr, cur['name'], typ)
 						if hl == phl:
 							del ret[pidx]
 						ret[idx] = {"baseexact": cur['name'], "other": ["ItemLevel >= {}".format(tier)], "type": hl}
 						if typ:
-							ret[idx]['other'].append('{} True'.format(typ))
+							ret[idx]['influence'] = '{}'.format(typ)
 						# if item is 'always show' with rules, and item type is normal, and tier(ilvl) = show ilvl, break out of loop as we don't need lower tiers
 						if s and not typ and tier == ilvl:
 							break
 						# keep track of the rules we just created
 						pidx = idx
 						phl = hl
-
+#	from pprint import pprint
+#	pprint(ret)
 	return ret
 
 
 # Returns a list of all t0 and t1 bases
 def highbases():
-	ret = {"Elder": [], "Shaper": [], None: []}
+	ret = {"Elder": [], "Shaper": [], 'Crusader': [], 'Hunter': [], 'Redeemer': [], 'Warlord': [], None: []}
 	# item bases that cannot naturally drop
 	cannotdrop = ['Ruby Amulet', 'Golden Obi', 'Jet Amulet', 'Golden Hoop', 'Ornate Quiver', 'Jet Ring']
 	for typ in bases:
@@ -1125,6 +1131,10 @@ def highbases():
 					if "Other" != meta and item['name'] not in ["Stygian Vise"]:
 						ret['Elder'].append(item['name'])
 						ret['Shaper'].append(item['name'])
+						ret['Crusader'].append(item['name'])
+						ret['Hunter'].append(item['name'])
+						ret['Redeemer'].append(item['name'])
+						ret['Warlord'].append(item['name'])
 	return ret
 
 

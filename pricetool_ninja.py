@@ -597,7 +597,7 @@ def gen_bases(bases_list, league, curvals):
 		outbuff += '''{}\ndesc = "Bases"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
 		count = 0
 		for level in sorted(bases_list, reverse=True):
-			for variant in ['Shaper', 'Elder', None]:
+			for variant in ['Shaper', 'Elder', 'Crusader', 'Hunter', 'Redeemer', 'Warlord', None]:
 				if variant in bases_list[level]:
 					for ignoreilvl in ['Cobalt Jewel', 'Crimson Jewel', 'Viridian Jewel']:
 						if ignoreilvl in bases_list[level][variant]:
@@ -606,9 +606,9 @@ def gen_bases(bases_list, league, curvals):
 						value = baseclassify(bases_list[level][variant][baseType], curvals)
 						if value:
 							if level == 86:
-								outbuff += '\t"{4} {2}{0}": {{"baseexact": "{0}", "other": [{1}"ItemLevel >= {3}"], "type": "{5}"}},\n'.format(baseType, '"{}Item True", '.format(variant) if variant else '', variant + ' ' if variant else '', level, count, value)
+								outbuff += '\t"{4} {2}{0}": {{"baseexact": "{0}", "other": ["ItemLevel >= {3}"], {1}"type": "{5}"}},\n'.format(baseType, '"influence": "{}", '.format(variant) if variant else '', variant + ' ' if variant else '', level, count, value)
 							else:
-								outbuff += '\t"{4} {2}{0}": {{"baseexact": "{0}", "other": [{1}"ItemLevel {3}"], "type": "{5}"}},\n'.format(baseType, '"{}Item True", '.format(variant) if variant else '', variant + ' ' if variant else '', level, count, value)
+								outbuff += '\t"{4} {2}{0}": {{"baseexact": "{0}", "other": ["ItemLevel {3}"], {1}"type": "{5}"}},\n'.format(baseType, '"influence": "{}", '.format(variant) if variant else '', variant + ' ' if variant else '', level, count, value)
 			count += 1
 		outbuff += '\n}\n'
 	with open('auto_gen\\{}bases.py'.format(name), 'w', encoding='utf-8') as f:
@@ -653,7 +653,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 
 	# Minimum number of item that must exist on poe.ninja for it to be considered
 	mincount = 8
-	# items that always show for elder/shaper and can show for normal
+	# items that always show for influenced and can show for normal
 	goodbases = highbases()
 
 	for league in leagues:
