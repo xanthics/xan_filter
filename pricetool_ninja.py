@@ -638,7 +638,8 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		'UniqueFlask',
 		'UniqueWeapon',
 		'UniqueArmour',
-		'UniqueAccessory'
+		'UniqueAccessory',
+		'Watchstone'
 	]
 
 	leaguelookup = {
@@ -683,24 +684,22 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 			data = req.json(encoding='utf-8')
 
 			if key == 'Currency':
-				for i in data:
-					for ii in data[i]:
-						if 'chaosEquivalent' in ii:
-							pc = ii['pay']['count'] if ii['pay'] else 0
-							rc = ii['receive']['count'] if ii['receive'] else 0
-							if pc + rc < mincount:
-								continue
-							currency[ii['currencyTypeName']] = ii['chaosEquivalent']
+				for ii in data['lines']:
+					if 'chaosEquivalent' in ii:
+						pc = ii['pay']['count'] if ii['pay'] else 0
+						rc = ii['receive']['count'] if ii['receive'] else 0
+						if pc + rc < mincount:
+							continue
+						currency[ii['currencyTypeName']] = ii['chaosEquivalent']
 
 			elif key == 'Fragment':
-				for i in data:
-					for ii in data[i]:
-						if 'chaosEquivalent' in ii:
-							pc = ii['pay']['count'] if ii['pay'] else 0
-							rc = ii['receive']['count'] if ii['receive'] else 0
-							if pc + rc < mincount:
-								continue
-							fragments[ii['currencyTypeName']] = ii['chaosEquivalent']
+				for ii in data['lines']:
+					if 'chaosEquivalent' in ii:
+						pc = ii['pay']['count'] if ii['pay'] else 0
+						rc = ii['receive']['count'] if ii['receive'] else 0
+						if pc + rc < mincount:
+							continue
+						fragments[ii['currencyTypeName']] = ii['chaosEquivalent']
 
 			elif key == 'SkillGem':
 				for i in data['lines']:
@@ -719,95 +718,87 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 					skillgem[i['gemLevel']][i['gemQuality']][i['corrupted']][i['name']] = i['chaosValue']
 
 			elif key == 'BaseType':
-				for i in data:
-					for ii in data[i]:
-						if ii['baseType'].startswith('Superior ') or \
-								(ii['count'] < mincount and ii['variant'] and ii['baseType'] not in goodbases[ii['variant']]) or \
-								(not ii['variant'] and (ii['baseType'] not in goodbases[ii['variant']] or ii['count'] < mincount)):
-							continue
-						if ii['levelRequired'] not in bases:
-							bases[ii['levelRequired']] = {}
-						if ii['variant'] not in bases[ii['levelRequired']]:
-							bases[ii['levelRequired']][ii['variant']] = {}
-						bases[ii['levelRequired']][ii['variant']][ii['baseType']] = ii['chaosValue']
+				for ii in data['lines']:
+					if ii['baseType'].startswith('Superior ') or \
+							(ii['count'] < mincount and ii['variant'] and ii['baseType'] not in goodbases[ii['variant']]) or \
+							(not ii['variant'] and (ii['baseType'] not in goodbases[ii['variant']] or ii['count'] < mincount)):
+						continue
+					if ii['levelRequired'] not in bases:
+						bases[ii['levelRequired']] = {}
+					if ii['variant'] not in bases[ii['levelRequired']]:
+						bases[ii['levelRequired']][ii['variant']] = {}
+					bases[ii['levelRequired']][ii['variant']][ii['baseType']] = ii['chaosValue']
 
 			elif key in ['Resonator', 'Fossil']:
-				for i in data:
-					for ii in data[i]:
-						if ii['count'] < mincount:
-							continue
-						essences[ii['name']] = ii['chaosValue']
+				for ii in data['lines']:
+					if ii['count'] < mincount:
+						continue
+					essences[ii['name']] = ii['chaosValue']
 
 			elif key == 'HelmetEnchant':
-				for i in data:
-					for ii in data[i]:
-						if ii['count'] < mincount or ii['name'] not in helmnames:
-							if not ii['name'].startswith('Allocates') and ii['name'] not in helmnames:
-								print(repr(ii['name']))
-							continue
-						helmenchants[ii['name']] = ii['chaosValue']
+				for ii in data['lines']:
+					if ii['count'] < mincount or ii['name'] not in helmnames:
+						if not ii['name'].startswith('Allocates') and ii['name'] not in helmnames:
+							print(repr(ii['name']))
+						continue
+					helmenchants[ii['name']] = ii['chaosValue']
 
 			elif key == 'Prophecy':
-				for i in data:
-					for ii in data[i]:
-						if ii['count'] < mincount:
-							continue
-						prophecy[ii['name']] = ii['chaosValue']
+				for ii in data['lines']:
+					if ii['count'] < mincount:
+						continue
+					prophecy[ii['name']] = ii['chaosValue']
 
 			elif key == 'Oil':
-				for i in data:
-					for ii in data[i]:
-						if ii['count'] < mincount:
-							continue
-						challenges[ii['name']] = ii['chaosValue']
+				for ii in data['lines']:
+					if ii['count'] < mincount:
+						continue
+					challenges[ii['name']] = ii['chaosValue']
 
 			elif key == 'DivinationCard':
-				for i in data:
-					for ii in data[i]:
-						if ii['count'] < mincount:
-							continue
-						divs[ii['name']] = ii['chaosValue']
+				for ii in data['lines']:
+					if ii['count'] < mincount:
+						continue
+					divs[ii['name']] = ii['chaosValue']
 
 			elif key == 'Incubator':
-				for i in data:
-					for ii in data[i]:
-						if ii['count'] < mincount:
-							continue
-						incubator[ii['name']] = ii['chaosValue']
-#						challenges[ii['name']] = ii['chaosValue']
+				for ii in data['lines']:
+					if ii['count'] < mincount:
+						continue
+					incubator[ii['name']] = ii['chaosValue']
+#					challenges[ii['name']] = ii['chaosValue']
 
 			elif key == 'Essence':
-				for i in data:
-					for ii in data[i]:
-						if ii['count'] < mincount:
-							continue
-						essences[ii['name']] = ii['chaosValue']
+				for ii in data['lines']:
+					if ii['count'] < mincount:
+						continue
+					essences[ii['name']] = ii['chaosValue']
 
 			elif key == 'Scarab':
-				for i in data:
-					for ii in data[i]:
-						if ii['count'] < mincount:
-							continue
-						scarab[ii['name']] = ii['chaosValue']
+				for ii in data['lines']:
+					if ii['count'] < mincount:
+						continue
+					scarab[ii['name']] = ii['chaosValue']
 
-			elif 'Unique' in key:
-				for i in data:
-					for ii in data[i]:
-						# Special rule so that there is a value for tabula when calculating certain div card values
-						if ii['name'] == 'Tabula Rasa':
-							uniques[ii['name']] = {'baseType': ii['baseType'], 'chaosValue': ii['chaosValue']}
-							continue
-						if ii['count'] < mincount:
-							continue
-						if ('links' in ii and ii['links']) or 'relic' in ii['icon']:
-							continue
-						if 'Synthesised' in ii['baseType']:
-							ii['baseType'] = ii['baseType'][12:]
-						# Some uniques can have multiple variants
-						if ii['name'] in uniques:
-							while ii['name'] in uniques:
-								ii['name'] += "§"
+			elif 'Unique' in key or key == 'Watchstone':
+				for ii in data['lines']:
+					if key == 'Watchstone' and not ii['baseType']:
+						ii['baseType'] = 'Ivory Watchstone'
+					# Special rule so that there is a value for tabula when calculating certain div card values
+					if ii['name'] == 'Tabula Rasa':
 						uniques[ii['name']] = {'baseType': ii['baseType'], 'chaosValue': ii['chaosValue']}
+						continue
+					if ii['count'] < mincount:
+						continue
+					if ('links' in ii and ii['links']) or 'relic' in ii['icon']:
+						continue
+					if 'Synthesised' in ii['baseType']:
+						ii['baseType'] = ii['baseType'][12:]
+					# Some uniques can have multiple variants
+					if ii['name'] in uniques:
+						while ii['name'] in uniques:
+							ii['name'] += "§"
+					uniques[ii['name']] = {'baseType': ii['baseType'], 'chaosValue': ii['chaosValue']}
 
 			else:
 				print('Unhandled key: "{}"'.format(key))
