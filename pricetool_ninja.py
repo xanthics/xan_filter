@@ -641,7 +641,7 @@ def gen_bases(bases_list, league, curvals):
 
 # Entry point for getting price data from poe.ninja
 def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore')):
-#	leagues = ["Metamorph"]
+#	leagues = ["Standard"]
 
 	keys = [
 		'Oil',
@@ -669,8 +669,8 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 	leaguelookup = {
 		"Standard": "Standard",
 		"Hardcore": "Hardcore",
-		"tmpstandard": "Metamorph",
-		"tmphardcore": "Hardcore Metamorph",
+		"tmpstandard": "Delirium",
+		"tmphardcore": "Hardcore Delirium",
 	}
 
 	os.environ['NO_PROXY'] = 'poe.ninja'
