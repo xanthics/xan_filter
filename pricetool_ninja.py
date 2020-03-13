@@ -57,12 +57,20 @@ def currencyclassify(cur, val, curvals, stacks=1):
 	# list of currency to always give a border to if their price is low
 	ah = [
 		"Splinter of Chayula", "Splinter of Xoph", "Splinter of Uul-Netol", "Splinter of Tul", "Splinter of Esh",
-		"Timeless Eternal Empire Splinter", "Timeless Karui Splinter", "Timeless Maraketh Splinter", "Timeless Templar Splinter", "Timeless Vaal Splinter"
+		"Timeless Eternal Empire Splinter", "Timeless Karui Splinter", "Timeless Maraketh Splinter", "Timeless Templar Splinter", "Timeless Vaal Splinter",
+		"Simulacrum Splinter",
+		"Essence of Horror", "Essence of Delirium", "Essence of Hysteria", "Essence of Insanity", "Remnant of Corruption",
+		'Abrasive Catalyst', 'Fertile Catalyst', "Harbinger's Orb", 'Imbued Catalyst', 'Intrinsic Catalyst', 'Prismatic Catalyst', 'Tempering Catalyst', 'Turbulent Catalyst',
+		"Fine Delirium Orb", "Singular Delirium Orb", "Thaumaturge's Delirium Orb", "Blacksmith's Delirium Orb", "Armoursmith's Delirium Orb", "Cartographer's Delirium Orb",
+		"Jeweller's Delirium Orb", "Abyssal Delirium Orb", "Decadent Delirium Orb", "Foreboding Delirium Orb", "Obscured Delirium Orb", "Whispering Delirium Orb", "Fragmented Delirium Orb",
+		"Skittering Delirium Orb", "Fossilised Delirium Orb", "Portentous Delirium Orb", "Diviner's Delirium Orb", "Delirium Orb", "Primal Delirium Orb", "Imperial Delirium Orb",
+		"Timeless Delirium Orb", "Blighted Delirium Orb", "Amorphous Delirium Orb"
 	]
 	ah.extend(always_highlight.auto_ah)
+	ah_list = ['Fossil', 'Resonator', 'Deafening', 'Shrieking', 'Screaming']
 	if cur in ["Mirror of Kalandra", "Mirror Shard"]:
 		tier = 'currency mirror'
-	elif ((cur in ah) or 'Fossil' in cur) and val < curvals['normal']:
+	elif ((cur in ah) or any(substring in ah for substring in ah_list)) and val < curvals['normal']:
 		tier = 'currency show'
 	elif val >= curvals['extremely']:
 		tier = 'currency extremely high'
@@ -80,6 +88,10 @@ def currencyclassify(cur, val, curvals, stacks=1):
 		#tier = 'currency very low'
 		tier = 'hide'
 
+	if tier == 'hide':
+		if stacks > 1:
+			return "$ {0}\": {{\"baseexact\": \"{0}\", 'other': ['StackSize >= {2}', 'AreaLevel > 67'], \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier, stacks)
+		return "1 {0}\": {{\"baseexact\": \"{0}\", 'other': ['AreaLevel > 67'], \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier)
 	if stacks > 1:
 		return "$ {0}\": {{\"baseexact\": \"{0}\", 'other': ['StackSize >= {2}'], \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier, stacks)
 	return "1 {0}\": {{\"baseexact\": \"{0}\", \"class\": \"Currency\", \"type\": \"{1}\"}}".format(cur, tier)
@@ -88,10 +100,10 @@ def currencyclassify(cur, val, curvals, stacks=1):
 # given a league grouped list of currency determine all unique entries and then output for each league
 def gen_currency(currency_list, league, curvals):
 
-	stackable = ['Orb', 'Splinter', 'Chisel', 'Coin', 'Bauble', 'Sextant', 'Shard', 'Whetstone', 'Scroll', 'Scrap']
+	stackable = ['Orb', 'Splinter', 'Chisel', 'Coin', 'Bauble', 'Sextant', 'Shard', 'Whetstone', 'Scroll', 'Scrap', "Essence", 'Fossil', 'Resonator']
 
 	shards = {'Binding Shard': 'Orb of Binding', 'Horizon Shard': 'Orb of Horizons', 'Harbinger\'s Shard': 'Harbinger\'s Orb', 'Engineer\'s Shard': 'Engineer\'s Orb', 'Ancient Shard': 'Ancient Orb',
-	          'Regal Shard': 'Regal Orb', 'Alchemy Shard': 'Orb of Alchemy', 'Alteration Shard': 'Orb of Alteration', 'Transmutation Shard': 'Orb of Transmutation', 'Scroll Fragment': 'Scroll of Wisdom',
+	          'Regal Shard': 'Regal Orb', 'Alchemy Shard': 'Orb of Alchemy', 'Alteration Shard': 'Orb of Alteration', 'Transmutation Shard': 'Orb of Transmutation', #'Scroll Fragment': 'Scroll of Wisdom',
 			  'Chaos Shard': 'Chaos Orb', 'Exalted Shard': 'Exalted Orb', 'Annulment Shard': 'Orb of Annulment', 'Mirror Shard': 'Mirror of Kalandra'}
 
 	for s in shards:
@@ -99,12 +111,14 @@ def gen_currency(currency_list, league, curvals):
 			currency_list[s] = currency_list[shards[s]] / 20
 
 	curval = '''{}\ndesc = "Currency Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
-
+	curval += '\t"000 Scroll Fragment": {"baseexact": "Scroll Fragment", "class": "Currency", "type": "hide"},\n' # Special rule to always hide scroll fragments
 	for cur in sorted(currency_list):
 		if any(stack in cur for stack in stackable):
 			val = currency_list[cur]
 			retstr = currencyclassify(cur, val, curvals)
 			curval += '\t"{},\n'.format(retstr)
+			if "AreaLevel" in retstr:
+				curval += '\t"1{},\n'.format(retstr.replace("AreaLevel >", "AreaLevel <=").replace('"hide"', '"currency show"'))
 
 			prevval = retstr[-20:]
 			count = 9
@@ -113,6 +127,12 @@ def gen_currency(currency_list, league, curvals):
 				maxval = 1000
 			elif "Splinter" in cur:
 				maxval = 99
+			elif "Essence" in cur:
+				maxval = 9
+			elif "Fossil" in cur:
+				maxval = 20
+			elif "Resonator" in cur:
+				maxval = 10
 			elif cur in ["Orb of Transmutation", "Scroll of Wisdom", "Portal Scroll", "Armourer's Scrap", "Orb of Regret"]:
 				maxval = 40
 			elif cur in ["Orb of Augmentation", "Orb of Scouring", "Silver Coin"]:
@@ -123,12 +143,16 @@ def gen_currency(currency_list, league, curvals):
 				retstr = currencyclassify(cur, currency_list[cur] * i, curvals, i)
 				if prevval != retstr[-20:]:
 					curval += '\t"{},\n'.format(retstr.replace('$', '{:02}'.format(count)))
+					if "AreaLevel" in retstr:
+						curval += '\t"1{},\n'.format(retstr.replace('$', '{:02}'.format(count)).replace("AreaLevel >", "AreaLevel <=").replace('"hide"', '"currency show"'))
 					count -= 1
 					prevval = retstr[-20:]
 
 		else:
 			retstr = currencyclassify(cur, currency_list[cur], curvals)
 			curval += '\t"{},\n'.format(retstr)
+			if "AreaLevel" in retstr:
+				curval += '\t"1{},\n'.format(retstr.replace("AreaLevel >", "AreaLevel <=").replace('"hide"', '"currency show"'))
 
 	curval += u'}\n'
 
@@ -508,7 +532,7 @@ def divclassify(cur, val, curvals):
 		tier = 'divination high'
 	elif cur in ah and val < curvals['normal']:
 		tier = 'divination show'
-	elif val < curvals['normal']:
+	elif val <= curvals['normal']:
 		tier = 'divination low'
 	else:
 		return
@@ -705,7 +729,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 				for i in data['lines']:
 					if i['count'] < mincount:
 						continue
-					if i['name'] in ['Enlighten Support', 'Enhance Support', 'Empower Support']:
+					if i['name'] in ['Enlighten Support', 'Enhance Support', 'Empower Support'] or 'Awakened' in i['name']:
 						i['gemQuality'] = 0
 #					if i['name'] in ['Deathmark', 'Shockwave'] and 'Support' not in i['name']:
 #						i['name'] += ' Support'
@@ -733,7 +757,8 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 				for ii in data['lines']:
 					if ii['count'] < mincount:
 						continue
-					essences[ii['name']] = ii['chaosValue']
+#					essences[ii['name']] = ii['chaosValue']
+					currency[ii['name']] = ii['chaosValue']
 
 			elif key == 'HelmetEnchant':
 				for ii in data['lines']:
@@ -766,13 +791,16 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 					if ii['count'] < mincount:
 						continue
 					incubator[ii['name']] = ii['chaosValue']
-#					challenges[ii['name']] = ii['chaosValue']
 
 			elif key == 'Essence':
 				for ii in data['lines']:
 					if ii['count'] < mincount:
 						continue
-					essences[ii['name']] = ii['chaosValue']
+#					essences[ii['name']] = ii['chaosValue']
+					if any(substring in ii['name'] for substring in ['Remnant of', "Essence of Horror", "Essence of Delirium", "Essence of Hysteria", "Essence of Insanity", 'Deafening', 'Shrieking', 'Screaming']):
+						currency[ii['name']] = ii['chaosValue']
+					else:
+						currency[ii['name']] = 1/17
 
 			elif key == 'Scarab':
 				for ii in data['lines']:
@@ -781,8 +809,14 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 					scarab[ii['name']] = ii['chaosValue']
 
 			elif 'Unique' in key or key == 'Watchstone':
+				watchcount = {}
 				for ii in data['lines']:
 					if key == 'Watchstone' and not ii['baseType']:
+						if ii['name'] in watchcount and ii['variant'] < watchcount[ii['name']]:
+							continue
+						if ii['name'] in uniques:
+							del uniques[ii['name']]
+						watchcount[ii['name']] = ii['variant']
 						ii['baseType'] = 'Ivory Watchstone'
 					# Special rule so that there is a value for tabula when calculating certain div card values
 					if ii['name'] == 'Tabula Rasa':

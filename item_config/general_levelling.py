@@ -10,14 +10,14 @@ desc = "leveling items that are worth seeing"
 # settings supports the following: 'base' (BaseType), 'class' (Class), 'other' (settings unique to that item)
 #  'type' (Mandatory, indexes settings)
 items = {
-	"0 Boots (Movespeed)": {"class": "Boots", "other": ["Rarity Magic", "ItemLevel <= 20"], "type": "leveling normal"},
+	"0 Boots (Movespeed)": {"class": "Boots", "other": ["Rarity Magic", "AreaLevel <= 20"], "type": "leveling normal"},
 
-	"1 linked 0-20": {"other": ["Rarity <= Magic", "DropLevel >= 0", "ItemLevel <= 20", "LinkedSockets >= 3"], "type": "leveling normal"},
-	"1 linked 15-40": {"other": ["Rarity <= Magic", "DropLevel >= 15", "ItemLevel <= 40", "LinkedSockets > 3"], "type": "leveling normal"},
-	"1 linked 25-50": {"other": ["Rarity <= Magic", "DropLevel >= 25", "ItemLevel <= 50", "LinkedSockets > 3"], "type": "leveling normal"},
-	"1 linked 40-65": {"other": ["Rarity <= Magic", "DropLevel >= 40", "ItemLevel <= 65", "LinkedSockets > 3"], "type": "leveling normal"},
+	"1 linked 0-20": {"other": ["Rarity <= Magic", "DropLevel >= 0", "AreaLevel <= 20", "LinkedSockets >= 3"], "type": "leveling normal"},
+	"1 linked 15-40": {"other": ["Rarity <= Magic", "DropLevel >= 15", "AreaLevel <= 40", "LinkedSockets > 3"], "type": "leveling normal"},
+	"1 linked 25-50": {"other": ["Rarity <= Magic", "DropLevel >= 25", "AreaLevel <= 50", "LinkedSockets > 3"], "type": "leveling normal"},
+	"1 linked 40-65": {"other": ["Rarity <= Magic", "DropLevel >= 40", "AreaLevel <= 65", "LinkedSockets > 3"], "type": "leveling normal"},
 
-	"1 Sceptre/Wand linked 15-40": {"class": "Sceptres\" \"Wands", "other": ["Rarity <= Magic", "ItemLevel <= 40", "LinkedSockets >= 3"], "type": "leveling normal"},
+	"1 Sceptre/Wand linked 15-40": {"class": "Sceptres\" \"Wands", "other": ["Rarity <= Magic", "AreaLevel <= 40", "LinkedSockets >= 3"], "type": "leveling normal"},
 
 #	"1 Sceptre/Wand linked 15-40": {"class": "Sceptres\" \"Wands", "other": ["Rarity <= Magic", "DropLevel >= 15", "ItemLevel <= 40", "LinkedSockets >= 3"], "type": "leveling normal"},
 #	"1 Sceptre/Wand linked 25-50": {"class": "Sceptres\" \"Wands", "other": ["Rarity <= Magic", "DropLevel >= 25", "ItemLevel <= 50", "LinkedSockets >= 3"], "type": "leveling normal"},

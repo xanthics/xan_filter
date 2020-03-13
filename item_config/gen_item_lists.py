@@ -866,6 +866,9 @@ bases = {
 			{'drop': 100, 'base': 'Jewel', 'name': 'Cobalt Jewel', 'tier': 0},
 			{'drop': 100, 'base': 'Jewel', 'name': 'Crimson Jewel', 'tier': 0},
 			{'drop': 100, 'base': 'Jewel', 'name': 'Viridian Jewel', 'tier': 0},
+			{'drop': 100, 'base': 'Jewel', 'name': 'Large Cluster Jewel', 'tier': 0},
+			{'drop': 100, 'base': 'Jewel', 'name': 'Medium Cluster Jewel', 'tier': 0},
+			{'drop': 100, 'base': 'Jewel', 'name': 'Small Cluster Jewel', 'tier': 0},
 			{'drop': 100, 'base': 'Abyss Jewel', 'name': 'Searching Eye Jewel', 'tier': 0},
 			{'drop': 100, 'base': 'Abyss Jewel', 'name': 'Murderous Eye Jewel', 'tier': 0},
 			{'drop': 100, 'base': 'Abyss Jewel', 'name': 'Hypnotic Eye Jewel', 'tier': 0},
@@ -917,17 +920,17 @@ def genraresleveling(flags='All', overlevel=3, maxlevel=67, alwayshighlight=('Ac
 				for i in range(l):
 					cur = bases[category][vals][i]
 					if cur['drop'] <= maxlevel:
-						ret[cur['name']] = {"baseexact": cur['name'], "other": ["ItemLevel <= {}".format(maxlevel)], "type": "levelling rare normal"}
+						ret[cur['name']] = {"baseexact": cur['name'], "other": ["AreaLevel <= {}".format(maxlevel)], "type": "levelling rare normal"}
 			elif flags == 'All' or set(f).intersection(set(flags)) or set(f).intersection(set(alwayshighlight)):
 				for i in range(l-1):
 					cur = bases[category][vals][i]
 					if cur['drop'] <= maxlevel:
 						cap = bases[category][vals][i+1]['drop'] + overlevel
 						cap = cap if cap < maxlevel else maxlevel
-						ret[cur['name']] = {"baseexact": cur['name'], "other": ["ItemLevel <= {}".format(cap)], "type": "levelling rare normal"}
+						ret[cur['name']] = {"baseexact": cur['name'], "other": ["AreaLevel <= {}".format(cap)], "type": "levelling rare normal"}
 				cur = bases[category][vals][l-1]
 				if cur['drop'] <= maxlevel:
-					ret[cur['name']] = {"baseexact": cur['name'], "other": ["ItemLevel <= {}".format(maxlevel)], "type": "levelling rare normal"}
+					ret[cur['name']] = {"baseexact": cur['name'], "other": ["AreaLevel <= {}".format(maxlevel)], "type": "levelling rare normal"}
 	return ret
 
 
@@ -951,17 +954,17 @@ def gennonrareleveling(flags='All', overlevel=0, maxlevel=35, alwayshighlight=()
 				for i in range(l):
 					cur = bases[category][vals][i]
 					if cur['drop'] <= maxlevel:
-						ret[cur['name']] = {"baseexact": cur['name'], "other": ["Rarity <= Normal", "ItemLevel <= {}".format(maxlevel)], "type": "leveling low"}
+						ret[cur['name']] = {"baseexact": cur['name'], "other": ["Rarity <= Normal", "AreaLevel <= {}".format(maxlevel)], "type": "leveling low"}
 			elif flags == 'All' or set(f).intersection(set(flags)) or set(f).intersection(set(alwayshighlight)):
 				for i in range(l-1):
 					cur = bases[category][vals][i]
 					if cur['drop'] <= maxlevel:
 						cap = bases[category][vals][i+1]['drop'] + overlevel
 						cap = cap if cap < maxlevel else maxlevel
-						ret[cur['name']] = {"baseexact": cur['name'], "other": ["Rarity <= Normal", "ItemLevel <= {}".format(cap)], "type": "leveling low"}
+						ret[cur['name']] = {"baseexact": cur['name'], "other": ["Rarity <= Normal", "AreaLevel <= {}".format(cap)], "type": "leveling low"}
 				cur = bases[category][vals][l-1]
 				if cur['drop'] <= maxlevel:
-					ret[cur['name']] = {"baseexact": cur['name'], "other": ["Rarity <= Normal", "ItemLevel <= {}".format(maxlevel)], "type": "leveling low"}
+					ret[cur['name']] = {"baseexact": cur['name'], "other": ["Rarity <= Normal", "AreaLevel <= {}".format(maxlevel)], "type": "leveling low"}
 	return ret
 
 
@@ -977,8 +980,8 @@ def genrareshighlighttiered():
 
 	ret = {}
 	# Bases that are always shown when a certain ilvl threshold is reached.  Highlighting rules still followed
-	alwaysshow = {'Armour': 73, 'Accessory': 68, 'Other': 1, 'Wand': 72}
-	#alwaysshow = {'Boots': 86, 'Accessory': 84, 'Other': 1}
+	#alwaysshow = {'Boots': 73, 'Gloves': 73, 'Helmet': 73, 'Shield': 73, 'Accessory': 68, 'Other': 1, 'Wand': 72}
+	alwaysshow = {'Boots': 86, 'Accessory': 84, 'Other': 1}
 	# list of bases that should be ignored, even for always show
 	bad_bases = [
 		'Gold Amulet',

@@ -183,7 +183,13 @@ def compact_uniques(unique_full_list, curvals):
 		# Bloodlines League
 		"Ngamahu's Sign", "Tasalio's Sign", "Tasalio's Sign",
 		# Blight League
-		"Badge of the Brotherhood", "Breathstealer", "Cowl of the Ceraunophile", "Cowl of the Cryophile", "Cowl of the Thermophile", "Icefang", "Machina Mitts", "Rotting Legion", "Sporeguard", "The Stampede", "Venopuncture"
+		"Badge of the Brotherhood", "Breathstealer", "Cowl of the Ceraunophile", "Cowl of the Cryophile", "Cowl of the Thermophile", "Icefang", "Machina Mitts", "Rotting Legion", "Sporeguard", "The Stampede", "Venopuncture",
+		# Metamorph
+		'Astral Projector', 'Fury Valve', "Mother's Embrace", "Warrior's Legacy",
+		# Conqueror
+		'Booming Populace', 'Hands of the High Templar', 'Irresistable Temptation', 'Leash of Oblation', 'Manastorm', 'Misinformation', 'Stalwart Defenders', 'Territories Unknown', 'Terror', 'The Black Cane', 'The Ivory Tower', 'The Saviour', 'Thread of Hope', 'War Among the Stars',
+		# Delirium
+		'Algor Mortis', 'Assailum', 'Beacon of Madness', 'One With Nothing', 'Perfidy', 'The Interrogation', "Kitava's Teachings", 'Voices'
 	]
 	unique_list = defaultdict(list)
 	unique_list_limited = defaultdict(list)
