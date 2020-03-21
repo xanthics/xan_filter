@@ -1,15 +1,13 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/13/2020(m/d/y) 20:39:52 UTC from "Delirium" data
+# Created: 03/21/2020(m/d/y) 03:11:42 UTC from "Delirium" data
 
 auto_ah = [
 	"Alchemy Shard",
 	"Alteration Shard",
 	"Ancient Orb",
-	"Armourer's Scrap",
 	"Awakened Sextant",
 	"Binding Shard",
-	"Blacksmith's Whetstone",
 	"Blessed Orb",
 	"Cartographer's Chisel",
 	"Chaos Orb",
@@ -35,11 +33,9 @@ auto_ah = [
 	"Orb of Scouring",
 	"Orb of Transmutation",
 	"Perandus Coin",
-	"Portal Scroll",
 	"Prime Sextant",
 	"Regal Orb",
 	"Regal Shard",
-	"Scroll of Wisdom",
 	"Silver Coin",
 	"Simple Sextant",
 	"Vaal Orb"

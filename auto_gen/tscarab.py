@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/13/2020(m/d/y) 20:39:54 UTC from "tmpstandard" data
+# Created: 03/21/2020(m/d/y) 03:11:44 UTC from "tmpstandard" data
 
 desc = "scarab Autogen"
 
@@ -11,14 +11,14 @@ items = {
 	"1 Gilded Breach Scarab": {"baseexact": "Gilded Breach Scarab", "class": "Map Fragments", "type": "fragment high"},
 	"1 Gilded Cartography Scarab": {"baseexact": "Gilded Cartography Scarab", "class": "Map Fragments", "type": "fragment high"},
 	"1 Gilded Divination Scarab": {"baseexact": "Gilded Divination Scarab", "class": "Map Fragments", "type": "fragment very high"},
+	"1 Gilded Elder Scarab": {"baseexact": "Gilded Elder Scarab", "class": "Map Fragments", "type": "fragment high"},
 	"1 Gilded Harbinger Scarab": {"baseexact": "Gilded Harbinger Scarab", "class": "Map Fragments", "type": "fragment high"},
 	"1 Gilded Legion Scarab": {"baseexact": "Gilded Legion Scarab", "class": "Map Fragments", "type": "fragment very high"},
-	"1 Gilded Reliquary Scarab": {"baseexact": "Gilded Reliquary Scarab", "class": "Map Fragments", "type": "fragment high"},
+	"1 Gilded Metamorph Scarab": {"baseexact": "Gilded Metamorph Scarab", "class": "Map Fragments", "type": "fragment high"},
 	"1 Gilded Sulphite Scarab": {"baseexact": "Gilded Sulphite Scarab", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Polished Bestiary Scarab": {"baseexact": "Polished Bestiary Scarab", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Polished Legion Scarab": {"baseexact": "Polished Legion Scarab", "class": "Map Fragments", "type": "fragment high"},
 	"1 Polished Sulphite Scarab": {"baseexact": "Polished Sulphite Scarab", "class": "Map Fragments", "type": "fragment high"},
 	"1 Rusted Bestiary Scarab": {"baseexact": "Rusted Bestiary Scarab", "class": "Map Fragments", "type": "fragment high"},
-	"1 Rusted Sulphite Scarab": {"baseexact": "Rusted Sulphite Scarab", "class": "Map Fragments", "type": "fragment high"},
 	"7 scarab default": {"base": "Scarab", "class": "Map Fragments", "type": "fragment normal"}
 }

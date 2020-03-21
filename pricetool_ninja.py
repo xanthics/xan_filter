@@ -118,7 +118,7 @@ def gen_currency(currency_list, league, curvals):
 			retstr = currencyclassify(cur, val, curvals)
 			curval += '\t"{},\n'.format(retstr)
 			if "AreaLevel" in retstr:
-				curval += '\t"1{},\n'.format(retstr.replace("AreaLevel >", "AreaLevel <=").replace('"hide"', '"currency show"'))
+				curval += '\t"1{},\n'.format(retstr.replace("AreaLevel >", "AreaLevel <=").replace('"hide"', '"show level"'))
 
 			prevval = retstr[-20:]
 			count = 9
@@ -144,7 +144,7 @@ def gen_currency(currency_list, league, curvals):
 				if prevval != retstr[-20:]:
 					curval += '\t"{},\n'.format(retstr.replace('$', '{:02}'.format(count)))
 					if "AreaLevel" in retstr:
-						curval += '\t"1{},\n'.format(retstr.replace('$', '{:02}'.format(count)).replace("AreaLevel >", "AreaLevel <=").replace('"hide"', '"currency show"'))
+						curval += '\t"1{},\n'.format(retstr.replace('$', '{:02}'.format(count)).replace("AreaLevel >", "AreaLevel <=").replace('"hide"', '"show level"'))
 					count -= 1
 					prevval = retstr[-20:]
 
@@ -152,7 +152,7 @@ def gen_currency(currency_list, league, curvals):
 			retstr = currencyclassify(cur, currency_list[cur], curvals)
 			curval += '\t"{},\n'.format(retstr)
 			if "AreaLevel" in retstr:
-				curval += '\t"1{},\n'.format(retstr.replace("AreaLevel >", "AreaLevel <=").replace('"hide"', '"currency show"'))
+				curval += '\t"1{},\n'.format(retstr.replace("AreaLevel >", "AreaLevel <=").replace('"hide"', '"show level"'))
 
 	curval += u'}\n'
 
@@ -663,7 +663,8 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		'UniqueWeapon',
 		'UniqueArmour',
 		'UniqueAccessory',
-		'Watchstone'
+		'Watchstone',
+		'DeliriumOrb'
 	]
 
 	leaguelookup = {
@@ -733,6 +734,10 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 						i['gemQuality'] = 0
 #					if i['name'] in ['Deathmark', 'Shockwave'] and 'Support' not in i['name']:
 #						i['name'] += ' Support'
+					if i['name'] == "Spellslinger Support":
+						i['name'] = "Spellslinger"
+					if i['name'] == "Rune Blast":
+						i['name'] = "Stormbind"
 					if i['gemLevel'] not in skillgem:
 						skillgem[i['gemLevel']] = {}
 					if i['gemQuality'] not in skillgem[i['gemLevel']]:
@@ -774,7 +779,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 						continue
 					prophecy[ii['name']] = ii['chaosValue']
 
-			elif key == 'Oil':
+			elif key in ['Oil', 'DeliriumOrb']:
 				for ii in data['lines']:
 					if ii['count'] < mincount:
 						continue
