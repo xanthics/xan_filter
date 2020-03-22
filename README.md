@@ -13,9 +13,13 @@ This is a script to generate a filter file for Path of Exile using the included 
 
 Usage
 =====
+Run setup.py first to install all requirements.txt modules
+
 Run Create_filter with necessary config files to generate xan.filter.  Note that this will automatically put xan.show.filter and xan.hide.filter in <relative path>\Documents\My Games\Path of Exile
 
-(Optional) Run pricetool to update currency, divination, essence, and unique tiers.  The poe ninja version should finish very quickly  
+Update gen_always_highlight_currency.py with your poe account name and sessionid if you want custom currency highlighting
+
+~~(Optional) Run pricetool to update currency, divination, essence, and unique tiers.  The poe ninja version should finish very quickly~~  
 
 Config
 ======
