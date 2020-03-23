@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/21/2020(m/d/y) 03:11:44 UTC from "tmpstandard" data
+# Created: 03/23/2020(m/d/y) 20:12:55 UTC from "tmpstandard" data
 
 desc = "Essence Autogen"
 
@@ -16,13 +16,13 @@ items = {
 	"0 Deafening Essence of Contempt": {"baseexact": "Deafening Essence of Contempt", "class": "Currency", "type": "currency high"},
 	"0 Deafening Essence of Doubt": {"baseexact": "Deafening Essence of Doubt", "class": "Currency", "type": "currency normal"},
 	"0 Deafening Essence of Dread": {"baseexact": "Deafening Essence of Dread", "class": "Currency", "type": "currency very high"},
-	"0 Deafening Essence of Envy": {"baseexact": "Deafening Essence of Envy", "class": "Currency", "type": "currency very high"},
+	"0 Deafening Essence of Envy": {"baseexact": "Deafening Essence of Envy", "class": "Currency", "type": "currency high"},
 	"0 Deafening Essence of Fear": {"baseexact": "Deafening Essence of Fear", "class": "Currency", "type": "currency high"},
 	"0 Deafening Essence of Greed": {"baseexact": "Deafening Essence of Greed", "class": "Currency", "type": "currency very high"},
 	"0 Deafening Essence of Hatred": {"baseexact": "Deafening Essence of Hatred", "class": "Currency", "type": "currency high"},
 	"0 Deafening Essence of Loathing": {"baseexact": "Deafening Essence of Loathing", "class": "Currency", "type": "currency high"},
 	"0 Deafening Essence of Misery": {"baseexact": "Deafening Essence of Misery", "class": "Currency", "type": "currency normal"},
-	"0 Deafening Essence of Rage": {"baseexact": "Deafening Essence of Rage", "class": "Currency", "type": "currency very high"},
+	"0 Deafening Essence of Rage": {"baseexact": "Deafening Essence of Rage", "class": "Currency", "type": "currency high"},
 	"0 Deafening Essence of Scorn": {"baseexact": "Deafening Essence of Scorn", "class": "Currency", "type": "currency high"},
 	"0 Deafening Essence of Sorrow": {"baseexact": "Deafening Essence of Sorrow", "class": "Currency", "type": "currency normal"},
 	"0 Deafening Essence of Spite": {"baseexact": "Deafening Essence of Spite", "class": "Currency", "type": "currency high"},
@@ -30,7 +30,7 @@ items = {
 	"0 Deafening Essence of Torment": {"baseexact": "Deafening Essence of Torment", "class": "Currency", "type": "currency normal"},
 	"0 Deafening Essence of Woe": {"baseexact": "Deafening Essence of Woe", "class": "Currency", "type": "currency high"},
 	"0 Deafening Essence of Wrath": {"baseexact": "Deafening Essence of Wrath", "class": "Currency", "type": "currency high"},
-	"0 Deafening Essence of Zeal": {"baseexact": "Deafening Essence of Zeal", "class": "Currency", "type": "currency very high"},
+	"0 Deafening Essence of Zeal": {"baseexact": "Deafening Essence of Zeal", "class": "Currency", "type": "currency high"},
 	"0 Dense Fossil": {"baseexact": "Dense Fossil", "class": "Currency", "type": "currency normal"},
 	"0 Enchanted Fossil": {"baseexact": "Enchanted Fossil", "class": "Currency", "type": "currency normal"},
 	"0 Encrusted Fossil": {"baseexact": "Encrusted Fossil", "class": "Currency", "type": "currency normal"},

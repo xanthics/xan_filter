@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/21/2020(m/d/y) 03:11:44 UTC from "tmpstandard" data
+# Created: 03/23/2020(m/d/y) 20:12:55 UTC from "tmpstandard" data
 
 desc = "Fragment Autogen"
 
@@ -12,7 +12,7 @@ items = {
 	"1 Chayula's Enriched Breachstone": {"baseexact": "Chayula's Enriched Breachstone", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Chayula's Pure Breachstone": {"baseexact": "Chayula's Pure Breachstone", "class": "Map Fragments", "type": "fragment extremely high"},
 	"1 Divine Vessel": {"baseexact": "Divine Vessel", "class": "Map Fragments", "type": "fragment normal"},
-	"1 Eber's Key": {"baseexact": "Eber's Key", "class": "Map Fragments", "type": "fragment high"},
+	"1 Eber's Key": {"baseexact": "Eber's Key", "class": "Map Fragments", "type": "fragment normal"},
 	"1 Esh's Breachstone": {"baseexact": "Esh's Breachstone", "class": "Map Fragments", "type": "fragment normal"},
 	"1 Esh's Charged Breachstone": {"baseexact": "Esh's Charged Breachstone", "class": "Map Fragments", "type": "fragment normal"},
 	"1 Esh's Enriched Breachstone": {"baseexact": "Esh's Enriched Breachstone", "class": "Map Fragments", "type": "fragment very high"},
@@ -30,8 +30,8 @@ items = {
 	"1 Fragment of the Minotaur": {"baseexact": "Fragment of the Minotaur", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Fragment of the Phoenix": {"baseexact": "Fragment of the Phoenix", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Inya's Key": {"baseexact": "Inya's Key", "class": "Map Fragments", "type": "fragment high"},
-	"1 Mortal Grief": {"baseexact": "Mortal Grief", "class": "Map Fragments", "type": "fragment high"},
-	"1 Mortal Hope": {"baseexact": "Mortal Hope", "class": "Map Fragments", "type": "fragment very high"},
+	"1 Mortal Grief": {"baseexact": "Mortal Grief", "class": "Map Fragments", "type": "fragment normal"},
+	"1 Mortal Hope": {"baseexact": "Mortal Hope", "class": "Map Fragments", "type": "fragment high"},
 	"1 Mortal Ignorance": {"baseexact": "Mortal Ignorance", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Mortal Rage": {"baseexact": "Mortal Rage", "class": "Map Fragments", "type": "fragment high"},
 	"1 Offering to the Goddess": {"baseexact": "Offering to the Goddess", "class": "Map Fragments", "type": "fragment normal"},
@@ -47,12 +47,12 @@ items = {
 	"1 Timeless Karui Splinter": {"baseexact": "Timeless Karui Splinter", "class": "Map Fragments", "type": "fragment normal"},
 	"1 Timeless Maraketh Emblem": {"baseexact": "Timeless Maraketh Emblem", "class": "Map Fragments", "type": "fragment extremely high"},
 	"1 Timeless Maraketh Splinter": {"baseexact": "Timeless Maraketh Splinter", "class": "Map Fragments", "type": "fragment normal"},
-	"1 Timeless Templar Emblem": {"baseexact": "Timeless Templar Emblem", "class": "Map Fragments", "type": "fragment extremely high"},
+	"1 Timeless Templar Emblem": {"baseexact": "Timeless Templar Emblem", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Timeless Templar Splinter": {"baseexact": "Timeless Templar Splinter", "class": "Map Fragments", "type": "fragment normal"},
 	"1 Timeless Vaal Emblem": {"baseexact": "Timeless Vaal Emblem", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Timeless Vaal Splinter": {"baseexact": "Timeless Vaal Splinter", "class": "Map Fragments", "type": "fragment normal"},
 	"1 Timeworn Reliquary Key": {"baseexact": "Timeworn Reliquary Key", "class": "Map Fragments", "type": "fragment extremely high"},
-	"1 Tul's Breachstone": {"baseexact": "Tul's Breachstone", "class": "Map Fragments", "type": "fragment very high"},
+	"1 Tul's Breachstone": {"baseexact": "Tul's Breachstone", "class": "Map Fragments", "type": "fragment high"},
 	"1 Tul's Charged Breachstone": {"baseexact": "Tul's Charged Breachstone", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Tul's Enriched Breachstone": {"baseexact": "Tul's Enriched Breachstone", "class": "Map Fragments", "type": "fragment very high"},
 	"1 Tul's Pure Breachstone": {"baseexact": "Tul's Pure Breachstone", "class": "Map Fragments", "type": "fragment very high"},

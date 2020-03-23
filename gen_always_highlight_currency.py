@@ -9,7 +9,7 @@ from item_config.challenges import gen_moo
 
 def create_always_highlight():
 	currencytab = "0"  # Update to the tabid(s) where you keep your currency
-	league = "Metamorph"
+	league = "Delirium"
 	accountname = ""
 	cookies = {'POESESSID': ''}  # update to your session id, blank session id will use default(on) highlighting rules
 
@@ -33,8 +33,8 @@ def create_highlight_currency(currencytab, league, accountname, cookies, request
 		'Orb of Annulment': -1,
 		'Orb of Binding': 5,
 		"Ancient Orb": -1,
-		"Armourer's Scrap": 200,
-		"Blacksmith's Whetstone": 100,
+		"Armourer's Scrap": 160,
+		"Blacksmith's Whetstone": 80,
 		"Blessed Orb": 100,
 		"Chaos Orb": -1,
 		"Chromatic Orb": 1000,

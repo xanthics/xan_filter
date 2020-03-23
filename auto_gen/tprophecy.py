@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/21/2020(m/d/y) 03:11:44 UTC from "tmpstandard" data
+# Created: 03/23/2020(m/d/y) 20:12:55 UTC from "tmpstandard" data
 
 desc = "Prophecy Autogen"
 
@@ -15,7 +15,7 @@ items = {
 	"1 A Regal Death": {"prophecy": "A Regal Death", "class": "Currency", "type": "currency show"},
 	"1 A Rift in Time": {"prophecy": "A Rift in Time", "class": "Currency", "type": "currency low"},
 	"1 A Valuable Combination": {"prophecy": "A Valuable Combination", "class": "Currency", "type": "currency low"},
-	"1 A Vision of Ice and Fire": {"prophecy": "A Vision of Ice and Fire", "class": "Currency", "type": "currency low"},
+	"1 A Vision of Ice and Fire": {"prophecy": "A Vision of Ice and Fire", "class": "Currency", "type": "currency high"},
 	"1 A Whispered Prayer": {"prophecy": "A Whispered Prayer", "class": "Currency", "type": "currency low"},
 	"1 Abnormal Effulgence": {"prophecy": "Abnormal Effulgence", "class": "Currency", "type": "currency low"},
 	"1 Against the Tide": {"prophecy": "Against the Tide", "class": "Currency", "type": "currency low"},
@@ -72,8 +72,8 @@ items = {
 	"1 Fire and Brimstone": {"prophecy": "Fire and Brimstone", "class": "Currency", "type": "currency low"},
 	"1 Fire and Ice": {"prophecy": "Fire and Ice", "class": "Currency", "type": "currency low"},
 	"1 Fire from the Sky": {"prophecy": "Fire from the Sky", "class": "Currency", "type": "currency low"},
-	"1 Fire, Wood and Stone": {"prophecy": "Fire, Wood and Stone", "class": "Currency", "type": "currency high"},
-	"1 Flesh of the Beast": {"prophecy": "Flesh of the Beast", "class": "Currency", "type": "currency high"},
+	"1 Fire, Wood and Stone": {"prophecy": "Fire, Wood and Stone", "class": "Currency", "type": "currency low"},
+	"1 Flesh of the Beast": {"prophecy": "Flesh of the Beast", "class": "Currency", "type": "currency low"},
 	"1 Forceful Exorcism": {"prophecy": "Forceful Exorcism", "class": "Currency", "type": "currency low"},
 	"1 From Death Springs Life": {"prophecy": "From Death Springs Life", "class": "Currency", "type": "currency low"},
 	"1 From The Void": {"prophecy": "From The Void", "class": "Currency", "type": "currency low"},
@@ -90,12 +90,12 @@ items = {
 	"1 Ice from Above": {"prophecy": "Ice from Above", "class": "Currency", "type": "currency low"},
 	"1 In the Grasp of Corruption": {"prophecy": "In the Grasp of Corruption", "class": "Currency", "type": "currency low"},
 	"1 Kalandra's Craft": {"prophecy": "Kalandra's Craft", "class": "Currency", "type": "currency low"},
-	"1 Last of the Wildmen": {"prophecy": "Last of the Wildmen", "class": "Currency", "type": "currency low"},
+	"1 Last of the Wildmen": {"prophecy": "Last of the Wildmen", "class": "Currency", "type": "currency high"},
 	"1 Lasting Impressions": {"prophecy": "Lasting Impressions", "class": "Currency", "type": "currency low"},
 	"1 Lightning Falls": {"prophecy": "Lightning Falls", "class": "Currency", "type": "currency low"},
 	"1 Living Fires": {"prophecy": "Living Fires", "class": "Currency", "type": "currency low"},
 	"1 Lost in the Pages": {"prophecy": "Lost in the Pages", "class": "Currency", "type": "currency very high"},
-	"1 Monstrous Treasure": {"prophecy": "Monstrous Treasure", "class": "Currency", "type": "currency show"},
+	"1 Monstrous Treasure": {"prophecy": "Monstrous Treasure", "class": "Currency", "type": "currency high"},
 	"1 Mouth of Horrors": {"prophecy": "Mouth of Horrors", "class": "Currency", "type": "currency low"},
 	"1 Mysterious Invaders": {"prophecy": "Mysterious Invaders", "class": "Currency", "type": "currency show"},
 	"1 Nature's Resilience": {"prophecy": "Nature's Resilience", "class": "Currency", "type": "currency low"},
@@ -163,7 +163,7 @@ items = {
 	"1 The Hollow Pledge": {"prophecy": "The Hollow Pledge", "class": "Currency", "type": "currency very high"},
 	"1 The Hungering Swarm": {"prophecy": "The Hungering Swarm", "class": "Currency", "type": "currency show"},
 	"1 The Invader": {"prophecy": "The Invader", "class": "Currency", "type": "currency show"},
-	"1 The Jeweller's Touch": {"prophecy": "The Jeweller's Touch", "class": "Currency", "type": "currency very high"},
+	"1 The Jeweller's Touch": {"prophecy": "The Jeweller's Touch", "class": "Currency", "type": "currency high"},
 	"1 The Karui Rebellion": {"prophecy": "The Karui Rebellion", "class": "Currency", "type": "currency low"},
 	"1 The King and the Brambles": {"prophecy": "The King and the Brambles", "class": "Currency", "type": "currency low"},
 	"1 The King's Path": {"prophecy": "The King's Path", "class": "Currency", "type": "currency high"},
@@ -189,7 +189,7 @@ items = {
 	"1 The Scout": {"prophecy": "The Scout", "class": "Currency", "type": "currency show"},
 	"1 The Servant's Heart": {"prophecy": "The Servant's Heart", "class": "Currency", "type": "currency low"},
 	"1 The Sharpened Blade": {"prophecy": "The Sharpened Blade", "class": "Currency", "type": "currency show"},
-	"1 The Silverwood": {"prophecy": "The Silverwood", "class": "Currency", "type": "currency high"},
+	"1 The Silverwood": {"prophecy": "The Silverwood", "class": "Currency", "type": "currency low"},
 	"1 The Singular Spirit": {"prophecy": "The Singular Spirit", "class": "Currency", "type": "currency low"},
 	"1 The Sinner's Stone": {"prophecy": "The Sinner's Stone", "class": "Currency", "type": "currency low"},
 	"1 The Snuffed Flame": {"prophecy": "The Snuffed Flame", "class": "Currency", "type": "currency low"},
