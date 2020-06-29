@@ -9,7 +9,7 @@ from item_config.challenges import gen_moo
 
 def create_always_highlight():
 	currencytab = "0"  # Update to the tabid(s) where you keep your currency
-	league = "Delirium"
+	league = "Harvest"
 	accountname = ""
 	cookies = {'POESESSID': ''}  # update to your session id, blank session id will use default(on) highlighting rules
 
@@ -40,7 +40,7 @@ def create_highlight_currency(currencytab, league, accountname, cookies, request
 		"Chromatic Orb": 1000,
 		"Engineer's Orb": 20,
 		"Gemcutter's Prism": 100,
-		"Glassblower's Bauble": 100,
+		"Glassblower's Bauble": 60,
 		"Jeweller's Orb": 350,
 		"Orb of Alchemy": 100,
 		"Orb of Alteration": -1,
@@ -76,8 +76,9 @@ def create_highlight_currency(currencytab, league, accountname, cookies, request
 		request = f'https://www.pathofexile.com/character-window/get-stash-items?league={league}&realm=pc&accountName={accountname}&tabs=0&tabIndex={currencytab}'
 
 		req = requester.post(request, cookies=cookies)
-
+		print(req.content)
 		data = json.loads(req.content)
+		print(data)
 		skipped = set()
 		for item in data['items']:
 			if item['typeLine'] in currencyvals and currencyvals[item['typeLine']] < item['stackSize'] and currencyvals[item['typeLine']] != -1:
@@ -179,9 +180,14 @@ def create_highlight_challenge(accountname, league, cookies, requester):
 				"Itemlevel 100 Item": [{"baseexact": "Imperial Legacy"}, {"baseexact": "The Celestial Stone"}, {"baseexact": "The Sacrifice"}, {"baseexact": "The Dapper Prodigy"}, {"baseexact": "Nook's Crown"}, {"baseexact": "Destined to Crumble"}, {"baseexact": "The Hale Heart"}, {"baseexact": "Perfection"}, {"baseexact": "The Opulent"}, {"baseexact": "The Golden Era"}, {"baseexact": "The Undisputed"}, {"baseexact": "The Jester"}, {"baseexact": "Merciless Armament"}, {"baseexact": "The Tyrant"}, {"baseexact": "The Spoiled Prince"}, {"baseexact": "The Archmage's Right Hand"}, {"baseexact": "The Road to Power"}, {"baseexact": "Void of the Elements"}],
 				"Jewel": [{"baseexact": "The Mountain"}, {"baseexact": "Azyran's Reward"}, {"baseexact": "The Garish Power"}, {"baseexact": "The Eye of the Dragon"}, {"baseexact": "The Primordial"}, {"baseexact": "The Endurance"}, {"baseexact": "Shard of Fate"}],
 				"Prophecy": [{"baseexact": "Akil's Prophecy"}, {"baseexact": "Friendship"}, {"baseexact": "The Side Quest"}, {"baseexact": "Vile Power"}, {"baseexact": "Immortal Resolve"}, {"baseexact": "The Valley of Steel Boxes"}, {"baseexact": "The Jeweller's Boon"}, {"baseexact": "The Mad King"}, {"baseexact": "The Iron Bard"}, {"baseexact": "Beauty Through Death"}],
-				"Rare Item": [{"baseexact": "Nook's Crown"}, {"baseexact": "Destined to Crumble"}, {"baseexact": "The Hale Heart"}, {"baseexact": "Perfection"}, {"baseexact": "The Opulent"}, {"baseexact": "Dark Dreams"}, {"baseexact": "Lingering Remnants"}, {"baseexact": "Lantador's Lost Love"}, {"baseexact": "The Warden"}, {"baseexact": "The Lover"}, {"baseexact": "The Explorer"}, {"baseexact": "The Trial"}, {"baseexact": "Left to Fate"}, {"baseexact": "Call to the First Ones"}]
+				"Rare Item": [{"baseexact": "Nook's Crown"}, {"baseexact": "Destined to Crumble"}, {"baseexact": "The Hale Heart"}, {"baseexact": "Perfection"}, {"baseexact": "The Opulent"}, {"baseexact": "Dark Dreams"}, {"baseexact": "Lingering Remnants"}, {"baseexact": "Lantador's Lost Love"}, {"baseexact": "The Warden"}, {"baseexact": "The Lover"}, {"baseexact": "The Explorer"}, {"baseexact": "The Trial"}, {"baseexact": "Left to Fate"}, {"baseexact": "Call to the First Ones"}],
+				"Six-Linked item": [{"baseexact": "Vanity"}, {"baseexact": "The Warlord"}, {"baseexact": "The Sacrifice"}, {"baseexact": "The Porcupine"}, {"baseexact": "The Ethereal"}, {"baseexact": "The Dark Mage"}, {"baseexact": "The Dapper Prodigy"}, {"baseexact": "The Chains that Bind"}, {"baseexact": "The Celestial Justicar"}, {"baseexact": "Rebirth"}, {"baseexact": "Imperial Legacy"}, {"baseexact": "Humility"}, {"baseexact": "Emperor of Purity"}, {"baseexact": "Bowyer's Dream"}],
+				"Scarab": [{"baseexact": "More is Never Enough"}, {"baseexact": "Cameria's Cut"}, {"baseexact": "The Deal"}, {"baseexact": "Buried Treasure"}],
+				"Shaper or Elder Item": [{"baseexact": "The Celestial Stone"}, {"baseexact": "Perfection"}, {"baseexact": "The Lord of Celebration"}, {"baseexact": "The Hale Heart"}, {"baseexact": "Nook's Crown"}, {"baseexact": "Dark Dreams"}, {"baseexact": "Void of the Elements"}, {"baseexact": "The Undisputed"}, {"baseexact": "The World Eater"}, {"baseexact": "The Endless Darkness"}],
+				"Two-Implicit Unique Item": [{"baseexact": "Echoes of Love"}, {"baseexact": "The Demon"}, {"baseexact": "The Price of Loyalty"}, {"baseexact": "Arrogance of the Vaal"}, {"baseexact": "Etched in Blood"}],
+				"Unique Map": [{"baseexact": "Scholar of the Seas"}, {"baseexact": "The Dreamland"}, {"baseexact": "The Mayor"}, {"baseexact": "The Professor"}, {"baseexact": "The Twilight Moon"}, {"baseexact": "The Wolf's Legacy"}, {"baseexact": "Treasure Hunter"}, {"baseexact": "The Landing"}, {"baseexact": "The Encroaching Darkness"}],
 			}
-		}
+		},
 	}
 
 	if cookies['POESESSID']:

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 03/23/2020(m/d/y) 20:12:55 UTC from "tmpstandard" data
+# Created: 06/28/2020(m/d/y) 00:57:02 UTC from "tmpstandard" data
 
 desc = "Essence Autogen"
 
@@ -10,15 +10,15 @@ items = {
 	"0 Aetheric Fossil": {"baseexact": "Aetheric Fossil", "class": "Currency", "type": "currency high"},
 	"0 Bloodstained Fossil": {"baseexact": "Bloodstained Fossil", "class": "Currency", "type": "currency very high"},
 	"0 Bound Fossil": {"baseexact": "Bound Fossil", "class": "Currency", "type": "currency high"},
-	"0 Corroded Fossil": {"baseexact": "Corroded Fossil", "class": "Currency", "type": "currency very high"},
+	"0 Corroded Fossil": {"baseexact": "Corroded Fossil", "class": "Currency", "type": "currency high"},
 	"0 Deafening Essence of Anger": {"baseexact": "Deafening Essence of Anger", "class": "Currency", "type": "currency normal"},
 	"0 Deafening Essence of Anguish": {"baseexact": "Deafening Essence of Anguish", "class": "Currency", "type": "currency normal"},
 	"0 Deafening Essence of Contempt": {"baseexact": "Deafening Essence of Contempt", "class": "Currency", "type": "currency high"},
 	"0 Deafening Essence of Doubt": {"baseexact": "Deafening Essence of Doubt", "class": "Currency", "type": "currency normal"},
-	"0 Deafening Essence of Dread": {"baseexact": "Deafening Essence of Dread", "class": "Currency", "type": "currency very high"},
+	"0 Deafening Essence of Dread": {"baseexact": "Deafening Essence of Dread", "class": "Currency", "type": "currency high"},
 	"0 Deafening Essence of Envy": {"baseexact": "Deafening Essence of Envy", "class": "Currency", "type": "currency high"},
 	"0 Deafening Essence of Fear": {"baseexact": "Deafening Essence of Fear", "class": "Currency", "type": "currency high"},
-	"0 Deafening Essence of Greed": {"baseexact": "Deafening Essence of Greed", "class": "Currency", "type": "currency very high"},
+	"0 Deafening Essence of Greed": {"baseexact": "Deafening Essence of Greed", "class": "Currency", "type": "currency high"},
 	"0 Deafening Essence of Hatred": {"baseexact": "Deafening Essence of Hatred", "class": "Currency", "type": "currency high"},
 	"0 Deafening Essence of Loathing": {"baseexact": "Deafening Essence of Loathing", "class": "Currency", "type": "currency high"},
 	"0 Deafening Essence of Misery": {"baseexact": "Deafening Essence of Misery", "class": "Currency", "type": "currency normal"},
@@ -39,10 +39,10 @@ items = {
 	"0 Essence of Hysteria": {"baseexact": "Essence of Hysteria", "class": "Currency", "type": "currency normal"},
 	"0 Essence of Insanity": {"baseexact": "Essence of Insanity", "class": "Currency", "type": "currency high"},
 	"0 Faceted Fossil": {"baseexact": "Faceted Fossil", "class": "Currency", "type": "currency extremely high"},
-	"0 Fractured Fossil": {"baseexact": "Fractured Fossil", "class": "Currency", "type": "currency extremely high"},
+	"0 Fractured Fossil": {"baseexact": "Fractured Fossil", "class": "Currency", "type": "currency very high"},
 	"0 Frigid Fossil": {"baseexact": "Frigid Fossil", "class": "Currency", "type": "currency show"},
 	"0 Gilded Fossil": {"baseexact": "Gilded Fossil", "class": "Currency", "type": "currency high"},
-	"0 Glyphic Fossil": {"baseexact": "Glyphic Fossil", "class": "Currency", "type": "currency very high"},
+	"0 Glyphic Fossil": {"baseexact": "Glyphic Fossil", "class": "Currency", "type": "currency high"},
 	"0 Hollow Fossil": {"baseexact": "Hollow Fossil", "class": "Currency", "type": "currency very high"},
 	"0 Jagged Fossil": {"baseexact": "Jagged Fossil", "class": "Currency", "type": "currency show"},
 	"0 Lucent Fossil": {"baseexact": "Lucent Fossil", "class": "Currency", "type": "currency show"},
@@ -58,7 +58,7 @@ items = {
 	"0 Primitive Chaotic Resonator": {"baseexact": "Primitive Chaotic Resonator", "class": "Currency", "type": "currency normal"},
 	"0 Prismatic Fossil": {"baseexact": "Prismatic Fossil", "class": "Currency", "type": "currency high"},
 	"0 Pristine Fossil": {"baseexact": "Pristine Fossil", "class": "Currency", "type": "currency normal"},
-	"0 Sanctified Fossil": {"baseexact": "Sanctified Fossil", "class": "Currency", "type": "currency very high"},
+	"0 Sanctified Fossil": {"baseexact": "Sanctified Fossil", "class": "Currency", "type": "currency high"},
 	"0 Scorched Fossil": {"baseexact": "Scorched Fossil", "class": "Currency", "type": "currency show"},
 	"0 Screaming Essence of Fear": {"baseexact": "Screaming Essence of Fear", "class": "Currency", "type": "currency normal"},
 	"0 Screaming Essence of Greed": {"baseexact": "Screaming Essence of Greed", "class": "Currency", "type": "currency normal"},

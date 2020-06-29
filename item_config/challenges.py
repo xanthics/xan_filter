@@ -24,6 +24,9 @@ def gen_moo(val):
 	
 # Base type : settings pair
 items = {
+	"1 Cluster Jewel": {"base": "Cluster Jewel", "class": "Jewel", "type": "show high"},
+#	"1 Simulacrum Splinter": {"base": "Simulacrum Splinter", "type": "show high"},
+
 	"212 Normal": {"class": "Maps", "other": ["BlightedMap True", gen_moo("very"), "MapTier >= 16"], "type": "challenge very high"},
 	"213 Normal": {"class": "Maps", "other": ["BlightedMap True", gen_moo("high"), "MapTier = 15"], "type": "challenge high"},
 	"214 Normal": {"class": "Maps", "other": ["BlightedMap True", gen_moo("high"), "ItemLevel <= 83", "MapTier = 14"], "type": "challenge high"},

@@ -64,12 +64,11 @@ def gen_list_compact(items, desc, soundlist):
 		sitem = items[item]
 		if sitem['type'] != "ignore":
 			if not item.split()[0].isdigit():
-				v = '1'
+				firstval = '1'
 			else:
-				v = item.split()[0]
-			if v not in l:
-				l[v] = {}
-
+				firstval = item.split()[0]
+			if firstval not in l:
+				l[firstval] = {}
 			# Prophecy and BaseType will not appear in the same rule (personal choice)
 			# have a flag that is 0(neither), 1(Base), 2(prophecy), 3(enchant)
 			class_ = ''
@@ -107,12 +106,12 @@ def gen_list_compact(items, desc, soundlist):
 				print("Missing type field {} ** {}".format(items[item], item))
 
 			k = '{}|{}|{}|{}|{}'.format(t, class_, type_, flag, other)
-			if k not in l[v]:
-				l[v][k] = {}
-			if influence in l[v][k]:
-				l[v][k][influence].append(base)
+			if k not in l[firstval]:
+				l[firstval][k] = {}
+			if influence in l[firstval][k]:
+				l[firstval][k][influence].append(base)
 			else:
-				l[v][k][influence] = [base]
+				l[firstval][k][influence] = [base]
 	base = ""
 	for item in sorted(l.keys()):
 		for ii in sorted(l[item].keys()):
@@ -138,6 +137,7 @@ def gen_list_compact(items, desc, soundlist):
 			t, class_, type_, flag, other = ii.split('|')
 
 			for influence in influencelist:
+				print(influencelist[influence])
 				base += "#{}\n".format(desc)
 				base += t
 				if flag == '1':
@@ -298,11 +298,11 @@ def main(leagues=('tmpstandard',)):
 
 
 if __name__ == "__main__":
-	create_always_highlight()
+#	create_always_highlight()
 	import pricetool_ninja
 #	league = ['Standard', 'Hardcore', 'tmpstandard', 'tmphardcore']
 	league = ['tmpstandard']
-	pricetool_ninja.scrape_ninja(league)
+#	pricetool_ninja.scrape_ninja(league)
 	# reload updated modules
 	for module in [divination, hcdivination, tdivination, thcdivination,
 				   uniques, hcuniques, tuniques, thcuniques,

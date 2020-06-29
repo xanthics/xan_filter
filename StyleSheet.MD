@@ -2,10 +2,10 @@ This is the style guide(key) for map icons
 
 shape/color|Red|Green|Blue|Brown|White|Yellow|Cyan|Grey|Orange|Pink|Purple
 ---: | ---: | ---: | ---: | ---: | ---: | ---:| ---:| ---:| ---:| ---:| ---:
-Circle|-|-|-|-|-|Rare|-|-|-|-|-|-
+Circle|-|Base High|Base|-|-|Rare|-|-|-|-|-|-
 Diamond|Map 11+|-|-|-|Map 1-5|Map 6-10|-|-|-|-|-|-
 Hexagon|-|Gem High|Gem|-|-|-|-|-|-|-|-
-Square|-|Base High|Base|-|-|-|-|Show|-|-|-
+Square|-|Show Very High|Show High|-|-|-|-|Show|-|-|-
 Star|-|Unique High|Unique|Unique Low|Unique Special|-|Unique Limited|Unique Show|-|-|-
 Triangle|-|Divination High|Divination|Divination Low|-|-|-|Divination Show|-|-|-
 Cross|Influenced Map 11+|-|Highlighted Map|-|Influenced Map 1-5|Influenced Map 6-10|-|-|-|-|-|-

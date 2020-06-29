@@ -9,8 +9,8 @@ items = {
 	# High value veiled mods, so that they still show after removing them from itemmod.py when finished
 	"05 Abyss Jewel": {"class": "Abyss Jewel", "other": ["Rarity <= Magic"], "type": "normal"},
 	"0 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "show normal"},
+	"0 wand": {"class": "Wand", "other": ["Rarity Rare", "ItemLevel >= 73"], "type": "show normal"},
 	"2 Magic Jewel": {"class": "Jewel", "other": ["Rarity <= Magic", "AreaLevel <= 70"], "type": "normal"},
-	"1 Cluster Jewel": {"base": "Cluster Jewel", "class": "Jewel", "type": "show normal"},
 
 	# Corrupted white items for lead to gold darkshrine
 	#"0 corrupted amulet": {"class": "Amulets", "other": ["Corrupted True", "Rarity Normal", "ItemLevel >= 60"], "type": "show normal"},
@@ -27,6 +27,7 @@ items = {
 	"7 Synthesised Item": {'other': ["SynthesisedItem True"], "type": "rare low"},
 
 	"74 Map Fragments": {"class": "Map Fragments", "type": "map white"},
+	"76 Harvest Seed": {"class": "Harvest Seed", "type": "challenge high"},
 
 	"8 5": {"other": ["DropLevel <= 5", "AreaLevel >= 15", "AreaLevel <= 67"], "type": "rare low"},
 	"8 10": {"other": ["DropLevel <= 10", "AreaLevel >= 20", "AreaLevel <= 67"], "type": "rare low"},

@@ -670,8 +670,8 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 	leaguelookup = {
 		"Standard": "Standard",
 		"Hardcore": "Hardcore",
-		"tmpstandard": "Delirium",
-		"tmphardcore": "Hardcore Delirium",
+		"tmpstandard": "Harvest",
+		"tmphardcore": "Hardcore Harvest",
 	}
 
 	os.environ['NO_PROXY'] = 'poe.ninja'
@@ -697,6 +697,7 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 		helmenchants = {}
 
 		for key in keys:
+			print()
 			if key in ['Currency', 'Fragment']:
 				request = f'https://poe.ninja/api/data/currencyoverview?league={leaguelookup[league]}&type={key}'
 			else:
@@ -724,9 +725,18 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 						rc = ii['receive']['count'] if ii['receive'] else 0
 						if pc + rc < mincount:
 							continue
-						fragments[ii['currencyTypeName']] = ii['chaosEquivalent']
+						if "Splinter" in ii['currencyTypeName']:
+							currency[ii['currencyTypeName']] = ii['chaosEquivalent']
+						else:
+							fragments[ii['currencyTypeName']] = ii['chaosEquivalent']
 
 			elif key == 'SkillGem':
+				lookup = {
+					"Spellslinger Support": "Spellslinger",
+					"Rune Blast": "Stormbind",
+					"Combust": "Infernal Cry",
+					"Arcanist Brand Support": "Arcanist Brand"
+				}
 				for i in data['lines']:
 					if i['count'] < mincount:
 						continue
@@ -734,10 +744,8 @@ def scrape_ninja(leagues=('Standard', 'Hardcore', 'tmpstandard', 'tmphardcore'))
 						i['gemQuality'] = 0
 #					if i['name'] in ['Deathmark', 'Shockwave'] and 'Support' not in i['name']:
 #						i['name'] += ' Support'
-					if i['name'] == "Spellslinger Support":
-						i['name'] = "Spellslinger"
-					if i['name'] == "Rune Blast":
-						i['name'] = "Stormbind"
+					elif i['name'] in lookup:
+						i['name'] = lookup[i['name']]
 					if i['gemLevel'] not in skillgem:
 						skillgem[i['gemLevel']] = {}
 					if i['gemQuality'] not in skillgem[i['gemLevel']]:

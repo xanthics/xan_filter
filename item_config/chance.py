@@ -17,7 +17,7 @@ items = {
 
 	"0 Lycosidae": {"base": "Rawhide Tower Shield", "type": "ignore"},
 	"0 Bisco's Collar": {"base": "Gold Amulet", "type": "ignore"},
-	"0 Shavronne's Wrappings": {"base": "Occultist's Vestment", "type": "ignore"},
+	"0 Shavronne's Wrappings": {"base": "Occultist's Vestment", "type": "chance"},
 	"0 Kaom's Heart": {"base": "Glorious Plate", "type": "ignore"},
 	"0 Void Battery": {"base": "Prophecy Wand", "type": "ignore"},
 	"0 Soul Taker": {"base": "Siege Axe", "type": "ignore"},
@@ -33,5 +33,7 @@ items = {
 	"0 Quill Rain": {"base": "Short Bow", "type": "ignore"},
 	"0 Skirmish": {"base": "Two-Point Arrow Quiver", "type": "ignore"},
 	"0 Malachai": {"base": "Iron Mask", "other": ["ShaperItem True"], "type": "ignore"},
+
+#	"0 Lifesprig": {"base": "Driftwood Wand", "type": "chance"},
 
 }
