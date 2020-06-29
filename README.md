@@ -1,3 +1,5 @@
+# This project has been replaced with xan_filter.  I refactored several aspects of how item lists are generated and want to keep this repo for posterity
+
 # poe_filter
 **SoundPack** [Download](soundpack.zip?raw=true) 
 
