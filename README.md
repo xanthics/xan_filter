@@ -1,4 +1,4 @@
-# poe_filter
+# xan_filter
 **SoundPack** [Download](soundpack.zip?raw=true) 
 
 Download, unzip archive, and place wav files in same directory as the filter
