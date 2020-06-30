@@ -90,8 +90,9 @@ def create_highlight_currency(currencytab, league, accountname, cookies, request
 	for shard in shards:
 		if shard in currency:
 			currency.extend(shards[shard])
-
 	currency = list(set(currency))
+	# add div cards that give currency
+	currency.extend([card for card in card_meta if 'currency' in card_meta[card]])
 	currency.sort()
 	currency_text = '",\n\t"'.join(currency)
 	with open("auto_gen/always_highlight.py", "w") as f:
@@ -243,3 +244,7 @@ def create_highlight_challenge(accountname, league, cookies, requester):
 
 	with open('auto_gen\\custom_challenge.py', 'w', encoding='utf-8') as f:
 		f.write(buf)
+
+
+if __name__ == '__main__':
+	create_always_highlight()

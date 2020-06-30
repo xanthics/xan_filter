@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # Author: Jeremy Parks
 # Note: Requires Python 3.3.x or higher
-desc = "formattinglate for all files"
+desc = "formatting template for all files"
 
 # Color values from http://pathofexile.gamepedia.com/Item_filter_guide
 color = {
@@ -75,14 +75,14 @@ size = {
 	"small": "25",
 	"minimum": "18",
 }
-# 300 is actual max
-volume = {
-	"max": "175",
-	"high": "100",
-	"normal": "75",
-	"medium": "45",
-	"low": "20"
-}
+
+# Volumes are controlled in wav_mixer
+# mirror
+# max
+# high
+# normal
+# medium
+# low
 
 # Text settings for various categories
 # This is where you would define general settings for a category, such as PlayAlertSoundPositional.
@@ -180,8 +180,6 @@ settings = {
 					  'MinimapIcon 2 Grey Pentagon',
 					  "SetFontSize {}".format(size['normal']),
 					 "SetBackgroundColor {} 220".format(color['black'])],
-	"currency very low": ["SetFontSize {}".format(size['minimum']),
-						  "SetBackgroundColor {} 150".format(color['black'])],
 
 	"divination extremely high": ["SetBorderColor {}".format(color['divinationnew']),
 								  'MinimapIcon 0 Green Triangle',
