@@ -128,6 +128,7 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, ret):
 # TODO: stackables
 def price_currency(data, val, base_sound, currency_val, tiers, minval, ret):
 	ah_list = ['Fossil', 'Resonator', 'Deafening', 'Shrieking', 'Screaming', 'Catalyst', "Delerium Orb", 'Splinter']
+	stackable = ['Orb', 'Splinter', 'Chisel', 'Coin', 'Bauble', 'Sextant', 'Shard', 'Whetstone', 'Scroll', 'Scrap', "Essence", 'Fossil', 'Resonator']
 	for item in data:
 		rule = True
 		if item[0].isdigit() and item.split(' ', maxsplit=1)[0].isdigit():
@@ -139,13 +140,16 @@ def price_currency(data, val, base_sound, currency_val, tiers, minval, ret):
 		# -2 high value drop that is limited
 		if data[item]['value'] in [-1, -2]:
 			data[item]['type'] = 'unique special' if data[item]['value'] == -1 else "unique limited"
+		# A stackable item.  Generate all valid stack breakpoints
 		else:
 			for ch in tiers:
 				if data[item]['value'] >= currency_val[ch]:
 					if ch == 'normal':
 						rule = False
-						break
-					data[item]['type'] = ch if ch == 'mirror' else f'{base_sound} {ch}'
+					if ch == 'low' and (item in auto_ah or (base_sound in ['currency', 'divination'] and any(substring in item for substring in ah_list))):
+						data[item]['type'] = f'{base_sound} show'
+					else:
+						data[item]['type'] = ch if ch == 'mirror' else f'{base_sound} {ch}'
 					break
 			else:
 				if item in auto_ah or (base_sound in ['currency', 'divination'] and any(substring in item for substring in ah_list)):
@@ -160,6 +164,40 @@ def price_currency(data, val, base_sound, currency_val, tiers, minval, ret):
 					data[item]['type'] = f'{base_sound} {tiers[-1]}'
 				elif minval == 'ignore':
 					continue
+			# This won't get called if minval for currency is ignore
+			if base_sound in ['currency'] and val == 1 and any(stack in item for stack in stackable) and tiers[0] not in data[item]['type']:
+				counter = 9999
+				prev = data[item]['type'].split(' ', maxsplit=1)[1] if " " in data[item]['type'] else data[item]['type']
+				idx = len(tiers) - 1 if prev not in tiers else tiers.index(prev) - 1
+				maxval = 20
+				if item == "Perandus Coin":
+					maxval = 1000
+				elif "Splinter" in item:
+					maxval = 99
+				elif "Essence" in item:
+					maxval = 9
+				elif "Fossil" in item:
+					maxval = 20
+				elif "Resonator" in item or "Delirium Orb" in item:
+					maxval = 10
+				elif item in ["Orb of Transmutation", "Scroll of Wisdom", "Portal Scroll", "Armourer's Scrap", "Orb of Regret"]:
+					maxval = 40
+				elif item in ["Orb of Augmentation", "Orb of Scouring", "Silver Coin"]:
+					maxval = 30
+				elif item in ["Chaos Orb", "Orb of Alchemy", "Regal Orb", "Divine Orb", "Vaal Orb", "Simple Sextant", "Prime Sextant", "Awakened Sextant"]:
+					maxval = 10
+				for i in range(2, maxval+1):
+					if data[item]['value'] * i >= currency_val[tiers[idx]]:
+						ret[f'{tval - 1}{counter-i} {item}'] = data[item].copy()
+						if idx == 0:
+							ret[f'{tval - 1}{counter-i} {item}']['type'] = f'mirror'
+						else:
+							ret[f'{tval - 1}{counter-i} {item}']['type'] = f'{base_sound} {tiers[idx]}'
+						ret[f'{tval - 1}{counter-i} {item}']['other'] = [f"StackSize >= {i}"]
+						idx -= 1
+					if idx <= 0:
+						break
+
 		# del data[item]['value']  # unused later, delete makes a smaller object, but unnecessary.
 		if rule:
 			ret[f'{tval} {item}'] = data[item]

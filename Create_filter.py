@@ -171,6 +171,7 @@ def convertname(league):
 	else:
 		return "t"
 
+
 # main function for creating a filter
 def main(league='tmpstandard'):
 	gen_list = gen_list_compact
@@ -240,7 +241,7 @@ def main(league='tmpstandard'):
 
 
 if __name__ == "__main__":
-	create_always_highlight()
+#	create_always_highlight()
 	league = 'tmpstandard'
 	pricetool_ninja.scrape_ninja(league)
 	# reload updated modules
