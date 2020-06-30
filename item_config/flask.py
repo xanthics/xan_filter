@@ -6,7 +6,7 @@ desc = "Flasks"
 
 # Base type : settings pair
 items = {
-    "01 Qual Flask": {"base": "Flask", "other": ["Quality = 20", "Rarity Normal"], "type": "high"},
+    "01 Qual Flask": {"base": "Flask", "other": ["Quality = 20", "Rarity Normal"], "type": "show normal"},
     "02 Qual Flask": {"base": "Flask", "other": ["Quality >= 10"], "type": "ignore"},
     "03 Qual Flask": {"base": "Flask", "other": ["Quality >= 1", "AreaLevel <= 78"], "type": "ignore"},
     "1 Diamond Flask": {"base": "Diamond Flask", "other": ["Rarity Normal", "AreaLevel <= 78"], "type": "normal"},
@@ -37,7 +37,7 @@ items = {
     "1 Hallowed Flask": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 42", "AreaLevel <= 60"], "type": "normal"},
     "1 Sanctified Flask": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 50", "AreaLevel <= 60"], "type": "normal"},
     "1 Divine Flask": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 60", "AreaLevel <= 65"], "type": "normal"},
-    "1 Eternal Flask": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 65", "AreaLevel <= 70"], "type": "normal"},
+    "1 Eternal Flask": {"class": "Life Flasks\" \"Mana Flasks", "other": ["DropLevel = 65", "AreaLevel <= 68"], "type": "normal"},
 
     "2 Small Flask": {"class": "Hybrid Flask", "other": ["DropLevel = 10", "AreaLevel <= 20"], "type": "ignore"},
     "2 medium Flask": {"class": "Hybrid Flask", "other": ["DropLevel = 20", "AreaLevel <= 30"], "type": "ignore"},

@@ -7,27 +7,19 @@ desc = "Always show catchall"
 # Base type : settings pair
 items = {
 	# High value veiled mods, so that they still show after removing them from itemmod.py when finished
-	"05 Abyss Jewel": {"class": "Abyss Jewel", "other": ["Rarity <= Magic"], "type": "normal"},
-	"0 Sacrificial Garb": {"base": "Sacrificial Garb", "type": "show normal"},
-	"0 wand": {"class": "Wand", "other": ["Rarity Rare", "ItemLevel >= 73"], "type": "show normal"},
 	"2 Magic Jewel": {"class": "Jewel", "other": ["Rarity <= Magic", "AreaLevel <= 70"], "type": "normal"},
 
-	# Corrupted white items for lead to gold darkshrine
-	#"0 corrupted amulet": {"class": "Amulets", "other": ["Corrupted True", "Rarity Normal", "ItemLevel >= 60"], "type": "show normal"},
-	#"0 corrupted ring": {"class": "Rings", "other": ["Corrupted True", "Rarity Normal", "ItemLevel >= 60"], "type": "ignore"},
-	#"0 corrupted belt": {"class": "Belts", "other": ["Corrupted True", "Rarity Normal", "ItemLevel >= 60"], "type": "show normal"},
-	#"0 corrupted quiver": {"class": "Quivers", "other": ["Corrupted True", "Rarity Normal", "ItemLevel >= 60"], "type": "ignore"},
-	#"0 corrupted gloves": {"class": "Gloves", "other": ["Corrupted True", "Rarity Normal", "ItemLevel >= 60"], "type": "ignore"},
-	#"0 corrupted boots": {"class": "Boots", "other": ["Corrupted True", "Rarity Normal", "ItemLevel >= 60"], "type": "ignore"},
-	#"0 corrupted shield": {"class": "Shield", "other": ["Corrupted True", "Rarity Normal", "ItemLevel >= 60"], "type": "ignore"},
-	#"0 Crafting helm": {"class": "Helmets", "other": ["Rarity Normal", "ItemLevel >= 84"], "type": "show normal"},
+	"77 Influenced Item": {'other': ["HasInfluence Elder Shaper Crusader Hunter Redeemer Warlord"], "type": "rare low"},
+	"77 Fractured Item": {'other': ["FracturedItem True"], "type": "rare low"},
+	"77 Synthesised Item": {'other': ["SynthesisedItem True"], "type": "rare low"},
 
-	"7 Influenced Item": {'other': ["HasInfluence Elder Shaper Crusader Hunter Redeemer Warlord"], "type": "rare low"},
-	"7 Fractured Item": {'other': ["FracturedItem True"], "type": "rare low"},
-	"7 Synthesised Item": {'other': ["SynthesisedItem True"], "type": "rare low"},
-
-	"74 Map Fragments": {"class": "Map Fragments", "type": "map white"},
-	"76 Harvest Seed": {"class": "Harvest Seed", "type": "challenge high"},
+	"11 Map Fragments": {"class": "Map Fragments", "type": "fragment normal"},
+	"12 Currency": {"class": "Currency", "type": "currency normal"},
+	"13 Divination Cards": {"class": "Currency", "type": "currency normal"},
+	"14 Incubators": {"class": "Incubator", "type": "currency normal"},
+	"16 unique": {"type": "unique normal"},
+	"17 enchant": {"class": "Helmet", "other": ["AnyEnchantment True"], "type": "item mod"},
+	"18 Misc map items": {"class": "Misc Map Items", "type": "show high"},
 
 	"8 5": {"other": ["DropLevel <= 5", "AreaLevel >= 15", "AreaLevel <= 67"], "type": "rare low"},
 	"8 10": {"other": ["DropLevel <= 10", "AreaLevel >= 20", "AreaLevel <= 67"], "type": "rare low"},

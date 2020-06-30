@@ -1116,8 +1116,6 @@ def genrareshighlighttiered():
 						# keep track of the rules we just created
 						pidx = idx
 						phl = hl
-#	from pprint import pprint
-#	pprint(ret)
 	return ret
 
 

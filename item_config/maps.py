@@ -20,6 +20,11 @@ items = {
 #	"0 Burial Chambers Map": {"base": "Burial Chambers Map", "class": "Maps", "type": "map highlight"},
 #	"0 Glacier Map": {"base": "Glacier Map", "class": "Maps", "type": "map highlight"},
 
+	"011 Blighted": {"class": "Maps", "other": ["BlightedMap True", "MapTier >= 16"], "type": "challenge very high"},
+	"012 Blighted": {"class": "Maps", "other": ["BlightedMap True", "MapTier >= 11"], "type": "challenge high"},
+	"013 Blighted": {"class": "Maps", "other": ["BlightedMap True", "MapTier <= 5"], "type": "challenge normal"},
+	"014 Blighted": {"class": "Maps", "other": ["BlightedMap True"], "type": "challenge normal"},
+
 	"112 Influenced": {"class": "Maps", "other": ["HasInfluence Elder Shaper", "MapTier >= 16"], "type": "influenced map very good"},
 	"113 Influenced": {"class": "Maps", "other": ["HasInfluence Elder Shaper", "MapTier = 15"], "type": "influenced map red good"},
 	"114 Influenced": {"class": "Maps", "other": ["HasInfluence Elder Shaper", "AreaLevel <= 83", "MapTier = 14"], "type": "influenced map red good"},
@@ -61,6 +66,4 @@ items = {
 	"228 Normal": {"class": "Maps", "other": ["MapTier >= 11"], "type": "map red"},
 	"229 Normal": {"class": "Maps", "other": ["MapTier <= 5"], "type": "map white"},
 	"230 Normal": {"class": "Maps", "type": "map yellow"},
-
-	"75 Misc map items": {"class": "Misc Map Items", 'other': ['CustomAlertSound "100_show.wav"'], "type": "show high"},
 }

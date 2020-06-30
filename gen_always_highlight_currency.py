@@ -4,7 +4,7 @@ from copy import deepcopy
 import requests
 from datetime import datetime
 from bs4 import BeautifulSoup
-from item_config.challenges import gen_moo
+from item_config.card_meta import card_meta
 
 
 def create_always_highlight():
@@ -76,9 +76,7 @@ def create_highlight_currency(currencytab, league, accountname, cookies, request
 		request = f'https://www.pathofexile.com/character-window/get-stash-items?league={league}&realm=pc&accountName={accountname}&tabs=0&tabIndex={currencytab}'
 
 		req = requester.post(request, cookies=cookies)
-		print(req.content)
 		data = json.loads(req.content)
-		print(data)
 		skipped = set()
 		for item in data['items']:
 			if item['typeLine'] in currencyvals and currencyvals[item['typeLine']] < item['stackSize'] and currencyvals[item['typeLine']] != -1:
@@ -95,7 +93,7 @@ def create_highlight_currency(currencytab, league, accountname, cookies, request
 	currency.extend([card for card in card_meta if 'currency' in card_meta[card]])
 	currency.sort()
 	currency_text = '",\n\t"'.join(currency)
-	with open("auto_gen/always_highlight.py", "w") as f:
+	with open("autogen/always_highlight.py", "w") as f:
 		f.write(f'#!/usr/bin/python\n# -*- coding: utf-8 -*-\n# Created: {datetime.utcnow().strftime("%m/%d/%Y(m/d/y) %H:%M:%S")} UTC from "{league}" data\n\nauto_ah = [\n\t"{currency_text}"\n]\n')
 
 
@@ -126,7 +124,7 @@ def create_highlight_challenge(accountname, league, cookies, requester):
 				'Whakawairua Tuahu': [{"baseexact": "Strand Map"}]
 			},
 		},
-		'Complete Unidentified Maps': {
+		'Complete Rare Unidentified Maps': {
 			'base': {"class": "Maps", "other": ["Rarity Rare", "Identified False"], "type": "challenge high"},
 			'vals': {
 				"Tier 1": [{"other": ["MapTier = 1"]}],
@@ -169,28 +167,30 @@ def create_highlight_challenge(accountname, league, cookies, requester):
 			}
 		},
 		'Turn in Divination Cards': {
-			'base': {"class": "Divination Card", "other": [], "type": "challenge high"},
+			'base': {"class": "Divination Card", "type": "challenge high"},
 			'vals': {
-				"Bow": [{"baseexact": "Imperial Legacy"}, {"baseexact": "The Porcupine"}, {"baseexact": "The Blazing Fire"}, {"baseexact": "Thunderous Skies"}, {"baseexact": "Tranquillity"}, {"baseexact": "Anarchy's Price"}, {"baseexact": "Hunter's Resolve"}],
-				"Divination Card": [{"baseexact": "The Gambler"}],
-				"Essence": [{"baseexact": "Harmony of Souls"}, {"baseexact": "The Cacophony"}, {"baseexact": "Three Voices"}],
-				"Gem": [{"baseexact": "Volatile Power"}, {"baseexact": "Dialla's Subjugation"}, {"baseexact": "Gemcutter's Promise"}, {"baseexact": "The Summoner"}, {"baseexact": "The Cataclysm"}, {"baseexact": "Gift of the Gemling Queen"}, {"baseexact": "The Fox"}, {"baseexact": "The Skeleton"}, {"baseexact": "Grave Knowledge"}, {"baseexact": "The Realm"}, {"baseexact": "The Doppelganger"}],
-				"Map": [{"baseexact": "Rain Tempter"}, {"baseexact": "Boundless Realms"}, {"baseexact": "The Surveyor"}, {"baseexact": "Cartographer's Delight"}, {"baseexact": "Scholar of the Seas"}, {"baseexact": "The Dreamland"}, {"baseexact": "The Twilight Moon"}, {"baseexact": "The Wolf's Legacy"}, {"baseexact": "Treasure Hunter"}, {"baseexact": "The Encroaching Darkness"}],
-				"Ring": [{"baseexact": "The Metalsmith's Gift"}, {"baseexact": "Lantador's Lost Love"}, {"baseexact": "The Opulent"}, {"baseexact": "Glimmer of Hope"}, {"baseexact": "The Penitent"}, {"baseexact": "Hubris"}, {"baseexact": "Blind Venture"}, {"baseexact": "Prosperity"}],
-				"Corrupted Gem": [{"baseexact": "The Dragon's Heart"}, {"baseexact": "The Artist"}, {"baseexact": "Wealth and Power"}, {"baseexact": "The Skeleton"}, {"baseexact": "The Wilted Rose"}, {"baseexact": "The Rite of Elements"}, {"baseexact": "The Cataclysm"}, {"baseexact": "The Bones"}, {"baseexact": "Deathly Designs"}, {"baseexact": "Dialla's Subjugation"}, {"baseexact": "Volatile Power"}],
-				"Itemlevel 100 Item": [{"baseexact": "Imperial Legacy"}, {"baseexact": "The Celestial Stone"}, {"baseexact": "The Sacrifice"}, {"baseexact": "The Dapper Prodigy"}, {"baseexact": "Nook's Crown"}, {"baseexact": "Destined to Crumble"}, {"baseexact": "The Hale Heart"}, {"baseexact": "Perfection"}, {"baseexact": "The Opulent"}, {"baseexact": "The Golden Era"}, {"baseexact": "The Undisputed"}, {"baseexact": "The Jester"}, {"baseexact": "Merciless Armament"}, {"baseexact": "The Tyrant"}, {"baseexact": "The Spoiled Prince"}, {"baseexact": "The Archmage's Right Hand"}, {"baseexact": "The Road to Power"}, {"baseexact": "Void of the Elements"}],
-				"Jewel": [{"baseexact": "The Mountain"}, {"baseexact": "Azyran's Reward"}, {"baseexact": "The Garish Power"}, {"baseexact": "The Eye of the Dragon"}, {"baseexact": "The Primordial"}, {"baseexact": "The Endurance"}, {"baseexact": "Shard of Fate"}],
-				"Prophecy": [{"baseexact": "Akil's Prophecy"}, {"baseexact": "Friendship"}, {"baseexact": "The Side Quest"}, {"baseexact": "Vile Power"}, {"baseexact": "Immortal Resolve"}, {"baseexact": "The Valley of Steel Boxes"}, {"baseexact": "The Jeweller's Boon"}, {"baseexact": "The Mad King"}, {"baseexact": "The Iron Bard"}, {"baseexact": "Beauty Through Death"}],
-				"Rare Item": [{"baseexact": "Nook's Crown"}, {"baseexact": "Destined to Crumble"}, {"baseexact": "The Hale Heart"}, {"baseexact": "Perfection"}, {"baseexact": "The Opulent"}, {"baseexact": "Dark Dreams"}, {"baseexact": "Lingering Remnants"}, {"baseexact": "Lantador's Lost Love"}, {"baseexact": "The Warden"}, {"baseexact": "The Lover"}, {"baseexact": "The Explorer"}, {"baseexact": "The Trial"}, {"baseexact": "Left to Fate"}, {"baseexact": "Call to the First Ones"}],
-				"Six-Linked item": [{"baseexact": "Vanity"}, {"baseexact": "The Warlord"}, {"baseexact": "The Sacrifice"}, {"baseexact": "The Porcupine"}, {"baseexact": "The Ethereal"}, {"baseexact": "The Dark Mage"}, {"baseexact": "The Dapper Prodigy"}, {"baseexact": "The Chains that Bind"}, {"baseexact": "The Celestial Justicar"}, {"baseexact": "Rebirth"}, {"baseexact": "Imperial Legacy"}, {"baseexact": "Humility"}, {"baseexact": "Emperor of Purity"}, {"baseexact": "Bowyer's Dream"}],
-				"Scarab": [{"baseexact": "More is Never Enough"}, {"baseexact": "Cameria's Cut"}, {"baseexact": "The Deal"}, {"baseexact": "Buried Treasure"}],
-				"Shaper or Elder Item": [{"baseexact": "The Celestial Stone"}, {"baseexact": "Perfection"}, {"baseexact": "The Lord of Celebration"}, {"baseexact": "The Hale Heart"}, {"baseexact": "Nook's Crown"}, {"baseexact": "Dark Dreams"}, {"baseexact": "Void of the Elements"}, {"baseexact": "The Undisputed"}, {"baseexact": "The World Eater"}, {"baseexact": "The Endless Darkness"}],
-				"Two-Implicit Unique Item": [{"baseexact": "Echoes of Love"}, {"baseexact": "The Demon"}, {"baseexact": "The Price of Loyalty"}, {"baseexact": "Arrogance of the Vaal"}, {"baseexact": "Etched in Blood"}],
-				"Unique Map": [{"baseexact": "Scholar of the Seas"}, {"baseexact": "The Dreamland"}, {"baseexact": "The Mayor"}, {"baseexact": "The Professor"}, {"baseexact": "The Twilight Moon"}, {"baseexact": "The Wolf's Legacy"}, {"baseexact": "Treasure Hunter"}, {"baseexact": "The Landing"}, {"baseexact": "The Encroaching Darkness"}],
+				"Bow": [{'bow'}],
+				"Divination Card": [{'div'}],
+				"Essence": [{'essence'}],
+				"Gem": [{'gem'}],
+				"Map": [{'map'}],
+				"Ring": [{'ring'}],
+				"Corrupted Gem": [{'gem', 'corrupt'}],
+				"Itemlevel 100 Item": [{'ilvl100'}],
+				"Jewel": [{'jewel'}],
+				"Influenced Item": [{'influenced'}],
+				"Prophecy": [{'prophecy'}],
+				"Rare Item": [{'rare'}],
+				"Six-Linked item": [{'6l'}],
+				"Scarab": [{'scarab'}],
+				"Shaper or Elder Item": [{'shaper'}, {'elder'}],
+				"Two-Implicit Unique Item": [{'two-implicit'}],
+				"Unique Map": [{'unique', 'map'}],
 			}
 		},
 	}
 
+	results = {}
 	if cookies['POESESSID']:
 		request = f'https://www.pathofexile.com/account/view-profile/{accountname}/challenges?season={league}'
 		req = requester.post(request, cookies=cookies)
@@ -203,35 +203,33 @@ def create_highlight_challenge(accountname, league, cookies, requester):
 			for val in challenge.find_all("li", class_=""):
 				challenges[title].append(val.get_text().strip())
 
-		results = {}
 		for chal in challenges:
 			if chal in highlights:
-				for val in challenges[chal]:
-					if val in highlights[chal]['vals']:
-						for c, item in enumerate(highlights[chal]['vals'][val]):
-							key = f'0 {chal} - {val} - {c}'
-							results[key] = deepcopy(highlights[chal]['base'])
-							if 'other' in item:
-								results[key]['other'].extend(item['other'])
-								del item['other']
-							results[key] = {**results[key], **item}
-							results[key]['other'].append(gen_moo('high'))
-					else:
-						print(f"Not handling {chal} - {val}")
+				if chal == "Turn in Divination Cards":
+					cards = set()
+					for cat in challenges[chal]:
+						for li in highlights[chal]['vals'][cat]:
+							for card in card_meta:
+								if li.issubset(card_meta[card]):
+									cards.add(card)
+					for card in cards:
+						key = f'0 {chal} - {card}'
+						results[key] = deepcopy(highlights[chal]['base'])
+						results[key]['baseexact'] = card
+				else:
+					for val in challenges[chal]:
+						if val in highlights[chal]['vals']:
+							for item in highlights[chal]['vals'][val]:
+								key = f'0 {chal} - {val}'
+								results[key] = deepcopy(highlights[chal]['base'])
+								if 'other' in item:
+									results[key]['other'].extend(item['other'])
+									del item['other']
+								results[key] = {**results[key], **item}
+						else:
+							print(f"Not handling {chal} - {val}")
 			else:
 				print(f"Not handling custom alerts for: {chal}")
-	else:
-		results = {}
-		for chal in highlights:
-			for val in highlights[chal]['vals']:
-				for c, item in enumerate(highlights[chal]['vals'][val]):
-					key = f'0 {chal} - {val} - {c}'
-					results[key] = deepcopy(highlights[chal]['base'])
-					if 'other' in item:
-						results[key]['other'].extend(item['other'])
-						del item['other']
-					results[key] = {**results[key], **item}
-					results[key]['other'].append(gen_moo('high'))
 
 	header = '''#!/usr/bin/python
 # -*- coding: utf-8 -*-
@@ -242,7 +240,7 @@ def create_highlight_challenge(accountname, league, cookies, requester):
 		buf += f'\t"{item}": {results[item]},\n'
 	buf += u'}\n'
 
-	with open('auto_gen\\custom_challenge.py', 'w', encoding='utf-8') as f:
+	with open('autogen\\custom_challenge.py', 'w', encoding='utf-8') as f:
 		f.write(buf)
 
 

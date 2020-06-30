@@ -23,85 +23,95 @@ from item_config import show
 from item_config.gen_item_lists import genraresleveling, gennonrareleveling, genrareshighlighttiered
 from item_config.itemmod import itemmods
 
-from theme_config import formatting
-from theme_config.min_w_highlight import volume
-from wav_mixer import convert_wav
+from autogen import custom_challenge
 from gen_always_highlight_currency import create_always_highlight
-
+from theme_config.min_w_highlight import settings
+from process_ninja_json import convert_json_to_filter
+import wav_mixer
 
 
 def gen_list_compact(items, desc):
 	#	print("Starting {}".format(obj))
 
 	# gen our string
-	l = {}
+	item_dict = {}
 	from pprint import pprint
 	for item in items:
-		sitem = items[item]
-		if sitem['type'] != "ignore":
+		item_info = items[item]
+		if item_info['type'] != "ignore":
 			if not item.split()[0].isdigit():
 				firstval = '1'
 			else:
 				firstval = item.split()[0]
-			if firstval not in l:
-				l[firstval] = {}
+			if firstval not in item_dict:
+				item_dict[firstval] = {}
 			# Prophecy and BaseType will not appear in the same rule (personal choice)
 			# have a flag that is 0(neither), 1(Base), 2(prophecy), 3(enchant)
 			class_ = ''
-			type_ = ''
-			other = ''
+			formatting = []
 			base = ''
 			flag = 0
 			influence = None
 			t = 'Show'
-			if sitem['type'] == "hide":
+			if item_info['type'] == "hide":
 				t = "Hide"
-			if 'base' in sitem:
-				base = sitem['base']
+			if 'base' in item_info:
+				base = item_info['base']
 				flag = 1
-			elif 'prophecy' in sitem:
-				base = sitem['prophecy']
+			elif 'prophecy' in item_info:
+				base = item_info['prophecy']
 				flag = 2
-			elif 'enchant' in sitem:
-				base = sitem['enchant']
+			elif 'enchant' in item_info:
+				base = item_info['enchant']
 				flag = 3
-			elif 'baseexact' in sitem:
-				base = sitem['baseexact']
+			elif 'baseexact' in item_info:
+				base = item_info['baseexact']
 				flag = 4
-			if 'class' in sitem:
-				class_ = sitem['class']
-			if 'other' in sitem:
-				getcustomsound(sitem['other'], soundlist)
-				other = ",".join(sitem['other'])
-			if 'influence' in sitem:
-				influence = sitem['influence']
-
-			if formatting.settings[sitem['type']]:
-				type_ = sitem['type']
+			elif 'class' in item_info:  # merge on class
+				base = item_info['class']
+				del item_info['class']
+				flag = 5
+			if 'class' in item_info:
+				class_ = item_info['class']
+			if 'other' in item_info:
+				formatting.extend(item_info['other'])
+			if 'influence' in item_info:
+				influence = item_info['influence']
+			if settings[item_info['type']]:
+				formatting.extend(settings[item_info['type']])
 			else:
 				print("Missing type field {} ** {}".format(items[item], item))
+				exit(-1)
 
-			k = '{}|{}|{}|{}|{}'.format(t, class_, type_, flag, other)
-			if k not in l[firstval]:
-				l[firstval][k] = {}
-			if influence in l[firstval][k]:
-				l[firstval][k][influence].append(base)
+			# TODO: Add an efficiency sort - rules should be before styles
+			formatting.sort()
+			c = wav_mixer.convert_sound_reference(formatting)
+			if c[0] > -1:
+				formatting[c[0]] = formatting[c[0]].replace(c[1], c[2])
+			other = ",".join(formatting)
+
+			# converted to string to it is easier to see if different objects have the same formatting
+			k = f'{t}|{class_}|{flag}|{other}'
+			if k not in item_dict[firstval]:
+				item_dict[firstval][k] = {}
+			if influence in item_dict[firstval][k]:
+				item_dict[firstval][k][influence].append(base)
 			else:
-				l[firstval][k][influence] = [base]
+				item_dict[firstval][k][influence] = [base]
 	base = ""
-	for item in sorted(l.keys()):
-		for ii in sorted(l[item].keys()):
+	for item in sorted(item_dict.keys()):
+		for ii in sorted(item_dict[item].keys()):
 			# build item->influence lists
 			itemlist = {}
 			influencelist = {}
-			for influence in l[item][ii]:
+			for influence in item_dict[item][ii]:
 				if influence:
-					for ba in l[item][ii][influence]:
+					for ba in item_dict[item][ii][influence]:
 						if ba not in itemlist:
 							itemlist[ba] = []
 						itemlist[ba].append(influence)
 				else:
-					influencelist[None] = l[item][ii][None][:]
+					influencelist[None] = item_dict[item][ii][None][:]
 			# convert previous list to influences->bases
 			for itl in itemlist:
 				key = " ".join(sorted(itemlist[itl]))
@@ -110,7 +120,7 @@ def gen_list_compact(items, desc):
 				else:
 					influencelist[key] = [itl]
 
-			t, class_, type_, flag, other = ii.split('|')
+			t, class_, flag, other = ii.split('|')
 
 			for influence in influencelist:
 				base += "#{}\n".format(desc)
@@ -131,12 +141,6 @@ def gen_list_compact(items, desc):
 					base += "\n\tHasInfluence {}".format(influence)
 				if other:
 					base += "\n\t{}".format("\n\t".join(sorted(other.split(','))))
-				if formatting.settings[type_]:
-					if formatting.settings[type_][0]:
-						getcustomsound(formatting.settings[type_], soundlist)
-						base += "\n\t{}".format("\n\t".join(sorted(formatting.settings[type_])))
-				else:
-					print("Missing type field {} ** {}".format(items[item], item))
 				base += "\n\tDisableDropSound True"
 				base += "\n\n"
 

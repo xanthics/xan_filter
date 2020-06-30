@@ -93,62 +93,118 @@ def scrape_ninja(league='tmpstandard'):
 			continue
 		data = req.json(encoding='utf-8')
 
-			if key == 'Currency':
-				for ii in data['lines']:
-					if 'chaosEquivalent' in ii:
-						pc = ii['pay']['count'] if ii['pay'] else 0
-						rc = ii['receive']['count'] if ii['receive'] else 0
-						if pc + rc < mincount:
-							continue
-						currency[ii['currencyTypeName']] = ii['chaosEquivalent']
+		if classtypes[key] not in price_val:
+			price_val[classtypes[key]] = {}
 
-			elif key == 'Fragment':
-				for ii in data['lines']:
-					if 'chaosEquivalent' in ii:
-						pc = ii['pay']['count'] if ii['pay'] else 0
-						rc = ii['receive']['count'] if ii['receive'] else 0
-						if pc + rc < mincount:
-							continue
-						if "Splinter" in ii['currencyTypeName']:
-							currency[ii['currencyTypeName']] = ii['chaosEquivalent']
+		if key in ['Currency', 'Fragment']:
+			for i in data['lines']:
+				if 'chaosEquivalent' in i:
+					if i['currencyTypeName'] in price_val:
+						print(f"Duplicate key for {i['currencyTypeName']} found")
+					else:
+						pc = i['pay']['count'] if i['pay'] else 0
+						rc = i['receive']['count'] if i['receive'] else 0
+						if "Splinter" not in i['currencyTypeName']:
+							price_val[classtypes[key]][i['currencyTypeName']] = {'baseexact': i['currencyTypeName'], 'value': i['chaosEquivalent'], 'count': pc + rc}
 						else:
-							fragments[ii['currencyTypeName']] = ii['chaosEquivalent']
+							price_val['currency'][i['currencyTypeName']] = {'baseexact': i['currencyTypeName'], 'value': i['chaosEquivalent'], 'count': pc + rc}
 
-			elif key == 'SkillGem':
-				lookup = {
-					"Spellslinger Support": "Spellslinger",
-					"Rune Blast": "Stormbind",
-					"Combust": "Infernal Cry",
-					"Arcanist Brand Support": "Arcanist Brand"
-				}
-				for i in data['lines']:
-					if i['count'] < mincount:
-						continue
-					if i['name'] in ['Enlighten Support', 'Enhance Support', 'Empower Support'] or 'Awakened' in i['name']:
-						i['gemQuality'] = 0
-#					if i['name'] in ['Deathmark', 'Shockwave'] and 'Support' not in i['name']:
-#						i['name'] += ' Support'
-					elif i['name'] in lookup:
-						i['name'] = lookup[i['name']]
-					if i['gemLevel'] not in skillgem:
-						skillgem[i['gemLevel']] = {}
-					if i['gemQuality'] not in skillgem[i['gemLevel']]:
-						skillgem[i['gemLevel']][i['gemQuality']] = {}
-					if i['corrupted'] not in skillgem[i['gemLevel']][i['gemQuality']]:
-						skillgem[i['gemLevel']][i['gemQuality']][i['corrupted']] = {}
-					skillgem[i['gemLevel']][i['gemQuality']][i['corrupted']][i['name']] = i['chaosValue']
+		elif key in ['Oil', 'DeliriumOrb', 'Resonator', 'Fossil', 'DivinationCard', 'Incubator', 'Essence', 'Scarab', 'Vial']:
+			for i in data['lines']:
+				if i['name'] in price_val[classtypes[key]]:
+					print(f"Duplicate key for {i['name']} found")
+				else:
+					price_val[classtypes[key]][i['name']] = {'baseexact': i['name'], 'value': i['chaosValue'], 'count': i['count']}
 
-			elif key == 'BaseType':
-				for ii in data['lines']:
-					if ii['baseType'].startswith('Superior ') or \
-							(ii['count'] < mincount and ii['variant'] and ii['baseType'] not in goodbases[ii['variant']]) or \
-							(not ii['variant'] and (ii['baseType'] not in goodbases[ii['variant']] or ii['count'] < mincount)):
-						continue
-					if ii['levelRequired'] not in bases:
-						bases[ii['levelRequired']] = {}
-					if ii['variant'] not in bases[ii['levelRequired']]:
-						bases[ii['levelRequired']][ii['variant']] = {}
-					bases[ii['levelRequired']][ii['variant']][ii['baseType']] = ii['chaosValue']
+		elif key == 'Prophecy':
+			for i in data['lines']:
+				tname = i['name']
+				if i['name'] in price_val[classtypes[key]]:
+					print(f"Duplicate key for {i['name']} found")
+					while i['name'] in price_val[classtypes[key]]:
+						i['name'] += "*"
+				price_val[classtypes[key]][i['name']] = {'prophecy': tname, 'value': i['chaosValue'], 'count': i['count']}
+
+		elif key in ['UniqueJewel', 'UniqueFlask', 'UniqueWeapon', 'UniqueArmour', 'UniqueAccessory']:
+			for i in data['lines']:
+				if (('links' in i and i['links']) or 'relic' in i['icon']) and i['name'] != 'Tabula Rasa':
+					continue
+				if key == 'Watchstone':
+					i['baseType'] = 'Ivory Watchstone'
+				elif 'Synthesised' in i['baseType']:
+					i['baseType'] = i['baseType'][12:]
+				if i['name'] in price_val[classtypes[key]]:
+					while i['name'] in price_val[classtypes[key]]:
+						i['name'] += "*"
+				price_val[classtypes[key]][i['name']] = {'baseexact': i['baseType'], 'value': i['chaosValue'], 'count': i['count']}
+
+		elif key == 'UniqueMap':
+			for i in data['lines']:
+				if 'Synthesised' in i['baseType']:
+					i['baseType'] = i['baseType'][12:]
+				if i['name'] in price_val[classtypes[key]]:
+					if i['mapTier'] < price_val[classtypes[key]][i['name']]['tier']:
+						t = price_val[classtypes[key]][i['name']]
+						name = f"{i['name']} {t['tier']}"
+						price_val[classtypes[key]][name] = {'baseexact': t['baseexact'], 'value': t['value'], 'count': t['count'], 'tier': t['tier'], 'other': t['other'][:]}
+						price_val[classtypes[key]][i['name']] = {'baseexact': i['baseType'], 'value': i['chaosValue'], 'count': i['count'], 'tier': i['mapTier'], "other": [f"MapTier = {i['mapTier']}"]}
+					else:
+						name = f"{i['name']} {i['mapTier']}"
+						price_val[classtypes[key]][name] = {'baseexact': i['baseType'], 'value': i['chaosValue'], 'count': i['count'], 'tier': i['mapTier'], "other": [f"MapTier = {i['mapTier']}"]}
+				else:
+					price_val[classtypes[key]][i['name']] = {'baseexact': i['baseType'], 'value': i['chaosValue'], 'count': i['count'], 'tier': i['mapTier'], "other": [f"MapTier = {i['mapTier']}"]}
+
+		elif key == 'Watchstone':
+			for i in data['lines']:
+				if i['name'] in price_val[classtypes[key]]:
+					if i['mapTier'] > price_val[classtypes[key]][i['name']]['charges']:
+						t = price_val[classtypes[key]][i['name']]
+						name = f"{i['name']} {t['charges']}"
+						price_val[classtypes[key]][name] = {'baseexact': 'Ivory Watchstone', 'value': t['value'], 'count': t['count'], 'charges': t['charges']}
+						price_val[classtypes[key]][i['name']] = {'baseexact': 'Ivory Watchstone', 'value': i['chaosValue'], 'count': i['count'], 'charges': i['mapTier']}
+					else:
+						name = f"{i['name']} {i['mapTier']}"
+						price_val[classtypes[key]][name] = {'baseexact': 'Ivory Watchstone', 'value': i['chaosValue'], 'count': i['count'], 'charges': i['mapTier']}
+				else:
+					price_val[classtypes[key]][i['name']] = {'baseexact': 'Ivory Watchstone', 'value': i['chaosValue'], 'count': i['count'], 'charges': i['mapTier']}
+
+		elif key == 'BaseType':
+			for i in data['lines']:
+				if i['baseType'].startswith('Superior '):
+					continue
+				# convert numbers to string since we are converting to json later
+				if not i['variant']:
+					i['variant'] = 'None'
+				price_val[classtypes[key]][f"{i['levelRequired']}-{i['variant']}-{i['baseType']}"] = {'baseexact': i['baseType'], 'value': i['chaosValue'], 'count': i['count'], 'influence': i['variant'],
+																									  'other': [f'ItemLevel {">= 86" if i["levelRequired"] >= 86 else i["levelRequired"]}']}
+
+		elif key == 'HelmetEnchant':
+			for i in data['lines']:
+				if i['name'] not in helmnames:
+					if not i['name'].startswith('Allocates') and i['name'] not in helmnames:
+						print(f"Missing helm enchant mapping for: {repr(i['name'])}")
+					continue
+				if i['name'] in price_val[classtypes[key]]:
+					print(f"Duplicate key for {i['name']} found")
+				else:
+					for c, ench in enumerate(helmnames[i['name']]):
+						price_val[classtypes[key]][f"{c}-{i['name']}"] = {'enchant': ench, 'value': i['chaosValue'], 'count': i['count']}
+
+		elif key == "SkillGem":
+			lookup = {
+				"Spellslinger Support": "Spellslinger",
+				"Rune Blast": "Stormbind",
+				"Combust": "Infernal Cry",
+				"Arcanist Brand Support": "Arcanist Brand"
+			}
+			for i in data['lines']:
+				# convert numbers to string since we are converting to json later
+				if i['name'] in ['Enlighten Support', 'Enhance Support', 'Empower Support'] or 'Awakened' in i['name']:
+					i['gemQuality'] = 0
+				elif i['name'] in lookup:
+					i['name'] = lookup[i['name']]
+				price_val[classtypes[key]][f"{99-i['gemLevel']}{99-i['gemQuality']}{1 if i['corrupted'] else 0} {i['name']}"] = {'baseexact': i['name'], 'value': i['chaosValue'], 'count': i['count'],
+																														   "other": [f"GemLevel >= {i['gemLevel']}", f"Quality >= {i['gemQuality']}", f"Corrupted {i['corrupted']}"]}
 
 		else:
 			print('Unhandled key: "{}"'.format(key))

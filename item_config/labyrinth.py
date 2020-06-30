@@ -17,5 +17,4 @@ items = {
 	"0 Portal Shredder": {"base": "Portal Shredder", "type": "quest"},
 	"0 Rod of Detonation": {"base": "Rod of Detonation", "type": "quest"},
 	"0 Sand of Eternity": {"base": "Sand of Eternity", "type": "quest"},
-	#"0 Offering to the Goddess": {"base": "Offering to the Goddess", "type": "quest"}
 }

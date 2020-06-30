@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2013-2017 Jeremy Parks
+Copyright (c) 2020 Jeremy Parks
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
