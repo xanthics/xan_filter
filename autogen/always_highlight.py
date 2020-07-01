@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 06/30/2020(m/d/y) 06:26:36 UTC from "Harvest" data
+# Created: 07/01/2020(m/d/y) 20:40:06 UTC from "Harvest" data
 
 auto_ah = [
 	"Abandoned Wealth",
@@ -30,6 +30,7 @@ auto_ah = [
 	"Harmony of Souls",
 	"Horizon Shard",
 	"House of Mirrors",
+	"Jeweller's Orb",
 	"Loyalty",
 	"Lucky Connections",
 	"Lucky Deck",
@@ -47,10 +48,12 @@ auto_ah = [
 	"Orb of Scouring",
 	"Orb of Transmutation",
 	"Perandus Coin",
+	"Portal Scroll",
 	"Prime Sextant",
 	"Rain of Chaos",
 	"Regal Orb",
 	"Regal Shard",
+	"Scroll of Wisdom",
 	"Seven Years Bad Luck",
 	"Silver Coin",
 	"Simple Sextant",

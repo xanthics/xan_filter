@@ -482,6 +482,7 @@ settings = {
 				  "SetBackgroundColor {} 220".format(color['black'])],
 	"show normal": ["SetBorderColor {}".format(color['premiumlpurple']),
 					'MinimapIcon 2 Grey Square',
+					'CustomAlertSound "{}_show"'.format('low'),
 					"SetFontSize {}".format(size['normal']),
 					"SetBackgroundColor {} 220".format(color['black'])],
 	"show level": ["SetBorderColor {}".format(color['premiumdgrey']),

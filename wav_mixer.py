@@ -72,7 +72,7 @@ soundmap = {
 			 ['convert.wav'],
 			 ['convert.wav'],
 			 ['convert.wav'],
-			 []],
+			 ['convert.wav']],
 	'gem': [['neutral3.wav'],
 			['expl_2.wav'],
 			['gem.wav'],

@@ -178,9 +178,8 @@ def convertname(league):
 
 # main function for creating a filter
 def main(league='tmpstandard'):
-	gen_list = gen_list_compact
 
-	leveling = False  # toggle to show leveling items
+	leveling = True  # toggle to show leveling items
 
 	buffer = """#**************************************************************
 # Welcome to xan.filter, a Python generated loot filter for PoE
@@ -189,38 +188,39 @@ def main(league='tmpstandard'):
 #**************************************************************
 
 """.format(league, datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'))
-	buffer += gen_list(show.items, show.desc)  # Always show these items
-	buffer += gen_list(hide.items, hide.desc)  # Always hide these items
-	buffer += gen_list(challenges.items, challenges.desc)
-	buffer += gen_list(custom_challenge.items, custom_challenge.desc)
-	buffer += gen_list(convert_json_to_filter(), "Autogen filter rules")
-	buffer += gen_list(labyrinth.items, labyrinth.desc)
-	buffer += gen_list(gems.items, gems.desc)  # Gems
-	buffer += gen_list(recipe_item.items, recipe_item.desc)  # Items for vendor recipe
-	buffer += gen_list(maps.items, maps.desc)  # maps
-	buffer += gen_list(flask.items, flask.desc)  # Flasks
-	buffer += gen_list(chance.items, chance.desc)  # Chance bases
-	buffer += gen_list(itemmods(), "Items Mods")  # mod based highlighting
-
 	league = convertname(league)
+
+	buffer += gen_list_compact(show.items, show.desc)  # Always show these items
+	buffer += gen_list_compact(hide.items, hide.desc)  # Always hide these items
+	buffer += gen_list_compact(challenges.items, challenges.desc)
+	buffer += gen_list_compact(custom_challenge.items, custom_challenge.desc)
+	buffer += gen_list_compact(convert_json_to_filter(), "Autogen filter rules")
+	buffer += gen_list_compact(labyrinth.items, labyrinth.desc)
+	buffer += gen_list_compact(gems.items, gems.desc)  # Gems
+	buffer += gen_list_compact(recipe_item.items, recipe_item.desc)  # Items for vendor recipe
+	buffer += gen_list_compact(maps.items, maps.desc)  # maps
+	buffer += gen_list_compact(flask.items, flask.desc)  # Flasks
+	buffer += gen_list_compact(chance.items, chance.desc)  # Chance bases
+	buffer += gen_list_compact(itemmods(), "Items Mods")  # mod based highlighting
+
 	if leveling:
 		desc = "Rare item for leveling"
 		flags = 'All'  # see item_config/rare_gen - genraresleveling for valid values
-		buffer += gen_list(genraresleveling(flags, overlevel=3, maxlevel=64), desc)
+		buffer += gen_list_compact(genraresleveling(flags, overlevel=3, maxlevel=64), desc)
 
-	buffer += gen_list(genrareshighlighttiered(), 'Rare item highlighting for endgame')
+	buffer += gen_list_compact(genrareshighlighttiered(), 'Rare item highlighting for endgame')
 
-	buffer += gen_list(chroma.items, chroma.desc)  # chrome vendor items
+	buffer += gen_list_compact(chroma.items, chroma.desc)  # chrome vendor items
 	if leveling:
-		buffer += gen_list(general_levelling.items, general_levelling.desc)
+		buffer += gen_list_compact(general_levelling.items, general_levelling.desc)
 	# buffer += gen_list(animate_weapon.items, animate_weapon.desc)  # Animate Weapon bases
 
 	if leveling:
 		desc = 'item for leveling'
 		flags = ['All']  # 'All'  # see item_config/rare_gen - genraresleveling for valid values
-		buffer += gen_list(gennonrareleveling(flags, overlevel=2, maxlevel=25), desc)
+		buffer += gen_list_compact(gennonrareleveling(flags, overlevel=2, maxlevel=25), desc)
 
-	buffer += gen_list(show_catchall.items, show_catchall.desc)  # Always show these items
+	buffer += gen_list_compact(show_catchall.items, show_catchall.desc)  # Always show these items
 
 	poeDir = get_poe_path()
 	print("Writing files to: {}".format(poeDir))
@@ -245,7 +245,7 @@ def main(league='tmpstandard'):
 
 
 if __name__ == "__main__":
-#	create_always_highlight()
+	create_always_highlight()
 	league = 'tmpstandard'
 	pricetool_ninja.scrape_ninja(league)
 	# reload updated modules

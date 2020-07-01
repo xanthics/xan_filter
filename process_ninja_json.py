@@ -125,7 +125,7 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, ret):
 	price_currency(unique_cleaned, val, base_sound, currency_val, tiers, minval, ret)
 
 
-# TODO: stackables
+# TODO: fix stackables - currenty rolling from hidden to low will use low style instead of show
 def price_currency(data, val, base_sound, currency_val, tiers, minval, ret):
 	ah_list = ['Fossil', 'Resonator', 'Deafening', 'Shrieking', 'Screaming', 'Catalyst', "Delerium Orb", 'Splinter']
 	stackable = ['Orb', 'Splinter', 'Chisel', 'Coin', 'Bauble', 'Sextant', 'Shard', 'Whetstone', 'Scroll', 'Scrap', "Essence", 'Fossil', 'Resonator']
@@ -207,6 +207,8 @@ def convert_json_to_filter():
 	ret = {}
 	packs = [
 		# json blob, priority, filter base rules, pricing funct, acceptable tiers, hide/ignore/show below min
+		# Following classes have defaults for normal in show_catchall:
+		# Map Fragments, Currency(also prophecy, oil, etc), Divination Card, Incubator, Unique, Helm Enchant, Misc Map Items
 		['currency', 1, 'currency', price_currency, ['mirror', 'extremely high', 'very high', 'high', 'normal', 'low'], 'hide'],
 		['currency_strict', 1, 'currency', price_currency, ['mirror', 'extremely high', 'very high', 'high', 'normal'], 'hide'],
 		['incubator', 7, 'currency', price_currency, ['mirror', 'extremely high', 'very high', 'high', 'normal'], 'hide'],
