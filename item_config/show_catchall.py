@@ -15,7 +15,7 @@ items = {
 
 	"11 Map Fragments": {"class": "Map Fragments", "type": "fragment normal"},
 	"12 Currency": {"class": "Currency", "type": "currency normal"},
-	"13 Divination Cards": {"class": "Divination Card", "type": "currency normal"},
+	"13 Divination Cards": {"class": "Divination Card", "type": "divination normal"},
 	"14 Incubators": {"class": "Incubator", "type": "currency normal"},
 	"16 unique": {"type": "unique normal"},
 	"17 enchant": {"class": "Helmet", "other": ["AnyEnchantment True"], "type": "item mod"},

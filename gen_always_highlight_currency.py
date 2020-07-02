@@ -12,17 +12,20 @@ def create_always_highlight():
 	league = "Harvest"
 	accountname = ""
 	cookies = {'POESESSID': ''}  # update to your session id, blank session id will use default(on) highlighting rules
-
+	header = {
+		'User-Agent': 'xan.filter)',
+		'From': 'xanthics on discord'
+	}
 	if cookies['POESESSID']:
 		requester = requests.session()
 	else:
 		requester = None
-	create_highlight_currency(currencytab, league, accountname, cookies, requester)
-	create_highlight_challenge(accountname, league, cookies, requester)
+	create_highlight_currency(currencytab, league, accountname, cookies, header, requester)
+	create_highlight_challenge(accountname, league, cookies, header, requester)
 
 
 # Uses your session id (if provided) to change always highlight settings for currency
-def create_highlight_currency(currencytab, league, accountname, cookies, requester):
+def create_highlight_currency(currencytab, league, accountname, cookies, header, requester):
 	currencyvals = {  # update to currencies that you want to have shown and thresholds for them. -1 to always highlight
 		"Simple Sextant": -1,
 		"Cartographer's Chisel": -1,
@@ -75,7 +78,7 @@ def create_highlight_currency(currencytab, league, accountname, cookies, request
 	if cookies['POESESSID']:
 		request = f'https://www.pathofexile.com/character-window/get-stash-items?league={league}&realm=pc&accountName={accountname}&tabs=0&tabIndex={currencytab}'
 
-		req = requester.post(request, cookies=cookies)
+		req = requester.post(request, cookies=cookies, headers=header)
 		data = json.loads(req.content)
 		skipped = set()
 		for item in data['items']:
@@ -92,12 +95,11 @@ def create_highlight_currency(currencytab, league, accountname, cookies, request
 	# add div cards that give currency
 	currency.extend([card for card in card_meta if 'currency' in card_meta[card]])
 	currency.sort()
-	currency_text = '",\n\t"'.join(currency)
-	with open("autogen/always_highlight.py", "w") as f:
-		f.write(f'#!/usr/bin/python\n# -*- coding: utf-8 -*-\n# Created: {datetime.utcnow().strftime("%m/%d/%Y(m/d/y) %H:%M:%S")} UTC from "{league}" data\n\nauto_ah = [\n\t"{currency_text}"\n]\n')
+	with open("autogen/always_highlight.json", "w") as f:
+		json.dump(currency, f)
 
 
-def create_highlight_challenge(accountname, league, cookies, requester):
+def create_highlight_challenge(accountname, league, cookies, header, requester):
 	# These highlight rules are selected to bring more attention to cards/items that may be overlooked.  If something is already valuable then it is not included.
 	highlights = {
 		'Complete Unique Maps': {
@@ -193,7 +195,7 @@ def create_highlight_challenge(accountname, league, cookies, requester):
 	results = {}
 	if cookies['POESESSID']:
 		request = f'https://www.pathofexile.com/account/view-profile/{accountname}/challenges?season={league}'
-		req = requester.post(request, cookies=cookies)
+		req = requester.post(request, cookies=cookies, headers=header)
 		text = req.content.decode("utf-8")
 		soup = BeautifulSoup(text, 'html.parser')
 		challenges = {}

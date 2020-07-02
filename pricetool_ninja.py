@@ -78,7 +78,10 @@ def scrape_ninja(league='tmpstandard'):
 	}
 
 	requester = requests.session()
-
+	header = {
+		'User-Agent': 'xan.filter)',
+		'From': 'xanthics on discord'
+	}
 	price_val = {}
 
 	for key in keys:
@@ -86,7 +89,8 @@ def scrape_ninja(league='tmpstandard'):
 			request = f'https://poe.ninja/api/data/currencyoverview?league={leaguelookup[league]}&type={key}'
 		else:
 			request = f'https://poe.ninja/api/data/itemoverview?league={leaguelookup[league]}&type={key}'
-		req = requester.get(request)
+		req = requester.get(request, headers=header)
+		req = requester.get(request, headers=header)
 		print(f"{league} {key} Status code: {req.status_code}")
 		if req.status_code == 204:
 			print("No {} data for {}".format(key, league))

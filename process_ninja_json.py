@@ -5,11 +5,9 @@
 import json
 from collections import defaultdict
 
-from autogen.always_highlight import auto_ah
-
 
 # placeholder
-def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, ret):
+def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, auto_ah, ret):
 	# drops that are restricted to specific areas or leagues
 	# limited highlighting is only used if the only high drops are limited and there is at least 1 low drop
 	limiteddrop = [
@@ -122,11 +120,12 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, ret):
 			unique_cleaned[base] = {'baseexact': base, 'value': min(unique_list[base])}
 		else:
 			unique_cleaned[base] = {'baseexact': base, 'value': min(unique_list_limited[base])}
-	price_currency(unique_cleaned, val, base_sound, currency_val, tiers, minval, ret)
+	price_currency(unique_cleaned, val, base_sound, currency_val, tiers, minval, auto_ah, ret)
 
 
 # TODO: fix stackables - currenty rolling from hidden to low will use low style instead of show
-def price_currency(data, val, base_sound, currency_val, tiers, minval, ret):
+# TODO: Preprocess div cards (eg the gambler) so they can never make noise
+def price_currency(data, val, base_sound, currency_val, tiers, minval, auto_ah, ret):
 	ah_list = ['Fossil', 'Resonator', 'Deafening', 'Shrieking', 'Screaming', 'Catalyst', "Delerium Orb", 'Splinter']
 	stackable = ['Orb', 'Splinter', 'Chisel', 'Coin', 'Bauble', 'Sextant', 'Shard', 'Whetstone', 'Scroll', 'Scrap', "Essence", 'Fossil', 'Resonator']
 	for item in data:
@@ -231,9 +230,12 @@ def convert_json_to_filter():
 		'normal': 7 / 8,
 		'low': 1 / 8,
 	}
+	# initialize always highlight list
+	with open(f'autogen/always_highlight.json', 'r') as f:
+		auto_ah = json.load(f)
 
 	for blob, val, base_sound, funct, tiers, minval in packs:
 		with open(f'autogen/{blob}.json', 'r') as f:
 			data = json.load(f)
-		funct(data, val, base_sound, currency_val, tiers, minval, ret)
+		funct(data, val, base_sound, currency_val, tiers, minval, auto_ah, ret)
 	return ret
