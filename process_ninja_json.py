@@ -123,7 +123,6 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, auto_a
 	price_currency(unique_cleaned, val, base_sound, currency_val, tiers, minval, auto_ah, ret)
 
 
-# TODO: fix stackables - currenty rolling from hidden to low will use low style instead of show
 # TODO: Preprocess div cards (eg the gambler) so they can never make noise
 def price_currency(data, val, base_sound, currency_val, tiers, minval, auto_ah, ret):
 	ah_list = ['Fossil', 'Resonator', 'Deafening', 'Shrieking', 'Screaming', 'Catalyst', "Delerium Orb", 'Splinter']
@@ -167,7 +166,7 @@ def price_currency(data, val, base_sound, currency_val, tiers, minval, auto_ah, 
 			if base_sound in ['currency'] and val == 1 and any(stack in item for stack in stackable) and tiers[0] not in data[item]['type']:
 				counter = 9999
 				prev = data[item]['type'].split(' ', maxsplit=1)[1] if " " in data[item]['type'] else data[item]['type']
-				idx = len(tiers) - 1 if prev not in tiers else tiers.index(prev) - 1
+				idx = len(tiers) - 2 if prev not in tiers else tiers.index(prev) - 1
 				maxval = 20
 				if item == "Perandus Coin":
 					maxval = 1000
