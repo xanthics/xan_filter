@@ -40,11 +40,11 @@ def scrape_ninja(league='tmpstandard'):
 		'UniqueArmour',
 		'UniqueAccessory',
 		'Watchstone',
-		'DeliriumOrb'
+		'DeliriumOrb',
+		'Seed'
 	]
 
 	classtypes = {
-		'Oil': 'currency',
 		'Currency': 'currency',
 		'Vial': 'currency',
 
@@ -75,6 +75,9 @@ def scrape_ninja(league='tmpstandard'):
 		'UniqueArmour': 'unique',
 		'UniqueAccessory': 'unique',
 		'Watchstone': 'unique',
+
+		'Oil': 'challenge_stack',
+		'Seed': 'challenge_stack',
 	}
 
 	requester = requests.session()
@@ -209,6 +212,9 @@ def scrape_ninja(league='tmpstandard'):
 					i['name'] = lookup[i['name']]
 				price_val[classtypes[key]][f"{99-i['gemLevel']}{99-i['gemQuality']}{1 if i['corrupted'] else 0} {i['name']}"] = {'baseexact': i['name'], 'value': i['chaosValue'], 'count': i['count'],
 																														   "other": [f"GemLevel >= {i['gemLevel']}", f"Quality >= {i['gemQuality']}", f"Corrupted {i['corrupted']}"]}
+		elif key == 'Seed':
+			for i in data['lines']:
+				price_val[classtypes[key]][f"{99-i['levelRequired']} {i['name']}"] = {'baseexact': i['name'], 'value': i['chaosValue'], 'count': i['count'], "other": [f"ItemLevel >= {i['levelRequired']}"]}
 
 		else:
 			print('Unhandled key: "{}"'.format(key))

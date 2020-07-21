@@ -197,7 +197,6 @@ def main(league='tmpstandard'):
 	buffer += gen_list_compact(convert_json_to_filter(), "Autogen filter rules")
 	buffer += gen_list_compact(labyrinth.items, labyrinth.desc)
 	buffer += gen_list_compact(gems.items, gems.desc)  # Gems
-	buffer += gen_list_compact(recipe_item.items, recipe_item.desc)  # Items for vendor recipe
 	buffer += gen_list_compact(maps.items, maps.desc)  # maps
 	buffer += gen_list_compact(flask.items, flask.desc)  # Flasks
 	buffer += gen_list_compact(chance.items, chance.desc)  # Chance bases
@@ -220,6 +219,7 @@ def main(league='tmpstandard'):
 		flags = ['All']  # 'All'  # see item_config/rare_gen - genraresleveling for valid values
 		buffer += gen_list_compact(gennonrareleveling(flags, overlevel=2, maxlevel=25), desc)
 
+	buffer += gen_list_compact(recipe_item.items, recipe_item.desc)  # Items for vendor recipe
 	buffer += gen_list_compact(show_catchall.items, show_catchall.desc)  # Always show these items
 
 	poeDir = get_poe_path()

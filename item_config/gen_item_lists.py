@@ -1025,7 +1025,7 @@ def genrareshighlighttiered():
 		None
 	]
 	# maximum value to show for non-special drops
-	maxnormal = 2
+	maxnormal = 3
 	# maxixum total for each highlighting style
 	style_tiers = {
 		2: 'rare highlight',

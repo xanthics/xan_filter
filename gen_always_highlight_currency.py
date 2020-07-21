@@ -26,35 +26,36 @@ def create_always_highlight():
 
 # Uses your session id (if provided) to change always highlight settings for currency
 def create_highlight_currency(currencytab, league, accountname, cookies, header, requester):
-	currencyvals = {  # update to currencies that you want to have shown and thresholds for them. -1 to always highlight
+	currencyvals = {  # update to currencies that you want to have shown and thresholds for them. -1 to always highlight but doesn't highlight shards
 		"Simple Sextant": -1,
 		"Cartographer's Chisel": -1,
-		'Exalted Orb': -1,
+		'Exalted Orb': 9999,
 		'Divine Orb': -1,
 		"Prime Sextant": -1,
 		"Awakened Sextant": -1,
-		'Orb of Annulment': -1,
+		'Orb of Annulment': 9999,
 		'Orb of Binding': 5,
-		"Ancient Orb": -1,
+		"Ancient Orb": 50,
 		"Armourer's Scrap": 160,
 		"Blacksmith's Whetstone": 80,
 		"Blessed Orb": 100,
-		"Chaos Orb": -1,
+		"Chaos Orb": 9999,
 		"Chromatic Orb": 1000,
 		"Engineer's Orb": 20,
 		"Gemcutter's Prism": 100,
 		"Glassblower's Bauble": 60,
+		"Harbinger's Orb": 9999,
 		"Jeweller's Orb": 350,
-		"Orb of Alchemy": 100,
+		"Orb of Alchemy": 150,
 		"Orb of Alteration": -1,
 		"Orb of Augmentation": 500,
-		"Orb of Chance": 500,
+		"Orb of Chance": 250,
 		"Orb of Fusing": -1,
 		"Orb of Horizons": 50,
 		"Orb of Regret": 100,
-		"Orb of Scouring": 100,
+		"Orb of Scouring": 150,
 		"Orb of Transmutation": 500,
-		"Perandus Coin": -1,
+		"Perandus Coin": 25000,
 		"Portal Scroll": 40,
 		"Regal Orb": 100,
 		"Scroll of Wisdom": 100,
@@ -71,7 +72,8 @@ def create_highlight_currency(currencytab, league, accountname, cookies, header,
 		"Orb of Regret": ['Orb of Scouring'],
 		"Orb of Scouring": ["Orb of Chance"],
 		"Scroll of Wisdom": ["Armourer's Scrap", "Blacksmith's Whetstone", "Orb of Transmutation"],
-		"Chaos Orb": ["Chaos Shard"]
+		"Chaos Orb": ["Chaos Shard"],
+		"Harbinger's Orb": ["Harbinger's Shard"]
 	}
 
 	currency = list(currencyvals.keys())
@@ -86,6 +88,8 @@ def create_highlight_currency(currencytab, league, accountname, cookies, header,
 				currency.pop(currency.index(item['typeLine']))
 			elif item['typeLine'] not in currencyvals and 'Oil' not in item['typeLine'] and 'Shard' not in item['typeLine'] and 'Fragment' not in item['typeLine']:
 				skipped.add(item['typeLine'])
+			if item['typeLine'] in shards and item['stackSize'] > currencyvals[item['typeLine']] * 0.5:
+				del shards[item['typeLine']]
 		print(f"Skipped determining always show for: {sorted(skipped)}")
 
 	for shard in shards:
