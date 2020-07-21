@@ -55,6 +55,8 @@ def clean(price_val):
 		json.dump(defaults, f, sort_keys=True)  # , indent=2)
 
 
+# TODO: Preprocess div cards (eg the gambler) so they can never make noise
+# (sum-val)/sum*val -- to normalize
 # sets the value of some divination cards based on their output
 def fix_divs(price_val):
 	# Lookup table for cards that produce specific items so that we can set their values manually

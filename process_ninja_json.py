@@ -91,7 +91,9 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, auto_a
 		# Conqueror
 		'Booming Populace', 'Hands of the High Templar', 'Irresistable Temptation', 'Leash of Oblation', 'Manastorm', 'Misinformation', 'Stalwart Defenders', 'Territories Unknown', 'Terror', 'The Black Cane', 'The Ivory Tower', 'The Saviour', 'Thread of Hope', 'War Among the Stars',
 		# Delirium
-		'Algor Mortis', 'Assailum', 'Beacon of Madness', 'One With Nothing', 'Perfidy', 'The Interrogation', "Kitava's Teachings", 'Voices'
+		'Algor Mortis', 'Assailum', 'Beacon of Madness', 'One With Nothing', 'Perfidy', 'The Interrogation', "Kitava's Teachings", 'Voices',
+		# Harvest
+		'Abhorrent Interrogation', "Bear's Girdle", "Doryani's Prototype", "Emperor's Vigilance", 'Forbidden Shako', 'Law of the Wilds', 'Plume of Pursuit', 'Storm Secret', 'The Felbog Fang', 'The Immortal Will', 'The Shattered Divinity', 'The Surging Thoughts', "The Tempest's Liberation", "The Torrent's Reclamation", 'The Yielding Mortality', "Witchhunter's Judgment",
 	]
 	unique_list = defaultdict(list)
 	unique_list_limited = defaultdict(list)
@@ -123,10 +125,9 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, auto_a
 	price_currency(unique_cleaned, val, base_sound, currency_val, tiers, minval, auto_ah, ret)
 
 
-# TODO: Preprocess div cards (eg the gambler) so they can never make noise
 def price_currency(data, val, base_sound, currency_val, tiers, minval, auto_ah, ret):
 	ah_list = ['Fossil', 'Resonator', 'Deafening', 'Shrieking', 'Screaming', 'Catalyst', "Delerium Orb", 'Splinter']
-	stackable = ['Orb', 'Splinter', 'Chisel', 'Coin', 'Bauble', 'Sextant', 'Shard', 'Whetstone', 'Scroll', 'Scrap', "Essence", 'Fossil', 'Resonator']
+	stackable = ['Orb', 'Splinter', 'Chisel', 'Coin', 'Bauble', 'Sextant', 'Shard', 'Whetstone', 'Scroll', 'Scrap', "Essence", 'Fossil', 'Resonator', 'Primal', 'Vivid', 'Wild', 'Oil']
 	for item in data:
 		rule = True
 		if item[0].isdigit() and item.split(' ', maxsplit=1)[0].isdigit():
@@ -138,11 +139,11 @@ def price_currency(data, val, base_sound, currency_val, tiers, minval, auto_ah, 
 		# -2 high value drop that is limited
 		if data[item]['value'] in [-1, -2]:
 			data[item]['type'] = 'unique special' if data[item]['value'] == -1 else "unique limited"
-		# A stackable item.  Generate all valid stack breakpoints
+
 		else:
 			for ch in tiers:
 				if data[item]['value'] >= currency_val[ch]:
-					if ch == 'normal':
+					if ch == 'normal' and base_sound not in ['challenge']:
 						rule = False
 					if ch == 'low' and (item in auto_ah or (base_sound in ['currency', 'divination'] and any(substring in item for substring in ah_list))):
 						data[item]['type'] = f'{base_sound} show'
@@ -162,21 +163,24 @@ def price_currency(data, val, base_sound, currency_val, tiers, minval, auto_ah, 
 					data[item]['type'] = f'{base_sound} {tiers[-1]}'
 				elif minval == 'ignore':
 					continue
+			# A stackable item.  Generate all valid stack breakpoints
 			# This won't get called if minval for currency is ignore
-			if base_sound in ['currency'] and val == 1 and any(stack in item for stack in stackable) and tiers[0] not in data[item]['type']:
+			if base_sound in ['currency', 'challenge'] and val == 1 and any(stack in item for stack in stackable) and tiers[0] not in data[item]['type']:
 				counter = 9999
 				prev = data[item]['type'].split(' ', maxsplit=1)[1] if " " in data[item]['type'] else data[item]['type']
 				idx = len(tiers) - 2 if prev not in tiers else tiers.index(prev) - 1
 				maxval = 20
 				if item == "Perandus Coin":
 					maxval = 1000
+				elif any([x in item for x in ['Primal', 'Vivid', 'Wild']]):
+					maxval = 100
 				elif "Splinter" in item:
 					maxval = 99
 				elif "Essence" in item:
 					maxval = 9
 				elif "Fossil" in item:
 					maxval = 20
-				elif "Resonator" in item or "Delirium Orb" in item:
+				elif any([x in item for x in ["Resonator", "Delirium Orb", "Oil"]]):
 					maxval = 10
 				elif item in ["Orb of Transmutation", "Scroll of Wisdom", "Portal Scroll", "Armourer's Scrap", "Orb of Regret"]:
 					maxval = 40
@@ -191,7 +195,10 @@ def price_currency(data, val, base_sound, currency_val, tiers, minval, auto_ah, 
 							ret[f'{tval - 1}{counter-i} {item}']['type'] = f'mirror'
 						else:
 							ret[f'{tval - 1}{counter-i} {item}']['type'] = f'{base_sound} {tiers[idx]}'
-						ret[f'{tval - 1}{counter-i} {item}']['other'] = [f"StackSize >= {i}"]
+						if 'other' in []:
+							ret[f'{tval - 1}{counter - i} {item}']['other'].extend([f"StackSize >= {i}"])
+						else:
+							ret[f'{tval - 1}{counter-i} {item}']['other'] = [f"StackSize >= {i}"]
 						idx -= 1
 					if idx <= 0:
 						break
@@ -217,6 +224,7 @@ def convert_json_to_filter():
 		['base', 4, 'base', price_currency, ['mirror', 'extremely high', 'very high'], 'ignore'],
 		['gems', 6, 'gem', price_currency, ['mirror', 'extremely high', 'very high', 'high'], 'ignore'],
 		['unique', 9, 'unique', unique_preprocess, ['mirror', 'extremely high', 'very high', 'high', 'normal', 'low'], 'show'],
+		['challenge_stack', 1, 'challenge', price_currency, ['mirror', 'extremely high', 'very high', 'high', 'normal', 'low'], 'show'],
 	]
 	# initialize pricing tiers
 	with open(f'autogen/currency.json', 'r') as f:
