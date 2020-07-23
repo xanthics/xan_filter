@@ -1,6 +1,6 @@
 #**************************************************************
 # Welcome to xan.filter, a Python generated loot filter for PoE
-# This filter was generated for tmpstandard on 07/23/2020(m/d/y) 00:14:17 UTC
+# This filter was generated for tmpstandard on 07/23/2020(m/d/y) 00:20:09 UTC
 # The most current version of code can always be found at https://github.com/xanthics/poe_filter
 #**************************************************************
 
@@ -194,7 +194,7 @@ Show
 
 #challenge item
 Show
-	BaseType == "Fortune Flower" "Lifeforce Blossom"
+	BaseType == "Lifeforce Bud" "Horticrafting Bud"
 	CustomAlertSound "filter_sounds/20_gethit1.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -204,7 +204,17 @@ Show
 
 #challenge item
 Show
-	BaseType == "Fortune Bud" "Fortune Blossom" "Lifeforce Flower" "Horticrafting Bud"
+	BaseType == "Fortune Bud" "Fortune Blossom" "Lifeforce Flower" "Lifeforce Blossom"
+	CustomAlertSound "filter_sounds/20_gethit2.wav"
+	MinimapIcon 2 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 32
+	DisableDropSound True
+
+#challenge item
+Show
+	BaseType == "Fortune Flower"
 	CustomAlertSound "filter_sounds/20_gethit3.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -214,7 +224,7 @@ Show
 
 #challenge item
 Show
-	BaseType == "Lifeforce Bud" "Horticrafting Flower" "Horticrafting Blossom"
+	BaseType == "Horticrafting Flower" "Horticrafting Blossom"
 	CustomAlertSound "filter_sounds/20_gethit4.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -286,7 +296,7 @@ Show
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 170 158 130
 	SetFontSize 44
-	StackSize >= 60
+	StackSize >= 65
 	DisableDropSound True
 
 #Autogen filter rules
@@ -357,7 +367,7 @@ Show
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 170 158 130
 	SetFontSize 39
-	StackSize >= 23
+	StackSize >= 25
 	DisableDropSound True
 
 #Autogen filter rules
@@ -488,7 +498,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Annulment Shard" "Splinter of Chayula" "Timeless Maraketh Splinter" "Aberrant Fossil" "Aetheric Fossil" "Frigid Fossil" "Metallic Fossil" "Prismatic Fossil" "Pristine Fossil" "Scorched Fossil" "Serrated Fossil"
+	BaseType == "Splinter of Chayula" "Timeless Maraketh Splinter" "Aberrant Fossil" "Aetheric Fossil" "Frigid Fossil" "Metallic Fossil" "Prismatic Fossil" "Pristine Fossil" "Scorched Fossil" "Serrated Fossil"
 	CustomAlertSound "filter_sounds/100_gold.wav"
 	MinimapIcon 1 Blue Pentagon
 	PlayEffect Blue
@@ -557,18 +567,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Clear Oil"
-	CustomAlertSound "filter_sounds/75_attack1.wav"
-	MinimapIcon 1 Blue Kite
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 39
-	StackSize >= 10
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Regal Orb" "Powerful Alchemical Resonator"
+	BaseType == "Powerful Alchemical Resonator"
 	CustomAlertSound "filter_sounds/75_gold.wav"
 	MinimapIcon 1 Blue Pentagon
 	SetBackgroundColor 0 0 0 220
@@ -638,7 +637,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Black Oil"
-	CustomAlertSound "filter_sounds/100_death5.wav"
+	CustomAlertSound "filter_sounds/100_death2.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -672,6 +671,17 @@ Show
 
 #Autogen filter rules
 Show
+	BaseType == "Clear Oil"
+	CustomAlertSound "filter_sounds/75_attack3.wav"
+	MinimapIcon 1 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 39
+	StackSize >= 7
+	DisableDropSound True
+
+#Autogen filter rules
+Show
 	BaseType == "Simulacrum Splinter"
 	CustomAlertSound "filter_sounds/75_gold.wav"
 	MinimapIcon 1 Blue Pentagon
@@ -684,7 +694,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Crimson Oil"
-	CustomAlertSound "filter_sounds/100_death4.wav"
+	CustomAlertSound "filter_sounds/100_death2.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -707,7 +717,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Orb of Regret" "Prime Sextant" "Timeless Templar Splinter" "Vaal Orb" "Wailing Essence of Hatred"
+	BaseType == "Orb of Regret" "Prime Sextant" "Timeless Templar Splinter" "Vaal Orb"
 	CustomAlertSound "filter_sounds/75_gold.wav"
 	MinimapIcon 1 Blue Pentagon
 	SetBackgroundColor 0 0 0 220
@@ -729,7 +739,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Shrieking Essence of Dread" "Shrieking Essence of Envy" "Shrieking Essence of Greed" "Shrieking Essence of Scorn" "Shrieking Essence of Woe" "Tangled Fossil"
+	BaseType == "Annulment Shard" "Shrieking Essence of Dread" "Shrieking Essence of Envy" "Shrieking Essence of Greed" "Shrieking Essence of Scorn" "Shrieking Essence of Woe" "Tangled Fossil"
 	CustomAlertSound "filter_sounds/100_gold.wav"
 	MinimapIcon 1 Blue Pentagon
 	PlayEffect Blue
@@ -765,7 +775,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Glassblower's Bauble" "Orb of Alteration"
+	BaseType == "Glassblower's Bauble" "Orb of Alteration" "Splinter of Esh"
 	CustomAlertSound "filter_sounds/20_gold.wav"
 	MinimapIcon 2 Brown Pentagon
 	SetBackgroundColor 0 0 0 220
@@ -776,7 +786,18 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Azure Oil" "Indigo Oil"
+	BaseType == "Violet Oil"
+	CustomAlertSound "filter_sounds/75_attack1.wav"
+	MinimapIcon 1 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 39
+	StackSize >= 5
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Amber Oil" "Verdant Oil"
 	CustomAlertSound "filter_sounds/75_attack2.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -787,8 +808,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Amber Oil" "Sepia Oil" "Teal Oil" "Verdant Oil" "Violet Oil"
-	CustomAlertSound "filter_sounds/75_attack4.wav"
+	BaseType == "Azure Oil" "Teal Oil"
+	CustomAlertSound "filter_sounds/75_attack3.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -798,25 +819,35 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Annulment Shard" "Splinter of Chayula" "Timeless Maraketh Splinter" "Aberrant Fossil" "Aetheric Fossil" "Frigid Fossil" "Metallic Fossil" "Muttering Essence of Anger" "Muttering Essence of Contempt" "Muttering Essence of Fear" "Muttering Essence of Greed" "Muttering Essence of Hatred" "Muttering Essence of Sorrow" "Muttering Essence of Torment" "Muttering Essence of Woe" "Potent Chaotic Resonator" "Prismatic Fossil" "Pristine Fossil" "Scorched Fossil" "Screaming Essence of Anger" "Screaming Essence of Anguish" "Screaming Essence of Contempt" "Screaming Essence of Doubt" "Screaming Essence of Dread" "Screaming Essence of Envy" "Screaming Essence of Fear" "Screaming Essence of Greed" "Screaming Essence of Hatred" "Screaming Essence of Loathing" "Screaming Essence of Misery" "Screaming Essence of Rage" "Screaming Essence of Scorn" "Screaming Essence of Sorrow" "Screaming Essence of Spite" "Screaming Essence of Suffering" "Screaming Essence of Torment" "Screaming Essence of Woe" "Screaming Essence of Wrath" "Screaming Essence of Zeal" "Serrated Fossil" "Shrieking Essence of Anguish" "Shrieking Essence of Doubt" "Shrieking Essence of Hatred" "Shrieking Essence of Misery" "Shrieking Essence of Suffering" "Shrieking Essence of Torment" "Shrieking Essence of Wrath" "Wailing Essence of Anger" "Wailing Essence of Anguish" "Wailing Essence of Contempt" "Wailing Essence of Doubt" "Wailing Essence of Fear" "Wailing Essence of Greed" "Wailing Essence of Loathing" "Wailing Essence of Rage" "Wailing Essence of Sorrow" "Wailing Essence of Spite" "Wailing Essence of Suffering" "Wailing Essence of Torment" "Wailing Essence of Woe" "Wailing Essence of Wrath" "Wailing Essence of Zeal" "Weeping Essence of Anger" "Weeping Essence of Contempt" "Weeping Essence of Doubt" "Weeping Essence of Fear" "Weeping Essence of Greed" "Weeping Essence of Hatred" "Weeping Essence of Rage" "Weeping Essence of Sorrow" "Weeping Essence of Suffering" "Weeping Essence of Torment" "Weeping Essence of Woe" "Weeping Essence of Wrath" "Whispering Essence of Contempt" "Whispering Essence of Greed" "Whispering Essence of Hatred" "Whispering Essence of Woe"
+	BaseType == "Sepia Oil"
+	CustomAlertSound "filter_sounds/75_attack5.wav"
+	MinimapIcon 1 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 39
+	StackSize >= 5
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Indigo Oil"
+	CustomAlertSound "filter_sounds/75_attack6.wav"
+	MinimapIcon 1 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 39
+	StackSize >= 5
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Splinter of Chayula" "Timeless Maraketh Splinter" "Aberrant Fossil" "Aetheric Fossil" "Frigid Fossil" "Metallic Fossil" "Muttering Essence of Anger" "Muttering Essence of Contempt" "Muttering Essence of Fear" "Muttering Essence of Greed" "Muttering Essence of Hatred" "Muttering Essence of Sorrow" "Muttering Essence of Torment" "Muttering Essence of Woe" "Potent Chaotic Resonator" "Prismatic Fossil" "Pristine Fossil" "Scorched Fossil" "Screaming Essence of Anger" "Screaming Essence of Anguish" "Screaming Essence of Contempt" "Screaming Essence of Doubt" "Screaming Essence of Dread" "Screaming Essence of Envy" "Screaming Essence of Fear" "Screaming Essence of Greed" "Screaming Essence of Hatred" "Screaming Essence of Loathing" "Screaming Essence of Misery" "Screaming Essence of Rage" "Screaming Essence of Scorn" "Screaming Essence of Sorrow" "Screaming Essence of Spite" "Screaming Essence of Suffering" "Screaming Essence of Torment" "Screaming Essence of Woe" "Screaming Essence of Wrath" "Screaming Essence of Zeal" "Serrated Fossil" "Shrieking Essence of Anguish" "Shrieking Essence of Doubt" "Shrieking Essence of Hatred" "Shrieking Essence of Misery" "Shrieking Essence of Suffering" "Shrieking Essence of Torment" "Shrieking Essence of Wrath" "Wailing Essence of Anger" "Wailing Essence of Anguish" "Wailing Essence of Contempt" "Wailing Essence of Doubt" "Wailing Essence of Fear" "Wailing Essence of Greed" "Wailing Essence of Hatred" "Wailing Essence of Loathing" "Wailing Essence of Rage" "Wailing Essence of Sorrow" "Wailing Essence of Spite" "Wailing Essence of Suffering" "Wailing Essence of Torment" "Wailing Essence of Woe" "Wailing Essence of Wrath" "Wailing Essence of Zeal" "Weeping Essence of Anger" "Weeping Essence of Contempt" "Weeping Essence of Doubt" "Weeping Essence of Fear" "Weeping Essence of Greed" "Weeping Essence of Hatred" "Weeping Essence of Rage" "Weeping Essence of Sorrow" "Weeping Essence of Suffering" "Weeping Essence of Torment" "Weeping Essence of Woe" "Weeping Essence of Wrath" "Whispering Essence of Contempt" "Whispering Essence of Greed" "Whispering Essence of Hatred" "Whispering Essence of Woe"
 	CustomAlertSound "filter_sounds/75_gold.wav"
 	MinimapIcon 1 Blue Pentagon
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 170 158 130
 	SetFontSize 39
 	StackSize >= 5
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Opalescent Oil"
-	CustomAlertSound "filter_sounds/100_death1.wav"
-	MinimapIcon 1 Blue Kite
-	PlayEffect Green
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 44
-	StackSize >= 4
 	DisableDropSound True
 
 #Autogen filter rules
@@ -845,7 +876,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Engineer's Orb" "Orb of Alchemy" "Orb of Binding" "Orb of Fusing" "Splinter of Esh" "Splinter of Tul" "Splinter of Xoph"
+	BaseType == "Engineer's Orb" "Orb of Alchemy" "Orb of Binding" "Orb of Fusing" "Splinter of Tul" "Splinter of Xoph"
 	CustomAlertSound "filter_sounds/20_gold.wav"
 	MinimapIcon 2 Brown Pentagon
 	SetBackgroundColor 0 0 0 220
@@ -863,6 +894,18 @@ Show
 	SetBorderColor 170 158 130
 	SetFontSize 39
 	StackSize >= 4
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Opalescent Oil"
+	CustomAlertSound "filter_sounds/100_death4.wav"
+	MinimapIcon 1 Blue Kite
+	PlayEffect Green
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 44
+	StackSize >= 3
 	DisableDropSound True
 
 #Autogen filter rules
@@ -994,7 +1037,18 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Crimson Oil" "Opalescent Oil"
+	BaseType == "Opalescent Oil"
+	CustomAlertSound "filter_sounds/75_attack1.wav"
+	MinimapIcon 1 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 39
+	StackSize >= 2
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Crimson Oil"
 	CustomAlertSound "filter_sounds/75_attack2.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1005,7 +1059,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Shrieking Essence of Dread" "Shrieking Essence of Envy" "Shrieking Essence of Greed" "Shrieking Essence of Scorn" "Shrieking Essence of Sorrow" "Shrieking Essence of Woe" "Tangled Fossil"
+	BaseType == "Annulment Shard" "Shrieking Essence of Dread" "Shrieking Essence of Envy" "Shrieking Essence of Greed" "Shrieking Essence of Scorn" "Shrieking Essence of Sorrow" "Shrieking Essence of Woe" "Tangled Fossil"
 	CustomAlertSound "filter_sounds/75_gold.wav"
 	MinimapIcon 1 Blue Pentagon
 	SetBackgroundColor 0 0 0 220
@@ -1031,7 +1085,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Golden Oil"
-	CustomAlertSound "filter_sounds/100_death4.wav"
+	CustomAlertSound "filter_sounds/100_death2.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1074,7 +1128,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Opalescent Oil" "Sepia Oil" "Verdant Oil"
+	BaseType == "Azure Oil" "Black Oil" "Violet Oil"
 	CustomAlertSound "filter_sounds/20_gethit1.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1084,17 +1138,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Indigo Oil"
-	CustomAlertSound "filter_sounds/20_gethit2.wav"
-	MinimapIcon 2 Blue Kite
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 32
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Crimson Oil"
+	BaseType == "Amber Oil" "Indigo Oil" "Opalescent Oil" "Verdant Oil"
 	CustomAlertSound "filter_sounds/20_gethit3.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1104,7 +1148,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Amber Oil" "Azure Oil" "Black Oil" "Teal Oil" "Violet Oil"
+	BaseType == "Crimson Oil" "Sepia Oil" "Teal Oil"
 	CustomAlertSound "filter_sounds/20_gethit4.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1115,7 +1159,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Silver Oil"
-	CustomAlertSound "filter_sounds/75_attack1.wav"
+	CustomAlertSound "filter_sounds/75_attack2.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1124,7 +1168,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Exalted Shard" "Fertile Catalyst" "Harbinger's Orb" "Orb of Annulment" "Vial of Dominance" "Vial of Fate" "Bloodstained Fossil" "Bound Fossil" "Corroded Fossil" "Deafening Essence of Anger" "Deafening Essence of Anguish" "Deafening Essence of Contempt" "Deafening Essence of Doubt" "Deafening Essence of Dread" "Deafening Essence of Envy" "Deafening Essence of Fear" "Deafening Essence of Greed" "Deafening Essence of Hatred" "Deafening Essence of Loathing" "Deafening Essence of Misery" "Deafening Essence of Rage" "Deafening Essence of Suffering" "Deafening Essence of Torment" "Deafening Essence of Wrath" "Enchanted Fossil" "Gilded Fossil" "Perfect Fossil" "Sanctified Fossil" "Shrieking Essence of Spite" "Shrieking Essence of Zeal" "Shuddering Fossil"
+	BaseType == "Exalted Shard" "Fertile Catalyst" "Harbinger's Orb" "Orb of Annulment" "Vial of Dominance" "Vial of Fate" "Vial of the Ritual" "Bloodstained Fossil" "Bound Fossil" "Corroded Fossil" "Deafening Essence of Anger" "Deafening Essence of Anguish" "Deafening Essence of Contempt" "Deafening Essence of Doubt" "Deafening Essence of Dread" "Deafening Essence of Envy" "Deafening Essence of Fear" "Deafening Essence of Greed" "Deafening Essence of Hatred" "Deafening Essence of Loathing" "Deafening Essence of Misery" "Deafening Essence of Rage" "Deafening Essence of Suffering" "Deafening Essence of Torment" "Deafening Essence of Wrath" "Enchanted Fossil" "Gilded Fossil" "Perfect Fossil" "Sanctified Fossil" "Shrieking Essence of Spite" "Shrieking Essence of Zeal" "Shuddering Fossil"
 	CustomAlertSound "filter_sounds/75_gold.wav"
 	MinimapIcon 1 Blue Pentagon
 	SetBackgroundColor 0 0 0 220
@@ -1184,7 +1228,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Arrogance of the Vaal" "Azyran's Reward" "Burning Blood" "Chaotic Disposition" "Council of Cats" "Dark Dreams" "Mawr Blaidd" "Peaceful Moments" "Perfection" "The Artist" "The Bargain" "The Betrayal" "The Cartographer" "The Celestial Justicar" "The Eldritch Decay" "The Hale Heart" "The Hoarder" "The Landing" "The Lord of Celebration" "The Master" "The Offering" "The Old Man" "The Polymath" "The Progeny of Lunaris" "The Strategist" "The Undaunted" "The Undisputed" "The Wolven King's Bite"
+	BaseType == "Akil's Prophecy" "Arrogance of the Vaal" "Azyran's Reward" "Burning Blood" "Chaotic Disposition" "Council of Cats" "Dark Dreams" "Mawr Blaidd" "Peaceful Moments" "Perfection" "The Artist" "The Bargain" "The Betrayal" "The Cartographer" "The Celestial Justicar" "The Eldritch Decay" "The Hale Heart" "The Hoarder" "The Landing" "The Lord of Celebration" "The Master" "The Offering" "The Old Man" "The Polymath" "The Progeny of Lunaris" "The Strategist" "The Undaunted" "The Undisputed" "The Wolven King's Bite"
 	CustomAlertSound "filter_sounds/75_scroll.wav"
 	MinimapIcon 1 Blue Triangle
 	SetBackgroundColor 0 0 0 220
@@ -1202,7 +1246,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "A Mother's Parting Gift" "Anarchy's Price" "Audacity" "Dark Temptation" "Death" "Echoes of Love" "Forbidden Power" "Lantador's Lost Love" "Might is Right" "Rats" "Struck by Lightning" "The Army of Blood" "The Avenger" "The Beast" "The Blazing Fire" "The Carrion Crow" "The Coming Storm" "The Conduit" "The Darkest Dream" "The Deceiver" "The Deep Ones" "The Demoness" "The Dragon" "The Dreamland" "The Fathomless Depths" "The Feast" "The Fletcher" "The Formless Sea" "The Forsaken" "The Harvester" "The Hermit" "The Incantation" "The Lich" "The Lunaris Priestess" "The Metalsmith's Gift" "The Oath" "The Pack Leader" "The Ruthless Ceinture" "The Scarred Meadow" "The Scavenger" "The Siren" "The Sun" "The Sword King's Salute" "The Throne" "The Visionary" "The Watcher" "The Wind" "The Witch" "The Wolf's Legacy" "The Wolf's Shadow" "Thirst for Knowledge" "Thunderous Skies" "Tranquillity" "Treasure Hunter" "Turn the Other Cheek" "Vile Power"
+	BaseType == "A Mother's Parting Gift" "Anarchy's Price" "Audacity" "Dark Temptation" "Death" "Echoes of Love" "Forbidden Power" "Lantador's Lost Love" "Might is Right" "Rats" "Scholar of the Seas" "Struck by Lightning" "The Army of Blood" "The Avenger" "The Beast" "The Blazing Fire" "The Carrion Crow" "The Coming Storm" "The Conduit" "The Darkest Dream" "The Deceiver" "The Deep Ones" "The Demoness" "The Dragon" "The Dreamland" "The Fathomless Depths" "The Feast" "The Fletcher" "The Formless Sea" "The Forsaken" "The Harvester" "The Hermit" "The Incantation" "The Lich" "The Lunaris Priestess" "The Metalsmith's Gift" "The Oath" "The Pack Leader" "The Ruthless Ceinture" "The Scarred Meadow" "The Scavenger" "The Siren" "The Sun" "The Sword King's Salute" "The Throne" "The Visionary" "The Watcher" "The Wind" "The Witch" "The Wolf's Legacy" "The Wolf's Shadow" "Thirst for Knowledge" "Thunderous Skies" "Tranquillity" "Treasure Hunter" "Turn the Other Cheek" "Vile Power"
 	SetBackgroundColor 0 0 0 220
 	SetFontSize 25
 	DisableDropSound True
@@ -1245,8 +1289,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Arachnid Seed"
-	CustomAlertSound "filter_sounds/100_death1.wav"
+	BaseType == "Wild Thornwolf Seed"
+	CustomAlertSound "filter_sounds/100_death2.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1257,8 +1301,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Thornwolf Seed"
-	CustomAlertSound "filter_sounds/100_death5.wav"
+	BaseType == "Vivid Arachnid Seed"
+	CustomAlertSound "filter_sounds/100_death3.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1270,7 +1314,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Primal Feasting Horror Seed"
-	CustomAlertSound "filter_sounds/100_death3.wav"
+	CustomAlertSound "filter_sounds/100_death1.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1294,7 +1338,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Primal Cleaveling Seed"
-	CustomAlertSound "filter_sounds/100_death1.wav"
+	CustomAlertSound "filter_sounds/100_death5.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1306,7 +1350,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Vivid Leech Seed"
-	CustomAlertSound "filter_sounds/100_death5.wav"
+	CustomAlertSound "filter_sounds/100_death3.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1341,7 +1385,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Hellion Seed" "Wild Ursaling Seed"
+	BaseType == "Wild Hatchling Seed"
 	CustomAlertSound "filter_sounds/100_death1.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -1353,7 +1397,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Rhoa Seed" "Wild Hatchling Seed"
+	BaseType == "Primal Rhoa Seed" "Wild Ursaling Seed"
 	CustomAlertSound "filter_sounds/100_death4.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -1365,7 +1409,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Dustspitter Seed"
+	BaseType == "Primal Dustspitter Seed" "Wild Hellion Seed"
 	CustomAlertSound "filter_sounds/100_death5.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -1377,7 +1421,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Thornwolf Seed"
+	BaseType == "Vivid Arachnid Seed"
 	CustomAlertSound "filter_sounds/75_attack1.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1388,8 +1432,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Arachnid Seed"
-	CustomAlertSound "filter_sounds/75_attack2.wav"
+	BaseType == "Wild Thornwolf Seed"
+	CustomAlertSound "filter_sounds/75_attack3.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1424,7 +1468,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Primal Cleaveling Seed"
-	CustomAlertSound "filter_sounds/75_attack3.wav"
+	CustomAlertSound "filter_sounds/75_attack1.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1435,7 +1479,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Primal Feasting Horror Seed"
-	CustomAlertSound "filter_sounds/75_attack6.wav"
+	CustomAlertSound "filter_sounds/75_attack4.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1469,7 +1513,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Wild Bristlebeast Grain"
-	CustomAlertSound "filter_sounds/100_death1.wav"
+	CustomAlertSound "filter_sounds/100_death3.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1492,7 +1536,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Dustcrab Grain" "Primal Maw Seed" "Vivid Razorleg Grain" "Wild Ape Seed" "Wild Snap Hound Grain"
+	BaseType == "Vivid Sapsucker Grain" "Vivid Weta Seed"
 	CustomAlertSound "filter_sounds/100_death1.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -1504,7 +1548,19 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Chimeral Grain" "Vivid Striketail Grain"
+	BaseType == "Primal Chimeral Grain" "Vivid Razorleg Grain" "Wild Ape Seed"
+	CustomAlertSound "filter_sounds/100_death2.wav"
+	MinimapIcon 1 Blue Kite
+	PlayEffect Green
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 44
+	StackSize >= 13
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Primal Maw Seed" "Vivid Striketail Grain" "Wild Chieftain Grain"
 	CustomAlertSound "filter_sounds/100_death3.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -1516,7 +1572,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Sapsucker Grain" "Vivid Weta Seed"
+	BaseType == "Primal Dustcrab Grain" "Wild Snap Hound Grain"
 	CustomAlertSound "filter_sounds/100_death4.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -1528,7 +1584,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Scorpion Seed" "Wild Chieftain Grain"
+	BaseType == "Vivid Scorpion Seed"
 	CustomAlertSound "filter_sounds/100_death5.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -1575,8 +1631,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Ursaling Seed"
-	CustomAlertSound "filter_sounds/75_attack2.wav"
+	BaseType == "Wild Hellion Seed"
+	CustomAlertSound "filter_sounds/75_attack3.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1586,8 +1642,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Hellion Seed"
-	CustomAlertSound "filter_sounds/75_attack3.wav"
+	BaseType == "Primal Dustspitter Seed"
+	CustomAlertSound "filter_sounds/75_attack4.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1608,7 +1664,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Dustspitter Seed"
+	BaseType == "Wild Ursaling Seed"
 	CustomAlertSound "filter_sounds/75_attack6.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1620,7 +1676,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Vivid Parasite Grain"
-	CustomAlertSound "filter_sounds/100_death3.wav"
+	CustomAlertSound "filter_sounds/100_death5.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1643,7 +1699,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Nestback Grain"
+	BaseType == "Vivid Nestback Grain" "Vivid Watcher Bulb"
 	CustomAlertSound "filter_sounds/100_death1.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -1656,19 +1712,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Wild Hellion Alpha Bulb"
-	CustomAlertSound "filter_sounds/100_death2.wav"
-	MinimapIcon 1 Blue Kite
-	PlayEffect Green
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 44
-	StackSize >= 7
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Vivid Watcher Bulb"
-	CustomAlertSound "filter_sounds/100_death4.wav"
+	CustomAlertSound "filter_sounds/100_death3.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1680,7 +1724,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Vivid Whipleg Bulb"
-	CustomAlertSound "filter_sounds/100_death5.wav"
+	CustomAlertSound "filter_sounds/100_death4.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1716,7 +1760,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Wild Bristlebeast Grain"
-	CustomAlertSound "filter_sounds/75_attack4.wav"
+	CustomAlertSound "filter_sounds/75_attack5.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1727,7 +1771,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Primal Rhex Grain"
-	CustomAlertSound "filter_sounds/100_death1.wav"
+	CustomAlertSound "filter_sounds/100_death4.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1739,7 +1783,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Wild Homunculus Grain"
-	CustomAlertSound "filter_sounds/100_death3.wav"
+	CustomAlertSound "filter_sounds/100_death5.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1750,7 +1794,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Dustcrab Grain" "Vivid Razorleg Grain"
+	BaseType == "Vivid Razorleg Grain"
 	CustomAlertSound "filter_sounds/75_attack1.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1761,7 +1805,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Chimeral Grain" "Vivid Weta Seed" "Wild Ape Seed" "Wild Chieftain Grain" "Wild Snap Hound Grain"
+	BaseType == "Primal Dustcrab Grain" "Vivid Weta Seed"
 	CustomAlertSound "filter_sounds/75_attack2.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1772,7 +1816,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Scorpion Seed" "Vivid Striketail Grain"
+	BaseType == "Primal Chimeral Grain"
 	CustomAlertSound "filter_sounds/75_attack3.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1783,7 +1827,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Sapsucker Grain"
+	BaseType == "Vivid Scorpion Seed" "Wild Ape Seed" "Wild Chieftain Grain"
 	CustomAlertSound "filter_sounds/75_attack4.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1794,8 +1838,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Maw Seed"
-	CustomAlertSound "filter_sounds/75_attack5.wav"
+	BaseType == "Primal Maw Seed" "Vivid Sapsucker Grain" "Vivid Striketail Grain" "Wild Snap Hound Grain"
+	CustomAlertSound "filter_sounds/75_attack6.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1806,7 +1850,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Primal Scrabbler Grain"
-	CustomAlertSound "filter_sounds/100_death1.wav"
+	CustomAlertSound "filter_sounds/100_death2.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1817,19 +1861,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Arachnid Seed"
-	CustomAlertSound "filter_sounds/20_gethit3.wav"
-	MinimapIcon 2 Blue Kite
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 32
-	StackSize >= 4
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Primal Cleaveling Seed" "Primal Feasting Horror Seed" "Wild Thornwolf Seed"
-	CustomAlertSound "filter_sounds/20_gethit4.wav"
+	BaseType == "Primal Cleaveling Seed" "Primal Feasting Horror Seed" "Vivid Arachnid Seed" "Wild Thornwolf Seed"
+	CustomAlertSound "filter_sounds/20_gethit1.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1850,6 +1883,18 @@ Show
 
 #Autogen filter rules
 Show
+	BaseType == "Primal Crushclaw Bulb"
+	CustomAlertSound "filter_sounds/100_death1.wav"
+	MinimapIcon 1 Blue Kite
+	PlayEffect Green
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 44
+	StackSize >= 3
+	DisableDropSound True
+
+#Autogen filter rules
+Show
 	BaseType == "Wild Brambleback Bulb"
 	CustomAlertSound "filter_sounds/100_death2.wav"
 	MinimapIcon 1 Blue Kite
@@ -1862,7 +1907,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Cystcaller Bulb" "Wild Thornmaw Bulb"
+	BaseType == "Wild Thornmaw Bulb"
 	CustomAlertSound "filter_sounds/100_death3.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -1874,7 +1919,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Crushclaw Bulb"
+	BaseType == "Primal Cystcaller Bulb"
 	CustomAlertSound "filter_sounds/100_death4.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -1899,7 +1944,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Vivid Leech Seed"
-	CustomAlertSound "filter_sounds/20_gethit4.wav"
+	CustomAlertSound "filter_sounds/20_gethit1.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1909,8 +1954,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Watcher Bulb"
-	CustomAlertSound "filter_sounds/75_attack5.wav"
+	BaseType == "Vivid Nestback Grain"
+	CustomAlertSound "filter_sounds/75_attack2.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1920,8 +1965,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Nestback Grain" "Vivid Whipleg Bulb" "Wild Hellion Alpha Bulb"
-	CustomAlertSound "filter_sounds/75_attack6.wav"
+	BaseType == "Vivid Whipleg Bulb"
+	CustomAlertSound "filter_sounds/75_attack3.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1931,7 +1976,18 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Rhex Matriarch Bulb"
+	BaseType == "Vivid Watcher Bulb" "Wild Hellion Alpha Bulb"
+	CustomAlertSound "filter_sounds/75_attack4.wav"
+	MinimapIcon 1 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 39
+	StackSize >= 3
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Primal Reborn Bulb" "Primal Viper Grain"
 	CustomAlertSound "filter_sounds/100_death1.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -1943,7 +1999,31 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Reborn Bulb" "Primal Viper Grain" "Vivid Devourer Bulb" "Wild Spikeback Grain"
+	BaseType == "Wild Spikeback Grain"
+	CustomAlertSound "filter_sounds/100_death2.wav"
+	MinimapIcon 1 Blue Kite
+	PlayEffect Green
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 44
+	StackSize >= 2
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Vivid Abberarach Bulb"
+	CustomAlertSound "filter_sounds/100_death3.wav"
+	MinimapIcon 1 Blue Kite
+	PlayEffect Green
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 44
+	StackSize >= 2
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Vivid Devourer Bulb" "Wild Bristle Matron Bulb"
 	CustomAlertSound "filter_sounds/100_death4.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -1955,7 +2035,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Abberarach Bulb" "Wild Bristle Matron Bulb"
+	BaseType == "Primal Rhex Matriarch Bulb"
 	CustomAlertSound "filter_sounds/100_death5.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -1967,7 +2047,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Rhoa Seed" "Wild Hellion Seed"
+	BaseType == "Wild Hellion Seed"
 	CustomAlertSound "filter_sounds/20_gethit2.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1978,7 +2058,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Ursaling Seed"
+	BaseType == "Primal Dustspitter Seed" "Wild Hatchling Seed" "Wild Ursaling Seed"
 	CustomAlertSound "filter_sounds/20_gethit3.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1989,7 +2069,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Dustspitter Seed" "Wild Hatchling Seed"
+	BaseType == "Primal Rhoa Seed"
 	CustomAlertSound "filter_sounds/20_gethit4.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -2001,17 +2081,6 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Wild Homunculus Grain"
-	CustomAlertSound "filter_sounds/75_attack1.wav"
-	MinimapIcon 1 Blue Kite
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 39
-	StackSize >= 2
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Primal Scrabbler Grain"
 	CustomAlertSound "filter_sounds/75_attack2.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -2022,7 +2091,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Rhex Grain"
+	BaseType == "Primal Rhex Grain" "Primal Scrabbler Grain"
 	CustomAlertSound "filter_sounds/75_attack6.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -2033,7 +2102,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Blisterlord Bulb" "Vivid Scalefruit" "Wild Infestation Queen Bulb"
+	BaseType == "Primal Blisterfruit" "Primal Blisterlord Bulb" "Wild Infestation Queen Bulb"
 	CustomAlertSound "filter_sounds/100_death1.wav"
 	ItemLevel >= 76
 	MinimapIcon 1 Blue Kite
@@ -2045,19 +2114,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Blisterfruit"
-	CustomAlertSound "filter_sounds/100_death2.wav"
-	ItemLevel >= 76
-	MinimapIcon 1 Blue Kite
-	PlayEffect Green
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 44
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Vivid Vulture Bulb"
+	BaseType == "Vivid Thornweaver Seed" "Vivid Vulture Bulb" "Wild Thornfruit"
 	CustomAlertSound "filter_sounds/100_death3.wav"
 	ItemLevel >= 76
 	MinimapIcon 1 Blue Kite
@@ -2069,19 +2126,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Thornfruit"
-	CustomAlertSound "filter_sounds/100_death4.wav"
-	ItemLevel >= 76
-	MinimapIcon 1 Blue Kite
-	PlayEffect Green
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 44
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Vivid Thornweaver Seed"
+	BaseType == "Vivid Scalefruit"
 	CustomAlertSound "filter_sounds/100_death5.wav"
 	ItemLevel >= 76
 	MinimapIcon 1 Blue Kite
@@ -2093,7 +2138,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Chimeral Grain" "Primal Dustcrab Grain" "Wild Homunculus Grain"
+	BaseType == "Primal Dustcrab Grain" "Primal Scrabbler Grain" "Vivid Parasite Grain" "Vivid Razorleg Grain" "Vivid Weta Seed" "Wild Snap Hound Grain"
 	CustomAlertSound "filter_sounds/20_gethit1.wav"
 	ItemLevel >= 76
 	MinimapIcon 2 Blue Kite
@@ -2104,7 +2149,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Nestback Grain" "Vivid Razorleg Grain" "Vivid Sapsucker Grain" "Vivid Watcher Bulb" "Wild Chieftain Grain" "Wild Snap Hound Grain"
+	BaseType == "Primal Maw Seed" "Primal Rhex Grain" "Vivid Sapsucker Grain" "Vivid Striketail Grain" "Vivid Whipleg Bulb"
 	CustomAlertSound "filter_sounds/20_gethit2.wav"
 	ItemLevel >= 76
 	MinimapIcon 2 Blue Kite
@@ -2115,7 +2160,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Scrabbler Grain" "Vivid Parasite Grain" "Vivid Scorpion Seed" "Vivid Weta Seed" "Wild Ape Seed" "Wild Bristlebeast Grain"
+	BaseType == "Vivid Nestback Grain" "Vivid Scorpion Seed" "Wild Ape Seed" "Wild Bristlebeast Grain" "Wild Chieftain Grain" "Wild Hellion Alpha Bulb" "Wild Homunculus Grain"
 	CustomAlertSound "filter_sounds/20_gethit3.wav"
 	ItemLevel >= 76
 	MinimapIcon 2 Blue Kite
@@ -2126,7 +2171,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Maw Seed" "Primal Rhex Grain" "Vivid Striketail Grain" "Vivid Whipleg Bulb" "Wild Hellion Alpha Bulb"
+	BaseType == "Primal Chimeral Grain" "Vivid Watcher Bulb"
 	CustomAlertSound "filter_sounds/20_gethit4.wav"
 	ItemLevel >= 76
 	MinimapIcon 2 Blue Kite
@@ -2137,7 +2182,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Rhex Matriarch Bulb"
+	BaseType == "Primal Viper Grain" "Wild Bristle Matron Bulb" "Wild Thornmaw Bulb"
 	CustomAlertSound "filter_sounds/75_attack1.wav"
 	ItemLevel >= 76
 	MinimapIcon 1 Blue Kite
@@ -2148,7 +2193,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Abberarach Bulb" "Vivid Devourer Bulb"
+	BaseType == "Vivid Abberarach Bulb" "Wild Spikeback Grain"
 	CustomAlertSound "filter_sounds/75_attack2.wav"
 	ItemLevel >= 76
 	MinimapIcon 1 Blue Kite
@@ -2159,7 +2204,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Crushclaw Bulb" "Primal Cystcaller Bulb" "Primal Reborn Bulb" "Wild Spikeback Grain" "Wild Thornmaw Bulb"
+	BaseType == "Primal Cystcaller Bulb" "Vivid Devourer Bulb" "Wild Brambleback Bulb"
 	CustomAlertSound "filter_sounds/75_attack3.wav"
 	ItemLevel >= 76
 	MinimapIcon 1 Blue Kite
@@ -2170,19 +2215,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Brambleback Bulb" "Wild Bristle Matron Bulb"
-	CustomAlertSound "filter_sounds/75_attack4.wav"
-	ItemLevel >= 76
-	MinimapIcon 1 Blue Kite
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 39
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Primal Viper Grain"
-	CustomAlertSound "filter_sounds/75_attack6.wav"
+	BaseType == "Primal Crushclaw Bulb" "Primal Reborn Bulb" "Primal Rhex Matriarch Bulb"
+	CustomAlertSound "filter_sounds/75_attack5.wav"
 	ItemLevel >= 76
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -5169,7 +5203,7 @@ Show
 
 #Autogen filter rules
 Show
-	Prophecy == "A Call into the Void" "A Firm Foothold" "A Regal Death" "A Valuable Combination" "Abnormal Effulgence" "Beyond Sight I" "Blinding Light" "Crimson Hues" "Day of Sacrifice I" "Defiled in the Sceptre" "Erased from Memory" "Fallow At Last" "Gilded Within" "Golden Touch" "Hidden Vaal Pathways" "Hunter's Lesson" "In the Grasp of Corruption" "Lasting Impressions" "Living Fires" "Mouth of Horrors" "Nemesis of Greed" "Pleasure and Pain" "Resistant to Change" "Risen Blood" "Storm on the Reef" "Strong as a Bull" "The Alchemist" "The Ambitious Bandit I" "The Brothers of Necromancy" "The Brutal Enforcer" "The Corrupt" "The Dreaded Rhoa" "The Feral Lord I" "The Feral Lord II" "The Feral Lord III" "The God of Misfortune" "The Hardened Armour" "The Invader" "The Lost Maps" "The Nightmare Awakens" "The Petrified" "The Plaguemaw I" "The Plaguemaw III" "The Queen's Vaults" "The Scout" "The Snuffed Flame" "The Stockkeeper" "The Trembling Earth" "Unbearable Whispers I" "Undead Uprising"
+	Prophecy == "A Call into the Void" "A Firm Foothold" "A Regal Death" "A Valuable Combination" "Abnormal Effulgence" "Beyond Sight I" "Blinding Light" "Crimson Hues" "Day of Sacrifice I" "Defiled in the Sceptre" "Erased from Memory" "Fallow At Last" "Gilded Within" "Golden Touch" "Hidden Vaal Pathways" "Hunter's Lesson" "In the Grasp of Corruption" "Living Fires" "Mouth of Horrors" "Nemesis of Greed" "Pleasure and Pain" "Rebirth" "Resistant to Change" "Risen Blood" "Smothering Tendrils" "Soil, Worms and Blood" "Storm on the Reef" "Strong as a Bull" "The Alchemist" "The Ambitious Bandit I" "The Brothers of Necromancy" "The Brutal Enforcer" "The Corrupt" "The Dreaded Rhoa" "The Feral Lord I" "The Feral Lord II" "The Feral Lord III" "The God of Misfortune" "The Hardened Armour" "The Invader" "The Lost Maps" "The Nightmare Awakens" "The Petrified" "The Plaguemaw I" "The Plaguemaw III" "The Queen's Vaults" "The Scout" "The Sharpened Blade" "The Snuffed Flame" "The Stockkeeper" "The Trembling Earth" "The Undead Brutes" "The Vanguard" "The Walking Mountain" "Trapped in the Tower" "Unbearable Whispers I" "Undead Uprising"
 	SetBackgroundColor 0 0 0 220
 	SetFontSize 25
 	DisableDropSound True
@@ -5371,7 +5405,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Arcanist Gloves" "Assassin's Boots" "Deerskin Gloves" "Jewelled Foil" "Large Cluster Jewel" "Occultist's Vestment" "Blunt Arrow Quiver Piece" "Cloth Belt Piece" "Medium Cluster Jewel" "Vaal Rapier" "Crusader Helmet" "Imperial Staff Piece" "Callous Mask Piece" "Prophecy Wand" "Legion Sword Piece" "Wyrmscale Doublet" "Nubuck Boots" "Archon Kite Shield Piece" "Gladiator Plate" "Karui Maul" "Blood Raiment" "Prismatic Jewel"
+	BaseType == "Legion Sword Piece" "Large Cluster Jewel" "Arcanist Gloves" "Jewelled Foil" "Imperial Staff Piece" "Crusader Helmet" "Archon Kite Shield Piece" "Vaal Rapier" "Nubuck Boots" "Blunt Arrow Quiver Piece" "Wyrmscale Doublet" "Occultist's Vestment" "Prophecy Wand" "Assassin's Boots" "Deerskin Gloves" "Prismatic Jewel" "Cloth Belt Piece" "Medium Cluster Jewel" "Callous Mask Piece" "Gladiator Plate" "Blood Raiment" "Karui Maul"
 	CustomAlertSound "filter_sounds/100_amulet.wav"
 	MinimapIcon 1 Blue Star
 	PlayEffect Blue
@@ -5435,7 +5469,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Ornate Quiver" "Ezomyte Tower Shield" "Rawhide Boots" "Silk Gloves" "Crusader Boots" "Siege Axe"
+	BaseType == "Crusader Boots" "Siege Axe" "Ornate Quiver" "Ezomyte Tower Shield" "Silk Gloves" "Rawhide Boots"
 	CustomAlertSound "filter_sounds/175_expl_2.wav"
 	MinimapIcon 0 Green Star
 	PlayEffect Green
@@ -5447,7 +5481,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Iron Ring" "Gold Amulet" "Gut Ripper" "Topaz Ring" "Nightmare Bascinet" "Studded Belt" "Cloth Belt" "Chain Belt" "Small Cluster Jewel" "Stibnite Flask" "Sadist Garb" "Ezomyte Staff" "Crimson Jewel" "Prismatic Ring" "Fiend Dagger" "Sage Wand" "Silver Flask" "Imperial Staff" "Stealth Boots" "Viridian Jewel" "Lacquered Garb" "Coral Amulet" "Carved Wand" "Ruby Ring" "Paua Amulet" "Judgement Staff" "Goathide Boots" "Archon Kite Shield" "Gavel" "Heavy Belt" "Sapphire Ring" "Cobalt Jewel" "Unset Ring" "Onyx Amulet"
+	BaseType == "Judgement Staff" "Cobalt Jewel" "Gold Amulet" "Heavy Belt" "Topaz Ring" "Viridian Jewel" "Lacquered Garb" "Imperial Staff" "Sadist Garb" "Goathide Boots" "Studded Belt" "Archon Kite Shield" "Stealth Boots" "Chain Belt" "Unset Ring" "Gut Ripper" "Cloth Belt" "Ezomyte Staff" "Sapphire Ring" "Sage Wand" "Ruby Ring" "Coral Amulet" "Silver Flask" "Fiend Dagger" "Crimson Jewel" "Nightmare Bascinet" "Small Cluster Jewel" "Prismatic Ring" "Stibnite Flask" "Onyx Amulet" "Paua Amulet" "Gavel" "Carved Wand" "Iron Ring"
 	CustomAlertSound "filter_sounds/45_amulet.wav"
 	MinimapIcon 2 White Star
 	Rarity Unique
@@ -5590,7 +5624,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Clasped Boots" "Timeless Jewel" "Ezomyte Dagger" "Rawhide Tower Shield" "Brass Spirit Shield" "Hydrascale Boots" "Ezomyte Spiked Shield" "Large Hybrid Flask" "Legion Gloves" "Shackled Boots" "Granite Flask" "Gold Ring" "Royal Axe" "Zodiac Leather" "Sapphire Flask" "Conjurer Boots" "Hydrascale Gauntlets" "Ivory Watchstone" "Bismuth Flask" "Riveted Gloves" "Timeworn Claw" "Bronzescale Boots" "Jingling Spirit Shield" "Variscite Blade" "Coiled Staff" "Sacrificial Garb" "Jasper Chopper" "Pinnacle Tower Shield" "Steel Ring" "Wool Gloves"
+	BaseType == "Royal Axe" "Timeless Jewel" "Rawhide Tower Shield" "Hydrascale Boots" "Clasped Boots" "Shackled Boots" "Ivory Watchstone" "Ezomyte Dagger" "Large Hybrid Flask" "Jasper Chopper" "Zodiac Leather" "Wool Gloves" "Conjurer Boots" "Gold Ring" "Timeworn Claw" "Hydrascale Gauntlets" "Pinnacle Tower Shield" "Sapphire Flask" "Steel Ring" "Sacrificial Garb" "Ezomyte Spiked Shield" "Coiled Staff" "Granite Flask" "Riveted Gloves" "Jingling Spirit Shield" "Variscite Blade" "Bismuth Flask" "Legion Gloves" "Bronzescale Boots" "Brass Spirit Shield"
 	CustomAlertSound "filter_sounds/75_amulet.wav"
 	MinimapIcon 1 Blue Star
 	Rarity Unique
@@ -5601,7 +5635,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Callous Mask" "Jade Amulet" "Vaal Mask" "Opal Ring" "Strapped Mitts" "Carnal Mitts" "Ruby Flask" "Sulphur Flask" "Midnight Blade" "Imperial Skean" "Vaal Axe" "Soldier Gloves" "Legion Sword" "Lapis Amulet" "Hubris Circlet" "Leather Belt" "Crusader Gloves" "Vaal Gauntlets" "Penetrating Arrow Quiver" "Carnal Armour" "Murder Mitts" "Turquoise Amulet" "Steelscale Gauntlets" "Golden Plate" "Savant's Robe" "Widowsilk Robe" "Necromancer Circlet" "Sorcerer Boots" "Blunt Arrow Quiver" "Terror Claw" "Amber Amulet" "Triumphant Lamellar" "Two-Point Arrow Quiver" "Two-Stone Ring" "Sinner Tricorne" "Moonstone Ring" "Titan Greaves" "Maelström Staff" "Silken Hood" "Infernal Sword" "Void Sceptre" "Amethyst Ring" "Agate Amulet" "Assassin Bow"
+	BaseType == "Terror Claw" "Crusader Gloves" "Soldier Gloves" "Vaal Axe" "Void Sceptre" "Sorcerer Boots" "Imperial Skean" "Callous Mask" "Two-Point Arrow Quiver" "Necromancer Circlet" "Jade Amulet" "Penetrating Arrow Quiver" "Vaal Mask" "Legion Sword" "Carnal Mitts" "Lapis Amulet" "Sinner Tricorne" "Widowsilk Robe" "Amber Amulet" "Moonstone Ring" "Infernal Sword" "Opal Ring" "Assassin Bow" "Murder Mitts" "Leather Belt" "Agate Amulet" "Savant's Robe" "Two-Stone Ring" "Silken Hood" "Ruby Flask" "Midnight Blade" "Blunt Arrow Quiver" "Strapped Mitts" "Titan Greaves" "Hubris Circlet" "Amethyst Ring" "Steelscale Gauntlets" "Golden Plate" "Sulphur Flask" "Vaal Gauntlets" "Triumphant Lamellar" "Turquoise Amulet" "Carnal Armour" "Maelström Staff"
 	MinimapIcon 2 Cyan Star
 	Rarity Unique
 	SetBackgroundColor 0 0 0 220
@@ -5611,7 +5645,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Legion Boots" "Pine Buckler" "Great Mallet" "Vaal Buckler" "Spiked Club" "Full Scale Armour" "Boot Blade" "Quartz Wand" "Dream Mace" "Vine Circlet" "Greater Mana Flask" "Spiraled Wand" "Bronzescale Gauntlets" "Conquest Chainmail" "Imbued Wand" "Wyrmscale Gauntlets" "Flaying Knife" "Strapped Boots" "Nailed Fist" "Ebony Tower Shield" "Ranger Bow" "Decimation Bow" "Infernal Axe" "Wrapped Mitts" "Sentinel Jacket" "Auric Mace" "Studded Round Shield" "Thresher Claw" "Highland Blade" "Boot Knife" "Coral Ring" "Ornate Mace" "Sage's Robe" "Crude Bow" "Shagreen Boots" "Cleaver" "Awl" "Estoc" "Copper Plate" "Tricorne" "Fire Arrow Quiver" "Goat's Horn" "Brass Maul" "Basket Rapier" "Ambusher" "Supreme Spiked Shield" "Tomahawk" "Serrated Arrow Quiver" "Jagged Maul" "Iron Circlet" "Simple Robe" "Bronze Gauntlets" "Rusted Sword" "Antique Greaves" "Plated Greaves" "Chain Gloves" "Death Bow" "Gnarled Branch" "Mesh Boots" "Stiletto" "Latticed Ringmail" "Wild Leather" "Goathide Gloves" "Reaver Sword" "Strapped Leather" "Buckskin Tunic" "Leather Hood" "Grinning Fetish" "Spidersilk Robe" "Samite Helmet" "Samite Gloves" "Scholar's Robe" "Iron Mask" "Compound Spiked Shield" "Bastard Sword" "Decorative Axe" "Jagged Foil" "Antique Rapier" "Skinning Knife" "War Buckler" "Plank Kite Shield" "Spike-Point Arrow Quiver" "Deerskin Boots" "Ornate Sword" "Tribal Circlet" "Gilded Sallet" "Royal Staff" "Iron Hat" "Primordial Staff" "Scholar Boots" "Ezomyte Axe" "Ornate Ringmail" "Iron Staff" "Regicide Mask" "Poleaxe" "Ironscale Boots" "Headsman Axe" "Dread Maul" "Shadow Sceptre" "Plate Vest"
+	BaseType == "Poleaxe" "Grinning Fetish" "Skinning Knife" "Strapped Boots" "Tricorne" "Plank Kite Shield" "Cleaver" "Copper Plate" "Awl" "Ezomyte Axe" "Spidersilk Robe" "Latticed Ringmail" "Serrated Arrow Quiver" "Royal Staff" "Iron Mask" "Boot Blade" "Crude Bow" "Bronze Gauntlets" "Thresher Claw" "Shagreen Boots" "Sage's Robe" "Deerskin Boots" "Highland Blade" "Wyrmscale Gauntlets" "Spike-Point Arrow Quiver" "Samite Helmet" "Infernal Axe" "Greater Mana Flask" "Simple Robe" "Ironscale Boots" "Decimation Bow" "Samite Gloves" "Coral Ring" "Studded Round Shield" "Jagged Foil" "Vaal Buckler" "Compound Spiked Shield" "Buckskin Tunic" "Headsman Axe" "Wild Leather" "Boot Knife" "Spiked Club" "Iron Staff" "Fire Arrow Quiver" "Antique Rapier" "Full Scale Armour" "Tribal Circlet" "Ranger Bow" "Estoc" "Rusted Sword" "Quartz Wand" "Dread Maul" "Regicide Mask" "Legion Boots" "Scholar's Robe" "Brass Maul" "Strapped Leather" "Vine Circlet" "Stiletto" "Supreme Spiked Shield" "Decorative Axe" "Ornate Ringmail" "Reaver Sword" "Pine Buckler" "Bastard Sword" "Ebony Tower Shield" "Death Bow" "Shadow Sceptre" "Dream Mace" "War Buckler" "Bronzescale Gauntlets" "Great Mallet" "Auric Mace" "Jagged Maul" "Plated Greaves" "Iron Hat" "Plate Vest" "Mesh Boots" "Ambusher" "Flaying Knife" "Goat's Horn" "Tomahawk" "Basket Rapier" "Gnarled Branch" "Gilded Sallet" "Leather Hood" "Ornate Mace" "Wrapped Mitts" "Iron Circlet" "Goathide Gloves" "Sentinel Jacket" "Imbued Wand" "Chain Gloves" "Antique Greaves" "Spiraled Wand" "Nailed Fist" "Conquest Chainmail" "Primordial Staff" "Scholar Boots" "Ornate Sword"
 	Rarity Unique
 	SetBackgroundColor 0 0 0 220
 	SetFontSize 25
@@ -5863,7 +5897,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Wild Ursaling Seed"
-	CustomAlertSound "filter_sounds/100_death1.wav"
+	CustomAlertSound "filter_sounds/100_death2.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -5874,7 +5908,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Leech Seed"
+	BaseType == "Wild Ape Seed"
 	CustomAlertSound "filter_sounds/100_death1.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -5886,7 +5920,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Dustspitter Seed" "Vivid Scorpion Seed" "Wild Thornwolf Seed"
+	BaseType == "Primal Dustspitter Seed" "Primal Maw Seed" "Primal Rhoa Seed" "Vivid Weta Seed" "Wild Hatchling Seed" "Wild Hellion Seed" "Wild Thornwolf Seed"
 	CustomAlertSound "filter_sounds/100_death2.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -5898,19 +5932,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Arachnid Seed" "Wild Ape Seed" "Wild Hatchling Seed" "Wild Hellion Seed"
-	CustomAlertSound "filter_sounds/100_death3.wav"
-	MinimapIcon 1 Blue Kite
-	PlayEffect Green
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 44
-	StackSize >= 50
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Primal Feasting Horror Seed" "Vivid Weta Seed"
+	BaseType == "Primal Cleaveling Seed" "Vivid Scorpion Seed"
 	CustomAlertSound "filter_sounds/100_death4.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -5922,7 +5944,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Cleaveling Seed" "Primal Maw Seed" "Primal Rhoa Seed"
+	BaseType == "Primal Feasting Horror Seed" "Vivid Arachnid Seed" "Vivid Leech Seed"
 	CustomAlertSound "filter_sounds/100_death5.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -5947,7 +5969,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Vivid Thornweaver Seed"
-	CustomAlertSound "filter_sounds/100_death2.wav"
+	CustomAlertSound "filter_sounds/100_death4.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -5970,7 +5992,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Sapsucker Grain" "Vivid Striketail Grain"
+	BaseType == "Wild Snap Hound Grain"
 	CustomAlertSound "filter_sounds/100_death1.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -5982,8 +6004,20 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Snap Hound Grain"
-	CustomAlertSound "filter_sounds/100_death2.wav"
+	BaseType == "Vivid Striketail Grain"
+	CustomAlertSound "filter_sounds/100_death3.wav"
+	MinimapIcon 1 Blue Kite
+	PlayEffect Green
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 44
+	StackSize >= 26
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Vivid Sapsucker Grain"
+	CustomAlertSound "filter_sounds/100_death4.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -6006,7 +6040,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Hatchling Seed"
+	BaseType == "Primal Feasting Horror Seed" "Vivid Leech Seed" "Vivid Weta Seed"
 	CustomAlertSound "filter_sounds/75_attack1.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6017,7 +6051,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Feasting Horror Seed" "Vivid Arachnid Seed" "Vivid Scorpion Seed" "Wild Hellion Seed"
+	BaseType == "Primal Dustspitter Seed" "Primal Rhoa Seed" "Wild Hellion Seed" "Wild Thornwolf Seed" "Wild Ursaling Seed"
 	CustomAlertSound "filter_sounds/75_attack2.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6028,7 +6062,18 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Ursaling Seed"
+	BaseType == "Primal Maw Seed" "Vivid Arachnid Seed" "Vivid Scorpion Seed" "Wild Ape Seed"
+	CustomAlertSound "filter_sounds/75_attack3.wav"
+	MinimapIcon 1 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 39
+	StackSize >= 20
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Wild Hatchling Seed"
 	CustomAlertSound "filter_sounds/75_attack4.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6039,18 +6084,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Leech Seed" "Wild Ape Seed" "Wild Thornwolf Seed"
-	CustomAlertSound "filter_sounds/75_attack5.wav"
-	MinimapIcon 1 Blue Kite
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 39
-	StackSize >= 20
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Primal Cleaveling Seed" "Primal Dustspitter Seed" "Primal Maw Seed" "Primal Rhoa Seed" "Vivid Weta Seed"
+	BaseType == "Primal Cleaveling Seed"
 	CustomAlertSound "filter_sounds/75_attack6.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6085,7 +6119,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Scrabbler Grain" "Vivid Nestback Grain" "Vivid Razorleg Grain" "Wild Bristlebeast Grain"
+	BaseType == "Wild Spikeback Grain"
 	CustomAlertSound "filter_sounds/100_death1.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -6097,7 +6131,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Chimeral Grain" "Wild Chieftain Grain" "Wild Hellion Alpha Bulb"
+	BaseType == "Primal Viper Grain" "Vivid Nestback Grain" "Wild Bristlebeast Grain"
 	CustomAlertSound "filter_sounds/100_death2.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -6109,7 +6143,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Dustcrab Grain" "Primal Rhex Grain" "Primal Viper Grain" "Wild Homunculus Grain" "Wild Spikeback Grain"
+	BaseType == "Vivid Razorleg Grain"
 	CustomAlertSound "filter_sounds/100_death3.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -6121,7 +6155,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Parasite Grain"
+	BaseType == "Primal Chimeral Grain" "Primal Rhex Grain" "Vivid Parasite Grain" "Wild Chieftain Grain"
 	CustomAlertSound "filter_sounds/100_death4.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -6133,8 +6167,20 @@ Show
 
 #Autogen filter rules
 Show
+	BaseType == "Primal Dustcrab Grain" "Primal Scrabbler Grain" "Wild Hellion Alpha Bulb" "Wild Homunculus Grain"
+	CustomAlertSound "filter_sounds/100_death5.wav"
+	MinimapIcon 1 Blue Kite
+	PlayEffect Green
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 44
+	StackSize >= 13
+	DisableDropSound True
+
+#Autogen filter rules
+Show
 	BaseType == "Vivid Thornweaver Seed"
-	CustomAlertSound "filter_sounds/75_attack3.wav"
+	CustomAlertSound "filter_sounds/75_attack1.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -6168,30 +6214,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Sapsucker Grain"
-	CustomAlertSound "filter_sounds/75_attack2.wav"
-	MinimapIcon 1 Blue Kite
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 39
-	StackSize >= 10
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Vivid Striketail Grain"
-	CustomAlertSound "filter_sounds/75_attack4.wav"
-	MinimapIcon 1 Blue Kite
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 39
-	StackSize >= 10
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Wild Snap Hound Grain"
-	CustomAlertSound "filter_sounds/75_attack5.wav"
+	BaseType == "Vivid Sapsucker Grain" "Vivid Striketail Grain" "Wild Snap Hound Grain"
+	CustomAlertSound "filter_sounds/75_attack3.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -6213,7 +6237,19 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Whipleg Bulb"
+	BaseType == "Wild Brambleback Bulb"
+	CustomAlertSound "filter_sounds/100_death1.wav"
+	MinimapIcon 1 Blue Kite
+	PlayEffect Green
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 44
+	StackSize >= 7
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Vivid Watcher Bulb" "Vivid Whipleg Bulb"
 	CustomAlertSound "filter_sounds/100_death2.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -6225,32 +6261,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Brambleback Bulb"
-	CustomAlertSound "filter_sounds/100_death4.wav"
-	MinimapIcon 1 Blue Kite
-	PlayEffect Green
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 44
-	StackSize >= 7
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Vivid Watcher Bulb"
-	CustomAlertSound "filter_sounds/100_death5.wav"
-	MinimapIcon 1 Blue Kite
-	PlayEffect Green
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 44
-	StackSize >= 7
-	DisableDropSound True
-
-#Autogen filter rules
-Show
 	BaseType == "Primal Cystcaller Bulb"
-	CustomAlertSound "filter_sounds/100_death1.wav"
+	CustomAlertSound "filter_sounds/100_death4.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -6273,7 +6285,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Scrabbler Grain" "Vivid Razorleg Grain" "Wild Homunculus Grain"
+	BaseType == "Primal Scrabbler Grain" "Primal Viper Grain" "Vivid Razorleg Grain" "Wild Homunculus Grain"
 	CustomAlertSound "filter_sounds/75_attack1.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6284,7 +6296,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Chimeral Grain" "Primal Viper Grain" "Vivid Nestback Grain" "Wild Bristlebeast Grain"
+	BaseType == "Vivid Parasite Grain" "Wild Chieftain Grain"
 	CustomAlertSound "filter_sounds/75_attack2.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6295,7 +6307,18 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Parasite Grain" "Wild Chieftain Grain"
+	BaseType == "Primal Dustcrab Grain"
+	CustomAlertSound "filter_sounds/75_attack3.wav"
+	MinimapIcon 1 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 39
+	StackSize >= 5
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Primal Chimeral Grain" "Wild Bristlebeast Grain" "Wild Spikeback Grain"
 	CustomAlertSound "filter_sounds/75_attack4.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6306,7 +6329,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Dustcrab Grain" "Primal Rhex Grain" "Wild Hellion Alpha Bulb" "Wild Spikeback Grain"
+	BaseType == "Primal Rhex Grain" "Vivid Nestback Grain" "Wild Hellion Alpha Bulb"
 	CustomAlertSound "filter_sounds/75_attack6.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6318,7 +6341,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Primal Crushclaw Bulb"
-	CustomAlertSound "filter_sounds/100_death2.wav"
+	CustomAlertSound "filter_sounds/100_death4.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -6329,7 +6352,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Feasting Horror Seed" "Vivid Arachnid Seed" "Vivid Scorpion Seed" "Wild Ape Seed"
+	BaseType == "Primal Cleaveling Seed" "Primal Dustspitter Seed" "Vivid Leech Seed"
 	CustomAlertSound "filter_sounds/20_gethit1.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6340,7 +6363,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Leech Seed" "Wild Hatchling Seed" "Wild Hellion Seed"
+	BaseType == "Primal Rhoa Seed" "Vivid Arachnid Seed" "Vivid Scorpion Seed" "Vivid Weta Seed" "Wild Hellion Seed" "Wild Thornwolf Seed"
 	CustomAlertSound "filter_sounds/20_gethit2.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6351,7 +6374,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Cleaveling Seed" "Primal Dustspitter Seed" "Wild Ursaling Seed"
+	BaseType == "Primal Feasting Horror Seed" "Wild Ape Seed"
 	CustomAlertSound "filter_sounds/20_gethit3.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6362,7 +6385,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Maw Seed" "Primal Rhoa Seed" "Vivid Weta Seed" "Wild Thornwolf Seed"
+	BaseType == "Primal Maw Seed" "Wild Hatchling Seed" "Wild Ursaling Seed"
 	CustomAlertSound "filter_sounds/20_gethit4.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6373,8 +6396,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Bristle Matron Bulb"
-	CustomAlertSound "filter_sounds/100_death2.wav"
+	BaseType == "Wild Thornmaw Bulb"
+	CustomAlertSound "filter_sounds/100_death1.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -6385,8 +6408,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Thornmaw Bulb"
-	CustomAlertSound "filter_sounds/100_death5.wav"
+	BaseType == "Wild Bristle Matron Bulb"
+	CustomAlertSound "filter_sounds/100_death4.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -6398,7 +6421,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Vivid Thornweaver Seed"
-	CustomAlertSound "filter_sounds/20_gethit3.wav"
+	CustomAlertSound "filter_sounds/20_gethit1.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -6409,7 +6432,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Vivid Watcher Bulb"
-	CustomAlertSound "filter_sounds/75_attack2.wav"
+	CustomAlertSound "filter_sounds/75_attack1.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -6420,7 +6443,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Vivid Whipleg Bulb" "Wild Brambleback Bulb"
-	CustomAlertSound "filter_sounds/75_attack5.wav"
+	CustomAlertSound "filter_sounds/75_attack2.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -6430,7 +6453,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Abberarach Bulb"
+	BaseType == "Primal Blisterlord Bulb" "Primal Reborn Bulb"
 	CustomAlertSound "filter_sounds/100_death1.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -6442,19 +6465,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Blisterlord Bulb"
-	CustomAlertSound "filter_sounds/100_death2.wav"
-	MinimapIcon 1 Blue Kite
-	PlayEffect Green
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 44
-	StackSize >= 2
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Vivid Devourer Bulb"
+	BaseType == "Primal Rhex Matriarch Bulb"
 	CustomAlertSound "filter_sounds/100_death3.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -6466,7 +6477,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Reborn Bulb" "Primal Rhex Matriarch Bulb"
+	BaseType == "Vivid Abberarach Bulb" "Vivid Devourer Bulb" "Vivid Vulture Bulb"
 	CustomAlertSound "filter_sounds/100_death4.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -6478,31 +6489,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Vulture Bulb"
-	CustomAlertSound "filter_sounds/100_death5.wav"
-	MinimapIcon 1 Blue Kite
-	PlayEffect Green
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 44
-	StackSize >= 2
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Vivid Striketail Grain"
+	BaseType == "Vivid Sapsucker Grain" "Vivid Striketail Grain"
 	CustomAlertSound "filter_sounds/20_gethit1.wav"
-	MinimapIcon 2 Blue Kite
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 32
-	StackSize >= 2
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Vivid Sapsucker Grain"
-	CustomAlertSound "filter_sounds/20_gethit3.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -6513,7 +6501,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Wild Snap Hound Grain"
-	CustomAlertSound "filter_sounds/20_gethit4.wav"
+	CustomAlertSound "filter_sounds/20_gethit3.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -6523,8 +6511,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Cystcaller Bulb"
-	CustomAlertSound "filter_sounds/75_attack3.wav"
+	BaseType == "Primal Crushclaw Bulb"
+	CustomAlertSound "filter_sounds/75_attack2.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -6534,7 +6522,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Crushclaw Bulb"
+	BaseType == "Primal Cystcaller Bulb"
 	CustomAlertSound "filter_sounds/75_attack6.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6545,32 +6533,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Thornfruit"
-	CustomAlertSound "filter_sounds/100_death1.wav"
-	ItemLevel >= 1
-	MinimapIcon 1 Blue Kite
-	PlayEffect Green
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 44
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Vivid Scalefruit"
-	CustomAlertSound "filter_sounds/100_death2.wav"
-	ItemLevel >= 1
-	MinimapIcon 1 Blue Kite
-	PlayEffect Green
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 44
-	DisableDropSound True
-
-#Autogen filter rules
-Show
 	BaseType == "Wild Infestation Queen Bulb"
-	CustomAlertSound "filter_sounds/100_death4.wav"
+	CustomAlertSound "filter_sounds/100_death3.wav"
 	ItemLevel >= 1
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -6581,7 +6545,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Blisterfruit"
+	BaseType == "Primal Blisterfruit" "Vivid Scalefruit" "Wild Thornfruit"
 	CustomAlertSound "filter_sounds/100_death5.wav"
 	ItemLevel >= 1
 	MinimapIcon 1 Blue Kite
@@ -6593,7 +6557,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Chimeral Grain" "Primal Dustcrab Grain" "Primal Scrabbler Grain" "Vivid Nestback Grain" "Vivid Watcher Bulb"
+	BaseType == "Primal Crushclaw Bulb" "Primal Dustcrab Grain" "Wild Spikeback Grain"
 	CustomAlertSound "filter_sounds/20_gethit1.wav"
 	ItemLevel >= 1
 	MinimapIcon 2 Blue Kite
@@ -6604,7 +6568,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Cystcaller Bulb" "Primal Rhex Grain" "Primal Viper Grain" "Vivid Whipleg Bulb"
+	BaseType == "Primal Viper Grain" "Vivid Razorleg Grain" "Wild Brambleback Bulb" "Wild Chieftain Grain"
 	CustomAlertSound "filter_sounds/20_gethit2.wav"
 	ItemLevel >= 1
 	MinimapIcon 2 Blue Kite
@@ -6615,7 +6579,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Razorleg Grain" "Wild Brambleback Bulb" "Wild Hellion Alpha Bulb" "Wild Homunculus Grain"
+	BaseType == "Primal Chimeral Grain" "Primal Rhex Grain" "Primal Scrabbler Grain" "Vivid Nestback Grain" "Wild Hellion Alpha Bulb"
 	CustomAlertSound "filter_sounds/20_gethit3.wav"
 	ItemLevel >= 1
 	MinimapIcon 2 Blue Kite
@@ -6626,7 +6590,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Crushclaw Bulb" "Vivid Parasite Grain" "Wild Bristlebeast Grain" "Wild Chieftain Grain" "Wild Spikeback Grain"
+	BaseType == "Primal Cystcaller Bulb" "Vivid Parasite Grain" "Vivid Watcher Bulb" "Vivid Whipleg Bulb" "Wild Bristlebeast Grain" "Wild Homunculus Grain"
 	CustomAlertSound "filter_sounds/20_gethit4.wav"
 	ItemLevel >= 1
 	MinimapIcon 2 Blue Kite
@@ -6637,7 +6601,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Reborn Bulb" "Vivid Vulture Bulb"
+	BaseType == "Primal Reborn Bulb" "Primal Rhex Matriarch Bulb" "Vivid Devourer Bulb"
 	CustomAlertSound "filter_sounds/75_attack1.wav"
 	ItemLevel >= 1
 	MinimapIcon 1 Blue Kite
@@ -6648,18 +6612,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Devourer Bulb"
-	CustomAlertSound "filter_sounds/75_attack2.wav"
-	ItemLevel >= 1
-	MinimapIcon 1 Blue Kite
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 39
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Wild Thornmaw Bulb"
+	BaseType == "Vivid Vulture Bulb" "Wild Thornmaw Bulb"
 	CustomAlertSound "filter_sounds/75_attack3.wav"
 	ItemLevel >= 1
 	MinimapIcon 1 Blue Kite
@@ -6670,7 +6623,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Blisterlord Bulb" "Primal Rhex Matriarch Bulb" "Vivid Abberarach Bulb"
+	BaseType == "Primal Blisterlord Bulb"
 	CustomAlertSound "filter_sounds/75_attack4.wav"
 	ItemLevel >= 1
 	MinimapIcon 1 Blue Kite
@@ -6681,7 +6634,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Bristle Matron Bulb"
+	BaseType == "Vivid Abberarach Bulb" "Wild Bristle Matron Bulb"
 	CustomAlertSound "filter_sounds/75_attack5.wav"
 	ItemLevel >= 1
 	MinimapIcon 1 Blue Kite
@@ -6880,7 +6833,7 @@ Show
 Show
 	Class "Maps"
 	BlightedMap True
-	CustomAlertSound "filter_sounds/100_death4.wav"
+	CustomAlertSound "filter_sounds/100_death3.wav"
 	MapTier >= 16
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -6893,7 +6846,7 @@ Show
 Show
 	Class "Maps"
 	BlightedMap True
-	CustomAlertSound "filter_sounds/75_attack5.wav"
+	CustomAlertSound "filter_sounds/75_attack3.wav"
 	MapTier >= 11
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6905,7 +6858,7 @@ Show
 Show
 	Class "Maps"
 	BlightedMap True
-	CustomAlertSound "filter_sounds/20_gethit1.wav"
+	CustomAlertSound "filter_sounds/20_gethit2.wav"
 	MapTier <= 5
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -7563,7 +7516,7 @@ Show
 
 #Items Mods
 Show
-	HasExplicitMod "Eldritch" "The Shaper's" "of the Elder" "of Shaping" "Subterranean" "of the Underground" "of Crafting" "Catarina's Veiled" "Elreon's Veiled" "Gravicius' Veiled" "Guff's Veiled" "Haku's Veiled" "Korell's Veiled" "Rin's Veiled" "Vorici's Veiled" "of Cameria's Veil" "Citaqualotl's" "Guatelitzi's" "Matatl's" "of Puhuarte" "of Tacati" "Tacati's" "Topotante's" "Xopec's" "Brinerot" "Mutewind" "Redblade" "Betrayer's" "Deceiver's" "Turncoat's"
+	HasExplicitMod "Eldritch" "The Shaper's" "of the Elder" "of Shaping" "Subterranean" "of the Underground" "of Crafting" "Catarina's Veiled" "Elreon's Veiled" "Gravicius' Veiled" "Guff's Veiled" "Haku's Veiled" "It That Fled's Veiled" "Korell's Veiled" "Leo's Veiled" "Rin's Veiled" "Tora's Veiled" "Vagan's Veiled" "Vorici's Veiled" "of Aisling's Veil" "of Cameria's Veil" "of Hillock's Veil" "of Janus' Veil" "of Jorgin's Veil" "of Riker's Veil" "Citaqualotl's" "Guatelitzi's" "Matatl's" "of Puhuarte" "of Tacati" "Tacati's" "Topotante's" "Xopec's" "Brinerot" "Mutewind" "Redblade" "Betrayer's" "Deceiver's" "Turncoat's"
 	MinimapIcon 2 Grey UpsideDownHouse
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 192 128 254
@@ -7592,18 +7545,8 @@ Show
 
 #Items Mods
 Show
-	Class "Boots" "Gloves" "Helmet" "Belt" "Ring" "Quiver"
+	Class "Body Armour" "Boots" "Gloves" "Helmet" "Shield" "Belt" "Ring" "Quiver"
 	HasExplicitMod "Veiled" "of the Veil"
-	MinimapIcon 2 Grey UpsideDownHouse
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 192 128 254
-	SetFontSize 32
-	DisableDropSound True
-
-#Items Mods
-Show
-	Class "Body Armour" "Shield"
-	HasExplicitMod "of the Veil"
 	MinimapIcon 2 Grey UpsideDownHouse
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 192 128 254
@@ -8823,7 +8766,7 @@ Show
 
 #Always show catchall
 Show
-	Class "Harvest Seed"
+	Class "Seed Enhancer"
 	CustomAlertSound "filter_sounds/20_gethit2.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -8833,8 +8776,8 @@ Show
 
 #Always show catchall
 Show
-	Class "Seed Enhancer"
-	CustomAlertSound "filter_sounds/20_gethit4.wav"
+	Class "Harvest Seed"
+	CustomAlertSound "filter_sounds/20_gethit3.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
