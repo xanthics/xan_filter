@@ -109,11 +109,8 @@ def convert_sound_reference(format_list):
 
 
 def convert_wav(factor, inpath, outpath):
-
 	pathout = "{}_{}".format(factor, inpath)
 	factor = factor / 100
-	if not os.path.isdir(path.join(outpath, sound_root)):
-		os.mkdir(path.join(outpath, sound_root))
 	with wave.open('source_sounds/{}'.format(inpath), 'rb') as fin, wave.open(f'{sound_root}/{pathout}', 'wb') as fout, wave.open(path.join(outpath, f'{sound_root}/{pathout}'), "wb") as f:
 		fout.setparams(fin.getparams())
 		f.setparams(fin.getparams())
@@ -151,6 +148,8 @@ def package_sounds():
 		os.remove(os.path.join(sound_root, file))
 	if os.path.isfile('soundpack.zip'):
 		os.remove('soundpack.zip')
+	if not os.path.isdir(path.join(poeDir, sound_root)):
+		os.mkdir(path.join(poeDir, sound_root))
 	for file in os.listdir(path.join(poeDir, sound_root)):
 		if file.endswith('.wav'):
 			os.remove(os.path.join(poeDir, f'{sound_root}/{file}'))
