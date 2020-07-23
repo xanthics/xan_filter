@@ -89,6 +89,12 @@ size = {
 # Each config should be its own array element.  Parsing will handle tabs/etc.
 # ignore and hide have special meaning(see comment)
 settings = {
+	"challenge purple text": ["SetTextColor {}".format(color['premiumlpurple']),
+						   "Continue"],
+	"challenge blue text": ["SetTextColor {}".format(color['premiumlblue']),
+							"Continue"],
+	"challenge yellow text": ["SetTextColor {}".format(color['premiumyellow']),
+							  "Continue"],
 	"challenge extremely high": ["SetBorderColor {}".format(color['premiumdlavender']),
 								 'CustomAlertSound "{}_challenge"'.format('max'),
 								 'MinimapIcon 0 Green Kite',

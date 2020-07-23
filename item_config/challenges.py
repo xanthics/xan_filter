@@ -10,6 +10,10 @@ desc = "challenge item"
 items = {
 	"1 Cluster Jewel": {"base": "Cluster Jewel", "class": "Jewel", "type": "show high"},
 
+	"76 Purple Harvest Seed": {"base": "Wild", "class": "Harvest Seed", "type": "challenge purple text"},
+	"76 Yellow Harvest Seed": {"base": "Vivid", "class": "Harvest Seed", "type": "challenge yellow text"},
+	"76 Blue Harvest Seed": {"base": "Primal", "class": "Harvest Seed", "type": "challenge blue text"},
+
 	"75 Harvest Fortune Bud": {"baseexact": "Fortune Bud", "type": "challenge normal"},
 	"75 Harvest Fortune Flower": {"baseexact": "Fortune Flower", "type": "challenge normal"},
 	"75 Harvest Fortune Blossom": {"baseexact": "Fortune Blossom", "type": "challenge normal"},
