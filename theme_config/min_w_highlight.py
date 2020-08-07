@@ -84,17 +84,14 @@ size = {
 # medium
 # low
 
+# initialize settings with all of the text color options
+settings = {f"{k} text": [f"SetTextColor {color[k]}", "Continue"] for k in color}
+
 # Text settings for various categories
 # This is where you would define general settings for a category, such as PlayAlertSoundPositional.
 # Each config should be its own array element.  Parsing will handle tabs/etc.
 # ignore and hide have special meaning(see comment)
-settings = {
-	"challenge purple text": ["SetTextColor {}".format(color['premiumlpurple']),
-						   "Continue"],
-	"challenge blue text": ["SetTextColor {}".format(color['premiumlblue']),
-							"Continue"],
-	"challenge yellow text": ["SetTextColor {}".format(color['premiumyellow']),
-							  "Continue"],
+settings.update({
 	"challenge extremely high": ["SetBorderColor {}".format(color['premiumdlavender']),
 								 'CustomAlertSound "{}_challenge"'.format('max'),
 								 'MinimapIcon 0 Green Kite',
@@ -513,4 +510,4 @@ settings = {
 
 	"ignore": [""],  # will have no styling applied and will use the default set at the end
 	"hide": [""]  # Will be explicitly hidden with applied styling
-}
+})

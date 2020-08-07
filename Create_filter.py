@@ -20,6 +20,7 @@ from item_config import labyrinth
 from item_config import maps
 from item_config import recipe_item
 from item_config import show
+from item_config import text_color
 from item_config.gen_item_lists import genraresleveling, gennonrareleveling, genrareshighlighttiered
 from item_config.itemmod import itemmods
 
@@ -190,6 +191,7 @@ def main(league='tmpstandard'):
 """.format(league, datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'))
 	league = convertname(league)
 
+	buffer += gen_list_compact(text_color.items, text_color.desc)  # Text color rules first since they use Continue
 	buffer += gen_list_compact(show.items, show.desc)  # Always show these items
 	buffer += gen_list_compact(hide.items, hide.desc)  # Always hide these items
 	buffer += gen_list_compact(challenges.items, challenges.desc)
