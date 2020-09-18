@@ -21,8 +21,8 @@ items = {
 	"17 enchant": {"class": "Helmet", "other": ["AnyEnchantment True"], "type": "item mod"},
 	"18 Misc map items": {"class": "Misc Map Items", "type": "show high"},
 
-	"76 Harvest Seed": {"class": "Harvest Seed", "type": "challenge normal"},
-	"76 Harvest Seed Enhancer": {"class": "Seed Enhancer", "type": "challenge normal"},
+#	"76 Harvest Seed": {"class": "Harvest Seed", "type": "challenge normal"},
+#	"76 Harvest Seed Enhancer": {"class": "Seed Enhancer", "type": "challenge normal"},
 
 	"8 5": {"other": ["DropLevel <= 5", "AreaLevel >= 15", "AreaLevel <= 67"], "type": "rare low"},
 	"8 10": {"other": ["DropLevel <= 10", "AreaLevel >= 20", "AreaLevel <= 67"], "type": "rare low"},

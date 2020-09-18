@@ -93,7 +93,6 @@ def scrape_ninja(league='tmpstandard'):
 		else:
 			request = f'https://poe.ninja/api/data/itemoverview?league={leaguelookup[league]}&type={key}'
 		req = requester.get(request, headers=header)
-		req = requester.get(request, headers=header)
 		print(f"{league} {key} Status code: {req.status_code}")
 		if req.status_code == 204:
 			print("No {} data for {}".format(key, league))

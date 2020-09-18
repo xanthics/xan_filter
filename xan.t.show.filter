@@ -1,6 +1,6 @@
 #**************************************************************
 # Welcome to xan.filter, a Python generated loot filter for PoE
-# This filter was generated for tmpstandard on 08/07/2020(m/d/y) 10:01:13 UTC
+# This filter was generated for tmpstandard on 09/18/2020(m/d/y) 08:21:24 UTC
 # The most current version of code can always be found at https://github.com/xanthics/poe_filter
 #**************************************************************
 
@@ -206,6 +206,39 @@ Hide
 
 #challenge item
 Show
+	BaseType == "Prime Regrading Lens" "Tailoring Orb"
+	Class "Currency"
+	CustomAlertSound "filter_sounds/20_gethit1.wav"
+	MinimapIcon 2 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 32
+	DisableDropSound True
+
+#challenge item
+Show
+	BaseType == "Secondary Regrading Lens" "Tempering Orb"
+	Class "Currency"
+	CustomAlertSound "filter_sounds/20_gethit2.wav"
+	MinimapIcon 2 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 32
+	DisableDropSound True
+
+#challenge item
+Show
+	BaseType == "Rogue's Marker"
+	Class "Currency"
+	CustomAlertSound "filter_sounds/20_gethit4.wav"
+	MinimapIcon 2 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 32
+	DisableDropSound True
+
+#challenge item
+Show
 	BaseType "Cluster Jewel"
 	Class "Jewel"
 	CustomAlertSound "filter_sounds/75_convert.wav"
@@ -218,8 +251,8 @@ Show
 
 #challenge item
 Show
-	BaseType == "Fortune Bud" "Fortune Flower"
-	CustomAlertSound "filter_sounds/20_gethit1.wav"
+	AlternateQuality True
+	CustomAlertSound "filter_sounds/20_gethit4.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -228,8 +261,18 @@ Show
 
 #challenge item
 Show
-	BaseType == "Lifeforce Blossom" "Horticrafting Flower"
-	CustomAlertSound "filter_sounds/20_gethit3.wav"
+	CustomAlertSound "filter_sounds/20_gethit4.wav"
+	MinimapIcon 2 Blue Kite
+	Replica True
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 32
+	DisableDropSound True
+
+#challenge item
+Show
+	Class "Blueprint"
+	CustomAlertSound "filter_sounds/20_gethit2.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -238,7 +281,7 @@ Show
 
 #challenge item
 Show
-	BaseType == "Fortune Blossom" "Lifeforce Bud" "Lifeforce Flower" "Horticrafting Bud" "Horticrafting Blossom"
+	Class "Heist" "Trinket" "Contract"
 	CustomAlertSound "filter_sounds/20_gethit4.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -612,8 +655,19 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Amber Oil"
-	CustomAlertSound "filter_sounds/75_attack3.wav"
+	BaseType == "Verdant Oil"
+	CustomAlertSound "filter_sounds/75_attack1.wav"
+	MinimapIcon 1 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 39
+	StackSize >= 10
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Amber Oil" "Sepia Oil"
+	CustomAlertSound "filter_sounds/75_attack2.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -634,7 +688,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Clear Oil" "Sepia Oil" "Verdant Oil"
+	BaseType == "Clear Oil"
 	CustomAlertSound "filter_sounds/75_attack6.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -657,7 +711,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Black Oil"
-	CustomAlertSound "filter_sounds/100_death3.wav"
+	CustomAlertSound "filter_sounds/100_death2.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -703,7 +757,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Crimson Oil"
-	CustomAlertSound "filter_sounds/100_death1.wav"
+	CustomAlertSound "filter_sounds/100_death4.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -875,8 +929,19 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Azure Oil" "Indigo Oil"
-	CustomAlertSound "filter_sounds/75_attack2.wav"
+	BaseType == "Indigo Oil"
+	CustomAlertSound "filter_sounds/75_attack1.wav"
+	MinimapIcon 1 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 39
+	StackSize >= 5
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Azure Oil"
+	CustomAlertSound "filter_sounds/75_attack3.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -944,7 +1009,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Opalescent Oil"
-	CustomAlertSound "filter_sounds/100_death3.wav"
+	CustomAlertSound "filter_sounds/100_death2.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -991,7 +1056,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Black Oil"
-	CustomAlertSound "filter_sounds/75_attack1.wav"
+	CustomAlertSound "filter_sounds/75_attack4.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1002,7 +1067,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Crimson Oil"
-	CustomAlertSound "filter_sounds/75_attack3.wav"
+	CustomAlertSound "filter_sounds/75_attack6.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1024,7 +1089,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Silver Oil"
-	CustomAlertSound "filter_sounds/100_death2.wav"
+	CustomAlertSound "filter_sounds/100_death3.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1071,7 +1136,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Clear Oil"
+	BaseType == "Clear Oil" "Verdant Oil"
 	CustomAlertSound "filter_sounds/20_gethit1.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1082,7 +1147,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Amber Oil" "Verdant Oil"
+	BaseType == "Amber Oil"
 	CustomAlertSound "filter_sounds/20_gethit2.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1093,8 +1158,19 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Sepia Oil" "Teal Oil"
+	BaseType == "Sepia Oil"
 	CustomAlertSound "filter_sounds/20_gethit3.wav"
+	MinimapIcon 2 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 32
+	StackSize >= 2
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Teal Oil"
+	CustomAlertSound "filter_sounds/20_gethit4.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1141,7 +1217,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Golden Oil"
-	CustomAlertSound "filter_sounds/100_death1.wav"
+	CustomAlertSound "filter_sounds/100_death4.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1184,7 +1260,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Crimson Oil"
+	BaseType == "Crimson Oil" "Indigo Oil"
 	CustomAlertSound "filter_sounds/20_gethit1.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1194,7 +1270,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Black Oil" "Violet Oil"
+	BaseType == "Violet Oil"
 	CustomAlertSound "filter_sounds/20_gethit2.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1204,7 +1280,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Indigo Oil"
+	BaseType == "Azure Oil"
 	CustomAlertSound "filter_sounds/20_gethit3.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1214,7 +1290,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Azure Oil"
+	BaseType == "Black Oil"
 	CustomAlertSound "filter_sounds/20_gethit4.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1224,8 +1300,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Opalescent Oil"
-	CustomAlertSound "filter_sounds/75_attack4.wav"
+	BaseType == "Silver Oil"
+	CustomAlertSound "filter_sounds/75_attack3.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1234,8 +1310,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Silver Oil"
-	CustomAlertSound "filter_sounds/75_attack5.wav"
+	BaseType == "Opalescent Oil"
+	CustomAlertSound "filter_sounds/75_attack6.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1342,7 +1418,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Vivid Leech Seed"
-	CustomAlertSound "filter_sounds/100_death2.wav"
+	CustomAlertSound "filter_sounds/100_death4.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1377,7 +1453,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Dustspitter Seed" "Vivid Arachnid Seed"
+	BaseType == "Wild Ursaling Seed"
 	CustomAlertSound "filter_sounds/100_death1.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -1389,7 +1465,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Ursaling Seed"
+	BaseType == "Vivid Arachnid Seed"
 	CustomAlertSound "filter_sounds/100_death3.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -1401,7 +1477,19 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Feasting Horror Seed" "Primal Maw Seed" "Primal Rhoa Seed"
+	BaseType == "Primal Dustspitter Seed"
+	CustomAlertSound "filter_sounds/100_death5.wav"
+	MinimapIcon 1 Blue Kite
+	PlayEffect Green
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 44
+	StackSize >= 31
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Primal Maw Seed" "Wild Hellion Seed"
 	CustomAlertSound "filter_sounds/100_death1.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -1413,7 +1501,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Cleaveling Seed" "Vivid Weta Seed" "Wild Hatchling Seed"
+	BaseType == "Primal Feasting Horror Seed" "Wild Ape Seed" "Wild Thornwolf Seed"
 	CustomAlertSound "filter_sounds/100_death2.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -1425,7 +1513,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Scorpion Seed" "Wild Ape Seed" "Wild Thornwolf Seed"
+	BaseType == "Vivid Weta Seed" "Wild Hatchling Seed"
 	CustomAlertSound "filter_sounds/100_death3.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -1437,8 +1525,20 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Hellion Seed"
+	BaseType == "Primal Cleaveling Seed" "Vivid Scorpion Seed"
 	CustomAlertSound "filter_sounds/100_death4.wav"
+	MinimapIcon 1 Blue Kite
+	PlayEffect Green
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 44
+	StackSize >= 30
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Primal Rhoa Seed"
+	CustomAlertSound "filter_sounds/100_death5.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1462,7 +1562,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Vivid Leech Seed"
-	CustomAlertSound "filter_sounds/75_attack6.wav"
+	CustomAlertSound "filter_sounds/75_attack5.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1484,8 +1584,20 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Dustcrab Grain" "Wild Snap Hound Grain"
-	CustomAlertSound "filter_sounds/100_death3.wav"
+	BaseType == "Wild Snap Hound Grain"
+	CustomAlertSound "filter_sounds/100_death4.wav"
+	MinimapIcon 1 Blue Kite
+	PlayEffect Green
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 44
+	StackSize >= 19
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Primal Dustcrab Grain"
+	CustomAlertSound "filter_sounds/100_death5.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1521,7 +1633,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Vivid Sapsucker Grain"
-	CustomAlertSound "filter_sounds/100_death4.wav"
+	CustomAlertSound "filter_sounds/100_death2.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1544,8 +1656,20 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Razorleg Grain" "Vivid Striketail Grain"
+	BaseType == "Vivid Razorleg Grain" "Wild Bristlebeast Grain"
 	CustomAlertSound "filter_sounds/100_death1.wav"
+	MinimapIcon 1 Blue Kite
+	PlayEffect Green
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 44
+	StackSize >= 15
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Primal Chimeral Grain" "Vivid Striketail Grain"
+	CustomAlertSound "filter_sounds/100_death2.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1558,30 +1682,6 @@ Show
 Show
 	BaseType == "Vivid Nestback Grain"
 	CustomAlertSound "filter_sounds/100_death3.wav"
-	MinimapIcon 1 Blue Kite
-	PlayEffect Green
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 44
-	StackSize >= 15
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Primal Chimeral Grain"
-	CustomAlertSound "filter_sounds/100_death4.wav"
-	MinimapIcon 1 Blue Kite
-	PlayEffect Green
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 44
-	StackSize >= 15
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Wild Bristlebeast Grain"
-	CustomAlertSound "filter_sounds/100_death5.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1628,8 +1728,19 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Arachnid Seed" "Wild Ursaling Seed"
-	CustomAlertSound "filter_sounds/75_attack1.wav"
+	BaseType == "Vivid Arachnid Seed"
+	CustomAlertSound "filter_sounds/75_attack3.wav"
+	MinimapIcon 1 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 39
+	StackSize >= 11
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Wild Ursaling Seed"
+	CustomAlertSound "filter_sounds/75_attack5.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1650,7 +1761,18 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Maw Seed"
+	BaseType == "Vivid Weta Seed" "Wild Ape Seed" "Wild Thornwolf Seed"
+	CustomAlertSound "filter_sounds/75_attack1.wav"
+	MinimapIcon 1 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 39
+	StackSize >= 10
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Wild Hatchling Seed"
 	CustomAlertSound "filter_sounds/75_attack2.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1661,7 +1783,18 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Cleaveling Seed" "Primal Feasting Horror Seed" "Wild Thornwolf Seed"
+	BaseType == "Primal Feasting Horror Seed" "Primal Rhoa Seed" "Vivid Scorpion Seed"
+	CustomAlertSound "filter_sounds/75_attack3.wav"
+	MinimapIcon 1 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 39
+	StackSize >= 10
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Primal Maw Seed" "Wild Hellion Seed"
 	CustomAlertSound "filter_sounds/75_attack4.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1672,7 +1805,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Scorpion Seed" "Wild Ape Seed" "Wild Hatchling Seed" "Wild Hellion Seed"
+	BaseType == "Primal Cleaveling Seed"
 	CustomAlertSound "filter_sounds/75_attack5.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1683,19 +1816,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Rhoa Seed" "Vivid Weta Seed"
-	CustomAlertSound "filter_sounds/75_attack6.wav"
-	MinimapIcon 1 Blue Kite
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 39
-	StackSize >= 10
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Wild Homunculus Grain"
-	CustomAlertSound "filter_sounds/100_death3.wav"
+	BaseType == "Wild Chieftain Grain"
+	CustomAlertSound "filter_sounds/100_death2.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1706,7 +1828,19 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Parasite Grain" "Wild Chieftain Grain"
+	BaseType == "Vivid Parasite Grain"
+	CustomAlertSound "filter_sounds/100_death4.wav"
+	MinimapIcon 1 Blue Kite
+	PlayEffect Green
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 44
+	StackSize >= 8
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Wild Homunculus Grain"
 	CustomAlertSound "filter_sounds/100_death5.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -1718,8 +1852,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Dustcrab Grain"
-	CustomAlertSound "filter_sounds/75_attack2.wav"
+	BaseType == "Wild Snap Hound Grain"
+	CustomAlertSound "filter_sounds/75_attack1.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1729,7 +1863,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Snap Hound Grain"
+	BaseType == "Primal Dustcrab Grain"
 	CustomAlertSound "filter_sounds/75_attack3.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1753,7 +1887,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Vivid Sapsucker Grain"
-	CustomAlertSound "filter_sounds/75_attack3.wav"
+	CustomAlertSound "filter_sounds/75_attack6.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1763,7 +1897,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Watcher Bulb" "Vivid Whipleg Bulb"
+	BaseType == "Vivid Whipleg Bulb"
 	CustomAlertSound "filter_sounds/100_death1.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -1776,7 +1910,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Primal Rhex Grain"
-	CustomAlertSound "filter_sounds/100_death4.wav"
+	CustomAlertSound "filter_sounds/100_death2.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1788,7 +1922,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Wild Hellion Alpha Bulb"
-	CustomAlertSound "filter_sounds/100_death5.wav"
+	CustomAlertSound "filter_sounds/100_death3.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1799,8 +1933,20 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Chimeral Grain" "Vivid Striketail Grain" "Wild Bristlebeast Grain"
-	CustomAlertSound "filter_sounds/75_attack1.wav"
+	BaseType == "Vivid Watcher Bulb"
+	CustomAlertSound "filter_sounds/100_death4.wav"
+	MinimapIcon 1 Blue Kite
+	PlayEffect Green
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 44
+	StackSize >= 5
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Vivid Striketail Grain"
+	CustomAlertSound "filter_sounds/75_attack3.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1810,7 +1956,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Nestback Grain" "Vivid Razorleg Grain"
+	BaseType == "Primal Chimeral Grain" "Wild Bristlebeast Grain"
 	CustomAlertSound "filter_sounds/75_attack4.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1821,8 +1967,30 @@ Show
 
 #Autogen filter rules
 Show
+	BaseType == "Vivid Razorleg Grain"
+	CustomAlertSound "filter_sounds/75_attack5.wav"
+	MinimapIcon 1 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 39
+	StackSize >= 5
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Vivid Nestback Grain"
+	CustomAlertSound "filter_sounds/75_attack6.wav"
+	MinimapIcon 1 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 39
+	StackSize >= 5
+	DisableDropSound True
+
+#Autogen filter rules
+Show
 	BaseType == "Vivid Leech Seed"
-	CustomAlertSound "filter_sounds/20_gethit1.wav"
+	CustomAlertSound "filter_sounds/20_gethit4.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1844,8 +2012,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Abberarach Bulb" "Wild Brambleback Bulb"
-	CustomAlertSound "filter_sounds/100_death4.wav"
+	BaseType == "Vivid Abberarach Bulb"
+	CustomAlertSound "filter_sounds/100_death3.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1856,8 +2024,31 @@ Show
 
 #Autogen filter rules
 Show
+	BaseType == "Wild Brambleback Bulb"
+	CustomAlertSound "filter_sounds/100_death5.wav"
+	MinimapIcon 1 Blue Kite
+	PlayEffect Green
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 44
+	StackSize >= 3
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Vivid Parasite Grain"
+	CustomAlertSound "filter_sounds/75_attack1.wav"
+	MinimapIcon 1 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 39
+	StackSize >= 3
+	DisableDropSound True
+
+#Autogen filter rules
+Show
 	BaseType == "Wild Homunculus Grain"
-	CustomAlertSound "filter_sounds/75_attack5.wav"
+	CustomAlertSound "filter_sounds/75_attack2.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1867,8 +2058,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Parasite Grain" "Wild Chieftain Grain"
-	CustomAlertSound "filter_sounds/75_attack6.wav"
+	BaseType == "Wild Chieftain Grain"
+	CustomAlertSound "filter_sounds/75_attack3.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1878,7 +2069,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Rhex Matriarch Bulb" "Primal Scrabbler Grain"
+	BaseType == "Primal Reborn Bulb" "Primal Viper Grain" "Vivid Thornweaver Seed"
 	CustomAlertSound "filter_sounds/100_death1.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -1890,7 +2081,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Cystcaller Bulb" "Vivid Devourer Bulb" "Wild Bristle Matron Bulb"
+	BaseType == "Primal Rhex Matriarch Bulb"
 	CustomAlertSound "filter_sounds/100_death2.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -1902,7 +2093,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Crushclaw Bulb" "Vivid Thornweaver Seed" "Wild Infestation Queen Bulb" "Wild Spikeback Grain"
+	BaseType == "Primal Scrabbler Grain" "Wild Bristle Matron Bulb"
 	CustomAlertSound "filter_sounds/100_death3.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -1914,7 +2105,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Blisterlord Bulb" "Primal Viper Grain"
+	BaseType == "Primal Crushclaw Bulb" "Vivid Devourer Bulb" "Wild Infestation Queen Bulb"
 	CustomAlertSound "filter_sounds/100_death4.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -1926,7 +2117,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Reborn Bulb"
+	BaseType == "Primal Blisterlord Bulb" "Primal Cystcaller Bulb" "Wild Spikeback Grain"
 	CustomAlertSound "filter_sounds/100_death5.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -1950,7 +2141,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Dustcrab Grain" "Vivid Arachnid Seed"
+	BaseType == "Primal Feasting Horror Seed" "Primal Rhoa Seed" "Vivid Arachnid Seed" "Wild Snap Hound Grain" "Wild Thornwolf Seed"
 	CustomAlertSound "filter_sounds/20_gethit1.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1961,7 +2152,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Cleaveling Seed" "Primal Dustspitter Seed" "Primal Feasting Horror Seed" "Wild Hatchling Seed" "Wild Thornwolf Seed"
+	BaseType == "Vivid Weta Seed" "Wild Hellion Seed" "Wild Ursaling Seed"
 	CustomAlertSound "filter_sounds/20_gethit2.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1972,7 +2163,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Maw Seed" "Vivid Scorpion Seed" "Vivid Weta Seed" "Wild Hellion Seed" "Wild Ursaling Seed"
+	BaseType == "Primal Dustcrab Grain" "Vivid Scorpion Seed" "Wild Hatchling Seed"
 	CustomAlertSound "filter_sounds/20_gethit3.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1983,7 +2174,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Rhoa Seed" "Wild Ape Seed" "Wild Snap Hound Grain"
+	BaseType == "Primal Cleaveling Seed" "Primal Dustspitter Seed" "Primal Maw Seed" "Wild Ape Seed"
 	CustomAlertSound "filter_sounds/20_gethit4.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -2005,8 +2196,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Rhex Grain" "Vivid Watcher Bulb"
-	CustomAlertSound "filter_sounds/75_attack5.wav"
+	BaseType == "Vivid Watcher Bulb"
+	CustomAlertSound "filter_sounds/75_attack3.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -2017,6 +2208,17 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Vivid Whipleg Bulb"
+	CustomAlertSound "filter_sounds/75_attack4.wav"
+	MinimapIcon 1 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 39
+	StackSize >= 2
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Primal Rhex Grain"
 	CustomAlertSound "filter_sounds/75_attack6.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -2028,19 +2230,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Vivid Scalefruit" "Vivid Vulture Bulb"
-	CustomAlertSound "filter_sounds/100_death1.wav"
-	ItemLevel >= 76
-	MinimapIcon 1 Blue Kite
-	PlayEffect Green
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 44
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Primal Blisterfruit"
-	CustomAlertSound "filter_sounds/100_death4.wav"
+	CustomAlertSound "filter_sounds/100_death3.wav"
 	ItemLevel >= 76
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -2052,6 +2242,18 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Wild Thornfruit"
+	CustomAlertSound "filter_sounds/100_death4.wav"
+	ItemLevel >= 76
+	MinimapIcon 1 Blue Kite
+	PlayEffect Green
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 44
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Primal Blisterfruit"
 	CustomAlertSound "filter_sounds/100_death5.wav"
 	ItemLevel >= 76
 	MinimapIcon 1 Blue Kite
@@ -2063,7 +2265,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Chimeral Grain" "Vivid Nestback Grain" "Vivid Razorleg Grain" "Vivid Striketail Grain" "Vivid Watcher Bulb" "Wild Bristlebeast Grain" "Wild Chieftain Grain" "Wild Hellion Alpha Bulb" "Wild Homunculus Grain"
+	BaseType == "Primal Rhex Grain" "Vivid Razorleg Grain" "Wild Bristlebeast Grain" "Wild Hellion Alpha Bulb"
 	CustomAlertSound "filter_sounds/20_gethit1.wav"
 	ItemLevel >= 76
 	MinimapIcon 2 Blue Kite
@@ -2074,7 +2276,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Parasite Grain" "Vivid Whipleg Bulb"
+	BaseType == "Primal Chimeral Grain" "Vivid Sapsucker Grain"
 	CustomAlertSound "filter_sounds/20_gethit2.wav"
 	ItemLevel >= 76
 	MinimapIcon 2 Blue Kite
@@ -2085,7 +2287,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Rhex Grain"
+	BaseType == "Vivid Parasite Grain" "Vivid Striketail Grain" "Vivid Watcher Bulb" "Wild Chieftain Grain"
 	CustomAlertSound "filter_sounds/20_gethit3.wav"
 	ItemLevel >= 76
 	MinimapIcon 2 Blue Kite
@@ -2096,7 +2298,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Sapsucker Grain"
+	BaseType == "Vivid Nestback Grain" "Vivid Whipleg Bulb" "Wild Homunculus Grain"
 	CustomAlertSound "filter_sounds/20_gethit4.wav"
 	ItemLevel >= 76
 	MinimapIcon 2 Blue Kite
@@ -2107,7 +2309,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Blisterlord Bulb" "Primal Crushclaw Bulb" "Primal Cystcaller Bulb"
+	BaseType == "Primal Crushclaw Bulb" "Primal Scrabbler Grain" "Wild Spikeback Grain"
 	CustomAlertSound "filter_sounds/75_attack1.wav"
 	ItemLevel >= 76
 	MinimapIcon 1 Blue Kite
@@ -2118,7 +2320,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Abberarach Bulb" "Vivid Thornweaver Seed"
+	BaseType == "Primal Cystcaller Bulb" "Vivid Abberarach Bulb" "Wild Thornmaw Bulb"
 	CustomAlertSound "filter_sounds/75_attack2.wav"
 	ItemLevel >= 76
 	MinimapIcon 1 Blue Kite
@@ -2129,7 +2331,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Viper Grain" "Vivid Devourer Bulb"
+	BaseType == "Primal Rhex Matriarch Bulb"
 	CustomAlertSound "filter_sounds/75_attack3.wav"
 	ItemLevel >= 76
 	MinimapIcon 1 Blue Kite
@@ -2140,7 +2342,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Rhex Matriarch Bulb"
+	BaseType == "Primal Blisterlord Bulb" "Wild Bristle Matron Bulb"
 	CustomAlertSound "filter_sounds/75_attack4.wav"
 	ItemLevel >= 76
 	MinimapIcon 1 Blue Kite
@@ -2151,7 +2353,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Infestation Queen Bulb" "Wild Spikeback Grain"
+	BaseType == "Primal Reborn Bulb" "Vivid Thornweaver Seed" "Wild Infestation Queen Bulb"
 	CustomAlertSound "filter_sounds/75_attack5.wav"
 	ItemLevel >= 76
 	MinimapIcon 1 Blue Kite
@@ -2162,7 +2364,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Reborn Bulb" "Primal Scrabbler Grain" "Wild Brambleback Bulb" "Wild Bristle Matron Bulb" "Wild Thornmaw Bulb"
+	BaseType == "Primal Viper Grain" "Vivid Devourer Bulb" "Wild Brambleback Bulb"
 	CustomAlertSound "filter_sounds/75_attack6.wav"
 	ItemLevel >= 76
 	MinimapIcon 1 Blue Kite
@@ -4766,7 +4968,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Added Chaos Damage Support" "Added Cold Damage Support" "Added Fire Damage Support" "Added Lightning Damage Support" "Additional Accuracy Support" "Ancestral Call Support" "Ancestral Protector" "Ancestral Warchief" "Animate Weapon" "Arcanist Brand" "Armageddon Brand" "Arrow Nova Support" "Ballista Totem Support" "Blade Flurry" "Blade Vortex" "Bladefall" "Bladestorm" "Blasphemy Support" "Blast Rain" "Blight" "Blind Support" "Blink Arrow" "Bloodlust Support" "Bodyswap" "Brutality Support" "Burning Damage Support" "Cast On Critical Strike Support" "Cast while Channelling Support" "Chain Support" "Chance to Flee Support" "Charged Dash" "Clarity" "Cluster Traps Support" "Cobra Lash" "Cold Penetration Support" "Cold Snap" "Consecrated Path" "Contagion" "Controlled Destruction Support" "Convocation" "Creeping Frost" "Cremation" "Culling Strike Support" "Curse On Hit Support" "Dark Pact" "Deadly Ailments Support" "Decay Support" "Decoy Totem" "Desecrate" "Devouring Totem" "Discharge" "Dominating Blow" "Double Strike" "Dual Strike" "Earthquake" "Elemental Damage with Attacks Support" "Elemental Focus Support" "Elemental Proliferation Support" "Endurance Charge on Melee Stun Support" "Enfeeble" "Ensnaring Arrow" "Explosive Arrow" "Explosive Trap" "Faster Attacks Support" "Faster Projectiles Support" "Fire Penetration Support" "Fire Trap" "Fireball" "Firestorm" "Flame Surge" "Flesh Offering" "Fork Support" "Frenzy" "Frost Wall" "Frostblink" "Galvanic Arrow" "General's Cry" "Generosity Support" "Glacial Cascade" "Glacial Hammer" "Grace" "Greater Volley Support" "Heavy Strike" "Holy Flame Totem" "Ice Bite Support" "Ignite Proliferation Support" "Immolate Support" "Immortal Call" "Incinerate" "Increased Area of Effect Support" "Increased Critical Damage Support" "Infernal Blow" "Infernal Cry" "Infernal Legion Support" "Innervate Support" "Intimidating Cry" "Iron Will Support" "Kinetic Blast" "Kinetic Bolt" "Knockback Support" "Lancing Steel" "Leap Slam" "Lesser Multiple Projectiles Support" "Lesser Poison Support" "Life Gain on Hit Support" "Life Leech Support" "Lightning Arrow" "Lightning Penetration Support" "Lightning Trap" "Lightning Warp" "Magma Orb" "Melee Physical Damage Support" "Melee Splash Support" "Minion Damage Support" "Minion Speed Support" "Mirror Arrow" "Molten Shell" "Molten Strike" "Multiple Totems Support" "Multiple Traps Support" "Nightblade Support" "Onslaught Support" "Perforate" "Pestilent Strike" "Plague Bearer" "Poacher's Mark" "Poison Support" "Punishment" "Purifying Flame" "Pyroclast Mine" "Rain of Arrows" "Reckoning" "Righteous Fire" "Riposte" "Scorching Ray" "Seismic Cry" "Shattering Steel" "Shield Charge" "Shock Nova" "Shockwave Support" "Shockwave Totem" "Shrapnel Ballista" "Siege Ballista" "Smoke Mine" "Soulrend" "Spectral Shield Throw" "Spectral Throw" "Spell Cascade Support" "Spell Echo Support" "Spell Totem Support" "Spirit Offering" "Steelskin" "Storm Burst" "Stormbind" "Stun Support" "Summon Flame Golem" "Summon Holy Relic" "Summon Lightning Golem" "Summon Phantasm Support" "Summon Skeletons" "Sunder" "Swift Affliction Support" "Swift Assembly Support" "Tectonic Slam" "Tempest Shield" "Trap Support" "Unbound Ailments Support" "Unleash Support" "Urgent Orders Support" "Vaal Blight" "Vaal Burning Arrow" "Vaal Clarity" "Vaal Cold Snap" "Vaal Double Strike" "Vaal Earthquake" "Vaal Fireball" "Vaal Ground Slam" "Vaal Impurity of Ice" "Vaal Impurity of Lightning" "Vaal Lightning Trap" "Vaal Rain of Arrows" "Vaal Summon Skeletons" "Vengeance" "Venom Gyre" "Vicious Projectiles Support" "Vigilant Strike" "Viper Strike" "Vitality" "Void Manipulation Support" "Volley Support" "Vulnerability" "War Banner" "Whirling Blades" "Wild Strike" "Wintertide Brand" "Wither" "Withering Touch Support"
+	BaseType == "Added Chaos Damage Support" "Added Cold Damage Support" "Added Fire Damage Support" "Added Lightning Damage Support" "Additional Accuracy Support" "Ancestral Call Support" "Ancestral Protector" "Ancestral Warchief" "Animate Weapon" "Arcanist Brand" "Armageddon Brand" "Arrow Nova Support" "Ballista Totem Support" "Blade Flurry" "Blade Vortex" "Bladefall" "Bladestorm" "Blasphemy Support" "Blast Rain" "Blight" "Blind Support" "Blink Arrow" "Bloodlust Support" "Bodyswap" "Brutality Support" "Burning Damage Support" "Cast On Critical Strike Support" "Cast while Channelling Support" "Chain Support" "Chance to Flee Support" "Charged Dash" "Clarity" "Cluster Traps Support" "Cobra Lash" "Cold Penetration Support" "Cold Snap" "Consecrated Path" "Contagion" "Controlled Destruction Support" "Convocation" "Creeping Frost" "Cremation" "Culling Strike Support" "Hextouch Support" "Dark Pact" "Deadly Ailments Support" "Decay Support" "Decoy Totem" "Desecrate" "Devouring Totem" "Discharge" "Dominating Blow" "Double Strike" "Dual Strike" "Earthquake" "Elemental Damage with Attacks Support" "Elemental Focus Support" "Elemental Proliferation Support" "Endurance Charge on Melee Stun Support" "Enfeeble" "Ensnaring Arrow" "Explosive Arrow" "Explosive Trap" "Faster Attacks Support" "Faster Projectiles Support" "Fire Penetration Support" "Fire Trap" "Fireball" "Firestorm" "Flame Surge" "Flesh Offering" "Fork Support" "Frenzy" "Frost Wall" "Frostblink" "Galvanic Arrow" "General's Cry" "Generosity Support" "Glacial Cascade" "Glacial Hammer" "Grace" "Greater Volley Support" "Heavy Strike" "Holy Flame Totem" "Ice Bite Support" "Ignite Proliferation Support" "Immolate Support" "Immortal Call" "Incinerate" "Increased Area of Effect Support" "Increased Critical Damage Support" "Infernal Blow" "Infernal Cry" "Infernal Legion Support" "Innervate Support" "Intimidating Cry" "Iron Will Support" "Kinetic Blast" "Kinetic Bolt" "Knockback Support" "Lancing Steel" "Leap Slam" "Lesser Multiple Projectiles Support" "Lesser Poison Support" "Life Gain on Hit Support" "Life Leech Support" "Lightning Arrow" "Lightning Penetration Support" "Lightning Trap" "Lightning Warp" "Magma Orb" "Melee Physical Damage Support" "Melee Splash Support" "Minion Damage Support" "Minion Speed Support" "Mirror Arrow" "Molten Shell" "Molten Strike" "Multiple Totems Support" "Multiple Traps Support" "Nightblade Support" "Onslaught Support" "Perforate" "Pestilent Strike" "Plague Bearer" "Poacher's Mark" "Poison Support" "Punishment" "Purifying Flame" "Pyroclast Mine" "Rain of Arrows" "Reckoning" "Righteous Fire" "Riposte" "Scorching Ray" "Seismic Cry" "Shattering Steel" "Shield Charge" "Shock Nova" "Shockwave Support" "Shockwave Totem" "Shrapnel Ballista" "Siege Ballista" "Smoke Mine" "Soulrend" "Spectral Shield Throw" "Spectral Throw" "Spell Cascade Support" "Spell Echo Support" "Spell Totem Support" "Spirit Offering" "Steelskin" "Storm Burst" "Stormbind" "Stun Support" "Summon Flame Golem" "Summon Holy Relic" "Summon Lightning Golem" "Summon Phantasm Support" "Summon Skeletons" "Sunder" "Swift Affliction Support" "Swift Assembly Support" "Tectonic Slam" "Tempest Shield" "Trap Support" "Unbound Ailments Support" "Unleash Support" "Urgent Orders Support" "Vaal Blight" "Vaal Burning Arrow" "Vaal Clarity" "Vaal Cold Snap" "Vaal Double Strike" "Vaal Earthquake" "Vaal Fireball" "Vaal Ground Slam" "Vaal Impurity of Ice" "Vaal Impurity of Lightning" "Vaal Lightning Trap" "Vaal Rain of Arrows" "Vaal Summon Skeletons" "Vengeance" "Venom Gyre" "Vicious Projectiles Support" "Vigilant Strike" "Viper Strike" "Vitality" "Void Manipulation Support" "Volley Support" "Vulnerability" "War Banner" "Whirling Blades" "Wild Strike" "Wintertide Brand" "Wither" "Withering Touch Support"
 	Corrupted True
 	CustomAlertSound "filter_sounds/100_gem.wav"
 	GemLevel >= 21
@@ -4780,7 +4982,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Anger" "Animate Guardian" "Arc" "Arcane Cloak" "Arcane Surge Support" "Archmage Support" "Arctic Armour" "Assassin's Mark" "Ball Lightning" "Bane" "Barrage" "Barrage Support" "Berserk" "Blade Blast" "Blastchain Mine Support" "Blood Magic Support" "Blood Rage" "Bone Offering" "Bonechill Support" "Cast when Damage Taken Support" "Caustic Arrow" "Chance to Bleed Support" "Charged Mines Support" "Close Combat Support" "Cold to Fire Support" "Combustion Support" "Concentrated Effect Support" "Conductivity" "Cyclone" "Damage on Full Life Support" "Dash" "Deathmark Support" "Despair" "Determination" "Detonate Dead" "Discipline" "Divine Ire" "Dread Banner" "Earthshatter" "Efficacy Support" "Elemental Army Support" "Elemental Hit" "Elemental Weakness" "Enduring Cry" "Energy Leech Support" "Essence Drain" "Ethereal Knives" "Faster Casting Support" "Feeding Frenzy Support" "Fist of War Support" "Flame Dash" "Flammability" "Flesh and Stone" "Flicker Strike" "Fortify Support" "Freezing Pulse" "Frost Blades" "Frost Bomb" "Frostbite" "Frostbolt" "Greater Multiple Projectiles Support" "Haste" "Hatred" "Herald of Agony" "Herald of Ash" "Herald of Ice" "Herald of Purity" "Herald of Thunder" "High-Impact Mine Support" "Hypothermia Support" "Ice Crash" "Ice Nova" "Ice Shot" "Ice Spear" "Icicle Mine" "Impale Support" "Increased Critical Strikes Support" "Increased Duration Support" "Infused Channelling Support" "Inspiration Support" "Intensify Support" "Item Rarity Support" "Lacerate" "Less Duration Support" "Maim Support" "Malevolence" "Meat Shield Support" "Minefield Support" "Minion Life Support" "Mirage Archer Support" "Multistrike Support" "Orb of Storms" "Penance Brand" "Phase Run" "Physical to Lightning Support" "Pierce Support" "Power Charge On Critical Support" "Power Siphon" "Precision" "Pride" "Projectile Weakness" "Pulverise Support" "Puncture" "Purity of Elements" "Purity of Fire" "Purity of Ice" "Purity of Lightning" "Rage Support" "Raise Spectre" "Raise Zombie" "Ruthless Support" "Scourge Arrow" "Second Wind Support" "Slower Projectiles Support" "Smite" "Spark" "Spellslinger" "Split Arrow" "Storm Brand" "Summon Carrion Golem" "Summon Chaos Golem" "Summon Ice Golem" "Summon Raging Spirit" "Summon Skitterbots" "Summon Stone Golem" "Sweep" "Swiftbrand Support" "Temporal Chains" "Tornado Shot" "Toxic Rain" "Trap and Mine Damage Support" "Vaal Ancestral Warchief" "Vaal Arc" "Vaal Blade Vortex" "Vaal Cyclone" "Vaal Detonate Dead" "Vaal Discipline" "Vaal Grace" "Vaal Haste" "Vaal Ice Nova" "Vaal Impurity of Fire" "Vaal Molten Shell" "Vaal Power Siphon" "Vaal Righteous Fire" "Vaal Spark" "Vile Toxins Support" "Volatile Dead" "Vortex" "Wave of Conviction" "Winter Orb" "Withering Step" "Wrath" "Zealotry"
+	BaseType == "Anger" "Animate Guardian" "Arc" "Arcane Cloak" "Arcane Surge Support" "Archmage Support" "Arctic Armour" "Assassin's Mark" "Ball Lightning" "Bane" "Barrage" "Barrage Support" "Berserk" "Blade Blast" "Blastchain Mine Support" "Blood Magic Support" "Blood Rage" "Bone Offering" "Bonechill Support" "Cast when Damage Taken Support" "Caustic Arrow" "Chance to Bleed Support" "Charged Mines Support" "Close Combat Support" "Cold to Fire Support" "Combustion Support" "Concentrated Effect Support" "Conductivity" "Cyclone" "Damage on Full Life Support" "Dash" "Deathmark Support" "Despair" "Determination" "Detonate Dead" "Discipline" "Divine Ire" "Dread Banner" "Earthshatter" "Efficacy Support" "Elemental Army Support" "Elemental Hit" "Elemental Weakness" "Enduring Cry" "Energy Leech Support" "Essence Drain" "Ethereal Knives" "Faster Casting Support" "Feeding Frenzy Support" "Fist of War Support" "Flame Dash" "Flammability" "Flesh and Stone" "Flicker Strike" "Fortify Support" "Freezing Pulse" "Frost Blades" "Frost Bomb" "Frostbite" "Frostbolt" "Greater Multiple Projectiles Support" "Haste" "Hatred" "Herald of Agony" "Herald of Ash" "Herald of Ice" "Herald of Purity" "Herald of Thunder" "High-Impact Mine Support" "Hypothermia Support" "Ice Crash" "Ice Nova" "Ice Shot" "Ice Spear" "Icicle Mine" "Impale Support" "Increased Critical Strikes Support" "Increased Duration Support" "Infused Channelling Support" "Inspiration Support" "Intensify Support" "Item Rarity Support" "Lacerate" "Less Duration Support" "Maim Support" "Malevolence" "Meat Shield Support" "Minefield Support" "Minion Life Support" "Mirage Archer Support" "Multistrike Support" "Orb of Storms" "Penance Brand" "Phase Run" "Physical to Lightning Support" "Pierce Support" "Power Charge On Critical Support" "Power Siphon" "Precision" "Pride" "Sniper's Mark" "Pulverise Support" "Puncture" "Purity of Elements" "Purity of Fire" "Purity of Ice" "Purity of Lightning" "Rage Support" "Raise Spectre" "Raise Zombie" "Ruthless Support" "Scourge Arrow" "Second Wind Support" "Slower Projectiles Support" "Smite" "Spark" "Spellslinger" "Split Arrow" "Storm Brand" "Summon Carrion Golem" "Summon Chaos Golem" "Summon Ice Golem" "Summon Raging Spirit" "Summon Skitterbots" "Summon Stone Golem" "Sweep" "Swiftbrand Support" "Temporal Chains" "Tornado Shot" "Toxic Rain" "Trap and Mine Damage Support" "Vaal Ancestral Warchief" "Vaal Arc" "Vaal Blade Vortex" "Vaal Cyclone" "Vaal Detonate Dead" "Vaal Discipline" "Vaal Grace" "Vaal Haste" "Vaal Ice Nova" "Vaal Impurity of Fire" "Vaal Molten Shell" "Vaal Power Siphon" "Vaal Righteous Fire" "Vaal Spark" "Vile Toxins Support" "Volatile Dead" "Vortex" "Wave of Conviction" "Winter Orb" "Withering Step" "Wrath" "Zealotry"
 	Corrupted True
 	CustomAlertSound "filter_sounds/175_expl_2.wav"
 	GemLevel >= 21
@@ -4807,7 +5009,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Added Chaos Damage Support" "Added Cold Damage Support" "Added Fire Damage Support" "Added Lightning Damage Support" "Ancestral Call Support" "Ancestral Protector" "Animate Weapon" "Arc" "Arcane Cloak" "Arcanist Brand" "Arctic Armour" "Armageddon Brand" "Assassin's Mark" "Ballista Totem Support" "Bane" "Berserk" "Blade Flurry" "Blade Vortex" "Bladefall" "Bladestorm" "Blasphemy Support" "Blastchain Mine Support" "Block Chance Reduction Support" "Blood Magic Support" "Blood Rage" "Brutality Support" "Burning Damage Support" "Cast On Critical Strike Support" "Cast when Damage Taken Support" "Cast while Channelling Support" "Chain Support" "Charged Mines Support" "Cobra Lash" "Cold Penetration Support" "Cold Snap" "Cold to Fire Support" "Conductivity" "Consecrated Path" "Contagion" "Controlled Destruction Support" "Convocation" "Creeping Frost" "Cremation" "Culling Strike Support" "Curse On Hit Support" "Desecrate" "Detonate Dead" "Dominating Blow" "Earthquake" "Earthshatter" "Elemental Damage with Attacks Support" "Elemental Focus Support" "Endurance Charge on Melee Stun Support" "Enduring Cry" "Enfeeble" "Ensnaring Arrow" "Explosive Trap" "Faster Attacks Support" "Faster Casting Support" "Faster Projectiles Support" "Feeding Frenzy Support" "Fire Penetration Support" "Fireball" "Fist of War Support" "Flame Dash" "Flesh Offering" "Flesh and Stone" "Fork Support" "Frenzy" "Frost Blades" "Frost Wall" "General's Cry" "Generosity Support" "Glacial Cascade" "Grace" "Greater Multiple Projectiles Support" "Haste" "Herald of Agony" "Ice Bite Support" "Ice Crash" "Icicle Mine" "Ignite Proliferation Support" "Immolate Support" "Immortal Call" "Incinerate" "Increased Area of Effect Support" "Increased Critical Damage Support" "Increased Duration Support" "Infernal Cry" "Innervate Support" "Intensify Support" "Intimidating Cry" "Item Rarity Support" "Kinetic Blast" "Leap Slam" "Lesser Multiple Projectiles Support" "Life Leech Support" "Lightning Penetration Support" "Meat Shield Support" "Melee Physical Damage Support" "Melee Splash Support" "Minefield Support" "Minion Damage Support" "Minion Speed Support" "Mirage Archer Support" "Mirror Arrow" "Molten Shell" "Multiple Totems Support" "Multiple Traps Support" "Multistrike Support" "Onslaught Support" "Orb of Storms" "Phase Run" "Pierce Support" "Poison Support" "Punishment" "Purifying Flame" "Purity of Elements" "Pyroclast Mine" "Rage Support" "Rain of Arrows" "Rallying Cry" "Righteous Fire" "Seismic Cry" "Shield Charge" "Shockwave Support" "Siege Ballista" "Smoke Mine" "Soulrend" "Spark" "Spell Cascade Support" "Spell Echo Support" "Spell Totem Support" "Spellslinger" "Spirit Offering" "Steelskin" "Summon Flame Golem" "Summon Holy Relic" "Summon Ice Golem" "Summon Lightning Golem" "Summon Raging Spirit" "Summon Skeletons" "Sunder" "Swift Affliction Support" "Swift Assembly Support" "Tectonic Slam" "Tempest Shield" "Unbound Ailments Support" "Unleash Support" "Urgent Orders Support" "Vicious Projectiles Support" "Vile Toxins Support" "Void Manipulation Support" "Vulnerability" "War Banner" "Whirling Blades" "Wild Strike" "Winter Orb" "Wintertide Brand" "Wither" "Withering Step" "Withering Touch Support"
+	BaseType == "Added Chaos Damage Support" "Added Cold Damage Support" "Added Fire Damage Support" "Added Lightning Damage Support" "Ancestral Call Support" "Ancestral Protector" "Animate Weapon" "Arc" "Arcane Cloak" "Arcanist Brand" "Arctic Armour" "Armageddon Brand" "Assassin's Mark" "Ballista Totem Support" "Bane" "Berserk" "Blade Flurry" "Blade Vortex" "Bladefall" "Bladestorm" "Blasphemy Support" "Blastchain Mine Support" "Block Chance Reduction Support" "Blood Magic Support" "Blood Rage" "Brutality Support" "Burning Damage Support" "Cast On Critical Strike Support" "Cast when Damage Taken Support" "Cast while Channelling Support" "Chain Support" "Charged Mines Support" "Cobra Lash" "Cold Penetration Support" "Cold Snap" "Cold to Fire Support" "Conductivity" "Consecrated Path" "Contagion" "Controlled Destruction Support" "Convocation" "Creeping Frost" "Cremation" "Culling Strike Support" "Hextouch Support" "Desecrate" "Detonate Dead" "Dominating Blow" "Earthquake" "Earthshatter" "Elemental Damage with Attacks Support" "Elemental Focus Support" "Endurance Charge on Melee Stun Support" "Enduring Cry" "Enfeeble" "Ensnaring Arrow" "Explosive Trap" "Faster Attacks Support" "Faster Casting Support" "Faster Projectiles Support" "Feeding Frenzy Support" "Fire Penetration Support" "Fireball" "Fist of War Support" "Flame Dash" "Flesh Offering" "Flesh and Stone" "Fork Support" "Frenzy" "Frost Blades" "Frost Wall" "General's Cry" "Generosity Support" "Glacial Cascade" "Grace" "Greater Multiple Projectiles Support" "Haste" "Herald of Agony" "Ice Bite Support" "Ice Crash" "Icicle Mine" "Ignite Proliferation Support" "Immolate Support" "Immortal Call" "Incinerate" "Increased Area of Effect Support" "Increased Critical Damage Support" "Increased Duration Support" "Infernal Cry" "Innervate Support" "Intensify Support" "Intimidating Cry" "Item Rarity Support" "Kinetic Blast" "Leap Slam" "Lesser Multiple Projectiles Support" "Life Leech Support" "Lightning Penetration Support" "Meat Shield Support" "Melee Physical Damage Support" "Melee Splash Support" "Minefield Support" "Minion Damage Support" "Minion Speed Support" "Mirage Archer Support" "Mirror Arrow" "Molten Shell" "Multiple Totems Support" "Multiple Traps Support" "Multistrike Support" "Onslaught Support" "Orb of Storms" "Phase Run" "Pierce Support" "Poison Support" "Punishment" "Purifying Flame" "Purity of Elements" "Pyroclast Mine" "Rage Support" "Rain of Arrows" "Rallying Cry" "Righteous Fire" "Seismic Cry" "Shield Charge" "Shockwave Support" "Siege Ballista" "Smoke Mine" "Soulrend" "Spark" "Spell Cascade Support" "Spell Echo Support" "Spell Totem Support" "Spellslinger" "Spirit Offering" "Steelskin" "Summon Flame Golem" "Summon Holy Relic" "Summon Ice Golem" "Summon Lightning Golem" "Summon Raging Spirit" "Summon Skeletons" "Sunder" "Swift Affliction Support" "Swift Assembly Support" "Tectonic Slam" "Tempest Shield" "Unbound Ailments Support" "Unleash Support" "Urgent Orders Support" "Vicious Projectiles Support" "Vile Toxins Support" "Void Manipulation Support" "Vulnerability" "War Banner" "Whirling Blades" "Wild Strike" "Winter Orb" "Wintertide Brand" "Wither" "Withering Step" "Withering Touch Support"
 	Corrupted True
 	CustomAlertSound "filter_sounds/100_gem.wav"
 	GemLevel >= 21
@@ -4821,7 +5023,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Anger" "Animate Guardian" "Arcane Surge Support" "Archmage Support" "Ball Lightning" "Barrage" "Barrage Support" "Blade Blast" "Bone Offering" "Bonechill Support" "Caustic Arrow" "Chance to Bleed Support" "Close Combat Support" "Combustion Support" "Concentrated Effect Support" "Cyclone" "Damage on Full Life Support" "Dash" "Deathmark Support" "Despair" "Discipline" "Divine Ire" "Dread Banner" "Efficacy Support" "Elemental Army Support" "Elemental Hit" "Elemental Weakness" "Energy Leech Support" "Essence Drain" "Ethereal Knives" "Flammability" "Flicker Strike" "Fortify Support" "Freezing Pulse" "Frost Bomb" "Frostbite" "Frostbolt" "Hatred" "Herald of Ash" "Herald of Ice" "Herald of Purity" "Herald of Thunder" "High-Impact Mine Support" "Hypothermia Support" "Ice Nova" "Ice Shot" "Ice Spear" "Impale Support" "Increased Critical Strikes Support" "Infused Channelling Support" "Inspiration Support" "Lacerate" "Less Duration Support" "Maim Support" "Malevolence" "Minion Life Support" "Penance Brand" "Physical to Lightning Support" "Power Charge On Critical Support" "Power Siphon" "Precision" "Pride" "Projectile Weakness" "Pulverise Support" "Puncture" "Raise Spectre" "Raise Zombie" "Ruthless Support" "Scourge Arrow" "Second Wind Support" "Slower Projectiles Support" "Split Arrow" "Storm Brand" "Summon Carrion Golem" "Summon Chaos Golem" "Summon Skitterbots" "Summon Stone Golem" "Swiftbrand Support" "Temporal Chains" "Tornado Shot" "Toxic Rain" "Trap and Mine Damage Support" "Vaal Blade Vortex" "Vaal Cyclone" "Vaal Ice Nova" "Volatile Dead" "Vortex" "Wave of Conviction" "Wrath" "Zealotry"
+	BaseType == "Anger" "Animate Guardian" "Arcane Surge Support" "Archmage Support" "Ball Lightning" "Barrage" "Barrage Support" "Blade Blast" "Bone Offering" "Bonechill Support" "Caustic Arrow" "Chance to Bleed Support" "Close Combat Support" "Combustion Support" "Concentrated Effect Support" "Cyclone" "Damage on Full Life Support" "Dash" "Deathmark Support" "Despair" "Discipline" "Divine Ire" "Dread Banner" "Efficacy Support" "Elemental Army Support" "Elemental Hit" "Elemental Weakness" "Energy Leech Support" "Essence Drain" "Ethereal Knives" "Flammability" "Flicker Strike" "Fortify Support" "Freezing Pulse" "Frost Bomb" "Frostbite" "Frostbolt" "Hatred" "Herald of Ash" "Herald of Ice" "Herald of Purity" "Herald of Thunder" "High-Impact Mine Support" "Hypothermia Support" "Ice Nova" "Ice Shot" "Ice Spear" "Impale Support" "Increased Critical Strikes Support" "Infused Channelling Support" "Inspiration Support" "Lacerate" "Less Duration Support" "Maim Support" "Malevolence" "Minion Life Support" "Penance Brand" "Physical to Lightning Support" "Power Charge On Critical Support" "Power Siphon" "Precision" "Pride" "Sniper's Mark" "Pulverise Support" "Puncture" "Raise Spectre" "Raise Zombie" "Ruthless Support" "Scourge Arrow" "Second Wind Support" "Slower Projectiles Support" "Split Arrow" "Storm Brand" "Summon Carrion Golem" "Summon Chaos Golem" "Summon Skitterbots" "Summon Stone Golem" "Swiftbrand Support" "Temporal Chains" "Tornado Shot" "Toxic Rain" "Trap and Mine Damage Support" "Vaal Blade Vortex" "Vaal Cyclone" "Vaal Ice Nova" "Volatile Dead" "Vortex" "Wave of Conviction" "Wrath" "Zealotry"
 	Corrupted True
 	CustomAlertSound "filter_sounds/175_expl_2.wav"
 	GemLevel >= 21
@@ -4848,7 +5050,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Anger" "Animate Guardian" "Arc" "Arcane Surge Support" "Ball Lightning" "Blade Blast" "Bladefall" "Blood Magic Support" "Bone Offering" "Bonechill Support" "Cast On Critical Strike Support" "Cast when Damage Taken Support" "Caustic Arrow" "Chain Support" "Clarity" "Combustion Support" "Concentrated Effect Support" "Curse On Hit Support" "Cyclone" "Damage on Full Life Support" "Desecrate" "Determination" "Detonate Dead" "Discipline" "Elemental Army Support" "Elemental Focus Support" "Elemental Hit" "Elemental Weakness" "Essence Drain" "Flammability" "Flesh and Stone" "Fortify Support" "Freezing Pulse" "Frostbite" "Frostbolt" "Grace" "Greater Multiple Projectiles Support" "Haste" "Hatred" "Herald of Agony" "Herald of Ash" "Herald of Ice" "Herald of Purity" "Herald of Thunder" "Hypothermia Support" "Ice Nova" "Ice Spear" "Impale Support" "Infused Channelling Support" "Inspiration Support" "Maim Support" "Malevolence" "Meat Shield Support" "Multistrike Support" "Precision" "Pride" "Purity of Elements" "Purity of Fire" "Purity of Ice" "Purity of Lightning" "Raise Spectre" "Raise Zombie" "Smite" "Storm Brand" "Summon Phantasm Support" "Summon Skitterbots" "Toxic Rain" "Unleash Support" "Vaal Arc" "Vaal Blade Vortex" "Vaal Grace" "Vaal Ice Nova" "Vaal Impurity of Fire" "Vaal Impurity of Ice" "Vaal Impurity of Lightning" "Vaal Molten Shell" "Vaal Righteous Fire" "Vitality" "Volatile Dead" "Vortex" "Wrath" "Zealotry"
+	BaseType == "Anger" "Animate Guardian" "Arc" "Arcane Surge Support" "Ball Lightning" "Blade Blast" "Bladefall" "Blood Magic Support" "Bone Offering" "Bonechill Support" "Cast On Critical Strike Support" "Cast when Damage Taken Support" "Caustic Arrow" "Chain Support" "Clarity" "Combustion Support" "Concentrated Effect Support" "Hextouch Support" "Cyclone" "Damage on Full Life Support" "Desecrate" "Determination" "Detonate Dead" "Discipline" "Elemental Army Support" "Elemental Focus Support" "Elemental Hit" "Elemental Weakness" "Essence Drain" "Flammability" "Flesh and Stone" "Fortify Support" "Freezing Pulse" "Frostbite" "Frostbolt" "Grace" "Greater Multiple Projectiles Support" "Haste" "Hatred" "Herald of Agony" "Herald of Ash" "Herald of Ice" "Herald of Purity" "Herald of Thunder" "Hypothermia Support" "Ice Nova" "Ice Spear" "Impale Support" "Infused Channelling Support" "Inspiration Support" "Maim Support" "Malevolence" "Meat Shield Support" "Multistrike Support" "Precision" "Pride" "Purity of Elements" "Purity of Fire" "Purity of Ice" "Purity of Lightning" "Raise Spectre" "Raise Zombie" "Smite" "Storm Brand" "Summon Phantasm Support" "Summon Skitterbots" "Toxic Rain" "Unleash Support" "Vaal Arc" "Vaal Blade Vortex" "Vaal Grace" "Vaal Ice Nova" "Vaal Impurity of Fire" "Vaal Impurity of Ice" "Vaal Impurity of Lightning" "Vaal Molten Shell" "Vaal Righteous Fire" "Vitality" "Volatile Dead" "Vortex" "Wrath" "Zealotry"
 	Corrupted True
 	CustomAlertSound "filter_sounds/100_gem.wav"
 	GemLevel >= 21
@@ -4876,7 +5078,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Added Chaos Damage Support" "Added Cold Damage Support" "Added Fire Damage Support" "Added Lightning Damage Support" "Additional Accuracy Support" "Advanced Traps Support" "Ancestral Call Support" "Ancestral Cry" "Ancestral Protector" "Ancestral Warchief" "Animate Weapon" "Arcane Cloak" "Arcanist Brand" "Archmage Support" "Arctic Armour" "Armageddon Brand" "Arrow Nova Support" "Artillery Ballista" "Assassin's Mark" "Ballista Totem Support" "Bane" "Barrage" "Barrage Support" "Bear Trap" "Berserk" "Blade Flurry" "Blade Vortex" "Bladestorm" "Blasphemy Support" "Blast Rain" "Blastchain Mine Support" "Blight" "Blind Support" "Blink Arrow" "Blood Rage" "Bloodlust Support" "Bodyswap" "Brutality Support" "Burning Arrow" "Burning Damage Support" "Cast on Death Support" "Cast on Melee Kill Support" "Cast when Stunned Support" "Cast while Channelling Support" "Chain Hook" "Chance to Bleed Support" "Chance to Flee Support" "Charged Dash" "Charged Mines Support" "Charged Traps Support" "Cleave" "Close Combat Support" "Cluster Traps Support" "Cobra Lash" "Cold Penetration Support" "Cold Snap" "Cold to Fire Support" "Conductivity" "Consecrated Path" "Contagion" "Controlled Destruction Support" "Conversion Trap" "Convocation" "Creeping Frost" "Cremation" "Culling Strike Support" "Dark Pact" "Dash" "Deadly Ailments Support" "Deathmark Support" "Decay Support" "Decoy Totem" "Despair" "Devouring Totem" "Discharge" "Divine Ire" "Dominating Blow" "Double Strike" "Dread Banner" "Dual Strike" "Earthquake" "Earthshatter" "Efficacy Support" "Elemental Damage with Attacks Support" "Elemental Proliferation Support" "Endurance Charge on Melee Stun Support" "Enduring Cry" "Energy Leech Support" "Enfeeble" "Ensnaring Arrow" "Ethereal Knives" "Explosive Arrow" "Explosive Trap" "Faster Attacks Support" "Faster Casting Support" "Faster Projectiles Support" "Feeding Frenzy Support" "Fire Penetration Support" "Fire Trap" "Fireball" "Firestorm" "Fist of War Support" "Flame Dash" "Flame Surge" "Flameblast" "Flamethrower Trap" "Flesh Offering" "Flicker Strike" "Fork Support" "Frenzy" "Frost Blades" "Frost Bomb" "Frost Wall" "Frostblink" "Galvanic Arrow" "General's Cry" "Generosity Support" "Glacial Cascade" "Glacial Hammer" "Greater Volley Support" "Ground Slam" "Heavy Strike" "High-Impact Mine Support" "Holy Flame Totem" "Ice Bite Support" "Ice Crash" "Ice Shot" "Ice Trap" "Icicle Mine" "Ignite Proliferation Support" "Immolate Support" "Immortal Call" "Incinerate" "Increased Area of Effect Support" "Increased Critical Damage Support" "Increased Critical Strikes Support" "Increased Duration Support" "Infernal Blow" "Infernal Cry" "Infernal Legion Support" "Innervate Support" "Intensify Support" "Intimidating Cry" "Iron Grip Support" "Iron Will Support" "Item Rarity Support" "Kinetic Blast" "Kinetic Bolt" "Knockback Support" "Lacerate" "Lancing Steel" "Leap Slam" "Less Duration Support" "Lesser Multiple Projectiles Support" "Lesser Poison Support" "Life Gain on Hit Support" "Life Leech Support" "Lightning Arrow" "Lightning Penetration Support" "Lightning Spire Trap" "Lightning Strike" "Lightning Tendrils" "Lightning Trap" "Lightning Warp" "Magma Orb" "Mana Leech Support" "Melee Physical Damage Support" "Melee Splash Support" "Minefield Support" "Minion Damage Support" "Minion Life Support" "Minion Speed Support" "Mirage Archer Support" "Mirror Arrow" "Molten Shell" "Molten Strike" "Multiple Totems Support" "Multiple Traps Support" "Nightblade Support" "Onslaught Support" "Orb of Storms" "Penance Brand" "Perforate" "Pestilent Strike" "Phase Run" "Physical to Lightning Support" "Pierce Support" "Plague Bearer" "Poacher's Mark" "Point Blank Support" "Poison Support" "Power Charge On Critical Support" "Power Siphon" "Projectile Weakness" "Pulverise Support" "Puncture" "Punishment" "Purifying Flame" "Pyroclast Mine" "Rage Support" "Rain of Arrows" "Rallying Cry" "Reave" "Reckoning" "Rejuvenation Totem" "Righteous Fire" "Riposte" "Ruthless Support" "Scorching Ray" "Scourge Arrow" "Searing Bond" "Second Wind Support" "Seismic Cry" "Seismic Trap" "Shattering Steel" "Shield Charge" "Shock Nova" "Shockwave Support" "Shockwave Totem" "Shrapnel Ballista" "Siege Ballista" "Siphoning Trap" "Slower Projectiles Support" "Smoke Mine" "Soulrend" "Spark" "Spectral Shield Throw" "Spectral Throw" "Spell Cascade Support" "Spell Echo Support" "Spell Totem Support" "Spellslinger" "Spirit Offering" "Split Arrow" "Static Strike" "Steelskin" "Storm Burst" "Storm Call" "Stormbind" "Stormblast Mine" "Stun Support" "Summon Carrion Golem" "Summon Chaos Golem" "Summon Flame Golem" "Summon Holy Relic" "Summon Ice Golem" "Summon Lightning Golem" "Summon Raging Spirit" "Summon Skeletons" "Summon Stone Golem" "Sunder" "Sweep" "Swift Affliction Support" "Swift Assembly Support" "Swiftbrand Support" "Tectonic Slam" "Tempest Shield" "Temporal Chains" "Tornado Shot" "Trap Support" "Trap and Mine Damage Support" "Unbound Ailments Support" "Unearth" "Urgent Orders Support" "Vaal Ancestral Warchief" "Vaal Blight" "Vaal Burning Arrow" "Vaal Clarity" "Vaal Cold Snap" "Vaal Cyclone" "Vaal Detonate Dead" "Vaal Double Strike" "Vaal Earthquake" "Vaal Fireball" "Vaal Flameblast" "Vaal Ground Slam" "Vaal Lightning Strike" "Vaal Lightning Trap" "Vaal Power Siphon" "Vaal Rain of Arrows" "Vaal Reave" "Vaal Spark" "Vaal Spectral Throw" "Vaal Storm Call" "Vaal Summon Skeletons" "Vengeance" "Venom Gyre" "Vicious Projectiles Support" "Vigilant Strike" "Vile Toxins Support" "Viper Strike" "Void Manipulation Support" "Volley Support" "Vulnerability" "War Banner" "Warlord's Mark" "Wave of Conviction" "Whirling Blades" "Wild Strike" "Winter Orb" "Wintertide Brand" "Wither" "Withering Step" "Withering Touch Support"
+	BaseType == "Added Chaos Damage Support" "Added Cold Damage Support" "Added Fire Damage Support" "Added Lightning Damage Support" "Additional Accuracy Support" "Advanced Traps Support" "Ancestral Call Support" "Ancestral Cry" "Ancestral Protector" "Ancestral Warchief" "Animate Weapon" "Arcane Cloak" "Arcanist Brand" "Archmage Support" "Arctic Armour" "Armageddon Brand" "Arrow Nova Support" "Artillery Ballista" "Assassin's Mark" "Ballista Totem Support" "Bane" "Barrage" "Barrage Support" "Bear Trap" "Berserk" "Blade Flurry" "Blade Vortex" "Bladestorm" "Blasphemy Support" "Blast Rain" "Blastchain Mine Support" "Blight" "Blind Support" "Blink Arrow" "Blood Rage" "Bloodlust Support" "Bodyswap" "Brutality Support" "Burning Arrow" "Burning Damage Support" "Cast on Death Support" "Cast on Melee Kill Support" "Cast when Stunned Support" "Cast while Channelling Support" "Chain Hook" "Chance to Bleed Support" "Chance to Flee Support" "Charged Dash" "Charged Mines Support" "Charged Traps Support" "Cleave" "Close Combat Support" "Cluster Traps Support" "Cobra Lash" "Cold Penetration Support" "Cold Snap" "Cold to Fire Support" "Conductivity" "Consecrated Path" "Contagion" "Controlled Destruction Support" "Conversion Trap" "Convocation" "Creeping Frost" "Cremation" "Culling Strike Support" "Dark Pact" "Dash" "Deadly Ailments Support" "Deathmark Support" "Decay Support" "Decoy Totem" "Despair" "Devouring Totem" "Discharge" "Divine Ire" "Dominating Blow" "Double Strike" "Dread Banner" "Dual Strike" "Earthquake" "Earthshatter" "Efficacy Support" "Elemental Damage with Attacks Support" "Elemental Proliferation Support" "Endurance Charge on Melee Stun Support" "Enduring Cry" "Energy Leech Support" "Enfeeble" "Ensnaring Arrow" "Ethereal Knives" "Explosive Arrow" "Explosive Trap" "Faster Attacks Support" "Faster Casting Support" "Faster Projectiles Support" "Feeding Frenzy Support" "Fire Penetration Support" "Fire Trap" "Fireball" "Firestorm" "Fist of War Support" "Flame Dash" "Flame Surge" "Flameblast" "Flamethrower Trap" "Flesh Offering" "Flicker Strike" "Fork Support" "Frenzy" "Frost Blades" "Frost Bomb" "Frost Wall" "Frostblink" "Galvanic Arrow" "General's Cry" "Generosity Support" "Glacial Cascade" "Glacial Hammer" "Greater Volley Support" "Ground Slam" "Heavy Strike" "High-Impact Mine Support" "Holy Flame Totem" "Ice Bite Support" "Ice Crash" "Ice Shot" "Ice Trap" "Icicle Mine" "Ignite Proliferation Support" "Immolate Support" "Immortal Call" "Incinerate" "Increased Area of Effect Support" "Increased Critical Damage Support" "Increased Critical Strikes Support" "Increased Duration Support" "Infernal Blow" "Infernal Cry" "Infernal Legion Support" "Innervate Support" "Intensify Support" "Intimidating Cry" "Iron Grip Support" "Iron Will Support" "Item Rarity Support" "Kinetic Blast" "Kinetic Bolt" "Knockback Support" "Lacerate" "Lancing Steel" "Leap Slam" "Less Duration Support" "Lesser Multiple Projectiles Support" "Lesser Poison Support" "Life Gain on Hit Support" "Life Leech Support" "Lightning Arrow" "Lightning Penetration Support" "Lightning Spire Trap" "Lightning Strike" "Lightning Tendrils" "Lightning Trap" "Lightning Warp" "Magma Orb" "Mana Leech Support" "Melee Physical Damage Support" "Melee Splash Support" "Minefield Support" "Minion Damage Support" "Minion Life Support" "Minion Speed Support" "Mirage Archer Support" "Mirror Arrow" "Molten Shell" "Molten Strike" "Multiple Totems Support" "Multiple Traps Support" "Nightblade Support" "Onslaught Support" "Orb of Storms" "Penance Brand" "Perforate" "Pestilent Strike" "Phase Run" "Physical to Lightning Support" "Pierce Support" "Plague Bearer" "Poacher's Mark" "Point Blank Support" "Poison Support" "Power Charge On Critical Support" "Power Siphon" "Sniper's Mark" "Pulverise Support" "Puncture" "Punishment" "Purifying Flame" "Pyroclast Mine" "Rage Support" "Rain of Arrows" "Rallying Cry" "Reave" "Reckoning" "Rejuvenation Totem" "Righteous Fire" "Riposte" "Ruthless Support" "Scorching Ray" "Scourge Arrow" "Searing Bond" "Second Wind Support" "Seismic Cry" "Seismic Trap" "Shattering Steel" "Shield Charge" "Shock Nova" "Shockwave Support" "Shockwave Totem" "Shrapnel Ballista" "Siege Ballista" "Siphoning Trap" "Slower Projectiles Support" "Smoke Mine" "Soulrend" "Spark" "Spectral Shield Throw" "Spectral Throw" "Spell Cascade Support" "Spell Echo Support" "Spell Totem Support" "Spellslinger" "Spirit Offering" "Split Arrow" "Static Strike" "Steelskin" "Storm Burst" "Storm Call" "Stormbind" "Stormblast Mine" "Stun Support" "Summon Carrion Golem" "Summon Chaos Golem" "Summon Flame Golem" "Summon Holy Relic" "Summon Ice Golem" "Summon Lightning Golem" "Summon Raging Spirit" "Summon Skeletons" "Summon Stone Golem" "Sunder" "Sweep" "Swift Affliction Support" "Swift Assembly Support" "Swiftbrand Support" "Tectonic Slam" "Tempest Shield" "Temporal Chains" "Tornado Shot" "Trap Support" "Trap and Mine Damage Support" "Unbound Ailments Support" "Unearth" "Urgent Orders Support" "Vaal Ancestral Warchief" "Vaal Blight" "Vaal Burning Arrow" "Vaal Clarity" "Vaal Cold Snap" "Vaal Cyclone" "Vaal Detonate Dead" "Vaal Double Strike" "Vaal Earthquake" "Vaal Fireball" "Vaal Flameblast" "Vaal Ground Slam" "Vaal Lightning Strike" "Vaal Lightning Trap" "Vaal Power Siphon" "Vaal Rain of Arrows" "Vaal Reave" "Vaal Spark" "Vaal Spectral Throw" "Vaal Storm Call" "Vaal Summon Skeletons" "Vengeance" "Venom Gyre" "Vicious Projectiles Support" "Vigilant Strike" "Vile Toxins Support" "Viper Strike" "Void Manipulation Support" "Volley Support" "Vulnerability" "War Banner" "Warlord's Mark" "Wave of Conviction" "Whirling Blades" "Wild Strike" "Winter Orb" "Wintertide Brand" "Wither" "Withering Step" "Withering Touch Support"
 	Corrupted True
 	CustomAlertSound "filter_sounds/75_gem.wav"
 	GemLevel >= 21
@@ -4889,7 +5091,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Added Cold Damage Support" "Added Lightning Damage Support" "Ancestral Call Support" "Ancestral Protector" "Ancestral Warchief" "Anger" "Animate Guardian" "Animate Weapon" "Arc" "Arcane Cloak" "Arcane Surge Support" "Arcanist Brand" "Archmage Support" "Arctic Armour" "Armageddon Brand" "Assassin's Mark" "Ballista Totem Support" "Bane" "Barrage" "Barrage Support" "Berserk" "Blade Blast" "Blade Flurry" "Bladefall" "Bladestorm" "Blasphemy Support" "Blastchain Mine Support" "Blind Support" "Blood Magic Support" "Blood Rage" "Bloodlust Support" "Bone Offering" "Bonechill Support" "Brutality Support" "Burning Damage Support" "Cast On Critical Strike Support" "Cast when Damage Taken Support" "Cast while Channelling Support" "Chain Support" "Chance to Bleed Support" "Charged Mines Support" "Clarity" "Close Combat Support" "Cluster Traps Support" "Cold Penetration Support" "Cold Snap" "Cold to Fire Support" "Combustion Support" "Concentrated Effect Support" "Conductivity" "Consecrated Path" "Contagion" "Controlled Destruction Support" "Convocation" "Creeping Frost" "Cremation" "Culling Strike Support" "Curse On Hit Support" "Cyclone" "Damage on Full Life Support" "Dark Pact" "Dash" "Deathmark Support" "Desecrate" "Despair" "Determination" "Discharge" "Discipline" "Divine Ire" "Dominating Blow" "Dread Banner" "Earthshatter" "Efficacy Support" "Elemental Army Support" "Elemental Damage with Attacks Support" "Elemental Focus Support" "Elemental Hit" "Elemental Proliferation Support" "Elemental Weakness" "Endurance Charge on Melee Stun Support" "Enduring Cry" "Energy Leech Support" "Enfeeble" "Ensnaring Arrow" "Faster Attacks Support" "Faster Casting Support" "Faster Projectiles Support" "Feeding Frenzy Support" "Fire Penetration Support" "Fire Trap" "Fist of War Support" "Flame Dash" "Flammability" "Flesh Offering" "Flesh and Stone" "Flicker Strike" "Fork Support" "Fortify Support" "Freezing Pulse" "Frenzy" "Frost Bomb" "Frost Wall" "Frostbite" "Frostbolt" "General's Cry" "Generosity Support" "Glacial Cascade" "Grace" "Greater Multiple Projectiles Support" "Greater Volley Support" "Haste" "Hatred" "Herald of Agony" "Herald of Ash" "Herald of Purity" "High-Impact Mine Support" "Holy Flame Totem" "Hypothermia Support" "Ice Bite Support" "Ice Crash" "Ice Spear" "Ignite Proliferation Support" "Immolate Support" "Immortal Call" "Impale Support" "Incinerate" "Increased Area of Effect Support" "Increased Critical Damage Support" "Increased Critical Strikes Support" "Increased Duration Support" "Infernal Blow" "Infused Channelling Support" "Innervate Support" "Inspiration Support" "Intensify Support" "Intimidating Cry" "Item Rarity Support" "Kinetic Blast" "Lacerate" "Leap Slam" "Less Duration Support" "Lesser Multiple Projectiles Support" "Life Leech Support" "Lightning Arrow" "Lightning Penetration Support" "Lightning Warp" "Magma Orb" "Maim Support" "Malevolence" "Meat Shield Support" "Melee Physical Damage Support" "Melee Splash Support" "Minefield Support" "Minion Life Support" "Minion Speed Support" "Mirage Archer Support" "Molten Shell" "Molten Strike" "Multiple Totems Support" "Multiple Traps Support" "Multistrike Support" "Onslaught Support" "Orb of Storms" "Perforate" "Pestilent Strike" "Phase Run" "Physical to Lightning Support" "Pierce Support" "Plague Bearer" "Poison Support" "Power Charge On Critical Support" "Power Siphon" "Precision" "Pride" "Projectile Weakness" "Pulverise Support" "Puncture" "Punishment" "Purifying Flame" "Purity of Elements" "Purity of Fire" "Purity of Ice" "Purity of Lightning" "Pyroclast Mine" "Rage Support" "Rain of Arrows" "Raise Zombie" "Ruthless Support" "Second Wind Support" "Seismic Cry" "Shield Charge" "Shock Nova" "Siege Ballista" "Slower Projectiles Support" "Smite" "Smoke Mine" "Soulrend" "Spark" "Spell Cascade Support" "Spell Echo Support" "Spell Totem Support" "Spellslinger" "Steelskin" "Storm Brand" "Storm Burst" "Summon Chaos Golem" "Summon Flame Golem" "Summon Holy Relic" "Summon Ice Golem" "Summon Lightning Golem" "Summon Phantasm Support" "Summon Raging Spirit" "Summon Skitterbots" "Summon Stone Golem" "Sunder" "Sweep" "Swift Assembly Support" "Swiftbrand Support" "Tectonic Slam" "Tempest Shield" "Temporal Chains" "Tornado Shot" "Trap and Mine Damage Support" "Unbound Ailments Support" "Unleash Support" "Urgent Orders Support" "Vaal Ancestral Warchief" "Vaal Arc" "Vaal Blade Vortex" "Vaal Blight" "Vaal Burning Arrow" "Vaal Clarity" "Vaal Cold Snap" "Vaal Cyclone" "Vaal Detonate Dead" "Vaal Discipline" "Vaal Double Strike" "Vaal Earthquake" "Vaal Grace" "Vaal Ground Slam" "Vaal Haste" "Vaal Ice Nova" "Vaal Impurity of Fire" "Vaal Impurity of Ice" "Vaal Impurity of Lightning" "Vaal Lightning Trap" "Vaal Molten Shell" "Vaal Power Siphon" "Vaal Rain of Arrows" "Vaal Righteous Fire" "Vaal Spark" "Vaal Summon Skeletons" "Vengeance" "Vile Toxins Support" "Viper Strike" "Vitality" "Vortex" "Vulnerability" "War Banner" "Wave of Conviction" "Whirling Blades" "Wild Strike" "Winter Orb" "Wither" "Withering Step" "Withering Touch Support" "Wrath" "Zealotry"
+	BaseType == "Added Cold Damage Support" "Added Lightning Damage Support" "Ancestral Call Support" "Ancestral Protector" "Ancestral Warchief" "Anger" "Animate Guardian" "Animate Weapon" "Arc" "Arcane Cloak" "Arcane Surge Support" "Arcanist Brand" "Archmage Support" "Arctic Armour" "Armageddon Brand" "Assassin's Mark" "Ballista Totem Support" "Bane" "Barrage" "Barrage Support" "Berserk" "Blade Blast" "Blade Flurry" "Bladefall" "Bladestorm" "Blasphemy Support" "Blastchain Mine Support" "Blind Support" "Blood Magic Support" "Blood Rage" "Bloodlust Support" "Bone Offering" "Bonechill Support" "Brutality Support" "Burning Damage Support" "Cast On Critical Strike Support" "Cast when Damage Taken Support" "Cast while Channelling Support" "Chain Support" "Chance to Bleed Support" "Charged Mines Support" "Clarity" "Close Combat Support" "Cluster Traps Support" "Cold Penetration Support" "Cold Snap" "Cold to Fire Support" "Combustion Support" "Concentrated Effect Support" "Conductivity" "Consecrated Path" "Contagion" "Controlled Destruction Support" "Convocation" "Creeping Frost" "Cremation" "Culling Strike Support" "Hextouch Support" "Cyclone" "Damage on Full Life Support" "Dark Pact" "Dash" "Deathmark Support" "Desecrate" "Despair" "Determination" "Discharge" "Discipline" "Divine Ire" "Dominating Blow" "Dread Banner" "Earthshatter" "Efficacy Support" "Elemental Army Support" "Elemental Damage with Attacks Support" "Elemental Focus Support" "Elemental Hit" "Elemental Proliferation Support" "Elemental Weakness" "Endurance Charge on Melee Stun Support" "Enduring Cry" "Energy Leech Support" "Enfeeble" "Ensnaring Arrow" "Faster Attacks Support" "Faster Casting Support" "Faster Projectiles Support" "Feeding Frenzy Support" "Fire Penetration Support" "Fire Trap" "Fist of War Support" "Flame Dash" "Flammability" "Flesh Offering" "Flesh and Stone" "Flicker Strike" "Fork Support" "Fortify Support" "Freezing Pulse" "Frenzy" "Frost Bomb" "Frost Wall" "Frostbite" "Frostbolt" "General's Cry" "Generosity Support" "Glacial Cascade" "Grace" "Greater Multiple Projectiles Support" "Greater Volley Support" "Haste" "Hatred" "Herald of Agony" "Herald of Ash" "Herald of Purity" "High-Impact Mine Support" "Holy Flame Totem" "Hypothermia Support" "Ice Bite Support" "Ice Crash" "Ice Spear" "Ignite Proliferation Support" "Immolate Support" "Immortal Call" "Impale Support" "Incinerate" "Increased Area of Effect Support" "Increased Critical Damage Support" "Increased Critical Strikes Support" "Increased Duration Support" "Infernal Blow" "Infused Channelling Support" "Innervate Support" "Inspiration Support" "Intensify Support" "Intimidating Cry" "Item Rarity Support" "Kinetic Blast" "Lacerate" "Leap Slam" "Less Duration Support" "Lesser Multiple Projectiles Support" "Life Leech Support" "Lightning Arrow" "Lightning Penetration Support" "Lightning Warp" "Magma Orb" "Maim Support" "Malevolence" "Meat Shield Support" "Melee Physical Damage Support" "Melee Splash Support" "Minefield Support" "Minion Life Support" "Minion Speed Support" "Mirage Archer Support" "Molten Shell" "Molten Strike" "Multiple Totems Support" "Multiple Traps Support" "Multistrike Support" "Onslaught Support" "Orb of Storms" "Perforate" "Pestilent Strike" "Phase Run" "Physical to Lightning Support" "Pierce Support" "Plague Bearer" "Poison Support" "Power Charge On Critical Support" "Power Siphon" "Precision" "Pride" "Sniper's Mark" "Pulverise Support" "Puncture" "Punishment" "Purifying Flame" "Purity of Elements" "Purity of Fire" "Purity of Ice" "Purity of Lightning" "Pyroclast Mine" "Rage Support" "Rain of Arrows" "Raise Zombie" "Ruthless Support" "Second Wind Support" "Seismic Cry" "Shield Charge" "Shock Nova" "Siege Ballista" "Slower Projectiles Support" "Smite" "Smoke Mine" "Soulrend" "Spark" "Spell Cascade Support" "Spell Echo Support" "Spell Totem Support" "Spellslinger" "Steelskin" "Storm Brand" "Storm Burst" "Summon Chaos Golem" "Summon Flame Golem" "Summon Holy Relic" "Summon Ice Golem" "Summon Lightning Golem" "Summon Phantasm Support" "Summon Raging Spirit" "Summon Skitterbots" "Summon Stone Golem" "Sunder" "Sweep" "Swift Assembly Support" "Swiftbrand Support" "Tectonic Slam" "Tempest Shield" "Temporal Chains" "Tornado Shot" "Trap and Mine Damage Support" "Unbound Ailments Support" "Unleash Support" "Urgent Orders Support" "Vaal Ancestral Warchief" "Vaal Arc" "Vaal Blade Vortex" "Vaal Blight" "Vaal Burning Arrow" "Vaal Clarity" "Vaal Cold Snap" "Vaal Cyclone" "Vaal Detonate Dead" "Vaal Discipline" "Vaal Double Strike" "Vaal Earthquake" "Vaal Grace" "Vaal Ground Slam" "Vaal Haste" "Vaal Ice Nova" "Vaal Impurity of Fire" "Vaal Impurity of Ice" "Vaal Impurity of Lightning" "Vaal Lightning Trap" "Vaal Molten Shell" "Vaal Power Siphon" "Vaal Rain of Arrows" "Vaal Righteous Fire" "Vaal Spark" "Vaal Summon Skeletons" "Vengeance" "Vile Toxins Support" "Viper Strike" "Vitality" "Vortex" "Vulnerability" "War Banner" "Wave of Conviction" "Whirling Blades" "Wild Strike" "Winter Orb" "Wither" "Withering Step" "Withering Touch Support" "Wrath" "Zealotry"
 	Corrupted True
 	CustomAlertSound "filter_sounds/100_gem.wav"
 	GemLevel >= 20
@@ -4916,7 +5118,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Added Cold Damage Support" "Added Lightning Damage Support" "Additional Accuracy Support" "Advanced Traps Support" "Ancestral Call Support" "Ancestral Cry" "Ancestral Protector" "Ancestral Warchief" "Anger" "Animate Guardian" "Animate Weapon" "Arc" "Arcane Cloak" "Arcane Surge Support" "Arcanist Brand" "Archmage Support" "Arctic Armour" "Armageddon Brand" "Arrow Nova Support" "Artillery Ballista" "Assassin's Mark" "Ball Lightning" "Ballista Totem Support" "Bane" "Barrage" "Barrage Support" "Bear Trap" "Berserk" "Blade Blast" "Blade Flurry" "Blade Vortex" "Bladefall" "Bladestorm" "Blasphemy Support" "Blast Rain" "Blastchain Mine Support" "Blind Support" "Blink Arrow" "Block Chance Reduction Support" "Blood Magic Support" "Blood Rage" "Bloodlust Support" "Bodyswap" "Bone Offering" "Bonechill Support" "Brutality Support" "Burning Arrow" "Burning Damage Support" "Cast On Critical Strike Support" "Cast on Death Support" "Cast when Damage Taken Support" "Cast while Channelling Support" "Caustic Arrow" "Chain Support" "Chance to Bleed Support" "Charged Mines Support" "Clarity" "Cleave" "Close Combat Support" "Cluster Traps Support" "Cobra Lash" "Cold Penetration Support" "Cold Snap" "Cold to Fire Support" "Combustion Support" "Concentrated Effect Support" "Conductivity" "Consecrated Path" "Contagion" "Convocation" "Creeping Frost" "Cremation" "Culling Strike Support" "Curse On Hit Support" "Cyclone" "Damage on Full Life Support" "Dash" "Deathmark Support" "Decoy Totem" "Desecrate" "Despair" "Determination" "Detonate Dead" "Discharge" "Discipline" "Divine Ire" "Dominating Blow" "Dread Banner" "Dual Strike" "Earthquake" "Earthshatter" "Efficacy Support" "Elemental Army Support" "Elemental Damage with Attacks Support" "Elemental Focus Support" "Elemental Hit" "Elemental Proliferation Support" "Elemental Weakness" "Endurance Charge on Melee Stun Support" "Enduring Cry" "Energy Leech Support" "Enfeeble" "Ensnaring Arrow" "Essence Drain" "Ethereal Knives" "Explosive Arrow" "Explosive Trap" "Faster Attacks Support" "Faster Casting Support" "Faster Projectiles Support" "Feeding Frenzy Support" "Fire Penetration Support" "Fire Trap" "Fireball" "Firestorm" "Fist of War Support" "Flame Dash" "Flame Surge" "Flammability" "Flesh Offering" "Flesh and Stone" "Flicker Strike" "Fork Support" "Fortify Support" "Freezing Pulse" "Frenzy" "Frost Blades" "Frost Bomb" "Frost Wall" "Frostbite" "Frostblink" "Frostbolt" "Galvanic Arrow" "General's Cry" "Generosity Support" "Glacial Cascade" "Glacial Hammer" "Grace" "Greater Multiple Projectiles Support" "Greater Volley Support" "Haste" "Hatred" "Heavy Strike" "Herald of Agony" "Herald of Ash" "Herald of Ice" "Herald of Purity" "Herald of Thunder" "High-Impact Mine Support" "Holy Flame Totem" "Hypothermia Support" "Ice Bite Support" "Ice Crash" "Ice Nova" "Ice Shot" "Ice Spear" "Ice Trap" "Icicle Mine" "Ignite Proliferation Support" "Immolate Support" "Immortal Call" "Impale Support" "Incinerate" "Increased Area of Effect Support" "Increased Critical Damage Support" "Increased Critical Strikes Support" "Increased Duration Support" "Infernal Blow" "Infernal Cry" "Infernal Legion Support" "Infused Channelling Support" "Innervate Support" "Inspiration Support" "Intensify Support" "Intimidating Cry" "Iron Grip Support" "Iron Will Support" "Item Rarity Support" "Kinetic Blast" "Lacerate" "Lancing Steel" "Leap Slam" "Less Duration Support" "Lesser Multiple Projectiles Support" "Lesser Poison Support" "Life Gain on Hit Support" "Life Leech Support" "Lightning Arrow" "Lightning Spire Trap" "Lightning Tendrils" "Lightning Trap" "Lightning Warp" "Maim Support" "Malevolence" "Meat Shield Support" "Melee Splash Support" "Minefield Support" "Minion Life Support" "Minion Speed Support" "Mirage Archer Support" "Molten Shell" "Molten Strike" "Multiple Totems Support" "Multiple Traps Support" "Multistrike Support" "Orb of Storms" "Penance Brand" "Perforate" "Pestilent Strike" "Phase Run" "Physical to Lightning Support" "Pierce Support" "Plague Bearer" "Poacher's Mark" "Point Blank Support" "Poison Support" "Power Charge On Critical Support" "Power Siphon" "Precision" "Pride" "Projectile Weakness" "Pulverise Support" "Puncture" "Punishment" "Purifying Flame" "Purity of Elements" "Purity of Fire" "Purity of Ice" "Purity of Lightning" "Pyroclast Mine" "Rage Support" "Rain of Arrows" "Raise Spectre" "Raise Zombie" "Rallying Cry" "Reave" "Reckoning" "Righteous Fire" "Ruthless Support" "Scorching Ray" "Scourge Arrow" "Second Wind Support" "Seismic Cry" "Seismic Trap" "Shattering Steel" "Shield Charge" "Shock Nova" "Shockwave Support" "Siege Ballista" "Slower Projectiles Support" "Smite" "Smoke Mine" "Soulrend" "Spark" "Spectral Shield Throw" "Spectral Throw" "Spell Cascade Support" "Spell Echo Support" "Spell Totem Support" "Split Arrow" "Steelskin" "Storm Brand" "Storm Call" "Stormbind" "Summon Carrion Golem" "Summon Chaos Golem" "Summon Flame Golem" "Summon Holy Relic" "Summon Ice Golem" "Summon Lightning Golem" "Summon Phantasm Support" "Summon Raging Spirit" "Summon Skeletons" "Summon Skitterbots" "Summon Stone Golem" "Sunder" "Sweep" "Swift Assembly Support" "Swiftbrand Support" "Tectonic Slam" "Tempest Shield" "Temporal Chains" "Tornado Shot" "Toxic Rain" "Trap Support" "Trap and Mine Damage Support" "Unearth" "Unleash Support" "Urgent Orders Support" "Vengeance" "Venom Gyre" "Vigilant Strike" "Vile Toxins Support" "Viper Strike" "Vitality" "Volatile Dead" "Volley Support" "Vortex" "Vulnerability" "War Banner" "Warlord's Mark" "Wave of Conviction" "Whirling Blades" "Wild Strike" "Winter Orb" "Wintertide Brand" "Wither" "Withering Step" "Withering Touch Support" "Wrath" "Zealotry"
+	BaseType == "Added Cold Damage Support" "Added Lightning Damage Support" "Additional Accuracy Support" "Advanced Traps Support" "Ancestral Call Support" "Ancestral Cry" "Ancestral Protector" "Ancestral Warchief" "Anger" "Animate Guardian" "Animate Weapon" "Arc" "Arcane Cloak" "Arcane Surge Support" "Arcanist Brand" "Archmage Support" "Arctic Armour" "Armageddon Brand" "Arrow Nova Support" "Artillery Ballista" "Assassin's Mark" "Ball Lightning" "Ballista Totem Support" "Bane" "Barrage" "Barrage Support" "Bear Trap" "Berserk" "Blade Blast" "Blade Flurry" "Blade Vortex" "Bladefall" "Bladestorm" "Blasphemy Support" "Blast Rain" "Blastchain Mine Support" "Blind Support" "Blink Arrow" "Block Chance Reduction Support" "Blood Magic Support" "Blood Rage" "Bloodlust Support" "Bodyswap" "Bone Offering" "Bonechill Support" "Brutality Support" "Burning Arrow" "Burning Damage Support" "Cast On Critical Strike Support" "Cast on Death Support" "Cast when Damage Taken Support" "Cast while Channelling Support" "Caustic Arrow" "Chain Support" "Chance to Bleed Support" "Charged Mines Support" "Clarity" "Cleave" "Close Combat Support" "Cluster Traps Support" "Cobra Lash" "Cold Penetration Support" "Cold Snap" "Cold to Fire Support" "Combustion Support" "Concentrated Effect Support" "Conductivity" "Consecrated Path" "Contagion" "Convocation" "Creeping Frost" "Cremation" "Culling Strike Support" "Hextouch Support" "Cyclone" "Damage on Full Life Support" "Dash" "Deathmark Support" "Decoy Totem" "Desecrate" "Despair" "Determination" "Detonate Dead" "Discharge" "Discipline" "Divine Ire" "Dominating Blow" "Dread Banner" "Dual Strike" "Earthquake" "Earthshatter" "Efficacy Support" "Elemental Army Support" "Elemental Damage with Attacks Support" "Elemental Focus Support" "Elemental Hit" "Elemental Proliferation Support" "Elemental Weakness" "Endurance Charge on Melee Stun Support" "Enduring Cry" "Energy Leech Support" "Enfeeble" "Ensnaring Arrow" "Essence Drain" "Ethereal Knives" "Explosive Arrow" "Explosive Trap" "Faster Attacks Support" "Faster Casting Support" "Faster Projectiles Support" "Feeding Frenzy Support" "Fire Penetration Support" "Fire Trap" "Fireball" "Firestorm" "Fist of War Support" "Flame Dash" "Flame Surge" "Flammability" "Flesh Offering" "Flesh and Stone" "Flicker Strike" "Fork Support" "Fortify Support" "Freezing Pulse" "Frenzy" "Frost Blades" "Frost Bomb" "Frost Wall" "Frostbite" "Frostblink" "Frostbolt" "Galvanic Arrow" "General's Cry" "Generosity Support" "Glacial Cascade" "Glacial Hammer" "Grace" "Greater Multiple Projectiles Support" "Greater Volley Support" "Haste" "Hatred" "Heavy Strike" "Herald of Agony" "Herald of Ash" "Herald of Ice" "Herald of Purity" "Herald of Thunder" "High-Impact Mine Support" "Holy Flame Totem" "Hypothermia Support" "Ice Bite Support" "Ice Crash" "Ice Nova" "Ice Shot" "Ice Spear" "Ice Trap" "Icicle Mine" "Ignite Proliferation Support" "Immolate Support" "Immortal Call" "Impale Support" "Incinerate" "Increased Area of Effect Support" "Increased Critical Damage Support" "Increased Critical Strikes Support" "Increased Duration Support" "Infernal Blow" "Infernal Cry" "Infernal Legion Support" "Infused Channelling Support" "Innervate Support" "Inspiration Support" "Intensify Support" "Intimidating Cry" "Iron Grip Support" "Iron Will Support" "Item Rarity Support" "Kinetic Blast" "Lacerate" "Lancing Steel" "Leap Slam" "Less Duration Support" "Lesser Multiple Projectiles Support" "Lesser Poison Support" "Life Gain on Hit Support" "Life Leech Support" "Lightning Arrow" "Lightning Spire Trap" "Lightning Tendrils" "Lightning Trap" "Lightning Warp" "Maim Support" "Malevolence" "Meat Shield Support" "Melee Splash Support" "Minefield Support" "Minion Life Support" "Minion Speed Support" "Mirage Archer Support" "Molten Shell" "Molten Strike" "Multiple Totems Support" "Multiple Traps Support" "Multistrike Support" "Orb of Storms" "Penance Brand" "Perforate" "Pestilent Strike" "Phase Run" "Physical to Lightning Support" "Pierce Support" "Plague Bearer" "Poacher's Mark" "Point Blank Support" "Poison Support" "Power Charge On Critical Support" "Power Siphon" "Precision" "Pride" "Sniper's Mark" "Pulverise Support" "Puncture" "Punishment" "Purifying Flame" "Purity of Elements" "Purity of Fire" "Purity of Ice" "Purity of Lightning" "Pyroclast Mine" "Rage Support" "Rain of Arrows" "Raise Spectre" "Raise Zombie" "Rallying Cry" "Reave" "Reckoning" "Righteous Fire" "Ruthless Support" "Scorching Ray" "Scourge Arrow" "Second Wind Support" "Seismic Cry" "Seismic Trap" "Shattering Steel" "Shield Charge" "Shock Nova" "Shockwave Support" "Siege Ballista" "Slower Projectiles Support" "Smite" "Smoke Mine" "Soulrend" "Spark" "Spectral Shield Throw" "Spectral Throw" "Spell Cascade Support" "Spell Echo Support" "Spell Totem Support" "Split Arrow" "Steelskin" "Storm Brand" "Storm Call" "Stormbind" "Summon Carrion Golem" "Summon Chaos Golem" "Summon Flame Golem" "Summon Holy Relic" "Summon Ice Golem" "Summon Lightning Golem" "Summon Phantasm Support" "Summon Raging Spirit" "Summon Skeletons" "Summon Skitterbots" "Summon Stone Golem" "Sunder" "Sweep" "Swift Assembly Support" "Swiftbrand Support" "Tectonic Slam" "Tempest Shield" "Temporal Chains" "Tornado Shot" "Toxic Rain" "Trap Support" "Trap and Mine Damage Support" "Unearth" "Unleash Support" "Urgent Orders Support" "Vengeance" "Venom Gyre" "Vigilant Strike" "Vile Toxins Support" "Viper Strike" "Vitality" "Volatile Dead" "Volley Support" "Vortex" "Vulnerability" "War Banner" "Warlord's Mark" "Wave of Conviction" "Whirling Blades" "Wild Strike" "Winter Orb" "Wintertide Brand" "Wither" "Withering Step" "Withering Touch Support" "Wrath" "Zealotry"
 	Corrupted False
 	CustomAlertSound "filter_sounds/100_gem.wav"
 	GemLevel >= 20
@@ -4943,7 +5145,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Added Cold Damage Support" "Ancestral Call Support" "Ancestral Protector" "Anger" "Arcane Surge Support" "Arcanist Brand" "Arctic Armour" "Assassin's Mark" "Ballista Totem Support" "Barrage" "Barrage Support" "Berserk" "Blade Flurry" "Bladefall" "Bladestorm" "Blasphemy Support" "Blastchain Mine Support" "Blink Arrow" "Block Chance Reduction Support" "Blood Magic Support" "Blood Rage" "Bloodlust Support" "Bodyswap" "Bone Offering" "Bonechill Support" "Cast On Critical Strike Support" "Cast when Damage Taken Support" "Cast while Channelling Support" "Chain Support" "Charged Mines Support" "Clarity" "Close Combat Support" "Cold Penetration Support" "Cold to Fire Support" "Combustion Support" "Concentrated Effect Support" "Conductivity" "Consecrated Path" "Contagion" "Convocation" "Cremation" "Culling Strike Support" "Curse On Hit Support" "Damage on Full Life Support" "Dash" "Deathmark Support" "Desecrate" "Despair" "Determination" "Discipline" "Dread Banner" "Efficacy Support" "Elemental Army Support" "Elemental Damage with Attacks Support" "Elemental Proliferation Support" "Elemental Weakness" "Enduring Cry" "Energy Leech Support" "Enfeeble" "Faster Attacks Support" "Faster Casting Support" "Faster Projectiles Support" "Feeding Frenzy Support" "Fire Penetration Support" "Flame Dash" "Flammability" "Flesh Offering" "Flesh and Stone" "Flicker Strike" "Fork Support" "Fortify Support" "Frenzy" "Frost Bomb" "Frost Wall" "Frostbite" "Frostblink" "Frostbolt" "General's Cry" "Generosity Support" "Glacial Cascade" "Grace" "Greater Multiple Projectiles Support" "Greater Volley Support" "Haste" "Heavy Strike" "High-Impact Mine Support" "Hypothermia Support" "Ice Bite Support" "Ice Crash" "Ignite Proliferation Support" "Immolate Support" "Immortal Call" "Increased Area of Effect Support" "Increased Critical Damage Support" "Increased Critical Strikes Support" "Increased Duration Support" "Infernal Blow" "Infused Channelling Support" "Innervate Support" "Inspiration Support" "Intensify Support" "Item Rarity Support" "Kinetic Blast" "Less Duration Support" "Lesser Multiple Projectiles Support" "Life Gain on Hit Support" "Life Leech Support" "Lightning Arrow" "Lightning Warp" "Maim Support" "Malevolence" "Meat Shield Support" "Melee Splash Support" "Minefield Support" "Minion Life Support" "Minion Speed Support" "Mirage Archer Support" "Molten Shell" "Molten Strike" "Multiple Totems Support" "Multiple Traps Support" "Multistrike Support" "Orb of Storms" "Perforate" "Phase Run" "Physical to Lightning Support" "Pierce Support" "Plague Bearer" "Poacher's Mark" "Poison Support" "Power Charge On Critical Support" "Power Siphon" "Precision" "Pride" "Projectile Weakness" "Pulverise Support" "Punishment" "Purifying Flame" "Purity of Elements" "Purity of Fire" "Purity of Ice" "Purity of Lightning" "Rage Support" "Rain of Arrows" "Ruthless Support" "Scorching Ray" "Second Wind Support" "Shield Charge" "Shock Nova" "Slower Projectiles Support" "Smite" "Smoke Mine" "Spark" "Spectral Shield Throw" "Spell Echo Support" "Spell Totem Support" "Steelskin" "Stormbind" "Summon Chaos Golem" "Summon Flame Golem" "Summon Ice Golem" "Summon Lightning Golem" "Summon Skitterbots" "Sweep" "Swiftbrand Support" "Tempest Shield" "Temporal Chains" "Tornado Shot" "Trap and Mine Damage Support" "Unleash Support" "Urgent Orders Support" "Vaal Ancestral Warchief" "Vaal Arc" "Vaal Blade Vortex" "Vaal Blight" "Vaal Clarity" "Vaal Cold Snap" "Vaal Discipline" "Vaal Double Strike" "Vaal Earthquake" "Vaal Grace" "Vaal Haste" "Vaal Impurity of Fire" "Vaal Impurity of Ice" "Vaal Impurity of Lightning" "Vaal Lightning Trap" "Vaal Molten Shell" "Vaal Power Siphon" "Vaal Rain of Arrows" "Vaal Righteous Fire" "Vaal Spark" "Vaal Summon Skeletons" "Vengeance" "Vile Toxins Support" "Viper Strike" "Vitality" "Vortex" "Vulnerability" "War Banner" "Wave of Conviction" "Whirling Blades" "Winter Orb" "Wither" "Withering Step" "Withering Touch Support" "Wrath" "Zealotry"
+	BaseType == "Added Cold Damage Support" "Ancestral Call Support" "Ancestral Protector" "Anger" "Arcane Surge Support" "Arcanist Brand" "Arctic Armour" "Assassin's Mark" "Ballista Totem Support" "Barrage" "Barrage Support" "Berserk" "Blade Flurry" "Bladefall" "Bladestorm" "Blasphemy Support" "Blastchain Mine Support" "Blink Arrow" "Block Chance Reduction Support" "Blood Magic Support" "Blood Rage" "Bloodlust Support" "Bodyswap" "Bone Offering" "Bonechill Support" "Cast On Critical Strike Support" "Cast when Damage Taken Support" "Cast while Channelling Support" "Chain Support" "Charged Mines Support" "Clarity" "Close Combat Support" "Cold Penetration Support" "Cold to Fire Support" "Combustion Support" "Concentrated Effect Support" "Conductivity" "Consecrated Path" "Contagion" "Convocation" "Cremation" "Culling Strike Support" "Hextouch Support" "Damage on Full Life Support" "Dash" "Deathmark Support" "Desecrate" "Despair" "Determination" "Discipline" "Dread Banner" "Efficacy Support" "Elemental Army Support" "Elemental Damage with Attacks Support" "Elemental Proliferation Support" "Elemental Weakness" "Enduring Cry" "Energy Leech Support" "Enfeeble" "Faster Attacks Support" "Faster Casting Support" "Faster Projectiles Support" "Feeding Frenzy Support" "Fire Penetration Support" "Flame Dash" "Flammability" "Flesh Offering" "Flesh and Stone" "Flicker Strike" "Fork Support" "Fortify Support" "Frenzy" "Frost Bomb" "Frost Wall" "Frostbite" "Frostblink" "Frostbolt" "General's Cry" "Generosity Support" "Glacial Cascade" "Grace" "Greater Multiple Projectiles Support" "Greater Volley Support" "Haste" "Heavy Strike" "High-Impact Mine Support" "Hypothermia Support" "Ice Bite Support" "Ice Crash" "Ignite Proliferation Support" "Immolate Support" "Immortal Call" "Increased Area of Effect Support" "Increased Critical Damage Support" "Increased Critical Strikes Support" "Increased Duration Support" "Infernal Blow" "Infused Channelling Support" "Innervate Support" "Inspiration Support" "Intensify Support" "Item Rarity Support" "Kinetic Blast" "Less Duration Support" "Lesser Multiple Projectiles Support" "Life Gain on Hit Support" "Life Leech Support" "Lightning Arrow" "Lightning Warp" "Maim Support" "Malevolence" "Meat Shield Support" "Melee Splash Support" "Minefield Support" "Minion Life Support" "Minion Speed Support" "Mirage Archer Support" "Molten Shell" "Molten Strike" "Multiple Totems Support" "Multiple Traps Support" "Multistrike Support" "Orb of Storms" "Perforate" "Phase Run" "Physical to Lightning Support" "Pierce Support" "Plague Bearer" "Poacher's Mark" "Poison Support" "Power Charge On Critical Support" "Power Siphon" "Precision" "Pride" "Sniper's Mark" "Pulverise Support" "Punishment" "Purifying Flame" "Purity of Elements" "Purity of Fire" "Purity of Ice" "Purity of Lightning" "Rage Support" "Rain of Arrows" "Ruthless Support" "Scorching Ray" "Second Wind Support" "Shield Charge" "Shock Nova" "Slower Projectiles Support" "Smite" "Smoke Mine" "Spark" "Spectral Shield Throw" "Spell Echo Support" "Spell Totem Support" "Steelskin" "Stormbind" "Summon Chaos Golem" "Summon Flame Golem" "Summon Ice Golem" "Summon Lightning Golem" "Summon Skitterbots" "Sweep" "Swiftbrand Support" "Tempest Shield" "Temporal Chains" "Tornado Shot" "Trap and Mine Damage Support" "Unleash Support" "Urgent Orders Support" "Vaal Ancestral Warchief" "Vaal Arc" "Vaal Blade Vortex" "Vaal Blight" "Vaal Clarity" "Vaal Cold Snap" "Vaal Discipline" "Vaal Double Strike" "Vaal Earthquake" "Vaal Grace" "Vaal Haste" "Vaal Impurity of Fire" "Vaal Impurity of Ice" "Vaal Impurity of Lightning" "Vaal Lightning Trap" "Vaal Molten Shell" "Vaal Power Siphon" "Vaal Rain of Arrows" "Vaal Righteous Fire" "Vaal Spark" "Vaal Summon Skeletons" "Vengeance" "Vile Toxins Support" "Viper Strike" "Vitality" "Vortex" "Vulnerability" "War Banner" "Wave of Conviction" "Whirling Blades" "Winter Orb" "Wither" "Withering Step" "Withering Touch Support" "Wrath" "Zealotry"
 	Corrupted True
 	CustomAlertSound "filter_sounds/100_gem.wav"
 	GemLevel >= 20
@@ -4970,7 +5172,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Blade Vortex" "Bladefall" "Block Chance Reduction Support" "Bonechill Support" "Cast On Critical Strike Support" "Chain Support" "Curse On Hit Support" "Discipline" "Frostbite" "Grace" "Greater Multiple Projectiles Support" "Haste" "Hatred" "Ice Nova" "Multistrike Support" "Power Charge On Critical Support" "Precision" "Purity of Fire" "Purity of Lightning" "Smite" "Tornado Shot" "Unleash Support" "Vitality" "Vortex"
+	BaseType == "Blade Vortex" "Bladefall" "Block Chance Reduction Support" "Bonechill Support" "Cast On Critical Strike Support" "Chain Support" "Hextouch Support" "Discipline" "Frostbite" "Grace" "Greater Multiple Projectiles Support" "Haste" "Hatred" "Ice Nova" "Multistrike Support" "Power Charge On Critical Support" "Precision" "Purity of Fire" "Purity of Lightning" "Smite" "Tornado Shot" "Unleash Support" "Vitality" "Vortex"
 	Corrupted False
 	CustomAlertSound "filter_sounds/100_gem.wav"
 	GemLevel >= 20
@@ -4984,7 +5186,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Added Cold Damage Support" "Additional Accuracy Support" "Advanced Traps Support" "Ancestral Protector" "Anger" "Animate Guardian" "Arc" "Arcane Surge Support" "Archmage Support" "Arctic Armour" "Armageddon Brand" "Arrow Nova Support" "Assassin's Mark" "Ball Lightning" "Ballista Totem Support" "Barrage" "Barrage Support" "Berserk" "Blade Blast" "Blade Flurry" "Bladestorm" "Blasphemy Support" "Blast Rain" "Blood Magic Support" "Blood Rage" "Bodyswap" "Brutality Support" "Burning Arrow" "Burning Damage Support" "Cast when Damage Taken Support" "Cast when Stunned Support" "Cast while Channelling Support" "Caustic Arrow" "Charged Dash" "Charged Mines Support" "Clarity" "Cleave" "Close Combat Support" "Cluster Traps Support" "Cobra Lash" "Cold Penetration Support" "Cold Snap" "Cold to Fire Support" "Combustion Support" "Concentrated Effect Support" "Conductivity" "Consecrated Path" "Cremation" "Culling Strike Support" "Cyclone" "Damage on Full Life Support" "Dark Pact" "Dash" "Deathmark Support" "Desecrate" "Despair" "Determination" "Detonate Dead" "Discharge" "Divine Ire" "Double Strike" "Dread Banner" "Earthshatter" "Efficacy Support" "Elemental Army Support" "Elemental Damage with Attacks Support" "Elemental Focus Support" "Elemental Hit" "Elemental Weakness" "Enduring Cry" "Energy Leech Support" "Enfeeble" "Essence Drain" "Ethereal Knives" "Explosive Arrow" "Explosive Trap" "Faster Projectiles Support" "Feeding Frenzy Support" "Fire Penetration Support" "Fireball" "Firestorm" "Flameblast" "Flamethrower Trap" "Flammability" "Flesh and Stone" "Flicker Strike" "Fork Support" "Fortify Support" "Freezing Pulse" "Frenzy" "Frost Blades" "Frost Bomb" "Frost Wall" "Frostbolt" "Galvanic Arrow" "Generosity Support" "Glacial Cascade" "Glacial Hammer" "Greater Volley Support" "Ground Slam" "Heavy Strike" "Herald of Agony" "Herald of Ash" "Herald of Ice" "Herald of Purity" "Herald of Thunder" "High-Impact Mine Support" "Hypothermia Support" "Ice Bite Support" "Ice Shot" "Ice Spear" "Ice Trap" "Icicle Mine" "Ignite Proliferation Support" "Immolate Support" "Immortal Call" "Impale Support" "Incinerate" "Increased Area of Effect Support" "Increased Critical Damage Support" "Increased Critical Strikes Support" "Increased Duration Support" "Infernal Blow" "Infernal Cry" "Infused Channelling Support" "Innervate Support" "Inspiration Support" "Intensify Support" "Iron Will Support" "Item Rarity Support" "Kinetic Blast" "Kinetic Bolt" "Knockback Support" "Lacerate" "Lancing Steel" "Less Duration Support" "Lesser Multiple Projectiles Support" "Life Gain on Hit Support" "Life Leech Support" "Lightning Arrow" "Lightning Strike" "Lightning Tendrils" "Lightning Trap" "Lightning Warp" "Magma Orb" "Maim Support" "Malevolence" "Mana Leech Support" "Meat Shield Support" "Minefield Support" "Minion Life Support" "Mirage Archer Support" "Mirror Arrow" "Molten Shell" "Molten Strike" "Multiple Traps Support" "Nightblade Support" "Orb of Storms" "Penance Brand" "Perforate" "Pestilent Strike" "Phase Run" "Physical to Lightning Support" "Pierce Support" "Plague Bearer" "Poacher's Mark" "Point Blank Support" "Poison Support" "Power Siphon" "Pride" "Projectile Weakness" "Pulverise Support" "Puncture" "Punishment" "Purifying Flame" "Purity of Elements" "Purity of Ice" "Pyroclast Mine" "Rage Support" "Rain of Arrows" "Raise Spectre" "Raise Zombie" "Rejuvenation Totem" "Righteous Fire" "Riposte" "Ruthless Support" "Scorching Ray" "Scourge Arrow" "Searing Bond" "Second Wind Support" "Seismic Trap" "Shattering Steel" "Shield Charge" "Shock Nova" "Shockwave Support" "Shockwave Totem" "Shrapnel Ballista" "Siphoning Trap" "Slower Projectiles Support" "Smoke Mine" "Soulrend" "Spark" "Spectral Shield Throw" "Spell Cascade Support" "Spell Echo Support" "Split Arrow" "Steelskin" "Storm Brand" "Storm Call" "Stormbind" "Summon Carrion Golem" "Summon Chaos Golem" "Summon Flame Golem" "Summon Ice Golem" "Summon Lightning Golem" "Summon Raging Spirit" "Summon Skitterbots" "Summon Stone Golem" "Sunder" "Sweep" "Swift Assembly Support" "Swiftbrand Support" "Temporal Chains" "Toxic Rain" "Trap Support" "Trap and Mine Damage Support" "Unearth" "Vengeance" "Venom Gyre" "Vigilant Strike" "Vile Toxins Support" "Viper Strike" "Volatile Dead" "Vulnerability" "War Banner" "Warlord's Mark" "Wave of Conviction" "Whirling Blades" "Wild Strike" "Winter Orb" "Wintertide Brand" "Withering Step" "Withering Touch Support" "Wrath" "Zealotry"
+	BaseType == "Added Cold Damage Support" "Additional Accuracy Support" "Advanced Traps Support" "Ancestral Protector" "Anger" "Animate Guardian" "Arc" "Arcane Surge Support" "Archmage Support" "Arctic Armour" "Armageddon Brand" "Arrow Nova Support" "Assassin's Mark" "Ball Lightning" "Ballista Totem Support" "Barrage" "Barrage Support" "Berserk" "Blade Blast" "Blade Flurry" "Bladestorm" "Blasphemy Support" "Blast Rain" "Blood Magic Support" "Blood Rage" "Bodyswap" "Brutality Support" "Burning Arrow" "Burning Damage Support" "Cast when Damage Taken Support" "Cast when Stunned Support" "Cast while Channelling Support" "Caustic Arrow" "Charged Dash" "Charged Mines Support" "Clarity" "Cleave" "Close Combat Support" "Cluster Traps Support" "Cobra Lash" "Cold Penetration Support" "Cold Snap" "Cold to Fire Support" "Combustion Support" "Concentrated Effect Support" "Conductivity" "Consecrated Path" "Cremation" "Culling Strike Support" "Cyclone" "Damage on Full Life Support" "Dark Pact" "Dash" "Deathmark Support" "Desecrate" "Despair" "Determination" "Detonate Dead" "Discharge" "Divine Ire" "Double Strike" "Dread Banner" "Earthshatter" "Efficacy Support" "Elemental Army Support" "Elemental Damage with Attacks Support" "Elemental Focus Support" "Elemental Hit" "Elemental Weakness" "Enduring Cry" "Energy Leech Support" "Enfeeble" "Essence Drain" "Ethereal Knives" "Explosive Arrow" "Explosive Trap" "Faster Projectiles Support" "Feeding Frenzy Support" "Fire Penetration Support" "Fireball" "Firestorm" "Flameblast" "Flamethrower Trap" "Flammability" "Flesh and Stone" "Flicker Strike" "Fork Support" "Fortify Support" "Freezing Pulse" "Frenzy" "Frost Blades" "Frost Bomb" "Frost Wall" "Frostbolt" "Galvanic Arrow" "Generosity Support" "Glacial Cascade" "Glacial Hammer" "Greater Volley Support" "Ground Slam" "Heavy Strike" "Herald of Agony" "Herald of Ash" "Herald of Ice" "Herald of Purity" "Herald of Thunder" "High-Impact Mine Support" "Hypothermia Support" "Ice Bite Support" "Ice Shot" "Ice Spear" "Ice Trap" "Icicle Mine" "Ignite Proliferation Support" "Immolate Support" "Immortal Call" "Impale Support" "Incinerate" "Increased Area of Effect Support" "Increased Critical Damage Support" "Increased Critical Strikes Support" "Increased Duration Support" "Infernal Blow" "Infernal Cry" "Infused Channelling Support" "Innervate Support" "Inspiration Support" "Intensify Support" "Iron Will Support" "Item Rarity Support" "Kinetic Blast" "Kinetic Bolt" "Knockback Support" "Lacerate" "Lancing Steel" "Less Duration Support" "Lesser Multiple Projectiles Support" "Life Gain on Hit Support" "Life Leech Support" "Lightning Arrow" "Lightning Strike" "Lightning Tendrils" "Lightning Trap" "Lightning Warp" "Magma Orb" "Maim Support" "Malevolence" "Mana Leech Support" "Meat Shield Support" "Minefield Support" "Minion Life Support" "Mirage Archer Support" "Mirror Arrow" "Molten Shell" "Molten Strike" "Multiple Traps Support" "Nightblade Support" "Orb of Storms" "Penance Brand" "Perforate" "Pestilent Strike" "Phase Run" "Physical to Lightning Support" "Pierce Support" "Plague Bearer" "Poacher's Mark" "Point Blank Support" "Poison Support" "Power Siphon" "Pride" "Sniper's Mark" "Pulverise Support" "Puncture" "Punishment" "Purifying Flame" "Purity of Elements" "Purity of Ice" "Pyroclast Mine" "Rage Support" "Rain of Arrows" "Raise Spectre" "Raise Zombie" "Rejuvenation Totem" "Righteous Fire" "Riposte" "Ruthless Support" "Scorching Ray" "Scourge Arrow" "Searing Bond" "Second Wind Support" "Seismic Trap" "Shattering Steel" "Shield Charge" "Shock Nova" "Shockwave Support" "Shockwave Totem" "Shrapnel Ballista" "Siphoning Trap" "Slower Projectiles Support" "Smoke Mine" "Soulrend" "Spark" "Spectral Shield Throw" "Spell Cascade Support" "Spell Echo Support" "Split Arrow" "Steelskin" "Storm Brand" "Storm Call" "Stormbind" "Summon Carrion Golem" "Summon Chaos Golem" "Summon Flame Golem" "Summon Ice Golem" "Summon Lightning Golem" "Summon Raging Spirit" "Summon Skitterbots" "Summon Stone Golem" "Sunder" "Sweep" "Swift Assembly Support" "Swiftbrand Support" "Temporal Chains" "Toxic Rain" "Trap Support" "Trap and Mine Damage Support" "Unearth" "Vengeance" "Venom Gyre" "Vigilant Strike" "Vile Toxins Support" "Viper Strike" "Volatile Dead" "Vulnerability" "War Banner" "Warlord's Mark" "Wave of Conviction" "Whirling Blades" "Wild Strike" "Winter Orb" "Wintertide Brand" "Withering Step" "Withering Touch Support" "Wrath" "Zealotry"
 	Corrupted False
 	CustomAlertSound "filter_sounds/75_gem.wav"
 	GemLevel >= 20
@@ -4997,7 +5199,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Bladefall" "Cast On Critical Strike Support" "Cast when Damage Taken Support" "Curse On Hit Support" "Determination" "Grace" "Lightning Warp" "Purity of Ice" "Vaal Discipline" "Vaal Haste" "Vaal Righteous Fire" "Vitality"
+	BaseType == "Bladefall" "Cast On Critical Strike Support" "Cast when Damage Taken Support" "Hextouch Support" "Determination" "Grace" "Lightning Warp" "Purity of Ice" "Vaal Discipline" "Vaal Haste" "Vaal Righteous Fire" "Vitality"
 	Corrupted True
 	CustomAlertSound "filter_sounds/100_gem.wav"
 	GemLevel >= 20
@@ -5011,7 +5213,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Added Chaos Damage Support" "Added Cold Damage Support" "Anger" "Animate Guardian" "Animate Weapon" "Arcane Surge Support" "Arcanist Brand" "Archmage Support" "Armageddon Brand" "Assassin's Mark" "Barrage" "Barrage Support" "Blade Blast" "Bladestorm" "Blasphemy Support" "Blink Arrow" "Blood Magic Support" "Blood Rage" "Bone Offering" "Bonechill Support" "Cast while Channelling Support" "Chain Support" "Clarity" "Close Combat Support" "Cold Snap" "Combustion Support" "Concentrated Effect Support" "Conductivity" "Contagion" "Controlled Destruction Support" "Creeping Frost" "Cremation" "Culling Strike Support" "Cyclone" "Damage on Full Life Support" "Dash" "Deathmark Support" "Desecrate" "Discipline" "Divine Ire" "Dominating Blow" "Dread Banner" "Earthshatter" "Efficacy Support" "Elemental Army Support" "Elemental Focus Support" "Elemental Hit" "Elemental Weakness" "Enduring Cry" "Energy Leech Support" "Enfeeble" "Ethereal Knives" "Feeding Frenzy Support" "Flammability" "Flesh Offering" "Flesh and Stone" "Flicker Strike" "Fortify Support" "Freezing Pulse" "Frenzy" "Frost Bomb" "Frostbite" "Frostbolt" "Generosity Support" "Greater Multiple Projectiles Support" "Haste" "Hatred" "Herald of Agony" "Herald of Ash" "Herald of Purity" "High-Impact Mine Support" "Hypothermia Support" "Ice Bite Support" "Ice Nova" "Ice Spear" "Ice Trap" "Icicle Mine" "Immortal Call" "Impale Support" "Increased Area of Effect Support" "Increased Critical Strikes Support" "Increased Duration Support" "Infused Channelling Support" "Innervate Support" "Inspiration Support" "Intensify Support" "Item Rarity Support" "Less Duration Support" "Lesser Multiple Projectiles Support" "Life Leech Support" "Maim Support" "Malevolence" "Meat Shield Support" "Melee Splash Support" "Minion Life Support" "Molten Shell" "Molten Strike" "Multiple Totems Support" "Multistrike Support" "Orb of Storms" "Penance Brand" "Phase Run" "Physical to Lightning Support" "Pierce Support" "Plague Bearer" "Power Charge On Critical Support" "Precision" "Pride" "Projectile Weakness" "Pulverise Support" "Puncture" "Purifying Flame" "Purity of Elements" "Purity of Fire" "Purity of Lightning" "Pyroclast Mine" "Righteous Fire" "Ruthless Support" "Scorching Ray" "Second Wind Support" "Shield Charge" "Slower Projectiles Support" "Smite" "Smoke Mine" "Spell Cascade Support" "Spell Echo Support" "Spell Totem Support" "Split Arrow" "Steelskin" "Storm Brand" "Summon Carrion Golem" "Summon Chaos Golem" "Summon Ice Golem" "Summon Lightning Golem" "Summon Phantasm Support" "Summon Skitterbots" "Summon Stone Golem" "Swift Assembly Support" "Tempest Shield" "Temporal Chains" "Trap and Mine Damage Support" "Unbound Ailments Support" "Vaal Ancestral Warchief" "Vaal Grace" "Vaal Impurity of Fire" "Vaal Molten Shell" "Vicious Projectiles Support" "Vile Toxins Support" "Vortex" "Vulnerability" "War Banner" "Wave of Conviction" "Wintertide Brand" "Wither" "Withering Step" "Wrath" "Zealotry"
+	BaseType == "Added Chaos Damage Support" "Added Cold Damage Support" "Anger" "Animate Guardian" "Animate Weapon" "Arcane Surge Support" "Arcanist Brand" "Archmage Support" "Armageddon Brand" "Assassin's Mark" "Barrage" "Barrage Support" "Blade Blast" "Bladestorm" "Blasphemy Support" "Blink Arrow" "Blood Magic Support" "Blood Rage" "Bone Offering" "Bonechill Support" "Cast while Channelling Support" "Chain Support" "Clarity" "Close Combat Support" "Cold Snap" "Combustion Support" "Concentrated Effect Support" "Conductivity" "Contagion" "Controlled Destruction Support" "Creeping Frost" "Cremation" "Culling Strike Support" "Cyclone" "Damage on Full Life Support" "Dash" "Deathmark Support" "Desecrate" "Discipline" "Divine Ire" "Dominating Blow" "Dread Banner" "Earthshatter" "Efficacy Support" "Elemental Army Support" "Elemental Focus Support" "Elemental Hit" "Elemental Weakness" "Enduring Cry" "Energy Leech Support" "Enfeeble" "Ethereal Knives" "Feeding Frenzy Support" "Flammability" "Flesh Offering" "Flesh and Stone" "Flicker Strike" "Fortify Support" "Freezing Pulse" "Frenzy" "Frost Bomb" "Frostbite" "Frostbolt" "Generosity Support" "Greater Multiple Projectiles Support" "Haste" "Hatred" "Herald of Agony" "Herald of Ash" "Herald of Purity" "High-Impact Mine Support" "Hypothermia Support" "Ice Bite Support" "Ice Nova" "Ice Spear" "Ice Trap" "Icicle Mine" "Immortal Call" "Impale Support" "Increased Area of Effect Support" "Increased Critical Strikes Support" "Increased Duration Support" "Infused Channelling Support" "Innervate Support" "Inspiration Support" "Intensify Support" "Item Rarity Support" "Less Duration Support" "Lesser Multiple Projectiles Support" "Life Leech Support" "Maim Support" "Malevolence" "Meat Shield Support" "Melee Splash Support" "Minion Life Support" "Molten Shell" "Molten Strike" "Multiple Totems Support" "Multistrike Support" "Orb of Storms" "Penance Brand" "Phase Run" "Physical to Lightning Support" "Pierce Support" "Plague Bearer" "Power Charge On Critical Support" "Precision" "Pride" "Sniper's Mark" "Pulverise Support" "Puncture" "Purifying Flame" "Purity of Elements" "Purity of Fire" "Purity of Lightning" "Pyroclast Mine" "Righteous Fire" "Ruthless Support" "Scorching Ray" "Second Wind Support" "Shield Charge" "Slower Projectiles Support" "Smite" "Smoke Mine" "Spell Cascade Support" "Spell Echo Support" "Spell Totem Support" "Split Arrow" "Steelskin" "Storm Brand" "Summon Carrion Golem" "Summon Chaos Golem" "Summon Ice Golem" "Summon Lightning Golem" "Summon Phantasm Support" "Summon Skitterbots" "Summon Stone Golem" "Swift Assembly Support" "Tempest Shield" "Temporal Chains" "Trap and Mine Damage Support" "Unbound Ailments Support" "Vaal Ancestral Warchief" "Vaal Grace" "Vaal Impurity of Fire" "Vaal Molten Shell" "Vicious Projectiles Support" "Vile Toxins Support" "Vortex" "Vulnerability" "War Banner" "Wave of Conviction" "Wintertide Brand" "Wither" "Withering Step" "Wrath" "Zealotry"
 	Corrupted True
 	CustomAlertSound "filter_sounds/75_gem.wav"
 	GemLevel >= 20
@@ -5269,7 +5471,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Jewelled Foil" "Assassin's Boots" "Large Cluster Jewel" "Wyrmscale Doublet" "Deerskin Gloves" "Crusader Helmet" "Gladiator Plate" "Silk Gloves" "Blood Raiment" "Cloth Belt Piece" "Crusader Boots" "Arcanist Gloves" "Medium Cluster Jewel" "Vaal Rapier" "Ezomyte Tower Shield" "Callous Mask Piece" "Prismatic Jewel" "Siege Axe" "Occultist's Vestment" "Nubuck Boots" "Prophecy Wand"
+	BaseType == "Callous Mask Piece" "Crusader Helmet" "Large Cluster Jewel" "Vaal Rapier" "Prismatic Jewel" "Siege Axe" "Ezomyte Tower Shield" "Silk Gloves" "Assassin's Boots" "Wyrmscale Doublet" "Gladiator Plate" "Medium Cluster Jewel" "Arcanist Gloves" "Occultist's Vestment" "Blood Raiment" "Jewelled Foil" "Prophecy Wand" "Deerskin Gloves" "Cloth Belt Piece" "Crusader Boots" "Nubuck Boots"
 	CustomAlertSound "filter_sounds/100_amulet.wav"
 	MinimapIcon 1 Blue Star
 	PlayEffect Blue
@@ -5333,7 +5535,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Ornate Quiver" "Rawhide Boots"
+	BaseType == "Rawhide Boots" "Ornate Quiver"
 	CustomAlertSound "filter_sounds/175_expl_2.wav"
 	MinimapIcon 0 Green Star
 	PlayEffect Green
@@ -5345,7 +5547,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Lacquered Garb" "Cloth Belt" "Crimson Jewel" "Stibnite Flask" "Sadist Garb" "Chain Belt" "Archon Kite Shield" "Goathide Boots" "Prismatic Ring" "Sage Wand" "Coral Amulet" "Iron Ring" "Stealth Boots" "Nightmare Bascinet" "Ebony Tower Shield" "Small Cluster Jewel" "Carved Wand" "Topaz Ring" "Onyx Amulet" "Paua Amulet" "Judgement Staff" "Ruby Ring" "Gut Ripper" "Gavel" "Sapphire Ring" "Studded Belt" "Imperial Staff" "Viridian Jewel" "Fiend Dagger" "Cobalt Jewel" "Silver Flask" "Heavy Belt" "Gold Amulet" "Unset Ring"
+	BaseType == "Small Cluster Jewel" "Archon Kite Shield" "Prismatic Ring" "Iron Ring" "Stibnite Flask" "Ruby Ring" "Stealth Boots" "Nightmare Bascinet" "Crimson Jewel" "Coral Amulet" "Heavy Belt" "Gold Amulet" "Sapphire Ring" "Sadist Garb" "Gavel" "Studded Belt" "Cloth Belt" "Viridian Jewel" "Onyx Amulet" "Paua Amulet" "Lacquered Garb" "Chain Belt" "Unset Ring" "Goathide Boots" "Ebony Tower Shield" "Gut Ripper" "Imperial Staff" "Fiend Dagger" "Cobalt Jewel" "Topaz Ring" "Carved Wand" "Silver Flask" "Judgement Staff" "Sage Wand"
 	CustomAlertSound "filter_sounds/45_amulet.wav"
 	MinimapIcon 2 White Star
 	Rarity Unique
@@ -5488,7 +5690,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Steel Ring" "Ivory Watchstone" "Conjurer Boots" "Zodiac Leather" "Variscite Blade" "Shackled Boots" "Coiled Staff" "Royal Axe" "Hydrascale Gauntlets" "Golden Plate" "Jingling Spirit Shield" "Ezomyte Dagger" "Clasped Boots" "Gold Ring" "Savant's Robe" "Timeworn Claw" "Sapphire Flask" "Timeless Jewel" "Legion Gloves" "Legion Sword Piece" "Imperial Staff Piece" "Brass Spirit Shield" "Riveted Gloves" "Wool Gloves" "Rawhide Tower Shield" "Karui Maul" "Granite Flask" "Large Hybrid Flask" "Archon Kite Shield Piece" "Pinnacle Tower Shield" "Blunt Arrow Quiver Piece"
+	BaseType == "Jingling Spirit Shield" "Coiled Staff" "Imperial Staff Piece" "Variscite Blade" "Legion Sword Piece" "Zodiac Leather" "Savant's Robe" "Clasped Boots" "Blunt Arrow Quiver Piece" "Gold Ring" "Pinnacle Tower Shield" "Granite Flask" "Large Hybrid Flask" "Riveted Gloves" "Golden Plate" "Conjurer Boots" "Brass Spirit Shield" "Legion Gloves" "Timeworn Claw" "Royal Axe" "Rawhide Tower Shield" "Wool Gloves" "Timeless Jewel" "Shackled Boots" "Ezomyte Dagger" "Hydrascale Gauntlets" "Archon Kite Shield Piece" "Steel Ring" "Sapphire Flask" "Karui Maul" "Ivory Watchstone"
 	CustomAlertSound "filter_sounds/75_amulet.wav"
 	MinimapIcon 1 Blue Star
 	Rarity Unique
@@ -5499,7 +5701,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Widowsilk Robe" "Amber Amulet" "Terror Claw" "Vaal Axe" "Vaal Regalia" "Hubris Circlet" "Agate Amulet" "Infernal Sword" "Amethyst Ring" "Sorcerer Boots" "Strapped Mitts" "Necromancer Circlet" "Sulphur Flask" "Moonstone Ring" "Assassin Bow" "Opal Ring" "Lapis Amulet" "Silken Hood" "Jade Amulet" "Void Sceptre" "Penetrating Arrow Quiver" "Vaal Mask" "Two-Stone Ring" "Carnal Mitts" "Legion Sword" "Carnal Armour" "Vaal Gauntlets" "Turquoise Amulet" "Steelscale Gauntlets" "Crusader Gloves" "Titan Greaves" "Triumphant Lamellar" "Leather Belt" "Ruby Flask" "Midnight Blade" "Sinner Tricorne" "Maelström Staff" "Callous Mask" "Blunt Arrow Quiver" "Imperial Skean" "Soldier Gloves" "Two-Point Arrow Quiver" "Murder Mitts"
+	BaseType == "Triumphant Lamellar" "Two-Stone Ring" "Terror Claw" "Amethyst Ring" "Carnal Armour" "Titan Greaves" "Vaal Regalia" "Callous Mask" "Penetrating Arrow Quiver" "Crusader Gloves" "Assassin Bow" "Imperial Skean" "Amber Amulet" "Lapis Amulet" "Maelström Staff" "Midnight Blade" "Carnal Mitts" "Vaal Gauntlets" "Legion Sword" "Sinner Tricorne" "Soldier Gloves" "Steelscale Gauntlets" "Hubris Circlet" "Vaal Mask" "Necromancer Circlet" "Blunt Arrow Quiver" "Turquoise Amulet" "Ruby Flask" "Two-Point Arrow Quiver" "Jade Amulet" "Murder Mitts" "Sorcerer Boots" "Opal Ring" "Agate Amulet" "Sulphur Flask" "Void Sceptre" "Strapped Mitts" "Infernal Sword" "Leather Belt" "Widowsilk Robe" "Silken Hood" "Moonstone Ring" "Vaal Axe"
 	MinimapIcon 2 Cyan Star
 	Rarity Unique
 	SetBackgroundColor 0 0 0 220
@@ -5509,7 +5711,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wrapped Mitts" "Iron Staff" "Plank Kite Shield" "Stiletto" "Antique Greaves" "Ivory Spirit Shield" "Decimation Bow" "Sledgehammer" "Buckskin Tunic" "Iron Hat" "Skinning Knife" "Pine Buckler" "Shagreen Boots" "Crystal Sceptre" "Shadow Sceptre" "Bastard Sword" "Bronzescale Gauntlets" "Poleaxe" "Assassin's Mitts" "Riveted Boots" "Jagged Foil" "Supreme Spiked Shield" "Ironscale Boots" "Chiming Spirit Shield" "Bronze Gauntlets" "Copper Plate" "Estoc" "Mesh Boots" "Deerskin Boots" "Headsman Axe" "Recurve Bow" "Ornate Mace" "Awl" "Titan Gauntlets" "Flaying Knife" "Iron Circlet" "Silk Slippers" "Boot Blade" "Thresher Claw" "Simple Robe" "Imbued Wand" "Dread Maul" "Goat's Horn" "Fire Arrow Quiver" "Plated Greaves" "Royal Bow" "Brass Maul" "War Buckler" "Gnarled Branch" "Harmonic Spirit Shield" "Leather Hood" "Wyrmscale Gauntlets" "Long Bow" "Twilight Blade" "Greater Mana Flask" "Platinum Kris" "Woodsplitter" "Strapped Leather" "Boot Knife" "Grinning Fetish" "Wild Leather" "Golden Mask" "Tarnished Spirit Shield" "Antique Rapier" "Velvet Gloves" "Vine Circlet" "Cleaver" "Great Mallet" "Spidersilk Robe" "Dream Mace" "Basket Rapier" "Studded Round Shield" "Coral Ring" "Cutthroat's Garb" "Velvet Slippers" "Quartz Wand" "Scholar's Robe" "Decorative Axe" "Compound Spiked Shield" "Death Bow" "Ezomyte Staff" "Strapped Boots" "Spiked Club" "Royal Staff" "Tricorne" "Ezomyte Blade" "Nailed Fist" "Samite Gloves" "Vaal Buckler" "Sage's Robe" "Serrated Arrow Quiver" "Prophet Crown" "Ornate Ringmail" "Painted Buckler" "Spiraled Wand" "Latticed Ringmail" "Plate Vest" "Ambusher" "Conquest Chainmail" "Scholar Boots"
+	BaseType == "Woodsplitter" "Estoc" "Tarnished Spirit Shield" "Skinning Knife" "Dream Mace" "Stiletto" "Coral Ring" "Pine Buckler" "Long Bow" "Brass Maul" "Plate Vest" "Decimation Bow" "Sage's Robe" "Flaying Knife" "Compound Spiked Shield" "Painted Buckler" "Ezomyte Blade" "Death Bow" "Studded Round Shield" "Platinum Kris" "Shagreen Boots" "Chiming Spirit Shield" "Assassin's Mitts" "Golden Mask" "Dread Maul" "Iron Circlet" "Ivory Spirit Shield" "Bronzescale Gauntlets" "Plated Greaves" "Tricorne" "Boot Blade" "Imbued Wand" "Scholar's Robe" "Sledgehammer" "Copper Plate" "Ironscale Boots" "Vine Circlet" "War Buckler" "Spidersilk Robe" "Grinning Fetish" "Scholar Boots" "Goat's Horn" "Prophet Crown" "Antique Greaves" "Supreme Spiked Shield" "Ezomyte Staff" "Gnarled Branch" "Great Mallet" "Bastard Sword" "Ornate Ringmail" "Recurve Bow" "Bronze Gauntlets" "Awl" "Titan Gauntlets" "Silk Slippers" "Decorative Axe" "Poleaxe" "Twilight Blade" "Harmonic Spirit Shield" "Velvet Slippers" "Fire Arrow Quiver" "Strapped Leather" "Conquest Chainmail" "Cutthroat's Garb" "Ambusher" "Jagged Foil" "Plank Kite Shield" "Strapped Boots" "Cleaver" "Leather Hood" "Spiked Club" "Quartz Wand" "Wrapped Mitts" "Wyrmscale Gauntlets" "Royal Staff" "Simple Robe" "Nailed Fist" "Latticed Ringmail" "Buckskin Tunic" "Spiraled Wand" "Samite Gloves" "Velvet Gloves" "Serrated Arrow Quiver" "Wild Leather" "Thresher Claw" "Iron Staff" "Ornate Mace" "Iron Hat" "Vaal Buckler" "Mesh Boots" "Boot Knife" "Headsman Axe" "Shadow Sceptre" "Basket Rapier" "Royal Bow" "Crystal Sceptre" "Greater Mana Flask" "Deerskin Boots" "Riveted Boots" "Antique Rapier"
 	Rarity Unique
 	SetBackgroundColor 0 0 0 220
 	SetFontSize 25
@@ -5570,7 +5772,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Awakened Cast On Critical Strike Support" "Awakened Chain Support" "Awakened Curse On Hit Support" "Awakened Multistrike Support" "Awakened Spell Cascade Support" "Awakened Spell Echo Support"
+	BaseType == "Awakened Cast On Critical Strike Support" "Awakened Chain Support" "Awakened Hextouch Support" "Awakened Multistrike Support" "Awakened Spell Cascade Support" "Awakened Spell Echo Support"
 	Corrupted True
 	CustomAlertSound "filter_sounds/200_neutral3.wav"
 	GemLevel >= 6
@@ -5598,7 +5800,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Awakened Curse On Hit Support" "Awakened Multistrike Support"
+	BaseType == "Awakened Hextouch Support" "Awakened Multistrike Support"
 	Corrupted False
 	CustomAlertSound "filter_sounds/200_neutral3.wav"
 	GemLevel >= 5
@@ -5748,7 +5950,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Dustspitter Seed"
+	BaseType == "Primal Cleaveling Seed"
 	CustomAlertSound "filter_sounds/100_death1.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -5760,7 +5962,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Leech Seed" "Wild Hatchling Seed"
+	BaseType == "Vivid Arachnid Seed" "Wild Hatchling Seed"
 	CustomAlertSound "filter_sounds/100_death2.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -5772,7 +5974,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Cleaveling Seed" "Primal Rhoa Seed"
+	BaseType == "Primal Dustspitter Seed" "Vivid Leech Seed" "Wild Hellion Seed"
 	CustomAlertSound "filter_sounds/100_death3.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -5784,20 +5986,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Arachnid Seed"
+	BaseType == "Primal Rhoa Seed" "Wild Thornwolf Seed"
 	CustomAlertSound "filter_sounds/100_death4.wav"
-	MinimapIcon 1 Blue Kite
-	PlayEffect Green
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 44
-	StackSize >= 66
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Wild Hellion Seed" "Wild Thornwolf Seed"
-	CustomAlertSound "filter_sounds/100_death5.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -5821,7 +6011,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Wild Ape Seed"
-	CustomAlertSound "filter_sounds/100_death1.wav"
+	CustomAlertSound "filter_sounds/100_death2.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -5833,7 +6023,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Primal Feasting Horror Seed"
-	CustomAlertSound "filter_sounds/100_death4.wav"
+	CustomAlertSound "filter_sounds/100_death2.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -5857,7 +6047,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Vivid Scorpion Seed"
-	CustomAlertSound "filter_sounds/100_death3.wav"
+	CustomAlertSound "filter_sounds/100_death5.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -5881,7 +6071,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Vivid Striketail Grain"
-	CustomAlertSound "filter_sounds/100_death5.wav"
+	CustomAlertSound "filter_sounds/100_death2.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -5905,7 +6095,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Wild Snap Hound Grain"
-	CustomAlertSound "filter_sounds/100_death4.wav"
+	CustomAlertSound "filter_sounds/100_death5.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -5916,7 +6106,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Scrabbler Grain" "Vivid Thornweaver Seed" "Wild Bristlebeast Grain"
+	BaseType == "Wild Bristlebeast Grain"
 	CustomAlertSound "filter_sounds/100_death1.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -5928,7 +6118,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Nestback Grain" "Vivid Parasite Grain"
+	BaseType == "Primal Chimeral Grain" "Vivid Razorleg Grain"
 	CustomAlertSound "filter_sounds/100_death2.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -5940,7 +6130,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Chimeral Grain" "Primal Dustcrab Grain"
+	BaseType == "Vivid Nestback Grain" "Vivid Parasite Grain"
 	CustomAlertSound "filter_sounds/100_death3.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -5952,7 +6142,19 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Razorleg Grain" "Vivid Sapsucker Grain" "Wild Ursaling Seed"
+	BaseType == "Primal Scrabbler Grain" "Vivid Thornweaver Seed" "Wild Ursaling Seed"
+	CustomAlertSound "filter_sounds/100_death4.wav"
+	MinimapIcon 1 Blue Kite
+	PlayEffect Green
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 44
+	StackSize >= 30
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Primal Dustcrab Grain" "Vivid Sapsucker Grain"
 	CustomAlertSound "filter_sounds/100_death5.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -6000,7 +6202,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Dustspitter Seed"
+	BaseType == "Primal Dustspitter Seed" "Vivid Leech Seed"
 	CustomAlertSound "filter_sounds/75_attack1.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6011,18 +6213,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Hatchling Seed"
-	CustomAlertSound "filter_sounds/75_attack2.wav"
-	MinimapIcon 1 Blue Kite
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 39
-	StackSize >= 22
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Wild Hellion Seed" "Wild Thornwolf Seed"
+	BaseType == "Primal Cleaveling Seed" "Primal Rhoa Seed" "Vivid Arachnid Seed" "Wild Hatchling Seed" "Wild Hellion Seed"
 	CustomAlertSound "filter_sounds/75_attack3.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6033,7 +6224,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Cleaveling Seed" "Vivid Arachnid Seed" "Vivid Leech Seed"
+	BaseType == "Wild Thornwolf Seed"
 	CustomAlertSound "filter_sounds/75_attack5.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6044,19 +6235,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Rhoa Seed"
-	CustomAlertSound "filter_sounds/75_attack6.wav"
-	MinimapIcon 1 Blue Kite
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 39
-	StackSize >= 22
-	DisableDropSound True
-
-#Autogen filter rules
-Show
 	BaseType == "Primal Maw Seed"
-	CustomAlertSound "filter_sounds/75_attack2.wav"
+	CustomAlertSound "filter_sounds/75_attack4.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -6103,7 +6283,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Wild Ape Seed"
-	CustomAlertSound "filter_sounds/75_attack5.wav"
+	CustomAlertSound "filter_sounds/75_attack2.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -6113,7 +6293,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Viper Grain" "Wild Spikeback Grain"
+	BaseType == "Primal Rhex Grain" "Primal Viper Grain" "Wild Hellion Alpha Bulb"
 	CustomAlertSound "filter_sounds/100_death1.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -6125,8 +6305,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Rhex Grain" "Wild Chieftain Grain" "Wild Homunculus Grain"
-	CustomAlertSound "filter_sounds/100_death2.wav"
+	BaseType == "Wild Homunculus Grain"
+	CustomAlertSound "filter_sounds/100_death3.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -6137,19 +6317,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Hellion Alpha Bulb"
-	CustomAlertSound "filter_sounds/100_death4.wav"
-	MinimapIcon 1 Blue Kite
-	PlayEffect Green
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 44
-	StackSize >= 15
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Vivid Watcher Bulb"
+	BaseType == "Vivid Watcher Bulb" "Wild Chieftain Grain" "Wild Spikeback Grain"
 	CustomAlertSound "filter_sounds/100_death5.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -6162,7 +6330,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Primal Feasting Horror Seed"
-	CustomAlertSound "filter_sounds/75_attack6.wav"
+	CustomAlertSound "filter_sounds/75_attack5.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -6185,7 +6353,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Vivid Scorpion Seed"
-	CustomAlertSound "filter_sounds/75_attack6.wav"
+	CustomAlertSound "filter_sounds/75_attack4.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -6218,8 +6386,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Snap Hound Grain"
-	CustomAlertSound "filter_sounds/75_attack4.wav"
+	BaseType == "Vivid Weta Seed"
+	CustomAlertSound "filter_sounds/75_attack1.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -6229,8 +6397,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Weta Seed"
-	CustomAlertSound "filter_sounds/75_attack6.wav"
+	BaseType == "Wild Snap Hound Grain"
+	CustomAlertSound "filter_sounds/75_attack2.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -6252,7 +6420,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Chimeral Grain" "Primal Dustcrab Grain"
+	BaseType == "Primal Scrabbler Grain" "Vivid Sapsucker Grain" "Vivid Thornweaver Seed"
 	CustomAlertSound "filter_sounds/75_attack1.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6263,7 +6431,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Scrabbler Grain" "Vivid Sapsucker Grain"
+	BaseType == "Primal Dustcrab Grain"
 	CustomAlertSound "filter_sounds/75_attack2.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6274,7 +6442,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Razorleg Grain" "Vivid Thornweaver Seed" "Wild Bristlebeast Grain"
+	BaseType == "Vivid Nestback Grain" "Wild Ursaling Seed"
 	CustomAlertSound "filter_sounds/75_attack3.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6285,7 +6453,18 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Nestback Grain" "Vivid Parasite Grain" "Wild Ursaling Seed"
+	BaseType == "Wild Bristlebeast Grain"
+	CustomAlertSound "filter_sounds/75_attack4.wav"
+	MinimapIcon 1 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 39
+	StackSize >= 10
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Vivid Parasite Grain"
 	CustomAlertSound "filter_sounds/75_attack5.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6296,8 +6475,19 @@ Show
 
 #Autogen filter rules
 Show
+	BaseType == "Primal Chimeral Grain" "Vivid Razorleg Grain"
+	CustomAlertSound "filter_sounds/75_attack6.wav"
+	MinimapIcon 1 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 39
+	StackSize >= 10
+	DisableDropSound True
+
+#Autogen filter rules
+Show
 	BaseType == "Wild Brambleback Bulb"
-	CustomAlertSound "filter_sounds/100_death2.wav"
+	CustomAlertSound "filter_sounds/100_death1.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -6309,7 +6499,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Vivid Whipleg Bulb"
-	CustomAlertSound "filter_sounds/100_death5.wav"
+	CustomAlertSound "filter_sounds/100_death2.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -6332,8 +6522,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Rhex Grain" "Wild Homunculus Grain"
-	CustomAlertSound "filter_sounds/75_attack1.wav"
+	BaseType == "Primal Rhex Grain" "Wild Hellion Alpha Bulb" "Wild Spikeback Grain"
+	CustomAlertSound "filter_sounds/75_attack2.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -6354,7 +6544,18 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Viper Grain" "Vivid Watcher Bulb"
+	BaseType == "Wild Homunculus Grain"
+	CustomAlertSound "filter_sounds/75_attack4.wav"
+	MinimapIcon 1 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 39
+	StackSize >= 5
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Vivid Watcher Bulb"
 	CustomAlertSound "filter_sounds/75_attack5.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6365,7 +6566,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Hellion Alpha Bulb" "Wild Spikeback Grain"
+	BaseType == "Primal Viper Grain"
 	CustomAlertSound "filter_sounds/75_attack6.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6376,8 +6577,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Thornmaw Bulb"
-	CustomAlertSound "filter_sounds/100_death1.wav"
+	BaseType == "Primal Cystcaller Bulb"
+	CustomAlertSound "filter_sounds/100_death3.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -6388,8 +6589,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Cystcaller Bulb"
-	CustomAlertSound "filter_sounds/100_death3.wav"
+	BaseType == "Wild Thornmaw Bulb"
+	CustomAlertSound "filter_sounds/100_death4.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -6412,7 +6613,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Cleaveling Seed" "Primal Dustspitter Seed" "Vivid Arachnid Seed"
+	BaseType == "Wild Thornwolf Seed"
 	CustomAlertSound "filter_sounds/20_gethit1.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6423,18 +6624,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Hatchling Seed" "Wild Hellion Seed"
-	CustomAlertSound "filter_sounds/20_gethit2.wav"
-	MinimapIcon 2 Blue Kite
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 32
-	StackSize >= 4
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Primal Maw Seed" "Primal Rhoa Seed" "Vivid Leech Seed"
+	BaseType == "Primal Maw Seed" "Vivid Arachnid Seed"
 	CustomAlertSound "filter_sounds/20_gethit3.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6445,7 +6635,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Thornwolf Seed"
+	BaseType == "Primal Cleaveling Seed" "Primal Dustspitter Seed" "Primal Rhoa Seed" "Vivid Leech Seed" "Wild Hatchling Seed" "Wild Hellion Seed"
 	CustomAlertSound "filter_sounds/20_gethit4.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6456,8 +6646,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Crushclaw Bulb" "Vivid Devourer Bulb"
-	CustomAlertSound "filter_sounds/100_death2.wav"
+	BaseType == "Vivid Abberarach Bulb"
+	CustomAlertSound "filter_sounds/100_death3.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -6468,7 +6658,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Blisterlord Bulb" "Vivid Abberarach Bulb"
+	BaseType == "Primal Blisterlord Bulb" "Primal Crushclaw Bulb"
 	CustomAlertSound "filter_sounds/100_death4.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -6480,18 +6670,19 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Ape Seed"
-	CustomAlertSound "filter_sounds/20_gethit1.wav"
-	MinimapIcon 2 Blue Kite
+	BaseType == "Vivid Devourer Bulb"
+	CustomAlertSound "filter_sounds/100_death5.wav"
+	MinimapIcon 1 Blue Kite
+	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
-	SetFontSize 32
+	SetFontSize 44
 	StackSize >= 3
 	DisableDropSound True
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Striketail Grain"
+	BaseType == "Vivid Striketail Grain" "Wild Ape Seed"
 	CustomAlertSound "filter_sounds/20_gethit2.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6503,7 +6694,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Primal Feasting Horror Seed" "Vivid Scorpion Seed"
-	CustomAlertSound "filter_sounds/20_gethit4.wav"
+	CustomAlertSound "filter_sounds/20_gethit3.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -6514,17 +6705,6 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Wild Brambleback Bulb"
-	CustomAlertSound "filter_sounds/75_attack3.wav"
-	MinimapIcon 1 Blue Kite
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 39
-	StackSize >= 3
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Vivid Whipleg Bulb"
 	CustomAlertSound "filter_sounds/75_attack5.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6535,19 +6715,18 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Rhex Matriarch Bulb" "Wild Bristle Matron Bulb" "Wild Infestation Queen Bulb"
-	CustomAlertSound "filter_sounds/100_death1.wav"
+	BaseType == "Vivid Whipleg Bulb"
+	CustomAlertSound "filter_sounds/75_attack6.wav"
 	MinimapIcon 1 Blue Kite
-	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
-	SetFontSize 44
-	StackSize >= 2
+	SetFontSize 39
+	StackSize >= 3
 	DisableDropSound True
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Reborn Bulb"
+	BaseType == "Wild Infestation Queen Bulb"
 	CustomAlertSound "filter_sounds/100_death2.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -6559,7 +6738,31 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Razorleg Grain" "Vivid Thornweaver Seed" "Wild Snap Hound Grain"
+	BaseType == "Primal Rhex Matriarch Bulb" "Wild Bristle Matron Bulb"
+	CustomAlertSound "filter_sounds/100_death4.wav"
+	MinimapIcon 1 Blue Kite
+	PlayEffect Green
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 44
+	StackSize >= 2
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Primal Reborn Bulb"
+	CustomAlertSound "filter_sounds/100_death5.wav"
+	MinimapIcon 1 Blue Kite
+	PlayEffect Green
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 44
+	StackSize >= 2
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Vivid Thornweaver Seed" "Vivid Weta Seed"
 	CustomAlertSound "filter_sounds/20_gethit1.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6570,7 +6773,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Chimeral Grain" "Primal Dustcrab Grain" "Vivid Nestback Grain" "Vivid Parasite Grain" "Vivid Sapsucker Grain" "Vivid Weta Seed"
+	BaseType == "Primal Chimeral Grain" "Vivid Nestback Grain" "Wild Bristlebeast Grain"
 	CustomAlertSound "filter_sounds/20_gethit2.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6581,7 +6784,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Ursaling Seed"
+	BaseType == "Primal Scrabbler Grain" "Vivid Razorleg Grain" "Wild Snap Hound Grain"
 	CustomAlertSound "filter_sounds/20_gethit3.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6592,7 +6795,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Scrabbler Grain" "Wild Bristlebeast Grain"
+	BaseType == "Primal Dustcrab Grain" "Vivid Parasite Grain" "Vivid Sapsucker Grain" "Wild Ursaling Seed"
 	CustomAlertSound "filter_sounds/20_gethit4.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6604,7 +6807,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Wild Thornmaw Bulb"
-	CustomAlertSound "filter_sounds/75_attack3.wav"
+	CustomAlertSound "filter_sounds/75_attack2.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -6615,7 +6818,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Primal Cystcaller Bulb"
-	CustomAlertSound "filter_sounds/75_attack4.wav"
+	CustomAlertSound "filter_sounds/75_attack5.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -6625,8 +6828,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Blisterfruit"
-	CustomAlertSound "filter_sounds/100_death1.wav"
+	BaseType == "Vivid Scalefruit" "Vivid Vulture Bulb"
+	CustomAlertSound "filter_sounds/100_death2.wav"
 	ItemLevel >= 1
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -6637,7 +6840,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Thornfruit"
+	BaseType == "Primal Blisterfruit" "Wild Thornfruit"
 	CustomAlertSound "filter_sounds/100_death3.wav"
 	ItemLevel >= 1
 	MinimapIcon 1 Blue Kite
@@ -6649,31 +6852,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Vulture Bulb"
-	CustomAlertSound "filter_sounds/100_death4.wav"
-	ItemLevel >= 1
-	MinimapIcon 1 Blue Kite
-	PlayEffect Green
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 44
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Vivid Scalefruit"
-	CustomAlertSound "filter_sounds/100_death5.wav"
-	ItemLevel >= 1
-	MinimapIcon 1 Blue Kite
-	PlayEffect Green
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 44
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Vivid Watcher Bulb" "Vivid Whipleg Bulb" "Wild Chieftain Grain"
+	BaseType == "Vivid Whipleg Bulb" "Wild Hellion Alpha Bulb" "Wild Homunculus Grain"
 	CustomAlertSound "filter_sounds/20_gethit1.wav"
 	ItemLevel >= 1
 	MinimapIcon 2 Blue Kite
@@ -6684,7 +6863,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Viper Grain" "Wild Brambleback Bulb" "Wild Thornmaw Bulb"
+	BaseType == "Primal Cystcaller Bulb" "Primal Viper Grain" "Wild Brambleback Bulb" "Wild Chieftain Grain"
 	CustomAlertSound "filter_sounds/20_gethit2.wav"
 	ItemLevel >= 1
 	MinimapIcon 2 Blue Kite
@@ -6695,7 +6874,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wild Hellion Alpha Bulb"
+	BaseType == "Primal Rhex Grain" "Vivid Watcher Bulb" "Wild Thornmaw Bulb"
 	CustomAlertSound "filter_sounds/20_gethit3.wav"
 	ItemLevel >= 1
 	MinimapIcon 2 Blue Kite
@@ -6706,7 +6885,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Cystcaller Bulb" "Primal Rhex Grain" "Wild Homunculus Grain" "Wild Spikeback Grain"
+	BaseType == "Wild Spikeback Grain"
 	CustomAlertSound "filter_sounds/20_gethit4.wav"
 	ItemLevel >= 1
 	MinimapIcon 2 Blue Kite
@@ -6717,7 +6896,29 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vivid Abberarach Bulb" "Vivid Devourer Bulb"
+	BaseType == "Primal Blisterlord Bulb" "Vivid Abberarach Bulb" "Wild Bristle Matron Bulb" "Wild Infestation Queen Bulb"
+	CustomAlertSound "filter_sounds/75_attack1.wav"
+	ItemLevel >= 1
+	MinimapIcon 1 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 39
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Vivid Devourer Bulb"
+	CustomAlertSound "filter_sounds/75_attack2.wav"
+	ItemLevel >= 1
+	MinimapIcon 1 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 39
+	DisableDropSound True
+
+#Autogen filter rules
+Show
+	BaseType == "Primal Crushclaw Bulb"
 	CustomAlertSound "filter_sounds/75_attack3.wav"
 	ItemLevel >= 1
 	MinimapIcon 1 Blue Kite
@@ -6728,19 +6929,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Primal Blisterlord Bulb" "Primal Crushclaw Bulb" "Primal Rhex Matriarch Bulb" "Wild Bristle Matron Bulb" "Wild Infestation Queen Bulb"
-	CustomAlertSound "filter_sounds/75_attack4.wav"
-	ItemLevel >= 1
-	MinimapIcon 1 Blue Kite
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 39
-	DisableDropSound True
-
-#Autogen filter rules
-Show
-	BaseType == "Primal Reborn Bulb"
-	CustomAlertSound "filter_sounds/75_attack6.wav"
+	BaseType == "Primal Reborn Bulb" "Primal Rhex Matriarch Bulb"
+	CustomAlertSound "filter_sounds/75_attack5.wav"
 	ItemLevel >= 1
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6759,7 +6949,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Arcane Surge Support" "Barrage Support" "Cast On Critical Strike Support" "Cast when Damage Taken Support" "Concentrated Effect Support" "Curse On Hit Support" "Cyclone" "Damage on Full Life Support" "Dash" "Elemental Weakness" "Energy Leech Support" "Greater Multiple Projectiles Support" "Hatred" "Herald of Ash" "Herald of Ice" "Herald of Thunder" "Hypothermia Support" "Ice Nova" "Immortal Call" "Impale Support" "Increased Duration Support" "Infused Channelling Support" "Inspiration Support" "Multistrike Support" "Power Charge On Critical Support" "Precision" "Second Wind Support" "Unleash Support"
+	BaseType == "Arcane Surge Support" "Barrage Support" "Cast On Critical Strike Support" "Cast when Damage Taken Support" "Concentrated Effect Support" "Hextouch Support" "Cyclone" "Damage on Full Life Support" "Dash" "Elemental Weakness" "Energy Leech Support" "Greater Multiple Projectiles Support" "Hatred" "Herald of Ash" "Herald of Ice" "Herald of Thunder" "Hypothermia Support" "Ice Nova" "Immortal Call" "Impale Support" "Increased Duration Support" "Infused Channelling Support" "Inspiration Support" "Multistrike Support" "Power Charge On Critical Support" "Precision" "Second Wind Support" "Unleash Support"
 	Corrupted False
 	CustomAlertSound "filter_sounds/100_gem.wav"
 	GemLevel >= 1
@@ -6773,7 +6963,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Added Chaos Damage Support" "Added Cold Damage Support" "Added Lightning Damage Support" "Ancestral Call Support" "Anger" "Animate Guardian" "Arc" "Archmage Support" "Arctic Armour" "Assassin's Mark" "Ball Lightning" "Ballista Totem Support" "Barrage" "Berserk" "Blade Blast" "Blade Vortex" "Bladefall" "Blasphemy Support" "Blastchain Mine Support" "Blood Magic Support" "Blood Rage" "Blood and Sand" "Bonechill Support" "Brutality Support" "Burning Damage Support" "Cast while Channelling Support" "Chain Support" "Chance to Bleed Support" "Clarity" "Close Combat Support" "Cold Penetration Support" "Cold Snap" "Cold to Fire Support" "Combustion Support" "Conductivity" "Controlled Destruction Support" "Culling Strike Support" "Deadly Ailments Support" "Deathmark Support" "Desecrate" "Despair" "Determination" "Discipline" "Dread Banner" "Efficacy Support" "Elemental Army Support" "Elemental Damage with Attacks Support" "Elemental Focus Support" "Elemental Hit" "Enduring Cry" "Enfeeble" "Essence Drain" "Ethereal Knives" "Faster Attacks Support" "Faster Casting Support" "Faster Projectiles Support" "Feeding Frenzy Support" "Fire Penetration Support" "Fist of War Support" "Flame Dash" "Flammability" "Flesh and Stone" "Flicker Strike" "Fork Support" "Fortify Support" "Freezing Pulse" "Frenzy" "Frost Blades" "Frost Bomb" "Frost Wall" "Frostbite" "Frostbolt" "Generosity Support" "Grace" "Haste" "Herald of Purity" "High-Impact Mine Support" "Ice Bite Support" "Ice Shot" "Ice Spear" "Increased Area of Effect Support" "Increased Critical Damage Support" "Increased Critical Strikes Support" "Innervate Support" "Intensify Support" "Item Rarity Support" "Kinetic Blast" "Lacerate" "Leap Slam" "Less Duration Support" "Lesser Multiple Projectiles Support" "Lightning Penetration Support" "Maim Support" "Malevolence" "Melee Physical Damage Support" "Melee Splash Support" "Minefield Support" "Minion Damage Support" "Minion Life Support" "Mirage Archer Support" "Molten Shell" "Multiple Totems Support" "Onslaught Support" "Orb of Storms" "Penance Brand" "Phase Run" "Physical to Lightning Support" "Pierce Support" "Poison Support" "Power Siphon" "Pride" "Projectile Weakness" "Pulverise Support" "Purity of Elements" "Purity of Fire" "Purity of Ice" "Rage Support" "Raise Spectre" "Raise Zombie" "Righteous Fire" "Ruthless Support" "Shield Charge" "Shock Nova" "Slower Projectiles Support" "Smite" "Spell Cascade Support" "Spell Echo Support" "Spell Totem Support" "Spellslinger" "Split Arrow" "Steelskin" "Storm Brand" "Summon Carrion Golem" "Summon Skitterbots" "Summon Stone Golem" "Sweep" "Swift Affliction Support" "Swift Assembly Support" "Swiftbrand Support" "Tempest Shield" "Temporal Chains" "Tornado Shot" "Toxic Rain" "Trap and Mine Damage Support" "Unbound Ailments Support" "Urgent Orders Support" "Vicious Projectiles Support" "Vile Toxins Support" "Vitality" "Void Manipulation Support" "Volatile Dead" "Vortex" "Vulnerability" "War Banner" "Wave of Conviction" "Wither" "Withering Step" "Withering Touch Support" "Wrath" "Zealotry"
+	BaseType == "Added Chaos Damage Support" "Added Cold Damage Support" "Added Lightning Damage Support" "Ancestral Call Support" "Anger" "Animate Guardian" "Arc" "Archmage Support" "Arctic Armour" "Assassin's Mark" "Ball Lightning" "Ballista Totem Support" "Barrage" "Berserk" "Blade Blast" "Blade Vortex" "Bladefall" "Blasphemy Support" "Blastchain Mine Support" "Blood Magic Support" "Blood Rage" "Blood and Sand" "Bonechill Support" "Brutality Support" "Burning Damage Support" "Cast while Channelling Support" "Chain Support" "Chance to Bleed Support" "Clarity" "Close Combat Support" "Cold Penetration Support" "Cold Snap" "Cold to Fire Support" "Combustion Support" "Conductivity" "Controlled Destruction Support" "Culling Strike Support" "Deadly Ailments Support" "Deathmark Support" "Desecrate" "Despair" "Determination" "Discipline" "Dread Banner" "Efficacy Support" "Elemental Army Support" "Elemental Damage with Attacks Support" "Elemental Focus Support" "Elemental Hit" "Enduring Cry" "Enfeeble" "Essence Drain" "Ethereal Knives" "Faster Attacks Support" "Faster Casting Support" "Faster Projectiles Support" "Feeding Frenzy Support" "Fire Penetration Support" "Fist of War Support" "Flame Dash" "Flammability" "Flesh and Stone" "Flicker Strike" "Fork Support" "Fortify Support" "Freezing Pulse" "Frenzy" "Frost Blades" "Frost Bomb" "Frost Wall" "Frostbite" "Frostbolt" "Generosity Support" "Grace" "Haste" "Herald of Purity" "High-Impact Mine Support" "Ice Bite Support" "Ice Shot" "Ice Spear" "Increased Area of Effect Support" "Increased Critical Damage Support" "Increased Critical Strikes Support" "Innervate Support" "Intensify Support" "Item Rarity Support" "Kinetic Blast" "Lacerate" "Leap Slam" "Less Duration Support" "Lesser Multiple Projectiles Support" "Lightning Penetration Support" "Maim Support" "Malevolence" "Melee Physical Damage Support" "Melee Splash Support" "Minefield Support" "Minion Damage Support" "Minion Life Support" "Mirage Archer Support" "Molten Shell" "Multiple Totems Support" "Onslaught Support" "Orb of Storms" "Penance Brand" "Phase Run" "Physical to Lightning Support" "Pierce Support" "Poison Support" "Power Siphon" "Pride" "Sniper's Mark" "Pulverise Support" "Purity of Elements" "Purity of Fire" "Purity of Ice" "Rage Support" "Raise Spectre" "Raise Zombie" "Righteous Fire" "Ruthless Support" "Shield Charge" "Shock Nova" "Slower Projectiles Support" "Smite" "Spell Cascade Support" "Spell Echo Support" "Spell Totem Support" "Spellslinger" "Split Arrow" "Steelskin" "Storm Brand" "Summon Carrion Golem" "Summon Skitterbots" "Summon Stone Golem" "Sweep" "Swift Affliction Support" "Swift Assembly Support" "Swiftbrand Support" "Tempest Shield" "Temporal Chains" "Tornado Shot" "Toxic Rain" "Trap and Mine Damage Support" "Unbound Ailments Support" "Urgent Orders Support" "Vicious Projectiles Support" "Vile Toxins Support" "Vitality" "Void Manipulation Support" "Volatile Dead" "Vortex" "Vulnerability" "War Banner" "Wave of Conviction" "Wither" "Withering Step" "Withering Touch Support" "Wrath" "Zealotry"
 	Corrupted False
 	CustomAlertSound "filter_sounds/75_gem.wav"
 	GemLevel >= 1
@@ -6814,7 +7004,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Awakened Curse On Hit Support" "Awakened Greater Multiple Projectiles Support" "Awakened Multistrike Support"
+	BaseType == "Awakened Hextouch Support" "Awakened Greater Multiple Projectiles Support" "Awakened Multistrike Support"
 	Corrupted False
 	CustomAlertSound "filter_sounds/200_neutral3.wav"
 	GemLevel >= 1
@@ -6951,7 +7141,7 @@ Show
 Show
 	Class "Maps"
 	BlightedMap True
-	CustomAlertSound "filter_sounds/75_attack4.wav"
+	CustomAlertSound "filter_sounds/75_attack1.wav"
 	MapTier >= 11
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6963,7 +7153,7 @@ Show
 Show
 	Class "Maps"
 	BlightedMap True
-	CustomAlertSound "filter_sounds/20_gethit2.wav"
+	CustomAlertSound "filter_sounds/20_gethit1.wav"
 	MapTier <= 5
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -6975,7 +7165,7 @@ Show
 Show
 	Class "Maps"
 	BlightedMap True
-	CustomAlertSound "filter_sounds/20_gethit4.wav"
+	CustomAlertSound "filter_sounds/20_gethit1.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -8342,7 +8532,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType == "Ranger Bow" "Assassin Bow" "Spine Bow" "Throat Stabber" "Hellion's Paw" "Eye Gouger" "Ambusher" "Slaughter Knife" "Ezomyte Dagger" "Platinum Kris" "Siege Axe" "Reaver Axe" "Butcher Axe" "Gavel" "Legion Hammer" "Pernarch" "Gladius" "Legion Sword" "Vaal Blade" "Opal Sceptre" "Platinum Sceptre" "Vaal Sceptre" "Foul Staff" "Ezomyte Staff" "Maelström Staff" "Lathi" "Tempered Foil" "Pecoraro" "Spiraled Foil" "Sundering Axe" "Ezomyte Axe" "Vaal Axe" "Colossus Mallet" "Piledriver" "Meatgrinder" "Reaver Sword" "Ezomyte Blade" "Vaal Greatsword" "Imbued Wand" "Opal Wand" "Crusader Plate" "Astral Plate" "Destiny Leather" "Exquisite Leather" "Necromancer Silks" "Occultist's Vestment" "Sentinel Jacket" "Varnished Coat" "Loricated Ringmail" "Conquest Chainmail" "Elegant Ringmail" "Desert Brigandine" "Full Dragonscale" "Goliath Greaves" "Vaal Greaves" "Conjurer Boots" "Arcanist Slippers" "Shagreen Boots" "Stealth Boots" "Legion Boots" "Crusader Boots" "Carnal Boots" "Assassin's Boots" "Hydrascale Boots" "Goliath Gauntlets" "Vaal Gauntlets" "Shagreen Gloves" "Stealth Gloves" "Arcanist Gloves" "Hydrascale Gauntlets" "Assassin's Mitts" "Legion Gloves" "Ezomyte Burgonet" "Silken Hood" "Sinner Tricorne" "Solaris Circlet" "Harlequin Mask" "Vaal Mask" "Fluted Bascinet" "Pig-Faced Bascinet" "Magistrate Crown" "Prophet Crown" "Shagreen Tower Shield" "Ebony Tower Shield" "Ezomyte Tower Shield" "Lacquered Buckler" "Vaal Buckler" "Fossilised Spirit Shield" "Vaal Spirit Shield" "Alder Spiked Shield" "Ezomyte Spiked Shield" "Teak Round Shield" "Spiny Round Shield" "Branded Kite Shield" "Champion Kite Shield" "Mandible Talisman" "Hexclaw Talisman" "Primal Skull Talisman" "Wereclaw Talisman" "Splitnewt Talisman" "Clutching Talisman" "Avian Twins Talisman" "Fangjaw Talisman" "Horned Talisman" "Spinefuse Talisman" "Three Rat Talisman" "Monkey Twins Talisman" "Longtooth Talisman" "Rotfeather Talisman" "Monkey Paw Talisman" "Three Hands Talisman" "Jet Amulet" "Black Maw Talisman" "Bonespire Talisman" "Ashscale Talisman" "Lone Antler Talisman" "Deep One Talisman" "Breakrib Talisman" "Deadhand Talisman" "Undying Flesh Talisman" "Rot Head Talisman" "Paua Amulet" "Coral Amulet" "Jade Amulet" "Amber Amulet" "Lapis Amulet" "Gold Amulet" "Agate Amulet" "Turquoise Amulet" "Citrine Amulet" "Onyx Amulet" "Writhing Talisman" "Chrysalis Talisman" "Ruby Amulet" "Stygian Vise" "Rustic Sash" "Chain Belt" "Heavy Belt" "Leather Belt" "Golden Obi" "Cloth Belt" "Studded Belt" "Breach Ring" "Iron Ring" "Coral Ring" "Paua Ring" "Sapphire Ring" "Golden Hoop" "Topaz Ring" "Jet Ring" "Ruby Ring" "Gold Ring" "Two-Stone Ring" "Diamond Ring" "Moonstone Ring" "Prismatic Ring" "Amethyst Ring" "Unset Ring" "Spike-Point Arrow Quiver"
+	BaseType == "Hedron Bow" "Foundry Bow" "Solarine Bow" "Ranger Bow" "Assassin Bow" "Spine Bow" "Shadow Fangs" "Malign Fangs" "Void Fangs" "Throat Stabber" "Hellion's Paw" "Eye Gouger" "Hollowpoint Dagger" "Pressurised Dagger" "Pneumatic Dagger" "Ambusher" "Flickerflame Blade" "Flashfire Blade" "Infernal Blade" "Slaughter Knife" "Ezomyte Dagger" "Platinum Kris" "Maltreatment Axe" "Disapprobation Axe" "Psychotic Axe" "Siege Axe" "Reaver Axe" "Butcher Axe" "Flare Mace" "Crack Mace" "Boom Mace" "Gavel" "Legion Hammer" "Pernach" "Fickle Spiritblade" "Capricious Spiritblade" "Anarchic Spiritblade" "Gladius" "Legion Sword" "Vaal Blade" "Oscillating Sceptre" "Stabilising Sceptre" "Alternating Sceptre" "Opal Sceptre" "Platinum Sceptre" "Vaal Sceptre" "Capacity Rod" "Potentiality Rod" "Eventuality Rod" "Foul Staff" "Ezomyte Staff" "Maelström Staff" "Transformer Staff" "Reciprocation Staff" "Battery Staff" "Lathi" "Tempered Foil" "Pecoraro" "Spiraled Foil" "Prime Cleaver" "Honed Cleaver" "Apex Cleaver" "Sundering Axe" "Ezomyte Axe" "Vaal Axe" "Blunt Force Condenser" "Crushing Force Magnifier" "Impact Force Propagator" "Colossus Mallet" "Piledriver" "Meatgrinder" "Rebuking Blade" "Blasting Blade" "Banishing Blade" "Reaver Sword" "Ezomyte Blade" "Vaal Greatsword" "Assembler Wand" "Congregator Wand" "Accumulator Wand" "Imbued Wand" "Opal Wand" "Crusader Plate" "Astral Plate" "Destiny Leather" "Exquisite Leather" "Necromancer Silks" "Occultist's Vestment" "Sentinel Jacket" "Varnished Coat" "Loricated Ringmail" "Conquest Chainmail" "Elegant Ringmail" "Desert Brigandine" "Full Dragonscale" "Goliath Greaves" "Vaal Greaves" "Conjurer Boots" "Arcanist Slippers" "Shagreen Boots" "Stealth Boots" "Legion Boots" "Crusader Boots" "Carnal Boots" "Assassin's Boots" "Hydrascale Boots" "Goliath Gauntlets" "Vaal Gauntlets" "Shagreen Gloves" "Stealth Gloves" "Arcanist Gloves" "Hydrascale Gauntlets" "Assassin's Mitts" "Legion Gloves" "Ezomyte Burgonet" "Silken Hood" "Sinner Tricorne" "Solaris Circlet" "Harlequin Mask" "Vaal Mask" "Fluted Bascinet" "Pig-Faced Bascinet" "Magistrate Crown" "Prophet Crown" "Exothermic Tower Shield" "Magmatic Tower Shield" "Heat-attuned Tower Shield" "Shagreen Tower Shield" "Ebony Tower Shield" "Ezomyte Tower Shield" "Endothermic Buckler" "Polar Buckler" "Cold-attuned Buckler" "Lacquered Buckler" "Vaal Buckler" "Exhausting Spirit Shield" "Subsuming Spirit Shield" "Transfer-attuned Spirit Shield" "Fossilised Spirit Shield" "Vaal Spirit Shield" "Alder Spiked Shield" "Ezomyte Spiked Shield" "Teak Round Shield" "Spiny Round Shield" "Branded Kite Shield" "Champion Kite Shield" "Astrolabe Amulet" "Simplex Amulet" "Mandible Talisman" "Hexclaw Talisman" "Primal Skull Talisman" "Wereclaw Talisman" "Splitnewt Talisman" "Clutching Talisman" "Avian Twins Talisman" "Fangjaw Talisman" "Horned Talisman" "Spinefuse Talisman" "Three Rat Talisman" "Monkey Twins Talisman" "Longtooth Talisman" "Rotfeather Talisman" "Monkey Paw Talisman" "Three Hands Talisman" "Jet Amulet" "Black Maw Talisman" "Bonespire Talisman" "Ashscale Talisman" "Lone Antler Talisman" "Deep One Talisman" "Breakrib Talisman" "Deadhand Talisman" "Undying Flesh Talisman" "Rot Head Talisman" "Paua Amulet" "Coral Amulet" "Jade Amulet" "Amber Amulet" "Lapis Amulet" "Gold Amulet" "Agate Amulet" "Turquoise Amulet" "Citrine Amulet" "Onyx Amulet" "Writhing Talisman" "Chrysalis Talisman" "Ruby Amulet" "Micro-Distillery Belt" "Mechalarm Belt" "Stygian Vise" "Rustic Sash" "Chain Belt" "Heavy Belt" "Leather Belt" "Golden Obi" "Cloth Belt" "Studded Belt" "Cogwork Ring" "Geodesic Ring" "Breach Ring" "Iron Ring" "Coral Ring" "Paua Ring" "Sapphire Ring" "Golden Hoop" "Topaz Ring" "Jet Ring" "Ruby Ring" "Gold Ring" "Two-Stone Ring" "Diamond Ring" "Moonstone Ring" "Prismatic Ring" "Amethyst Ring" "Unset Ring" "Spike-Point Arrow Quiver"
 	AreaLevel <= 64
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -8362,7 +8552,7 @@ Show
 
 #Rare item for leveling
 Show
-	BaseType == "Rusted Hatchet" "Driftwood Wand" "Plate Vest"
+	BaseType == "Rusted Hatchet" "Plate Vest"
 	AreaLevel <= 9
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
@@ -8485,6 +8675,17 @@ Show
 
 #Rare item highlighting for endgame
 Show
+	BaseType == "Astrolabe Amulet" "Simplex Amulet" "Micro-Distillery Belt" "Mechalarm Belt" "Cogwork Ring" "Geodesic Ring"
+	ItemLevel >= 84
+	MinimapIcon 2 Yellow Circle
+	Rarity Rare
+	SetBackgroundColor 38 0 86 220
+	SetBorderColor 191 91 0 150
+	SetFontSize 39
+	DisableDropSound True
+
+#Rare item highlighting for endgame
+Show
 	BaseType == "Spinefuse Talisman" "Marble Amulet" "Stygian Vise" "Prismatic Ring" "Opal Ring" "Steel Ring" "Vermillion Ring"
 	ItemLevel >= 84
 	Rarity Rare
@@ -8589,7 +8790,7 @@ Show
 
 #Rare item highlighting for endgame
 Show
-	BaseType == "Assassin Bow" "Gut Ripper" "Noble Claw" "Twin Claw" "Vaal Claw" "Terror Claw" "Ambusher" "Copper Kris" "Golden Kris" "Royal Axe" "Infernal Axe" "Pernarch" "Gladius" "Legion Sword" "Tiger Hook" "Horned Sceptre" "Abyssal Sceptre" "Stag Sceptre" "Platinum Sceptre" "Maelström Staff" "Imperial Staff" "Thorn Rapier" "Apex Rapier" "Pecoraro" "Vaal Rapier" "Dragoon Sword" "Talon Axe" "Sundering Axe" "Ezomyte Axe" "Piledriver" "Meatgrinder" "Reaver Sword" "Lion Sword" "Pagan Wand" "Crystal Wand" "Heathen Wand" "Golden Plate" "Crusader Plate" "Destiny Leather" "Occultist's Vestment" "Varnished Coat" "Blood Raiment" "Conquest Chainmail" "Saint's Hauberk" "Battle Lamellar" "Dragonscale Doublet" "Goliath Greaves" "Conjurer Boots" "Shagreen Boots" "Legion Boots" "Carnal Boots" "Hydrascale Boots" "Goliath Gauntlets" "Shagreen Gloves" "Conjurer Gloves" "Wyrmscale Gauntlets" "Assassin's Mitts" "Legion Gloves" "Samite Helmet" "Silken Hood" "Solaris Circlet" "Vaal Mask" "Fluted Bascinet" "Prophet Crown" "Ebony Tower Shield" "Crusader Buckler" "Vaal Spirit Shield" "Sovereign Spiked Shield" "Cardinal Round Shield" "Layered Kite Shield" "Laminated Kite Shield" "Mosaic Kite Shield" "Gold Amulet" "Chain Belt" "Cloth Belt" "Studded Belt" "Broadhead Arrow Quiver"
+	BaseType == "Assassin Bow" "Gut Ripper" "Noble Claw" "Twin Claw" "Vaal Claw" "Terror Claw" "Ambusher" "Copper Kris" "Golden Kris" "Royal Axe" "Infernal Axe" "Pernach" "Gladius" "Legion Sword" "Tiger Hook" "Horned Sceptre" "Abyssal Sceptre" "Stag Sceptre" "Platinum Sceptre" "Maelström Staff" "Imperial Staff" "Thorn Rapier" "Apex Rapier" "Pecoraro" "Vaal Rapier" "Dragoon Sword" "Talon Axe" "Sundering Axe" "Ezomyte Axe" "Piledriver" "Meatgrinder" "Reaver Sword" "Lion Sword" "Pagan Wand" "Crystal Wand" "Heathen Wand" "Golden Plate" "Crusader Plate" "Destiny Leather" "Occultist's Vestment" "Varnished Coat" "Blood Raiment" "Conquest Chainmail" "Saint's Hauberk" "Battle Lamellar" "Dragonscale Doublet" "Goliath Greaves" "Conjurer Boots" "Shagreen Boots" "Legion Boots" "Carnal Boots" "Hydrascale Boots" "Goliath Gauntlets" "Shagreen Gloves" "Conjurer Gloves" "Wyrmscale Gauntlets" "Assassin's Mitts" "Legion Gloves" "Samite Helmet" "Silken Hood" "Solaris Circlet" "Vaal Mask" "Fluted Bascinet" "Prophet Crown" "Ebony Tower Shield" "Crusader Buckler" "Vaal Spirit Shield" "Sovereign Spiked Shield" "Cardinal Round Shield" "Layered Kite Shield" "Laminated Kite Shield" "Mosaic Kite Shield" "Gold Amulet" "Chain Belt" "Cloth Belt" "Studded Belt" "Broadhead Arrow Quiver"
 	HasInfluence Crusader Elder Hunter Redeemer Shaper Warlord
 	ItemLevel >= 73
 	Rarity Rare
@@ -8632,12 +8833,35 @@ Show
 
 #Rare item highlighting for endgame
 Show
-	BaseType == "Driftwood Sceptre" "Darkwood Sceptre" "Bronze Sceptre" "Quartz Sceptre" "Iron Sceptre" "Ochre Sceptre" "Ritual Sceptre" "Shadow Sceptre" "Grinning Fetish" "Sekhem" "Crystal Sceptre" "Lead Sceptre" "Blood Sceptre" "Royal Sceptre" "Karui Sceptre" "Tyrant's Sekhem" "Driftwood Wand" "Goat's Horn" "Carved Wand" "Quartz Wand" "Spiraled Wand" "Sage Wand" "Faun's Horn" "Engraved Wand" "Serpent Wand" "Omen Wand" "Plate Vest" "Chestplate" "Copper Plate" "War Plate" "Full Plate" "Arena Plate" "Lordly Plate" "Bronze Plate" "Battle Plate" "Sun Plate" "Colosseum Plate" "Majestic Plate" "Shabby Jerkin" "Strapped Leather" "Buckskin Tunic" "Wild Leather" "Full Leather" "Sun Leather" "Thief's Garb" "Eelskin Tunic" "Frontier Leather" "Glorious Leather" "Coronal Leather" "Cutthroat's Garb" "Sharkskin Tunic" "Simple Robe" "Silken Vest" "Scholar's Robe" "Silken Garb" "Mage's Vestment" "Silk Robe" "Cabalist Regalia" "Sage's Robe" "Silken Wrap" "Conjurer's Vestment" "Spidersilk Robe" "Destroyer Regalia" "Savant's Robe" "Necromancer Silks" "Padded Vest" "Oiled Vest" "Padded Jacket" "Oiled Coat" "Scarlet Raiment" "Waxed Garb" "Bone Armour" "Quilted Jacket" "Sleek Coat" "Crimson Raiment" "Lacquered Garb" "Crypt Armour" "Sentinel Jacket" "Chainmail Vest" "Chainmail Tunic" "Ringmail Coat" "Chainmail Doublet" "Full Ringmail" "Full Chainmail" "Holy Chainmail" "Latticed Ringmail" "Crusader Chainmail" "Ornate Ringmail" "Chain Hauberk" "Devout Chainmail" "Loricated Ringmail" "Scale Vest" "Light Brigandine" "Scale Doublet" "Infantry Brigandine" "Full Scale Armour" "Soldier's Brigandine" "Field Lamellar" "Wyrmscale Doublet" "Hussar Brigandine" "Full Wyrmscale" "Commander's Brigandine" "Iron Greaves" "Steel Greaves" "Plated Greaves" "Reinforced Greaves" "Antique Greaves" "Ancient Greaves" "Wool Shoes" "Velvet Slippers" "Silk Slippers" "Scholar Boots" "Satin Slippers" "Samite Slippers" "Rawhide Boots" "Goathide Boots" "Deerskin Boots" "Nubuck Boots" "Eelskin Boots" "Sharkskin Boots" "Chain Boots" "Ringmail Boots" "Mesh Boots" "Riveted Boots" "Zealot Boots" "Soldier Boots" "Wrapped Boots" "Strapped Boots" "Clasped Boots" "Shackled Boots" "Trapper Boots" "Ambush Boots" "Leatherscale Boots" "Ironscale Boots" "Bronzescale Boots" "Steelscale Boots" "Serpentscale Boots" "Wyrmscale Boots" "Iron Gauntlets" "Plated Gauntlets" "Bronze Gauntlets" "Steel Gauntlets" "Antique Gauntlets" "Ancient Gauntlets" "Rawhide Gloves" "Goathide Gloves" "Deerskin Gloves" "Nubuck Gloves" "Eelskin Gloves" "Sharkskin Gloves" "Wool Gloves" "Velvet Gloves" "Silk Gloves" "Embroidered Gloves" "Satin Gloves" "Samite Gloves" "Fishscale Gauntlets" "Ironscale Gauntlets" "Bronzescale Gauntlets" "Steelscale Gauntlets" "Serpentscale Gauntlets" "Wrapped Mitts" "Strapped Mitts" "Clasped Mitts" "Trapper Mitts" "Ambush Mitts" "Carnal Mitts" "Chain Gloves" "Ringmail Gloves" "Mesh Gloves" "Riveted Gloves" "Zealot Gloves" "Soldier Gloves" "Iron Hat" "Cone Helmet" "Barbute Helmet" "Close Helmet" "Gladiator Helmet" "Reaver Helmet" "Siege Helmet" "Leather Cap" "Tricorne" "Leather Hood" "Wolf Pelt" "Hunter Hood" "Noble Tricorne" "Ursine Pelt" "Vine Circlet" "Iron Circlet" "Torture Cage" "Tribal Circlet" "Bone Circlet" "Lunaris Circlet" "Steel Circlet" "Necromancer Circlet" "Scare Mask" "Plague Mask" "Iron Mask" "Festival Mask" "Golden Mask" "Raven Mask" "Callous Mask" "Regicide Mask" "Harlequin Mask" "Battered Helm" "Sallet" "Visored Sallet" "Gilded Sallet" "Secutor Helm" "Fencer Helm" "Lacquered Helmet" "Rusted Coif" "Soldier Helmet" "Great Helmet" "Crusader Helmet" "Aventail Helmet" "Zealot Helmet" "Great Crown" "Magistrate Crown" "Splintered Tower Shield" "Corroded Tower Shield" "Rawhide Tower Shield" "Cedar Tower Shield" "Copper Tower Shield" "Reinforced Tower Shield" "Painted Tower Shield" "Buckskin Tower Shield" "Mahogany Tower Shield" "Bronze Tower Shield" "Girded Tower Shield" "Crested Tower Shield" "Shagreen Tower Shield" "Goathide Buckler" "Pine Buckler" "Painted Buckler" "Hammered Buckler" "War Buckler" "Gilded Buckler" "Oak Buckler" "Enameled Buckler" "Corrugated Buckler" "Battle Buckler" "Golden Buckler" "Ironwood Buckler" "Vaal Buckler" "Twig Spirit Shield" "Yew Spirit Shield" "Bone Spirit Shield" "Tarnished Spirit Shield" "Jingling Spirit Shield" "Brass Spirit Shield" "Walnut Spirit Shield" "Ivory Spirit Shield" "Ancient Spirit Shield" "Chiming Spirit Shield" "Thorium Spirit Shield" "Lacewood Spirit Shield" "Spiked Bundle" "Driftwood Spiked Shield" "Alloyed Spiked Shield" "Burnished Spiked Shield" "Ornate Spiked Shield" "Redwood Spiked Shield" "Compound Spiked Shield" "Polished Spiked Shield" "Ezomyte Spiked Shield" "Mirrored Spiked Shield" "Rotted Round Shield" "Fir Round Shield" "Studded Round Shield" "Scarlet Round Shield" "Splendid Round Shield" "Maple Round Shield" "Spiked Round Shield" "Crimson Round Shield" "Baroque Round Shield" "Teak Round Shield" "Spiny Round Shield" "Plank Kite Shield" "Linden Kite Shield" "Reinforced Kite Shield" "Etched Kite Shield" "Steel Kite Shield" "Branded Kite Shield" "Paua Amulet" "Coral Amulet" "Breach Ring" "Iron Ring" "Paua Ring" "Gold Ring" "Two-Point Arrow Quiver" "Serrated Arrow Quiver" "Sharktooth Arrow Quiver" "Blunt Arrow Quiver" "Fire Arrow Quiver"
+	BaseType == "Driftwood Sceptre" "Darkwood Sceptre" "Bronze Sceptre" "Quartz Sceptre" "Iron Sceptre" "Ochre Sceptre" "Ritual Sceptre" "Shadow Sceptre" "Grinning Fetish" "Sekhem" "Crystal Sceptre" "Lead Sceptre" "Blood Sceptre" "Royal Sceptre" "Karui Sceptre" "Tyrant's Sekhem" "Goat's Horn" "Carved Wand" "Quartz Wand" "Spiraled Wand" "Sage Wand" "Faun's Horn" "Engraved Wand" "Serpent Wand" "Omen Wand" "Plate Vest" "Chestplate" "Copper Plate" "War Plate" "Full Plate" "Arena Plate" "Lordly Plate" "Bronze Plate" "Battle Plate" "Sun Plate" "Colosseum Plate" "Majestic Plate" "Shabby Jerkin" "Strapped Leather" "Buckskin Tunic" "Wild Leather" "Full Leather" "Sun Leather" "Thief's Garb" "Eelskin Tunic" "Frontier Leather" "Glorious Leather" "Coronal Leather" "Cutthroat's Garb" "Sharkskin Tunic" "Simple Robe" "Silken Vest" "Scholar's Robe" "Silken Garb" "Mage's Vestment" "Silk Robe" "Cabalist Regalia" "Sage's Robe" "Silken Wrap" "Conjurer's Vestment" "Spidersilk Robe" "Destroyer Regalia" "Savant's Robe" "Necromancer Silks" "Padded Vest" "Oiled Vest" "Padded Jacket" "Oiled Coat" "Scarlet Raiment" "Waxed Garb" "Bone Armour" "Quilted Jacket" "Sleek Coat" "Crimson Raiment" "Lacquered Garb" "Crypt Armour" "Sentinel Jacket" "Chainmail Vest" "Chainmail Tunic" "Ringmail Coat" "Chainmail Doublet" "Full Ringmail" "Full Chainmail" "Holy Chainmail" "Latticed Ringmail" "Crusader Chainmail" "Ornate Ringmail" "Chain Hauberk" "Devout Chainmail" "Loricated Ringmail" "Scale Vest" "Light Brigandine" "Scale Doublet" "Infantry Brigandine" "Full Scale Armour" "Soldier's Brigandine" "Field Lamellar" "Wyrmscale Doublet" "Hussar Brigandine" "Full Wyrmscale" "Commander's Brigandine" "Iron Greaves" "Steel Greaves" "Plated Greaves" "Reinforced Greaves" "Antique Greaves" "Ancient Greaves" "Wool Shoes" "Velvet Slippers" "Silk Slippers" "Scholar Boots" "Satin Slippers" "Samite Slippers" "Rawhide Boots" "Goathide Boots" "Deerskin Boots" "Nubuck Boots" "Eelskin Boots" "Sharkskin Boots" "Chain Boots" "Ringmail Boots" "Mesh Boots" "Riveted Boots" "Zealot Boots" "Soldier Boots" "Wrapped Boots" "Strapped Boots" "Clasped Boots" "Shackled Boots" "Trapper Boots" "Ambush Boots" "Leatherscale Boots" "Ironscale Boots" "Bronzescale Boots" "Steelscale Boots" "Serpentscale Boots" "Wyrmscale Boots" "Iron Gauntlets" "Plated Gauntlets" "Bronze Gauntlets" "Steel Gauntlets" "Antique Gauntlets" "Ancient Gauntlets" "Rawhide Gloves" "Goathide Gloves" "Deerskin Gloves" "Nubuck Gloves" "Eelskin Gloves" "Sharkskin Gloves" "Wool Gloves" "Velvet Gloves" "Silk Gloves" "Embroidered Gloves" "Satin Gloves" "Samite Gloves" "Fishscale Gauntlets" "Ironscale Gauntlets" "Bronzescale Gauntlets" "Steelscale Gauntlets" "Serpentscale Gauntlets" "Wrapped Mitts" "Strapped Mitts" "Clasped Mitts" "Trapper Mitts" "Ambush Mitts" "Carnal Mitts" "Chain Gloves" "Ringmail Gloves" "Mesh Gloves" "Riveted Gloves" "Zealot Gloves" "Soldier Gloves" "Iron Hat" "Cone Helmet" "Barbute Helmet" "Close Helmet" "Gladiator Helmet" "Reaver Helmet" "Siege Helmet" "Leather Cap" "Tricorne" "Leather Hood" "Wolf Pelt" "Hunter Hood" "Noble Tricorne" "Ursine Pelt" "Vine Circlet" "Iron Circlet" "Torture Cage" "Tribal Circlet" "Bone Circlet" "Lunaris Circlet" "Steel Circlet" "Necromancer Circlet" "Scare Mask" "Plague Mask" "Iron Mask" "Festival Mask" "Golden Mask" "Raven Mask" "Callous Mask" "Regicide Mask" "Harlequin Mask" "Battered Helm" "Sallet" "Visored Sallet" "Gilded Sallet" "Secutor Helm" "Fencer Helm" "Lacquered Helmet" "Rusted Coif" "Soldier Helmet" "Great Helmet" "Crusader Helmet" "Aventail Helmet" "Zealot Helmet" "Great Crown" "Magistrate Crown" "Splintered Tower Shield" "Corroded Tower Shield" "Rawhide Tower Shield" "Cedar Tower Shield" "Copper Tower Shield" "Reinforced Tower Shield" "Painted Tower Shield" "Buckskin Tower Shield" "Mahogany Tower Shield" "Bronze Tower Shield" "Girded Tower Shield" "Crested Tower Shield" "Shagreen Tower Shield" "Goathide Buckler" "Pine Buckler" "Painted Buckler" "Hammered Buckler" "War Buckler" "Gilded Buckler" "Oak Buckler" "Enameled Buckler" "Corrugated Buckler" "Battle Buckler" "Golden Buckler" "Ironwood Buckler" "Vaal Buckler" "Twig Spirit Shield" "Yew Spirit Shield" "Bone Spirit Shield" "Tarnished Spirit Shield" "Jingling Spirit Shield" "Brass Spirit Shield" "Walnut Spirit Shield" "Ivory Spirit Shield" "Ancient Spirit Shield" "Chiming Spirit Shield" "Thorium Spirit Shield" "Lacewood Spirit Shield" "Spiked Bundle" "Driftwood Spiked Shield" "Alloyed Spiked Shield" "Burnished Spiked Shield" "Ornate Spiked Shield" "Redwood Spiked Shield" "Compound Spiked Shield" "Polished Spiked Shield" "Ezomyte Spiked Shield" "Mirrored Spiked Shield" "Rotted Round Shield" "Fir Round Shield" "Studded Round Shield" "Scarlet Round Shield" "Splendid Round Shield" "Maple Round Shield" "Spiked Round Shield" "Crimson Round Shield" "Baroque Round Shield" "Teak Round Shield" "Spiny Round Shield" "Plank Kite Shield" "Linden Kite Shield" "Reinforced Kite Shield" "Etched Kite Shield" "Steel Kite Shield" "Branded Kite Shield" "Paua Amulet" "Coral Amulet" "Breach Ring" "Iron Ring" "Paua Ring" "Gold Ring" "Two-Point Arrow Quiver" "Serrated Arrow Quiver" "Sharktooth Arrow Quiver" "Blunt Arrow Quiver" "Fire Arrow Quiver"
 	HasInfluence Crusader Elder Hunter Redeemer Shaper Warlord
 	ItemLevel >= 84
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
 	SetFontSize 32
+	DisableDropSound True
+
+#Rare item highlighting for endgame
+Show
+	BaseType == "Hedron Bow" "Foundry Bow" "Solarine Bow" "Shadow Fangs" "Malign Fangs" "Void Fangs" "Hollowpoint Dagger" "Pressurised Dagger" "Pneumatic Dagger" "Flickerflame Blade" "Flashfire Blade" "Infernal Blade" "Maltreatment Axe" "Disapprobation Axe" "Psychotic Axe" "Flare Mace" "Crack Mace" "Boom Mace" "Fickle Spiritblade" "Capricious Spiritblade" "Anarchic Spiritblade" "Oscillating Sceptre" "Stabilising Sceptre" "Alternating Sceptre" "Capacity Rod" "Potentiality Rod" "Eventuality Rod" "Transformer Staff" "Reciprocation Staff" "Battery Staff" "Prime Cleaver" "Honed Cleaver" "Apex Cleaver" "Blunt Force Condenser" "Crushing Force Magnifier" "Impact Force Propagator" "Rebuking Blade" "Blasting Blade" "Banishing Blade" "Assembler Wand" "Congregator Wand" "Accumulator Wand" "Exothermic Tower Shield" "Magmatic Tower Shield" "Heat-attuned Tower Shield" "Endothermic Buckler" "Polar Buckler" "Cold-attuned Buckler" "Exhausting Spirit Shield" "Subsuming Spirit Shield" "Transfer-attuned Spirit Shield"
+	ItemLevel >= 60
+	MinimapIcon 2 Yellow Circle
+	Rarity Rare
+	SetBackgroundColor 38 0 86 220
+	SetBorderColor 191 91 0 150
+	SetFontSize 39
+	DisableDropSound True
+
+#Rare item highlighting for endgame
+Show
+	BaseType == "Hedron Bow" "Foundry Bow" "Solarine Bow" "Shadow Fangs" "Malign Fangs" "Void Fangs" "Hollowpoint Dagger" "Pressurised Dagger" "Pneumatic Dagger" "Flickerflame Blade" "Flashfire Blade" "Infernal Blade" "Maltreatment Axe" "Disapprobation Axe" "Psychotic Axe" "Flare Mace" "Crack Mace" "Boom Mace" "Fickle Spiritblade" "Capricious Spiritblade" "Anarchic Spiritblade" "Oscillating Sceptre" "Stabilising Sceptre" "Alternating Sceptre" "Capacity Rod" "Potentiality Rod" "Eventuality Rod" "Transformer Staff" "Reciprocation Staff" "Battery Staff" "Prime Cleaver" "Honed Cleaver" "Apex Cleaver" "Blunt Force Condenser" "Crushing Force Magnifier" "Impact Force Propagator" "Rebuking Blade" "Blasting Blade" "Banishing Blade" "Assembler Wand" "Congregator Wand" "Accumulator Wand" "Exothermic Tower Shield" "Magmatic Tower Shield" "Heat-attuned Tower Shield" "Endothermic Buckler" "Polar Buckler" "Cold-attuned Buckler" "Exhausting Spirit Shield" "Subsuming Spirit Shield" "Transfer-attuned Spirit Shield" "Astrolabe Amulet" "Simplex Amulet" "Micro-Distillery Belt" "Mechalarm Belt" "Cogwork Ring" "Geodesic Ring"
+	HasInfluence Crusader Elder Hunter Redeemer Shaper Warlord
+	ItemLevel >= 60
+	MinimapIcon 2 Yellow Circle
+	Rarity Rare
+	SetBackgroundColor 38 0 86 220
+	SetBorderColor 191 91 0 150
+	SetFontSize 39
 	DisableDropSound True
 
 #Rare item highlighting for endgame
@@ -8866,26 +9090,6 @@ Show
 	AreaLevel <= 70
 	Rarity <= Magic
 	SetBackgroundColor 0 0 0 220
-	SetFontSize 32
-	DisableDropSound True
-
-#Always show catchall
-Show
-	Class "Harvest Seed"
-	CustomAlertSound "filter_sounds/20_gethit2.wav"
-	MinimapIcon 2 Blue Kite
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 32
-	DisableDropSound True
-
-#Always show catchall
-Show
-	Class "Seed Enhancer"
-	CustomAlertSound "filter_sounds/20_gethit3.wav"
-	MinimapIcon 2 Blue Kite
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
 	SetFontSize 32
 	DisableDropSound True
 

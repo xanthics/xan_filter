@@ -6,6 +6,9 @@
 bases = {
 	"Weapon": {
 		"Bow|Dex|Ranged|Two|Weapon": [
+			{'drop': 1, 'base': 'Bow', 'name': 'Hedron Bow', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Bow', 'name': 'Foundry Bow', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Bow', 'name': 'Solarine Bow', 'tier': -4},  # ?
 			{'drop': 1, 'base': 'Bow', 'name': 'Crude Bow', 'tier': 4},
 			{'drop': 5, 'base': 'Bow', 'name': 'Short Bow', 'tier': 4},
 			{'drop': 9, 'base': 'Bow', 'name': 'Long Bow', 'tier': 4},
@@ -33,6 +36,9 @@ bases = {
 			{'drop': 71, 'base': 'Bow', 'name': 'Maraketh Bow', 'tier': 2},  # Base Movement Velocity +(6)
 		],
 		"Claw|Dex|Int|Melee|One|Weapon": [
+			{'drop': 1, 'base': 'Claw', 'name': 'Shadow Fangs', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Claw', 'name': 'Malign Fangs', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Claw', 'name': 'Void Fangs', 'tier': -4},  # ?
 			{'drop': 3, 'base': 'Claw', 'name': 'Nailed Fist', 'tier': 4},  # Local Life Gain Per Target (3)
 			{'drop': 7, 'base': 'Claw', 'name': 'Sharktooth Claw', 'tier': 4},  # Local Life Gain Per Target (6)
 			{'drop': 12, 'base': 'Claw', 'name': 'Awl', 'tier': 4},  # Local Life Gain Per Target (7)
@@ -60,6 +66,9 @@ bases = {
 			{'drop': 72, 'base': 'Claw', 'name': 'Gemini Claw', 'tier': 1},  # Local Mana Gain Per Target (14), Local Life Gain Per Target (38)
 		],
 		"Dagger|Dex|Int|Melee|One|Weapon": [
+			{'drop': 1, 'base': 'Dagger', 'name': 'Hollowpoint Dagger', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Dagger', 'name': 'Pressurised Dagger', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Dagger', 'name': 'Pneumatic Dagger', 'tier': -4},  # ?
 			{'drop': 1, 'base': 'Dagger', 'name': 'Glass Shank', 'tier': 4},  # Critical Strike Chance +(30)
 			{'drop': 5, 'base': 'Dagger', 'name': 'Skinning Knife', 'tier': 4},  # Critical Strike Chance +(30)
 			{'drop': 15, 'base': 'Dagger', 'name': 'Stiletto', 'tier': 4},  # Critical Strike Chance +(30)
@@ -72,6 +81,9 @@ bases = {
 			{'drop': 70, 'base': 'Dagger', 'name': 'Sai', 'tier': 2},  # Monster Base Block (6)
 		],
 		"Caster|Rune Daggers|Dex|Int|Melee|One|Weapon": [
+			{'drop': 1, 'base': 'Rune Daggers', 'name': 'Flickerflame Blade', 'tier': -4},  # Critical Strike Chance +(30)
+			{'drop': 1, 'base': 'Rune Daggers', 'name': 'Flashfire Blade', 'tier': -4},  # Critical Strike Chance +(30)
+			{'drop': 1, 'base': 'Rune Daggers', 'name': 'Infernal Blade', 'tier': -4},  # Critical Strike Chance +(30)
 			{'drop': 10, 'base': 'Rune Daggers', 'name': 'Carving Knife', 'tier': 4},  # Critical Strike Chance +(30)
 			{'drop': 20, 'base': 'Rune Daggers', 'name': 'Boot Knife', 'tier': 4},  # Critical Strike Chance +(30)
 			{'drop': 24, 'base': 'Rune Daggers', 'name': 'Copper Kris', 'tier': 3},  # Critical Strike Chance +(50)
@@ -89,6 +101,9 @@ bases = {
 			{'drop': 68, 'base': 'Rune Daggers', 'name': 'Demon Dagger', 'tier': 1},  # Critical Strike Chance +(40)
 		],
 		"Dex|Melee|One|One Hand Axe|Str|Weapon": [
+			{'drop': 1, 'base': 'One Hand Axe', 'name': 'Maltreatment Axe', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'One Hand Axe', 'name': 'Disapprobation Axe', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'One Hand Axe', 'name': 'Psychotic Axe', 'tier': -4},  # ?
 			{'drop': 2, 'base': 'One Hand Axe', 'name': 'Rusted Hatchet', 'tier': 4},
 			{'drop': 6, 'base': 'One Hand Axe', 'name': 'Jade Hatchet', 'tier': 4},
 			{'drop': 11, 'base': 'One Hand Axe', 'name': 'Boarding Axe', 'tier': 4},
@@ -116,6 +131,9 @@ bases = {
 			{'drop': 71, 'base': 'One Hand Axe', 'name': 'Runic Hatchet', 'tier': 2},  # Physical Damage +(12)
 		],
 		"Melee|One|One Hand Mace|Str|Weapon": [
+			{'drop': 1, 'base': 'One Hand Mace', 'name': 'Flare Mace', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'One Hand Mace', 'name': 'Crack Mace', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'One Hand Mace', 'name': 'Boom Mace', 'tier': -4},  # ?
 			{'drop': 1, 'base': 'One Hand Mace', 'name': 'Driftwood Club', 'tier': 4},  # Base Stun Threshold Reduction +(10)
 			{'drop': 5, 'base': 'One Hand Mace', 'name': 'Tribal Club', 'tier': 4},  # Base Stun Threshold Reduction +(10)
 			{'drop': 10, 'base': 'One Hand Mace', 'name': 'Spiked Club', 'tier': 4},  # Base Stun Threshold Reduction +(10)
@@ -137,12 +155,15 @@ bases = {
 			{'drop': 58, 'base': 'One Hand Mace', 'name': 'Tenderizer', 'tier': 4},  # Base Stun Threshold Reduction +(10)
 			{'drop': 60, 'base': 'One Hand Mace', 'name': 'Gavel', 'tier': 4},  # Base Stun Threshold Reduction +(15)
 			{'drop': 62, 'base': 'One Hand Mace', 'name': 'Legion Hammer', 'tier': 2},  # Base Stun Threshold Reduction +(10)
-			{'drop': 64, 'base': 'One Hand Mace', 'name': 'Pernarch', 'tier': 3},  # Base Stun Threshold Reduction +(10)
+			{'drop': 64, 'base': 'One Hand Mace', 'name': 'Pernach', 'tier': 3},  # Base Stun Threshold Reduction +(10)
 			{'drop': 66, 'base': 'One Hand Mace', 'name': 'Auric Mace', 'tier': 4},  # Base Stun Threshold Reduction +(15)
 			{'drop': 68, 'base': 'One Hand Mace', 'name': 'Nightmare Mace', 'tier': 2},  # Base Stun Threshold Reduction +(10)
 			{'drop': 70, 'base': 'One Hand Mace', 'name': 'Behemoth Mace', 'tier': 1},  # Local Attack Speed +(6)
 		],
 		"Dex|Melee|One|One Hand Sword|Str|Weapon": [
+			{'drop': 1, 'base': 'One Hand Sword', 'name': 'Fickle Spiritblade', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'One Hand Sword', 'name': 'Capricious Spiritblade', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'One Hand Sword', 'name': 'Anarchic Spiritblade', 'tier': -4},  # ?
 			{'drop': 1, 'base': 'One Hand Sword', 'name': 'Rusted Sword', 'tier': 4},  # Local Accuracy Rating +(40)
 			{'drop': 5, 'base': 'One Hand Sword', 'name': 'Copper Sword', 'tier': 4},  # Local Accuracy Rating (45)
 			{'drop': 10, 'base': 'One Hand Sword', 'name': 'Sabre', 'tier': 4},  # Local Accuracy Rating +(40)
@@ -170,6 +191,9 @@ bases = {
 			{'drop': 70, 'base': 'One Hand Sword', 'name': 'Tiger Hook', 'tier': 3},  # Base Chance To Dodge (6)
 		],
 		"Caster|Int|Melee|One|Sceptre|Str|Weapon": [
+			{'drop': 1, 'base': 'Sceptre', 'name': 'Oscillating Sceptre', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Sceptre', 'name': 'Stabilising Sceptre', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Sceptre', 'name': 'Alternating Sceptre', 'tier': -4},  # ?
 			{'drop': 1, 'base': 'Sceptre', 'name': 'Driftwood Sceptre', 'tier': 4},  # Elemental Damage +(10)
 			{'drop': 5, 'base': 'Sceptre', 'name': 'Darkwood Sceptre', 'tier': 4},  # Elemental Damage +(12)
 			{'drop': 10, 'base': 'Sceptre', 'name': 'Bronze Sceptre', 'tier': 4},  # Elemental Damage +(12)
@@ -197,6 +221,9 @@ bases = {
 			{'drop': 70, 'base': 'Sceptre', 'name': 'Sambar Sceptre', 'tier': 1},  # Reduce Enemy Elemental Resistance (6)
 		],
 		"Int|Melee|Warstaves|Str|Two|Weapon": [
+			{'drop': 1, 'base': 'Warstaves', 'name': 'Capacity Rod', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Warstaves', 'name': 'Potentiality Rod', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Warstaves', 'name': 'Eventuality Rod', 'tier': -4},  # ?
 			{'drop': 18, 'base': 'Warstaves', 'name': 'Iron Staff', 'tier': 4},  # Staff Block (18)
 			{'drop': 23, 'base': 'Warstaves', 'name': 'Coiled Staff', 'tier': 4},  # Staff Block (20)
 			{'drop': 33, 'base': 'Warstaves', 'name': 'Vile Staff', 'tier': 4},  # Staff Block (18)
@@ -208,6 +235,9 @@ bases = {
 			{'drop': 68, 'base': 'Warstaves', 'name': 'Judgement Staff', 'tier': 2},  # Staff Block (18)
 		],
 		"Caster|Int|Melee|Stave|Str|Two|Weapon": [
+			{'drop': 1, 'base': 'Stave', 'name': 'Transformer Staff', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Stave', 'name': 'Reciprocation Staff', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Stave', 'name': 'Battery Staff', 'tier': -4},  # ?
 			{'drop': 4, 'base': 'Stave', 'name': 'Gnarled Branch', 'tier': 4},  # Staff Block (18)
 			{'drop': 9, 'base': 'Stave', 'name': 'Primitive Staff', 'tier': 4},  # Staff Block (18)
 			{'drop': 13, 'base': 'Stave', 'name': 'Long Staff', 'tier': 4},  # Staff Block (18)
@@ -250,6 +280,9 @@ bases = {
 			{'drop': 72, 'base': 'Thrusting One Hand Sword', 'name': 'Dragoon Sword', 'tier': 3},  # Local Chance To Bleed On Hit (20)
 		],
 		"Dex|Melee|Str|Two|Two Hand Axe|Weapon": [
+			{'drop': 1, 'base': 'Two Hand Axe', 'name': 'Prime Cleaver', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Two Hand Axe', 'name': 'Honed Cleaver', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Two Hand Axe', 'name': 'Apex Cleaver', 'tier': -4},  # ?
 			{'drop': 4, 'base': 'Two Hand Axe', 'name': 'Stone Axe', 'tier': 4},
 			{'drop': 9, 'base': 'Two Hand Axe', 'name': 'Jade Chopper', 'tier': 4},
 			{'drop': 13, 'base': 'Two Hand Axe', 'name': 'Woodsplitter', 'tier': 4},
@@ -274,6 +307,9 @@ bases = {
 			{'drop': 70, 'base': 'Two Hand Axe', 'name': 'Fleshripper', 'tier': 1},  # Local Critical Strike Chance +(50)
 		],
 		"Melee|Str|Two|Two Hand Mace|Weapon": [
+			{'drop': 1, 'base': 'Two Hand Mace', 'name': 'Blunt Force Condenser', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Two Hand Mace', 'name': 'Crushing Force Magnifier', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Two Hand Mace', 'name': 'Impact Force Propagator', 'tier': -4},  # ?
 			{'drop': 3, 'base': 'Two Hand Mace', 'name': 'Driftwood Maul', 'tier': 4},  # Base Stun Duration +(30)
 			{'drop': 8, 'base': 'Two Hand Mace', 'name': 'Tribal Maul', 'tier': 4},  # Base Stun Duration +(30)
 			{'drop': 12, 'base': 'Two Hand Mace', 'name': 'Mallet', 'tier': 4},  # Base Stun Duration +(30)
@@ -298,6 +334,9 @@ bases = {
 			{'drop': 69, 'base': 'Two Hand Mace', 'name': 'Coronal Maul', 'tier': 1},  # Base Skill Area Of Effect +(6)
 		],
 		"Dex|Melee|Str|Two|Two Hand Sword|Weapon": [
+			{'drop': 1, 'base': 'Two Hand Sword', 'name': 'Rebuking Blade', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Two Hand Sword', 'name': 'Blasting Blade', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Two Hand Sword', 'name': 'Banishing Blade', 'tier': -4},  # ?
 			{'drop': 3, 'base': 'Two Hand Sword', 'name': 'Corroded Blade', 'tier': 4},  # Local Accuracy Rating +(40)
 			{'drop': 8, 'base': 'Two Hand Sword', 'name': 'Longsword', 'tier': 4},  # Local Accuracy Rating (60)
 			{'drop': 12, 'base': 'Two Hand Sword', 'name': 'Bastard Sword', 'tier': 4},  # Local Accuracy Rating +(40)
@@ -322,7 +361,9 @@ bases = {
 			{'drop': 70, 'base': 'Two Hand Sword', 'name': 'Exquisite Blade', 'tier': 1},  # Base Critical Strike Multiplier +(60)
 		],
 		"Caster|Int|One|Ranged|Wand|Weapon": [
-			{'drop': 1, 'base': 'Wand', 'name': 'Driftwood Wand', 'tier': 4},  # Spell Damage +(8 to 12)
+			{'drop': 1, 'base': 'Wand', 'name': 'Assembler Wand', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Wand', 'name': 'Congregator Wand', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Wand', 'name': 'Accumulator Wand', 'tier': -4},  # ?
 			{'drop': 6, 'base': 'Wand', 'name': "Goat's Horn", 'tier': 4},  # Spell Damage +(10 to 14)
 			{'drop': 12, 'base': 'Wand', 'name': 'Carved Wand', 'tier': 4},  # Spell Damage +(11 to 15)
 			{'drop': 18, 'base': 'Wand', 'name': 'Quartz Wand', 'tier': 4},  # Spell Damage +(18 to 22)
@@ -672,6 +713,9 @@ bases = {
 			{'drop': 73, 'base': 'Helmet', 'name': 'Bone Helmet', 'tier': 0},  # Minion Damage increase (30 to 40)
 		],
 		"Armour|Shield|Str": [
+			{'drop': 1, 'base': 'Shield', 'name': 'Exothermic Tower Shield', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Shield', 'name': 'Magmatic Tower Shield', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Shield', 'name': 'Heat-attuned Tower Shield', 'tier': -4},  # ?
 			{'drop': 1, 'base': 'Shield', 'name': 'Splintered Tower Shield', 'tier': 4},
 			{'drop': 5, 'base': 'Shield', 'name': 'Corroded Tower Shield', 'tier': 4},  # Base Maximum Life (10 to 20)
 			{'drop': 11, 'base': 'Shield', 'name': 'Rawhide Tower Shield', 'tier': 4},  # Base Maximum Life (10 to 20)
@@ -691,6 +735,9 @@ bases = {
 			{'drop': 70, 'base': 'Shield', 'name': 'Pinnacle Tower Shield', 'tier': 2},  # Base Maximum Life (20 to 30)
 		],
 		"Armour|Dex|Shield": [
+			{'drop': 1, 'base': 'Shield', 'name': 'Endothermic Buckler', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Shield', 'name': 'Polar Buckler', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Shield', 'name': 'Cold-attuned Buckler', 'tier': -4},  # ?
 			{'drop': 2, 'base': 'Shield', 'name': 'Goathide Buckler', 'tier': 4},  # Base Movement Velocity +(3)
 			{'drop': 8, 'base': 'Shield', 'name': 'Pine Buckler', 'tier': 4},  # Base Movement Velocity +(3)
 			{'drop': 16, 'base': 'Shield', 'name': 'Painted Buckler', 'tier': 4},  # Base Movement Velocity +(6)
@@ -709,6 +756,9 @@ bases = {
 			{'drop': 69, 'base': 'Shield', 'name': 'Imperial Buckler', 'tier': 2},  # Base Movement Velocity +(6)
 		],
 		"Armour|Int|Shield": [
+			{'drop': 1, 'base': 'Shield', 'name': 'Exhausting Spirit Shield', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Shield', 'name': 'Subsuming Spirit Shield', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Shield', 'name': 'Transfer-attuned Spirit Shield', 'tier': -4},  # ?
 			{'drop': 3, 'base': 'Shield', 'name': 'Twig Spirit Shield', 'tier': 4},  # Spell Damage +(10 to 15)
 			{'drop': 9, 'base': 'Shield', 'name': 'Yew Spirit Shield', 'tier': 4},  # Spell Damage +(5 to 10)
 			{'drop': 15, 'base': 'Shield', 'name': 'Bone Spirit Shield', 'tier': 4},  # Spell Damage +(15 to 20)
@@ -774,6 +824,8 @@ bases = {
 	},
 	"Accessory": {
 		"Accessory|Amulet": [
+			{'drop': 1, 'base': 'Amulet', 'name': 'Astrolabe Amulet', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Amulet', 'name': 'Simplex Amulet', 'tier': -4},  # ?
 			{'drop': 1, 'base': 'Amulet', 'name': 'Mandible Talisman', 'tier': 2},  # Attack And Cast Speed +(6 to 10)
 			{'drop': 1, 'base': 'Amulet', 'name': 'Hexclaw Talisman', 'tier': 2},  # Critical Strike Chance +(40 to 50)
 			{'drop': 1, 'base': 'Amulet', 'name': 'Primal Skull Talisman', 'tier': 4},  # Life Regeneration Rate Per Minute (120)
@@ -817,6 +869,8 @@ bases = {
 			{'drop': 77, 'base': 'Amulet', 'name': 'Blue Pearl Amulet', 'tier': 2},  # Mana Regeneration Rate +(48 to 56)
 		],
 		"Accessory|Belt": [
+			{'drop': 1, 'base': 'Belt', 'name': 'Micro-Distillery Belt', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Belt', 'name': 'Mechalarm Belt', 'tier': -4},  # ?
 			{'drop': 1, 'base': 'Belt', 'name': 'Stygian Vise', 'tier': 0},  # Local Has (1) Abyss Sockets
 			{'drop': 2, 'base': 'Belt', 'name': 'Rustic Sash', 'tier': 1},  # Physical Damage +(12 to 24)
 			{'drop': 2, 'base': 'Belt', 'name': 'Chain Belt', 'tier': 3},  # Base Maximum Energy Shield (9 to 20)
@@ -829,6 +883,8 @@ bases = {
 			{'drop': 73, 'base': 'Belt', 'name': 'Crystal Belt', 'tier': 1},  # Base Maximum Energy Shield (60 to 80)
 		],
 		"Accessory|Ring": [
+			{'drop': 1, 'base': 'Ring', 'name': 'Cogwork Ring', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Ring', 'name': 'Geodesic Ring', 'tier': -4},  # ?
 			{'drop': 1, 'base': 'Ring', 'name': 'Breach Ring', 'tier': 4},  # Local Item Stats Are Doubled In Breach (1)
 			{'drop': 2, 'base': 'Ring', 'name': 'Iron Ring', 'tier': 4},  # Minimum Added Physical Damage (1), Maximum Added Physical Damage (4)
 			{'drop': 4, 'base': 'Ring', 'name': 'Coral Ring', 'tier': 1},  # Base Maximum Life (20 to 30)
@@ -926,7 +982,7 @@ def genraresleveling(flags='All', overlevel=3, maxlevel=67, alwayshighlight=('Ac
 					cur = bases[category][vals][i]
 					if cur['drop'] <= maxlevel:
 						cap = bases[category][vals][i+1]['drop'] + overlevel
-						cap = cap if cap < maxlevel else maxlevel
+						cap = cap if cap < maxlevel and cur['tier'] >= 0 else maxlevel
 						ret[cur['name']] = {"baseexact": cur['name'], "other": ["AreaLevel <= {}".format(cap)], "type": "levelling rare normal"}
 				cur = bases[category][vals][l-1]
 				if cur['drop'] <= maxlevel:
@@ -960,7 +1016,7 @@ def gennonrareleveling(flags='All', overlevel=0, maxlevel=35, alwayshighlight=()
 					cur = bases[category][vals][i]
 					if cur['drop'] <= maxlevel:
 						cap = bases[category][vals][i+1]['drop'] + overlevel
-						cap = cap if cap < maxlevel else maxlevel
+						cap = cap if cap < maxlevel and cur['tier'] >= 0 else maxlevel
 						ret[cur['name']] = {"baseexact": cur['name'], "other": ["Rarity <= Normal", "AreaLevel <= {}".format(cap)], "type": "leveling low"}
 				cur = bases[category][vals][l-1]
 				if cur['drop'] <= maxlevel:
