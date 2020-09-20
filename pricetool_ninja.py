@@ -14,8 +14,8 @@ def scrape_ninja(league='tmpstandard'):
 	leaguelookup = {
 		"Standard": "Standard",
 		"Hardcore": "Hardcore",
-		"tmpstandard": "Harvest",
-		"tmphardcore": "Hardcore Harvest",
+		"tmpstandard": "Heist",
+		"tmphardcore": "Hardcore Heist",
 	}
 
 	keys = [
@@ -41,7 +41,7 @@ def scrape_ninja(league='tmpstandard'):
 		'UniqueAccessory',
 		'Watchstone',
 		'DeliriumOrb',
-		'Seed'
+#		'Seed'
 	]
 
 	classtypes = {
@@ -77,7 +77,7 @@ def scrape_ninja(league='tmpstandard'):
 		'Watchstone': 'unique',
 
 		'Oil': 'challenge_stack',
-		'Seed': 'challenge_stack',
+#		'Seed': 'challenge_stack',
 	}
 
 	requester = requests.session()

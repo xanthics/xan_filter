@@ -309,7 +309,7 @@ bases = {
 		"Melee|Str|Two|Two Hand Mace|Weapon": [
 			{'drop': 1, 'base': 'Two Hand Mace', 'name': 'Blunt Force Condenser', 'tier': -4},  # ?
 			{'drop': 1, 'base': 'Two Hand Mace', 'name': 'Crushing Force Magnifier', 'tier': -4},  # ?
-			{'drop': 1, 'base': 'Two Hand Mace', 'name': 'Impact Force Propagator', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Two Hand Mace', 'name': 'Impact Force Propagator ', 'tier': -4},  # ?
 			{'drop': 3, 'base': 'Two Hand Mace', 'name': 'Driftwood Maul', 'tier': 4},  # Base Stun Duration +(30)
 			{'drop': 8, 'base': 'Two Hand Mace', 'name': 'Tribal Maul', 'tier': 4},  # Base Stun Duration +(30)
 			{'drop': 12, 'base': 'Two Hand Mace', 'name': 'Mallet', 'tier': 4},  # Base Stun Duration +(30)

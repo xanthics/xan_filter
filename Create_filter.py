@@ -218,7 +218,9 @@ def main(league='tmpstandard'):
 
 	if leveling:
 		desc = 'item for leveling'
-		flags = ['All']  # 'All'  # see item_config/rare_gen - genraresleveling for valid values
+		flags = ['Accessory', 'Axe', 'Sword']  # 'All'  # see item_config/rare_gen - genraresleveling for valid values
+		buffer += gen_list_compact(gennonrareleveling(flags, overlevel=25, maxlevel=25), desc)
+		flags = ['All']  # see item_config/rare_gen - genraresleveling for valid values
 		buffer += gen_list_compact(gennonrareleveling(flags, overlevel=2, maxlevel=25), desc)
 
 	buffer += gen_list_compact(recipe_item.items, recipe_item.desc)  # Items for vendor recipe

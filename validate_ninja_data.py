@@ -47,7 +47,7 @@ def clean(price_val):
 			  'Chaos Shard': 'Chaos Orb', 'Exalted Shard': 'Exalted Orb', 'Annulment Shard': 'Orb of Annulment', 'Mirror Shard': 'Mirror of Kalandra'}
 
 	for s in shards:
-		if s not in price_val['currency']:
+		if s not in price_val['currency'] and shards[s] in price_val['currency']:
 			price_val['currency'][s] = {'baseexact': s, 'value': price_val['currency'][shards[s]]['value'] / 20}
 
 	# save defaults
@@ -80,7 +80,7 @@ def fix_divs(price_val):
 			"Pride Before the Fall": {"lookup": "Kaom's Heart", "factor": 1 / 8},
 			"Pride of the First Ones": {"lookup": "Farrul's Fur", "factor": 1 / 7},
 			"Rats": {"lookup": "Rat's Nest", "factor": 1 / 8},
-			"Scholar of the Seas": {"lookup": "Mao Kun", "factor": 1 / 7},
+#			"Scholar of the Seas": {"lookup": "Mao Kun", "factor": 1 / 7},
 			"The Army of Blood": {"lookup": "Bloodbond", "factor": 1 / 6},
 			"The Avenger": {"lookup": "Mjölner", "factor": 1 / 12},
 			"The Beast": {"lookup": "Belly of the Beast", "factor": 1 / 6},
@@ -96,7 +96,7 @@ def fix_divs(price_val):
 			"The Demoness": {"lookup": "Death's Hand", "factor": 1 / 5},
 			"The Doctor": {"lookup": "Headhunter", "factor": 1 / 8},
 			"The Dragon": {"lookup": "Coruscating Elixir", "factor": 1 / 4},
-			"The Dreamland": {"lookup": "Poorjoy's Asylum", "factor": 1 / 8},
+#			"The Dreamland": {"lookup": "Poorjoy's Asylum", "factor": 1 / 8},
 			"The Drunken Aristocrat": {"lookup": "Divination Distillate", "factor": 1 / 8},
 			"The Endless Darkness": {"lookup": "Voidforge", "factor": 1 / 9},
 			"The Fathomless Depths": {"lookup": "Lightpoacher", "factor": 1 / 8},
@@ -116,7 +116,7 @@ def fix_divs(price_val):
 			"The Life Thief": {"lookup": "Zerphi's Heart", "factor": 1 / 6},
 			"The Lunaris Priestess": {"lookup": "Sire of Shards", "factor": 1 / 5},
 			"The Master": {"lookup": "Bisco's Collar", "factor": 1 / 4},
-			"The Mayor": {"lookup": "The Perandus Manor", "factor": 1 / 5},
+#			"The Mayor": {"lookup": "The Perandus Manor", "factor": 1 / 5},
 			"The Oath": {"lookup": "Death's Oath", "factor": 1 / 6},
 			"The Offering": {"lookup": "Shavronne's Wrappings", "factor": 1 / 8},
 			"The One With All": {"lookup": "Le Heup of All", "factor": 1 / 6},
@@ -124,7 +124,7 @@ def fix_divs(price_val):
 			"The Pact": {"lookup": "Pledge of Hands", "factor": 1 / 9},
 	#		"The Poet": {"lookup": "Blood of Corruption", "factor": 1/9},
 			"The Polymath": {"lookup": "Astramentis", "factor": 1 / 3},
-			"The Professor": {"lookup": "The Putrid Cloister", "factor": 1 / 4},
+#			"The Professor": {"lookup": "The Putrid Cloister", "factor": 1 / 4},
 			"The Queen": {"lookup": "Atziri's Acuity", "factor": 1 / 16},
 			"The Risk": {"lookup": "Ventor's Gamble", "factor": 1 / 3},
 			"The Ruthless Ceinture": {"lookup": "Meginord's Girdle", "factor": 1 / 7},
@@ -148,16 +148,16 @@ def fix_divs(price_val):
 			"Thirst for Knowledge": {"lookup": "Gluttony", "factor": 1 / 5},
 			"Thunderous Skies": {"lookup": "Storm Cloud", "factor": 1 / 5},
 			"Tranquillity": {"lookup": "Voltaxic Rift", "factor": 1 / 7},
-			"Treasure Hunter": {"lookup": "Vaults of Atziri", "factor": 1 / 7},
+#			"Treasure Hunter": {"lookup": "Vaults of Atziri", "factor": 1 / 7},
 			"Turn the Other Cheek": {"lookup": "Pacifism", "factor": 1 / 3},
 			"Vanity": {"lookup": "Tabula Rasa", "factor": 1 / 9},
-			"The Wolf's Legacy": {"lookup": "Vaults of Atziri", "factor": 1 / 4},
+#			"The Wolf's Legacy": {"lookup": "Vaults of Atziri", "factor": 1 / 4},
 			'Remembrance': {"lookup": "Precursor's Emblem", "factor": 1 / 8},
 	#		'The Price of Loyalty': {"lookup": "Skin of the Loyal", "factor": 1/4},
 			'The Demon': {"lookup": "Headhunter", "factor": 1 / 10},
 			'The Damned': {"lookup": "Soul Ripper", "factor": 1 / 6},
 			"Etched in Blood": {"lookup": "Rigwald's Quills", "factor": 2 / 9},  # double corrupted
-			"Squandered Prosperity": {"lookup": "The Perandus Manor", "factor": 1 / 5},  # Corrupted
+#			"Squandered Prosperity": {"lookup": "The Perandus Manor", "factor": 1 / 5},  # Corrupted
 			"The Craving": {"lookup": "Unending Hunger", "factor": 1 / 4},
 			"Succor of the Sinless": {"lookup": "Bottled Faith", "factor": 1 / 6},
 			"The Escape": {"lookup": "Seven-League Step", "factor": 1 / 5},
@@ -269,15 +269,11 @@ def fix_divs(price_val):
 	}
 
 	# Overwrite values for some cards based on what they give
-	for typ, table in [("uniqueitem", price_val['unique'])]:
+	for typ, table in [("uniqueitem", price_val['unique']), ("currencyitem", price_val['currency']), ("prophecy", price_val['prophecy']), ("divination", price_val['div'])]:
 		for card in cardlookup[typ]:
 			current = cardlookup[typ][card]
-			price_val['div'][card]['value'] = table[current['lookup']]['value'] * current['factor']
-
-	for typ, table in [("currencyitem", price_val['currency']), ("prophecy", price_val['prophecy']), ("divination", price_val['div'])]:
-		for card in cardlookup[typ]:
-			current = cardlookup[typ][card]
-			price_val['div'][card]['value'] = table[current['lookup']]['value'] * current['factor']
+			if current['lookup'] in table and card in price_val['div']:
+				price_val['div'][card]['value'] = table[current['lookup']]['value'] * current['factor']
 
 
 # Remove uniques that can not normally drop

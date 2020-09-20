@@ -229,6 +229,10 @@ def convert_json_to_filter():
 	# initialize pricing tiers
 	with open(f'autogen/currency.json', 'r') as f:
 		data = json.load(f)
+	for base, val, in [('Mirror of Kalandra', 20000), ('Exalted Orb', 100)]:
+		if base not in data:
+			data[base] = {'base': base, 'value': val, 'count': 200}
+
 	currency_val = {
 		'mirror': data['Mirror of Kalandra']['value'] // 20,
 		'extremely high': data['Exalted Orb']['value'],
