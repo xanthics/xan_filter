@@ -228,7 +228,7 @@ def scrape_ninja(league='tmpstandard'):
 	validate_data(price_val)
 	for k in price_val:
 		with open(f'autogen/{k}.json', 'w') as f:
-			json.dump(price_val[k], f, sort_keys=True)  # , indent=2)
+			json.dump(price_val[k], f, sort_keys=True, indent=2)
 
 
 if __name__ == '__main__':

@@ -105,7 +105,7 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, auto_a
 			unique_cleaned[item] = data[item]
 		else:
 			set_of_bases.add(data[item]['baseexact'])
-			if item.strip('*') in limiteddrop:
+			if item.strip('*') in limiteddrop or item.startswith('Replica'):
 				unique_list_limited[data[item]['baseexact']].append(data[item]['value'])
 			else:
 				unique_list[data[item]['baseexact']].append(data[item]['value'])
@@ -148,7 +148,7 @@ def price_currency(data, val, base_sound, currency_val, tiers, minval, auto_ah, 
 					if ch == 'low' and (item in auto_ah or (base_sound in ['currency', 'divination'] and any(substring in item for substring in ah_list))):
 						data[item]['type'] = f'{base_sound} show'
 					else:
-						data[item]['type'] = ch if ch == 'mirror' else f'{base_sound} {ch}'
+						data[item]['type'] = f'{base_sound} {ch}'
 					break
 			else:
 				if item in auto_ah or (base_sound in ['currency', 'divination'] and any(substring in item for substring in ah_list)):
@@ -191,10 +191,7 @@ def price_currency(data, val, base_sound, currency_val, tiers, minval, auto_ah, 
 				for i in range(2, maxval+1):
 					if data[item]['value'] * i >= currency_val[tiers[idx]]:
 						ret[f'{tval - 1}{counter-i} {item}'] = data[item].copy()
-						if idx == 0:
-							ret[f'{tval - 1}{counter-i} {item}']['type'] = f'mirror'
-						else:
-							ret[f'{tval - 1}{counter-i} {item}']['type'] = f'{base_sound} {tiers[idx]}'
+						ret[f'{tval - 1}{counter-i} {item}']['type'] = f'{base_sound} {tiers[idx]}'
 						if 'other' in []:
 							ret[f'{tval - 1}{counter - i} {item}']['other'].extend([f"StackSize >= {i}"])
 						else:

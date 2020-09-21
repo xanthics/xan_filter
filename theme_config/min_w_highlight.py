@@ -92,6 +92,14 @@ settings = {f"{k} text": [f"SetTextColor {color[k]}", "Continue"] for k in color
 # Each config should be its own array element.  Parsing will handle tabs/etc.
 # ignore and hide have special meaning(see comment)
 settings.update({
+	# Special sound for anything worth at least 1/20th of a mirror
+	"challenge mirror": ["SetBorderColor {}".format(color['currency']),
+						 'MinimapIcon 0 Yellow UpsideDownHouse',
+						 'PlayEffect Yellow',
+						 "SetFontSize {}".format(size['huge']),
+						 'CustomAlertSound "{}_challenge"'.format("mirror"),
+						 "SetBackgroundColor {} 220".format(color['highlight'])],
+
 	"challenge extremely high": ["SetBorderColor {}".format(color['premiumdlavender']),
 								 'CustomAlertSound "{}_challenge"'.format('max'),
 								 'MinimapIcon 0 Green Kite',
@@ -157,7 +165,7 @@ settings.update({
 				   "SetBackgroundColor {} 220".format(color['premiumdpurple'])],
 
 	# Special sound for anything worth at least 1/20th of a mirror
-	"mirror": ["SetBorderColor {}".format(color['currency']),
+	"currency mirror": ["SetBorderColor {}".format(color['currency']),
 			   'MinimapIcon 0 Yellow UpsideDownHouse',
 			   'PlayEffect Yellow',
 			   "SetFontSize {}".format(size['huge']),
@@ -193,6 +201,13 @@ settings.update({
 					  "SetFontSize {}".format(size['normal']),
 					 "SetBackgroundColor {} 220".format(color['black'])],
 
+	# Special sound for anything worth at least 1/20th of a mirror
+	"divination mirror": ["SetBorderColor {}".format(color['divinationnew']),
+						  'MinimapIcon 0 Yellow UpsideDownHouse',
+						  'PlayEffect Yellow',
+						  "SetFontSize {}".format(size['huge']),
+						  'CustomAlertSound "{}_divination"'.format("mirror"),
+						  "SetBackgroundColor {} 220".format(color['highlight'])],
 	"divination extremely high": ["SetBorderColor {}".format(color['divinationnew']),
 								  'MinimapIcon 0 Green Triangle',
 								  'PlayEffect Green',
@@ -220,6 +235,13 @@ settings.update({
 	"divination low": ["SetBackgroundColor {} 220".format(color['black']),
 					   "SetFontSize {}".format(size['small'])],
 
+	# Special sound for anything worth at least 1/20th of a mirror
+	"gem mirror": ["SetBorderColor {}".format(color['gem']),
+				   'MinimapIcon 0 Yellow UpsideDownHouse',
+				   'PlayEffect Yellow',
+				   "SetFontSize {}".format(size['huge']),
+				   'CustomAlertSound "{}_gem"'.format("mirror"),
+				   "SetBackgroundColor {} 220".format(color['highlight'])],
 	"gem extremely high": ["SetBorderColor {}".format(color['gem']),
 						   'MinimapIcon 1 Green Hexagon',
 						   'PlayEffect Green',
@@ -244,6 +266,14 @@ settings.update({
 	"gem low": ["SetFontSize {}".format(size['small']),
 				"SetBackgroundColor {} 220".format(color['black'])],
 
+	# Special sound for anything worth at least 1/20th of a mirror
+	"fragment mirror": ["SetBorderColor {}".format(color['premiumllavender']),
+						"SetTextColor {}".format(color['premiumllavender']),
+						'MinimapIcon 0 Yellow UpsideDownHouse',
+						'PlayEffect Yellow',
+						"SetFontSize {}".format(size['huge']),
+						'CustomAlertSound "{}_currency"'.format("mirror"),
+						"SetBackgroundColor {} 220".format(color['highlight'])],
 	"fragment extremely high": ['MinimapIcon 0 Green Raindrop',
 								"SetTextColor {}".format(color['premiumllavender']),
 								'PlayEffect Green',
@@ -419,6 +449,14 @@ settings.update({
 				 "SetFontSize {}".format(size['normal']),
 				 "SetBackgroundColor {} 220".format(color['black'])],
 
+	# Special sound for anything worth at least 1/20th of a mirror
+	"base mirror": ["SetBorderColor {}".format(color['premiumgreen']),
+					"Rarity < Unique",
+					'MinimapIcon 0 Yellow UpsideDownHouse',
+					'PlayEffect Yellow',
+					"SetFontSize {}".format(size['huge']),
+					'CustomAlertSound "{}_base"'.format("mirror"),
+					"SetBackgroundColor {} 220".format(color['highlight'])],
 	"base extremely high": ["Rarity < Unique",
 							'MinimapIcon 0 Green Circle',
 							'PlayEffect Green',
@@ -434,6 +472,14 @@ settings.update({
 					   'CustomAlertSound "{}_base"'.format('high'),
 					   "SetBackgroundColor {} 220".format(color['black'])],
 
+	# Special sound for anything worth at least 1/20th of a mirror
+	"unique mirror": ["SetBorderColor {}".format(color['currency']),
+					  "Rarity Unique",
+					  'MinimapIcon 0 Yellow UpsideDownHouse',
+					  'PlayEffect Yellow',
+					  "SetFontSize {}".format(size['huge']),
+					  'CustomAlertSound "{}_currency"'.format("mirror"),
+					  "SetBackgroundColor {} 220".format(color['highlight'])],
 	"unique extremely high": ["Rarity Unique",
 							  'MinimapIcon 0 Green Star',
 							  'PlayEffect Green',
@@ -475,6 +521,13 @@ settings.update({
 				   "SetFontSize {}".format(size['small']),
 				   "SetBackgroundColor {} 220".format(color['black'])],
 
+	# Special sound for anything worth at least 1/20th of a mirror
+	"show mirror": ["SetBorderColor {}".format(color['premiumlpurple']),
+					'MinimapIcon 0 Yellow UpsideDownHouse',
+					'PlayEffect Yellow',
+					"SetFontSize {}".format(size['huge']),
+					'CustomAlertSound "{}_show"'.format("mirror"),
+					"SetBackgroundColor {} 220".format(color['highlight'])],
 	"show very high": ["SetBorderColor {}".format(color['premiumlpurple']),
 					   'MinimapIcon 0 Green Square',
 					   'PlayEffect Green',

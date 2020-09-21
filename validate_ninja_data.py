@@ -52,7 +52,7 @@ def clean(price_val):
 
 	# save defaults
 	with open('autogen/defaults.json', 'w') as f:
-		json.dump(defaults, f, sort_keys=True)  # , indent=2)
+		json.dump(defaults, f, sort_keys=True, indent=2)
 
 
 # TODO: Preprocess div cards (eg the gambler) so they can never make noise

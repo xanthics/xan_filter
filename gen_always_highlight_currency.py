@@ -10,7 +10,7 @@ from item_config.card_meta import card_meta
 def create_always_highlight():
 	currencytab = "0"  # Update to the tabid(s) where you keep your currency
 	league = "Harvest"
-	accountname = ""
+	accountname = "xanqos"
 	cookies = {'POESESSID': ''}  # update to your session id, blank session id will use default(on) highlighting rules
 	header = {
 		'User-Agent': 'xan.filter)',
