@@ -201,7 +201,8 @@ def scrape_ninja(league='tmpstandard'):
 				"Spellslinger Support": "Spellslinger",
 				"Rune Blast": "Stormbind",
 				"Combust": "Infernal Cry",
-				"Arcanist Brand Support": "Arcanist Brand"
+				"Arcanist Brand Support": "Arcanist Brand",
+				"Signal Prey": "Predator Support",
 			}
 			for i in data['lines']:
 				# convert numbers to string since we are converting to json later
@@ -209,8 +210,14 @@ def scrape_ninja(league='tmpstandard'):
 					i['gemQuality'] = 0
 				elif i['name'] in lookup:
 					i['name'] = lookup[i['name']]
-				price_val[classtypes[key]][f"{99-i['gemLevel']}{99-i['gemQuality']}{1 if i['corrupted'] else 0} {i['name']}"] = {'baseexact': i['name'], 'value': i['chaosValue'], 'count': i['count'],
+				name = i['name']
+				other = ''
+				if any(val in i['name'] for val in ['Anomalous', 'Divergent', 'Phantasmal']):
+					other, name = i['name'].split(" ", maxsplit=1)
+				price_val[classtypes[key]][f"{99-i['gemLevel']}{99-i['gemQuality']}{1 if i['corrupted'] else 0} {i['name']}"] = {'baseexact': name, 'value': i['chaosValue'], 'count': i['count'],
 																														   "other": [f"GemLevel >= {i['gemLevel']}", f"Quality >= {i['gemQuality']}", f"Corrupted {i['corrupted']}"]}
+				if other:
+					price_val[classtypes[key]][f"{99 - i['gemLevel']}{99 - i['gemQuality']}{1 if i['corrupted'] else 0} {i['name']}"]['other'].append(f"GemQualityType {other}")
 		elif key == 'Seed':
 			for i in data['lines']:
 				price_val[classtypes[key]][f"{99-i['levelRequired']} {i['name']}"] = {'baseexact': i['name'], 'value': i['chaosValue'], 'count': i['count'], "other": [f"ItemLevel >= {i['levelRequired']}"]}
