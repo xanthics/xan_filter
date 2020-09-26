@@ -127,7 +127,7 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, auto_a
 
 def price_currency(data, val, base_sound, currency_val, tiers, minval, auto_ah, ret):
 	ah_list = ['Fossil', 'Resonator', 'Deafening', 'Shrieking', 'Screaming', 'Catalyst', "Delerium Orb", 'Splinter']
-	stackable = ['Orb', 'Splinter', 'Chisel', 'Coin', 'Bauble', 'Sextant', 'Shard', 'Whetstone', 'Scroll', 'Scrap', "Essence", 'Fossil', 'Resonator', 'Primal', 'Vivid', 'Wild', 'Oil']
+	stackable = ['Orb', 'Splinter', 'Chisel', 'Coin', 'Bauble', 'Sextant', 'Shard', 'Whetstone', 'Scroll', 'Scrap', "Essence", 'Fossil', 'Resonator', 'Primal', 'Vivid', 'Wild', 'Oil', 'Marker']
 	for item in data:
 		rule = True
 		if item[0].isdigit() and item.split(' ', maxsplit=1)[0].isdigit():
@@ -172,6 +172,8 @@ def price_currency(data, val, base_sound, currency_val, tiers, minval, auto_ah, 
 				maxval = 20
 				if item == "Perandus Coin":
 					maxval = 1000
+				elif item == "Rogue's Marker":
+					maxval = 50000
 				elif any([x in item for x in ['Primal', 'Vivid', 'Wild']]):
 					maxval = 100
 				elif "Splinter" in item:
@@ -231,10 +233,10 @@ def convert_json_to_filter():
 			data[base] = {'base': base, 'value': val, 'count': 200}
 
 	currency_val = {
-		'mirror': data['Mirror of Kalandra']['value'] // 20,
+		'mirror': data['Mirror of Kalandra']['value'] / 20,
 		'extremely high': data['Exalted Orb']['value'],
-		'very high': data['Exalted Orb']['value'] // 10,
-		'high': 5,
+		'very high': data['Exalted Orb']['value'] / 5,
+		'high': data['Exalted Orb']['value'] / 10,
 		'normal': 7 / 8,
 		'low': 1 / 8,
 	}

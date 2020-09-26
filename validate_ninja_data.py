@@ -12,7 +12,7 @@ def clean(price_val):
 	# gems and base are nested, need special handling
 	base_items = ['currency', 'currency_strict', 'div', 'enchant', 'fragment', 'incubator', 'prophecy', 'unique', 'base', 'gems']
 	# The minimum amount of an item that must exist in poe.ninja data to be considered a valid price
-	min_thres = 8
+	min_thres = 10
 	# load defaults
 	with open('autogen/defaults.json', 'r') as f:
 		defaults = json.load(f)
@@ -313,6 +313,8 @@ def validate_data(price_val):
 	price_val['currency']['Chaos Orb'] = {'base': 'Chaos Orb', 'value': 1, 'count': 200}
 	if "Perandus Coin" not in price_val['currency']:
 		price_val['currency']['Perandus Coin'] = {'base': 'Perandus Coin', 'value': 1/200, 'count': 200}
+	if "Rogue's Marker" not in price_val['challenge_stack']:
+		price_val['challenge_stack']['Rogue\'s Marker'] = {'base': 'Rogue\'s Marker', 'value': 1/200, 'count': 200}
 	# Remove low reliability data and load defaults where needed
 	clean(price_val)
 	fix_divs(price_val)

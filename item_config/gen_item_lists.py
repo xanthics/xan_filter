@@ -1036,7 +1036,7 @@ def genrareshighlighttiered():
 
 	ret = {}
 	# Bases that are always shown when a certain ilvl threshold is reached.  Highlighting rules still followed
-	#alwaysshow = {'Boots': 73, 'Gloves': 73, 'Helmet': 73, 'Shield': 73, 'Accessory': 68, 'Other': 1, 'Caster': 72}
+	#alwaysshow = {'Boots': 68, 'Gloves': 68, 'Accessory': 68, 'Other': 1}
 	alwaysshow = {'Boots': 86, 'Accessory': 84, 'Other': 1}
 	# list of bases that should be ignored, even for always show
 	bad_bases = [

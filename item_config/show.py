@@ -22,5 +22,7 @@ items = {
 	"1 Golden Watchstone": {"baseexact": "Golden Watchstone", "type": "quest"},
 	"1 Viridian Watchstone": {"baseexact": "Viridian Watchstone", "type": "quest"},
 
+#	"1 Eternal Flask": {"class": "Mana Flasks", "other": ["DropLevel = 65"], "type": "show high"},
+
 	"9 Starter weapon": {"other": ["Class Dagger Wand \"One Hand\" Bow Stave \"Two Hand\" Sceptre Claws", "ItemLevel < 2"], "type": "show normal"},
 }

@@ -203,6 +203,7 @@ def scrape_ninja(league='tmpstandard'):
 				"Combust": "Infernal Cry",
 				"Arcanist Brand Support": "Arcanist Brand",
 				"Signal Prey": "Predator Support",
+				"Doom Blast": "Impending Doom Support",
 			}
 			for i in data['lines']:
 				# convert numbers to string since we are converting to json later
