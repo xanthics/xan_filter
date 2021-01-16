@@ -46,12 +46,15 @@ def main():
 		if mods[val]['generation_type'] == 'enchantment' and 'helmet' in [x['tag'] for x in mods[val]['spawn_weights']] and not mods[val]['type'].endswith("Old"):
 	#		if not mods[val]['name']:
 	#			print(val)
-			if len(mods[val]['stats']) > 0:
+			if len(mods[val]['stats']) > 0 and mods[val]['stats'][0]['id'] in transmod:
 				lu = {}
 				for _id in mods[val]['stats']:
 					if _id['min'] != _id['max']:
 						print(val)
-					lu[_id['id']] = [transmod[mods[val]['stats'][0]['id']]['ids'].index(_id['id']), _id['min']]
+					try:
+						lu[_id['id']] = [transmod[mods[val]['stats'][0]['id']]['ids'].index(_id['id']), _id['min']]
+					except KeyError:
+						print(f"Could not find stat_translation for: {_id['id']}")
 
 				cond = ''
 				if len(transmod[mods[val]['stats'][0]['id']]['English']) == 1:
@@ -91,6 +94,8 @@ def main():
 						q[cond['string'].format(*mq)] = []
 					if mods[val]["name"] not in q[cond['string'].format(*mq)]:
 						q[cond['string'].format(*mq)].append(mods[val]["name"])
+			else:
+				print(f"The following helmet mod is missing from stats_translation or has no stats: {mods[val]}")
 
 	buf = 'helmnames = {\n'
 	for i in sorted(q):

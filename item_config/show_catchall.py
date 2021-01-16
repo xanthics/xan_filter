@@ -14,6 +14,7 @@ items = {
 	"77 Synthesised Item": {'other': ["SynthesisedItem True"], "type": "rare low"},
 
 	"11 Map Fragments": {"class": "Map Fragments", "type": "fragment normal"},
+	"11 Misc Map Items": {"class": "Misc Map Items", "type": "fragment normal"},
 	"12 Currency": {"class": "Currency", "type": "currency normal"},
 	"13 Divination Cards": {"class": "Divination Card", "type": "divination normal"},
 	"14 Incubators": {"class": "Incubator", "type": "currency normal"},
@@ -23,9 +24,6 @@ items = {
 	"1 Alternate Gems": {"other": ["AlternateQuality True"], "type": "challenge normal"},
 	"1 Replica Unique": {"other": ["Replica True"], "type": "challenge normal"},
 	"1 Rogue's Marker": {"baseexact": "Rogue's Marker", "class": "Currency", "type": "challenge normal"},
-
-	#	"76 Harvest Seed": {"class": "Harvest Seed", "type": "challenge normal"},
-#	"76 Harvest Seed Enhancer": {"class": "Seed Enhancer", "type": "challenge normal"},
 
 	"8 5": {"other": ["DropLevel <= 5", "AreaLevel >= 15", "AreaLevel <= 67"], "type": "rare low"},
 	"8 10": {"other": ["DropLevel <= 10", "AreaLevel >= 20", "AreaLevel <= 67"], "type": "rare low"},
@@ -41,6 +39,8 @@ items = {
 
 	"91 Other rares": {"other": ["AreaLevel <= 67"], "type": "rare normal"},
 	"92 corrupted rares": {"other": ["Corrupted True", "CorruptedMods > 0"], "type": "rare corrupted"},
-#	"93 identified rares": {"other": ["Identified True"], "type": "rare low"},
+	"92 Talisman rares": {"base": "Talisman", "type": "rare corrupted"},
+	"1 Watchstone": {"base": "Watchstone", "type": "show normal"},
+	#	"93 identified rares": {"other": ["Identified True"], "type": "rare low"},
 
 }

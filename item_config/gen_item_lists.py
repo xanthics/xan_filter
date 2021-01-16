@@ -644,7 +644,7 @@ bases = {
 			{'drop': 35, 'base': 'Helmet', 'name': 'Gladiator Helmet', 'tier': 4},
 			{'drop': 40, 'base': 'Helmet', 'name': 'Reaver Helmet', 'tier': 4},
 			{'drop': 48, 'base': 'Helmet', 'name': 'Siege Helmet', 'tier': 4},
-			{'drop': 55, 'base': 'Helmet', 'name': 'Samite Helmet', 'tier': 3},
+			{'drop': 55, 'base': 'Helmet', 'name': 'Samnite Helmet', 'tier': 3},
 			{'drop': 60, 'base': 'Helmet', 'name': 'Ezomyte Burgonet', 'tier': 2},
 			{'drop': 65, 'base': 'Helmet', 'name': 'Royal Burgonet', 'tier': 1},
 			{'drop': 69, 'base': 'Helmet', 'name': 'Eternal Burgonet', 'tier': 1},
@@ -919,9 +919,9 @@ bases = {
 
 		],
 		"Other": [
-			{'drop': 100, 'base': 'Jewel', 'name': 'Cobalt Jewel', 'tier': 0},
-			{'drop': 100, 'base': 'Jewel', 'name': 'Crimson Jewel', 'tier': 0},
-			{'drop': 100, 'base': 'Jewel', 'name': 'Viridian Jewel', 'tier': 0},
+			{'drop': 100, 'base': 'Jewel', 'name': 'Cobalt Jewel', 'tier': 1},
+			{'drop': 100, 'base': 'Jewel', 'name': 'Crimson Jewel', 'tier': 1},
+			{'drop': 100, 'base': 'Jewel', 'name': 'Viridian Jewel', 'tier': 1},
 			{'drop': 100, 'base': 'Jewel', 'name': 'Large Cluster Jewel', 'tier': 0},
 			{'drop': 100, 'base': 'Jewel', 'name': 'Medium Cluster Jewel', 'tier': 0},
 			{'drop': 100, 'base': 'Jewel', 'name': 'Small Cluster Jewel', 'tier': 0},

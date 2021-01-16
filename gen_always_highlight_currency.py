@@ -9,7 +9,7 @@ from item_config.card_meta import card_meta
 
 def create_always_highlight():
 	currencytab = "0"  # Update to the tabid(s) where you keep your currency
-	league = "Harvest"
+	league = "Ritual"
 	accountname = "xanqos"
 	cookies = {'POESESSID': ''}  # update to your session id, blank session id will use default(on) highlighting rules
 	header = {
@@ -55,12 +55,13 @@ def create_highlight_currency(currencytab, league, accountname, cookies, header,
 		"Orb of Regret": 100,
 		"Orb of Scouring": -1,
 		"Orb of Transmutation": 500,
-		"Perandus Coin": 25000,
+		"Perandus Coin": 0,
 		"Portal Scroll": 40,
 		"Regal Orb": 100,
 		"Scroll of Wisdom": 100,
 		"Silver Coin": 200,
 		"Vaal Orb": -1,
+		"Stacked Deck": -1
 	}
 
 	shards = {
@@ -83,6 +84,7 @@ def create_highlight_currency(currencytab, league, accountname, cookies, header,
 		req = requester.post(request, cookies=cookies, headers=header)
 		data = json.loads(req.content)
 		skipped = set()
+		print(data)
 		for item in data['items']:
 			if item['typeLine'] in currencyvals and currencyvals[item['typeLine']] < item['stackSize'] and currencyvals[item['typeLine']] != -1:
 				currency.pop(currency.index(item['typeLine']))

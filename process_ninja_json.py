@@ -94,6 +94,8 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, auto_a
 		'Algor Mortis', 'Assailum', 'Beacon of Madness', 'One With Nothing', 'Perfidy', 'The Interrogation', "Kitava's Teachings", 'Voices',
 		# Harvest
 		'Abhorrent Interrogation', "Bear's Girdle", "Doryani's Prototype", "Emperor's Vigilance", 'Forbidden Shako', 'Law of the Wilds', 'Plume of Pursuit', 'Storm Secret', 'The Felbog Fang', 'The Immortal Will', 'The Shattered Divinity', 'The Surging Thoughts', "The Tempest's Liberation", "The Torrent's Reclamation", 'The Yielding Mortality', "Witchhunter's Judgment",
+		# Heist
+		# Ritual
 	]
 	unique_list = defaultdict(list)
 	unique_list_limited = defaultdict(list)
@@ -235,8 +237,8 @@ def convert_json_to_filter():
 	currency_val = {
 		'mirror': data['Mirror of Kalandra']['value'] / 20,
 		'extremely high': data['Exalted Orb']['value'],
-		'very high': data['Exalted Orb']['value'] / 5,
-		'high': data['Exalted Orb']['value'] / 10,
+		'very high': data['Exalted Orb']['value'] / 5 if data['Exalted Orb']['value'] / 5 >= 10 else 10,
+		'high': data['Exalted Orb']['value'] / 10 if data['Exalted Orb']['value'] / 10 >= 5 else 5,
 		'normal': 7 / 8,
 		'low': 1 / 8,
 	}

@@ -7,6 +7,7 @@ import json
 import requests
 from ninja_helm_lookup import helmnames
 from validate_ninja_data import validate_data
+from item_config.card_meta import card_meta
 
 
 # get price data from poe.ninja
@@ -14,8 +15,8 @@ def scrape_ninja(league='tmpstandard'):
 	leaguelookup = {
 		"Standard": "Standard",
 		"Hardcore": "Hardcore",
-		"tmpstandard": "Heist",
-		"tmphardcore": "Hardcore Heist",
+		"tmpstandard": "Ritual",
+		"tmphardcore": "Hardcore Ritual",
 	}
 
 	keys = [
@@ -41,7 +42,6 @@ def scrape_ninja(league='tmpstandard'):
 		'UniqueAccessory',
 		'Watchstone',
 		'DeliriumOrb',
-#		'Seed'
 	]
 
 	classtypes = {
@@ -77,7 +77,6 @@ def scrape_ninja(league='tmpstandard'):
 		'Watchstone': 'unique',
 
 		'Oil': 'challenge_stack',
-#		'Seed': 'challenge_stack',
 	}
 
 	requester = requests.session()
@@ -88,6 +87,7 @@ def scrape_ninja(league='tmpstandard'):
 	price_val = {}
 
 	for key in keys:
+		missing_unhandled = []
 		if key in ['Currency', 'Fragment']:
 			request = f'https://poe.ninja/api/data/currencyoverview?league={leaguelookup[league]}&type={key}'
 		else:
@@ -121,6 +121,9 @@ def scrape_ninja(league='tmpstandard'):
 					print(f"Duplicate key for {i['name']} found")
 				else:
 					price_val[classtypes[key]][i['name']] = {'baseexact': i['name'], 'value': i['chaosValue'], 'count': i['count']}
+				if key == 'DivinationCard' and i['name'] not in card_meta:
+					text = '|'.join([x['text'].replace('\n', ' ') for x in i["explicitModifiers"]])
+					missing_unhandled.append(f'"{i["name"]}": {{}},  # {text}, count: {i["stackSize"]}')
 
 		elif key == 'Prophecy':
 			for i in data['lines']:
@@ -179,7 +182,9 @@ def scrape_ninja(league='tmpstandard'):
 				if i['baseType'].startswith('Superior '):
 					continue
 				# convert numbers to string since we are converting to json later
-				if not i['variant']:
+				if not i['variant'] or '/' in i['variant']:
+					if 'variant' in i and i['variant']:
+						continue  # ignore dual influenced items
 					i['variant'] = 'None'
 				price_val[classtypes[key]][f"{i['levelRequired']}-{i['variant']}-{i['baseType']}"] = {'baseexact': i['baseType'], 'value': i['chaosValue'], 'count': i['count'], 'influence': i['variant'],
 																									  'other': [f'ItemLevel {">= 86" if i["levelRequired"] >= 86 else i["levelRequired"]}']}
@@ -219,12 +224,13 @@ def scrape_ninja(league='tmpstandard'):
 																														   "other": [f"GemLevel >= {i['gemLevel']}", f"Quality >= {i['gemQuality']}", f"Corrupted {i['corrupted']}"]}
 				if other:
 					price_val[classtypes[key]][f"{99 - i['gemLevel']}{99 - i['gemQuality']}{1 if i['corrupted'] else 0} {i['name']}"]['other'].append(f"GemQualityType {other}")
-		elif key == 'Seed':
-			for i in data['lines']:
-				price_val[classtypes[key]][f"{99-i['levelRequired']} {i['name']}"] = {'baseexact': i['name'], 'value': i['chaosValue'], 'count': i['count'], "other": [f"ItemLevel >= {i['levelRequired']}"]}
 
 		else:
 			print('Unhandled key: "{}"'.format(key))
+
+		if missing_unhandled:
+			missing_str = '\n\t'.join(missing_unhandled)
+			print(f"{key} is missing presets for the following items:\n\t{missing_str}")
 
 	validate_data(price_val)
 	for k in price_val:

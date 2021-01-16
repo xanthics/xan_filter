@@ -7,7 +7,7 @@ desc = "Text color rules"
 
 # Base type : settings pair
 items = {
-	"1 Purple Harvest Seed": {"base": "Wild", "class": "Harvest Seed", "type": "premiumlpurple text"},
-	"1 Yellow Harvest Seed": {"base": "Vivid", "class": "Harvest Seed", "type": "premiumyellow text"},
-	"1 Blue Harvest Seed": {"base": "Primal", "class": "Harvest Seed", "type": "premiumlblue text"},
+#	"1 Purple Harvest Seed": {"base": "Wild", "class": "Harvest Seed", "type": "premiumlpurple text"},
+#	"1 Yellow Harvest Seed": {"base": "Vivid", "class": "Harvest Seed", "type": "premiumyellow text"},
+#	"1 Blue Harvest Seed": {"base": "Primal", "class": "Harvest Seed", "type": "premiumlblue text"},
 }
