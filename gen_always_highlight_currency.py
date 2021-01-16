@@ -189,11 +189,14 @@ def create_highlight_challenge(accountname, league, cookies, header, requester):
 				"Influenced Item": [{'influenced'}],
 				"Prophecy": [{'prophecy'}],
 				"Rare Item": [{'rare'}],
-				"Six-Linked item": [{'6l'}],
+				"Six-Linked Item": [{'6l'}],
 				"Scarab": [{'scarab'}],
 				"Shaper or Elder Item": [{'shaper'}, {'elder'}],
 				"Two-Implicit Unique Item": [{'two-implicit'}],
 				"Unique Map": [{'unique', 'map'}],
+				"Itemised Prophecy": [{"NYI"}],
+				'Vaal Gem': [{"NYI"}],
+				'Unique Item': [{'unique'}],
 			}
 		},
 	}
