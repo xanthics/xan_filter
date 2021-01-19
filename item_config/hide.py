@@ -42,6 +42,9 @@ items = {
 	"1 The Undisputed": {"baseexact": "The Undisputed", "class": "Divination Card", "type": "hide"},
 	"1 Thunderous Skies": {"baseexact": "Thunderous Skies", "class": "Divination Card", "type": "hide"},
 	"1 Vile Power": {"baseexact": "Vile Power", "class": "Divination Card", "type": "hide"},
+	"1 Her Mask": {"baseexact": "Her Mask", "class": "Divination Card", "type": "hide"},
+	"1 The Gambler": {"baseexact": "The Gambler", "class": "Divination Card", "type": "hide"},
+	"1 The Warden": {"baseexact": "The Warden", "class": "Divination Card", "type": "hide"},
 
 	# bad incubators
 	"1 Whispering Incubator": {"base": "Whispering Incubator", "class": "Incubator", "type": "hide"},

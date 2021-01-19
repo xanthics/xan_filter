@@ -35,10 +35,10 @@ def clean(price_val):
 			else:
 				del price_val[base][item]['count']
 				defaults[base][item] = price_val[base][item]
-		if del_:
-			print(f'Discarding values for {base}: {del_}')
-		if def_:
-			print(f'Using default *{base}* value for: {def_}\n')
+#		if del_:
+#			print(f'Discarding values for {base}: {del_}')
+#		if def_:
+#			print(f'Using default *{base}* value for: {def_}\n')
 		for k in del_:
 			del price_val[base][k]
 
@@ -313,8 +313,8 @@ def validate_data(price_val):
 	price_val['currency']['Chaos Orb'] = {'base': 'Chaos Orb', 'value': 1, 'count': 200}
 	if "Perandus Coin" not in price_val['currency']:
 		price_val['currency']['Perandus Coin'] = {'base': 'Perandus Coin', 'value': 1/200, 'count': 200}
-	if "Rogue's Marker" not in price_val['challenge_stack']:
-		price_val['challenge_stack']['Rogue\'s Marker'] = {'base': 'Rogue\'s Marker', 'value': 1/200, 'count': 200}
+	if "Rogue's Marker" not in price_val['currency']:
+		price_val['currency']['Rogue\'s Marker'] = {'base': 'Rogue\'s Marker', 'value': 1/200, 'count': 200}
 	# Remove low reliability data and load defaults where needed
 	clean(price_val)
 	fix_divs(price_val)

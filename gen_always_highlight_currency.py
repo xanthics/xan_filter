@@ -84,7 +84,6 @@ def create_highlight_currency(currencytab, league, accountname, cookies, header,
 		req = requester.post(request, cookies=cookies, headers=header)
 		data = json.loads(req.content)
 		skipped = set()
-		print(data)
 		for item in data['items']:
 			if item['typeLine'] in currencyvals and currencyvals[item['typeLine']] < item['stackSize'] and currencyvals[item['typeLine']] != -1:
 				currency.pop(currency.index(item['typeLine']))

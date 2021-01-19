@@ -21,6 +21,8 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, auto_a
 		# Atziri
 		"Atziri's Step", "Doryani's Catalyst", "Doryani's Invitation", "Atziri's Promise",
 		"The Vertex", "Atziri's Splendour", "Atziri's Acuity", "Atziri's Disfavour",
+		# Maven
+		"Arn's Anguish", "Graven's Secret", "Olesya's Delight", "Viridi's Veil", 'The Walls', 'The Claim', 'The Closest Peak', 'Atop the Atlas', 'The Vast Horizon', 'The Builder', 'Restless Cycles', 'The False Hope',
 		# Bestiary League
 		"Saqawal's Flock", "Saqawal's Nest", "Saqawal's Talons", "Saqawal's Winds",
 		"Fenumus' Toxins", "Fenumus' Shroud", "Fenumus' Spinnerets", "Fenumus' Weave",
@@ -95,7 +97,9 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, auto_a
 		# Harvest
 		'Abhorrent Interrogation', "Bear's Girdle", "Doryani's Prototype", "Emperor's Vigilance", 'Forbidden Shako', 'Law of the Wilds', 'Plume of Pursuit', 'Storm Secret', 'The Felbog Fang', 'The Immortal Will', 'The Shattered Divinity', 'The Surging Thoughts', "The Tempest's Liberation", "The Torrent's Reclamation", 'The Yielding Mortality', "Witchhunter's Judgment",
 		# Heist
+		'Fated End', "Leadership's Price", "The Admiral", "Chains of Emancipation", "The Fledgling", "Nadir Mode", "Apex Mode", "Font of Thunder", "Actum", "The Iron Mass", "The Hidden Blade", "The Fulcrum", "Expedition's End", "Crest of Desire", "Corpsewalker", "Shattershard",
 		# Ritual
+		'Hand of the Fervent', 'Blackflame', 'Rotblood Promise', "Survivor's Guilt", "Qotra's Regulator"
 	]
 	unique_list = defaultdict(list)
 	unique_list_limited = defaultdict(list)
@@ -128,7 +132,7 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, auto_a
 
 
 def price_currency(data, val, base_sound, currency_val, tiers, minval, auto_ah, ret):
-	ah_list = ['Fossil', 'Resonator', 'Deafening', 'Shrieking', 'Screaming', 'Catalyst', "Delerium Orb", 'Splinter']
+	ah_list = ['Fossil', 'Resonator', 'Deafening', 'Shrieking', 'Screaming', 'Catalyst', "Delerium Orb"]#, 'Splinter']
 	stackable = ['Orb', 'Splinter', 'Chisel', 'Coin', 'Bauble', 'Sextant', 'Shard', 'Whetstone', 'Scroll', 'Scrap', "Essence", 'Fossil', 'Resonator', 'Primal', 'Vivid', 'Wild', 'Oil', 'Marker']
 	for item in data:
 		rule = True

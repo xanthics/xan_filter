@@ -1,10 +1,39 @@
 # Implemented tags
 # '5l', '6l', 'amulet', 'awakened', 'belt', 'body armour', 'boot', 'bow', 'corrupt', 'crusader', 'currency', 'dagger', 'div', 'double-influenced',
 # 'elder', 'enchanted', 'essence', 'fishing', 'flask', 'fragment', 'gem', 'glove', 'helmet', 'hunter', 'ilvl100', 'influenced', 'jewel', 'jewellery',
-# 'jewellry', 'magic', 'map', 'prophecy', 'quiver', 'rare', 'ring', 'scarab', 'sceptre', 'shaper', 'shield', 'staff', 'thrusting sword', 'two-implicit',
+# 'magic', 'map', 'prophecy', 'quiver', 'rare', 'ring', 'scarab', 'sceptre', 'shaper', 'shield', 'staff', 'thrusting sword', 'two-implicit',
 # 'unique', 'wand', 'white'
 
 card_meta = {
+	"Acclimatisation": {'currency'},  # {20x Orb of Alteration}, count: 2
+	"Brother's Stash": {'currency'},  # {5x Exalted Orb}, count: 0
+	"Brotherhood in Exile": {'unique', 'corrupt', 'jewel'},  # {One With Nothing} {Corrupted}, count: 5
+	"Cursed Words": {'unique', 'helm'},  # {Maw of Mischief}, count: 13
+	"Desecrated Virtue": {'aug', 'gem', 'corrupt'},  # {{Level 6 Awakened Support Gem}} {Quality:} {+23%} {Corrupted}, count: 9
+	"Draped in Dreams": {'white', '6l', 'ilvl100', 'body armour'},  # {Six-Linked Body Armour} {Item Level:} {100} {Influenced Item}, count: 5
+	"Dying Anguish": {'aug', 'gem'},  # {Level 19 Gem} {Alternate Quality:} {+19%}, count: 8
+	"Dying Light": {'rare', 'ring', 'ilvl100'},  # {Diamond Ring} {Item Level:} {100} {Shaper + Elder Item}, count: 10
+	"Fateful Meeting": {'unique', 'corrupt', 'double-influenced', 'two-implicit'},  # {League-Specific Item} {Double-Influenced Item} {Item Level:} {97} {Two-Implicit} {Corrupted}, count: 9
+	"Haunting Shadows": {'unique'},  # {Metamorph Item}, count: 4
+	"Keeper's Corruption": {'magic',  'helmet', 'elder'},  # {Eldritch Bone Helmet (Concentrated Effect)} {Item Level:} {89} {Elder Item}, count: 7
+	"Love Through Ice": {'unique', 'corrupt',  'jewel', 'two-implicit'},  # {Unnatural Instinct} {Two-Implicit} {Corrupted}, count: 4
+	"Reckless Ambition": {'unique'},  # {Omeyocan}, count: 6
+	"Society's Remorse": {'currency'},  # {10x Orb of Alteration}, count: 0
+	"The Academic": {'unique', 'jewel'},  # {Inspired Learning}, count: 8
+	"The Astromancer": {'unique', 'corrupt', 'body armour', 'two-implicit'},  # {{The Eternity Shroud} {Two-Implicit} {Corrupted}}, count: 7
+	"The Bear Woman": {'magic', 'helmet', 'warlord'},  # {Fecund Ursine Pelt} {Warlord Item}, count: 6
+	"The Bitter Blossom": {'aug', 'gem', 'corrupt', 'jewellery'},  # {Level 21 Chaos Gem} {Quality:} {+23%} {Corrupted}, count: 3
+	"The Cache": {'unique', 'jewellery'},  # {Jewellery}, count: 6
+	"The Gulf": {'unique', 'corrupt', 'jewel', 'two-implicit'},  # {Thread of Hope} {Two-Implicit} {Corrupted}, count: 5
+	"The Journalist": {'rare', 'helmet'},  # {Helmet} {Double-Veiled Item}, count: 10
+	"The Long Watch": {'unique', 'jewel'},  # {The Vigil}, count: 3
+	"The Patient": {'div'},  # {The Nurse}, count: 8
+	"The Unexpected Prize": {'unique', 'jewel'},  # {{Attribute Transforming Jewel}}, count: 2
+	"The Whiteout": {'unique', 'thrusting sword'},  # {Cospri's Malice}, count: 8
+	"Triskaidekaphobia": {'aug', 'rare', 'corrupt', 'map'},  # {{Map}} {{Map Tier:} {13} {Quality:} {+13%} {Delirium:} {100%} {Modifiers:} {8} {Corrupted}}, count: 13
+	"Unchained": {'unique', 'corrupt', 'two-implicit', 'glove'},  # {Facebreaker} {Two-Implicit} {Corrupted}, count: 4
+	"Unrequited Love": {'currency'},  # {19x Mirror Shard}, count: 16
+
 	"A Dab of Ink": {'unique', 'wand'},  # The Poet's Pen
 	"A Familiar Call": {'magic', 'shaper', 'influenced', 'hunter', 'ilvl100'},  # Jewellery of Farrul|Item Level: 100|Shaper + Hunter Item
 	"A Mother's Parting Gift": {'unique', 'jewel'},  # Fertile Mind
@@ -21,7 +50,7 @@ card_meta = {
 	"Azyran's Reward": {'unique', 'corrupt', 'jewel'},  # Prismatic Jewel|Corrupted
 	"Baited Expectations": {'unique', 'fishing'},  # Fishing Item
 	"Beauty Through Death": {'prophecy'},  # Queen's Sacrifice
-	"Blessing of God": {'magic', 'jewellry'},  # Elreon's Jewellery|Item Level: 85
+	"Blessing of God": {'magic', 'jewellery'},  # Elreon's Jewellery|Item Level: 85
 	"Blind Venture": {'unique', 'corrupt', 'ring'},  # Ring|Corrupted
 	"Boon of Justice": {'white', 'fragment'},  # Offering to the Goddess
 	"Boon of the First Ones": {'unique'},  # Bestiary Item
