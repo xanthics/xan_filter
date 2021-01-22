@@ -61,7 +61,8 @@ def create_highlight_currency(currencytab, league, accountname, cookies, header,
 		"Scroll of Wisdom": 100,
 		"Silver Coin": 200,
 		"Vaal Orb": -1,
-		"Stacked Deck": -1
+		"Stacked Deck": -1,
+		"Rogue's Marker": 50000
 	}
 
 	shards = {

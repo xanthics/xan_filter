@@ -299,6 +299,8 @@ def trim_uniques(uniques):
 		'Uul-Netol\'s Embrace', 'The Red Trail', 'The Surrender', 'United in Dream', 'Skin of the Lords', 'Presence of Chayula', 'The Red Nightmare', 'The Green Nightmare', 'The Blue Nightmare',
 		# Harbinger Uniques -- Currently only drops as pieces
 		"The Flow Untethered", "The Fracturing Spinner", "The Tempest's Binding", "The Rippling Thoughts", "The Enmity Divine", "The Unshattered Will",
+		# upgraded harbinger uniques
+		"The Torrent's Reclamation", "The Shattered Divinity", "The Tempest's Liberation", "The Surging Thoughts", "The Yielding Mortality", "The Immortal Will",
 		# Special uniques that would skew their basetype value and are handled elsewhere in show.py
 		'Tabula Rasa'
 	]
@@ -312,9 +314,18 @@ def validate_data(price_val):
 	# Add missing value for chaos
 	price_val['currency']['Chaos Orb'] = {'base': 'Chaos Orb', 'value': 1, 'count': 200}
 	if "Perandus Coin" not in price_val['currency']:
-		price_val['currency']['Perandus Coin'] = {'base': 'Perandus Coin', 'value': 1/200, 'count': 200}
-	if "Rogue's Marker" not in price_val['currency']:
-		price_val['currency']['Rogue\'s Marker'] = {'base': 'Rogue\'s Marker', 'value': 1/200, 'count': 200}
+		price_val['currency']['Perandus Coin'] = {'base': 'Perandus Coin', 'value': 1 / 200, 'count': 200}
+	# Add missing harbinger scroll values
+	for s, b, u in [
+		('Deregulation Scroll', "The Tempest's Binding", "The Tempest's Liberation"),
+		('Electroshock Scroll', 'The Rippling Thoughts', 'The Surging Thoughts'),
+		('(Fragmentation Scroll', 'The Fracturing Spinner', 'The Shattered Divinity'),
+		('Haemocombustion Scroll', 'The Enmity Divine', 'The Yielding Mortality'),
+		('Specularity Scroll', 'The Unshattered Will', 'The Immortal Will'),
+		('Time-light Scroll', 'The Flow Untethered', "The Torrent's Reclamation")
+	]:
+		if s not in price_val['currency'] and all(x in price_val['unique'] for x in [b, u]):
+			price_val['currency'][s] = {'baseexact': s, 'value': price_val['unique'][u]['value'] - price_val['unique'][b]['value'], 'count': price_val['unique'][u]['count']}
 	# Remove low reliability data and load defaults where needed
 	clean(price_val)
 	fix_divs(price_val)

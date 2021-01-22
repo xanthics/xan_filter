@@ -132,7 +132,7 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, auto_a
 
 
 def price_currency(data, val, base_sound, currency_val, tiers, minval, auto_ah, ret):
-	ah_list = ['Fossil', 'Resonator', 'Deafening', 'Shrieking', 'Screaming', 'Catalyst', "Delerium Orb"]#, 'Splinter']
+	ah_list = ['Fossil', 'Resonator', 'Deafening', 'Shrieking', 'Screaming', 'Catalyst', "Delerium Orb", 'Splinter']
 	stackable = ['Orb', 'Splinter', 'Chisel', 'Coin', 'Bauble', 'Sextant', 'Shard', 'Whetstone', 'Scroll', 'Scrap', "Essence", 'Fossil', 'Resonator', 'Primal', 'Vivid', 'Wild', 'Oil', 'Marker']
 	for item in data:
 		rule = True
