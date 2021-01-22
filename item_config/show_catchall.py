@@ -21,9 +21,9 @@ items = {
 	"16 unique": {"type": "unique normal"},
 	"17 enchant": {"class": "Helmet", "other": ["AnyEnchantment True"], "type": "item mod"},
 	"18 Misc map items": {"class": "Misc Map Items", "type": "show high"},
-	"1 Alternate Gems": {"other": ["AlternateQuality True"], "type": "challenge normal"},
-	"1 Replica Unique": {"other": ["Replica True"], "type": "challenge normal"},
-	"1 Rogue's Marker": {"baseexact": "Rogue's Marker", "class": "Currency", "type": "challenge normal"},
+#	"1 Alternate Gems": {"other": ["AlternateQuality True"], "type": "challenge normal"},
+#	"1 Replica Unique": {"other": ["Replica True"], "type": "challenge normal"},
+#	"1 Rogue's Marker": {"baseexact": "Rogue's Marker", "class": "Currency", "type": "challenge normal"},
 
 	"8 5": {"other": ["DropLevel <= 5", "AreaLevel >= 15", "AreaLevel <= 67"], "type": "rare low"},
 	"8 10": {"other": ["DropLevel <= 10", "AreaLevel >= 20", "AreaLevel <= 67"], "type": "rare low"},

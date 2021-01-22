@@ -315,6 +315,10 @@ def validate_data(price_val):
 	price_val['currency']['Chaos Orb'] = {'base': 'Chaos Orb', 'value': 1, 'count': 200}
 	if "Perandus Coin" not in price_val['currency']:
 		price_val['currency']['Perandus Coin'] = {'base': 'Perandus Coin', 'value': 1 / 200, 'count': 200}
+	# Add low value items if they are missing from poe.ninja
+	for item in ["Rogue's Marker", 'Perandus Coin']:
+		if item not in price_val['currency']:
+			price_val['currency'][item] = {'base': item, 'value': 1/200, 'count': 200}
 	# Add missing harbinger scroll values
 	for s, b, u in [
 		('Deregulation Scroll', "The Tempest's Binding", "The Tempest's Liberation"),
