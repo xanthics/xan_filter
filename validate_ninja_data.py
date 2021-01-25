@@ -323,7 +323,7 @@ def validate_data(price_val):
 	for s, b, u in [
 		('Deregulation Scroll', "The Tempest's Binding", "The Tempest's Liberation"),
 		('Electroshock Scroll', 'The Rippling Thoughts', 'The Surging Thoughts'),
-		('(Fragmentation Scroll', 'The Fracturing Spinner', 'The Shattered Divinity'),
+		('Fragmentation Scroll', 'The Fracturing Spinner', 'The Shattered Divinity'),
 		('Haemocombustion Scroll', 'The Enmity Divine', 'The Yielding Mortality'),
 		('Specularity Scroll', 'The Unshattered Will', 'The Immortal Will'),
 		('Time-light Scroll', 'The Flow Untethered', "The Torrent's Reclamation")

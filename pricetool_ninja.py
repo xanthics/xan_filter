@@ -97,7 +97,7 @@ def scrape_ninja(league='tmpstandard'):
 		if req.status_code == 204:
 			print("No {} data for {}".format(key, league))
 			continue
-		data = req.json(encoding='utf-8')
+		data = req.json()
 
 		if classtypes[key] not in price_val:
 			price_val[classtypes[key]] = {}

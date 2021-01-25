@@ -142,7 +142,7 @@ def gen_list_compact(items, desc):
 					base += "\n\tHasInfluence {}".format(influence)
 				if other:
 					base += "\n\t{}".format("\n\t".join(sorted(other.split(','))))
-				base += "\n\tDisableDropSound True"
+#				base += "\n\tDisableDropSound True"
 				base += "\n\n"
 
 	return base
@@ -180,13 +180,18 @@ def convertname(league):
 # main function for creating a filter
 def main(league='tmpstandard'):
 
-	leveling = True  # toggle to show leveling items
+	leveling = False  # toggle to show leveling items
 
 	buffer = """#**************************************************************
 # Welcome to xan.filter, a Python generated loot filter for PoE
 # This filter was generated for {} on {} UTC
 # The most current version of code can always be found at https://github.com/xanthics/poe_filter
 #**************************************************************
+
+# Disable drop sounds
+Show
+	DisableDropSound True
+	Continue
 
 """.format(league, datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'))
 	league = convertname(league)
@@ -232,20 +237,20 @@ def main(league='tmpstandard'):
 	with open("xan.{}.show.filter".format(league), "w", encoding='utf-8') as f:
 		f.write(buffer)
 		# Default for all other items
-		f.write("Show\n\tDisableDropSound True\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
+		f.write("Show\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
 	with open(os.path.join(poeDir, "xan.{}.show.filter".format(league)), "w", encoding='utf-8') as f:
 		f.write(buffer)
 		# Default for all other items
-		f.write("Show\n\tDisableDropSound True\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
+		f.write("Show\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
 
 	with open("xan.{}.hide.filter".format(league), "w", encoding='utf-8') as f:
 		f.write(buffer)
 		# Default for all other items
-		f.write("Hide\n\tDisableDropSound True\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
+		f.write("Hide\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
 	with open(os.path.join(poeDir, "xan.{}.hide.filter".format(league)), "w", encoding='utf-8') as f:
 		f.write(buffer)
 		# Default for all other items
-		f.write("Hide\n\tDisableDropSound True\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
+		f.write("Hide\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
 
 
 if __name__ == "__main__":
