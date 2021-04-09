@@ -9,7 +9,7 @@ items = {
 	"0 Leaguestone": {"class": "Leaguestone", "type": "show high"},
 	"01 Tabula Exception": {"baseexact": "Simple Robe", "other": ["SocketGroup WWWWWW"], "type": "unique high"},
 	"02 6L": {"other": ["LinkedSockets 6"], "type": "show high"},
-	"03 6S": {"other": ["Sockets 6"], "type": "show normal"},
+	"03 6S": {"other": ["Sockets 6"], "type": "show low"},
 	"04 5L": {"other": ["Rarity < Unique", "LinkedSockets 5", 'CustomAlertSound "high_5link"'], "type": "normal border"},
 	"04 Incursion Item": {"class": "Incursion Item", "type": "show high"},
 	"04 Timeworn Reliquary Key": {"baseexact": "Timeworn Reliquary Key", "class": "Misc Map Items", "type": "show high"},

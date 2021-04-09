@@ -6,6 +6,8 @@ desc = "Always show catchall"
 
 # Base type : settings pair
 items = {
+	"0 steel ring": {"baseexact": "Steel Ring", "other": ["ItemLevel >= 80"], "type": "show normal"},
+
 	# High value veiled mods, so that they still show after removing them from itemmod.py when finished
 	"2 Magic Jewel": {"class": "Jewel", "other": ["Rarity <= Magic", "AreaLevel <= 70"], "type": "normal"},
 
