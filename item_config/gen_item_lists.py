@@ -513,7 +513,10 @@ bases = {
 			{'drop': 54, 'base': 'Boots', 'name': 'Goliath Greaves', 'tier': 3},
 			{'drop': 62, 'base': 'Boots', 'name': 'Vaal Greaves', 'tier': 2},
 			{'drop': 68, 'base': 'Boots', 'name': 'Titan Greaves', 'tier': 1},
-		],
+			{'drop': 20, 'base': 'Boots', 'name': 'Basemetal Treads', 'tier': 0},  # +(4-5)% Chance to Block Attack Damage You take 20% of Damage from Blocked Hits
+			{'drop': 50, 'base': 'Boots', 'name': 'Darksteel Treads', 'tier': 0},  # +(4-5)% Chance to Block Attack Damage You take 20% of Damage from Blocked Hits
+			{'drop': 80, 'base': 'Boots', 'name': 'Brimstone Treads', 'tier': 0},  # +(4-5)% Chance to Block Attack Damage You take 20% of Damage from Blocked Hits
+],
 		"Armour|Boots|Int": [
 			{'drop': 3, 'base': 'Boots', 'name': 'Wool Shoes', 'tier': 4},
 			{'drop': 9, 'base': 'Boots', 'name': 'Velvet Slippers', 'tier': 4},
@@ -524,6 +527,9 @@ bases = {
 			{'drop': 53, 'base': 'Boots', 'name': 'Conjurer Boots', 'tier': 3},
 			{'drop': 61, 'base': 'Boots', 'name': 'Arcanist Slippers', 'tier': 2},
 			{'drop': 67, 'base': 'Boots', 'name': 'Sorcerer Boots', 'tier': 1},
+			{'drop': 20, 'base': 'Boots', 'name': 'Duskwalk Slippers', 'tier': 1},  # 10% reduced Movement Speed (30-40)% increased Cooldown Recovery Rate of Movement Skills
+			{'drop': 50, 'base': 'Boots', 'name': 'Nightwind Slippers', 'tier': 1},  # 10% reduced Movement Speed (30-40)% increased Cooldown Recovery Rate of Movement Skills
+			{'drop': 80, 'base': 'Boots', 'name': 'Dreamquest Slippers', 'tier': 1},  # 10% reduced Movement Speed (30-40)% increased Cooldown Recovery Rate of Movement Skills
 		],
 		"Armour|Boots|Dex": [
 			{'drop': 3, 'base': 'Boots', 'name': 'Rawhide Boots', 'tier': 4},
@@ -535,6 +541,9 @@ bases = {
 			{'drop': 55, 'base': 'Boots', 'name': 'Shagreen Boots', 'tier': 3},
 			{'drop': 62, 'base': 'Boots', 'name': 'Stealth Boots', 'tier': 2},
 			{'drop': 69, 'base': 'Boots', 'name': 'Slink Boots', 'tier': 1},
+			{'drop': 20, 'base': 'Boots', 'name': 'Cloudwhisper Boots', 'tier': 0},  # 1 to (5-6) Added Attack Lightning Damage per 200 Accuracy Rating 25% less Accuracy Rating
+			{'drop': 50, 'base': 'Boots', 'name': 'Windbreak Boots', 'tier': 0},  # 1 to (5-6) Added Attack Lightning Damage per 200 Accuracy Rating 25% less Accuracy Rating
+			{'drop': 80, 'base': 'Boots', 'name': 'Stormrider Boots', 'tier': 0},  # 1 to (5-6) Added Attack Lightning Damage per 200 Accuracy Rating 25% less Accuracy Rating
 		],
 		"Armour|Boots|Int|Str": [
 			{'drop': 5, 'base': 'Boots', 'name': 'Chain Boots', 'tier': 4},
@@ -556,6 +565,7 @@ bases = {
 			{'drop': 55, 'base': 'Boots', 'name': 'Carnal Boots', 'tier': 3},
 			{'drop': 63, 'base': 'Boots', 'name': "Assassin's Boots", 'tier': 2},
 			{'drop': 69, 'base': 'Boots', 'name': 'Murder Boots', 'tier': 2},
+			{'drop': 70, 'base': 'Boots', 'name': 'Blessed Boots', 'tier': 1},
 		],
 		"Armour|Boots|Dex|Str": [
 			{'drop': 6, 'base': 'Boots', 'name': 'Leatherscale Boots', 'tier': 4},
@@ -581,6 +591,9 @@ bases = {
 			{'drop': 63, 'base': 'Gloves', 'name': 'Vaal Gauntlets', 'tier': 2},
 			{'drop': 69, 'base': 'Gloves', 'name': 'Titan Gauntlets', 'tier': 1},
 			{'drop': 70, 'base': 'Gloves', 'name': 'Spiked Gloves', 'tier': 0},  # Melee Damage +(16 to 20)
+			{'drop': 10, 'base': 'Gloves', 'name': 'Taxing Gauntlets', 'tier': 2},  # Exerted Attacks deal (25-30)% increased Damage Warcry Skills have +2 seconds to Cooldown
+			{'drop': 40, 'base': 'Gloves', 'name': 'Gruelling Gauntlets', 'tier': 2},  # Exerted Attacks deal (30-40)% increased Damage Warcry Skills have +2 seconds to Cooldown
+			{'drop': 70, 'base': 'Gloves', 'name': 'Debilitation Gauntlets', 'tier': 2},  # Exerted Attacks deal (40-50)% increased Damage Warcry Skills have +2 seconds to Cooldown
 		],
 		"Armour|Dex|Gloves": [
 			{'drop': 3, 'base': 'Gloves', 'name': 'Rawhide Gloves', 'tier': 4},
@@ -593,6 +606,9 @@ bases = {
 			{'drop': 62, 'base': 'Gloves', 'name': 'Stealth Gloves', 'tier': 2},
 			{'drop': 70, 'base': 'Gloves', 'name': 'Slink Gloves', 'tier': 1},
 			{'drop': 70, 'base': 'Gloves', 'name': 'Gripped Gloves', 'tier': 0},  # Projectile Attack Damage +(14 to 18)
+			{'drop': 10, 'base': 'Gloves', 'name': 'Gauche Gloves', 'tier': 1},  # 25% reduced Attack Damage with Main Hand (40-50)% increased Attack Damage with Off Hand
+			{'drop': 40, 'base': 'Gloves', 'name': 'Southswing Gloves', 'tier': 1},  # 25% reduced Attack Damage with Main Hand (40-50)% increased Attack Damage with Off Hand
+			{'drop': 70, 'base': 'Gloves', 'name': 'Sinistral Gloves', 'tier': 1},  # 25% reduced Attack Damage with Main Hand (40-50)% increased Attack Damage with Off Hand
 		],
 		"Armour|Gloves|Int": [
 			{'drop': 3, 'base': 'Gloves', 'name': 'Wool Gloves', 'tier': 4},
@@ -605,6 +621,9 @@ bases = {
 			{'drop': 60, 'base': 'Gloves', 'name': 'Arcanist Gloves', 'tier': 2},
 			{'drop': 69, 'base': 'Gloves', 'name': 'Sorcerer Gloves', 'tier': 1},
 			{'drop': 70, 'base': 'Gloves', 'name': 'Fingerless Silk Gloves', 'tier': 0},  # Spell Damage +(12 to 16)
+			{'drop': 10, 'base': 'Gloves', 'name': 'Leyline Gloves', 'tier': 2},  # 30% reduced maximum Mana (25-30)% chance when you pay a Skill's Mana Cost to gain that much Mana
+			{'drop': 40, 'base': 'Gloves', 'name': 'Aetherwind Gloves', 'tier': 2},  # 30% reduced maximum Mana (25-30)% chance when you pay a Skill's Mana Cost to gain that much Mana
+			{'drop': 70, 'base': 'Gloves', 'name': 'Nexus Gloves', 'tier': 2},  # 30% reduced maximum Mana (25-30)% chance when you pay a Skill's Mana Cost to gain that much Mana
 		],
 		"Armour|Dex|Gloves|Str": [
 			{'drop': 4, 'base': 'Gloves', 'name': 'Fishscale Gauntlets', 'tier': 4},
@@ -625,6 +644,7 @@ bases = {
 			{'drop': 50, 'base': 'Gloves', 'name': 'Carnal Mitts', 'tier': 4},
 			{'drop': 58, 'base': 'Gloves', 'name': "Assassin's Mitts", 'tier': 3},
 			{'drop': 67, 'base': 'Gloves', 'name': 'Murder Mitts', 'tier': 2},
+			{'drop': 67, 'base': 'Gloves', 'name': 'Apothecary\'s Mitts', 'tier': 1},  # (14-18)% increased Damage Over Time
 		],
 		"Armour|Gloves|Int|Str": [
 			{'drop': 7, 'base': 'Gloves', 'name': 'Chain Gloves', 'tier': 4},
@@ -686,6 +706,9 @@ bases = {
 			{'drop': 57, 'base': 'Helmet', 'name': 'Harlequin Mask', 'tier': 4},
 			{'drop': 62, 'base': 'Helmet', 'name': 'Vaal Mask', 'tier': 3},
 			{'drop': 67, 'base': 'Helmet', 'name': 'Deicide Mask', 'tier': 2},
+			{'drop': 15, 'base': 'Helmet', 'name': 'Gale Crown', 'tier': 4},  # Adds (3-4) to (5-6) Cold Damage Your Hits treat Cold Resistance as 10% higher than actual value
+			{'drop': 45, 'base': 'Helmet', 'name': 'Winter Crown', 'tier': 3},  # Adds (15-20) to (28-35) Cold Damage Your Hits treat Cold Resistance as 10% higher than actual value
+			{'drop': 75, 'base': 'Helmet', 'name': 'Blizzard Crown', 'tier': 0},  # Adds (75-85) to (115-128) Cold Damage Your Hits treat Cold Resistance as 10% higher than actual value
 		],
 		"Armour|Dex|Helmet|Str": [
 			{'drop': 4, 'base': 'Helmet', 'name': 'Battered Helm', 'tier': 4},
@@ -698,6 +721,9 @@ bases = {
 			{'drop': 58, 'base': 'Helmet', 'name': 'Fluted Bascinet', 'tier': 3},
 			{'drop': 63, 'base': 'Helmet', 'name': 'Pig-Faced Bascinet', 'tier': 2},
 			{'drop': 67, 'base': 'Helmet', 'name': 'Nightmare Bascinet', 'tier': 1},
+			{'drop': 15, 'base': 'Helmet', 'name': 'Sorrow Mask', 'tier': 2},  # (20-25)% increased Effect of Fortify on you You are Crushed
+			{'drop': 45, 'base': 'Helmet', 'name': 'Atonement Mask', 'tier': 2},  # (20-25)% increased Effect of Fortify on you You are Crushed
+			{'drop': 75, 'base': 'Helmet', 'name': 'Penitent Mask', 'tier': 2},  # (20-25)% increased Effect of Fortify on you You are Crushed
 		],
 		"Armour|Helmet|Int|Str": [
 			{'drop': 5, 'base': 'Helmet', 'name': 'Rusted Coif', 'tier': 4},
@@ -711,6 +737,9 @@ bases = {
 			{'drop': 63, 'base': 'Helmet', 'name': 'Prophet Crown', 'tier': 3},
 			{'drop': 68, 'base': 'Helmet', 'name': 'Praetor Crown', 'tier': 2},
 			{'drop': 73, 'base': 'Helmet', 'name': 'Bone Helmet', 'tier': 0},  # Minion Damage increase (30 to 40)
+			{'drop': 15, 'base': 'Helmet', 'name': 'Imp Crown', 'tier': 1},  # -10% to all Elemental Resistances Socketed Skills apply Fire, Cold and Lightning Exposure on Hit
+			{'drop': 45, 'base': 'Helmet', 'name': 'Demon Crown', 'tier': 1},  # -10% to all Elemental Resistances Socketed Skills apply Fire, Cold and Lightning Exposure on Hit
+			{'drop': 75, 'base': 'Helmet', 'name': 'Archdemon Crown', 'tier': 1},  # -10% to all Elemental Resistances Socketed Skills apply Fire, Cold and Lightning Exposure on Hit
 		],
 		"Armour|Shield|Str": [
 			{'drop': 1, 'base': 'Shield', 'name': 'Exothermic Tower Shield', 'tier': -4},  # ?
@@ -866,6 +895,7 @@ bases = {
 			{'drop': 35, 'base': 'Amulet', 'name': 'Chrysalis Talisman', 'tier': 2},  # Spell Damage +(20 to 30)
 			{'drop': 50, 'base': 'Amulet', 'name': 'Ruby Amulet', 'tier': 0},  # Base Fire Damage Resistance (20 to 30)
 			{'drop': 74, 'base': 'Amulet', 'name': 'Marble Amulet', 'tier': 0},  # Life Regeneration Rate Per Minute (72 to 96)
+			{'drop': 74, 'base': 'Amulet', 'name': 'Seaglass Amulet', 'tier': 1},  # (10-15)% faster start of energy shield recharge
 			{'drop': 77, 'base': 'Amulet', 'name': 'Blue Pearl Amulet', 'tier': 2},  # Mana Regeneration Rate +(48 to 56)
 		],
 		"Accessory|Belt": [
@@ -901,6 +931,7 @@ bases = {
 			{'drop': 30, 'base': 'Ring', 'name': 'Prismatic Ring', 'tier': 0},  # Resist all Elements (8 to 10)
 			{'drop': 38, 'base': 'Ring', 'name': 'Amethyst Ring', 'tier': 2},  # Base Chaos Damage Resistance (9 to 13)
 			{'drop': 45, 'base': 'Ring', 'name': 'Unset Ring', 'tier': 1},  # Local Has (1) Sockets
+			{'drop': 78, 'base': 'Ring', 'name': 'Iolite Ring', 'tier': 0},  # (17-23)% increased Chaos Damage
 			{'drop': 78, 'base': 'Ring', 'name': 'Opal Ring', 'tier': 0},  # Elemental Damage +(15 to 25)
 			{'drop': 78, 'base': 'Ring', 'name': 'Steel Ring', 'tier': 0},  # Minimum Added Physical Damage (3 to 4), Maximum Added Physical Damage (10 to 14)
 			{'drop': 80, 'base': 'Ring', 'name': 'Vermillion Ring', 'tier': 0},  # (5 to 7)% increased maximum Life
@@ -916,6 +947,7 @@ bases = {
 			{'drop': 36, 'base': 'Quiver', 'name': 'Penetrating Arrow Quiver', 'tier': 2},  # Arrows Pierce an additional Target
 			{'drop': 45, 'base': 'Quiver', 'name': 'Ornate Quiver', 'tier': 0},  # Has 1 Socket
 			{'drop': 45, 'base': 'Quiver', 'name': 'Spike-Point Arrow Quiver', 'tier': 2},  # (20-30)% increased Global Critical Strike Chance
+			{'drop': 74, 'base': 'Quiver', 'name': 'Artillery Quiver', 'tier': 1},  # (20-30)% increased Totem Placement Speed
 
 		],
 		"Other": [
