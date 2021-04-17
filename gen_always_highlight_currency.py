@@ -9,7 +9,7 @@ from item_config.card_meta import card_meta
 
 def create_always_highlight():
 	currencytab = "0"  # Update to the tabid(s) where you keep your currency
-	league = "Ritual"
+	league = "Ultimatum"
 	accountname = "xanqos"
 	cookies = {'POESESSID': ''}  # update to your session id, blank session id will use default(on) highlighting rules
 	header = {
@@ -62,7 +62,7 @@ def create_highlight_currency(currencytab, league, accountname, cookies, header,
 		"Silver Coin": 200,
 		"Vaal Orb": -1,
 		"Stacked Deck": -1,
-		"Rogue's Marker": 50000
+		"Rogue's Marker": 0
 	}
 
 	shards = {
