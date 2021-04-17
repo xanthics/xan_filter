@@ -309,7 +309,7 @@ bases = {
 		"Melee|Str|Two|Two Hand Mace|Weapon": [
 			{'drop': 1, 'base': 'Two Hand Mace', 'name': 'Blunt Force Condenser', 'tier': -4},  # ?
 			{'drop': 1, 'base': 'Two Hand Mace', 'name': 'Crushing Force Magnifier', 'tier': -4},  # ?
-			{'drop': 1, 'base': 'Two Hand Mace', 'name': 'Impact Force Propagator ', 'tier': -4},  # ?
+			{'drop': 1, 'base': 'Two Hand Mace', 'name': 'Impact Force Propagator', 'tier': -4},  # ?
 			{'drop': 3, 'base': 'Two Hand Mace', 'name': 'Driftwood Maul', 'tier': 4},  # Base Stun Duration +(30)
 			{'drop': 8, 'base': 'Two Hand Mace', 'name': 'Tribal Maul', 'tier': 4},  # Base Stun Duration +(30)
 			{'drop': 12, 'base': 'Two Hand Mace', 'name': 'Mallet', 'tier': 4},  # Base Stun Duration +(30)
@@ -644,7 +644,7 @@ bases = {
 			{'drop': 50, 'base': 'Gloves', 'name': 'Carnal Mitts', 'tier': 4},
 			{'drop': 58, 'base': 'Gloves', 'name': "Assassin's Mitts", 'tier': 3},
 			{'drop': 67, 'base': 'Gloves', 'name': 'Murder Mitts', 'tier': 2},
-			{'drop': 67, 'base': 'Gloves', 'name': 'Apothecary\'s Mitts', 'tier': 1},  # (14-18)% increased Damage Over Time
+			{'drop': 67, 'base': 'Gloves', 'name': "Apothecary's Gloves", 'tier': 1},  # (14-18)% increased Damage Over Time
 		],
 		"Armour|Gloves|Int|Str": [
 			{'drop': 7, 'base': 'Gloves', 'name': 'Chain Gloves', 'tier': 4},

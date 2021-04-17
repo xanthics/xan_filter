@@ -12,7 +12,7 @@ items = {
 	"03 6S": {"other": ["Sockets 6"], "type": "show low"},
 	"04 5L": {"other": ["Rarity < Unique", "LinkedSockets 5", 'CustomAlertSound "high_5link"'], "type": "normal border"},
 	"04 Incursion Item": {"class": "Incursion Item", "type": "show high"},
-	"04 Reliquary Key": {"baseexact": "Reliquary Key", "class": "Misc Map Items", "type": "show high"},
+	"04 Reliquary Key": {"base": "Reliquary Key", "class": "Misc Map Items", "type": "show high"},
 	"04 Chronicle of Atzoatl": {"baseexact": "Chronicle of Atzoatl", "class": "Misc Map Items", "type": "show high"},
 	"04 Inscribed Ultimatum": {"baseexact": "Inscribed Ultimatum", "class": "Misc Map Items", "type": "show high"},
 	"0 Fishing Rod": {"baseexact": "Fishing Rod", "type": "show very high"},
