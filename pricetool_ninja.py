@@ -15,8 +15,8 @@ def scrape_ninja(league='tmpstandard'):
 	leaguelookup = {
 		"Standard": "Standard",
 		"Hardcore": "Hardcore",
-		"tmpstandard": "Ritual",
-		"tmphardcore": "Hardcore Ritual",
+		"tmpstandard": "Ultimatum",
+		"tmphardcore": "Hardcore Ultimatum",
 	}
 
 	keys = [
