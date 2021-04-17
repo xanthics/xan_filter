@@ -180,7 +180,7 @@ def convertname(league):
 # main function for creating a filter
 def main(league='tmpstandard'):
 
-	leveling = False  # toggle to show leveling items
+	leveling = True  # toggle to show leveling items
 
 	buffer = """#**************************************************************
 # Welcome to xan.filter, a Python generated loot filter for PoE
@@ -256,7 +256,7 @@ Show
 if __name__ == "__main__":
 	create_always_highlight()
 	league = 'tmpstandard'
-	pricetool_ninja.scrape_ninja(league)
+#	pricetool_ninja.scrape_ninja(league)
 	# reload updated modules
 	importlib.reload(custom_challenge)
 	main(league)

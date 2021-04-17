@@ -1,6 +1,6 @@
 #**************************************************************
 # Welcome to xan.filter, a Python generated loot filter for PoE
-# This filter was generated for tmpstandard on 04/17/2021(m/d/y) 02:21:29 UTC
+# This filter was generated for tmpstandard on 04/17/2021(m/d/y) 23:01:20 UTC
 # The most current version of code can always be found at https://github.com/xanthics/poe_filter
 #**************************************************************
 
@@ -196,8 +196,8 @@ Show
 
 #challenge item
 Show
-	Class "Trinket"
-	CustomAlertSound "filter_sounds/75_attack1.wav"
+	Class "Blueprint"
+	CustomAlertSound "filter_sounds/75_attack5.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -205,8 +205,8 @@ Show
 
 #challenge item
 Show
-	Class "Blueprint"
-	CustomAlertSound "filter_sounds/75_attack2.wav"
+	Class "Trinket"
+	CustomAlertSound "filter_sounds/75_attack6.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -628,7 +628,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Crimson Oil"
-	CustomAlertSound "filter_sounds/100_death2.wav"
+	CustomAlertSound "filter_sounds/100_death4.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -713,7 +713,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Black Oil"
-	CustomAlertSound "filter_sounds/75_attack6.wav"
+	CustomAlertSound "filter_sounds/75_attack3.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -733,7 +733,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Opalescent Oil"
-	CustomAlertSound "filter_sounds/100_death4.wav"
+	CustomAlertSound "filter_sounds/100_death5.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -829,7 +829,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Crimson Oil"
-	CustomAlertSound "filter_sounds/75_attack3.wav"
+	CustomAlertSound "filter_sounds/75_attack2.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -881,7 +881,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Opalescent Oil"
-	CustomAlertSound "filter_sounds/75_attack3.wav"
+	CustomAlertSound "filter_sounds/75_attack6.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -901,7 +901,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Silver Oil"
-	CustomAlertSound "filter_sounds/100_death4.wav"
+	CustomAlertSound "filter_sounds/100_death2.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -933,7 +933,17 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Indigo Oil"
+	BaseType == "Amber Oil" "Azure Oil"
+	CustomAlertSound "filter_sounds/20_gethit1.wav"
+	MinimapIcon 2 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 32
+	StackSize >= 2
+
+#Autogen filter rules
+Show
+	BaseType == "Indigo Oil" "Teal Oil" "Verdant Oil"
 	CustomAlertSound "filter_sounds/20_gethit2.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -943,18 +953,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Clear Oil" "Teal Oil"
+	BaseType == "Clear Oil" "Sepia Oil"
 	CustomAlertSound "filter_sounds/20_gethit3.wav"
-	MinimapIcon 2 Blue Kite
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 32
-	StackSize >= 2
-
-#Autogen filter rules
-Show
-	BaseType == "Amber Oil" "Azure Oil" "Sepia Oil" "Verdant Oil"
-	CustomAlertSound "filter_sounds/20_gethit4.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1007,7 +1007,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Golden Oil"
-	CustomAlertSound "filter_sounds/100_death2.wav"
+	CustomAlertSound "filter_sounds/100_death1.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1046,7 +1046,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Crimson Oil"
+	BaseType == "Opalescent Oil"
 	CustomAlertSound "filter_sounds/20_gethit1.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1055,7 +1055,25 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Black Oil" "Opalescent Oil" "Violet Oil"
+	BaseType == "Crimson Oil"
+	CustomAlertSound "filter_sounds/20_gethit2.wav"
+	MinimapIcon 2 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 32
+
+#Autogen filter rules
+Show
+	BaseType == "Violet Oil"
+	CustomAlertSound "filter_sounds/20_gethit3.wav"
+	MinimapIcon 2 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 32
+
+#Autogen filter rules
+Show
+	BaseType == "Black Oil"
 	CustomAlertSound "filter_sounds/20_gethit4.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -3581,7 +3599,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Deerskin Gloves" "Silk Gloves" "Fluted Bascinet" "Crusader Helmet" "Jingling Spirit Shield" "Wyrmscale Doublet" "Prismatic Jewel" "Rawhide Boots" "Jewelled Foil" "Ezomyte Tower Shield"
+	BaseType == "Silk Gloves" "Jingling Spirit Shield" "Fluted Bascinet" "Jewelled Foil" "Deerskin Gloves" "Wyrmscale Doublet" "Ezomyte Tower Shield" "Rawhide Boots" "Crusader Helmet" "Prismatic Jewel"
 	CustomAlertSound "filter_sounds/100_amulet.wav"
 	MinimapIcon 1 Blue Star
 	PlayEffect Blue
@@ -3652,7 +3670,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Ornate Quiver" "Crusader Boots"
+	BaseType == "Crusader Boots" "Ornate Quiver"
 	CustomAlertSound "filter_sounds/175_expl_2.wav"
 	MinimapIcon 0 Green Star
 	PlayEffect Green
@@ -3674,7 +3692,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Chain Belt" "Fiend Dagger" "Small Cluster Jewel" "Prismatic Ring" "Onyx Amulet" "Coral Amulet" "Topaz Ring" "Unset Ring" "Viridian Jewel" "Gold Ring" "Stealth Boots" "Studded Belt" "Cobalt Jewel" "Sapphire Ring" "Ruby Ring" "Goathide Boots" "Silver Flask" "Crimson Jewel" "Ivory Watchstone"
+	BaseType == "Topaz Ring" "Chain Belt" "Silver Flask" "Unset Ring" "Ruby Ring" "Prismatic Ring" "Onyx Amulet" "Studded Belt" "Stealth Boots" "Crimson Jewel" "Gold Ring" "Goathide Boots" "Cobalt Jewel" "Fiend Dagger" "Ivory Watchstone" "Coral Amulet" "Sapphire Ring" "Small Cluster Jewel" "Viridian Jewel"
 	CustomAlertSound "filter_sounds/45_amulet.wav"
 	MinimapIcon 2 White Star
 	Rarity Unique
@@ -3717,7 +3735,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Iron Sceptre" "Vaal Rapier" "Medium Cluster Jewel" "Prophecy Wand" "Occultist's Vestment"
+	BaseType == "Medium Cluster Jewel" "Prophecy Wand" "Vaal Rapier" "Occultist's Vestment" "Iron Sceptre"
 	CustomAlertSound "filter_sounds/75_amulet.wav"
 	MinimapIcon 1 Blue Star
 	Rarity Unique
@@ -3727,7 +3745,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Ambusher" "Leather Belt" "Crusader Gloves" "Cloth Belt" "Great Crown" "Necromancer Circlet" "Ebony Tower Shield" "Sentinel Jacket" "Paua Amulet" "Heavy Belt" "Sulphur Flask" "Carnal Mitts" "Ezomyte Burgonet" "Ezomyte Staff" "Sorcerer Boots" "Gladius" "Maelström Staff" "Vaal Gauntlets" "Two-Point Arrow Quiver" "Jade Amulet" "Granite Flask" "Carnal Armour" "Two-Stone Ring" "Widowsilk Robe" "Turquoise Amulet" "Glorious Plate" "Penetrating Arrow Quiver" "Agate Amulet" "Savant's Robe" "Triumphant Lamellar" "Elegant Ringmail" "Steelscale Gauntlets" "Hubris Circlet" "Lacquered Buckler" "Murder Mitts" "Legion Sword" "Soldier Boots"
+	BaseType == "Crusader Gloves" "Savant's Robe" "Heavy Belt" "Necromancer Circlet" "Leather Belt" "Cloth Belt" "Vaal Gauntlets" "Granite Flask" "Ebony Tower Shield" "Steelscale Gauntlets" "Glorious Plate" "Two-Point Arrow Quiver" "Maelström Staff" "Agate Amulet" "Lacquered Buckler" "Gladius" "Two-Stone Ring" "Elegant Ringmail" "Penetrating Arrow Quiver" "Paua Amulet" "Ambusher" "Ezomyte Burgonet" "Sentinel Jacket" "Triumphant Lamellar" "Murder Mitts" "Carnal Mitts" "Ezomyte Staff" "Sorcerer Boots" "Turquoise Amulet" "Legion Sword" "Sulphur Flask" "Jade Amulet" "Great Crown" "Widowsilk Robe" "Carnal Armour" "Hubris Circlet" "Soldier Boots"
 	MinimapIcon 2 Cyan Star
 	Rarity Unique
 	SetBackgroundColor 0 0 0 220
@@ -3736,7 +3754,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Brass Maul" "Wild Leather" "Skinning Knife" "Antique Rapier" "Bronze Gauntlets" "Cutthroat's Garb" "Velvet Slippers" "Awl" "Great Mallet" "Silk Slippers" "Studded Round Shield" "Ivory Spirit Shield" "Gold Amulet" "Bronzescale Gauntlets" "Plated Greaves" "Strapped Leather" "Iron Staff" "Buckskin Tunic" "Vaal Buckler" "Royal Bow" "Tricorne" "Shadow Sceptre" "Latticed Ringmail" "Death Bow" "Ornate Sword" "Dread Maul" "Dream Mace" "Platinum Kris" "Iron Hat" "Nailed Fist" "War Buckler" "Gnarled Branch" "Iron Mask" "Spiraled Wand" "Sage's Robe" "Serrated Arrow Quiver" "Mesh Boots" "Plate Vest" "Scholar's Robe" "Sledgehammer" "Wrapped Mitts" "Rotted Round Shield" "Copper Plate" "Ironscale Boots" "Stiletto" "Thresher Claw" "Pine Buckler" "Golden Mask" "Ornate Ringmail" "Goat's Horn" "Despot Axe" "Deerskin Boots" "Painted Buckler" "Poleaxe" "Plank Kite Shield" "Cleaver"
+	BaseType == "Wild Leather" "Bronze Gauntlets" "Shadow Sceptre" "Spiraled Wand" "Death Bow" "Plank Kite Shield" "Iron Mask" "Cutthroat's Garb" "Gold Amulet" "Painted Buckler" "Scholar's Robe" "Buckskin Tunic" "Dread Maul" "Brass Maul" "Ornate Sword" "Stiletto" "Golden Mask" "Copper Plate" "Ornate Ringmail" "Silk Slippers" "Plated Greaves" "Antique Rapier" "Gnarled Branch" "Iron Staff" "Deerskin Boots" "Royal Bow" "Vaal Buckler" "Bronzescale Gauntlets" "Tricorne" "Ironscale Boots" "Studded Round Shield" "Thresher Claw" "Poleaxe" "Great Mallet" "Iron Hat" "Goat's Horn" "Cleaver" "Nailed Fist" "Strapped Leather" "Plate Vest" "Rotted Round Shield" "Pine Buckler" "War Buckler" "Platinum Kris" "Velvet Slippers" "Mesh Boots" "Ivory Spirit Shield" "Skinning Knife" "Dream Mace" "Awl" "Wrapped Mitts" "Sage's Robe" "Despot Axe" "Serrated Arrow Quiver" "Sledgehammer" "Latticed Ringmail"
 	Rarity Unique
 	SetBackgroundColor 0 0 0 220
 	SetFontSize 25
@@ -4255,7 +4273,7 @@ Show
 Show
 	Class "Maps"
 	AnyEnchantment True
-	CustomAlertSound "filter_sounds/100_death1.wav"
+	CustomAlertSound "filter_sounds/100_death3.wav"
 	MapTier >= 16
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -4267,7 +4285,7 @@ Show
 Show
 	Class "Maps"
 	AnyEnchantment True
-	CustomAlertSound "filter_sounds/75_attack4.wav"
+	CustomAlertSound "filter_sounds/75_attack2.wav"
 	MapTier >= 11
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -4278,7 +4296,7 @@ Show
 Show
 	Class "Maps"
 	AnyEnchantment True
-	CustomAlertSound "filter_sounds/20_gethit3.wav"
+	CustomAlertSound "filter_sounds/20_gethit2.wav"
 	MapTier <= 5
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -4299,7 +4317,7 @@ Show
 Show
 	Class "Maps"
 	BlightedMap True
-	CustomAlertSound "filter_sounds/100_death2.wav"
+	CustomAlertSound "filter_sounds/100_death3.wav"
 	MapTier >= 16
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -4322,7 +4340,7 @@ Show
 Show
 	Class "Maps"
 	BlightedMap True
-	CustomAlertSound "filter_sounds/20_gethit3.wav"
+	CustomAlertSound "filter_sounds/20_gethit2.wav"
 	MapTier <= 5
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -5086,6 +5104,519 @@ Show
 	SetBorderColor 191 91 0 150
 	SetFontSize 39
 
+#Rare item for leveling
+Show
+	BaseType == "Nailed Fist" "Rusted Spike" "Iron Hat"
+	AreaLevel <= 10
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Driftwood Maul" "Corroded Blade" "Chainmail Vest" "Scale Vest" "Vine Circlet" "Goathide Buckler"
+	AreaLevel <= 11
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Short Bow" "Gnarled Branch" "Stone Axe" "Shabby Jerkin" "Padded Vest" "Iron Greaves" "Wool Shoes" "Rawhide Gloves" "Twig Spirit Shield"
+	AreaLevel <= 12
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Tribal Club" "Copper Sword" "Darkwood Sceptre" "Leather Cap" "Scare Mask" "Serrated Arrow Quiver"
+	AreaLevel <= 13
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Jade Hatchet" "Simple Robe" "Iron Gauntlets" "Corroded Tower Shield"
+	AreaLevel <= 14
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Sharktooth Claw" "Whalebone Rapier" "Tribal Maul" "Longsword" "Goat's Horn" "Rawhide Boots" "Wool Gloves" "Rusted Coif" "Spiked Bundle" "Rotted Round Shield"
+	AreaLevel <= 15
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Primitive Staff" "Jade Chopper" "Chain Boots" "Battered Helm" "Plank Kite Shield"
+	AreaLevel <= 16
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Long Bow"
+	AreaLevel <= 17
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Skinning Knife" "Spiked Club" "Sabre" "Bronze Sceptre" "Fishscale Gauntlets" "Yew Spirit Shield"
+	AreaLevel <= 18
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Boarding Axe" "Wrapped Boots" "Wrapped Mitts" "Pine Buckler" "Sharktooth Arrow Quiver"
+	AreaLevel <= 19
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Awl" "Battered Foil" "Mallet" "Bastard Sword" "Chestplate" "Strapped Leather" "Chainmail Tunic" "Light Brigandine" "Iron Circlet" "Plague Mask" "Rawhide Tower Shield"
+	AreaLevel <= 20
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Composite Bow" "Woodsplitter" "Carved Wand" "Silken Vest" "Oiled Vest" "Leatherscale Boots" "Cone Helmet"
+	AreaLevel <= 21
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Chain Gloves"
+	AreaLevel <= 22
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Carving Knife" "Stone Hammer" "Broad Sword" "Quartz Sceptre" "Tricorne" "Driftwood Spiked Shield" "Fir Round Shield" "Linden Kite Shield"
+	AreaLevel <= 23
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Cleaver" "Copper Plate" "Ringmail Coat" "Scale Doublet" "Goathide Gloves"
+	AreaLevel <= 24
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Cat's Paw" "Basket Rapier" "Sledgehammer" "Two-Handed Sword" "Padded Jacket" "Velvet Slippers" "Goathide Boots" "Soldier Helmet" "Blunt Arrow Quiver"
+	AreaLevel <= 25
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Recurve Bow" "Iron Staff" "Poleaxe" "Steel Greaves" "Plated Gauntlets" "Sallet" "Painted Buckler" "Bone Spirit Shield"
+	AreaLevel <= 26
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Boot Knife" "War Hammer" "War Sword" "Iron Sceptre" "Quartz Wand" "Cedar Tower Shield"
+	AreaLevel <= 27
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Broad Axe" "Buckskin Tunic" "Scholar's Robe" "Velvet Gloves"
+	AreaLevel <= 28
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Blinder" "Jagged Foil" "Barbute Helmet" "Torture Cage"
+	AreaLevel <= 29
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Jagged Maul" "Etched Greatsword" "Strapped Boots" "Ironscale Gauntlets" "Alloyed Spiked Shield" "Studded Round Shield" "Reinforced Kite Shield"
+	AreaLevel <= 30
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Bone Bow" "Copper Kris" "Bladed Mace" "Ancient Sword" "Ochre Sceptre" "Long Staff" "Double Axe" "War Plate" "Wild Leather" "Silken Garb" "Oiled Coat" "Chainmail Doublet" "Infantry Brigandine" "Ringmail Boots" "Iron Mask" "Tarnished Spirit Shield" "Fire Arrow Quiver"
+	AreaLevel <= 31
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Arming Axe" "Hammered Buckler"
+	AreaLevel <= 32
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Timeworn Claw" "Antique Rapier" "Spiraled Wand" "Ironscale Boots" "Leather Hood" "Copper Tower Shield"
+	AreaLevel <= 33
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Strapped Mitts" "Great Helmet"
+	AreaLevel <= 34
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Royal Bow" "Skean" "Ceremonial Mace" "Elegant Sword" "Ritual Sceptre" "Brass Maul" "Ornate Sword" "Full Plate" "Full Leather" "Mage's Vestment" "Scarlet Raiment" "Full Ringmail" "Full Scale Armour" "Silk Slippers" "Ringmail Gloves"
+	AreaLevel <= 35
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Decorative Axe" "Coiled Staff" "Gilded Axe" "Plated Greaves" "Deerskin Gloves" "Visored Sallet" "Jingling Spirit Shield" "Burnished Spiked Shield" "Scarlet Round Shield"
+	AreaLevel <= 36
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Sparkling Claw" "Dream Mace" "Dusk Blade" "Elegant Foil" "Fright Maul" "Sage Wand" "Deerskin Boots" "Clasped Boots" "Tribal Circlet" "War Buckler" "Layered Kite Shield"
+	AreaLevel <= 37
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Death Bow" "Stiletto" "Spectral Axe" "Wyrm Mace" "Hook Sword" "Shadow Sceptre" "Spectral Sword" "Pagan Wand" "Arena Plate" "Sun Leather" "Silk Robe" "Waxed Garb" "Full Chainmail" "Soldier's Brigandine" "Bronze Gauntlets" "Close Helmet" "Festival Mask" "Reinforced Tower Shield"
+	AreaLevel <= 38
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Grove Bow" "Fright Claw" "Flaying Knife" "Etched Hatchet" "Grinning Fetish" "Royal Staff" "Thorn Rapier" "Shadow Axe" "Morning Star" "Curved Blade" "Mesh Boots" "Bronzescale Boots" "Silk Gloves" "Bronzescale Gauntlets" "Clasped Mitts" "Gilded Sallet" "Broadhead Arrow Quiver"
+	AreaLevel <= 39
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Double Claw" "Crescent Staff" "Smallsword" "Dagger Axe" "Lordly Plate" "Thief's Garb" "Cabalist Regalia" "Reinforced Greaves" "Mesh Gloves" "Crusader Helmet" "Brass Spirit Shield"
+	AreaLevel <= 40
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Reflex Bow" "Imp Dagger" "Petrified Club" "Variscite Blade" "Horned Sceptre" "Field Lamellar" "Scholar Boots" "Nubuck Gloves" "Golden Mask" "Gilded Buckler"
+	AreaLevel <= 41
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Jasper Axe" "Holy Chainmail" "Nubuck Boots" "Steel Gauntlets" "Bone Circlet" "Painted Tower Shield" "Ornate Spiked Shield" "Splendid Round Shield"
+	AreaLevel <= 42
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Thresher Claw" "Wyrmbone Rapier" "Totemic Maul" "Butcher Sword" "Faun's Horn" "Bone Armour" "Riveted Boots" "Taxing Gauntlets" "Gauche Gloves" "Leyline Gloves" "Gladiator Helmet" "Ceremonial Kite Shield"
+	AreaLevel <= 43
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Decurve Bow" "Prong Dagger" "Barbed Club" "Cutlass" "Sekhem" "Woodful Staff" "Jasper Chopper" "Bronze Plate" "Eelskin Tunic" "Sage's Robe" "Shackled Boots" "Embroidered Gloves" "Wolf Pelt" "Walnut Spirit Shield"
+	AreaLevel <= 44
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Tomahawk" "Wyrmscale Doublet" "Steelscale Boots" "Oak Buckler"
+	AreaLevel <= 45
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Gouger" "Burnished Foil" "Latticed Ringmail" "Steelscale Gauntlets" "Riveted Gloves" "Secutor Helm" "Buckskin Tower Shield"
+	AreaLevel <= 46
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Compound Bow" "Butcher Knife" "Rock Breaker" "Baselard" "Crystal Sceptre" "Great Mallet" "Footman Sword" "Quilted Jacket" "Satin Slippers" "Eelskin Boots" "Aventail Helmet"
+	AreaLevel <= 47
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Wrist Chopper" "Vile Staff" "Timber Axe" "Engraved Wand" "Battle Plate" "Frontier Leather" "Silken Wrap" "Eelskin Gloves" "Trapper Mitts" "Raven Mask" "Gale Crown" "Sorrow Mask" "Imp Crown" "Ivory Spirit Shield" "Redwood Spiked Shield" "Maple Round Shield" "Penetrating Arrow Quiver" "Ornate Quiver"
+	AreaLevel <= 48
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Tiger's Paw" "Estoc" "Hussar Brigandine" "Antique Greaves" "Enameled Buckler" "Etched Kite Shield"
+	AreaLevel <= 49
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Sniper Bow" "Boot Blade" "Battle Hammer" "Battle Sword" "Lead Sceptre" "Crusader Chainmail" "Trapper Boots" "Antique Gauntlets" "Satin Gloves" "Hunter Hood" "Mahogany Tower Shield"
+	AreaLevel <= 50
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "War Axe" "Steelhead" "Highland Blade" "Sleek Coat" "Reaver Helmet" "Lunaris Circlet"
+	AreaLevel <= 51
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Gut Ripper" "Military Staff" "Serrated Foil" "Headsman Axe" "Crystal Wand" "Sun Plate" "Glorious Leather" "Conjurer's Vestment" "Zealot Boots" "Serpentscale Gauntlets" "Ancient Spirit Shield" "Compound Spiked Shield" "Spiked Round Shield"
+	AreaLevel <= 52
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Ivory Bow" "Golden Kris" "Flanged Mace" "Elder Sword" "Blood Sceptre" "Full Wyrmscale" "Basemetal Treads" "Duskwalk Slippers" "Cloudwhisper Boots" "Ambush Mitts" "Corrugated Buckler" "Steel Kite Shield"
+	AreaLevel <= 53
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Chest Splitter" "Spiny Maul" "Engraved Greatsword" "Ornate Ringmail" "Serpentscale Boots" "Zealot Gloves" "Fencer Helm" "Bronze Tower Shield"
+	AreaLevel <= 54
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Prehistoric Claw" "Quarterstaff" "Primeval Rapier" "Labrys" "Crimson Raiment" "Callous Mask"
+	AreaLevel <= 55
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Highborn Bow" "Royal Skean" "Ornate Mace" "Graceful Sword" "Royal Sceptre" "Serpent Wand" "Colosseum Plate" "Coronal Leather" "Spidersilk Robe" "Samite Slippers" "Ancient Gauntlets" "Zealot Helmet" "Chiming Spirit Shield"
+	AreaLevel <= 56
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Ceremonial Axe" "Plated Maul" "Tiger Sword" "Commander's Brigandine" "Ancient Greaves" "Sharkskin Gloves" "Steel Circlet" "Battle Buckler" "Polished Spiked Shield" "Crimson Round Shield"
+	AreaLevel <= 57
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Noble Claw" "Poignard" "Phantom Mace" "Twilight Blade" "Abyssal Sceptre" "Serpentine Staff" "Fancy Foil" "Noble Axe" "Omen Wand" "Chain Hauberk" "Sharkskin Boots" "Ambush Boots" "Samite Gloves" "Siege Helmet" "Noble Tricorne" "Girded Tower Shield" "Laminated Kite Shield"
+	AreaLevel <= 58
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Decimation Bow" "Trisula" "Wraith Axe" "Dragon Mace" "Grappler" "Stag Sceptre" "Dread Maul" "Wraith Sword" "Heathen Wand" "Majestic Plate" "Cutthroat's Garb" "Destroyer Regalia" "Lacquered Garb" "Thorium Spirit Shield"
+	AreaLevel <= 59
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Thicket Bow" "Eagle Claw" "Engraved Hatchet" "Highborn Staff" "Apex Rapier" "Solar Maul" "Lithe Blade" "Battle Lamellar" "Soldier Gloves" "Regicide Mask" "Golden Buckler"
+	AreaLevel <= 60
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Steelwood Bow" "Twin Claw" "Fiend Dagger" "Ancestral Club" "Gemstone Sword" "Karui Sceptre" "Moon Staff" "Courtesan Sword" "Abyssal Axe" "Devout Chainmail" "Soldier Boots" "Carnal Mitts" "Lacquered Helmet" "Great Crown" "Crested Tower Shield" "Sovereign Spiked Shield" "Baroque Round Shield"
+	AreaLevel <= 61
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Karui Axe" "Karui Chopper" "Karui Maul" "Headman's Sword" "Demon's Horn" "Golden Plate" "Sharkskin Tunic" "Savant's Robe" "Crypt Armour" "Wyrmscale Boots" "Wyrmscale Gauntlets" "Necromancer Circlet" "Lacewood Spirit Shield" "Angelic Kite Shield"
+	AreaLevel <= 62
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Citadel Bow" "Great White Claw" "Gutting Knife" "Tenderizer" "Corsair Sword" "Tyrant's Sekhem" "Primordial Staff" "Dragonbone Rapier" "Talon Axe" "Dragonscale Doublet" "Conjurer Gloves" "Samnite Helmet" "Ursine Pelt" "Ironwood Buckler"
+	AreaLevel <= 63
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Hedron Bow" "Foundry Bow" "Solarine Bow" "Ranger Bow" "Assassin Bow" "Spine Bow" "Shadow Fangs" "Malign Fangs" "Void Fangs" "Throat Stabber" "Hellion's Paw" "Eye Gouger" "Hollowpoint Dagger" "Pressurised Dagger" "Pneumatic Dagger" "Ambusher" "Flickerflame Blade" "Flashfire Blade" "Infernal Blade" "Slaughter Knife" "Ezomyte Dagger" "Platinum Kris" "Maltreatment Axe" "Disapprobation Axe" "Psychotic Axe" "Siege Axe" "Reaver Axe" "Butcher Axe" "Flare Mace" "Crack Mace" "Boom Mace" "Gavel" "Legion Hammer" "Pernach" "Fickle Spiritblade" "Capricious Spiritblade" "Anarchic Spiritblade" "Gladius" "Legion Sword" "Vaal Blade" "Oscillating Sceptre" "Stabilising Sceptre" "Alternating Sceptre" "Opal Sceptre" "Platinum Sceptre" "Vaal Sceptre" "Capacity Rod" "Potentiality Rod" "Eventuality Rod" "Foul Staff" "Ezomyte Staff" "Maelström Staff" "Transformer Staff" "Reciprocation Staff" "Battery Staff" "Lathi" "Tempered Foil" "Pecoraro" "Spiraled Foil" "Prime Cleaver" "Honed Cleaver" "Apex Cleaver" "Sundering Axe" "Ezomyte Axe" "Vaal Axe" "Blunt Force Condenser" "Crushing Force Magnifier" "Impact Force Propagator" "Colossus Mallet" "Piledriver" "Meatgrinder" "Rebuking Blade" "Blasting Blade" "Banishing Blade" "Reaver Sword" "Ezomyte Blade" "Vaal Greatsword" "Assembler Wand" "Congregator Wand" "Accumulator Wand" "Imbued Wand" "Opal Wand" "Crusader Plate" "Astral Plate" "Destiny Leather" "Exquisite Leather" "Necromancer Silks" "Occultist's Vestment" "Sentinel Jacket" "Varnished Coat" "Loricated Ringmail" "Conquest Chainmail" "Elegant Ringmail" "Desert Brigandine" "Full Dragonscale" "Goliath Greaves" "Vaal Greaves" "Darksteel Treads" "Conjurer Boots" "Arcanist Slippers" "Nightwind Slippers" "Shagreen Boots" "Stealth Boots" "Windbreak Boots" "Legion Boots" "Crusader Boots" "Carnal Boots" "Assassin's Boots" "Hydrascale Boots" "Goliath Gauntlets" "Vaal Gauntlets" "Gruelling Gauntlets" "Shagreen Gloves" "Stealth Gloves" "Southswing Gloves" "Arcanist Gloves" "Aetherwind Gloves" "Hydrascale Gauntlets" "Assassin's Mitts" "Legion Gloves" "Ezomyte Burgonet" "Silken Hood" "Sinner Tricorne" "Solaris Circlet" "Harlequin Mask" "Vaal Mask" "Winter Crown" "Fluted Bascinet" "Pig-Faced Bascinet" "Atonement Mask" "Magistrate Crown" "Prophet Crown" "Demon Crown" "Exothermic Tower Shield" "Magmatic Tower Shield" "Heat-attuned Tower Shield" "Shagreen Tower Shield" "Ebony Tower Shield" "Ezomyte Tower Shield" "Endothermic Buckler" "Polar Buckler" "Cold-attuned Buckler" "Lacquered Buckler" "Vaal Buckler" "Exhausting Spirit Shield" "Subsuming Spirit Shield" "Transfer-attuned Spirit Shield" "Fossilised Spirit Shield" "Vaal Spirit Shield" "Alder Spiked Shield" "Ezomyte Spiked Shield" "Teak Round Shield" "Spiny Round Shield" "Branded Kite Shield" "Champion Kite Shield" "Astrolabe Amulet" "Simplex Amulet" "Mandible Talisman" "Hexclaw Talisman" "Primal Skull Talisman" "Wereclaw Talisman" "Splitnewt Talisman" "Clutching Talisman" "Avian Twins Talisman" "Fangjaw Talisman" "Horned Talisman" "Spinefuse Talisman" "Three Rat Talisman" "Monkey Twins Talisman" "Longtooth Talisman" "Rotfeather Talisman" "Monkey Paw Talisman" "Three Hands Talisman" "Jet Amulet" "Black Maw Talisman" "Bonespire Talisman" "Ashscale Talisman" "Lone Antler Talisman" "Deep One Talisman" "Breakrib Talisman" "Deadhand Talisman" "Undying Flesh Talisman" "Rot Head Talisman" "Paua Amulet" "Coral Amulet" "Jade Amulet" "Amber Amulet" "Lapis Amulet" "Gold Amulet" "Agate Amulet" "Turquoise Amulet" "Citrine Amulet" "Onyx Amulet" "Writhing Talisman" "Chrysalis Talisman" "Ruby Amulet" "Micro-Distillery Belt" "Mechalarm Belt" "Stygian Vise" "Rustic Sash" "Chain Belt" "Heavy Belt" "Leather Belt" "Golden Obi" "Cloth Belt" "Studded Belt" "Cogwork Ring" "Geodesic Ring" "Breach Ring" "Iron Ring" "Coral Ring" "Paua Ring" "Sapphire Ring" "Golden Hoop" "Topaz Ring" "Jet Ring" "Ruby Ring" "Gold Ring" "Two-Stone Ring" "Diamond Ring" "Moonstone Ring" "Prismatic Ring" "Amethyst Ring" "Unset Ring" "Spike-Point Arrow Quiver"
+	AreaLevel <= 64
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Crude Bow" "Glass Shank" "Driftwood Club" "Rusted Sword" "Driftwood Sceptre" "Splintered Tower Shield" "Two-Point Arrow Quiver"
+	AreaLevel <= 8
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
+#Rare item for leveling
+Show
+	BaseType == "Rusted Hatchet" "Plate Vest"
+	AreaLevel <= 9
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 255 255 119 150
+	SetFontSize 32
+
 #Rare item highlighting for endgame
 Show
 	BaseType == "Astral Plate" "Blizzard Crown" "Bone Helmet"
@@ -5457,6 +5988,74 @@ Show
 	SetFontSize 32
 	SocketGroup RGB
 	Width 2
+
+#leveling items that are worth seeing
+Show
+	Class "Boots"
+	AreaLevel <= 20
+	Rarity Magic
+	SetBackgroundColor 0 0 0 150
+	SetBorderColor 0 100 150
+	SetFontSize 25
+
+#leveling items that are worth seeing
+Show
+	AreaLevel <= 20
+	DropLevel >= 0
+	LinkedSockets >= 3
+	Rarity <= Magic
+	SetBackgroundColor 0 0 0 150
+	SetBorderColor 0 100 150
+	SetFontSize 25
+
+#leveling items that are worth seeing
+Show
+	AreaLevel <= 40
+	DropLevel >= 15
+	LinkedSockets > 3
+	Rarity <= Magic
+	SetBackgroundColor 0 0 0 150
+	SetBorderColor 0 100 150
+	SetFontSize 25
+
+#leveling items that are worth seeing
+Show
+	AreaLevel <= 50
+	DropLevel >= 25
+	LinkedSockets > 3
+	Rarity <= Magic
+	SetBackgroundColor 0 0 0 150
+	SetBorderColor 0 100 150
+	SetFontSize 25
+
+#leveling items that are worth seeing
+Show
+	AreaLevel <= 65
+	DropLevel >= 40
+	LinkedSockets > 3
+	Rarity <= Magic
+	SetBackgroundColor 0 0 0 150
+	SetBorderColor 0 100 150
+	SetFontSize 25
+
+#leveling items that are worth seeing
+Show
+	Class "Sceptres" "Wands"
+	AreaLevel <= 67
+	LinkedSockets > 2
+	Rarity <= Magic
+	SetBackgroundColor 0 0 0 150
+	SetBorderColor 0 100 150
+	SetFontSize 25
+
+#item for leveling
+Show
+	BaseType == "Astrolabe Amulet" "Simplex Amulet" "Mandible Talisman" "Hexclaw Talisman" "Primal Skull Talisman" "Wereclaw Talisman" "Splitnewt Talisman" "Clutching Talisman" "Avian Twins Talisman" "Fangjaw Talisman" "Horned Talisman" "Spinefuse Talisman" "Three Rat Talisman" "Monkey Twins Talisman" "Longtooth Talisman" "Rotfeather Talisman" "Monkey Paw Talisman" "Three Hands Talisman" "Jet Amulet" "Black Maw Talisman" "Bonespire Talisman" "Ashscale Talisman" "Lone Antler Talisman" "Deep One Talisman" "Breakrib Talisman" "Deadhand Talisman" "Undying Flesh Talisman" "Rot Head Talisman" "Paua Amulet" "Coral Amulet" "Jade Amulet" "Amber Amulet" "Lapis Amulet" "Gold Amulet" "Agate Amulet" "Turquoise Amulet" "Citrine Amulet" "Onyx Amulet" "Micro-Distillery Belt" "Mechalarm Belt" "Stygian Vise" "Rustic Sash" "Chain Belt" "Heavy Belt" "Leather Belt" "Golden Obi" "Cloth Belt" "Studded Belt" "Cogwork Ring" "Geodesic Ring" "Breach Ring" "Iron Ring" "Coral Ring" "Paua Ring" "Sapphire Ring" "Golden Hoop" "Topaz Ring" "Jet Ring" "Ruby Ring" "Gold Ring" "Two-Stone Ring" "Diamond Ring" "Moonstone Ring"
+	AreaLevel <= 25
+	Rarity <= Normal
+	SetBackgroundColor 0 0 0 150
+	SetBorderColor 200 200 200
+	SetFontSize 18
 
 #Always show catchall
 Show
