@@ -79,17 +79,17 @@ def magicmods():
 
 				 # Veiled mods so they can be eventually disabled when unlocked
 				 "Veiled": [
-#					 "Claw", "Rune Daggers", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword",
-#					 "Wand",
-#					 "Bow",
-#					 "Warstaves", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword",
-#					 "Body Armour",
+					 "Claw", "Rune Daggers", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre", "Thrusting One Hand Sword",
+					 "Wand",
+					 "Bow",
+					 "Warstaves", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword",
+					 "Body Armour",
 					 "Boots",
 					 "Gloves",
-#					 "Helmet",
+					 "Helmet",
 					 "Shield",
 					 "Amulet",
-#					 "Belt",
+					 "Belt",
 					 "Ring",
 					 "Quiver"
 				 ],
@@ -107,21 +107,21 @@ def magicmods():
 				  "Elreon's Veiled",  # rings, amulets
 				  "Gravicius' Veiled",  # Body Armour
 				  "Guff's Veiled",  # gloves
-#				  "Haku's Veiled",  # weapon, shield
-#				  "It That Fled's Veiled",  # weapon, shield
-#				  "Korell's Veiled",  # helmet
-#				  "Leo's Veiled",  # ring, belt
+				  "Haku's Veiled",  # weapon, shield
+				  "It That Fled's Veiled",  # weapon, shield
+				  "Korell's Veiled",  # helmet
+				  "Leo's Veiled",  # ring, belt
 				  "Rin's Veiled",  # boots
-#				  "Tora's Veiled",  # weapons
+				  "Tora's Veiled",  # weapons
 				  "Vagan's Veiled",  # melee weapon
-#				  "Vorici's Veiled",  # gloves, amulets
+				  "Vorici's Veiled",  # gloves, amulets
 
-#				  "of Aisling's Veil",  # ring
-#				  "of Cameria's Veil",  # ring
-#				  "of Hillock's Veil",  # body armour
-#				  "of Janus' Veil",  # helmet
-#				  "of Jorgin's Veil",  # amulet
-#				  "of Riker's Veil",  # ring
+				  "of Aisling's Veil",  # ring
+				  "of Cameria's Veil",  # ring
+				  "of Hillock's Veil",  # body armour
+				  "of Janus' Veil",  # helmet
+				  "of Jorgin's Veil",  # amulet
+				  "of Riker's Veil",  # ring
 
 				  "Citaqualotl's", "Guatelitzi's", "Matatl's", "of Puhuarte", "of Tacati", "Tacati's", "Topotante's", "Xopec's",
 				  "Brinerot", "Mutewind", "Redblade", "Betrayer\'s", "Deceiver\'s", "Turncoat\'s",
