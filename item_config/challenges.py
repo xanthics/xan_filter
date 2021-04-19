@@ -8,7 +8,10 @@ desc = "challenge item"
 
 # Base type : settings pair
 items = {
-	"1 Cluster Jewel": {"base": "Cluster Jewel", "class": "Jewel", "type": "show normal"},
+	"1 Small Cluster Jewel": {"baseexact": "Small Cluster Jewel", "class": "Jewel", "type": "show normal"},
+	"1 Medium Cluster Jewel": {"baseexact": "Medium Cluster Jewel", "class": "Jewel", "other": ['EnchantmentPassiveNum <= 5'], "type": "show normal"},
+	"1 Large Cluster Jewel": {"baseexact": "Large Cluster Jewel", "class": "Jewel", "other": ['EnchantmentPassiveNum <= 8'], "type": "show normal"},
+	"2 Any Cluster Jewel": {"base": "Cluster Jewel", "class": "Jewel", "type": "show low"},
 
 	# initial Heist highlighting
 	"1 Heist Any 83+": {"class": "Heist", "other": ["ItemLevel >= 83"], "type": "challenge normal"},

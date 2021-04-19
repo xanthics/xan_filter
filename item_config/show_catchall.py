@@ -11,9 +11,9 @@ items = {
 	# High value veiled mods, so that they still show after removing them from itemmod.py when finished
 	"2 Magic Jewel": {"class": "Jewel", "other": ["Rarity <= Magic", "AreaLevel <= 70"], "type": "normal"},
 
-	"77 Influenced Item": {'other': ["HasInfluence Elder Shaper Crusader Hunter Redeemer Warlord"], "type": "rare low"},
-	"77 Fractured Item": {'other': ["FracturedItem True"], "type": "rare low"},
-	"77 Synthesised Item": {'other': ["SynthesisedItem True"], "type": "rare low"},
+	"77 Influenced Item": {'other': ["HasInfluence Elder Shaper Crusader Hunter Redeemer Warlord"], "type": "rare corrupted"},
+	"77 Fractured Item": {'other': ["FracturedItem True"], "type": "rare corrupted"},
+	"77 Synthesised Item": {'other': ["SynthesisedItem True"], "type": "rare corrupted"},
 
 	"11 Map Fragments": {"class": "Map Fragments", "type": "fragment normal"},
 	"11 Misc Map Items": {"class": "Misc Map Items", "type": "fragment normal"},
