@@ -1,6 +1,6 @@
 #**************************************************************
 # Welcome to xan.filter, a Python generated loot filter for PoE
-# This filter was generated for tmpstandard on 04/18/2021(m/d/y) 22:49:00 UTC
+# This filter was generated for tmpstandard on 04/18/2021(m/d/y) 23:07:32 UTC
 # The most current version of code can always be found at https://github.com/xanthics/poe_filter
 #**************************************************************
 
@@ -67,8 +67,11 @@ Show
 
 #Always show
 Show
+	CustomAlertSound "filter_sounds/20_convert.wav"
+	MinimapIcon 2 Grey Square
 	SetBackgroundColor 0 0 0 220
-	SetFontSize 25
+	SetBorderColor 192 128 254
+	SetFontSize 32
 	Sockets 6
 
 #Always show
@@ -187,7 +190,7 @@ Show
 #challenge item
 Show
 	Class "Heist"
-	CustomAlertSound "filter_sounds/20_gethit3.wav"
+	CustomAlertSound "filter_sounds/20_gethit2.wav"
 	ItemLevel >= 83
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -196,8 +199,8 @@ Show
 
 #challenge item
 Show
-	Class "Trinket"
-	CustomAlertSound "filter_sounds/75_attack3.wav"
+	Class "Blueprint"
+	CustomAlertSound "filter_sounds/75_attack2.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -205,8 +208,8 @@ Show
 
 #challenge item
 Show
-	Class "Blueprint"
-	CustomAlertSound "filter_sounds/75_attack5.wav"
+	Class "Trinket"
+	CustomAlertSound "filter_sounds/75_attack4.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -628,7 +631,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Crimson Oil"
-	CustomAlertSound "filter_sounds/100_death2.wav"
+	CustomAlertSound "filter_sounds/100_death3.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -713,7 +716,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Black Oil"
-	CustomAlertSound "filter_sounds/75_attack4.wav"
+	CustomAlertSound "filter_sounds/75_attack2.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -733,7 +736,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Opalescent Oil"
-	CustomAlertSound "filter_sounds/100_death1.wav"
+	CustomAlertSound "filter_sounds/100_death5.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -829,7 +832,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Crimson Oil"
-	CustomAlertSound "filter_sounds/75_attack6.wav"
+	CustomAlertSound "filter_sounds/75_attack3.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -901,7 +904,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Silver Oil"
-	CustomAlertSound "filter_sounds/100_death3.wav"
+	CustomAlertSound "filter_sounds/100_death5.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -933,7 +936,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Sepia Oil" "Teal Oil"
+	BaseType == "Clear Oil" "Teal Oil"
 	CustomAlertSound "filter_sounds/20_gethit1.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -943,7 +946,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Verdant Oil"
+	BaseType == "Indigo Oil" "Sepia Oil"
 	CustomAlertSound "filter_sounds/20_gethit2.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -953,7 +956,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Azure Oil"
+	BaseType == "Amber Oil" "Verdant Oil"
 	CustomAlertSound "filter_sounds/20_gethit3.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -963,7 +966,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Amber Oil" "Clear Oil" "Indigo Oil"
+	BaseType == "Azure Oil"
 	CustomAlertSound "filter_sounds/20_gethit4.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1017,7 +1020,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Golden Oil"
-	CustomAlertSound "filter_sounds/100_death5.wav"
+	CustomAlertSound "filter_sounds/100_death1.wav"
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -1056,7 +1059,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Violet Oil"
+	BaseType == "Black Oil" "Violet Oil"
 	CustomAlertSound "filter_sounds/20_gethit1.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1065,16 +1068,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Crimson Oil" "Opalescent Oil"
-	CustomAlertSound "filter_sounds/20_gethit2.wav"
-	MinimapIcon 2 Blue Kite
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 114 0 83
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Black Oil"
+	BaseType == "Opalescent Oil"
 	CustomAlertSound "filter_sounds/20_gethit3.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1083,8 +1077,17 @@ Show
 
 #Autogen filter rules
 Show
+	BaseType == "Crimson Oil"
+	CustomAlertSound "filter_sounds/20_gethit4.wav"
+	MinimapIcon 2 Blue Kite
+	SetBackgroundColor 0 0 0 220
+	SetBorderColor 114 0 83
+	SetFontSize 32
+
+#Autogen filter rules
+Show
 	BaseType == "Silver Oil"
-	CustomAlertSound "filter_sounds/75_attack1.wav"
+	CustomAlertSound "filter_sounds/75_attack4.wav"
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -3600,7 +3603,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Wyrmscale Doublet" "Ezomyte Tower Shield" "Deerskin Gloves" "Silk Gloves" "Jingling Spirit Shield" "Crusader Helmet" "Jewelled Foil" "Rawhide Boots" "Fluted Bascinet" "Prismatic Jewel"
+	BaseType == "Prismatic Jewel" "Ezomyte Tower Shield" "Wyrmscale Doublet" "Jewelled Foil" "Crusader Helmet" "Jingling Spirit Shield" "Deerskin Gloves" "Rawhide Boots" "Silk Gloves" "Fluted Bascinet"
 	CustomAlertSound "filter_sounds/100_amulet.wav"
 	MinimapIcon 1 Blue Star
 	PlayEffect Blue
@@ -3671,7 +3674,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Crusader Boots" "Ornate Quiver"
+	BaseType == "Ornate Quiver" "Crusader Boots"
 	CustomAlertSound "filter_sounds/175_expl_2.wav"
 	MinimapIcon 0 Green Star
 	PlayEffect Green
@@ -3693,7 +3696,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Small Cluster Jewel" "Fiend Dagger" "Cobalt Jewel" "Coral Amulet" "Gold Ring" "Stealth Boots" "Topaz Ring" "Unset Ring" "Onyx Amulet" "Sapphire Ring" "Goathide Boots" "Silver Flask" "Prismatic Ring" "Chain Belt" "Crimson Jewel" "Studded Belt" "Ivory Watchstone" "Ruby Ring" "Viridian Jewel"
+	BaseType == "Sapphire Ring" "Ivory Watchstone" "Fiend Dagger" "Coral Amulet" "Crimson Jewel" "Ruby Ring" "Gold Ring" "Silver Flask" "Studded Belt" "Chain Belt" "Viridian Jewel" "Topaz Ring" "Stealth Boots" "Small Cluster Jewel" "Goathide Boots" "Unset Ring" "Prismatic Ring" "Onyx Amulet" "Cobalt Jewel"
 	CustomAlertSound "filter_sounds/45_amulet.wav"
 	MinimapIcon 2 White Star
 	Rarity Unique
@@ -3736,7 +3739,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Iron Sceptre" "Occultist's Vestment" "Medium Cluster Jewel" "Vaal Rapier" "Prophecy Wand"
+	BaseType == "Medium Cluster Jewel" "Prophecy Wand" "Occultist's Vestment" "Iron Sceptre" "Vaal Rapier"
 	CustomAlertSound "filter_sounds/75_amulet.wav"
 	MinimapIcon 1 Blue Star
 	Rarity Unique
@@ -3746,7 +3749,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Ezomyte Staff" "Triumphant Lamellar" "Vaal Gauntlets" "Carnal Mitts" "Cloth Belt" "Crusader Gloves" "Maelström Staff" "Savant's Robe" "Ezomyte Burgonet" "Heavy Belt" "Elegant Ringmail" "Hubris Circlet" "Two-Point Arrow Quiver" "Ambusher" "Glorious Plate" "Steelscale Gauntlets" "Sorcerer Boots" "Ebony Tower Shield" "Sentinel Jacket" "Paua Amulet" "Jade Amulet" "Necromancer Circlet" "Murder Mitts" "Leather Belt" "Gladius" "Widowsilk Robe" "Two-Stone Ring" "Turquoise Amulet" "Lacquered Buckler" "Granite Flask" "Carnal Armour" "Soldier Boots" "Legion Sword" "Great Crown" "Penetrating Arrow Quiver" "Agate Amulet" "Sulphur Flask"
+	BaseType == "Ezomyte Burgonet" "Ebony Tower Shield" "Ezomyte Staff" "Necromancer Circlet" "Triumphant Lamellar" "Jade Amulet" "Turquoise Amulet" "Carnal Mitts" "Gladius" "Ambusher" "Carnal Armour" "Granite Flask" "Hubris Circlet" "Murder Mitts" "Sentinel Jacket" "Paua Amulet" "Penetrating Arrow Quiver" "Savant's Robe" "Elegant Ringmail" "Vaal Gauntlets" "Sorcerer Boots" "Sulphur Flask" "Widowsilk Robe" "Soldier Boots" "Lacquered Buckler" "Heavy Belt" "Leather Belt" "Maelström Staff" "Great Crown" "Agate Amulet" "Steelscale Gauntlets" "Two-Point Arrow Quiver" "Crusader Gloves" "Cloth Belt" "Legion Sword" "Two-Stone Ring" "Glorious Plate"
 	MinimapIcon 2 Cyan Star
 	Rarity Unique
 	SetBackgroundColor 0 0 0 220
@@ -3755,7 +3758,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Cleaver" "Plank Kite Shield" "Iron Mask" "Sledgehammer" "Ornate Sword" "Iron Hat" "Copper Plate" "Vaal Buckler" "Awl" "Buckskin Tunic" "Deerskin Boots" "Platinum Kris" "Bronzescale Gauntlets" "Pine Buckler" "Silk Slippers" "Wild Leather" "Stiletto" "Sage's Robe" "Goat's Horn" "War Buckler" "Latticed Ringmail" "Scholar's Robe" "Painted Buckler" "Serrated Arrow Quiver" "Cutthroat's Garb" "Plate Vest" "Brass Maul" "Skinning Knife" "Poleaxe" "Spiraled Wand" "Great Mallet" "Gold Amulet" "Ivory Spirit Shield" "Bronze Gauntlets" "Studded Round Shield" "Mesh Boots" "Tricorne" "Rotted Round Shield" "Ironscale Boots" "Golden Mask" "Velvet Slippers" "Shadow Sceptre" "Dread Maul" "Strapped Leather" "Despot Axe" "Plated Greaves" "Gnarled Branch" "Iron Staff" "Antique Rapier" "Ornate Ringmail" "Royal Bow" "Nailed Fist" "Death Bow" "Dream Mace" "Wrapped Mitts" "Thresher Claw"
+	BaseType == "Skinning Knife" "Poleaxe" "Golden Mask" "Despot Axe" "Cleaver" "Velvet Slippers" "Dream Mace" "Plate Vest" "Goat's Horn" "Wild Leather" "Ironscale Boots" "Buckskin Tunic" "Bronze Gauntlets" "Strapped Leather" "Dread Maul" "Iron Hat" "Sage's Robe" "Iron Staff" "Vaal Buckler" "Plated Greaves" "Nailed Fist" "Copper Plate" "Deerskin Boots" "War Buckler" "Pine Buckler" "Plank Kite Shield" "Gold Amulet" "Wrapped Mitts" "Cutthroat's Garb" "Ivory Spirit Shield" "Antique Rapier" "Mesh Boots" "Shadow Sceptre" "Spiraled Wand" "Stiletto" "Iron Mask" "Ornate Ringmail" "Latticed Ringmail" "Bronzescale Gauntlets" "Painted Buckler" "Royal Bow" "Gnarled Branch" "Serrated Arrow Quiver" "Death Bow" "Sledgehammer" "Thresher Claw" "Great Mallet" "Ornate Sword" "Silk Slippers" "Studded Round Shield" "Scholar's Robe" "Tricorne" "Awl" "Brass Maul" "Platinum Kris" "Rotted Round Shield"
 	Rarity Unique
 	SetBackgroundColor 0 0 0 220
 	SetFontSize 25
@@ -4274,7 +4277,7 @@ Show
 Show
 	Class "Maps"
 	AnyEnchantment True
-	CustomAlertSound "filter_sounds/100_death1.wav"
+	CustomAlertSound "filter_sounds/100_death5.wav"
 	MapTier >= 16
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
@@ -4286,7 +4289,7 @@ Show
 Show
 	Class "Maps"
 	AnyEnchantment True
-	CustomAlertSound "filter_sounds/75_attack4.wav"
+	CustomAlertSound "filter_sounds/75_attack1.wav"
 	MapTier >= 11
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -4308,7 +4311,7 @@ Show
 Show
 	Class "Maps"
 	AnyEnchantment True
-	CustomAlertSound "filter_sounds/20_gethit3.wav"
+	CustomAlertSound "filter_sounds/20_gethit1.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -4330,7 +4333,7 @@ Show
 Show
 	Class "Maps"
 	BlightedMap True
-	CustomAlertSound "filter_sounds/75_attack2.wav"
+	CustomAlertSound "filter_sounds/75_attack6.wav"
 	MapTier >= 11
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -4341,7 +4344,7 @@ Show
 Show
 	Class "Maps"
 	BlightedMap True
-	CustomAlertSound "filter_sounds/20_gethit3.wav"
+	CustomAlertSound "filter_sounds/20_gethit2.wav"
 	MapTier <= 5
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -4352,7 +4355,7 @@ Show
 Show
 	Class "Maps"
 	BlightedMap True
-	CustomAlertSound "filter_sounds/20_gethit4.wav"
+	CustomAlertSound "filter_sounds/20_gethit3.wav"
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -6304,6 +6307,13 @@ Show
 	Rarity Rare
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 254 128 128 100
+	SetFontSize 25
+
+#Always show catchall
+Show
+	Identified True
+	Rarity Rare
+	SetBackgroundColor 0 0 0 220
 	SetFontSize 25
 
 Hide

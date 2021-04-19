@@ -43,6 +43,6 @@ items = {
 	"92 corrupted rares": {"other": ["Corrupted True", "CorruptedMods > 0"], "type": "rare corrupted"},
 	"92 Talisman rares": {"base": "Talisman", "type": "rare corrupted"},
 	"1 Watchstone": {"base": "Watchstone", "type": "show normal"},
-	#	"93 identified rares": {"other": ["Identified True"], "type": "rare low"},
+	"93 identified rares": {"other": ["Identified True"], "type": "rare low"},
 
 }
