@@ -83,16 +83,22 @@ def create_highlight_currency(currencytab, league, accountname, cookies, header,
 		request = f'https://www.pathofexile.com/character-window/get-stash-items?league={league}&realm=pc&accountName={accountname}&tabs=0&tabIndex={currencytab}'
 
 		req = requester.post(request, cookies=cookies, headers=header)
-		data = json.loads(req.content)
-		skipped = set()
-		for item in data['items']:
-			if item['typeLine'] in currencyvals and currencyvals[item['typeLine']] < item['stackSize'] and currencyvals[item['typeLine']] != -1:
-				currency.pop(currency.index(item['typeLine']))
-			elif item['typeLine'] not in currencyvals and 'Oil' not in item['typeLine'] and 'Shard' not in item['typeLine'] and 'Fragment' not in item['typeLine']:
-				skipped.add(item['typeLine'])
-			if item['typeLine'] in shards and item['stackSize'] > currencyvals[item['typeLine']] * 0.5:
-				del shards[item['typeLine']]
-		print(f"Skipped determining always show for: {sorted(skipped)}")
+		if req.status_code == 200:
+			data = json.loads(req.content)
+			skipped = set()
+			if 'items' in data:
+				for item in data['items']:
+					if item['typeLine'] in currencyvals and currencyvals[item['typeLine']] < item['stackSize'] and currencyvals[item['typeLine']] != -1:
+						currency.pop(currency.index(item['typeLine']))
+					elif item['typeLine'] not in currencyvals and 'Oil' not in item['typeLine'] and 'Shard' not in item['typeLine'] and 'Fragment' not in item['typeLine']:
+						skipped.add(item['typeLine'])
+					if item['typeLine'] in shards and item['stackSize'] > currencyvals[item['typeLine']] * 0.5:
+						del shards[item['typeLine']]
+				print(f"Skipped determining always show for: {sorted(skipped)}")
+			else:
+				print(f"Error: {req.reason} - {repr(data)}")
+		else:
+			print(f"Error code {req.status_code}: {req.reason}")
 
 	for shard in shards:
 		if shard in currency:
