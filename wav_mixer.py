@@ -24,7 +24,7 @@ volume = {
 volumes = ["mirror", "max", "high", "normal", "medium", "low"]
 
 # folder for filter sounds
-sound_root = 'filter_sounds'
+sound_root = 'source_sounds'
 
 # each entry needs a list(len 6) of list(and len)
 # blank entries will generate no sound
@@ -77,20 +77,20 @@ soundmap = {
 			['expl_2.wav'],
 			['gem.wav'],
 			['gem.wav'],
-			[],
-			[]],
+			['gem.wav'],
+			['gem.wav']],
 	'base': [['neutral3.wav'],
 			 ['expl_2.wav'],
 			 ['charge.wav'],
-			 [],
-			 [],
-			 []],
-	'5link': [[],
-			  [],
+			 ['charge.wav'],
+			 ['charge.wav'],
+			 ['charge.wav']],
+	'5link': [['5link.wav'],
 			  ['5link.wav'],
-			  [],
-			  [],
-			  []],
+			  ['5link.wav'],
+			  ['5link.wav'],
+			  ['5link.wav'],
+			  ['5link.wav']],
 
 }
 
@@ -103,11 +103,12 @@ def convert_sound_reference(format_list):
 		if format_list[idx].startswith('CustomAlertSound'):
 			sound = format_list[idx].split('"')[1]
 			slist = sound.split('_', maxsplit=1)
-			return idx, sound, f"{sound_root}/{volume[slist[0]]}_{choice(soundmap[slist[1]][volumes.index(slist[0])])}"
+			return idx, sound, f"{sound_root}/{choice(soundmap[slist[1]][volumes.index(slist[0])])}", volume[slist[0]]
 	# nothing to change
-	return -1, '', ''
+	return [-1]
 
 
+# OBSOLETE
 def convert_wav(factor, inpath, outpath):
 	pathout = "{}_{}".format(factor, inpath)
 	factor = factor / 100
@@ -140,6 +141,7 @@ def convert_wav(factor, inpath, outpath):
 			f.writeframes(frames)
 
 
+# OBSOLETE
 # generate all sound combinations the filter may use
 def package_sounds():
 	poeDir = Create_filter.get_poe_path()
@@ -172,4 +174,5 @@ def package_sounds():
 
 # When this file is ran directly
 if __name__ == "__main__":
-	package_sounds()
+	pass
+#	package_sounds()

@@ -333,4 +333,3 @@ def validate_data(price_val):
 	fix_divs(price_val)
 	# remove uniques that cannot normally drop
 	trim_uniques(price_val['unique'])
-	pass

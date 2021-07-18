@@ -1,7 +1,7 @@
 # xan_filter
-**SoundPack** [Download](soundpack.zip?raw=true) 
+**SoundPack** [Download](source_sounds.7z?raw=true) (note this is the directory source_sounds)
 
-Download, unzip archive, and place wav files in same directory as the filter
+Download, unzip archive, and place wav file directory(source_sounds) in same directory as the filter
 
 **HIDE** <a href="xan.t.hide.filter?raw=true" download>Download</a>
 

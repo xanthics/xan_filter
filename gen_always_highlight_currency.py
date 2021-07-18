@@ -34,23 +34,23 @@ def create_highlight_currency(currencytab, league, accountname, cookies, header,
 		"Prime Sextant": -1,
 		"Awakened Sextant": -1,
 		'Orb of Annulment': 9999,
-		'Orb of Binding': 5,
+		'Orb of Binding': 150,
 		"Ancient Orb": 50,
 		"Armourer's Scrap": 160,
 		"Blacksmith's Whetstone": 80,
 		"Blessed Orb": 100,
-		"Chaos Orb": 9999,
-		"Chromatic Orb": 1000,
+		"Chaos Orb": 500,
+		"Chromatic Orb": 500,
 		"Engineer's Orb": 20,
 		"Gemcutter's Prism": 100,
 		"Glassblower's Bauble": 60,
 		"Harbinger's Orb": 9999,
 		"Jeweller's Orb": 350,
 		"Orb of Alchemy": 150,
-		"Orb of Alteration": -1,
+		"Orb of Alteration": 1000,
 		"Orb of Augmentation": 500,
 		"Orb of Chance": 250,
-		"Orb of Fusing": -1,
+		"Orb of Fusing": 1500,
 		"Orb of Horizons": 50,
 		"Orb of Regret": 100,
 		"Orb of Scouring": -1,
@@ -60,9 +60,9 @@ def create_highlight_currency(currencytab, league, accountname, cookies, header,
 		"Regal Orb": 100,
 		"Scroll of Wisdom": 100,
 		"Silver Coin": 200,
-		"Vaal Orb": -1,
+		"Vaal Orb": 200,
 		"Stacked Deck": -1,
-		"Rogue's Marker": 0
+		"Rogue's Marker": 1
 	}
 
 	shards = {
@@ -75,7 +75,9 @@ def create_highlight_currency(currencytab, league, accountname, cookies, header,
 		"Orb of Scouring": ["Orb of Chance"],
 		"Scroll of Wisdom": ["Armourer's Scrap", "Blacksmith's Whetstone", "Orb of Transmutation"],
 		"Chaos Orb": ["Chaos Shard"],
-		"Harbinger's Orb": ["Harbinger's Shard"]
+		"Harbinger's Orb": ["Harbinger's Shard"],
+		"Orb of Annulment": ['Annulment Shard'],
+		"Ancient Orb": ['Ancient Shard']
 	}
 
 	currency = list(currencyvals.keys())
@@ -199,13 +201,13 @@ def create_highlight_challenge(accountname, league, cookies, header, requester):
 				"Scarab": [{'scarab'}],
 				"Shaper or Elder Item": [{'shaper'}, {'elder'}],
 				"Two-Implicit Unique Item": [{'two-implicit'}],
-				"Two-Implicit Corrupted Unique Item": [{'two-implicit', 'corrupt'}],
+				"Two-Implicit Corrupted Unique Item": [{'two-implicit', 'corrupt', 'unique'}],
 				"Unique Map": [{'unique', 'map'}],
-				"Itemised Prophecy": [{"NYI"}],
 				'Unique Item': [{'unique'}],
 				'Stack of Currency': [{'currency'}],
+				"Itemised Prophecy": [{"NYI"}],
 				'Vaal Gem': [{"NYI"}],
-				'23% Quality Gem': [{"NYI"}],
+				'23% Quality Gem': [{"23%"}],
 			}
 		},
 	}

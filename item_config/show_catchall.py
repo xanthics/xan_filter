@@ -6,7 +6,7 @@ desc = "Always show catchall"
 
 # Base type : settings pair
 items = {
-	"0 steel ring": {"baseexact": "Steel Ring", "other": ["ItemLevel >= 80"], "type": "show normal"},
+#	"0 steel ring": {"baseexact": "Steel Ring", "other": ["ItemLevel >= 80"], "type": "show normal"},
 
 	# High value veiled mods, so that they still show after removing them from itemmod.py when finished
 	"2 Magic Jewel": {"class": "Jewel", "other": ["Rarity <= Magic", "AreaLevel <= 70"], "type": "normal"},
@@ -23,7 +23,11 @@ items = {
 	"16 unique": {"type": "unique normal"},
 	"17 enchant": {"class": "Helmet", "other": ["AnyEnchantment True"], "type": "item mod"},
 	"18 Misc map items": {"class": "Misc Map Items", "type": "show high"},
-#	"1 Alternate Gems": {"other": ["AlternateQuality True"], "type": "challenge normal"},
+	# for low value 6s or 6l uniques
+	"02 6L": {"other": ["Rarity Unique", "LinkedSockets 6"], "type": "show high"},
+	"03 6S": {"other": ["Rarity Unique", "Sockets 6"], "type": "show normal"},
+
+	#	"1 Alternate Gems": {"other": ["AlternateQuality True"], "type": "challenge normal"},
 #	"1 Replica Unique": {"other": ["Replica True"], "type": "challenge normal"},
 #	"1 Rogue's Marker": {"baseexact": "Rogue's Marker", "class": "Currency", "type": "challenge normal"},
 
@@ -39,10 +43,10 @@ items = {
 	"8 50": {"other": ["DropLevel <= 50", "AreaLevel >= 60", "AreaLevel <= 67"], "type": "rare low"},
 	"8 55": {"other": ["DropLevel <= 55", "AreaLevel >= 65", "AreaLevel <= 67"], "type": "rare low"},
 
-	"91 Other rares": {"other": ["AreaLevel <= 67"], "type": "rare normal"},
+	"90 Other rares": {"other": ["AreaLevel <= 67"], "type": "rare normal"},
+	"91 Talisman rares": {"base": "Talisman", "type": "rare corrupted"},
 	"92 corrupted rares": {"other": ["Corrupted True", "CorruptedMods > 0"], "type": "rare corrupted"},
-	"92 Talisman rares": {"base": "Talisman", "type": "rare corrupted"},
 	"1 Watchstone": {"base": "Watchstone", "type": "show normal"},
-	"93 identified rares": {"other": ["Identified True"], "type": "rare low"},
+	"99 identified rares": {"other": ["Identified True"], "type": "rare low"},
 
 }

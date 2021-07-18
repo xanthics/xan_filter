@@ -103,18 +103,23 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, auto_a
 	]
 	unique_list = defaultdict(list)
 	unique_list_limited = defaultdict(list)
+	unique_list_replica = defaultdict(list)
 	set_of_bases = set()
 	unique_cleaned = {}
+	unique_cleaned_replica = {}
 
 	for item in data:
 		if 'other' in data[item]:
 			unique_cleaned[item] = data[item]
 		else:
-			set_of_bases.add(data[item]['baseexact'])
-			if item.strip('*') in limiteddrop or item.startswith('Replica'):
-				unique_list_limited[data[item]['baseexact']].append(data[item]['value'])
+			if item.startswith('Replica'):
+				unique_list_replica[data[item]['baseexact']].append(data[item]['value'])
 			else:
-				unique_list[data[item]['baseexact']].append(data[item]['value'])
+				set_of_bases.add(data[item]['baseexact'])
+				if item.strip('*') in limiteddrop:
+					unique_list_limited[data[item]['baseexact']].append(data[item]['value'])
+				else:
+					unique_list[data[item]['baseexact']].append(data[item]['value'])
 
 	for base in set_of_bases:
 		if base in unique_list and max(unique_list[base]) >= currency_val['high'] > min(unique_list[base]):
@@ -128,7 +133,17 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, auto_a
 			unique_cleaned[base] = {'baseexact': base, 'value': min(unique_list[base])}
 		else:
 			unique_cleaned[base] = {'baseexact': base, 'value': min(unique_list_limited[base])}
+		unique_cleaned[base]['other'] = ['Replica False']
+
+	for base in unique_list_replica:
+		if max(unique_list_replica[base]) >= currency_val['high'] > min(unique_list_replica[base]):
+			unique_cleaned_replica[base] = {'baseexact': base, 'value': -1}
+		else:
+			unique_cleaned_replica[base] = {'baseexact': base, 'value': min(unique_list_replica[base])}
+		unique_cleaned_replica[base]['other'] = ['Replica True']
+
 	price_currency(unique_cleaned, val, base_sound, currency_val, tiers, minval, auto_ah, ret)
+	price_currency(unique_cleaned_replica, val, base_sound, currency_val, tiers, minval, auto_ah, ret)
 
 
 def price_currency(data, val, base_sound, currency_val, tiers, minval, auto_ah, ret):
@@ -145,7 +160,6 @@ def price_currency(data, val, base_sound, currency_val, tiers, minval, auto_ah, 
 		# -2 high value drop that is limited
 		if data[item]['value'] in [-1, -2]:
 			data[item]['type'] = 'unique special' if data[item]['value'] == -1 else "unique limited"
-
 		else:
 			for ch in tiers:
 				if data[item]['value'] >= currency_val[ch]:

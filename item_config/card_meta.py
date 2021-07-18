@@ -2,14 +2,29 @@
 # '5l', '6l', 'amulet', 'awakened', 'belt', 'body armour', 'boot', 'bow', 'corrupt', 'crusader', 'currency', 'dagger', 'div', 'double-influenced',
 # 'elder', 'enchanted', 'essence', 'fishing', 'flask', 'fragment', 'gem', 'glove', 'helmet', 'hunter', 'ilvl100', 'influenced', 'jewel', 'jewellery',
 # 'magic', 'map', 'prophecy', 'quiver', 'rare', 'ring', 'scarab', 'sceptre', 'shaper', 'shield', 'staff', 'thrusting sword', 'two-implicit',
-# 'unique', 'wand', 'white'
+# 'unique', 'wand', 'white', 'synthesis'
 
 card_meta = {
+	"Deadly Joy": {'unique', 'corrupt', 'two-implicit', 'belt'},  # {Torrent's Reclamation} {Two-Implicit} {Corrupted}, count: 6
+	"Luminous Trove": {'unique', 'corrupt'},  # {Voices}|{Voices} {Corrupted}, count: 7
+	"Winter's Embrace": {'unique', 'ring', 'synthesis'},  # {Circle of Fear} <enchanted>{Three-Implicit} <enchanted>{Synthesised}, count: 2
+	"Broken Promises": {'ring', 'synthesis'},  # <whiteitem>{Diamond Ring} <default>{Item Level:} <normal>{87} <enchanted>{Two-Implicit} <enchanted>{Synthesised}, count: 2
+	"The Enthusiasts": {'unique', 'corrupt', 'two-implicit', 'body armour'},  # {Victario's Influence} {Two-Implicit} {Corrupted}, count: 3
+	"The Eternal War": {'unique', 'corrupt', 'two-implicit', 'jewel'},  # {Timeless Jewel} {Two-Implicit} {Corrupted}, count: 4
+	"A Modest Request": {'unique', 'corrupt'},  # {Megalomaniac} {Corrupted}|{Megalomaniac}, count: 3
+	"The Shortcut": {'magic', 'flask', 'ilvl100'},  # {Quicksilver Flask of Adrenaline} {Item Level:} {100}, count: 1
+	"The Hook": {'unique'},  # {Watchstone}, count: 8
+	"Prejudice": {'unique', 'influenced'},  # {Item} {Influenced Item}, count: 7
+	"Sambodhi's Wisdom": {'prophecy'},  # {A Master Seeks Help (Jun)}, count: 3
+	"Brush, Paint and Palette": {'div'},  # {The Artist}, count: 5
+	"The Adventuring Spirit": {'unique', 'body armour'},  # {Victario's Influence}, count: 6
+	"The Card Sharp": {'white', 'scarab', 'fragment'},  # {Divination Scarab}, count: 4
+
 	"Acclimatisation": {'currency'},  # {20x Orb of Alteration}, count: 2
 	"Brother's Stash": {'currency'},  # {5x Exalted Orb}, count: 0
 	"Brotherhood in Exile": {'unique', 'corrupt', 'jewel'},  # {One With Nothing} {Corrupted}, count: 5
 	"Cursed Words": {'unique', 'helm'},  # {Maw of Mischief}, count: 13
-	"Desecrated Virtue": {'aug', 'gem', 'corrupt'},  # {{Level 6 Awakened Support Gem}} {Quality:} {+23%} {Corrupted}, count: 9
+	"Desecrated Virtue": {'aug', 'gem', 'corrupt', '23%'},  # {{Level 6 Awakened Support Gem}} {Quality:} {+23%} {Corrupted}, count: 9
 	"Draped in Dreams": {'white', '6l', 'ilvl100', 'body armour'},  # {Six-Linked Body Armour} {Item Level:} {100} {Influenced Item}, count: 5
 	"Dying Anguish": {'aug', 'gem'},  # {Level 19 Gem} {Alternate Quality:} {+19%}, count: 8
 	"Dying Light": {'rare', 'ring', 'ilvl100'},  # {Diamond Ring} {Item Level:} {100} {Shaper + Elder Item}, count: 10
@@ -22,7 +37,7 @@ card_meta = {
 	"The Academic": {'unique', 'jewel'},  # {Inspired Learning}, count: 8
 	"The Astromancer": {'unique', 'corrupt', 'body armour', 'two-implicit'},  # {{The Eternity Shroud} {Two-Implicit} {Corrupted}}, count: 7
 	"The Bear Woman": {'magic', 'helmet', 'warlord'},  # {Fecund Ursine Pelt} {Warlord Item}, count: 6
-	"The Bitter Blossom": {'aug', 'gem', 'corrupt', 'jewellery'},  # {Level 21 Chaos Gem} {Quality:} {+23%} {Corrupted}, count: 3
+	"The Bitter Blossom": {'aug', 'gem', 'corrupt', 'jewellery', '23%'},  # {Level 21 Chaos Gem} {Quality:} {+23%} {Corrupted}, count: 3
 	"The Cache": {'unique', 'jewellery'},  # {Jewellery}, count: 6
 	"The Gulf": {'unique', 'corrupt', 'jewel', 'two-implicit'},  # {Thread of Hope} {Two-Implicit} {Corrupted}, count: 5
 	"The Journalist": {'rare', 'helmet'},  # {Helmet} {Double-Veiled Item}, count: 10
@@ -67,10 +82,10 @@ card_meta = {
 	"Dark Dreams": {'rare', 'elder', 'influenced', 'helmet'},  # Bone Helmet|Elder Item
 	"Dark Temptation": {'unique', 'wand'},  # Obliteration
 	"Death": {'unique', 'sceptre'},  # Mon'tregul's Grasp
-	"Deathly Designs": {'corrupt', 'gem'},  # Level 21 Trap Gem|Quality: +23%|Corrupted
+	"Deathly Designs": {'corrupt', 'gem', '23%'},  # Level 21 Trap Gem|Quality: +23%|Corrupted
 	"Demigod's Wager": {'currency'},  # Orb of Annulment
 	"Destined to Crumble": {'rare', 'ilvl100'},  # Body Armour|Item Level: 100
-	"Dialla's Subjugation": {'corrupt', 'gem'},  # Superior Support Gem|Quality: +23%|Corrupted
+	"Dialla's Subjugation": {'corrupt', 'gem', '23%'},  # Superior Support Gem|Quality: +23%|Corrupted
 	"Divine Justice": {'unique', 'enchanted', 'helmet'},  # Helmet|Eternal Labyrinth Enchantment
 	"Doedre's Madness": {'unique'},  # Doedre Item
 	"Earth Drinker": {'unique', 'flask'},  # Granite Flask
@@ -283,7 +298,7 @@ card_meta = {
 	"The Side Quest": {'prophecy'},  # A Master Seeks Help
 	"The Sigil": {'magic', 'amulet'},  # Unassailable Amulet
 	"The Siren": {'unique', 'corrupt', 'staff'},  # The Whispering Ice|Corrupted
-	"The Skeleton": {'corrupt', 'gem'},  # Level 1 Summon Skeletons|Quality: +23%|Corrupted
+	"The Skeleton": {'corrupt', 'gem', '23%'},  # Level 1 Summon Skeletons|Quality: +23%|Corrupted
 	"The Soul": {'unique'},  # Soul Taker
 	"The Spark and the Flame": {'unique', 'ring'},  # Berek's Respite
 	"The Spoiled Prince": {'magic', 'ilvl100', 'wand'},  # Dictator's Prophecy Wand|Item Level: 100

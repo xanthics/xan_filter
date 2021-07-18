@@ -81,7 +81,7 @@ def scrape_ninja(league='tmpstandard'):
 
 	requester = requests.session()
 	header = {
-		'User-Agent': 'xan.filter)',
+		'User-Agent': 'xan.filter',
 		'From': 'xanthics on discord'
 	}
 	price_val = {}
@@ -108,8 +108,8 @@ def scrape_ninja(league='tmpstandard'):
 					if i['currencyTypeName'] in price_val:
 						print(f"Duplicate key for {i['currencyTypeName']} found")
 					else:
-						pc = i['pay']['count'] if i['pay'] else 0
-						rc = i['receive']['count'] if i['receive'] else 0
+						pc = i['pay']['count'] if 'pay' in i else 0
+						rc = i['receive']['count'] if 'receive' in i else 0
 						if "Splinter" not in i['currencyTypeName']:
 							price_val[classtypes[key]][i['currencyTypeName']] = {'baseexact': i['currencyTypeName'], 'value': i['chaosEquivalent'], 'count': pc + rc}
 						else:
@@ -123,7 +123,7 @@ def scrape_ninja(league='tmpstandard'):
 					price_val[classtypes[key]][i['name']] = {'baseexact': i['name'], 'value': i['chaosValue'], 'count': i['count']}
 				if key == 'DivinationCard' and i['name'] not in card_meta:
 					text = '|'.join([x['text'].replace('\n', ' ') for x in i["explicitModifiers"]])
-					missing_unhandled.append(f'"{i["name"]}": {{}},  # {text}, count: {i["stackSize"]}')
+					missing_unhandled.append(f'"{i["name"]}": {{}},  # {text}, count: {i["stackSize"] if "stackSize" in i else 1}')
 
 		elif key == 'Prophecy':
 			for i in data['lines']:
@@ -181,11 +181,10 @@ def scrape_ninja(league='tmpstandard'):
 			for i in data['lines']:
 				if i['baseType'].startswith('Superior '):
 					continue
-				# convert numbers to string since we are converting to json later
-				if not i['variant'] or '/' in i['variant']:
-					if 'variant' in i and i['variant']:
-						continue  # ignore dual influenced items
+				if 'variant' not in i:
 					i['variant'] = 'None'
+				if '/' in i['variant']:
+					continue  # ignore dual influenced items
 				price_val[classtypes[key]][f"{i['levelRequired']}-{i['variant']}-{i['baseType']}"] = {'baseexact': i['baseType'], 'value': i['chaosValue'], 'count': i['count'], 'influence': i['variant'],
 																									  'other': [f'ItemLevel {">= 86" if i["levelRequired"] >= 86 else i["levelRequired"]}']}
 
@@ -211,8 +210,9 @@ def scrape_ninja(league='tmpstandard'):
 				"Doom Blast": "Impending Doom Support",
 			}
 			for i in data['lines']:
-				# convert numbers to string since we are converting to json later
-				if i['name'] in ['Enlighten Support', 'Enhance Support', 'Empower Support'] or 'Awakened' in i['name']:
+				if 'gemQuality' not in i:
+					i['gemQuality'] = 0
+				if i['name'] in ['Enlighten Support', 'Enhance Support', 'Empower Support'] or 'Awakened' in i['name'] or ('Vaal' not in i['name'] and i['gemQuality'] < 20):
 					i['gemQuality'] = 0
 				elif i['name'] in lookup:
 					i['name'] = lookup[i['name']]
@@ -220,10 +220,14 @@ def scrape_ninja(league='tmpstandard'):
 				other = ''
 				if any(val in i['name'] for val in ['Anomalous', 'Divergent', 'Phantasmal']):
 					other, name = i['name'].split(" ", maxsplit=1)
-				price_val[classtypes[key]][f"{99-i['gemLevel']}{99-i['gemQuality']}{1 if i['corrupted'] else 0} {i['name']}"] = {'baseexact': name, 'value': i['chaosValue'], 'count': i['count'],
-																														   "other": [f"GemLevel >= {i['gemLevel']}", f"Quality >= {i['gemQuality']}", f"Corrupted {i['corrupted']}"]}
-				if other:
-					price_val[classtypes[key]][f"{99 - i['gemLevel']}{99 - i['gemQuality']}{1 if i['corrupted'] else 0} {i['name']}"]['other'].append(f"GemQualityType {other}")
+				if f"{99 - i['gemLevel']}{99 - i['gemQuality']}{1 if 'corrupted' in i else 0} {i['name']}" in price_val[classtypes[key]] and i['count'] > 10:
+					price_val[classtypes[key]][f"{99-i['gemLevel']}{99-i['gemQuality']}{1 if 'corrupted' in i else 0} {i['name']}"]['value'] = max(i['chaosValue'], price_val[classtypes[key]][f"{99-i['gemLevel']}{99-i['gemQuality']}{1 if 'corrupted' in i else 0} {i['name']}"]['value'])
+					price_val[classtypes[key]][f"{99-i['gemLevel']}{99-i['gemQuality']}{1 if 'corrupted' in i else 0} {i['name']}"]['count'] = max(i['count'], price_val[classtypes[key]][f"{99-i['gemLevel']}{99-i['gemQuality']}{1 if 'corrupted' in i else 0} {i['name']}"]['count'])
+				else:
+					price_val[classtypes[key]][f"{99-i['gemLevel']}{99-i['gemQuality']}{1 if 'corrupted' in i else 0} {i['name']}"] = {'baseexact': name, 'value': i['chaosValue'], 'count': i['count'],
+																															   "other": [f"GemLevel >= {i['gemLevel']}", f"Quality >= {i['gemQuality']}", f"Corrupted {'True' if 'corrupted' in i else 'False'}"]}
+					if other:
+						price_val[classtypes[key]][f"{99 - i['gemLevel']}{99 - i['gemQuality']}{1 if 'corrupted' in i else 0} {i['name']}"]['other'].append(f"GemQualityType {other}")
 
 		else:
 			print('Unhandled key: "{}"'.format(key))

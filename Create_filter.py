@@ -33,10 +33,10 @@ import wav_mixer
 
 def gen_list_compact(items, desc):
 	#	print("Starting {}".format(obj))
-
 	# gen our string
 	item_dict = {}
-	from pprint import pprint
+	# A list of actions so we can always make sure they are after conditions
+	actions = ['CustomAlertSound', 'DisableDropSound', 'EnableDropSound', 'MinimapIcon', 'PlayAlertSound', 'PlayAlertSoundPositional', 'PlayEffect', 'SetBackgroundColor', 'SetBorderColor', 'SetFontSize', 'SetTextColor']
 	for item in items:
 		item_info = items[item]
 		if item_info['type'] != "ignore":
@@ -84,11 +84,19 @@ def gen_list_compact(items, desc):
 				print("Missing type field {} ** {}".format(items[item], item))
 				exit(-1)
 
-			# TODO: Add an efficiency sort - rules should be before styles
+			# sort - rules should be before styles
+			t_actions = []
+			for i in list(formatting):
+				if any(i.startswith(x) for x in actions):
+					t_actions.append(i)
+					formatting.remove(i)
 			formatting.sort()
+			t_actions.sort()
+			formatting.extend(t_actions)
+
 			c = wav_mixer.convert_sound_reference(formatting)
 			if c[0] > -1:
-				formatting[c[0]] = formatting[c[0]].replace(c[1], c[2])
+				formatting[c[0]] = f"{formatting[c[0]].replace(c[1], c[2])} {c[3]}"
 			other = ",".join(formatting)
 
 			# converted to string to it is easier to see if different objects have the same formatting
@@ -142,7 +150,6 @@ def gen_list_compact(items, desc):
 					base += "\n\tHasInfluence {}".format(influence)
 				if other:
 					base += "\n\t{}".format("\n\t".join(sorted(other.split(','))))
-#				base += "\n\tDisableDropSound True"
 				base += "\n\n"
 
 	return base
