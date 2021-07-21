@@ -149,7 +149,7 @@ def gen_list_compact(items, desc):
 				if influence:
 					base += "\n\tHasInfluence {}".format(influence)
 				if other:
-					base += "\n\t{}".format("\n\t".join(sorted(other.split(','))))
+					base += "\n\t{}".format("\n\t".join(other.split(',')))
 				base += "\n\n"
 
 	return base

@@ -18,6 +18,7 @@ items = {
 	"2 Heist Any": {"class": "Heist", "type": "challenge low"},
 	"1 Trinket": {"class": "Trinket", "type": "challenge high"},
 	"1 Blueprint": {"class": "Blueprint", "type": "challenge high"},
+	"1 Expedition Logbook": {"class": "Expedition Logbook", "type": "challenge high"},
 
 	#	"0 Contract": {"other": ["ItemLevel >= 83"], "class": "Contract", "type": "challenge high"},
 #	"1 Contract": {"other": ["ItemLevel >= 75"], "class": "Contract", "type": "challenge normal"},

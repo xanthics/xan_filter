@@ -239,7 +239,7 @@ def convert_json_to_filter():
 		['div', 2, 'divination', price_currency, ['mirror', 'extremely high', 'very high', 'high', 'normal', 'low'], 'show'],
 		['fragment', 5, 'fragment', price_currency, ['mirror', 'extremely high', 'very high', 'high', 'normal', 'low'], 'show'],
 		['prophecy', 8, 'currency', price_currency, ['mirror', 'extremely high', 'very high', 'high', 'normal', 'low'], 'show'],
-		['enchant', 3, 'base', price_currency, ['mirror', 'extremely high', 'very high'], 'ignore'],
+		['enchant', 3, 'show', price_currency, ['mirror', 'extremely high', 'very high'], 'ignore'],
 		['base', 4, 'base', price_currency, ['mirror', 'extremely high', 'very high'], 'ignore'],
 		['gems', 6, 'gem', price_currency, ['mirror', 'extremely high', 'very high', 'high'], 'ignore'],
 		['unique', 9, 'unique', unique_preprocess, ['mirror', 'extremely high', 'very high', 'high', 'normal', 'low'], 'show'],

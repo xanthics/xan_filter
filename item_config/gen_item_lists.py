@@ -252,32 +252,32 @@ bases = {
 			{'drop': 66, 'base': 'Stave', 'name': 'Imperial Staff', 'tier': 3},  # Staff Block (18)
 			{'drop': 70, 'base': 'Stave', 'name': 'Eclipse Staff', 'tier': 1},  # Critical Strike Chance +(100)
 		],
-		"Dex|Melee|One|Thrusting One Hand Sword|Weapon": [
-			{'drop': 3, 'base': 'Thrusting One Hand Sword', 'name': 'Rusted Spike', 'tier': 4},  # Base Critical Strike Multiplier +(25)
-			{'drop': 7, 'base': 'Thrusting One Hand Sword', 'name': 'Whalebone Rapier', 'tier': 4},  # Base Critical Strike Multiplier +(25)
-			{'drop': 12, 'base': 'Thrusting One Hand Sword', 'name': 'Battered Foil', 'tier': 4},  # Base Critical Strike Multiplier +(25)
-			{'drop': 17, 'base': 'Thrusting One Hand Sword', 'name': 'Basket Rapier', 'tier': 4},  # Base Critical Strike Multiplier +(25)
-			{'drop': 22, 'base': 'Thrusting One Hand Sword', 'name': 'Jagged Foil', 'tier': 4},  # Base Critical Strike Multiplier +(25)
-			{'drop': 26, 'base': 'Thrusting One Hand Sword', 'name': 'Antique Rapier', 'tier': 4},  # Base Critical Strike Multiplier +(25)
-			{'drop': 30, 'base': 'Thrusting One Hand Sword', 'name': 'Elegant Foil', 'tier': 4},  # Base Critical Strike Multiplier +(25)
-			{'drop': 34, 'base': 'Thrusting One Hand Sword', 'name': 'Thorn Rapier', 'tier': 3},  # Base Critical Strike Multiplier +(35)
-			{'drop': 36, 'base': 'Thrusting One Hand Sword', 'name': 'Smallsword', 'tier': 4},  # Local Chance To Bleed On Hit (15)
-			{'drop': 37, 'base': 'Thrusting One Hand Sword', 'name': 'Wyrmbone Rapier', 'tier': 4},  # Base Critical Strike Multiplier +(25)
-			{'drop': 40, 'base': 'Thrusting One Hand Sword', 'name': 'Burnished Foil', 'tier': 4},  # Base Critical Strike Multiplier +(25)
-			{'drop': 43, 'base': 'Thrusting One Hand Sword', 'name': 'Estoc', 'tier': 4},  # Base Critical Strike Multiplier +(25)
-			{'drop': 46, 'base': 'Thrusting One Hand Sword', 'name': 'Serrated Foil', 'tier': 4},  # Base Critical Strike Multiplier +(25)
-			{'drop': 49, 'base': 'Thrusting One Hand Sword', 'name': 'Primeval Rapier', 'tier': 4},  # Base Critical Strike Multiplier +(25)
-			{'drop': 52, 'base': 'Thrusting One Hand Sword', 'name': 'Fancy Foil', 'tier': 4},  # Base Critical Strike Multiplier +(25)
-			{'drop': 55, 'base': 'Thrusting One Hand Sword', 'name': 'Apex Rapier', 'tier': 3},  # Base Critical Strike Multiplier +(35)
-			{'drop': 57, 'base': 'Thrusting One Hand Sword', 'name': 'Courtesan Sword', 'tier': 4},  # Local Chance To Bleed On Hit (15)
-			{'drop': 58, 'base': 'Thrusting One Hand Sword', 'name': 'Dragonbone Rapier', 'tier': 4},  # Base Critical Strike Multiplier +(25)
-			{'drop': 60, 'base': 'Thrusting One Hand Sword', 'name': 'Tempered Foil', 'tier': 4},  # Base Critical Strike Multiplier +(25)
-			{'drop': 62, 'base': 'Thrusting One Hand Sword', 'name': 'Pecoraro', 'tier': 3},  # Base Critical Strike Multiplier +(25)
-			{'drop': 64, 'base': 'Thrusting One Hand Sword', 'name': 'Spiraled Foil', 'tier': 2},  # Base Critical Strike Multiplier +(25)
-			{'drop': 66, 'base': 'Thrusting One Hand Sword', 'name': 'Vaal Rapier', 'tier': 3},  # Base Critical Strike Multiplier +(25)
-			{'drop': 68, 'base': 'Thrusting One Hand Sword', 'name': 'Jewelled Foil', 'tier': 1},  # Base Critical Strike Multiplier +(25)
-			{'drop': 70, 'base': 'Thrusting One Hand Sword', 'name': 'Harpy Rapier', 'tier': 1},  # Base Critical Strike Multiplier +(35)
-			{'drop': 72, 'base': 'Thrusting One Hand Sword', 'name': 'Dragoon Sword', 'tier': 3},  # Local Chance To Bleed On Hit (20)
+		"Dex|Melee|One|One Hand Sword|Weapon": [
+			{'drop': 3, 'base': 'One Hand Sword', 'name': 'Rusted Spike', 'tier': 4},  # Base Critical Strike Multiplier +(25)
+			{'drop': 7, 'base': 'One Hand Sword', 'name': 'Whalebone Rapier', 'tier': 4},  # Base Critical Strike Multiplier +(25)
+			{'drop': 12, 'base': 'One Hand Sword', 'name': 'Battered Foil', 'tier': 4},  # Base Critical Strike Multiplier +(25)
+			{'drop': 17, 'base': 'One Hand Sword', 'name': 'Basket Rapier', 'tier': 4},  # Base Critical Strike Multiplier +(25)
+			{'drop': 22, 'base': 'One Hand Sword', 'name': 'Jagged Foil', 'tier': 4},  # Base Critical Strike Multiplier +(25)
+			{'drop': 26, 'base': 'One Hand Sword', 'name': 'Antique Rapier', 'tier': 4},  # Base Critical Strike Multiplier +(25)
+			{'drop': 30, 'base': 'One Hand Sword', 'name': 'Elegant Foil', 'tier': 4},  # Base Critical Strike Multiplier +(25)
+			{'drop': 34, 'base': 'One Hand Sword', 'name': 'Thorn Rapier', 'tier': 3},  # Base Critical Strike Multiplier +(35)
+			{'drop': 36, 'base': 'One Hand Sword', 'name': 'Smallsword', 'tier': 4},  # Local Chance To Bleed On Hit (15)
+			{'drop': 37, 'base': 'One Hand Sword', 'name': 'Wyrmbone Rapier', 'tier': 4},  # Base Critical Strike Multiplier +(25)
+			{'drop': 40, 'base': 'One Hand Sword', 'name': 'Burnished Foil', 'tier': 4},  # Base Critical Strike Multiplier +(25)
+			{'drop': 43, 'base': 'One Hand Sword', 'name': 'Estoc', 'tier': 4},  # Base Critical Strike Multiplier +(25)
+			{'drop': 46, 'base': 'One Hand Sword', 'name': 'Serrated Foil', 'tier': 4},  # Base Critical Strike Multiplier +(25)
+			{'drop': 49, 'base': 'One Hand Sword', 'name': 'Primeval Rapier', 'tier': 4},  # Base Critical Strike Multiplier +(25)
+			{'drop': 52, 'base': 'One Hand Sword', 'name': 'Fancy Foil', 'tier': 4},  # Base Critical Strike Multiplier +(25)
+			{'drop': 55, 'base': 'One Hand Sword', 'name': 'Apex Rapier', 'tier': 3},  # Base Critical Strike Multiplier +(35)
+			{'drop': 57, 'base': 'One Hand Sword', 'name': 'Courtesan Sword', 'tier': 4},  # Local Chance To Bleed On Hit (15)
+			{'drop': 58, 'base': 'One Hand Sword', 'name': 'Dragonbone Rapier', 'tier': 4},  # Base Critical Strike Multiplier +(25)
+			{'drop': 60, 'base': 'One Hand Sword', 'name': 'Tempered Foil', 'tier': 4},  # Base Critical Strike Multiplier +(25)
+			{'drop': 62, 'base': 'One Hand Sword', 'name': 'Pecoraro', 'tier': 3},  # Base Critical Strike Multiplier +(25)
+			{'drop': 64, 'base': 'One Hand Sword', 'name': 'Spiraled Foil', 'tier': 2},  # Base Critical Strike Multiplier +(25)
+			{'drop': 66, 'base': 'One Hand Sword', 'name': 'Vaal Rapier', 'tier': 3},  # Base Critical Strike Multiplier +(25)
+			{'drop': 68, 'base': 'One Hand Sword', 'name': 'Jewelled Foil', 'tier': 1},  # Base Critical Strike Multiplier +(25)
+			{'drop': 70, 'base': 'One Hand Sword', 'name': 'Harpy Rapier', 'tier': 1},  # Base Critical Strike Multiplier +(35)
+			{'drop': 72, 'base': 'One Hand Sword', 'name': 'Dragoon Sword', 'tier': 3},  # Local Chance To Bleed On Hit (20)
 		],
 		"Dex|Melee|Str|Two|Two Hand Axe|Weapon": [
 			{'drop': 1, 'base': 'Two Hand Axe', 'name': 'Prime Cleaver', 'tier': -4},  # ?
@@ -565,7 +565,7 @@ bases = {
 			{'drop': 55, 'base': 'Boots', 'name': 'Carnal Boots', 'tier': 3},
 			{'drop': 63, 'base': 'Boots', 'name': "Assassin's Boots", 'tier': 2},
 			{'drop': 69, 'base': 'Boots', 'name': 'Murder Boots', 'tier': 2},
-			{'drop': 70, 'base': 'Boots', 'name': 'Blessed Boots', 'tier': 1},
+			{'drop': 70, 'base': 'Boots', 'name': 'Fugitive Boots', 'tier': 1},
 		],
 		"Armour|Boots|Dex|Str": [
 			{'drop': 6, 'base': 'Boots', 'name': 'Leatherscale Boots', 'tier': 4},
@@ -992,7 +992,7 @@ def findsubstrings():
 # Will match all valid flags
 # Valid flags are:
 # Bow, Two, Ranged, Dex, Claw, One, Melee, Int, Dagger, Caster, One Hand Axe, Str, One Hand Mace,
-# One Hand Sword, Sceptre, Stave, Thrusting One Hand Sword, Two Hand Axe, Two Hand Mace, Two Hand Sword,
+# One Hand Sword, Sceptre, Stave, Two Hand Axe, Two Hand Mace, Two Hand Sword,
 # Wand, Body Armour, Armour, Boots, Gloves, Helmet, Shield, Amulet, Accessory, Belt, Ring, Weapon
 # All is a special flag that chooses all categories
 # overlevel is how many levels to highlight an item after a better base starts dropping
@@ -1026,7 +1026,7 @@ def genraresleveling(flags='All', overlevel=3, maxlevel=67, alwayshighlight=('Ac
 # Will match all valid flags
 # Valid flags are:
 # Bow, Two, Ranged, Dex, Claw, One, Melee, Int, Dagger, Caster, One Hand Axe, Str, One Hand Mace,
-# One Hand Sword, Sceptre, Stave, Thrusting One Hand Sword, Two Hand Axe, Two Hand Mace, Two Hand Sword,
+# One Hand Sword, Sceptre, Stave, Two Hand Axe, Two Hand Mace, Two Hand Sword,
 # Wand, Body Armour, Armour, Boots, Gloves, Helmet, Shield, Amulet, Accessory, Belt, Ring, Weapon
 # All is a special flag that chooses all categories
 # overlevel is how many levels to show an item after a better base starts dropping
@@ -1130,7 +1130,6 @@ def genrareshighlighttiered():
 		'One Hand Mace': [-1, 83, 73, 60],
 		'One Hand Sword': [-1, 83, 73, 60],
 		'Sceptre': [-1, 84, 73, 60],
-		'Thrusting One Hand Sword': [-1, 83, 73, 60],
 		'Wand': [-1, 84, 73, 60],
 		'Bow': [-1, 83, 73, 60],
 		'Stave': [-1, 83, 73, 60],

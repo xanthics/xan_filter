@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 05/16/2021(m/d/y) 23:49:56 UTC from "Ultimatum" data
+# Created: 07/21/2021(m/d/y) 02:42:40 UTC from "Expedition" data
 
 desc = "Challenge Autogen"
 
