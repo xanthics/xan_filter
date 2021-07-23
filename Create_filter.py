@@ -261,9 +261,9 @@ Show
 
 
 if __name__ == "__main__":
-	create_always_highlight()
+#	create_always_highlight()
 	league = 'tmpstandard'
-	pricetool_ninja.scrape_ninja(league)
+#	pricetool_ninja.scrape_ninja(league)
 	# reload updated modules
 	importlib.reload(custom_challenge)
 	main(league)

@@ -1,6 +1,6 @@
 #**************************************************************
 # Welcome to xan.filter, a Python generated loot filter for PoE
-# This filter was generated for tmpstandard on 07/21/2021(m/d/y) 02:52:14 UTC
+# This filter was generated for tmpstandard on 07/23/2021(m/d/y) 20:24:26 UTC
 # The most current version of code can always be found at https://github.com/xanthics/poe_filter
 #**************************************************************
 
@@ -208,7 +208,7 @@ Show
 #challenge item
 Show
 	Class "Expedition Logbook"
-	CustomAlertSound "source_sounds/attack1.wav" 75
+	CustomAlertSound "source_sounds/attack2.wav" 75
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -217,7 +217,7 @@ Show
 #challenge item
 Show
 	Class "Trinket" "Blueprint"
-	CustomAlertSound "source_sounds/attack5.wav" 75
+	CustomAlertSound "source_sounds/attack4.wav" 75
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -227,7 +227,7 @@ Show
 Show
 	Class "Heist"
 	ItemLevel >= 83
-	CustomAlertSound "source_sounds/gethit3.wav" 20
+	CustomAlertSound "source_sounds/gethit2.wav" 20
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -489,7 +489,7 @@ Show
 Show
 	BaseType == "Violet Oil"
 	StackSize >= 10
-	CustomAlertSound "source_sounds/attack5.wav" 75
+	CustomAlertSound "source_sounds/attack6.wav" 75
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -625,9 +625,9 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Crimson Oil"
+	BaseType == "Black Oil"
 	StackSize >= 6
-	CustomAlertSound "source_sounds/attack1.wav" 75
+	CustomAlertSound "source_sounds/attack3.wav" 75
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -635,9 +635,9 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Black Oil"
+	BaseType == "Crimson Oil"
 	StackSize >= 6
-	CustomAlertSound "source_sounds/attack4.wav" 75
+	CustomAlertSound "source_sounds/attack6.wav" 75
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -774,7 +774,7 @@ Show
 Show
 	BaseType == "Opalescent Oil"
 	StackSize >= 3
-	CustomAlertSound "source_sounds/attack3.wav" 75
+	CustomAlertSound "source_sounds/attack5.wav" 75
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -837,7 +837,7 @@ Show
 Show
 	BaseType == "Silver Oil"
 	StackSize >= 2
-	CustomAlertSound "source_sounds/death4.wav" 100
+	CustomAlertSound "source_sounds/death2.wav" 100
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -857,7 +857,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Sepia Oil"
+	BaseType == "Teal Oil" "Verdant Oil"
 	StackSize >= 2
 	CustomAlertSound "source_sounds/gethit1.wav" 20
 	MinimapIcon 2 Blue Kite
@@ -867,9 +867,9 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Clear Oil" "Teal Oil" "Verdant Oil"
+	BaseType == "Azure Oil" "Indigo Oil"
 	StackSize >= 2
-	CustomAlertSound "source_sounds/gethit3.wav" 20
+	CustomAlertSound "source_sounds/gethit2.wav" 20
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -877,7 +877,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Amber Oil" "Azure Oil" "Indigo Oil"
+	BaseType == "Amber Oil" "Clear Oil" "Sepia Oil"
 	StackSize >= 2
 	CustomAlertSound "source_sounds/gethit4.wav" 20
 	MinimapIcon 2 Blue Kite
@@ -962,7 +962,7 @@ Show
 #Autogen filter rules
 Show
 	BaseType == "Tainted Oil"
-	CustomAlertSound "source_sounds/death2.wav" 100
+	CustomAlertSound "source_sounds/death3.wav" 100
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -991,8 +991,8 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Crimson Oil" "Violet Oil"
-	CustomAlertSound "source_sounds/gethit1.wav" 20
+	BaseType == "Crimson Oil" "Opalescent Oil"
+	CustomAlertSound "source_sounds/gethit2.wav" 20
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -1000,7 +1000,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Black Oil" "Opalescent Oil"
+	BaseType == "Black Oil" "Violet Oil"
 	CustomAlertSound "source_sounds/gethit3.wav" 20
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
@@ -1206,7 +1206,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Blessed Boots" "Iolite Ring"
+	BaseType == "Fugitive Boots" "Iolite Ring"
 	HasInfluence Hunter
 	ItemLevel 82
 	Rarity < Unique
@@ -1518,7 +1518,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Blessed Boots"
+	BaseType == "Fugitive Boots"
 	HasInfluence Hunter Redeemer
 	ItemLevel 83
 	Rarity < Unique
@@ -1778,7 +1778,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Blessed Boots"
+	BaseType == "Fugitive Boots"
 	HasInfluence Elder Hunter Redeemer
 	ItemLevel 84
 	Rarity < Unique
@@ -2116,7 +2116,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Blessed Boots"
+	BaseType == "Fugitive Boots"
 	HasInfluence Elder Redeemer
 	ItemLevel 85
 	Rarity < Unique
@@ -2285,7 +2285,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Blessed Boots"
+	BaseType == "Fugitive Boots"
 	HasInfluence Hunter
 	ItemLevel 85
 	Rarity < Unique
@@ -2558,7 +2558,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Astral Plate" "Blessed Boots" "Colossal Tower Shield" "Harmonic Spirit Shield" "Thorn Rapier"
+	BaseType == "Astral Plate" "Fugitive Boots" "Colossal Tower Shield" "Harmonic Spirit Shield" "Thorn Rapier"
 	HasInfluence Shaper
 	ItemLevel >= 86
 	Rarity < Unique
@@ -2649,7 +2649,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Blessed Boots"
+	BaseType == "Fugitive Boots"
 	HasInfluence Elder Hunter Redeemer
 	ItemLevel >= 86
 	Rarity < Unique
@@ -2754,944 +2754,6 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Discipline"
-	Corrupted True
-	GemLevel >= 21
-	GemQualityType Anomalous
-	Quality >= 23
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Anger" "Animate Guardian" "Arc" "Arcane Surge Support" "Archmage Support" "Arrogance Support" "Ball Lightning" "Barrage Support" "Blade Blast" "Blade Flurry" "Bonechill Support" "Cast On Critical Strike Support" "Caustic Arrow" "Combustion Support" "Concentrated Effect Support" "Cyclone" "Damage on Full Life Support" "Despair" "Efficacy Support" "Elemental Hit" "Elemental Weakness" "Essence Drain" "Fortify Support" "Freezing Pulse" "Frostbolt" "Greater Multiple Projectiles Support" "Hatred" "Herald of Ash" "Herald of Ice" "Herald of Thunder" "Hypothermia Support" "Ice Nova" "Ice Spear" "Ignite Proliferation Support" "Immolate Support" "Impale Support" "Increased Duration Support" "Infused Channelling Support" "Inspiration Support" "Less Duration Support" "Maim Support" "Multistrike Support" "Pride" "Pulverise Support" "Purity of Fire" "Purity of Ice" "Raise Spectre" "Raise Zombie" "Second Wind Support" "Slower Projectiles Support" "Sniper's Mark" "Storm Brand" "Summon Carrion Golem" "Summon Stone Golem" "Vile Toxins Support" "Vortex" "Winter Orb" "Wrath"
-	Corrupted True
-	GemLevel >= 21
-	Quality >= 23
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Added Cold Damage Support" "Arcane Cloak" "Assassin's Mark" "Ballista Totem Support" "Bane" "Berserk" "Bladefall" "Blazing Salvo" "Blood Rage" "Bloodthirst Support" "Brutality Support" "Burning Arrow" "Cast when Damage Taken Support" "Chain Support" "Chance to Bleed Support" "Close Combat Support" "Conductivity" "Controlled Destruction Support" "Convocation" "Corrupting Fever" "Creeping Frost" "Culling Strike Support" "Dash" "Deadly Ailments Support" "Determination" "Discharge" "Discipline" "Dread Banner" "Elemental Army Support" "Elemental Damage with Attacks Support" "Elemental Focus Support" "Elemental Proliferation Support" "Enduring Cry" "Energy Leech Support" "Enfeeble" "Exsanguinate" "Faster Attacks Support" "Faster Casting Support" "Feeding Frenzy Support" "Fist of War Support" "Flame Dash" "Flame Wall" "Flammability" "Flesh and Stone" "Flicker Strike" "Frost Bomb" "Frostbite" "General's Cry" "Glacial Cascade" "Greater Volley Support" "Herald of Agony" "Herald of Purity" "Hextouch Support" "High-Impact Mine Support" "Hydrosphere" "Ice Bite Support" "Ice Crash" "Ice Shot" "Increased Area of Effect Support" "Increased Critical Damage Support" "Increased Critical Strikes Support" "Intensify Support" "Item Rarity Support" "Lacerate" "Lancing Steel" "Lesser Multiple Projectiles Support" "Life Gain on Hit Support" "Lifetap Support" "Malevolence" "Meat Shield Support" "Melee Physical Damage Support" "Minion Damage Support" "Minion Life Support" "Mirage Archer Support" "Multiple Totems Support" "Nightblade Support" "Penance Brand" "Petrified Blood" "Phase Run" "Physical to Lightning Support" "Pierce Support" "Pinpoint Support" "Plague Bearer" "Power Charge On Critical Support" "Precision" "Predator Support" "Purifying Flame" "Purity of Lightning" "Rage Support" "Reap" "Ruthless Support" "Shockwave Support" "Sigil of Power" "Spell Cascade Support" "Spell Echo Support" "Spell Totem Support" "Spellslinger" "Split Arrow" "Steelskin" "Summon Chaos Golem" "Summon Flame Golem" "Summon Ice Golem" "Summon Lightning Golem" "Summon Phantasm Support" "Summon Raging Spirit" "Summon Skitterbots" "Sweep" "Swift Affliction Support" "Swift Assembly Support" "Swiftbrand Support" "Temporal Chains" "Tornado Shot" "Toxic Rain" "Trap and Mine Damage Support" "Trinity Support" "Unbound Ailments Support" "Vitality" "Volatile Dead" "Wave of Conviction" "Zealotry"
-	Corrupted True
-	GemLevel >= 21
-	Quality >= 23
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Added Lightning Damage Support" "Ancestral Protector" "Arcanist Brand" "Barrage" "Bladestorm" "Blasphemy Support" "Bone Offering" "Burning Damage Support" "Cast while Channelling Support" "Charged Mines Support" "Clarity" "Cluster Traps Support" "Cold Penetration Support" "Cold to Fire Support" "Cruelty Support" "Desecrate" "Divine Ire" "Earthshatter" "Ethereal Knives" "Faster Projectiles Support" "Fire Penetration Support" "Fireball" "Flesh Offering" "Frenzy" "Frost Blades" "Frost Shield" "Frostblink" "Generosity Support" "Grace" "Haste" "Immortal Call" "Infernal Blow" "Innervate Support" "Kinetic Blast" "Lightning Arrow" "Lightning Penetration Support" "Melee Splash Support" "Minefield Support" "Molten Shell" "Molten Strike" "Orb of Storms" "Poison Support" "Power Siphon" "Puncture" "Punishment" "Purity of Elements" "Righteous Fire" "Shield Charge" "Siege Ballista" "Soulrend" "Spark" "Splitting Steel" "Unleash Support" "Vicious Projectiles Support" "Vigilant Strike" "Void Manipulation Support" "Volley Support" "Vulnerability" "War Banner" "Wild Strike" "Withering Step" "Withering Touch Support"
-	Corrupted True
-	GemLevel >= 21
-	Quality >= 23
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Arc" "Arrogance Support" "Ball Lightning" "Dark Pact" "Discipline" "Flame Wall" "Flammability" "Flesh and Stone" "Flicker Strike" "Hatred" "Ice Nova" "Icicle Mine" "Impale Support" "Inspiration Support" "Lightning Strike" "Petrified Blood" "Power Siphon" "Siege Ballista" "Spark" "Summon Carrion Golem" "Summon Chaos Golem" "Toxic Rain" "Trinity Support" "Wrath" "Zealotry"
-	Corrupted True
-	GemLevel >= 21
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Ice Spear" "Vaal Discipline"
-	Corrupted True
-	GemLevel >= 21
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/neutral3.wav" 200
-	MinimapIcon 0 Yellow UpsideDownHouse
-	PlayEffect Yellow
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Animate Guardian" "Blade Vortex" "Blood Rage" "Dread Banner" "Flesh Offering" "Flicker Strike" "Haste" "Hypothermia Support" "Increased Area of Effect Support" "Inspiration Support" "Malevolence" "Multistrike Support" "Precision" "Pride" "Purity of Ice" "Spark" "Storm Brand" "Tornado Shot" "Toxic Rain" "Vitality"
-	Corrupted True
-	GemLevel >= 21
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Righteous Fire"
-	Corrupted True
-	GemLevel >= 21
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Ball Lightning" "Cyclone" "Vaal Righteous Fire"
-	Corrupted True
-	GemLevel >= 21
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/neutral3.wav" 200
-	MinimapIcon 0 Yellow UpsideDownHouse
-	PlayEffect Yellow
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Blade Blast" "Summon Skeletons"
-	Corrupted True
-	GemLevel >= 21
-	GemQualityType Phantasmal
-	Quality >= 20
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Anger" "Animate Guardian" "Arcane Surge Support" "Archmage Support" "Arrogance Support" "Ball Lightning" "Blade Blast" "Blade Flurry" "Caustic Arrow" "Combustion Support" "Concentrated Effect Support" "Cyclone" "Damage on Full Life Support" "Elemental Hit" "Elemental Penetration Support" "Elemental Weakness" "Freezing Pulse" "Hatred" "Herald of Ash" "Herald of Ice" "Herald of Thunder" "Hypothermia Support" "Ice Nova" "Ice Spear" "Ignite Proliferation Support" "Impale Support" "Infused Channelling Support" "Less Duration Support" "Pride" "Raise Spectre" "Raise Zombie" "Slower Projectiles Support" "Sniper's Mark" "Storm Brand" "Summon Carrion Golem" "Vaal Arc" "Vaal Burning Arrow" "Vaal Cyclone" "Vaal Discipline" "Vaal Ice Nova" "Vaal Summon Skeletons" "Winter Orb" "Wrath"
-	Corrupted True
-	GemLevel >= 21
-	Quality >= 20
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Arc" "Arcane Cloak" "Assassin's Mark" "Ballista Totem Support" "Bane" "Barrage Support" "Berserk" "Bladefall" "Blazing Salvo" "Blood Rage" "Bloodthirst Support" "Bonechill Support" "Brutality Support" "Cast On Critical Strike Support" "Cast when Damage Taken Support" "Chain Support" "Chance to Bleed Support" "Close Combat Support" "Controlled Destruction Support" "Corrupting Fever" "Creeping Frost" "Culling Strike Support" "Dash" "Despair" "Discharge" "Discipline" "Dread Banner" "Efficacy Support" "Elemental Army Support" "Elemental Damage with Attacks Support" "Elemental Focus Support" "Elemental Proliferation Support" "Enduring Cry" "Energy Leech Support" "Enfeeble" "Essence Drain" "Exsanguinate" "Faster Attacks Support" "Faster Casting Support" "Feeding Frenzy Support" "Fist of War Support" "Flame Dash" "Flame Wall" "Flammability" "Flesh and Stone" "Flicker Strike" "Fortify Support" "Frost Bomb" "Frostbite" "Frostbolt" "General's Cry" "Glacial Cascade" "Greater Multiple Projectiles Support" "Greater Volley Support" "Herald of Agony" "Herald of Purity" "Hexblast" "Hextouch Support" "High-Impact Mine Support" "Hydrosphere" "Ice Bite Support" "Ice Crash" "Ice Shot" "Increased Critical Damage Support" "Increased Critical Strikes Support" "Increased Duration Support" "Inspiration Support" "Intensify Support" "Item Rarity Support" "Lancing Steel" "Lesser Multiple Projectiles Support" "Life Gain on Hit Support" "Lifetap Support" "Maim Support" "Malevolence" "Meat Shield Support" "Melee Physical Damage Support" "Minion Life Support" "Mirage Archer Support" "Multiple Totems Support" "Multistrike Support" "Penance Brand" "Petrified Blood" "Pierce Support" "Pinpoint Support" "Plague Bearer" "Power Charge On Critical Support" "Precision" "Predator Support" "Pulverise Support" "Purifying Flame" "Purity of Fire" "Purity of Lightning" "Rage Support" "Reap" "Ruthless Support" "Second Wind Support" "Shockwave Support" "Sigil of Power" "Spell Cascade Support" "Spell Echo Support" "Spellslinger" "Split Arrow" "Steelskin" "Summon Chaos Golem" "Summon Flame Golem" "Summon Ice Golem" "Summon Lightning Golem" "Summon Phantasm Support" "Summon Raging Spirit" "Summon Skitterbots" "Summon Stone Golem" "Sweep" "Swift Affliction Support" "Swiftbrand Support" "Temporal Chains" "Tornado Shot" "Toxic Rain" "Trap and Mine Damage Support" "Trinity Support" "Vile Toxins Support" "Vitality" "Volatile Dead" "Vortex" "Wave of Conviction" "Zealotry"
-	Corrupted True
-	GemLevel >= 21
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Added Cold Damage Support" "Added Lightning Damage Support" "Ancestral Protector" "Arcanist Brand" "Barrage" "Bladestorm" "Blasphemy Support" "Bone Offering" "Burning Arrow" "Charged Mines Support" "Clarity" "Cluster Traps Support" "Cold Penetration Support" "Conductivity" "Convocation" "Cruelty Support" "Deadly Ailments Support" "Desecrate" "Divine Ire" "Earthshatter" "Ethereal Knives" "Fire Penetration Support" "Flesh Offering" "Frenzy" "Frost Blades" "Frost Shield" "Generosity Support" "Grace" "Haste" "Immortal Call" "Increased Area of Effect Support" "Infernal Blow" "Kinetic Blast" "Lacerate" "Lightning Arrow" "Lightning Penetration Support" "Minefield Support" "Minion Damage Support" "Molten Shell" "Molten Strike" "Orb of Storms" "Phase Run" "Physical to Lightning Support" "Poison Support" "Power Siphon" "Puncture" "Punishment" "Spark" "Spell Totem Support" "Splitting Steel" "Swift Assembly Support" "Unbound Ailments Support" "Unleash Support" "Vicious Projectiles Support" "Void Manipulation Support" "Vulnerability" "War Banner" "Withering Step" "Withering Touch Support"
-	Corrupted True
-	GemLevel >= 21
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Vaal Blade Vortex" "Vaal Righteous Fire"
-	Corrupted True
-	GemLevel >= 21
-	Quality >= 20
-	CustomAlertSound "source_sounds/neutral3.wav" 200
-	MinimapIcon 0 Yellow UpsideDownHouse
-	PlayEffect Yellow
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Discipline"
-	Corrupted True
-	GemLevel >= 21
-	GemQualityType Anomalous
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Righteous Fire"
-	Corrupted True
-	GemLevel >= 21
-	GemQualityType Divergent
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Anger" "Animate Guardian" "Arc" "Discipline" "Hatred" "Hypothermia Support" "Malevolence" "Precision" "Purity of Fire" "Purity of Ice" "Raise Spectre" "Vitality" "Wrath" "Zealotry"
-	Corrupted True
-	GemLevel >= 21
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Arrogance Support" "Cast when Damage Taken Support" "Clarity" "Combustion Support" "Concentrated Effect Support" "Cyclone" "Determination" "Elemental Hit" "Elemental Weakness" "Grace" "Greater Multiple Projectiles Support" "Herald of Ice" "Herald of Purity" "Herald of Thunder" "Hexblast" "Ice Nova" "Ice Spear" "Inspiration Support" "Multistrike Support" "Purity of Lightning" "Summon Phantasm Support" "Toxic Rain"
-	Corrupted True
-	GemLevel >= 21
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Ball Lightning" "Ice Nova" "Ice Spear" "Summon Ice Golem" "Vaal Discipline" "Vaal Ice Nova"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Anomalous
-	Quality >= 23
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Arc" "Blade Blast" "Dark Pact" "Discipline" "Hatred" "Impale Support" "Lightning Strike" "Petrified Blood" "Scourge Arrow" "Siege Ballista" "Spark" "Summon Carrion Golem" "Volatile Dead" "Vortex" "Wrath" "Zealotry"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Anomalous
-	Quality >= 23
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Exsanguinate" "Flame Wall" "Icicle Mine" "Power Siphon" "Raise Spectre" "Toxic Rain"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Anomalous
-	Quality >= 23
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Animate Guardian" "Inspiration Support"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Divergent
-	Quality >= 23
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Arc" "Burning Arrow" "Herald of Purity" "Ice Spear" "Ice Trap" "Malevolence" "Precision" "Pride" "Righteous Fire" "Storm Brand" "Summon Carrion Golem" "Volatile Dead"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Divergent
-	Quality >= 23
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Exsanguinate" "Haste" "Spark"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Divergent
-	Quality >= 23
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Toxic Rain"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Phantasmal
-	Quality >= 23
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Summon Skeletons" "Winter Orb"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Phantasmal
-	Quality >= 23
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Blade Blast"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Phantasmal
-	Quality >= 23
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Vaal Burning Arrow" "Vaal Discipline" "Vaal Righteous Fire" "Vaal Summon Skeletons"
-	Corrupted True
-	GemLevel >= 20
-	Quality >= 23
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Anger" "Arcane Cloak" "Arcane Surge Support" "Arrogance Support" "Barrage Support" "Berserk" "Blood Rage" "Bonechill Support" "Cast On Critical Strike Support" "Cast when Damage Taken Support" "Creeping Frost" "Culling Strike Support" "Damage on Full Life Support" "Despair" "Determination" "Elemental Proliferation Support" "Elemental Weakness" "Faster Attacks Support" "Fortify Support" "Frost Bomb" "Frostbite" "Frostbolt" "Greater Multiple Projectiles Support" "Greater Volley Support" "Herald of Ash" "Hextouch Support" "Hydrosphere" "Ignite Proliferation Support" "Immolate Support" "Increased Critical Strikes Support" "Increased Duration Support" "Infused Channelling Support" "Inspiration Support" "Item Rarity Support" "Less Duration Support" "Meat Shield Support" "Minion Life Support" "Power Charge On Critical Support" "Precision" "Predator Support" "Pulverise Support" "Purity of Fire" "Second Wind Support" "Sigil of Power" "Slower Projectiles Support" "Sniper's Mark" "Spell Echo Support" "Swiftbrand Support" "Vaal Arc" "Vaal Blade Vortex" "Vaal Cyclone" "Vaal Ice Nova" "Vitality" "Winter Orb"
-	Corrupted True
-	GemLevel >= 20
-	Quality >= 23
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Added Cold Damage Support" "Ancestral Protector" "Arcanist Brand" "Archmage Support" "Assassin's Mark" "Ball Lightning" "Ballista Totem Support" "Barrage" "Blade Flurry" "Bloodthirst Support" "Bone Offering" "Brutality Support" "Chain Support" "Clarity" "Close Combat Support" "Combustion Support" "Concentrated Effect Support" "Conductivity" "Controlled Destruction Support" "Convocation" "Cyclone" "Dash" "Desecrate" "Dread Banner" "Efficacy Support" "Elemental Army Support" "Elemental Damage with Attacks Support" "Elemental Focus Support" "Enduring Cry" "Energy Leech Support" "Enfeeble" "Faster Casting Support" "Faster Projectiles Support" "Feeding Frenzy Support" "Fist of War Support" "Flame Dash" "Flammability" "Flesh and Stone" "Flicker Strike" "Frenzy" "General's Cry" "Grace" "Hatred" "Herald of Ice" "Herald of Purity" "Herald of Thunder" "High-Impact Mine Support" "Hypothermia Support" "Ice Bite Support" "Ice Crash" "Ice Spear" "Immortal Call" "Impale Support" "Increased Area of Effect Support" "Increased Critical Damage Support" "Innervate Support" "Intensify Support" "Lesser Multiple Projectiles Support" "Life Gain on Hit Support" "Lifetap Support" "Maim Support" "Malevolence" "Melee Physical Damage Support" "Minefield Support" "Mirage Archer Support" "Molten Shell" "Multiple Totems Support" "Multistrike Support" "Nightblade Support" "Petrified Blood" "Phase Run" "Physical to Lightning Support" "Pierce Support" "Poison Support" "Pride" "Punishment" "Purity of Elements" "Purity of Ice" "Purity of Lightning" "Rage Support" "Raise Zombie" "Ruthless Support" "Shockwave Support" "Spell Cascade Support" "Spell Totem Support" "Steelskin" "Summon Chaos Golem" "Summon Flame Golem" "Summon Ice Golem" "Summon Lightning Golem" "Summon Skitterbots" "Summon Stone Golem" "Sweep" "Swift Affliction Support" "Temporal Chains" "Tornado Shot" "Trap and Mine Damage Support" "Trinity Support" "Vigilant Strike" "Vile Toxins Support" "War Banner" "Wave of Conviction" "Withering Step" "Withering Touch Support" "Wrath" "Zealotry"
-	Corrupted True
-	GemLevel >= 20
-	Quality >= 23
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Arcane Surge Support" "Blood Rage" "Clarity" "Concentrated Effect Support" "Discipline" "Dread Banner" "Feeding Frenzy Support" "Flesh and Stone" "Fortify Support" "Herald of Thunder" "Ice Nova" "Ice Spear" "Infernal Blow" "Inspiration Support" "Kinetic Blast" "Malevolence" "Mirage Archer Support" "Precision" "Second Wind Support" "Sigil of Power" "Spark" "Summon Chaos Golem" "Summon Flame Golem" "Summon Ice Golem" "Summon Stone Golem" "Trinity Support" "Vitality" "War Banner"
-	Corrupted False
-	GemLevel >= 20
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Anger" "Arc" "Arcane Cloak" "Arcanist Brand" "Archmage Support" "Arctic Armour" "Armageddon Brand" "Arrogance Support" "Assassin's Mark" "Ball Lightning" "Bane" "Berserk" "Blade Blast" "Bladefall" "Blight" "Blind Support" "Bloodlust Support" "Bone Offering" "Bonechill Support" "Brutality Support" "Cast when Damage Taken Support" "Caustic Arrow" "Chance to Bleed Support" "Charged Mines Support" "Cold Snap" "Cold to Fire Support" "Combustion Support" "Conductivity" "Contagion" "Controlled Destruction Support" "Convocation" "Creeping Frost" "Cruelty Support" "Culling Strike Support" "Cyclone" "Dark Pact" "Dash" "Despair" "Determination" "Divine Ire" "Efficacy Support" "Elemental Army Support" "Elemental Damage with Attacks Support" "Elemental Focus Support" "Elemental Proliferation Support" "Endurance Charge on Melee Stun Support" "Enduring Cry" "Energy Leech Support" "Essence Drain" "Ethereal Knives" "Exsanguinate" "Fire Penetration Support" "Firestorm" "Fist of War Support" "Flame Dash" "Flame Wall" "Flammability" "Flesh Offering" "Flicker Strike" "Fork Support" "Freezing Pulse" "Frenzy" "Frost Shield" "General's Cry" "Glacial Cascade" "Grace" "Greater Multiple Projectiles Support" "Haste" "Hatred" "Herald of Ash" "Herald of Ice" "Herald of Purity" "Hypothermia Support" "Ice Bite Support" "Icicle Mine" "Immortal Call" "Impale Support" "Increased Area of Effect Support" "Increased Critical Damage Support" "Increased Critical Strikes Support" "Increased Duration Support" "Infused Channelling Support" "Intensify Support" "Intimidating Cry" "Iron Will Support" "Lesser Multiple Projectiles Support" "Life Gain on Hit Support" "Lightning Arrow" "Lightning Strike" "Maim Support" "Meat Shield Support" "Melee Physical Damage Support" "Melee Splash Support" "Minion Damage Support" "Minion Life Support" "Molten Shell" "Perforate" "Petrified Blood" "Phase Run" "Physical to Lightning Support" "Pierce Support" "Pinpoint Support" "Plague Bearer" "Poison Support" "Power Charge On Critical Support" "Power Siphon" "Predator Support" "Pride" "Pulverise Support" "Purity of Ice" "Purity of Lightning" "Raise Spectre" "Raise Zombie" "Rallying Cry" "Reap" "Righteous Fire" "Ruthless Support" "Scorching Ray" "Seismic Cry" "Siege Ballista" "Slower Projectiles Support" "Smoke Mine" "Spell Echo Support" "Spellslinger" "Spirit Offering" "Steelskin" "Storm Brand" "Storm Burst" "Summon Carrion Golem" "Summon Holy Relic" "Summon Lightning Golem" "Summon Skeletons" "Summon Skitterbots" "Swift Affliction Support" "Swiftbrand Support" "Temporal Chains" "Tornado Shot" "Toxic Rain" "Trap and Mine Damage Support" "Unbound Ailments Support" "Unleash Support" "Urgent Orders Support" "Vicious Projectiles Support" "Vile Toxins Support" "Void Sphere" "Vortex" "Vulnerability" "Warlord's Mark" "Wave of Conviction" "Withering Step" "Withering Touch Support" "Wrath" "Zealotry"
-	Corrupted False
-	GemLevel >= 20
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Animate Guardian" "Minion Speed Support" "Void Manipulation Support"
-	Corrupted False
-	GemLevel >= 20
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Additional Accuracy Support" "Anger" "Animate Guardian" "Arcane Cloak" "Ball Lightning" "Bonechill Support" "Cast when Damage Taken Support" "Creeping Frost" "Cyclone" "Dash" "Determination" "Discipline" "Elemental Damage with Attacks Support" "Hypothermia Support" "Impale Support" "Power Charge On Critical Support" "Pulverise Support" "Purity of Fire" "Purity of Ice" "Righteous Fire" "Smoke Mine" "Summon Skitterbots" "Tempest Shield" "Vortex" "Zealotry"
-	Corrupted False
-	GemLevel >= 20
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Arc" "Arcane Surge Support" "Arctic Armour" "Arrogance Support" "Assassin's Mark" "Barrage Support" "Berserk" "Blade Vortex" "Bladefall" "Bladestorm" "Blazing Salvo" "Blood Rage" "Bloodlust Support" "Bone Offering" "Brutality Support" "Burning Arrow" "Burning Damage Support" "Cast On Critical Strike Support" "Cast when Stunned Support" "Chance to Bleed Support" "Charged Mines Support" "Clarity" "Close Combat Support" "Cluster Traps Support" "Cobra Lash" "Combustion Support" "Concentrated Effect Support" "Conductivity" "Controlled Destruction Support" "Corrupting Fever" "Crackling Lance" "Cremation" "Culling Strike Support" "Damage on Full Life Support" "Deadly Ailments Support" "Desecrate" "Despair" "Detonate Dead" "Dread Banner" "Efficacy Support" "Enduring Cry" "Energy Leech Support" "Enfeeble" "Explosive Arrow" "Exsanguinate" "Faster Projectiles Support" "Feeding Frenzy Support" "Fire Penetration Support" "Flame Surge" "Flammability" "Flesh Offering" "Flesh and Stone" "Flicker Strike" "Fortify Support" "Frost Bomb" "Frost Shield" "Frostbite" "Frostblink" "Frostbolt" "Grace" "Haste" "Hatred" "Herald of Agony" "Herald of Ash" "Herald of Purity" "Hydrosphere" "Ice Nova" "Ice Shot" "Ice Spear" "Ice Trap" "Immortal Call" "Increased Area of Effect Support" "Increased Critical Damage Support" "Increased Duration Support" "Infernal Blow" "Infernal Legion Support" "Infused Channelling Support" "Innervate Support" "Inspiration Support" "Intimidating Cry" "Kinetic Blast" "Less Duration Support" "Life Leech Support" "Maim Support" "Malevolence" "Melee Physical Damage Support" "Melee Splash Support" "Minion Life Support" "Mirage Archer Support" "Multiple Totems Support" "Multistrike Support" "Onslaught Support" "Orb of Storms" "Phase Run" "Precision" "Predator Support" "Pride" "Purifying Flame" "Purity of Lightning" "Raise Spectre" "Reap" "Riposte" "Scourge Arrow" "Second Wind Support" "Sigil of Power" "Spark" "Spell Echo Support" "Spell Totem Support" "Split Arrow" "Steelskin" "Storm Brand" "Storm Burst" "Storm Call" "Summon Carrion Golem" "Summon Chaos Golem" "Summon Holy Relic" "Summon Stone Golem" "Sweep" "Swiftbrand Support" "Tornado Shot" "Toxic Rain" "Trinity Support" "Vile Toxins Support" "Vitality" "Void Manipulation Support" "Vulnerability" "Wave of Conviction" "Winter Orb" "Wither" "Withering Step" "Withering Touch Support"
-	Corrupted False
-	GemLevel >= 20
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Chain Support" "Generosity Support" "Soulrend"
-	Corrupted False
-	GemLevel >= 20
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Cremation" "Desecrate" "Flame Wall" "Frostbolt" "Leap Slam" "Smite" "Wave of Conviction" "Wild Strike"
-	Corrupted False
-	GemLevel >= 20
-	GemQualityType Phantasmal
-	Quality >= 20
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Ancestral Protector" "Ancestral Warchief" "Blade Blast" "Blade Vortex" "Blink Arrow" "Crackling Lance" "Creeping Frost" "Cyclone" "Frost Bomb" "Ice Spear" "Lightning Arrow" "Lightning Strike" "Reckoning" "Sigil of Power" "Storm Brand" "Summon Skeletons" "Vortex" "Winter Orb"
-	Corrupted False
-	GemLevel >= 20
-	GemQualityType Phantasmal
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Anger" "Arc" "Arrogance Support" "Ball Lightning" "Barrage Support" "Block Chance Reduction Support" "Blood Rage" "Bonechill Support" "Burning Arrow" "Cast On Critical Strike Support" "Cast when Damage Taken Support" "Concentrated Effect Support" "Creeping Frost" "Cyclone" "Damage on Full Life Support" "Discipline" "Elemental Army Support" "Elemental Hit" "Elemental Penetration Support" "Elemental Proliferation Support" "Elemental Weakness" "Frost Bomb" "Frostbite" "Frostbolt" "Greater Multiple Projectiles Support" "Greater Volley Support" "Haste" "Hatred" "Herald of Ice" "Hextouch Support" "Ice Nova" "Ice Spear" "Ignite Proliferation Support" "Immolate Support" "Impending Doom Support" "Increased Critical Strikes Support" "Increased Duration Support" "Infused Channelling Support" "Inspiration Support" "Less Duration Support" "Power Charge On Critical Support" "Precision" "Righteous Fire" "Sigil of Power" "Slower Projectiles Support" "Sniper's Mark" "Summon Skeletons" "Swiftbrand Support" "Winter Orb"
-	Corrupted False
-	GemLevel >= 20
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Added Cold Damage Support" "Ancestral Protector" "Ancestral Warchief" "Animate Guardian" "Arcane Cloak" "Arcane Surge Support" "Arcanist Brand" "Archmage Support" "Assassin's Mark" "Ballista Totem Support" "Barrage" "Berserk" "Blade Blast" "Blade Flurry" "Blade Vortex" "Blight" "Bloodthirst Support" "Cast when Stunned Support" "Caustic Arrow" "Chain Support" "Clarity" "Close Combat Support" "Combustion Support" "Conductivity" "Controlled Destruction Support" "Convocation" "Culling Strike Support" "Dash" "Despair" "Determination" "Double Strike" "Dread Banner" "Earthquake" "Elemental Damage with Attacks Support" "Elemental Focus Support" "Enduring Cry" "Energy Leech Support" "Enfeeble" "Essence Drain" "Exsanguinate" "Faster Attacks Support" "Faster Casting Support" "Faster Projectiles Support" "Feeding Frenzy Support" "Fist of War Support" "Flame Dash" "Flammability" "Flesh and Stone" "Flicker Strike" "Fortify Support" "Freezing Pulse" "Frost Shield" "General's Cry" "Grace" "Ground Slam" "Herald of Ash" "Herald of Purity" "Herald of Thunder" "Hexblast" "High-Impact Mine Support" "Hydrosphere" "Hypothermia Support" "Ice Bite Support" "Ice Crash" "Immortal Call" "Impale Support" "Increased Area of Effect Support" "Increased Critical Damage Support" "Infernal Blow" "Innervate Support" "Intensify Support" "Item Rarity Support" "Lancing Steel" "Lesser Multiple Projectiles Support" "Life Gain on Hit Support" "Lifetap Support" "Lightning Strike" "Maim Support" "Malevolence" "Meat Shield Support" "Minefield Support" "Minion Life Support" "Mirage Archer Support" "Molten Shell" "Multiple Totems Support" "Multistrike Support" "Nightblade Support" "Petrified Blood" "Phase Run" "Physical to Lightning Support" "Pierce Support" "Pinpoint Support" "Power Siphon" "Predator Support" "Pride" "Pulverise Support" "Punishment" "Purifying Flame" "Purity of Elements" "Purity of Fire" "Purity of Ice" "Purity of Lightning" "Rage Support" "Raise Spectre" "Raise Zombie" "Ruthless Support" "Second Wind Support" "Shield Charge" "Shockwave Support" "Spark" "Spell Cascade Support" "Spell Echo Support" "Spell Totem Support" "Steelskin" "Storm Brand" "Summon Carrion Golem" "Summon Chaos Golem" "Summon Flame Golem" "Summon Ice Golem" "Summon Lightning Golem" "Summon Skitterbots" "Sweep" "Swift Affliction Support" "Temporal Chains" "Tornado Shot" "Toxic Rain" "Trinity Support" "Vengeance" "Vigilant Strike" "Vile Toxins Support" "Vitality" "Vortex" "War Banner" "Wave of Conviction" "Wrath" "Zealotry"
-	Corrupted False
-	GemLevel >= 20
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Arcane Surge Support" "Cast when Damage Taken Support" "Concentrated Effect Support" "Ice Spear" "Inspiration Support" "Kinetic Blast" "Malevolence" "Mirage Archer Support" "Second Wind Support" "Summon Chaos Golem" "Summon Stone Golem" "Trinity Support" "Vaal Discipline" "Vaal Lightning Strike"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Anger" "Animate Weapon" "Arcane Cloak" "Archmage Support" "Arctic Armour" "Arrogance Support" "Assassin's Mark" "Ball Lightning" "Berserk" "Bloodthirst Support" "Bone Offering" "Bonechill Support" "Brutality Support" "Charged Mines Support" "Clarity" "Combustion Support" "Conductivity" "Convocation" "Corrupting Fever" "Cruelty Support" "Cyclone" "Damage on Full Life Support" "Dash" "Deadly Ailments Support" "Determination" "Efficacy Support" "Elemental Focus Support" "Elemental Proliferation Support" "Enduring Cry" "Firestorm" "Flame Dash" "Flammability" "Flesh and Stone" "Fork Support" "Frenzy" "Frost Blades" "Glacial Cascade" "Greater Multiple Projectiles Support" "Herald of Ice" "Herald of Purity" "Herald of Thunder" "Hypothermia Support" "Ice Bite Support" "Ice Nova" "Immortal Call" "Impale Support" "Increased Area of Effect Support" "Increased Critical Strikes Support" "Infused Channelling Support" "Intensify Support" "Lightning Strike" "Maim Support" "Meat Shield Support" "Minion Damage Support" "Petrified Blood" "Physical to Lightning Support" "Pierce Support" "Plague Bearer" "Power Charge On Critical Support" "Predator Support" "Pride" "Pulverise Support" "Purity of Fire" "Purity of Ice" "Purity of Lightning" "Ruthless Support" "Scourge Arrow" "Seismic Cry" "Sigil of Power" "Smoke Mine" "Spark" "Spell Echo Support" "Spellslinger" "Steelskin" "Summon Carrion Golem" "Summon Flame Golem" "Summon Ice Golem" "Summon Lightning Golem" "Tornado Shot" "Unleash Support" "Vaal Arc" "Vaal Clarity" "Vaal Cyclone" "Vaal Detonate Dead" "Vaal Ice Nova" "Vaal Impurity of Fire" "Vaal Impurity of Ice" "Vaal Impurity of Lightning" "Vaal Spark" "Vulnerability" "Warlord's Mark" "Wave of Conviction" "Withering Step" "Withering Touch Support" "Wrath"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Animate Guardian" "Arc" "Armageddon Brand" "Bane" "Blade Blast" "Bloodlust Support" "Caustic Arrow" "Dark Pact" "Despair" "Detonate Dead" "Discipline" "Elemental Damage with Attacks Support" "Elemental Hit" "Ethereal Knives" "Exsanguinate" "Flicker Strike" "Freezing Pulse" "Hatred" "Lacerate" "Molten Shell" "Power Siphon" "Raise Spectre" "Raise Zombie" "Reap" "Righteous Fire" "Siege Ballista" "Storm Brand" "Summon Skitterbots" "Swift Affliction Support" "Trap and Mine Damage Support" "Vaal Power Siphon" "Void Manipulation Support" "Volatile Dead" "Vortex" "Winter Orb" "Zealotry"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Animate Guardian" "Arcane Cloak" "Ball Lightning" "Bonechill Support" "Cyclone" "Hypothermia Support" "Vaal Burning Arrow" "Vaal Discipline" "Vaal Haste" "Vaal Righteous Fire"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Additional Accuracy Support" "Arcane Surge Support" "Arrogance Support" "Bane" "Barrage" "Blood Rage" "Brutality Support" "Cast On Critical Strike Support" "Chain Support" "Chance to Bleed Support" "Charged Mines Support" "Combustion Support" "Controlled Destruction Support" "Corrupting Fever" "Cremation" "Culling Strike Support" "Damage on Full Life Support" "Detonate Dead" "Discipline" "Dread Banner" "Energy Leech Support" "Faster Projectiles Support" "Flesh Offering" "Flesh and Stone" "Flicker Strike" "Fortify Support" "Frost Bomb" "Frostbite" "Frostblink" "Frostbolt" "Hatred" "Herald of Agony" "Herald of Ice" "Hydrosphere" "Ice Shot" "Ice Spear" "Impale Support" "Increased Area of Effect Support" "Innervate Support" "Inspiration Support" "Malevolence" "Melee Physical Damage Support" "Melee Splash Support" "Mirage Archer Support" "Multiple Totems Support" "Multistrike Support" "Onslaught Support" "Plague Bearer" "Precision" "Predator Support" "Pride" "Purifying Flame" "Purity of Ice" "Raise Spectre" "Righteous Fire" "Ruthless Support" "Scourge Arrow" "Steelskin" "Storm Burst" "Swiftbrand Support" "Tornado Shot" "Trinity Support" "Vaal Arc" "Vaal Clarity" "Vaal Cyclone" "Vaal Ice Nova" "Vaal Impurity of Fire" "Vaal Impurity of Ice" "Vaal Spark" "Vile Toxins Support" "Vitality" "Volatile Dead" "Vortex" "Vulnerability" "Wave of Conviction"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Arc" "Blade Vortex" "Bladestorm" "Blazing Salvo" "Burning Arrow" "Caustic Arrow" "Deadly Ailments Support" "Elemental Hit" "Explosive Arrow" "Explosive Trap" "Exsanguinate" "Flammability" "Glacial Cascade" "Haste" "Herald of Purity" "Ice Nova" "Ice Trap" "Incinerate" "Kinetic Blast" "Purity of Lightning" "Raise Zombie" "Reap" "Spark" "Split Arrow" "Storm Brand" "Summon Carrion Golem" "Summon Chaos Golem" "Summon Holy Relic" "Summon Phantasm Support" "Summon Stone Golem" "Vaal Impurity of Lightning"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Frostbolt" "Leap Slam" "Smite" "Toxic Rain" "Vaal Summon Skeletons"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Phantasmal
-	Quality >= 20
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Ancestral Protector" "Crackling Lance" "Creeping Frost" "Cyclone" "Dominating Blow" "Flame Wall" "Frost Bomb" "Lightning Arrow" "Raise Zombie" "Seismic Cry" "Storm Brand" "Summon Skeletons" "Winter Orb"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Phantasmal
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Discharge" "Ice Spear" "Vaal Cyclone" "Vortex"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Phantasmal
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Vaal Ancestral Warchief" "Vaal Grace" "Vaal Haste"
-	Corrupted True
-	GemLevel >= 20
-	Quality >= 20
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Barrage Support" "Bonechill Support" "Cast On Critical Strike Support" "Cast when Damage Taken Support" "Creeping Frost" "Elemental Penetration Support" "Elemental Proliferation Support" "Frost Bomb" "Greater Multiple Projectiles Support" "Ignite Proliferation Support" "Immolate Support" "Increased Critical Strikes Support" "Increased Duration Support" "Less Duration Support" "Power Charge On Critical Support" "Slower Projectiles Support" "Sniper's Mark" "Vaal Blight" "Vaal Burning Arrow" "Vaal Cold Snap" "Vaal Detonate Dead" "Vaal Discipline" "Vaal Double Strike" "Vaal Earthquake" "Vaal Flameblast" "Vaal Ground Slam" "Vaal Lightning Strike" "Vaal Molten Shell" "Vaal Reave" "Vaal Righteous Fire" "Vaal Spark" "Vaal Spectral Throw" "Vaal Storm Call"
-	Corrupted True
-	GemLevel >= 20
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Ancestral Protector" "Anger" "Arcane Cloak" "Arcane Surge Support" "Arrogance Support" "Assassin's Mark" "Ballista Totem Support" "Berserk" "Blood Rage" "Bloodthirst Support" "Chain Support" "Clarity" "Close Combat Support" "Combustion Support" "Concentrated Effect Support" "Conductivity" "Convocation" "Culling Strike Support" "Damage on Full Life Support" "Dash" "Despair" "Determination" "Dread Banner" "Elemental Army Support" "Elemental Damage with Attacks Support" "Elemental Weakness" "Enduring Cry" "Energy Leech Support" "Enfeeble" "Faster Attacks Support" "Faster Casting Support" "Feeding Frenzy Support" "Fist of War Support" "Flesh and Stone" "Fortify Support" "Frostbite" "Frostbolt" "Greater Volley Support" "Hextouch Support" "High-Impact Mine Support" "Hydrosphere" "Hypothermia Support" "Ice Bite Support" "Ice Crash" "Immortal Call" "Increased Critical Damage Support" "Infused Channelling Support" "Inspiration Support" "Item Rarity Support" "Lesser Multiple Projectiles Support" "Life Gain on Hit Support" "Lifetap Support" "Maim Support" "Malevolence" "Meat Shield Support" "Minion Life Support" "Mirage Archer Support" "Molten Shell" "Multiple Totems Support" "Multistrike Support" "Petrified Blood" "Phase Run" "Physical to Lightning Support" "Pierce Support" "Pinpoint Support" "Precision" "Predator Support" "Pulverise Support" "Purity of Fire" "Purity of Ice" "Purity of Lightning" "Rage Support" "Ruthless Support" "Second Wind Support" "Shockwave Support" "Sigil of Power" "Spell Cascade Support" "Spell Echo Support" "Spell Totem Support" "Steelskin" "Summon Ice Golem" "Summon Lightning Golem" "Summon Skitterbots" "Sweep" "Swiftbrand Support" "Temporal Chains" "Trinity Support" "Vaal Arc" "Vaal Blade Vortex" "Vaal Clarity" "Vaal Fireball" "Vaal Impurity of Fire" "Vaal Lightning Trap" "Vaal Power Siphon" "Vaal Rain of Arrows" "Vaal Summon Skeletons" "Vigilant Strike" "Vile Toxins Support" "Vitality" "Wave of Conviction" "Winter Orb" "Wrath" "Zealotry"
-	Corrupted True
-	GemLevel >= 20
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Blade Blast"
-	Corrupted False
-	GemLevel >= 20
-	GemQualityType Anomalous
-	Quality >= 0
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Arc" "Arcane Cloak" "Ball Lightning" "Barrage Support" "Determination" "Divine Ire" "Elemental Focus Support" "Hatred" "Impale Support" "Raise Spectre" "Summon Carrion Golem" "Summon Skitterbots" "Wrath" "Zealotry"
-	Corrupted False
-	GemLevel >= 20
-	GemQualityType Anomalous
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Arctic Armour"
-	Corrupted False
-	GemLevel >= 20
-	GemQualityType Anomalous
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Blood Rage" "Flesh Offering" "Ice Spear" "Inspiration Support" "Malevolence" "Precision" "Pride" "Spark"
-	Corrupted False
-	GemLevel >= 20
-	GemQualityType Divergent
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Toxic Rain"
-	Corrupted False
-	GemLevel >= 20
-	GemQualityType Divergent
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Elemental Penetration Support"
-	Corrupted False
-	GemLevel >= 20
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Block Chance Reduction Support" "Cast On Critical Strike Support" "Greater Multiple Projectiles Support"
-	Corrupted False
-	GemLevel >= 20
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Ice Spear"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Anomalous
-	Quality >= 0
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Arrogance Support" "Assassin's Mark" "Dash" "Efficacy Support" "Flesh and Stone" "Hypothermia Support" "Ice Nova" "Infused Channelling Support" "Inspiration Support" "Mirage Archer Support" "Ruthless Support" "Spell Echo Support" "Summon Chaos Golem" "Summon Flame Golem" "Summon Ice Golem" "Summon Lightning Golem" "Summon Stone Golem" "Trinity Support" "Vaal Discipline" "Withering Step" "Wrath"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Anomalous
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Arcane Cloak" "Blade Blast" "Combustion Support" "Dark Pact" "Discipline" "Enduring Cry" "Flammability" "Hatred" "Herald of Ice" "Herald of Purity" "Impale Support" "Lightning Strike" "Power Siphon" "Pulverise Support" "Siege Ballista" "Spark" "Steelskin" "Summon Carrion Golem" "Summon Skitterbots" "Vaal Ice Nova" "Vortex" "Zealotry"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Anomalous
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Arcane Cloak" "Ball Lightning" "Cyclone" "Vaal Haste" "Vaal Righteous Fire"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Divergent
-	Quality >= 0
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Animate Guardian" "Arcane Surge Support" "Bane" "Discipline" "Frost Bomb" "Hexblast" "Hypothermia Support" "Ice Spear" "Impale Support" "Inspiration Support" "Mirage Archer Support" "Multistrike Support" "Righteous Fire" "Vitality"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Divergent
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Barrage" "Blood Rage" "Bone Offering" "Burning Arrow" "Dread Banner" "Flesh Offering" "Flicker Strike" "Ice Trap" "Malevolence" "Precision" "Pride" "Purifying Flame" "Summon Carrion Golem" "Swiftbrand Support" "Tornado Shot" "Volatile Dead"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Divergent
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Frostbolt"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Phantasmal
-	Quality >= 0
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Frost Bomb" "Toxic Rain"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Phantasmal
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Winter Orb"
-	Corrupted True
-	GemLevel >= 20
-	GemQualityType Phantasmal
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Elemental Penetration Support" "Vaal Haste"
-	Corrupted True
-	GemLevel >= 20
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Greater Multiple Projectiles Support" "Vaal Ancestral Warchief" "Vaal Discipline" "Vaal Grace" "Vaal Molten Shell" "Vaal Righteous Fire"
-	Corrupted True
-	GemLevel >= 20
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
 	Prophecy == "Fated Connections" "Trash to Treasure"
 	CustomAlertSound "source_sounds/expl_2.wav" 175
 	MinimapIcon 0 Green Pentagon
@@ -3724,996 +2786,6 @@ Show
 	Prophecy == "A Regal Death" "A Valuable Combination" "Erased from Memory" "Forceful Exorcism" "Gilded Within" "Lasting Impressions" "Rebirth" "The Brothers of Necromancy" "The Brutal Enforcer" "The Corrupt" "The Cursed Choir" "The Hungering Swarm" "The Invader" "The Lady in Black" "The Prison Key" "The Queen's Vaults" "The Wealthy Exile" "Vaal Invasion"
 	SetBackgroundColor 0 0 0 220
 	SetFontSize 25
-
-#Autogen filter rules
-Show
-	BaseType == "Arcane Surge Support" "Mirage Archer Support"
-	Corrupted False
-	GemLevel >= 19
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Arrogance Support" "Cast when Damage Taken Support" "Concentrated Effect Support" "Flame Wall" "Flesh and Stone" "Frostbolt" "Hatred" "Hypothermia Support" "Spark" "Spell Echo Support" "Tornado Shot" "Trinity Support" "Wrath"
-	Corrupted False
-	GemLevel >= 19
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Ancestral Warchief" "Archmage Support" "Arctic Armour" "Brutality Support" "Combustion Support" "Enduring Cry" "Flicker Strike" "Greater Volley Support" "Herald of Agony" "Herald of Ash" "Herald of Ice" "Herald of Purity" "Ice Bite Support" "Increased Critical Strikes Support" "Kinetic Bolt" "Lacerate" "Minion Damage Support" "Multiple Totems Support" "Physical to Lightning Support" "Pierce Support" "Seismic Cry" "Slower Projectiles Support" "Steelskin" "Unbound Ailments Support" "Vicious Projectiles Support" "Withering Touch Support"
-	Corrupted False
-	GemLevel >= 19
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Arcane Cloak" "Determination" "Hypothermia Support" "Urgent Orders Support"
-	Corrupted False
-	GemLevel >= 19
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Arcane Surge Support" "Clarity" "Combustion Support" "Fire Penetration Support" "Inspiration Support" "Multistrike Support" "Plague Bearer" "Second Wind Support" "Trinity Support" "Vitality" "Zealotry"
-	Corrupted False
-	GemLevel >= 19
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Ancestral Call Support" "Ancestral Protector" "Archmage Support" "Arrogance Support" "Blade Blast" "Chain Hook" "Culling Strike Support" "Dread Banner" "Flame Dash" "Flesh Offering" "Flicker Strike" "Ice Nova" "Infused Channelling Support" "Less Duration Support" "Malevolence" "Minefield Support" "Pierce Support" "Ruthless Support" "Sigil of Power" "Spark" "Storm Burst" "Summon Phantasm Support" "Swift Affliction Support" "Swiftbrand Support" "Winter Orb" "Wither" "Withering Touch Support"
-	Corrupted False
-	GemLevel >= 19
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Frostbolt" "Toxic Rain"
-	Corrupted False
-	GemLevel >= 19
-	GemQualityType Phantasmal
-	Quality >= 20
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Haste"
-	Corrupted False
-	GemLevel >= 19
-	GemQualityType Phantasmal
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Animate Weapon" "Decoy Totem" "Ice Nova" "Static Strike" "Tectonic Slam"
-	Corrupted False
-	GemLevel >= 19
-	GemQualityType Phantasmal
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Inspiration Support"
-	Corrupted False
-	GemLevel >= 19
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Summon Chaos Golem"
-	Corrupted False
-	GemLevel >= 19
-	GemQualityType Anomalous
-	Quality >= 0
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Summon Carrion Golem"
-	Corrupted False
-	GemLevel >= 19
-	GemQualityType Anomalous
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Wave of Conviction"
-	Corrupted False
-	GemLevel >= 19
-	GemQualityType Divergent
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Ball Lightning" "Maim Support" "Melee Physical Damage Support" "Power Siphon"
-	Corrupted False
-	GemLevel >= 18
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Arcane Cloak" "Intimidating Cry" "Minion Speed Support"
-	Corrupted False
-	GemLevel >= 18
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Cast when Damage Taken Support" "Power Charge On Critical Support"
-	Corrupted False
-	GemLevel >= 18
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Discharge" "Ensnaring Arrow" "Hatred" "Lightning Strike" "Righteous Fire" "Volatile Dead"
-	Corrupted False
-	GemLevel >= 18
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Brutality Support" "Frostbite" "Increased Area of Effect Support" "Maim Support" "Shockwave Totem" "Slower Projectiles Support" "Vigilant Strike"
-	Corrupted False
-	GemLevel >= 18
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Blink Arrow"
-	Corrupted False
-	GemLevel >= 18
-	GemQualityType Phantasmal
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Sigil of Power"
-	Corrupted False
-	GemLevel >= 18
-	GemQualityType Phantasmal
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Greater Multiple Projectiles Support" "Vulnerability"
-	Corrupted False
-	GemLevel >= 18
-	GemQualityType Anomalous
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Combustion Support" "Pride"
-	Corrupted False
-	GemLevel >= 18
-	GemQualityType Divergent
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Inspiration Support"
-	Corrupted False
-	GemLevel >= 17
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Ruthless Support" "Siege Ballista"
-	Corrupted False
-	GemLevel >= 17
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Dash" "Elemental Focus Support" "Frost Bomb" "Grace" "Greater Multiple Projectiles Support" "Ignite Proliferation Support" "Split Arrow" "Vengeance"
-	Corrupted False
-	GemLevel >= 17
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Dash" "Summon Skitterbots"
-	Corrupted False
-	GemLevel >= 17
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Berserk" "Bone Offering" "Elemental Proliferation Support" "Energy Leech Support" "Spectral Throw" "Summon Holy Relic"
-	Corrupted False
-	GemLevel >= 17
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Burning Arrow" "Chance to Bleed Support" "Herald of Ice" "Molten Strike" "Onslaught Support" "Purifying Flame" "Spell Echo Support" "Tornado Shot"
-	Corrupted False
-	GemLevel >= 17
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Earthquake" "Smite"
-	Corrupted False
-	GemLevel >= 17
-	GemQualityType Phantasmal
-	Quality >= 20
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Ancestral Protector" "Flame Wall"
-	Corrupted False
-	GemLevel >= 17
-	GemQualityType Phantasmal
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Perforate" "Raise Zombie" "Rolling Magma"
-	Corrupted False
-	GemLevel >= 17
-	GemQualityType Phantasmal
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Hexblast"
-	Corrupted False
-	GemLevel >= 17
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Arcane Surge Support" "Feeding Frenzy Support"
-	Corrupted False
-	GemLevel >= 17
-	GemQualityType Anomalous
-	Quality >= 0
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Frostbolt" "Spark"
-	Corrupted False
-	GemLevel >= 17
-	GemQualityType Anomalous
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Ruthless Support"
-	Corrupted False
-	GemLevel >= 17
-	GemQualityType Anomalous
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Chance to Bleed Support" "Elemental Proliferation Support" "Purifying Flame"
-	Corrupted False
-	GemLevel >= 17
-	GemQualityType Divergent
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Frostbolt" "Smite"
-	Corrupted False
-	GemLevel >= 17
-	GemQualityType Phantasmal
-	Quality >= 0
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Perforate" "Raise Zombie"
-	Corrupted False
-	GemLevel >= 17
-	GemQualityType Phantasmal
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Fortify Support" "Ice Nova" "Ice Spear" "Infernal Blow" "Kinetic Blast" "Malevolence" "Precision" "Summon Chaos Golem" "Vitality"
-	Corrupted False
-	GemLevel >= 16
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Blade Blast" "Determination" "Discipline" "Impale Support" "Infused Channelling Support" "Lightning Strike" "Minion Life Support" "Raise Spectre" "Scourge Arrow" "Second Wind Support" "Sigil of Power" "Summon Carrion Golem" "Summon Flame Golem" "Summon Ice Golem" "Summon Lightning Golem" "Summon Stone Golem" "Toxic Rain" "War Banner"
-	Corrupted False
-	GemLevel >= 16
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Added Cold Damage Support" "Ancestral Protector" "Anger" "Animate Guardian" "Arc" "Assassin's Mark" "Bear Trap" "Berserk" "Blade Vortex" "Blind Support" "Bloodthirst Support" "Cold to Fire Support" "Convocation" "Creeping Frost" "Culling Strike Support" "Cyclone" "Damage on Full Life Support" "Dark Pact" "Earthshatter" "Efficacy Support" "Elemental Damage with Attacks Support" "Elemental Weakness" "Faster Attacks Support" "Faster Casting Support" "Faster Projectiles Support" "Firestorm" "Flame Dash" "Flammability" "Frenzy" "Generosity Support" "Herald of Thunder" "Hydrosphere" "Immortal Call" "Infernal Legion Support" "Intensify Support" "Iron Grip Support" "Lesser Multiple Projectiles Support" "Molten Shell" "Orb of Storms" "Petrified Blood" "Poison Support" "Power Charge On Critical Support" "Predator Support" "Pulverise Support" "Reap" "Reave" "Shock Nova" "Shockwave Support" "Shrapnel Ballista" "Smoke Mine" "Spell Cascade Support" "Summon Skeletons" "Summon Skitterbots" "Swift Affliction Support" "Swiftbrand Support" "Trap and Mine Damage Support" "Void Sphere" "Vortex" "Vulnerability" "Wave of Conviction" "Withering Step" "Zealotry"
-	Corrupted False
-	GemLevel >= 16
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Ball Lightning" "Creeping Frost" "Cyclone" "Elemental Damage with Attacks Support" "Pulverise Support" "Purity of Elements" "Smoke Mine" "Tempest Shield"
-	Corrupted False
-	GemLevel >= 16
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Additional Accuracy Support" "Anger" "Arc" "Bane" "Convocation" "Discipline" "Frost Bomb" "Herald of Ash" "Ice Spear" "Immortal Call" "Impale Support" "Precision" "Pride" "Purity of Fire" "Purity of Ice" "Storm Brand" "Swift Assembly Support" "Vortex"
-	Corrupted False
-	GemLevel >= 16
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Ballista Totem Support" "Barrage" "Bladestorm" "Blasphemy Support" "Blazing Salvo" "Blood Rage" "Conductivity" "Controlled Destruction Support" "Desecrate" "Elemental Army Support" "Elemental Weakness" "Explosive Arrow" "Exsanguinate" "Faster Projectiles Support" "Feeding Frenzy Support" "Fortify Support" "Frenzy" "Frost Shield" "Frostblink" "Herald of Agony" "Herald of Purity" "Herald of Thunder" "Hydrosphere" "Ice Trap" "Increased Critical Strikes Support" "Increased Duration Support" "Lifetap Support" "Lightning Penetration Support" "Meat Shield Support" "Melee Splash Support" "Mirage Archer Support" "Phase Run" "Predator Support" "Purity of Lightning" "Rallying Cry" "Sniper's Mark" "Static Strike" "Steelskin" "Tectonic Slam" "Venom Gyre" "Void Manipulation Support" "Whirling Blades" "Wild Strike" "Withering Step"
-	Corrupted False
-	GemLevel >= 16
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Leap Slam"
-	Corrupted False
-	GemLevel >= 16
-	GemQualityType Phantasmal
-	Quality >= 20
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Cremation" "Cyclone" "Desecrate" "Dominating Blow" "Frost Bomb" "Lightning Arrow" "Wave of Conviction"
-	Corrupted False
-	GemLevel >= 16
-	GemQualityType Phantasmal
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Ballista Totem Support" "Crackling Lance" "Creeping Frost" "Frost Shield" "Ice Spear" "Intensify Support" "Lightning Warp" "Mirror Arrow" "Raise Spectre" "Summon Skeletons" "Vengeance" "Wild Strike" "Winter Orb"
-	Corrupted False
-	GemLevel >= 16
-	GemQualityType Phantasmal
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Blood Rage" "Fortify Support" "Ice Nova" "Kinetic Blast" "Malevolence" "Mirage Archer Support" "Nightblade Support" "Vitality"
-	Corrupted False
-	GemLevel >= 16
-	GemQualityType Anomalous
-	Quality >= 0
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Arrogance Support" "Clarity" "Concentrated Effect Support" "Discipline" "Dread Banner" "Flesh and Stone" "Impale Support" "Melee Physical Damage Support" "Power Siphon" "Scourge Arrow" "Second Wind Support" "Sigil of Power" "Summon Flame Golem" "Summon Ice Golem" "Summon Lightning Golem" "Summon Stone Golem" "Tornado Shot" "Toxic Rain" "Trinity Support" "War Banner" "Wrath"
-	Corrupted False
-	GemLevel >= 16
-	GemQualityType Anomalous
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Arc" "Archmage Support" "Assassin's Mark" "Ball Lightning" "Bear Trap" "Blade Blast" "Blade Vortex" "Damage on Full Life Support" "Dash" "Determination" "Efficacy Support" "Faster Attacks Support" "Flame Dash" "Flame Wall" "Generosity Support" "Grace" "Hatred" "Herald of Thunder" "Hypothermia Support" "Infused Channelling Support" "Intensify Support" "Lightning Strike" "Maim Support" "Minion Life Support" "Molten Shell" "Petrified Blood" "Power Charge On Critical Support" "Raise Spectre" "Reckoning" "Shrapnel Ballista" "Siege Ballista" "Steelskin" "Vengeance" "Wave of Conviction" "Withering Step" "Zealotry"
-	Corrupted False
-	GemLevel >= 16
-	GemQualityType Anomalous
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Animate Guardian" "Arcane Cloak" "Ball Lightning" "Creeping Frost" "Cyclone" "Dash" "Determination" "Elemental Damage with Attacks Support" "Hypothermia Support" "Power Charge On Critical Support" "Pulverise Support" "Purity of Elements" "Rage Support" "Summon Skitterbots" "Tempest Shield" "Urgent Orders Support"
-	Corrupted False
-	GemLevel >= 16
-	GemQualityType Divergent
-	Quality >= 0
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Additional Accuracy Support" "Anger" "Bane" "Bone Offering" "Clarity" "Convocation" "Discharge" "Discipline" "Hatred" "Impale Support" "Innervate Support" "Plague Bearer" "Precision" "Purity of Fire" "Purity of Ice" "Righteous Fire" "Trinity Support" "Vitality" "Volatile Dead" "Zealotry"
-	Corrupted False
-	GemLevel >= 16
-	GemQualityType Divergent
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Arc" "Arctic Armour" "Ballista Totem Support" "Berserk" "Blazing Salvo" "Bloodlust Support" "Charged Mines Support" "Culling Strike Support" "Deadly Ailments Support" "Dread Banner" "Enduring Cry" "Energy Leech Support" "Fire Penetration Support" "Flesh Offering" "Flicker Strike" "Frost Bomb" "Frost Shield" "Frostbite" "Frostblink" "Herald of Ash" "Herald of Purity" "Ice Spear" "Immortal Call" "Life Gain on Hit Support" "Lifetap Support" "Lightning Strike" "Lightning Trap" "Malevolence" "Melee Splash Support" "Mirage Archer Support" "Rallying Cry" "Second Wind Support" "Static Strike" "Storm Brand" "Storm Burst" "Summon Holy Relic" "Swift Affliction Support" "Swiftbrand Support" "Tornado Shot" "Void Manipulation Support"
-	Corrupted False
-	GemLevel >= 16
-	GemQualityType Divergent
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Leap Slam" "Toxic Rain"
-	Corrupted False
-	GemLevel >= 16
-	GemQualityType Phantasmal
-	Quality >= 0
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Ancestral Protector" "Cremation" "Desecrate" "Dominating Blow" "Flame Wall" "Frost Bomb" "Haste" "Lightning Arrow"
-	Corrupted False
-	GemLevel >= 16
-	GemQualityType Phantasmal
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Ballista Totem Support" "Blink Arrow" "Cyclone" "Mirror Arrow" "Summon Skeletons" "Vengeance" "Wave of Conviction" "Winter Orb"
-	Corrupted False
-	GemLevel >= 16
-	GemQualityType Phantasmal
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Blood Rage"
-	Corrupted False
-	GemLevel >= 15
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Barrage Support" "Bonechill Support" "Cast on Death Support" "Cast while Channelling Support" "Detonate Dead" "Fist of War Support" "Unleash Support"
-	Corrupted False
-	GemLevel >= 15
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Bonechill Support" "Greater Multiple Projectiles Support"
-	Corrupted False
-	GemLevel >= 15
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Cast when Stunned Support" "Close Combat Support" "Cluster Traps Support" "Deadly Ailments Support" "Efficacy Support" "Greater Volley Support" "Multiple Totems Support" "Riposte" "Shockwave Support" "Vile Toxins Support"
-	Corrupted False
-	GemLevel >= 15
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Elemental Penetration Support"
-	Corrupted False
-	GemLevel >= 15
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Chain Support" "Infernal Blow" "Precision"
-	Corrupted False
-	GemLevel >= 15
-	GemQualityType Anomalous
-	Quality >= 0
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Cast when Damage Taken Support" "Spell Echo Support"
-	Corrupted False
-	GemLevel >= 15
-	GemQualityType Anomalous
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Cast when Damage Taken Support" "Smoke Mine"
-	Corrupted False
-	GemLevel >= 15
-	GemQualityType Divergent
-	Quality >= 0
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Bonechill Support" "Multistrike Support"
-	Corrupted False
-	GemLevel >= 15
-	GemQualityType Divergent
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Cast when Stunned Support" "Greater Multiple Projectiles Support" "Increased Area of Effect Support" "Minefield Support" "Spell Echo Support"
-	Corrupted False
-	GemLevel >= 15
-	GemQualityType Divergent
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Dread Banner"
-	Corrupted False
-	GemLevel >= 14
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Innervate Support"
-	Corrupted False
-	GemLevel >= 14
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Wave of Conviction"
-	Corrupted False
-	GemLevel >= 14
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Earthshatter"
-	Corrupted False
-	GemLevel >= 14
-	GemQualityType Anomalous
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Animate Guardian"
-	Corrupted False
-	GemLevel >= 13
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Vortex"
-	Corrupted False
-	GemLevel >= 12
-	GemQualityType Divergent
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Charged Mines Support"
-	Corrupted False
-	GemLevel >= 11
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
 
 #Autogen filter rules
 Show
@@ -4998,7 +3070,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Crusader Boots" "Jewelled Foil" "Prophecy Wand" "Jingling Spirit Shield" "Siege Axe" "Rawhide Boots" "Prismatic Jewel" "Occultist's Vestment" "Zodiac Leather"
+	BaseType == "Siege Axe" "Occultist's Vestment" "Crusader Boots" "Rawhide Boots" "Prophecy Wand" "Jewelled Foil" "Zodiac Leather" "Prismatic Jewel" "Jingling Spirit Shield"
 	Rarity Unique
 	Replica False
 	CustomAlertSound "source_sounds/amulet.wav" 100
@@ -5010,7 +3082,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Studded Belt" "Coral Amulet" "Topaz Flask" "Sage Wand" "Onyx Amulet" "Chain Belt" "Lacquered Garb" "Cobalt Jewel" "Sadist Garb" "Serpentine Staff" "Topaz Ring" "Granite Flask" "Archon Kite Shield" "Silver Flask" "Sapphire Ring" "Prismatic Ring" "Goathide Boots" "Ivory Watchstone" "Stealth Boots" "Gavel" "Crimson Jewel" "Quartz Flask"
+	BaseType == "Stealth Boots" "Sage Wand" "Studded Belt" "Coral Amulet" "Gavel" "Silver Flask" "Archon Kite Shield" "Topaz Flask" "Sadist Garb" "Sapphire Ring" "Onyx Amulet" "Ivory Watchstone" "Goathide Boots" "Quartz Flask" "Serpentine Staff" "Topaz Ring" "Crimson Jewel" "Lacquered Garb" "Chain Belt" "Granite Flask" "Cobalt Jewel" "Prismatic Ring"
 	Rarity Unique
 	Replica False
 	CustomAlertSound "source_sounds/amulet.wav" 45
@@ -5021,7 +3093,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Sapphire Flask" "Medium Cluster Jewel" "Cloth Belt Piece" "Wyrmscale Doublet" "Large Cluster Jewel" "Deerskin Gloves" "Greatwolf Talisman" "Fluted Bascinet"
+	BaseType == "Deerskin Gloves" "Wyrmscale Doublet" "Cloth Belt Piece" "Large Cluster Jewel" "Greatwolf Talisman" "Medium Cluster Jewel" "Fluted Bascinet" "Sapphire Flask"
 	Rarity Unique
 	Replica False
 	CustomAlertSound "source_sounds/amulet.wav" 75
@@ -5032,7 +3104,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Ezomyte Tower Shield" "Silk Gloves"
+	BaseType == "Silk Gloves" "Ezomyte Tower Shield"
 	Rarity Unique
 	Replica False
 	CustomAlertSound "source_sounds/expl_2.wav" 175
@@ -5044,7 +3116,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Carnal Mitts" "Sentinel Jacket" "Amber Amulet" "Exquisite Leather" "Legion Sword" "Ruby Flask" "Crusader Gloves" "Sorcerer Boots" "Savant's Robe" "Infernal Sword" "Hubris Circlet" "Titan Gauntlets" "Praetor Crown" "Penetrating Arrow Quiver" "Sulphur Flask" "Iron Ring" "Ezomyte Staff" "Steelscale Gauntlets" "Vaal Gauntlets" "Two-Stone Ring" "Judgement Staff" "Turquoise Amulet" "Golden Plate" "Small Cluster Jewel" "Gladius" "Amethyst Ring"
+	BaseType == "Two-Stone Ring" "Carnal Mitts" "Crusader Gloves" "Gladius" "Sorcerer Boots" "Vaal Gauntlets" "Titan Gauntlets" "Praetor Crown" "Amber Amulet" "Amethyst Ring" "Sentinel Jacket" "Hubris Circlet" "Iron Ring" "Exquisite Leather" "Infernal Sword" "Penetrating Arrow Quiver" "Sulphur Flask" "Ruby Flask" "Savant's Robe" "Legion Sword" "Golden Plate" "Turquoise Amulet" "Ezomyte Staff" "Steelscale Gauntlets" "Small Cluster Jewel" "Judgement Staff"
 	Rarity Unique
 	Replica False
 	MinimapIcon 2 Cyan Star
@@ -5054,7 +3126,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Iron Mask" "Clasped Boots" "Sledgehammer" "Long Bow" "Spidersilk Robe" "Wyrmscale Gauntlets" "Gut Ripper" "Great Mallet" "Awl" "Dream Mace" "Iron Staff" "Brass Maul" "Riveted Boots" "Mesh Boots" "Chain Gloves" "Studded Round Shield" "Rotted Round Shield" "Bastard Sword" "Infernal Axe" "Fire Arrow Quiver" "Copper Plate" "Cleaver" "Thresher Claw" "Decorative Axe" "Headsman Axe" "Cutthroat's Garb" "Plague Mask" "Wild Leather" "Ornate Mace" "Nailed Fist" "Shadow Sceptre" "Wrapped Mitts" "Recurve Bow" "Ornate Ringmail" "Decimation Bow" "Serrated Arrow Quiver" "Gold Amulet" "Royal Bow" "Boot Knife" "Sage's Robe" "Ivory Spirit Shield" "Scholar's Robe" "Simple Robe" "Auric Mace" "Gnarled Branch" "Ezomyte Axe" "Reaver Sword" "Tricorne" "Great Helmet" "Painted Buckler" "Holy Chainmail" "Baroque Round Shield" "Silk Slippers" "Stiletto" "Antique Rapier" "Visored Sallet" "Vine Circlet" "Imbued Wand" "Lapis Amulet" "Estoc" "Plate Vest" "Skinning Knife" "Despot Axe" "Goat's Horn" "Dread Maul" "Latticed Ringmail" "Strapped Boots" "Buckskin Tunic" "Iron Hat"
+	BaseType == "Ivory Spirit Shield" "Brass Maul" "Despot Axe" "Baroque Round Shield" "Ezomyte Axe" "Holy Chainmail" "Stiletto" "Simple Robe" "Wrapped Mitts" "Visored Sallet" "Nailed Fist" "Serrated Arrow Quiver" "Fire Arrow Quiver" "Mesh Boots" "Plague Mask" "Tricorne" "Cutthroat's Garb" "Studded Round Shield" "Buckskin Tunic" "Boot Knife" "Strapped Boots" "Rotted Round Shield" "Clasped Boots" "Vine Circlet" "Wyrmscale Gauntlets" "Painted Buckler" "Dream Mace" "Scholar's Robe" "Royal Bow" "Gut Ripper" "Recurve Bow" "Lapis Amulet" "Shadow Sceptre" "Antique Rapier" "Dread Maul" "Goat's Horn" "Estoc" "Decorative Axe" "Gnarled Branch" "Thresher Claw" "Infernal Axe" "Awl" "Reaver Sword" "Plate Vest" "Spidersilk Robe" "Riveted Boots" "Iron Mask" "Decimation Bow" "Auric Mace" "Sage's Robe" "Chain Gloves" "Long Bow" "Imbued Wand" "Skinning Knife" "Copper Plate" "Headsman Axe" "Iron Staff" "Iron Hat" "Wild Leather" "Ornate Mace" "Latticed Ringmail" "Silk Slippers" "Great Helmet" "Bastard Sword" "Great Mallet" "Sledgehammer" "Gold Amulet" "Ornate Ringmail" "Cleaver"
 	Rarity Unique
 	Replica False
 	SetBackgroundColor 0 0 0 220
@@ -5074,7 +3146,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Viridian Jewel" "Jade Amulet" "Carnal Armour"
+	BaseType == "Jade Amulet" "Viridian Jewel" "Carnal Armour"
 	Rarity Unique
 	Replica True
 	CustomAlertSound "source_sounds/amulet.wav" 45
@@ -5085,7 +3157,7 @@ Show
 
 #Autogen filter rules
 Show
-	BaseType == "Vaal Rapier" "Paua Amulet" "Ezomyte Burgonet" "Terror Maul" "Lacquered Buckler" "Heavy Belt"
+	BaseType == "Paua Amulet" "Vaal Rapier" "Ezomyte Burgonet" "Terror Maul" "Lacquered Buckler" "Heavy Belt"
 	Rarity Unique
 	Replica True
 	CustomAlertSound "source_sounds/amulet.wav" 75
@@ -5117,594 +3189,6 @@ Show
 	SetBackgroundColor 51 58 75 220
 	SetBorderColor 170 158 130
 	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Brand Recall"
-	Corrupted True
-	GemLevel >= 7
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Brand Recall"
-	Corrupted False
-	GemLevel >= 6
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Brand Recall"
-	Corrupted True
-	GemLevel >= 6
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Awakened Added Lightning Damage Support" "Awakened Arrow Nova Support" "Awakened Blasphemy Support" "Awakened Burning Damage Support" "Awakened Cast While Channelling Support" "Awakened Cold Penetration Support" "Awakened Fire Penetration Support" "Awakened Fork Support" "Awakened Melee Splash Support" "Awakened Unbound Ailments Support"
-	Corrupted True
-	GemLevel >= 6
-	Quality >= 0
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Awakened Added Cold Damage Support" "Awakened Added Fire Damage Support" "Awakened Brutality Support" "Awakened Cast On Critical Strike Support" "Awakened Controlled Destruction Support" "Awakened Deadly Ailments Support" "Awakened Elemental Damage with Attacks Support" "Awakened Elemental Focus Support" "Awakened Increased Area of Effect Support" "Awakened Lightning Penetration Support" "Awakened Melee Physical Damage Support" "Awakened Minion Damage Support" "Awakened Swift Affliction Support" "Awakened Vicious Projectiles Support" "Awakened Void Manipulation Support"
-	Corrupted True
-	GemLevel >= 6
-	Quality >= 0
-	CustomAlertSound "source_sounds/neutral3.wav" 200
-	MinimapIcon 0 Yellow UpsideDownHouse
-	PlayEffect Yellow
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Blood and Sand"
-	Corrupted False
-	GemLevel >= 5
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Awakened Added Chaos Damage Support" "Awakened Added Cold Damage Support" "Awakened Added Fire Damage Support" "Awakened Added Lightning Damage Support" "Awakened Ancestral Call Support" "Awakened Blasphemy Support" "Awakened Brutality Support" "Awakened Burning Damage Support" "Awakened Cast While Channelling Support" "Awakened Chain Support" "Awakened Cold Penetration Support" "Awakened Controlled Destruction Support" "Awakened Deadly Ailments Support" "Awakened Elemental Damage with Attacks Support" "Awakened Elemental Focus Support" "Awakened Fire Penetration Support" "Awakened Fork Support" "Awakened Generosity Support" "Awakened Increased Area of Effect Support" "Awakened Lightning Penetration Support" "Awakened Melee Physical Damage Support" "Awakened Melee Splash Support" "Awakened Minion Damage Support" "Awakened Swift Affliction Support" "Awakened Unbound Ailments Support" "Awakened Unleash Support" "Awakened Vicious Projectiles Support" "Awakened Void Manipulation Support"
-	Corrupted False
-	GemLevel >= 5
-	Quality >= 0
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Awakened Arrow Nova Support"
-	Corrupted False
-	GemLevel >= 5
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Awakened Cast On Critical Strike Support" "Awakened Greater Multiple Projectiles Support" "Awakened Hextouch Support" "Awakened Multistrike Support" "Awakened Spell Cascade Support" "Awakened Spell Echo Support"
-	Corrupted False
-	GemLevel >= 5
-	Quality >= 0
-	CustomAlertSound "source_sounds/neutral3.wav" 200
-	MinimapIcon 0 Yellow UpsideDownHouse
-	PlayEffect Yellow
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Awakened Added Chaos Damage Support" "Awakened Added Cold Damage Support" "Awakened Added Fire Damage Support" "Awakened Added Lightning Damage Support" "Awakened Blasphemy Support" "Awakened Brutality Support" "Awakened Burning Damage Support" "Awakened Cast While Channelling Support" "Awakened Cold Penetration Support" "Awakened Controlled Destruction Support" "Awakened Deadly Ailments Support" "Awakened Elemental Damage with Attacks Support" "Awakened Elemental Focus Support" "Awakened Fire Penetration Support" "Awakened Fork Support" "Awakened Generosity Support" "Awakened Increased Area of Effect Support" "Awakened Lightning Penetration Support" "Awakened Melee Physical Damage Support" "Awakened Melee Splash Support" "Awakened Minion Damage Support" "Awakened Swift Affliction Support" "Awakened Unbound Ailments Support" "Awakened Unleash Support" "Awakened Vicious Projectiles Support" "Awakened Void Manipulation Support"
-	Corrupted True
-	GemLevel >= 5
-	Quality >= 0
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Awakened Arrow Nova Support"
-	Corrupted True
-	GemLevel >= 5
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Awakened Cast On Critical Strike Support" "Awakened Greater Multiple Projectiles Support"
-	Corrupted True
-	GemLevel >= 5
-	Quality >= 0
-	CustomAlertSound "source_sounds/neutral3.wav" 200
-	MinimapIcon 0 Yellow UpsideDownHouse
-	PlayEffect Yellow
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Blood and Sand"
-	Corrupted False
-	GemLevel >= 4
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Enlighten Support"
-	Corrupted True
-	GemLevel >= 4
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/neutral3.wav" 200
-	MinimapIcon 0 Yellow UpsideDownHouse
-	PlayEffect Yellow
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Blood and Sand"
-	Corrupted False
-	GemLevel >= 4
-	GemQualityType Divergent
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Awakened Controlled Destruction Support" "Awakened Elemental Focus Support" "Awakened Melee Physical Damage Support" "Awakened Unleash Support"
-	Corrupted False
-	GemLevel >= 4
-	Quality >= 0
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Awakened Added Chaos Damage Support" "Awakened Cold Penetration Support" "Awakened Generosity Support" "Awakened Increased Area of Effect Support"
-	Corrupted False
-	GemLevel >= 4
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Empower Support" "Enlighten Support"
-	Corrupted True
-	GemLevel >= 4
-	Quality >= 0
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Enhance Support"
-	Corrupted True
-	GemLevel >= 4
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Phase Run"
-	Corrupted False
-	GemLevel >= 3
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Empower Support" "Enlighten Support"
-	Corrupted True
-	GemLevel >= 3
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Awakened Added Cold Damage Support" "Awakened Elemental Damage with Attacks Support" "Awakened Swift Affliction Support"
-	Corrupted False
-	GemLevel >= 3
-	Quality >= 0
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Awakened Ancestral Call Support" "Awakened Burning Damage Support" "Awakened Lightning Penetration Support" "Empower Support" "Enlighten Support"
-	Corrupted False
-	GemLevel >= 3
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Enhance Support"
-	Corrupted False
-	GemLevel >= 3
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Empower Support" "Enhance Support" "Enlighten Support"
-	Corrupted True
-	GemLevel >= 3
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Nightblade Support"
-	Corrupted False
-	GemLevel >= 2
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Awakened Chain Support" "Awakened Unbound Ailments Support"
-	Corrupted False
-	GemLevel >= 2
-	Quality >= 0
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Awakened Added Lightning Damage Support" "Awakened Blasphemy Support" "Awakened Fork Support" "Awakened Void Manipulation Support" "Enlighten Support"
-	Corrupted False
-	GemLevel >= 2
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Enlighten Support"
-	Corrupted True
-	GemLevel >= 2
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Clarity"
-	Corrupted False
-	GemLevel >= 1
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Blasphemy Support" "Cast On Critical Strike Support" "High-Impact Mine Support" "Reckoning"
-	Corrupted False
-	GemLevel >= 1
-	GemQualityType Anomalous
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Arctic Armour" "Bloodlust Support"
-	Corrupted False
-	GemLevel >= 1
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Enduring Cry" "Haste" "Life Gain on Hit Support"
-	Corrupted False
-	GemLevel >= 1
-	GemQualityType Divergent
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Arc"
-	Corrupted False
-	GemLevel >= 1
-	GemQualityType Phantasmal
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Cast On Critical Strike Support" "Greater Multiple Projectiles Support"
-	Corrupted False
-	GemLevel >= 1
-	Quality >= 20
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Ice Spear" "Inspiration Support"
-	Corrupted False
-	GemLevel >= 1
-	GemQualityType Anomalous
-	Quality >= 0
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Enlighten Support"
-	Corrupted False
-	GemLevel >= 1
-	GemQualityType Anomalous
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Portal"
-	Corrupted False
-	GemLevel >= 1
-	GemQualityType Anomalous
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Arcane Surge Support" "Inspiration Support"
-	Corrupted False
-	GemLevel >= 1
-	GemQualityType Divergent
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Haste"
-	Corrupted False
-	GemLevel >= 1
-	GemQualityType Divergent
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Awakened Added Cold Damage Support" "Awakened Brutality Support" "Awakened Chain Support" "Awakened Controlled Destruction Support" "Awakened Deadly Ailments Support" "Awakened Elemental Damage with Attacks Support" "Awakened Elemental Focus Support" "Awakened Melee Physical Damage Support" "Awakened Swift Affliction Support" "Awakened Unleash Support"
-	Corrupted False
-	GemLevel >= 1
-	Quality >= 0
-	CustomAlertSound "source_sounds/expl_2.wav" 175
-	MinimapIcon 1 Green Hexagon
-	PlayEffect Green
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Awakened Added Fire Damage Support" "Awakened Added Lightning Damage Support" "Awakened Arrow Nova Support" "Awakened Burning Damage Support" "Awakened Cast While Channelling Support" "Awakened Fire Penetration Support" "Awakened Generosity Support" "Awakened Increased Area of Effect Support" "Awakened Lightning Penetration Support" "Awakened Melee Splash Support" "Awakened Minion Damage Support" "Awakened Unbound Ailments Support" "Awakened Vicious Projectiles Support" "Awakened Void Manipulation Support" "Elemental Penetration Support"
-	Corrupted False
-	GemLevel >= 1
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 100
-	MinimapIcon 1 Blue Hexagon
-	PlayEffect Blue
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 44
-
-#Autogen filter rules
-Show
-	BaseType == "Awakened Ancestral Call Support" "Awakened Blasphemy Support" "Awakened Cold Penetration Support" "Awakened Fork Support" "Enlighten Support"
-	Corrupted False
-	GemLevel >= 1
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
-
-#Autogen filter rules
-Show
-	BaseType == "Awakened Cast On Critical Strike Support" "Awakened Greater Multiple Projectiles Support" "Awakened Hextouch Support" "Awakened Multistrike Support" "Awakened Spell Cascade Support" "Awakened Spell Echo Support"
-	Corrupted False
-	GemLevel >= 1
-	Quality >= 0
-	CustomAlertSound "source_sounds/neutral3.wav" 200
-	MinimapIcon 0 Yellow UpsideDownHouse
-	PlayEffect Yellow
-	SetBackgroundColor 51 58 75 220
-	SetBorderColor 27 162 155
-	SetFontSize 45
-
-#Autogen filter rules
-Show
-	BaseType == "Enlighten Support"
-	Corrupted True
-	GemLevel >= 1
-	Quality >= 0
-	CustomAlertSound "source_sounds/gem.wav" 75
-	MinimapIcon 2 Blue Hexagon
-	SetBackgroundColor 0 0 0 220
-	SetBorderColor 27 162 155
-	SetFontSize 32
 
 #Labyrinth
 Show
@@ -5779,7 +3263,7 @@ Show
 	Class "Maps"
 	AnyEnchantment True
 	MapTier >= 16
-	CustomAlertSound "source_sounds/death4.wav" 100
+	CustomAlertSound "source_sounds/death2.wav" 100
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -5791,7 +3275,7 @@ Show
 	Class "Maps"
 	AnyEnchantment True
 	MapTier >= 11
-	CustomAlertSound "source_sounds/attack1.wav" 75
+	CustomAlertSound "source_sounds/attack3.wav" 75
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -5802,7 +3286,7 @@ Show
 	Class "Maps"
 	AnyEnchantment True
 	MapTier <= 5
-	CustomAlertSound "source_sounds/gethit2.wav" 20
+	CustomAlertSound "source_sounds/gethit4.wav" 20
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -5812,7 +3296,7 @@ Show
 Show
 	Class "Maps"
 	AnyEnchantment True
-	CustomAlertSound "source_sounds/gethit2.wav" 20
+	CustomAlertSound "source_sounds/gethit4.wav" 20
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -5823,7 +3307,7 @@ Show
 	Class "Maps"
 	BlightedMap True
 	MapTier >= 16
-	CustomAlertSound "source_sounds/death3.wav" 100
+	CustomAlertSound "source_sounds/death1.wav" 100
 	MinimapIcon 1 Blue Kite
 	PlayEffect Green
 	SetBackgroundColor 0 0 0 220
@@ -5835,7 +3319,7 @@ Show
 	Class "Maps"
 	BlightedMap True
 	MapTier >= 11
-	CustomAlertSound "source_sounds/attack1.wav" 75
+	CustomAlertSound "source_sounds/attack4.wav" 75
 	MinimapIcon 1 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -5846,7 +3330,7 @@ Show
 	Class "Maps"
 	BlightedMap True
 	MapTier <= 5
-	CustomAlertSound "source_sounds/gethit3.wav" 20
+	CustomAlertSound "source_sounds/gethit1.wav" 20
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
@@ -5856,7 +3340,7 @@ Show
 Show
 	Class "Maps"
 	BlightedMap True
-	CustomAlertSound "source_sounds/gethit1.wav" 20
+	CustomAlertSound "source_sounds/gethit2.wav" 20
 	MinimapIcon 2 Blue Kite
 	SetBackgroundColor 0 0 0 220
 	SetBorderColor 114 0 83
