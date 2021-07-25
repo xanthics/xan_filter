@@ -11,7 +11,7 @@ def create_always_highlight():
 	currencytab = "0"  # Update to the tabid(s) where you keep your currency
 	league = "Expedition"
 	accountname = "xanqos"
-	cookies = {'POESESSID': ''}  # update to your session id, blank session id will use default(on) highlighting rules
+	cookies = {'POESESSID': '648ef55b3b3080fb424e54025d0fc0ee'}  # update to your session id, blank session id will use default(on) highlighting rules
 	header = {
 		'User-Agent': 'xan.filter)',
 		'From': 'xanthics on discord'
@@ -62,7 +62,9 @@ def create_highlight_currency(currencytab, league, accountname, cookies, header,
 		"Silver Coin": 200,
 		"Vaal Orb": 200,
 		"Stacked Deck": -1,
-		"Rogue's Marker": 1
+		"Rogue's Marker": 1,
+		'Enkindling Orb': 40,
+		'Instilling Orb': 40
 	}
 
 	shards = {
@@ -206,8 +208,10 @@ def create_highlight_challenge(accountname, league, cookies, header, requester):
 				'Unique Item': [{'unique'}],
 				'Stack of Currency': [{'currency'}],
 				"Itemised Prophecy": [{"NYI"}],
-				'Vaal Gem': [{"NYI"}],
+				'Vaal Gem': [{"vaalgem"}],
 				'23% Quality Gem': [{"23%"}],
+				'Level 21 Gem': [{"21gem"}],
+				'Unique Jewel': [{'unique', 'jewel'}]
 			}
 		},
 	}

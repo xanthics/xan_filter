@@ -28,7 +28,8 @@ def main():
 		"canonical_stat": 1,
 		"divide_by_two_0dp": 1/2,
 		"divide_by_five": 1/5,
-		"divide_by_three": 1/3
+		"divide_by_three": 1/3,
+		"divide_by_one_hundred_2dp_if_required": 1/100
 	}
 
 	for val in translation:
