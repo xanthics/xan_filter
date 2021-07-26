@@ -226,7 +226,6 @@ def price_currency(data, val, base_sound, currency_val, tiers, minval, auto_ah, 
 		if rule:
 			ret[f'{tval} {item}'] = data[item]
 
-
 def convert_json_to_filter():
 	ret = {}
 	packs = [
@@ -248,8 +247,8 @@ def convert_json_to_filter():
 	# initialize pricing tiers
 	with open(f'autogen/currency.json', 'r') as f:
 		data = json.load(f)
-	for base, val, in [('Mirror of Kalandra', 20000), ('Exalted Orb', 100)]:
-		if base not in data:
+	for base, val, in [('Mirror of Kalandra', 12000), ('Exalted Orb', 80)]:
+		if base not in data or data[base]['value'] < val:
 			data[base] = {'base': base, 'value': val, 'count': 200}
 
 	currency_val = {
