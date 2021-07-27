@@ -317,6 +317,10 @@ def validate_data(price_val):
 	for item in ["Rogue's Marker", 'Perandus Coin']:
 		if item not in price_val['currency'] or price_val['currency'][item]['value'] > 1/250:
 			price_val['currency'][item] = {'base': item, 'value': 1/250, 'count': 200}
+	for base, val, in [('Mirror of Kalandra', 12000), ('Exalted Orb', 80)]:
+		if base not in price_val['currency'] or price_val['currency'][base]['value'] < val:
+			price_val['currency'][base] = {'base': base, 'value': val, 'count': 200}
+
 	# Add missing harbinger scroll values
 	for s, b, u in [
 		('Deregulation Scroll', "The Tempest's Binding", "The Tempest's Liberation"),
