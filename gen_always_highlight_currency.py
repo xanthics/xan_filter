@@ -21,8 +21,8 @@ def create_always_highlight():
 		requester = requests.session()
 	else:
 		requester = None
-#	create_highlight_currency(currencytab, league, accountname, cookies, header, requester)
-#	create_highlight_challenge(accountname, league, cookies, header, requester)
+	create_highlight_currency(currencytab, league, accountname, cookies, header, requester)
+	create_highlight_challenge(accountname, league, cookies, header, requester)
 	create_highlight_ex_recipe(ex_shard_tab, league, accountname, cookies, header, requester)
 
 
