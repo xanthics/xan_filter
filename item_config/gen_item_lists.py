@@ -1068,7 +1068,7 @@ def genrareshighlighttiered():
 
 	ret = {}
 	# Bases that are always shown when a certain ilvl threshold is reached.  Highlighting rules still followed
-	#alwaysshow = {'Boots': 68, 'Gloves': 68, 'Accessory': 68, 'Other': 1}
+	# alwaysshow = {'Wand': 68, 'Shield': 68, 'Helmet': 68, 'Boots': 68, 'Gloves': 68, 'Accessory': 68, 'Other': 1}
 	alwaysshow = {'Boots': 86, 'Accessory': 84, 'Other': 1}
 	# list of bases that should be ignored, even for always show
 	bad_bases = [
@@ -1113,7 +1113,7 @@ def genrareshighlighttiered():
 		None
 	]
 	# maximum value to show for non-special drops
-	maxnormal = 3
+	maxnormal = 2
 	# maxixum total for each highlighting style
 	style_tiers = {
 		2: 'rare highlight',
@@ -1180,7 +1180,7 @@ def genrareshighlighttiered():
 						# calculate the penalty level of the item
 						penalty = c + type_penalty[typ] + (rules[cur['base']][2] if cur['base'] in rules and rules[cur['base']][0].issubset(f) and not rules[cur['base']][1].issubset(f) else cur['tier'])
 						# if normal item with no special highlight rules and penalty is greater than allowed, do not make a highlight rule
-						if not typ and (not s or cur['name'] in bad_bases) and penalty > maxnormal:
+						if (not s or cur['name'] in bad_bases) and penalty > maxnormal:
 							break
 						hl = minhl(penalty, style_tiers)
 						# if rule is the same as default highlight rule, skip

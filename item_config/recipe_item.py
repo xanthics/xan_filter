@@ -11,23 +11,34 @@ items = {
 	"0 magic hammers q>=12": {"base": "Stone Hammer\" \"Rock Breaker\" \"Gavel", "other": ["Rarity Magic", "Quality >= 12"], "type": "ignore"},
 	"0 normal hammers": {"base": "Stone Hammer\" \"Rock Breaker\" \"Gavel", "other": ["Rarity Normal"], "type": "ignore"},
 
-	# Rare highlighting for currency recipes.  change 'ignore' to 'recipe item rare' or back as needed
-#	"1 Chaos Rare Two Hand": {"class": "Two Hand\" \"Staves\" \"Bow", "other": ["Height 4", "Width 2", "Rarity Rare", "ItemLevel >= 60", "ItemLevel <= 74", "Identified False"], "type": "recipe item rare"},
-#	"1 Chaos Rare Helm": {"class": "Helmets", "other": ["Rarity Rare", "ItemLevel >= 60", "ItemLevel <= 74", "Identified False"], "type": "recipe item rare small"},
-#	"1 Chaos Rare Body": {"class": "Body Armours", "other": ["Rarity Rare", "ItemLevel >= 60", "ItemLevel <= 74", "Identified False"], "type": "recipe item rare"},
-#	"1 Chaos Rare Glove": {"class": "Gloves", "other": ["Rarity Rare", "ItemLevel >= 60", "ItemLevel <= 74", "Identified False"], "type": "recipe item rare small"},
-#	"1 Chaos Rare Boot": {"class": "Boots", "other": ["Rarity Rare", "ItemLevel >= 60", "ItemLevel <= 74", "Identified False"], "type": "recipe item rare small"},
-#	"1 Chaos Rare Amulet": {"class": "Amulet", "other": ["Rarity Rare", "ItemLevel >= 60", "ItemLevel <= 74", "Identified False"], "type": "recipe item rare small"},
-#	"1 Chaos Rare Ring": {"class": "Ring", "other": ["Rarity Rare", "ItemLevel >= 60", "ItemLevel <= 74", "Identified False"], "type": "recipe item rare small"},
-#	"1 Chaos Rare Belt": {"class": "Belt", "other": ["Rarity Rare", "ItemLevel >= 60", "ItemLevel <= 74", "Identified False"], "type": "recipe item rare small"},
+	# Chaos Orb Rare highlighting for currency recipes.  change 'ignore' to 'recipe item rare small' or back as needed
+	"1 Chaos Rare Two Hand": {"class": "Two Hand\" \"Staves\" \"Bow", "other": ["Height 4", "Width 2", "Rarity Rare", "ItemLevel >= 60", "ItemLevel <= 74", "Identified False"], "type": "ignore"},
+	"1 Chaos Rare Helm": {"class": "Helmets", "other": ["Rarity Rare", "ItemLevel >= 60", "ItemLevel <= 74", "Identified False"], "type": "ignore"},
+	"1 Chaos Rare Body": {"class": "Body Armours", "other": ["Rarity Rare", "ItemLevel >= 60", "ItemLevel <= 74", "Identified False"], "type": "ignore"},
+	"1 Chaos Rare Glove": {"class": "Gloves", "other": ["Rarity Rare", "ItemLevel >= 60", "ItemLevel <= 74", "Identified False"], "type": "ignore"},
+	"1 Chaos Rare Boot": {"class": "Boots", "other": ["Rarity Rare", "ItemLevel >= 60", "ItemLevel <= 74", "Identified False"], "type": "ignore"},
+	"1 Chaos Rare Amulet": {"class": "Amulet", "other": ["Rarity Rare", "ItemLevel >= 60", "ItemLevel <= 74", "Identified False"], "type": "ignore"},
+	"1 Chaos Rare Ring": {"class": "Ring", "other": ["Rarity Rare", "ItemLevel >= 60", "ItemLevel <= 74", "Identified False"], "type": "ignore"},
+	"1 Chaos Rare Belt": {"class": "Belt", "other": ["Rarity Rare", "ItemLevel >= 60", "ItemLevel <= 74", "Identified False"], "type": "ignore"},
 
-	# Rare highlighting for currency recipes.  change 'ignore' to 'recipe item rare' or back as needed
-#	"1 Regal Rare Two Hand": {"class": "Two Hand\" \"Staves\" \"Bow", "other": ["Height 4", "Width 2", "Rarity Rare", "ItemLevel >= 75", "Identified False"], "type": "recipe item rare"},
-#	"1 Regal Rare Helm": {"class": "Helmets", "other": ["Rarity Rare", "ItemLevel >= 75", "Identified False"], "type": "recipe item rare small"},
-#	"1 Regal Rare Body": {"class": "Body Armours", "other": ["Rarity Rare", "ItemLevel >= 75", "Identified False"], "type": "recipe item rare"},
-#	"1 Regal Rare Glove": {"class": "Gloves", "other": ["Rarity Rare", "ItemLevel >= 75", "Identified False"], "type": "recipe item rare small"},
-#	"1 Regal Rare Boot": {"class": "Boots", "other": ["Rarity Rare", "ItemLevel >= 75", "Identified False"], "type": "recipe item rare small"},
-#	"1 Regal Rare Amulet": {"class": "Amulet", "other": ["Rarity Rare", "ItemLevel >= 75", "Identified False"], "type": "recipe item rare small"},
-#	"1 Regal Rare Ring": {"class": "Ring", "other": ["Rarity Rare", "ItemLevel >= 75", "Identified False"], "type": "recipe item rare small"},
-#	"1 Regal Rare Belt": {"class": "Belt", "other": ["Rarity Rare", "ItemLevel >= 75", "Identified False"], "type": "recipe item rare small"},
+	# Regal Orb Rare highlighting for currency recipes.  change 'ignore' to 'recipe item rare small' or back as needed
+	"1 Regal Rare Two Hand": {"class": "Two Hand\" \"Staves\" \"Bow", "other": ["Height 4", "Width 2", "Rarity Rare", "ItemLevel >= 75", "Identified False"], "type": "ignore"},
+	"1 Regal Rare Helm": {"class": "Helmets", "other": ["Rarity Rare", "ItemLevel >= 75", "Identified False"], "type": "ignore"},
+	"1 Regal Rare Body": {"class": "Body Armours", "other": ["Rarity Rare", "ItemLevel >= 75", "Identified False"], "type": "ignore"},
+	"1 Regal Rare Glove": {"class": "Gloves", "other": ["Rarity Rare", "ItemLevel >= 75", "Identified False"], "type": "ignore"},
+	"1 Regal Rare Boot": {"class": "Boots", "other": ["Rarity Rare", "ItemLevel >= 75", "Identified False"], "type": "ignore"},
+	"1 Regal Rare Amulet": {"class": "Amulet", "other": ["Rarity Rare", "ItemLevel >= 75", "Identified False"], "type": "ignore"},
+	"1 Regal Rare Ring": {"class": "Ring", "other": ["Rarity Rare", "ItemLevel >= 75", "Identified False"], "type": "ignore"},
+	"1 Regal Rare Belt": {"class": "Belt", "other": ["Rarity Rare", "ItemLevel >= 75", "Identified False"], "type": "ignore"},
+
+	# NOTE: also has autogenerated rules
+	# Exalted Shard highlighting for currency recipes.  change 'ignore' to 'recipe item rare small' or back as needed
+	"1 Exalted Shard Rare Two Hand": {"class": "Two Hand\" \"Staves\" \"Bow", "other": ["HasInfluence Crusader Elder Hunter Redeemer Shaper Warlord", "Height 4", "Width 2", "Rarity Rare", "Identified False"], "type": "ignore"},
+	"1 Exalted Shard Rare Helm": {"class": "Helmets", "other": ["HasInfluence Crusader Elder Hunter Redeemer Shaper Warlord", "Rarity Rare", "Identified False"], "type": "ignore"},
+	"1 Exalted Shard Rare Body": {"class": "Body Armours", "other": ["HasInfluence Crusader Elder Hunter Redeemer Shaper Warlord", "Rarity Rare", "Identified False"], "type": "ignore"},
+	"1 Exalted Shard Rare Glove": {"class": "Gloves", "other": ["HasInfluence Crusader Elder Hunter Redeemer Shaper Warlord", "Rarity Rare", "Identified False"], "type": "ignore"},
+	"1 Exalted Shard Rare Boot": {"class": "Boots", "other": ["HasInfluence Crusader Elder Hunter Redeemer Shaper Warlord", "Rarity Rare", "Identified False"], "type": "ignore"},
+	"1 Exalted Shard Rare Amulet": {"class": "Amulet", "other": ["HasInfluence Crusader Elder Hunter Redeemer Shaper Warlord", "Rarity Rare", "Identified False"], "type": "ignore"},
+	"1 Exalted Shard Rare Ring": {"class": "Ring", "other": ["HasInfluence Crusader Elder Hunter Redeemer Shaper Warlord", "Rarity Rare", "Identified False"], "type": "ignore"},
+	"1 Exalted Shard Rare Belt": {"class": "Belt", "other": ["HasInfluence Crusader Elder Hunter Redeemer Shaper Warlord", "Rarity Rare", "Identified False"], "type": "ignore"},
 }

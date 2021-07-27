@@ -2,9 +2,23 @@
 # '5l', '6l', 'amulet', 'awakened', 'belt', 'body armour', 'boot', 'bow', 'corrupt', 'crusader', 'currency', 'dagger', 'div', 'double-influenced',
 # 'elder', 'enchanted', 'essence', 'fishing', 'flask', 'fragment', 'gem', 'glove', 'helmet', 'hunter', 'ilvl100', 'influenced', 'jewel', 'jewellery',
 # 'magic', 'map', 'prophecy', 'quiver', 'rare', 'ring', 'scarab', 'sceptre', 'shaper', 'shield', 'staff', 'thrusting sword', 'two-implicit',
-# 'unique', 'wand', 'white', 'synthesis'
+# 'unique', 'wand', 'white', 'synthesis', '23%', '21gem', 'vaalgem'
 
 card_meta = {
+	# Expedition
+	"The Offspring": {'unique', 'belt'},  # {Ryslatha's Coil}, count: 9
+	"Dementophobia": {'currency'},  # {10x Delirium Orb}, count: 11
+	"The Mind's Eyes": {'unique', 'ring'},  # {Astral Projector}, count: 7
+	"Lachrymal Necrosis": {'rare', 'corrupt', 'jewel'},  # {Jewel} <enchanted>{Implicit Modifier:}  <magicitem>{Corrupted Blood cannot be inflicted on you} <corrupted>{Corrupted}, count: 3
+	"Ambitious Obsession": {'currency'},  # {Skittering Delirium Orb}, count: 4
+	"The Price of Prescience": {'rare', 'corrupt', 'map'},  # {Vaal Temple Map} <default>{Map Tier:} <normal>{16} <default>{Delirium:} <normal>{100%} <corrupted>{Corrupted}, count: 5
+	"The Emptiness": {'gem', 'corrupt', 'vaalgem'},  # {Vaal Breach} <default>{Quality:} <augmented>{+6%} <corrupted>{Corrupted}, count: 6
+	"The Last Supper": {'unique', 'dagger'},  # {Bino's Kitchen Knife}, count: 6
+	"A Sea of Blue": {'currency'},  # {13x Orb of Alteration}, count: 3
+	"Costly Curio": {'unique', 'double-influenced'},  # {Item} <default>{Double-Influenced Item}, count: 6
+	"The Blessing of Moosh": {},  # {Item} <enchanted>{Labyrinth Enchantment}, count: 4
+	"Terrible Secret of Space": {'21gem', '23%', 'corrupt', 'gem'},  # {Level 21 Golem Gem} <default>{Any Quality Type:} <augmented>{+23%} <corrupted>{Corrupted}, count: 8
+	# Ultimatum
 	"Deadly Joy": {'unique', 'corrupt', 'two-implicit', 'belt'},  # {Torrent's Reclamation} {Two-Implicit} {Corrupted}, count: 6
 	"Luminous Trove": {'unique', 'corrupt'},  # {Voices}|{Voices} {Corrupted}, count: 7
 	"Winter's Embrace": {'unique', 'ring', 'synthesis'},  # {Circle of Fear} <enchanted>{Three-Implicit} <enchanted>{Synthesised}, count: 2
@@ -19,7 +33,7 @@ card_meta = {
 	"Brush, Paint and Palette": {'div'},  # {The Artist}, count: 5
 	"The Adventuring Spirit": {'unique', 'body armour'},  # {Victario's Influence}, count: 6
 	"The Card Sharp": {'white', 'scarab', 'fragment'},  # {Divination Scarab}, count: 4
-
+	# Pre-Ultimatum
 	"Acclimatisation": {'currency'},  # {20x Orb of Alteration}, count: 2
 	"Brother's Stash": {'currency'},  # {5x Exalted Orb}, count: 0
 	"Brotherhood in Exile": {'unique', 'corrupt', 'jewel'},  # {One With Nothing} {Corrupted}, count: 5
@@ -37,7 +51,7 @@ card_meta = {
 	"The Academic": {'unique', 'jewel'},  # {Inspired Learning}, count: 8
 	"The Astromancer": {'unique', 'corrupt', 'body armour', 'two-implicit'},  # {{The Eternity Shroud} {Two-Implicit} {Corrupted}}, count: 7
 	"The Bear Woman": {'magic', 'helmet', 'warlord'},  # {Fecund Ursine Pelt} {Warlord Item}, count: 6
-	"The Bitter Blossom": {'aug', 'gem', 'corrupt', 'jewellery', '23%'},  # {Level 21 Chaos Gem} {Quality:} {+23%} {Corrupted}, count: 3
+	"The Bitter Blossom": {'aug', 'gem', 'corrupt', 'jewellery', '23%', "21gem"},  # {Level 21 Chaos Gem} {Quality:} {+23%} {Corrupted}, count: 3
 	"The Cache": {'unique', 'jewellery'},  # {Jewellery}, count: 6
 	"The Gulf": {'unique', 'corrupt', 'jewel', 'two-implicit'},  # {Thread of Hope} {Two-Implicit} {Corrupted}, count: 5
 	"The Journalist": {'rare', 'helmet'},  # {Helmet} {Double-Veiled Item}, count: 10
@@ -82,7 +96,7 @@ card_meta = {
 	"Dark Dreams": {'rare', 'elder', 'influenced', 'helmet'},  # Bone Helmet|Elder Item
 	"Dark Temptation": {'unique', 'wand'},  # Obliteration
 	"Death": {'unique', 'sceptre'},  # Mon'tregul's Grasp
-	"Deathly Designs": {'corrupt', 'gem', '23%'},  # Level 21 Trap Gem|Quality: +23%|Corrupted
+	"Deathly Designs": {'corrupt', 'gem', '23%', "21gem"},  # Level 21 Trap Gem|Quality: +23%|Corrupted
 	"Demigod's Wager": {'currency'},  # Orb of Annulment
 	"Destined to Crumble": {'rare', 'ilvl100'},  # Body Armour|Item Level: 100
 	"Dialla's Subjugation": {'corrupt', 'gem', '23%'},  # Superior Support Gem|Quality: +23%|Corrupted
@@ -162,14 +176,14 @@ card_meta = {
 	"The Betrayal": {'unique', 'glove'},  # Maligaro's Virtuosity
 	"The Blazing Fire": {'unique', 'bow'},  # Chin Sol
 	"The Body": {'unique', 'body armour'},  # Body Armour
-	"The Bones": {'corrupt', 'gem'},  # Level 21 Vaal Summon Skeletons|Corrupted
+	"The Bones": {'corrupt', 'gem', "21gem", 'vaalgem'},  # Level 21 Vaal Summon Skeletons|Corrupted
 	"The Breach": {'unique'},  # Breach Item
 	"The Brittle Emperor": {'unique', 'corrupt', 'amulet'},  # Voll's Devotion|Corrupted
 	"The Cacophony": {'currency', 'essence'},  # 3x Deafening Essence
 	"The Calling": {'unique'},  # Beyond Item
 	"The Carrion Crow": {'magic'},  # Life Armour
 	"The Cartographer": {'currency'},  # 10x Cartographer's Chisel
-	"The Cataclysm": {'corrupt', 'gem'},  # Level 21 Spell Gem|Corrupted
+	"The Cataclysm": {'corrupt', 'gem', "21gem"},  # Level 21 Spell Gem|Corrupted
 	"The Catalyst": {'currency'},  # Vaal Orb
 	"The Celestial Justicar": {'white', '6l'},  # Six-Link Astral Plate
 	"The Celestial Stone": {'white', 'shaper', 'influenced', 'ring', 'ilvl100'},  # Opal Ring|Item Level: 100|Shaper Item
@@ -284,7 +298,7 @@ card_meta = {
 	"The Rabid Rhoa": {'magic'},  # Malicious Gemini Claw|Item Level: 83
 	"The Realm": {'gem'},  # Superior Portal
 	"The Risk": {'unique', 'ring'},  # Ventor's Gamble
-	"The Rite of Elements": {'corrupt', 'gem'},  # Level 21 Golem Gem|Corrupted
+	"The Rite of Elements": {'corrupt', 'gem', "21gem"},  # Level 21 Golem Gem|Corrupted
 	"The Road to Power": {'magic', 'ilvl100'},  # Runic One-Hand Weapon|Item Level: 100
 	"The Ruthless Ceinture": {'unique', 'corrupt', 'belt'},  # Meginord's Girdle|Corrupted
 	"The Sacrifice": {'white', '6l', 'ilvl100', 'body armour'},  # Six-Link Sacrificial Garb|Item Level: 100
@@ -335,7 +349,7 @@ card_meta = {
 	"The Watcher": {'unique', 'helmet'},  # Crown of Eyes
 	"The Web": {'magic'},  # Weapon of Crafting
 	"The White Knight": {'white', 'crusader', 'influenced', '6l', 'ilvl100'},  # Six-Link Astral Plate|Item Level: 100|Crusader Item
-	"The Wilted Rose": {'corrupt', 'gem'},  # Level 21 Aura Gem|Corrupted
+	"The Wilted Rose": {'corrupt', 'gem', "21gem"},  # Level 21 Aura Gem|Corrupted
 	"The Wind": {'unique', 'bow'},  # Windripper
 	"The Witch": {'unique', 'flask'},  # Kiara's Determination
 	"The Wolf": {'unique'},  # Rigwald Item
@@ -359,6 +373,6 @@ card_meta = {
 	"Vile Power": {'prophecy'},  # Ancient Doom
 	"Vinia's Token": {'currency'},  # 10x Orb of Regret
 	"Void of the Elements": {'magic', 'elder', 'influenced', 'ring', 'ilvl100'},  # Overpowering Opal Ring|Item Level: 100|Elder Item
-	"Volatile Power": {'corrupt', 'gem'},  # Superior Vaal Gem|Quality: +20%|Corrupted
+	"Volatile Power": {'corrupt', 'gem', 'vaalgem'},  # Superior Vaal Gem|Quality: +20%|Corrupted
 	"Wealth and Power": {'corrupt', 'gem'},  # Level 4 Enlighten|Corrupted
 }

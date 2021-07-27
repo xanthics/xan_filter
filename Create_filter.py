@@ -24,7 +24,7 @@ from item_config import text_color
 from item_config.gen_item_lists import genraresleveling, gennonrareleveling, genrareshighlighttiered
 from item_config.itemmod import itemmods
 
-from autogen import custom_challenge
+from autogen import custom_challenge, custom_ex_shard_recipe
 from gen_always_highlight_currency import create_always_highlight
 from theme_config.min_w_highlight import settings
 from process_ninja_json import convert_json_to_filter
@@ -236,6 +236,7 @@ Show
 		buffer += gen_list_compact(gennonrareleveling(flags, overlevel=2, maxlevel=25), desc)
 
 	buffer += gen_list_compact(recipe_item.items, recipe_item.desc)  # Items for vendor recipe
+	buffer += gen_list_compact(custom_ex_shard_recipe.items, custom_ex_shard_recipe.desc)  # autogen rules for ex shard recipe items
 	buffer += gen_list_compact(show_catchall.items, show_catchall.desc)  # Always show these items
 
 	poeDir = get_poe_path()
@@ -262,8 +263,9 @@ Show
 
 if __name__ == "__main__":
 	create_always_highlight()
-	league = 'tmpstandard'
-	pricetool_ninja.scrape_ninja(league)
+	g_league = 'tmpstandard'
+	pricetool_ninja.scrape_ninja(g_league)
 	# reload updated modules
 	importlib.reload(custom_challenge)
-	main(league)
+	importlib.reload(custom_ex_shard_recipe)
+	main(g_league)

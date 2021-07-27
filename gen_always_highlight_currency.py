@@ -1,17 +1,18 @@
 import json
 from copy import deepcopy
-
 import requests
 from datetime import datetime
 from bs4 import BeautifulSoup
 from item_config.card_meta import card_meta
+from item_config.gen_item_lists import bases
 
 
 def create_always_highlight():
 	currencytab = "0"  # Update to the tabid(s) where you keep your currency
+	ex_shard_tab = "5"
 	league = "Expedition"
 	accountname = "xanqos"
-	cookies = {'POESESSID': '648ef55b3b3080fb424e54025d0fc0ee'}  # update to your session id, blank session id will use default(on) highlighting rules
+	cookies = {'POESESSID': ''}  # update to your session id, blank session id will use default(on) highlighting rules
 	header = {
 		'User-Agent': 'xan.filter)',
 		'From': 'xanthics on discord'
@@ -20,8 +21,62 @@ def create_always_highlight():
 		requester = requests.session()
 	else:
 		requester = None
-	create_highlight_currency(currencytab, league, accountname, cookies, header, requester)
-	create_highlight_challenge(accountname, league, cookies, header, requester)
+#	create_highlight_currency(currencytab, league, accountname, cookies, header, requester)
+#	create_highlight_challenge(accountname, league, cookies, header, requester)
+	create_highlight_ex_recipe(ex_shard_tab, league, accountname, cookies, header, requester)
+
+
+# Given a tab, determine what items it is missing for a full ex shard recipe and create highlighting rules
+def create_highlight_ex_recipe(ex_shard_tab, league, accountname, cookies, header, requester):
+	# Prime our lookups so we can see what is missing
+	needed = {k: ["Crusader", "Elder", "Hunter", "Redeemer", "Shaper", "Warlord"] for k in ["Two Hand\" \"Staves\" \"Bow", 'Helmet', 'Body Armour', 'Gloves', 'Boots', 'Amulet', 'Ring', 'Belt']}
+	base_lookup = {}
+	for typ in bases:
+		for modset in bases[typ]:
+			group = ''
+			if any(x in modset.lower() for x in ["two hand", "stave", "bow"]):
+				group = "Two Hand\" \"Staves\" \"Bow"
+			elif any(x in modset for x in ['Helmet', 'Body Armour', 'Gloves', 'Boots', 'Amulet', 'Ring', 'Belt']):
+				group = bases[typ][modset][0]['base']
+			if group:
+				for item in bases[typ][modset]:
+					base_lookup[item['name']] = group
+
+	if cookies['POESESSID']:
+		request = f'https://www.pathofexile.com/character-window/get-stash-items?league={league}&realm=pc&accountName={accountname}&tabs=0&tabIndex={ex_shard_tab}'
+
+		req = requester.post(request, cookies=cookies, headers=header)
+		if req.status_code == 200:
+			data = json.loads(req.content)
+			if 'items' in data:
+				for item in data['items']:
+					if 'influences' in item:
+						typ = base_lookup[item['baseType']]
+						if typ in ['Amulet', 'Ring', 'Belt']:
+							continue
+						inf = [k.capitalize() for k in item['influences']]
+						for infl in inf:
+							if infl in needed[typ]:
+								needed[typ].remove(infl)
+							else:
+								print(f"Found influenced item that is not needed: {inf}, {typ}")
+			else:
+				print(f"Error: {req.reason} - {repr(data)}")
+		else:
+			print(f"Error code {req.status_code}: {req.reason}")
+
+	header = '''#!/usr/bin/python
+# -*- coding: utf-8 -*-
+# Created: {} UTC from "{}" data
+'''
+	buf = '''{}\ndesc = "Ex Shard Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
+	for item in sorted(needed):
+		infl = ' '.join(needed[item])
+		buf += f"\t'0 {item}': {{'class': '{item}', 'other': ['HasInfluence {infl}', 'Rarity Rare', 'Identified False'], 'type': 'recipe item rare'}},\n"
+	buf += u'}\n'
+
+	with open('autogen\\custom_ex_shard_recipe.py', 'w', encoding='utf-8') as f:
+		f.write(buf)
 
 
 # Uses your session id (if provided) to change always highlight settings for currency

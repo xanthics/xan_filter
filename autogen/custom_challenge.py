@@ -1,9 +1,51 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 07/21/2021(m/d/y) 02:42:40 UTC from "Expedition" data
+# Created: 07/26/2021(m/d/y) 21:52:31 UTC from "Expedition" data
 
 desc = "Challenge Autogen"
 
 # Base type : settings pair
 items = {
+	"0 Complete Unique Maps - Caer Blaidd, Wolfpack's Den": {'other': ['Rarity Unique'], 'type': 'challenge high', 'baseexact': 'Underground River Map'},
+	"0 Complete Unique Maps - Doryani's Machinarium": {'other': ['Rarity Unique'], 'type': 'challenge high', 'baseexact': 'Maze Map'},
+	"0 Complete Unique Maps - Hallowed Ground": {'other': ['Rarity Unique'], 'type': 'challenge high', 'baseexact': 'Cemetery Map'},
+	"0 Complete Unique Maps - Maelström of Chaos": {'other': ['Rarity Unique'], 'type': 'challenge high', 'baseexact': 'Atoll Map'},
+	"0 Complete Unique Maps - Mao Kun": {'other': ['Rarity Unique'], 'type': 'challenge high', 'baseexact': 'Shore Map'},
+	"0 Complete Unique Maps - Oba's Cursed Trove": {'other': ['Rarity Unique'], 'type': 'challenge high', 'baseexact': 'Underground Sea Map'},
+	"0 Complete Unique Maps - Perandus Manor": {'other': ['Rarity Unique'], 'type': 'challenge high', 'baseexact': 'Chateau Map'},
+	"0 Complete Unique Maps - Pillars of Arun": {'other': ['Rarity Unique'], 'type': 'challenge high', 'baseexact': 'Dunes Map'},
+	"0 Complete Unique Maps - Poorjoy's Asylum": {'other': ['Rarity Unique'], 'type': 'challenge high', 'baseexact': 'Temple Map'},
+	"0 Complete Unique Maps - The Coward's Trial": {'other': ['Rarity Unique'], 'type': 'challenge high', 'baseexact': 'Cursed Crypt Map'},
+	"0 Complete Unique Maps - The Vinktar Square": {'other': ['Rarity Unique'], 'type': 'challenge high', 'baseexact': 'Courtyard Map'},
+	"0 Complete Unique Maps - Vaults of Atziri": {'other': ['Rarity Unique'], 'type': 'challenge high', 'baseexact': 'Vaal Pyramid Map'},
+	"0 Turn in Divination Cards - A Mother's Parting Gift": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': "A Mother's Parting Gift"},
+	"0 Turn in Divination Cards - Azyran's Reward": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': "Azyran's Reward"},
+	"0 Turn in Divination Cards - Brotherhood in Exile": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': 'Brotherhood in Exile'},
+	"0 Turn in Divination Cards - Buried Treasure": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': 'Buried Treasure'},
+	"0 Turn in Divination Cards - Cameria's Cut": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': "Cameria's Cut"},
+	"0 Turn in Divination Cards - Deathly Designs": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': 'Deathly Designs'},
+	"0 Turn in Divination Cards - Love Through Ice": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': 'Love Through Ice'},
+	"0 Turn in Divination Cards - More is Never Enough": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': 'More is Never Enough'},
+	"0 Turn in Divination Cards - Peaceful Moments": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': 'Peaceful Moments'},
+	"0 Turn in Divination Cards - Terrible Secret of Space": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': 'Terrible Secret of Space'},
+	"0 Turn in Divination Cards - The Academic": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': 'The Academic'},
+	"0 Turn in Divination Cards - The Bitter Blossom": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': 'The Bitter Blossom'},
+	"0 Turn in Divination Cards - The Bones": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': 'The Bones'},
+	"0 Turn in Divination Cards - The Card Sharp": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': 'The Card Sharp'},
+	"0 Turn in Divination Cards - The Cataclysm": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': 'The Cataclysm'},
+	"0 Turn in Divination Cards - The Craving": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': 'The Craving'},
+	"0 Turn in Divination Cards - The Deal": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': 'The Deal'},
+	"0 Turn in Divination Cards - The Eternal War": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': 'The Eternal War'},
+	"0 Turn in Divination Cards - The Eye of the Dragon": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': 'The Eye of the Dragon'},
+	"0 Turn in Divination Cards - The Garish Power": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': 'The Garish Power'},
+	"0 Turn in Divination Cards - The Gulf": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': 'The Gulf'},
+	"0 Turn in Divination Cards - The Long Watch": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': 'The Long Watch'},
+	"0 Turn in Divination Cards - The Primordial": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': 'The Primordial'},
+	"0 Turn in Divination Cards - The Rite of Elements": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': 'The Rite of Elements'},
+	"0 Turn in Divination Cards - The Samurai's Eye": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': "The Samurai's Eye"},
+	"0 Turn in Divination Cards - The Strategist": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': 'The Strategist'},
+	"0 Turn in Divination Cards - The Sustenance": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': 'The Sustenance'},
+	"0 Turn in Divination Cards - The Unexpected Prize": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': 'The Unexpected Prize'},
+	"0 Turn in Divination Cards - The Wilted Rose": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': 'The Wilted Rose'},
+	"0 Turn in Divination Cards - Turn the Other Cheek": {'class': 'Divination Card', 'type': 'challenge high', 'baseexact': 'Turn the Other Cheek'},
 }
