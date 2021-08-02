@@ -141,7 +141,6 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, auto_a
 		else:
 			unique_cleaned_replica[base] = {'baseexact': base, 'value': min(unique_list_replica[base])}
 		unique_cleaned_replica[base]['other'] = ['Replica True']
-
 	price_currency(unique_cleaned, val, base_sound, currency_val, tiers, minval, auto_ah, ret)
 	price_currency(unique_cleaned_replica, val, base_sound, currency_val, tiers, minval, auto_ah, ret)
 
@@ -223,8 +222,12 @@ def price_currency(data, val, base_sound, currency_val, tiers, minval, auto_ah, 
 						break
 
 		# del data[item]['value']  # unused later, delete makes a smaller object, but unnecessary.
+		# We don't want rules for replica to overwrite non-replica
+		if 'other' in data[item] and any(data[item]['other'][x] == 'Replica True' for x in range(len(data[item]['other']))):
+			tval += 1
 		if rule:
 			ret[f'{tval} {item}'] = data[item]
+
 
 def convert_json_to_filter():
 	ret = {}
