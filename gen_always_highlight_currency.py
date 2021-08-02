@@ -71,8 +71,9 @@ def create_highlight_ex_recipe(ex_shard_tab, league, accountname, cookies, heade
 '''
 	buf = '''{}\ndesc = "Ex Shard Autogen"\n\n# Base type : settings pair\nitems = {{\n'''.format(header.format(datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'), league))
 	for item in sorted(needed):
-		infl = ' '.join(needed[item])
-		buf += f"\t'0 {item}': {{'class': '{item}', 'other': ['HasInfluence {infl}', 'Rarity Rare', 'Identified False'], 'type': 'recipe item rare'}},\n"
+		if needed[item]:
+			infl = ' '.join(needed[item])
+			buf += f"\t'0 {item}': {{'class': '{item}', 'other': ['HasInfluence {infl}', 'Rarity Rare', 'Identified False'], 'type': 'recipe item rare'}},\n"
 	buf += u'}\n'
 
 	with open('autogen\\custom_ex_shard_recipe.py', 'w', encoding='utf-8') as f:
@@ -110,16 +111,18 @@ def create_highlight_currency(currencytab, league, accountname, cookies, header,
 		"Orb of Regret": 100,
 		"Orb of Scouring": -1,
 		"Orb of Transmutation": 500,
-		"Perandus Coin": -1,
+		"Perandus Coin": 0,
 		"Portal Scroll": 40,
 		"Regal Orb": 100,
 		"Scroll of Wisdom": 100,
 		"Silver Coin": 200,
 		"Vaal Orb": 200,
 		"Stacked Deck": -1,
-		"Rogue's Marker": 1,
+		"Rogue's Marker": 0,
 		'Enkindling Orb': 40,
-		'Instilling Orb': 40
+		'Instilling Orb': 40,
+		'Veiled Chaos Orb': -1,
+		'Orb of Unmaking': -1
 	}
 
 	shards = {
@@ -137,7 +140,7 @@ def create_highlight_currency(currencytab, league, accountname, cookies, header,
 		"Ancient Orb": ['Ancient Shard']
 	}
 
-	currency = list(currencyvals.keys())
+	currency = [x for x in currencyvals if currencyvals[x]]
 	if cookies['POESESSID']:
 		request = f'https://www.pathofexile.com/character-window/get-stash-items?league={league}&realm=pc&accountName={accountname}&tabs=0&tabIndex={currencytab}'
 
@@ -147,7 +150,8 @@ def create_highlight_currency(currencytab, league, accountname, cookies, header,
 			skipped = set()
 			if 'items' in data:
 				for item in data['items']:
-					if item['typeLine'] in currencyvals and currencyvals[item['typeLine']] < item['stackSize'] and currencyvals[item['typeLine']] != -1:
+
+					if item['typeLine'] in currency and currencyvals[item['typeLine']] < item['stackSize'] and currencyvals[item['typeLine']] != -1:
 						currency.pop(currency.index(item['typeLine']))
 					elif item['typeLine'] not in currencyvals and 'Oil' not in item['typeLine'] and 'Shard' not in item['typeLine'] and 'Fragment' not in item['typeLine']:
 						skipped.add(item['typeLine'])
