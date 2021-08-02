@@ -261,10 +261,22 @@ Show
 		f.write("Hide\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
 
 
+# check that poe.ninja hasn't been checked 'recently'
+def last_ninja():
+	n_val = int(time.time())
+	if os.path.isfile('last_ninja_check'):
+		last = int(open('last_ninja_check').readline())
+		if n_val - last < 3600:
+			return False
+	open('last_ninja_check', 'w').write(str(n_val))
+	return True
+
+
 if __name__ == "__main__":
 	create_always_highlight()
 	g_league = 'tmpstandard'
-	pricetool_ninja.scrape_ninja(g_league)
+	if last_ninja():
+		pricetool_ninja.scrape_ninja(g_league)
 	# reload updated modules
 	importlib.reload(custom_challenge)
 	importlib.reload(custom_ex_shard_recipe)
