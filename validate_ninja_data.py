@@ -315,8 +315,8 @@ def validate_data(price_val):
 	price_val['currency']['Chaos Orb'] = {'base': 'Chaos Orb', 'value': 1, 'count': 200}
 	# Add low value items if they are missing from poe.ninja
 	for item in ["Rogue's Marker", 'Perandus Coin']:
-		if item not in price_val['currency'] or price_val['currency'][item]['value'] > 1/250:
-			price_val['currency'][item] = {'base': item, 'value': 1/250, 'count': 200}
+		if item not in price_val['currency'] or price_val['currency'][item]['value'] > 1/100:
+			price_val['currency'][item] = {'base': item, 'value': 1/100, 'count': 200}
 	for base, val, in [('Mirror of Kalandra', 12000), ('Exalted Orb', 80)]:
 		if base not in price_val['currency'] or price_val['currency'][base]['value'] < val:
 			price_val['currency'][base] = {'base': base, 'value': val, 'count': 200}
