@@ -47,7 +47,7 @@ def clean(price_val):
 			  'Chaos Shard': 'Chaos Orb', 'Exalted Shard': 'Exalted Orb', 'Annulment Shard': 'Orb of Annulment', 'Mirror Shard': 'Mirror of Kalandra'}
 
 	for s in shards:
-		if s not in price_val['currency'] and shards[s] in price_val['currency']:
+		if shards[s] in price_val['currency']:
 			price_val['currency'][s] = {'baseexact': s, 'value': price_val['currency'][shards[s]]['value'] / 20}
 
 	# save defaults
