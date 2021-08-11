@@ -49,6 +49,7 @@ items = {
 	"1 Watchstone": {"base": "Watchstone", "type": "show normal"},
 	"99 identified rares": {"other": ["Identified True"], "type": "rare low"},
 
-	"0 wand": {"class": "Wand", "other": ["ItemLevel >= 73", "Rarity Rare"], "type": "recipe item rare"},
+#	"0 86+ helmet": {"class": "Helmet", "other": ["ItemLevel >= 86", "Rarity < Unique"], "type": "recipe item rare"},
+#	"0 wand": {"class": "Wand", "other": ["ItemLevel >= 73", "Rarity Rare"], "type": "recipe item rare"},
 
 }
