@@ -11,18 +11,56 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, auto_a
 	# drops that are restricted to specific areas or leagues
 	# limited highlighting is only used if the only high drops are limited and there is at least 1 low drop
 	limiteddrop = [
+		# Quest Items
+		"Survival Instincts", "Survival Secrets", "Survival Skills", "Conqueror's Longevity", "Conqueror's Potency", "Conqueror's Efficiency",
+		"Assassin's Haste", "Poacher's Aim", "Warlord's Reach",
+		# Corruption only
+		"Ancient Waystones", "Atziri's Reign", "Blood Sacrifice", "Brittle Barrier", "Chill of Corruption", "Combustibles", "Corrupted Energy",
+		"Fragility", "Hungry Abyss", "Mutated Growth", "Pacifism", "Powerlessness", "Sacrificial Harvest", "Self-Flagellation", "Vaal Sentencing",
+		"Weight of Sin", "Fevered Mind", 'Blood of Corruption', "Malachai's Vision",
+		# Prophecy drop only
+		'Kintsugi', "Hinekora's Sight", "Ascent From Flesh", 'The Ascetic',
+		# Divination card only item
+		'Maw of Mischief',
+		# Fated Uniques
+		'Kaltensoul', 'Thirst for Horrors', 'Atziri\'s Reflection', 'The Oak', 'Ezomyte Hold', 'Frostferno', 'Martyr\'s Crown', 'Asenath\'s Chant', 'Deidbellow',
+		'Malachai\'s Awakening', 'Wall of Brambles', 'Wildwrap', 'Fox\'s Fortune', 'Crystal Vault', 'Windshriek', 'Greedtrap', 'Shavronne\'s Gambit', 'Duskblight',
+		'Sunspite', 'Hrimburn', 'Doedre\'s Malevolence', 'Amplification Rod', 'Corona Solaris', 'Sanguine Gambol', 'The Gryphon', 'Dreadsurge', 'Dreadbeak', 'Cameria\'s Avarice',
+		'Silverbough', 'The Tempest', 'Doomfletch\'s Prism', 'Death\'s Opus', 'Mirebough', 'Realm Ender', 'The Stormwall', 'The Cauteriser', 'Queen\'s Escape', 'The Dancing Duo',
+		'Hrimnor\'s Dirge', 'Panquetzaliztli', 'Geofri\'s Devotion', 'Voidheart', 'Kaom\'s Way', 'Winterweave', 'Timetwist', 'Ngamahu Tiki', 'Karui Charge', 'The Effigon',
+		'The Tactician', 'The Nomad', 'The Signal Fire', 'Cragfall', 'Hyrri\'s Demise', 'Chaber Cairn', 'Geofri\'s Legacy', 'The Iron Fortress', 'Whakatutuki o Matua',
+		# Vendor recipes
+		'The Anima Stone', 'Arborix', 'Duskdawn', 'The Goddess Scorned', 'The Goddess Unleashed', 'Kingmaker', 'Magna Eclipsis', 'The Retch', 'Star of Wraeclast', 'The Taming',
+		'The Vinktar Square', 'Loreweave',
+		#  incursion uniques from upgrades
+		'Transcendent Flesh', 'Transcendent Mind', 'Transcendent Spirit', 'Soul Ripper', 'Slavedriver\'s Hand', 'Coward\'s Legacy', 'Omeyocan', 'Fate of the Vaal', 'Mask of the Stitched Demon',
+		'Apep\'s Supremacy', 'Zerphi\'s Heart',
+		# incursion uniques
+		'Sacrificial Heart', 'String of Servitude', 'Tempered Flesh', 'Tempered Mind', 'Tempered Spirit',
+		'Shadowstitch', "Apep's Slumber", "Architect's Hand", "Coward's Chains", 'Dance of the Offered', 'Mask of the Spirit Drinker', 'Story of the Vaal',
+		# Upgraded Breach Uniques
+		'Xoph\'s Nurture', 'The Formless Inferno', 'Xoph\'s Blood', 'Tulfall', 'The Perfect Form', 'The Pandemonius', 'Hand of Wisdom and Action', 'Esh\'s Visage', 'Choir of the Storm',
+		'Uul-Netol\'s Embrace', 'The Red Trail', 'The Surrender', 'United in Dream', 'Skin of the Lords', 'Presence of Chayula', 'The Red Nightmare', 'The Green Nightmare', 'The Blue Nightmare',
+		# Harbinger Uniques -- Currently only drops as pieces
+		"The Flow Untethered", "The Fracturing Spinner", "The Tempest's Binding", "The Rippling Thoughts", "The Enmity Divine", "The Unshattered Will",
+		# Harbinger Pieces
+		"First Piece of Focus", "Second Piece of Focus", "Third Piece of Focus", "Fourth Piece of Focus",
+		"First Piece of Directions", "Second Piece of Directions", "Third Piece of Directions",
+		"First Piece of Storms", "Second Piece of Storms", "Third Piece of Storms",
+		"First Piece of Time", "Second Piece of Time",
+		"First Piece of Brutality", "Second Piece of Brutality", "Third Piece of Brutality",
+		"First Piece of the Arcane", "Second Piece of the Arcane", "Third Piece of the Arcane",
+		# upgraded harbinger uniques
+		"The Torrent's Reclamation", "The Shattered Divinity", "The Tempest's Liberation", "The Surging Thoughts", "The Yielding Mortality", "The Immortal Will",
 		# Guardians, Shaper, and Elder
-		"Obscurantis", "The Brass Dome", "The Scourge", "Razor of the Seventh Sun", "Slivertongue", "Brain Rattler", "Snakepit", "Eye of Innocence",
-		"Voidwalker", "Shaper's Touch", "Starforge", "Dying Sun",
-		"Leper's Alms", "Memory Vault", "Vulconus", "Beltimber Blade", "Grelwood Shank", "Augyre", "Yoke of Suffering", "Gloomfang",
+		"Voidwalker", "Shaper's Touch", "Starforge", "Dying Sun", 'Solstice Vigil',
 		"Blasphemer's Grasp", "Shimmeron", "Nebuloch", "Hopeshredder", "Impresence", "Cyclopean Coil",
-		"Indigon", "The Eternity Shroud", "Disintegrator", "Voidforge", "Mark of the Elder", "Mark of the Shaper", "Voidfletcher",
-		"Watcher's Eye",
+		"Indigon", "The Eternity Shroud", "Disintegrator", "Voidforge", "Mark of the Elder", "Mark of the Shaper", "Voidfletcher", "Watcher's Eye",
 		# Atziri
 		"Atziri's Step", "Doryani's Catalyst", "Doryani's Invitation", "Atziri's Promise",
 		"The Vertex", "Atziri's Splendour", "Atziri's Acuity", "Atziri's Disfavour",
 		# Maven
-		"Arn's Anguish", "Graven's Secret", "Olesya's Delight", "Viridi's Veil", 'The Walls', 'The Claim', 'The Closest Peak', 'Atop the Atlas', 'The Vast Horizon', 'The Builder', 'Restless Cycles', 'The False Hope',
+		"Arn's Anguish", "Graven's Secret", "Olesya's Delight", "Viridi's Veil", 'The Walls', 'The Claim', 'The Closest Peak', 'Atop the Atlas', 'The Vast Horizon', 'The Builder', 'Restless Cycles', 'The False Hope', 'Legacy of Fury',
 		# Bestiary League
 		"Saqawal's Flock", "Saqawal's Nest", "Saqawal's Talons", "Saqawal's Winds",
 		"Fenumus' Toxins", "Fenumus' Shroud", "Fenumus' Spinnerets", "Fenumus' Weave",
@@ -35,71 +73,43 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, auto_a
 		"Gorgon's Gaze",
 		# Doryani's Machinarium
 		"Doryani's Delusion",
-		# Talisman League
-		"Rigwald's Savagery", "Rigwald's Command", "Rigwald's Crest", "Rigwald's Quills", "Night's Hold", "Rigwald's Curse", "Blightwell", "Natural Hierarchy", "Eyes of the Greatwolf", "Feastbind", "Faminebind",
-		# Incursion League
-		"String of Servitude", "Apep's Slumber", "Mask of the Spirit Drinker", "Dance of the Offered", "Architect's Hand", "Story of the Vaal", "Sacrificial Heart", "Coward's Chains", "Soul Catcher", "Tempered Flesh", "Tempered Spirit", "Tempered Mind",
 		# Synthesis League
-		"Bottled Faith", "Perepiteia", "Mask of the Tribunal", "Garb of the Ephemeral", "Offering to the Serpent", "Storm's Gift", "Nebulis", "Circle of Guilt", "Circle of Regret", "Circle of Fear", "Circle of Anguish", "Circle of Nostalgia", "Maloney's Mechanism",
+		"Bottled Faith", "Perepiteia", "Mask of the Tribunal", "Garb of the Ephemeral", "Offering to the Serpent", "Storm's Gift", "Nebulis", "Circle of Guilt", "Circle of Regret", "Circle of Fear", "Circle of Anguish", "Circle of Nostalgia",
 		# Labyrinth
 		"Glitterdisc", "Viper's Scales", "Death's Door", "Winds of Change", "Izaro's Dilemma", "Chitus' Needle", "Spine of the First Claimant", "Xirgil's Crank", "Izaro's Turmoil",
+		"Emperor's Might", "Emperor's Cunning", "Emperor's Wit", "Emperor's Mastery",
 		# Breach League
-		"The Anticipation", "Esh's Mirror", "The Formless Flame", "Skin of the Loyal", "The Snowblind Grace", "The Infinite Pursuit", "The Infinite Pursuit", "	Hand of Thought and Motion", "Severed in Sleep", "Xoph's Inception", "Uul-Netol's Kiss", "Xoph's Heart", "The Halcyon", "Voice of the Storm",
+		"The Anticipation", "Esh's Mirror", "The Formless Flame", "Skin of the Loyal", "The Snowblind Grace", "The Infinite Pursuit", "Hand of Thought and Motion", "Severed in Sleep", "Xoph's Inception", "Uul-Netol's Kiss", "Xoph's Heart", "The Halcyon", "Voice of the Storm",
 		"The Red Dream", "The Green Dream", "The Blue Dream",
-		# Legion League
-		"Rathpith Globe", "Wreath of Phrecia", "Maw of Conquest", "Honourhome", "Voll's Protector", "Lioneye's Paws", "March of the Legion", "Maligaro's Virtuosity", "Asenath's Gentle Touch", "Aukuna's Will", "Divinarius", "Al Dhih", "Rebuke of the Vaal", "Lavianga's Wisdom", "Sign of the Sin Eater", "Darkscorn", "Pledge of Hands", "Kaom's Primacy",
-		"Marohi Erqi", "Tavukai", "The Sorrow of the Divine", "Glorious Vanity", "Militant Faith", "Brutal Restraint", "Elegant Hubris", "Lethal Pride",
 		# Abyss League
 		"Lightpoacher", "Shroud of the Lightless", "Bubonic Trail", "Tombfist", "Darkness Enthroned",
 		# Delve League
-		"Hale Negator", "Crown of the Tyrant", "Command of the Pit", "Cerberus Limb", "Aul's Uprising", "Doryani's Machinarium",
+		"Command of the Pit", "Crown of the Tyrant", "Cerberus Limb", "Aul's Uprising", "Doryani's Machinarium", 'Hale Negator',
 		"Putembo's Valley", "Putembo's Mountain", "Putembo's Meadow",
 		"Uzaza's Meadow", "Uzaza's Mountain", "Uzaza's Valley",
 		"Ahkeli's Mountain", "Ahkeli's Meadow", "Ahkeli's Valley",
-		# Domination & Nemesis League
-		"Berek's Grip", "Berek's Pass", "Berek's Respite", "Blood of the Karui", "Lavianga's Spirit",
-		# Domination League
-		"The Gull",
-		# Nemesis League
-		"Headhunter",
-		# Ambush & Invasion League
-		"Vaal Caress", "Voideye",
-		# Anarchy & Onslaught League
-		"Shavronne's Revelation", "Voll's Devotion",
-		# Anarchy League
-		"Gifts from Above", "Daresso's Salute",
-		# Onslaught League
-		"Death Rush", "Victario's Acuity",
-		# Tempest League
-		"Shadows and Dust", "Crown of the Pale King", "Trolltimber Spire", "Ylfeban's Trickery",
-		# Warbands League
-		"Brinerot Flag", "Brinerot Mark", "Brinerot Whalers", "Broken Faith", "Mutewind Pennant", "Mutewind Seal", "Mutewind Whispersteps", "Redblade Band", "Redblade Banner", "Redblade Tramplers", "Steppan Eard", "The Pariah",
+		"Precursor's Emblem",
 		# Betrayal League
-		"Bitterbind Point", "The Devouring Diadem", "The Queen's Hunger", "Cinderswallow", "Paradoxica", "The Crimson Storm", "The Crimson Storm", "Hyperboreus",
-		# Torment League
-		"Brutus' Lead Sprinkler", "Scold's Bridle", "The Rat Cage",
+		"Bitterbind Point", "The Devouring Diadem", "The Queen's Hunger", "Cinderswallow", "Paradoxica", "The Crimson Storm", "Hyperboreus", 'Vivinsect', "Cloak of Tawm'r Isley",
 		# Perandus League
 		"Seven-League Step", "Trypanon", "Umbilicus Immortalis", "Varunastra", "Zerphi's Last Breath",
-		# Rampage League
-		"Flesh and Spirit", "Null and Void", "Shadows and Dust",
-		# Beyond League
-		"Edge of Madness", "The Dark Seer", "The Harvest",
-		# Bloodlines League
-		"Ngamahu's Sign", "Tasalio's Sign", "Tasalio's Sign",
 		# Blight League
-		"Badge of the Brotherhood", "Breathstealer", "Cowl of the Ceraunophile", "Cowl of the Cryophile", "Cowl of the Thermophile", "Icefang", "Machina Mitts", "Rotting Legion", "Sporeguard", "The Stampede", "Venopuncture",
-		# Metamorph
-		'Astral Projector', 'Fury Valve', "Mother's Embrace", "Warrior's Legacy",
+		"Breathstealer", "Cowl of the Ceraunophile", "Cowl of the Cryophile", "Cowl of the Thermophile", "Sporeguard", "The Stampede",
 		# Conqueror
-		'Booming Populace', 'Hands of the High Templar', 'Irresistable Temptation', 'Leash of Oblation', 'Manastorm', 'Misinformation', 'Stalwart Defenders', 'Territories Unknown', 'Terror', 'The Black Cane', 'The Ivory Tower', 'The Saviour', 'Thread of Hope', 'War Among the Stars',
+		'Booming Populace', 'Hands of the High Templar', 'Irresistable Temptation', 'Misinformation', 'Stalwart Defenders', 'Territories Unknown', 'Terror', 'The Saviour', 'Thread of Hope', 'War Among the Stars',
 		# Delirium
-		'Algor Mortis', 'Assailum', 'Beacon of Madness', 'One With Nothing', 'Perfidy', 'The Interrogation', "Kitava's Teachings", 'Voices',
+		'One With Nothing', 'The Interrogation', "Kitava's Teachings", 'Voices', 'Split Personality',
 		# Harvest
-		'Abhorrent Interrogation', "Bear's Girdle", "Doryani's Prototype", "Emperor's Vigilance", 'Forbidden Shako', 'Law of the Wilds', 'Plume of Pursuit', 'Storm Secret', 'The Felbog Fang', 'The Immortal Will', 'The Shattered Divinity', 'The Surging Thoughts', "The Tempest's Liberation", "The Torrent's Reclamation", 'The Yielding Mortality', "Witchhunter's Judgment",
+		'Abhorrent Interrogation', "Bear's Girdle", 'Forbidden Shako', 'Law of the Wilds', 'Plume of Pursuit', 'The Felbog Fang',
+		"Witchhunter's Judgment",
 		# Heist
-		'Fated End', "Leadership's Price", "The Admiral", "Chains of Emancipation", "The Fledgling", "Nadir Mode", "Apex Mode", "Font of Thunder", "Actum", "The Iron Mass", "The Hidden Blade", "The Fulcrum", "Expedition's End", "Crest of Desire", "Corpsewalker", "Shattershard",
+		'Fated End', "Leadership's Price", "The Admiral", "Chains of Emancipation", "The Fledgling", "Nadir Mode", "Apex Mode", "Font of Thunder", "Actum", "The Iron Mass", "The Hidden Blade", "The Fulcrum", "Expedition's End", "Crest of Desire", "Shattershard",
+		# Warbands League
+		"Brinerot Flag", "Brinerot Mark", "Brinerot Whalers", "Broken Faith", "Mutewind Pennant", "Mutewind Seal", "Mutewind Whispersteps", "Redblade Band", "Redblade Banner", "Redblade Tramplers", "Steppan Eard", "The Pariah",
 		# Ritual
-		'Hand of the Fervent', 'Blackflame', 'Rotblood Promise', "Survivor's Guilt", "Qotra's Regulator"
+		"Blackflame", "Qotra's Regulator", "Rotblood Promise", "Survivor's Guilt", "Hands of the Fervent",
+		# Ultimatum
+		"Atziri's Rule", "Cane of Kulemak", "Glimpse of Chaos", "Hateforge", "Mahuxotl's Machination", "Relic of the Pact", "Steelworm", "Temptation Step", "The Scales of Justice", "Triumvirate Authority", "Yaomac's Accord",
 	]
 	unique_list = defaultdict(list)
 	unique_list_limited = defaultdict(list)
