@@ -21,7 +21,7 @@ from item_config import labyrinth
 from item_config import maps
 from item_config import recipe_item
 from item_config import show
-from item_config import text_color
+from item_config import uniform_color
 from item_config.gen_item_lists import genraresleveling, gennonrareleveling, genrareshighlighttiered
 from item_config.itemmod import itemmods
 
@@ -204,7 +204,7 @@ Show
 """.format(league, datetime.utcnow().strftime('%m/%d/%Y(m/d/y) %H:%M:%S'))
 	league = convertname(league)
 
-	buffer += gen_list_compact(text_color.items, text_color.desc)  # Text color rules first since they use Continue
+	buffer += gen_list_compact(uniform_color.items, uniform_color.desc)  # Text color rules first since they use Continue
 	buffer += gen_list_compact(show.items, show.desc)  # Always show these items
 	buffer += gen_list_compact(hide.items, hide.desc)  # Always hide these items
 	buffer += gen_list_compact(challenges.items, challenges.desc)
@@ -246,20 +246,20 @@ Show
 	with open("xan.{}.show.filter".format(league), "w", encoding='utf-8') as f:
 		f.write(buffer)
 		# Default for all other items
-		f.write("Show\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
+		f.write("Show\n\tSetFontSize 18\n\tSetBorderColor 100 100 100")
 	with open(os.path.join(poeDir, "xan.{}.show.filter".format(league)), "w", encoding='utf-8') as f:
 		f.write(buffer)
 		# Default for all other items
-		f.write("Show\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
+		f.write("Show\n\tSetFontSize 18\n\tSetBorderColor 100 100 100")
 
 	with open("xan.{}.hide.filter".format(league), "w", encoding='utf-8') as f:
 		f.write(buffer)
 		# Default for all other items
-		f.write("Hide\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
+		f.write("Hide\n\tSetFontSize 18\n\tSetBorderColor 100 100 100")
 	with open(os.path.join(poeDir, "xan.{}.hide.filter".format(league)), "w", encoding='utf-8') as f:
 		f.write(buffer)
 		# Default for all other items
-		f.write("Hide\n\tSetFontSize 18\n\tSetBackgroundColor 0 0 0 100\n\tSetBorderColor 100 100 100")
+		f.write("Hide\n\tSetFontSize 18\n\tSetBorderColor 100 100 100")
 
 
 # check that poe.ninja hasn't been checked 'recently'
