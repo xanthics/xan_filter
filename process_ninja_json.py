@@ -130,8 +130,6 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, auto_a
 					unique_list_limited[data[item]['baseexact']].append(data[item]['value'])
 				else:
 					unique_list[data[item]['baseexact']].append(data[item]['value'])
-	print('\n'.join(f"1) {x}, {unique_list[x]}" for x in sorted(unique_list) if x == 'Hydrascale Gauntlets'))
-	print('\n'.join(f"2) {x}, {unique_list_limited[x]}" for x in sorted(unique_list_limited) if x == 'Hydrascale Gauntlets'))
 
 	for base in set_of_bases:
 		if base in unique_list and max(unique_list[base]) >= currency_val['high'] > min(unique_list[base]):
@@ -146,7 +144,7 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, auto_a
 		else:
 			unique_cleaned[base] = {'baseexact': base, 'value': min(unique_list_limited[base])}
 		unique_cleaned[base]['other'] = ['Replica False']
-	print('\n'.join(f"3) {x}, {unique_cleaned[x]}" for x in sorted(unique_cleaned) if x == 'Hydrascale Gauntlets'))
+
 	for base in unique_list_replica:
 		if max(unique_list_replica[base]) >= currency_val['high'] > min(unique_list_replica[base]):
 			unique_cleaned_replica[base] = {'baseexact': base, 'value': -1}
