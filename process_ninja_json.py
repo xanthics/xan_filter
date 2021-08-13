@@ -130,12 +130,14 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, auto_a
 					unique_list_limited[data[item]['baseexact']].append(data[item]['value'])
 				else:
 					unique_list[data[item]['baseexact']].append(data[item]['value'])
+	print('\n'.join(f"1) {x}, {unique_list[x]}" for x in sorted(unique_list) if x == 'Hydrascale Gauntlets'))
+	print('\n'.join(f"2) {x}, {unique_list_limited[x]}" for x in sorted(unique_list_limited) if x == 'Hydrascale Gauntlets'))
 
 	for base in set_of_bases:
 		if base in unique_list and max(unique_list[base]) >= currency_val['high'] > min(unique_list[base]):
 			unique_cleaned[base] = {'baseexact': base, 'value': -1}
-		elif base in unique_list_limited and base in unique_list and (max(unique_list_limited[base]) >= currency_val['high'] > min(unique_list[base])
-																	  or max(unique_list_limited[base]) >= currency_val['high'] > min(unique_list_limited[base])):
+		elif base in unique_list_limited and ((base in unique_list and max(unique_list_limited[base]) >= currency_val['high'] > max(unique_list[base])) or
+											  (base not in unique_list and max(unique_list_limited[base]) >= currency_val['high'] > min(unique_list_limited[base]))):
 			unique_cleaned[base] = {'baseexact': base, 'value': -2}
 		elif base in unique_list and base in unique_list_limited:
 			unique_cleaned[base] = {'baseexact': base, 'value': min(unique_list[base] + unique_list_limited[base])}
@@ -144,13 +146,14 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, auto_a
 		else:
 			unique_cleaned[base] = {'baseexact': base, 'value': min(unique_list_limited[base])}
 		unique_cleaned[base]['other'] = ['Replica False']
-
+	print('\n'.join(f"3) {x}, {unique_cleaned[x]}" for x in sorted(unique_cleaned) if x == 'Hydrascale Gauntlets'))
 	for base in unique_list_replica:
 		if max(unique_list_replica[base]) >= currency_val['high'] > min(unique_list_replica[base]):
 			unique_cleaned_replica[base] = {'baseexact': base, 'value': -1}
 		else:
 			unique_cleaned_replica[base] = {'baseexact': base, 'value': min(unique_list_replica[base])}
 		unique_cleaned_replica[base]['other'] = ['Replica True']
+
 	price_currency(unique_cleaned, val, base_sound, currency_val, tiers, minval, auto_ah, ret)
 	price_currency(unique_cleaned_replica, val, base_sound, currency_val, tiers, minval, auto_ah, ret)
 
