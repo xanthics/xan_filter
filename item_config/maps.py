@@ -25,6 +25,7 @@ items = {
 	"003 Delirium Map": {"class": "Maps", "other": ["AnyEnchantment True", "MapTier <= 5"], "type": "challenge normal"},
 	"004 Delirium Map": {"class": "Maps", "other": ["AnyEnchantment True"], "type": "challenge normal"},
 
+	"010 Uber Blighted": {"class": "Maps", "other": ["UberBlightedMap True"], "type": "challenge very high"},
 	"011 Blighted": {"class": "Maps", "other": ["BlightedMap True", "MapTier >= 16"], "type": "challenge very high"},
 	"012 Blighted": {"class": "Maps", "other": ["BlightedMap True", "MapTier >= 11"], "type": "challenge high"},
 	"013 Blighted": {"class": "Maps", "other": ["BlightedMap True", "MapTier <= 5"], "type": "challenge normal"},

@@ -11,7 +11,7 @@ items = {
 	"03 Quality Gem": {"class": "Gems", "other": ["Quality >= 1"], "type": "ignore"},
 	"04 Leveled Gem ": {"class": "Gems", "other": ["GemLevel >= 2"], "type": "gem low"},
 	"1 Portal": {"baseexact": "Portal", "class": "Gems", "type": "gem normal"},
-	"6 Awakened Gems": {"base": 'Awakened', "class": "Gems", "type": "gem high"},
+	"0 Awakened Gems": {"base": 'Awakened', "class": "Gems", "type": "gem high"},
 	"7 Vaal Gems": {"base": "Vaal", "class": "Gems", "type": "gem low"},
 	"8 Other Gems Leveling": {"class": "Gems", "other": ["AreaLevel < 68"], "type": "gem low"},
 }

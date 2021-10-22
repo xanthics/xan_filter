@@ -491,7 +491,7 @@ settings.update({
 					'CustomAlertSound "{}_show"'.format('low'),
 					"SetFontSize {}".format(size['normal'])],
 	"show normal quiet": ["SetBorderColor {}".format(color['premiumlpurple']),
-						  'MinimapIcon 2 Grey Square',
+						  'MinimapIcon 2 Orange Moon',
 						  "SetFontSize {}".format(size['normal'])],
 	"show level": ["SetBorderColor {}".format(color['premiumdgrey']),
 					"SetFontSize {}".format(size['normal'])],

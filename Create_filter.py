@@ -237,7 +237,7 @@ Show
 		buffer += gen_list_compact(gennonrareleveling(flags, overlevel=2, maxlevel=25), desc)
 
 	buffer += gen_list_compact(recipe_item.items, recipe_item.desc)  # Items for vendor recipe
-	buffer += gen_list_compact(custom_ex_shard_recipe.items, custom_ex_shard_recipe.desc)  # autogen rules for ex shard recipe items
+#	buffer += gen_list_compact(custom_ex_shard_recipe.items, custom_ex_shard_recipe.desc)  # autogen rules for ex shard recipe items
 	buffer += gen_list_compact(show_catchall.items, show_catchall.desc)  # Always show these items
 
 	poeDir = get_poe_path()
@@ -276,8 +276,8 @@ def last_ninja():
 if __name__ == "__main__":
 	create_always_highlight()
 	g_league = 'tmpstandard'
-	if last_ninja():
-		pricetool_ninja.scrape_ninja(g_league)
+#	if last_ninja():
+#		pricetool_ninja.scrape_ninja(g_league)
 	# reload updated modules
 	importlib.reload(custom_challenge)
 	importlib.reload(custom_ex_shard_recipe)

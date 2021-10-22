@@ -10,7 +10,7 @@ from item_config.gen_item_lists import bases
 def create_always_highlight():
 	currencytab = "0"  # Update to the tabid(s) where you keep your currency
 	ex_shard_tab = "5"
-	league = "Expedition"
+	league = "Scourge"
 	accountname = "xanqos"
 	cookies = {'POESESSID': ''}  # update to your session id, blank session id will use default(on) highlighting rules
 	header = {
@@ -111,7 +111,6 @@ def create_highlight_currency(currencytab, league, accountname, cookies, header,
 		"Orb of Regret": 100,
 		"Orb of Scouring": -1,
 		"Orb of Transmutation": 500,
-		"Perandus Coin": 0,
 		"Portal Scroll": 40,
 		"Regal Orb": 100,
 		"Scroll of Wisdom": 100,
