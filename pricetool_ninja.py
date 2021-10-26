@@ -15,8 +15,8 @@ def scrape_ninja(league='tmpstandard'):
 	leaguelookup = {
 		"Standard": "Standard",
 		"Hardcore": "Hardcore",
-		"tmpstandard": "Expedition",
-		"tmphardcore": "Hardcore Expedition",
+		"tmpstandard": "Scourge",
+		"tmphardcore": "Hardcore Scourge",
 	}
 
 	keys = [
@@ -110,7 +110,9 @@ def scrape_ninja(league='tmpstandard'):
 					else:
 						pc = i['pay']['count'] if 'pay' in i else 0
 						rc = i['receive']['count'] if 'receive' in i else 0
-						if "Splinter" not in i['currencyTypeName']:
+						if 'Tainted' in i['currencyTypeName']:
+							price_val['challenge_stack'][i['currencyTypeName']] = {'baseexact': i['currencyTypeName'], 'value': i['chaosEquivalent'], 'count': pc + rc}
+						elif "Splinter" not in i['currencyTypeName']:
 							price_val[classtypes[key]][i['currencyTypeName']] = {'baseexact': i['currencyTypeName'], 'value': i['chaosEquivalent'], 'count': pc + rc}
 						else:
 							price_val['currency'][i['currencyTypeName']] = {'baseexact': i['currencyTypeName'], 'value': i['chaosEquivalent'], 'count': pc + rc}

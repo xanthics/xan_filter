@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Created: 10/22/2021(m/d/y) 19:32:18 UTC from "Scourge" data
+# Created: 10/26/2021(m/d/y) 14:48:23 UTC from "Scourge" data
 
 desc = "Ex Shard Autogen"
 

@@ -231,8 +231,8 @@ Show
 
 	if leveling:
 		desc = 'item for leveling'
-		flags = ['Accessory', 'Axe', 'Sword']  # 'All'  # see item_config/rare_gen - genraresleveling for valid values
-		buffer += gen_list_compact(gennonrareleveling(flags, overlevel=25, maxlevel=25), desc)
+#		flags = ['Accessory', 'Axe', 'Sword']  # 'All'  # see item_config/rare_gen - genraresleveling for valid values
+#		buffer += gen_list_compact(gennonrareleveling(flags, overlevel=25, maxlevel=25), desc)
 		flags = ['All']  # see item_config/rare_gen - genraresleveling for valid values
 		buffer += gen_list_compact(gennonrareleveling(flags, overlevel=2, maxlevel=25), desc)
 
@@ -268,16 +268,15 @@ def last_ninja():
 	if os.path.isfile('last_ninja_check'):
 		last = int(open('last_ninja_check').readline())
 		if n_val - last < 3600:
-			return False
+			return
+	pricetool_ninja.scrape_ninja(g_league)
 	open('last_ninja_check', 'w').write(str(n_val))
-	return True
 
 
 if __name__ == "__main__":
 	create_always_highlight()
 	g_league = 'tmpstandard'
-#	if last_ninja():
-#		pricetool_ninja.scrape_ninja(g_league)
+	last_ninja()
 	# reload updated modules
 	importlib.reload(custom_challenge)
 	importlib.reload(custom_ex_shard_recipe)
