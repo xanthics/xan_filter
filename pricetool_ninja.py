@@ -6,6 +6,7 @@
 import json
 import requests
 from ninja_helm_lookup import helmnames
+from ninja_cluster_lookup import clusternames
 from validate_ninja_data import validate_data
 from item_config.card_meta import card_meta
 
@@ -42,6 +43,7 @@ def scrape_ninja(league='tmpstandard'):
 		'UniqueAccessory',
 		'Watchstone',
 		'DeliriumOrb',
+		'ClusterJewel'
 	]
 
 	classtypes = {
@@ -65,8 +67,10 @@ def scrape_ninja(league='tmpstandard'):
 		'Prophecy': 'prophecy',
 
 		'BaseType': 'base',
+		'ClusterJewel': 'base',
 
 		'HelmetEnchant': 'enchant',
+
 
 		'UniqueMap': 'unique',
 		'UniqueJewel': 'unique',
@@ -231,6 +235,18 @@ def scrape_ninja(league='tmpstandard'):
 					if other:
 						price_val[classtypes[key]][f"{99 - i['gemLevel']}{99 - i['gemQuality']}{1 if 'corrupted' in i else 0} {i['name']}"]['other'].append(f"GemQualityType {other}")
 
+		elif key == 'ClusterJewel':
+			for i in data['lines']:
+				passives = i['variant'].split()[0]
+				lu = False
+				for name in clusternames:
+					if all(x in i['name'] for x in clusternames[name]):
+						lu = name
+						break
+				if lu:
+					price_val[classtypes[key]][f"{passives}-{i['levelRequired']}-{i['name'].replace('%', '')}"] = {'baseexact': i['baseType'], "class": "Jewel", 'other': [f"ItemLevel {i['levelRequired']}", f'EnchantmentPassiveNum {passives}', f'EnchantmentPassiveNode "{lu}"'], 'value': i['chaosValue'], 'count': i['count']}
+				else:
+					print(f"Lookup of cluster jewel failed for: {i['name']}")
 		else:
 			print('Unhandled key: "{}"'.format(key))
 

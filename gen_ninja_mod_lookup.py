@@ -10,12 +10,7 @@ def validate(state, conditions):
 	return all([conditions[state[x][0]]['min'] <= state[x][1] <= conditions[state[x][0]]['max'] for x in state])
 
 
-def main():
-	with open(r'C:\git\RePoE\RePoE\data\mods.json', 'r') as f:
-		mods = json.load(f)
-	with open(r'C:\git\RePoE\RePoE\data\stat_translations.json', 'r') as f:
-		translation = json.load(f)
-
+def gen_helm_lookups(mods, translation):
 	transmod = {}
 
 	value_transforms = {
@@ -29,7 +24,8 @@ def main():
 		"divide_by_two_0dp": 1/2,
 		"divide_by_five": 1/5,
 		"divide_by_three": 1/3,
-		"divide_by_one_hundred_2dp_if_required": 1/100
+		"divide_by_one_hundred_2dp_if_required": 1/100,
+		"negate_and_double": -2
 	}
 
 	for val in translation:
@@ -105,6 +101,70 @@ def main():
 
 	with open('ninja_helm_lookup.py', 'w') as f:
 		f.write(buf)
+
+
+def gen_cluster_lookups(clustermods, translation):
+	nodes = {}
+	stats = {}
+	for size in clustermods:
+		for notable in clustermods[size]['passive_skills']:
+			nodes[notable['name']] = {'stats': notable['stats']}
+			for stat in notable['stats']:
+				stats[f"{stat} {notable['stats'][stat]}"] = {'stat': stat, 'value': notable['stats'][stat]}
+	transmod = {}
+	for val in translation:
+		for key in val['ids']:
+			if key in transmod:
+				print(f"Error: {key}")
+			transmod[key] = val
+
+	lookup = {}
+	for key in stats:
+		if stats[key]['stat'] not in transmod:
+			continue
+		cond = False
+		if len(transmod[stats[key]['stat']]['English']) == 1:
+			cond = transmod[stats[key]['stat']]['English'][0]['string'].format(stats[key]['value'])
+		else:
+			for condition in transmod[stats[key]['stat']]['English']:
+				if validate({stats[key]['stat']: [0, stats[key]['value']]}, condition['condition']):
+					cond = condition['string'].format(stats[key]['value'])
+					break
+		if 'Global' in cond:
+			cond = cond.replace('Global ', '')
+		if cond:
+			lookup[f"{stats[key]['stat']} {stats[key]['value']}"] = cond
+		else:
+			print(f"Unable to find: {key}")
+
+	q = {}
+	for node in nodes:
+		keys = []
+		for stat in nodes[node]['stats']:
+			keys.append(f"{stat} {nodes[node]['stats'][stat]}")
+		if any(x in keys for x in ['base_strength 10', 'base_dexterity 10', 'base_intelligence 10']):
+			continue
+		q[node] = [lookup[x] for x in keys]
+
+	buf = 'clusternames = {\n'
+	for i in sorted(q):
+		buf += f'\t"{i}": {q[i]},\n'
+	buf += '}'
+
+	with open('ninja_cluster_lookup.py', 'w') as f:
+		f.write(buf)
+
+
+def main():
+	with open(r'C:\git\RePoE\RePoE\data\mods.json', 'r') as f:
+		mods = json.load(f)
+	with open(r'C:\git\RePoE\RePoE\data\cluster_jewels.json', 'r') as f:
+		clustermods = json.load(f)
+	with open(r'C:\git\RePoE\RePoE\data\stat_translations.json', 'r') as f:
+		translation = json.load(f)
+
+	gen_helm_lookups(mods, translation)
+	gen_cluster_lookups(clustermods, translation)
 
 
 if __name__ == "__main__":
