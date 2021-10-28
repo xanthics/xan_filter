@@ -5,6 +5,7 @@
 import importlib
 from datetime import datetime
 import os
+import shutil
 from io import open
 import time
 
@@ -242,6 +243,17 @@ Show
 
 	poeDir = get_poe_path()
 	print("Writing files to: {}".format(poeDir))
+
+	# Copy source_sound to poeDir, but only if missing
+	sound_dir = os.path.join(poeDir, "source_sounds")
+	if not os.path.isdir(sound_dir):
+		print("Making source_sounds directory")
+		os.mkdir(sound_dir)
+	for _, _, filenames in os.walk("source_sounds"):
+		for f in filenames:
+			if f not in os.listdir(sound_dir):
+				print(f"copying missing soundfile: {f}")
+				shutil.copyfile(os.path.join('source_sounds', f), os.path.join(sound_dir, f))
 
 	with open("xan.{}.show.filter".format(league), "w", encoding='utf-8') as f:
 		f.write(buffer)
