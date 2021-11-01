@@ -83,6 +83,13 @@ def scrape_ninja(league='tmpstandard'):
 		'Oil': 'challenge_stack',
 	}
 
+	ilvl_cluster_range = {
+		1: 50,
+		50: 68,
+		68: 75,
+		75: 84
+	}
+
 	requester = requests.session()
 	header = {
 		'User-Agent': 'xan.filter',
@@ -244,7 +251,10 @@ def scrape_ninja(league='tmpstandard'):
 						lu = name
 						break
 				if lu:
-					price_val[classtypes[key]][f"{passives}-{i['levelRequired']}-{i['name'].replace('%', '')}"] = {'baseexact': i['baseType'], "class": "Jewel", 'other': [f"ItemLevel {i['levelRequired']}", f'EnchantmentPassiveNum {passives}', f'EnchantmentPassiveNode "{lu}"'], 'value': i['chaosValue'], 'count': i['count']}
+					price_val[classtypes[key]][f"{passives}-{i['levelRequired']}-{i['name'].replace('%', '')}"] = {'baseexact': i['baseType'], "class": "Jewel", 'other': [f"ItemLevel >= {i['levelRequired']}", f'EnchantmentPassiveNum {passives}', f'EnchantmentPassiveNode "{lu}"'], 'value': i['chaosValue'], 'count': i['count']}
+					if i['levelRequired'] in ilvl_cluster_range:
+						price_val[classtypes[key]][f"{passives}-{i['levelRequired']}-{i['name'].replace('%', '')}"]['other'].append(f"ItemLevel < {ilvl_cluster_range[i['levelRequired']]}")
+
 				else:
 					print(f"Lookup of cluster jewel failed for: {i['name']}")
 		else:
