@@ -149,12 +149,11 @@ def create_highlight_currency(currencytab, league, accountname, cookies, header,
 			skipped = set()
 			if 'items' in data:
 				for item in data['items']:
-
 					if item['typeLine'] in currency and currencyvals[item['typeLine']] < item['stackSize'] and currencyvals[item['typeLine']] != -1:
 						currency.pop(currency.index(item['typeLine']))
-					elif item['typeLine'] not in currencyvals and 'Oil' not in item['typeLine'] and 'Shard' not in item['typeLine'] and 'Fragment' not in item['typeLine']:
+					elif item['typeLine'] not in currencyvals and 'Shard' not in item['typeLine'] and 'Fragment' not in item['typeLine']:
 						skipped.add(item['typeLine'])
-					if item['typeLine'] in shards and item['stackSize'] > currencyvals[item['typeLine']] * 0.5:
+					if item['typeLine'] in shards and item['stackSize'] >= 10 and item['typeLine'] != 'Chaos Orb':  # currencyvals[item['typeLine']] * 0.5:
 						del shards[item['typeLine']]
 				print(f"Skipped determining always show for: {sorted(skipped)}")
 			else:
