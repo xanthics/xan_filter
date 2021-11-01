@@ -16,8 +16,6 @@ items = {
 	"04 Chronicle of Atzoatl": {"baseexact": "Chronicle of Atzoatl", "class": "Misc Map Items", "type": "show high"},
 	"04 Inscribed Ultimatum": {"baseexact": "Inscribed Ultimatum", "class": "Misc Map Items", "type": "show high"},
 	"0 Fishing Rod": {"baseexact": "Fishing Rod", "type": "show very high"},
-#	"0 Hideout Doodads": {"class": "Hideout Doodads", "type": "show low"},
-#	"0 Microtransactions": {"class": "Microtransactions", "type": "show low"},
 	"0 Quest": {"class": "Quest", "type": "quest"},
 	"1 Cobalt Watchstone": {"baseexact": "Cobalt Watchstone", "type": "quest"},
 	"1 Crimson Watchstone": {"baseexact": "Crimson Watchstone", "type": "quest"},
