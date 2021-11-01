@@ -44,13 +44,18 @@ items = {
 	"8 50": {"other": ["DropLevel <= 50", "AreaLevel >= 60", "AreaLevel <= 67"], "type": "rare low"},
 	"8 55": {"other": ["DropLevel <= 55", "AreaLevel >= 65", "AreaLevel <= 67"], "type": "rare low"},
 
+	"1 Small Cluster Jewel": {"baseexact": "Small Cluster Jewel", "class": "Jewel", "type": "show normal"},
+	"1 Medium Cluster Jewel": {"baseexact": "Medium Cluster Jewel", "class": "Jewel", "other": ['EnchantmentPassiveNum <= 5'], "type": "show normal"},
+	"1 Large Cluster Jewel": {"baseexact": "Large Cluster Jewel", "class": "Jewel", "other": ['EnchantmentPassiveNum <= 8'], "type": "show normal"},
+	"2 Any Cluster Jewel": {"base": "Cluster Jewel", "class": "Jewel", "type": "show low"},
+
 	"90 Other rares": {"other": ["AreaLevel <= 67"], "type": "rare normal"},
 	"91 scourged rares": {"other": ["Scourged True"], "type": "rare corrupted"},
 	"92 corrupted rares": {"other": ["Corrupted True", "CorruptedMods > 0"], "type": "rare corrupted"},
 	"93 Talisman rares": {"base": "Talisman", "type": "rare corrupted"},
 	"99 identified rares": {"other": ["Identified True"], "type": "rare low"},
 
-	"0 86+ helmet": {"class": "Helmet", "other": ["ItemLevel >= 86", "Rarity < Unique"], "type": "show normal quiet"},
+	"0 86+ helmet": {"class": "Helmet", "other": ["ItemLevel >= 86", "Rarity < Unique", "DropLevel >= 68"], "type": "show normal quiet"},
 #	"0 wand": {"class": "Wand", "other": ["ItemLevel >= 73", "Rarity Rare"], "type": "show normal quiet"},
 
 }
