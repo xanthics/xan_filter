@@ -111,7 +111,7 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, auto_a
 		# Ultimatum
 		"Atziri's Rule", "Cane of Kulemak", "Glimpse of Chaos", "Hateforge", "Mahuxotl's Machination", "Relic of the Pact", "Steelworm", "Temptation Step", "The Scales of Justice", "Triumvirate Authority", "Yaomac's Accord",
 		# Scourge
-		"Strangegrasp", "Uul-Netol's Vow", "Stasis Prison",
+		"Stranglegasp", "Uul-Netol's Vow", "Stasis Prison",
 	]
 	unique_list = defaultdict(list)
 	unique_list_limited = defaultdict(list)

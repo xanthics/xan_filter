@@ -302,7 +302,7 @@ def trim_uniques(uniques):
 		# upgraded harbinger uniques
 		"The Torrent's Reclamation", "The Shattered Divinity", "The Tempest's Liberation", "The Surging Thoughts", "The Yielding Mortality", "The Immortal Will",
 		# Special uniques that would skew their basetype value and are handled elsewhere in show.py
-		'Tabula Rasa'
+		'Tabula Rasa', "The Squire"
 	]
 
 	for u in upgraded:

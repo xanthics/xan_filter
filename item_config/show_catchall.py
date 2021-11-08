@@ -28,7 +28,7 @@ items = {
 	"02 6L": {"other": ["Rarity Unique", "LinkedSockets 6"], "type": "show high"},
 	"03 6S": {"other": ["Rarity Unique", "Sockets 6"], "type": "show normal"},
 
-	#	"1 Alternate Gems": {"other": ["AlternateQuality True"], "type": "challenge normal"},
+#	"1 Alternate Gems": {"other": ["AlternateQuality True"], "type": "challenge normal"},
 #	"1 Replica Unique": {"other": ["Replica True"], "type": "challenge normal"},
 #	"1 Rogue's Marker": {"baseexact": "Rogue's Marker", "class": "Currency", "type": "challenge normal"},
 
@@ -50,10 +50,10 @@ items = {
 	"2 Any Cluster Jewel": {"base": "Cluster Jewel", "class": "Jewel", "type": "show low"},
 
 	"90 Other rares": {"other": ["AreaLevel <= 67"], "type": "rare normal"},
-	"91 scourged rares": {"other": ["Scourged True"], "type": "rare corrupted"},
+#	"91 scourged rares": {"other": ["Scourged True"], "type": "rare corrupted"},
 	"92 corrupted rares": {"other": ["Corrupted True", "CorruptedMods > 0"], "type": "rare corrupted"},
-	"93 Talisman rares": {"base": "Talisman", "type": "rare corrupted"},
-	"99 identified rares": {"other": ["Identified True"], "type": "rare low"},
+#	"93 Talisman rares": {"base": "Talisman", "type": "rare corrupted"},
+#	"99 identified rares": {"other": ["Identified True"], "type": "rare low"},
 
 	"0 86+ helmet": {"class": "Helmet", "other": ["ItemLevel >= 86", "Rarity < Unique", "DropLevel >= 68"], "type": "show normal quiet"},
 #	"0 wand": {"class": "Wand", "other": ["ItemLevel >= 73", "Rarity Rare"], "type": "show normal quiet"},

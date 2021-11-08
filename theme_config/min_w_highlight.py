@@ -396,7 +396,7 @@ settings.update({
 							   "SetFontSize {}".format(size['small']),
 						       "SetBackgroundColor {} 220".format(color['cold'])],
 
-	"item mod": ["SetBorderColor {}".format(color['premiumlpurple']),
+	"item mod": ["SetBorderColor {} 150".format(color['premiumlpurple']),
 				 'MinimapIcon 2 Grey UpsideDownHouse',
 				 "SetFontSize {}".format(size['normal'])],
 

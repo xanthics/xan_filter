@@ -6,7 +6,7 @@ desc = "Flasks"
 
 # Base type : settings pair
 items = {
-	"01 Qual Flask": {"base": "Flask", "other": ["Quality = 20", "Rarity Normal"], "type": "show normal"},
+	"01 Qual Flask": {"base": "Flask", "other": ["Quality = 20", "Rarity Normal"], "type": "show normal quiet"},
 	"02 Qual Flask": {"base": "Flask", "other": ["Quality >= 10"], "type": "ignore"},
 	"03 Qual Flask": {"base": "Flask", "other": ["Quality >= 1", "AreaLevel <= 78"], "type": "ignore"},
 	"04 Quicksilver Flask <= 25": {"base": "Quicksilver Flask", "other": ["AreaLevel <= 25"], "type": "normal"},

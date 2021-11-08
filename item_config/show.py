@@ -8,6 +8,7 @@ desc = "Always show"
 items = {
 	"0 Leaguestone": {"class": "Leaguestone", "type": "show high"},
 	"01 Tabula Exception": {"baseexact": "Simple Robe", "other": ["SocketGroup WWWWWW"], "type": "unique high"},
+	"01 The Squire Exception": {"baseexact": "Elegant Round Shield", "other": ["Sockets WWW"], "type": "unique extremely high"},
 	"02 6L": {"other": ["Rarity < Unique", "LinkedSockets 6"], "type": "show high"},
 	"03 6S": {"other": ["Rarity < Unique", "Sockets 6"], "type": "show normal quiet"},
 	"04 5L": {"other": ["Rarity < Unique", "LinkedSockets 5", 'CustomAlertSound "high_5link"'], "type": "normal border"},
