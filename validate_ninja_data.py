@@ -10,7 +10,7 @@ import json
 def clean(price_val):
 	# list of flat price data
 	# gems and base are nested, need special handling
-	base_items = ['currency', 'currency_strict', 'div', 'enchant', 'fragment', 'incubator', 'prophecy', 'unique', 'base', 'gems']
+	base_items = ['currency', 'currency_strict', 'div', 'enchant', 'fragment', 'incubator', 'unique', 'base', 'gems']
 	# The minimum amount of an item that must exist in poe.ninja data to be considered a valid price
 	min_thres = 10
 	# load defaults
@@ -256,20 +256,10 @@ def fix_divs(price_val):
 			"The Immortal": {"lookup": "House of Mirrors", "factor": 1 / 10},
 			"The Nurse": {"lookup": "The Doctor", "factor": 1 / 8},
 		},
-		"prophecy": {
-			"Beauty Through Death": {"lookup": "The Queen's Sacrifice", "factor": 1 / 5},
-			"Immortal Resolve": {"lookup": "Fated Connections", "factor": 1 / 6},
-			"The Iron Bard": {"lookup": "Trash to Treasure", "factor": 1 / 9},
-			"The Jeweller's Boon": {"lookup": "The Jeweller's Touch", "factor": 1 / 5},
-			"The Mad King": {"lookup": "The King's Path", "factor": 1 / 7},
-			"The Valley of Steel Boxes": {"lookup": "Monstrous Treasure", "factor": 1 / 9},
-			'Vile Power': {"lookup": "Ancient Doom", "factor": 1 / 5},
-			'The Side Quest': {"lookup": "A Master Seeks Help", "factor": 1 / 5},
-		},
 	}
 
 	# Overwrite values for some cards based on what they give
-	for typ, table in [("uniqueitem", price_val['unique']), ("currencyitem", price_val['currency']), ("prophecy", price_val['prophecy']), ("divination", price_val['div'])]:
+	for typ, table in [("uniqueitem", price_val['unique']), ("currencyitem", price_val['currency']), ("divination", price_val['div'])]:
 		for card in cardlookup[typ]:
 			current = cardlookup[typ][card]
 			if current['lookup'] in table and card in price_val['div']:
@@ -314,7 +304,7 @@ def validate_data(price_val):
 	# Add missing value for chaos
 	price_val['currency']['Chaos Orb'] = {'base': 'Chaos Orb', 'value': 1, 'count': 200}
 	# Add low value items if they are missing from poe.ninja
-	for item, c in [("Rogue's Marker", 1/350), ("Scroll of Wisdom", 1/100), ("Portal Scroll", 1/80)]:  # , 'Perandus Coin']:
+	for item, c in [("Rogue's Marker", 1/350), ("Scroll of Wisdom", 1/100), ("Portal Scroll", 1/80), ("Armourer's Scrap", 1/80)]:  # , 'Perandus Coin']:
 		if item not in price_val['currency'] or price_val['currency'][item]['value'] > c:
 			price_val['currency'][item] = {'base': item, 'value': c, 'count': 200}
 	for base, val, in [('Mirror of Kalandra', 12000), ('Exalted Orb', 80)]:

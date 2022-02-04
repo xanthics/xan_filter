@@ -1,7 +1,7 @@
 # Implemented tags
 # '5l', '6l', 'amulet', 'awakened', 'belt', 'body armour', 'boot', 'bow', 'corrupt', 'crusader', 'currency', 'dagger', 'div', 'double-influenced',
 # 'elder', 'enchanted', 'essence', 'fishing', 'flask', 'fragment', 'gem', 'glove', 'helmet', 'hunter', 'ilvl100', 'influenced', 'jewel', 'jewellery',
-# 'magic', 'map', 'prophecy', 'quiver', 'rare', 'ring', 'scarab', 'sceptre', 'shaper', 'shield', 'staff', 'thrusting sword', 'two-implicit',
+# 'magic', 'map', 'quiver', 'rare', 'ring', 'scarab', 'sceptre', 'shaper', 'shield', 'staff', 'thrusting sword', 'two-implicit',
 # 'unique', 'wand', 'white', 'synthesis', '23%', '21gem', 'vaalgem'
 
 card_meta = {
@@ -29,7 +29,6 @@ card_meta = {
 	"The Shortcut": {'magic', 'flask', 'ilvl100'},  # {Quicksilver Flask of Adrenaline} {Item Level:} {100}, count: 1
 	"The Hook": {'unique'},  # {Watchstone}, count: 8
 	"Prejudice": {'unique', 'influenced'},  # {Item} {Influenced Item}, count: 7
-	"Sambodhi's Wisdom": {'prophecy'},  # {A Master Seeks Help (Jun)}, count: 3
 	"Brush, Paint and Palette": {'div'},  # {The Artist}, count: 5
 	"The Adventuring Spirit": {'unique', 'body armour'},  # {Victario's Influence}, count: 6
 	"The Card Sharp": {'white', 'scarab', 'fragment'},  # {Divination Scarab}, count: 4
@@ -66,9 +65,7 @@ card_meta = {
 	"A Dab of Ink": {'unique', 'wand'},  # The Poet's Pen
 	"A Familiar Call": {'magic', 'shaper', 'influenced', 'hunter', 'ilvl100'},  # Jewellery of Farrul|Item Level: 100|Shaper + Hunter Item
 	"A Mother's Parting Gift": {'unique', 'jewel'},  # Fertile Mind
-	"A Note in the Wind": {'prophecy'},  # Song of the Sekhema
 	"Abandoned Wealth": {'currency'},  # 3x Exalted Orb
-	"Akil's Prophecy": {'prophecy'},  # Fated Unique Item
 	"Alluring Bounty": {'currency'},  # 10x Exalted Orb
 	"Alone in the Darkness": {'unique'},  # Delve Item
 	"Anarchy's Price": {'unique', 'corrupt', 'bow'},  # Voltaxic Rift|Corrupted
@@ -78,7 +75,6 @@ card_meta = {
 	"Audacity": {'unique', 'corrupt', 'glove'},  # Doryani's Fist|Corrupted
 	"Azyran's Reward": {'unique', 'corrupt', 'jewel'},  # Prismatic Jewel|Corrupted
 	"Baited Expectations": {'unique', 'fishing'},  # Fishing Item
-	"Beauty Through Death": {'prophecy'},  # Queen's Sacrifice
 	"Blessing of God": {'magic', 'jewellery'},  # Elreon's Jewellery|Item Level: 85
 	"Blind Venture": {'unique', 'corrupt', 'ring'},  # Ring|Corrupted
 	"Boon of Justice": {'white', 'fragment'},  # Offering to the Goddess
@@ -108,7 +104,6 @@ card_meta = {
 	"Emperor's Luck": {'currency'},  # 5x Currency
 	"Etched in Blood": {'unique', 'corrupt', 'two-implicit', 'quiver'},  # Rigwald's Quills|Two-Implicit|Corrupted
 	"Forbidden Power": {'unique', 'corrupt', 'sceptre'},  # Balefire|Corrupted
-	"Friendship": {'prophecy'},  # A Master Seeks Help (Niko)
 	"Gemcutter's Promise": {'gem'},  # Superior Gem|Quality: +20%
 	"Gift of Asenath": {'unique', 'corrupt', 'two-implicit', 'glove'},  # Asenath's Gentle Touch|Two-Implicit|Corrupted
 	"Gift of the Gemling Queen": {'gem'},  # Level 20 Support Gem
@@ -123,7 +118,6 @@ card_meta = {
 	"Humility": {'unique', '6l'},  # Tabula Rasa
 	"Hunter's Resolve": {'unique', 'bow'},  # Bow
 	"Hunter's Reward": {'unique', 'ring'},  # The Taming
-	"Immortal Resolve": {'prophecy'},  # Fated Connections
 	"Imperial Legacy": {'white', '6l', 'ilvl100', 'bow'},  # Six-Link Imperial Bow|Item Level: 100
 	"Jack in the Box": {'unique'},  # Item
 	"Lantador's Lost Love": {'rare', 'ring'},  # Two-Stone Ring
@@ -251,9 +245,7 @@ card_meta = {
 	"The Inoculated": {'magic', 'body armour'},  # Seraphim's Armour
 	"The Insatiable": {'unique', 'corrupt'},  # The Harvest|Corrupted
 	"The Inventor": {'currency'},  # 10x Vaal Orb
-	"The Iron Bard": {'prophecy'},  # Trash to Treasure
 	"The Jester": {'magic', 'ilvl100'},  # Merciless One-Hand Weapon|Item Level: 100
-	"The Jeweller's Boon": {'prophecy'},  # The Jeweller's Touch
 	"The Journey": {'currency'},  # Harbinger's Orb
 	"The King's Blade": {'magic'},  # Bloodthirsty Eternal Sword|Item Level: 66
 	"The King's Heart": {'unique', 'body armour'},  # Kaom's Heart
@@ -267,7 +259,6 @@ card_meta = {
 	"The Lord of Celebration": {'magic', 'shaper', 'influenced', 'sceptre'},  # Sceptre of Celebration|Shaper Item
 	"The Lover": {'rare', 'jewellery'},  # Jewellery|Item Level: 79
 	"The Lunaris Priestess": {'unique', 'staff'},  # Sire of Shards
-	"The Mad King": {'prophecy'},  # The King's Path
 	"The Master Artisan": {'currency'},  # 20x Quality Currency
 	"The Master": {'unique', 'amulet'},  # Bisco's Collar
 	"The Mayor": {'unique', 'map'},  # The Perandus Manor|Watchstone Count: 4
@@ -309,7 +300,6 @@ card_meta = {
 	"The Scholar": {'currency'},  # 40x Scroll of Wisdom
 	"The Seeker": {'currency'},  # 3x Orb of Annulment
 	"The Sephirot": {'currency'},  # 10x Divine Orb
-	"The Side Quest": {'prophecy'},  # A Master Seeks Help
 	"The Sigil": {'magic', 'amulet'},  # Unassailable Amulet
 	"The Siren": {'unique', 'corrupt', 'staff'},  # The Whispering Ice|Corrupted
 	"The Skeleton": {'corrupt', 'gem', '23%'},  # Level 1 Summon Skeletons|Quality: +23%|Corrupted
@@ -340,7 +330,6 @@ card_meta = {
 	"The Undisputed": {'magic', 'elder', 'influenced', 'ilvl100'},  # Merciless Vaal Axe|Item Level: 100|Elder Item
 	"The Union": {'currency'},  # 10x Gemcutter's Prism
 	"The Valkyrie": {'unique'},  # Nemesis Item
-	"The Valley of Steel Boxes": {'prophecy'},  # Monstrous Treasure
 	"The Vast": {'unique', 'fishing'},  # Song of the Sirens
 	"The Visionary": {'unique', 'body armour'},  # Lioneye's Vision
 	"The Void": {},  # Random card turn in
@@ -370,7 +359,6 @@ card_meta = {
 	"Turn the Other Cheek": {'unique', 'corrupt', 'jewel'},  # Pacifism|Corrupted
 	"Underground Forest": {'currency'},  # 10x Awakened Sextant
 	"Vanity": {'unique', 'corrupt', '6l', 'body armour'},  # Tabula Rasa|Corrupted
-	"Vile Power": {'prophecy'},  # Ancient Doom
 	"Vinia's Token": {'currency'},  # 10x Orb of Regret
 	"Void of the Elements": {'magic', 'elder', 'influenced', 'ring', 'ilvl100'},  # Overpowering Opal Ring|Item Level: 100|Elder Item
 	"Volatile Power": {'corrupt', 'gem', 'vaalgem'},  # Superior Vaal Gem|Quality: +20%|Corrupted

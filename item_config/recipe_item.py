@@ -21,7 +21,8 @@ items = {
 	"1 Chaos Rare Ring": {"class": "Ring", "other": ["Rarity Rare", "ItemLevel >= 60", "ItemLevel <= 74", "Identified False"], "type": "ignore"},
 	"1 Chaos Rare Belt": {"class": "Belt", "other": ["Rarity Rare", "ItemLevel >= 60", "ItemLevel <= 74", "Identified False"], "type": "ignore"},
 
-#	"1 crucible item": {"class": "Gloves", "other": ["Rarity Normal"], "type": "show low"},
+#	"1 wand": {"baseexact": "Opal Wand", "class": "Wand", "other": ["ItemLevel >= 84"], "type": "show normal quiet"},
+	#"1 crucible item": {"class": "amulet", "type": "low"},
 
 	# Regal Orb Rare highlighting for currency recipes.  change 'ignore' to 'recipe item rare small' or back as needed
 	"1 Regal Rare Two Hand": {"class": "Two Hand\" \"Staves\" \"Bow", "other": ["Height 4", "Width 2", "Rarity Rare", "ItemLevel >= 75", "Identified False"], "type": "ignore"},

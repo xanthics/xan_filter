@@ -49,7 +49,7 @@ def gen_list_compact(items, desc):
 			if firstval not in item_dict:
 				item_dict[firstval] = {}
 			# Prophecy and BaseType will not appear in the same rule (personal choice)
-			# have a flag that is 0(neither), 1(Base), 2(prophecy), 3(enchant)
+			# have a flag that is 0(neither), 1(Base), 3(enchant), 4 (baseexact)
 			class_ = ''
 			formatting = []
 			base = ''
@@ -61,9 +61,6 @@ def gen_list_compact(items, desc):
 			if 'base' in item_info:
 				base = item_info['base']
 				flag = 1
-			elif 'prophecy' in item_info:
-				base = item_info['prophecy']
-				flag = 2
 			elif 'enchant' in item_info:
 				base = item_info['enchant']
 				flag = 3
@@ -138,8 +135,6 @@ def gen_list_compact(items, desc):
 				base += t
 				if flag == '1':
 					base += "\n\tBaseType \"{}\"".format('" "'.join(influencelist[influence]))
-				elif flag == '2':
-					base += "\n\tProphecy == \"{}\"".format('" "'.join(influencelist[influence]))
 				elif flag == '3':
 					base += "\n\tHasEnchantment == \"{}\"".format('" "'.join(influencelist[influence]))
 				elif flag == '4':
@@ -220,8 +215,9 @@ Show
 
 	if leveling:
 		desc = "Rare item for leveling"
-		flags = 'All'  # see item_config/rare_gen - genraresleveling for valid values
-		buffer += gen_list_compact(genraresleveling(flags, overlevel=3, maxlevel=64), desc)
+		flags = ['Armour', 'Accessory', 'Other']
+#		flags = ['All']  # see item_config/rare_gen - genraresleveling for valid values
+		buffer += gen_list_compact(genraresleveling(flags, overlevel=3, maxlevel=68), desc)
 
 	buffer += gen_list_compact(genrareshighlighttiered(), 'Rare item highlighting for endgame')
 
@@ -235,7 +231,7 @@ Show
 #		flags = ['Accessory', 'Axe', 'Sword']  # 'All'  # see item_config/rare_gen - genraresleveling for valid values
 #		buffer += gen_list_compact(gennonrareleveling(flags, overlevel=25, maxlevel=25), desc)
 		flags = ['All']  # see item_config/rare_gen - genraresleveling for valid values
-		buffer += gen_list_compact(gennonrareleveling(flags, overlevel=2, maxlevel=25), desc)
+		buffer += gen_list_compact(gennonrareleveling(flags, overlevel=2, maxlevel=10), desc)
 
 	buffer += gen_list_compact(recipe_item.items, recipe_item.desc)  # Items for vendor recipe
 #	buffer += gen_list_compact(custom_ex_shard_recipe.items, custom_ex_shard_recipe.desc)  # autogen rules for ex shard recipe items

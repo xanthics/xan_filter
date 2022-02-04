@@ -39,26 +39,30 @@ items = {
 
 util_flasks = [
 	"Diamond Flask",
-#	"Granite Flask",
-#	"Basalt Flask",
-#	"Jade Flask",
-#	"Stibnite Flask",
-#	"Topaz Flask",
-#	"Sapphire Flask",
-#	"Ruby Flask",
-#	"Amethyst Flask",
+	"Granite Flask",
+	"Basalt Flask",
+	"Jade Flask",
+	"Stibnite Flask",
+	"Topaz Flask",
+	"Sapphire Flask",
+	"Ruby Flask",
+	"Amethyst Flask",
 	"Quicksilver Flask",
-#	"Silver Flask",
+	"Silver Flask",
 	"Quartz Flask",
-#	"Gold Flask",
-#	"Corundum Flask",
-#	"Aquamarine Flask",
-#	"Sulphur Flask",
-#	"Bismuth Flask",
-#	"Iron Flask"
+	"Gold Flask",
+	"Corundum Flask",
+	"Aquamarine Flask",
+	"Sulphur Flask",
+	"Bismuth Flask",
+	"Iron Flask"
 ]
 
 # 	"1 Quartz Flask": {"base": "Quartz Flask", "other": ["Rarity Normal", "AreaLevel <= 78"], "type": "normal"},
 for flask in util_flasks:
-	for c, lvl in enumerate([(86, 'show normal quiet'), (76, 'normal border'), (0, 'normal')], start=1):
+	for c, lvl in enumerate([
+		(85, 'show normal quiet'),
+		(76, 'normal border'),
+		(0, 'normal')
+	], start=1):
 		items[f"{c} {flask}"] = {"base": flask, "other": [f"ItemLevel >= {lvl[0]}"], "type": lvl[1]}

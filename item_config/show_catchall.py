@@ -7,7 +7,6 @@ desc = "Always show catchall"
 # Base type : settings pair
 items = {
 #	"0 steel ring": {"baseexact": "Steel Ring", "other": ["ItemLevel >= 80"], "type": "show normal"},
-	"1 Watchstone": {"base": "Watchstone", "type": "show normal"},
 
 	# High value veiled mods, so that they still show after removing them from itemmod.py when finished
 	"2 Magic Jewel": {"class": "Jewel", "other": ["Rarity <= Magic", "AreaLevel <= 70"], "type": "normal"},
@@ -50,10 +49,15 @@ items = {
 	"2 Any Cluster Jewel": {"base": "Cluster Jewel", "class": "Jewel", "type": "show low"},
 
 	"90 Other rares": {"other": ["AreaLevel <= 67"], "type": "rare normal"},
-#	"91 scourged rares": {"other": ["Scourged True"], "type": "rare corrupted"},
+	"91 Searing Exarch rares": {"other": ["HasSearingExarchImplicit >= 1"], "type": "rare normal"},
+	"91 Eater of Worlds rares": {"other": ["HasEaterOfWorldsImplicit >= 1"], "type": "rare normal"},
+	#	"91 scourged rares": {"other": ["Scourged True"], "type": "rare corrupted"},
 	"92 corrupted rares": {"other": ["Corrupted True", "CorruptedMods > 0"], "type": "rare corrupted"},
-#	"93 Talisman rares": {"base": "Talisman", "type": "rare corrupted"},
-#	"99 identified rares": {"other": ["Identified True"], "type": "rare low"},
+	"93 Talisman rares": {"base": "Talisman", "type": "rare corrupted"},
+	"99 identified rares": {"other": ["Identified True"], "type": "rare low"},
+	"999 Amulet": {"class": "Amulets", "other": ["Rarity >= Rare"], "type": "low"},
+	"999 Ring": {"class": "Rings", "other": ["Rarity >= Rare"], "type": "low"},
+	"999 Belt": {"class": "Belts", "other": ["Rarity >= Rare"], "type": "low"},
 
 	"0 86+ helmet": {"class": "Helmet", "other": ["ItemLevel >= 86", "Rarity < Unique", "DropLevel >= 68"], "type": "show normal quiet"},
 #	"0 wand": {"class": "Wand", "other": ["ItemLevel >= 73", "Rarity Rare"], "type": "show normal quiet"},

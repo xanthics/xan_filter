@@ -18,12 +18,7 @@ items = {
 	"04 Inscribed Ultimatum": {"baseexact": "Inscribed Ultimatum", "class": "Misc Map Items", "type": "show high"},
 	"0 Fishing Rod": {"baseexact": "Fishing Rod", "type": "show very high"},
 	"0 Quest": {"class": "Quest", "type": "quest"},
-	"1 Cobalt Watchstone": {"baseexact": "Cobalt Watchstone", "type": "quest"},
-	"1 Crimson Watchstone": {"baseexact": "Crimson Watchstone", "type": "quest"},
-	"1 Golden Watchstone": {"baseexact": "Golden Watchstone", "type": "quest"},
-	"1 Viridian Watchstone": {"baseexact": "Viridian Watchstone", "type": "quest"},
+	"1 Voidstone": {"base": "Voidstone", "type": "quest"},
 
-#	"1 Eternal Flask": {"class": "Mana Flasks", "other": ["DropLevel = 65"], "type": "show high"},
-
-	"9 Starter weapon": {"other": ["Class Dagger Wand \"One Hand\" Bow Stave \"Two Hand\" Sceptre Claws", "ItemLevel < 2"], "type": "show normal"},
+	"9 Starter weapon": {"other": ["Class Dagger Wand \"One Hand\" Bow Stave \"Two Hand\" Sceptre Claws", "ItemLevel < 2"], "type": "show normal quiet"},
 }

@@ -189,8 +189,8 @@ def magicmods():
 					 "Bow",
 					 "Warstaves", "Stave", "Two Hand Axe", "Two Hand Mace", "Two Hand Sword",
 					 "Body Armour",
-					 "Boots",
 					 "Gloves",
+					 "Boots",
 					 "Helmet",
 					 "Shield",
 					 "Amulet",
@@ -203,7 +203,7 @@ def magicmods():
 
 	modtoitem["of the Veil"] = modtoitem["Veiled"].copy()
 
-	modanyitem = ['Eldritch', "The Shaper's", 'of the Elder', 'of Shaping',
+	modanyitem = [#'Eldritch', "The Shaper's", 'of the Elder', 'of Shaping',
 				  "Subterranean", "of the Underground",
 				  # "of Weaponcraft", "of Spellcraft",
 				  "of Crafting",
@@ -258,6 +258,7 @@ def itemmods():
 
 #	return {'9 Item Mod': {'other': ['HasExplicitMod "{}"'.format('" "'.join(veiled))], "type": "rare highlight"}, **magicmods(), **raremods()}
 	return {**magicmods(), **raremods()}
+#	return raremods()
 
 
 if __name__ == '__main__':

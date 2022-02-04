@@ -10,7 +10,7 @@ from collections import defaultdict
 def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, auto_ah, ret):
 	# drops that are restricted to specific areas or leagues
 	# limited highlighting is only used if the only high drops are limited and there is at least 1 low drop
-	limiteddrop = [
+	limiteddrop = {
 		# Quest Items
 		"Survival Instincts", "Survival Secrets", "Survival Skills", "Conqueror's Longevity", "Conqueror's Potency", "Conqueror's Efficiency",
 		"Assassin's Haste", "Poacher's Aim", "Warlord's Reach",
@@ -18,27 +18,23 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, auto_a
 		"Ancient Waystones", "Atziri's Reign", "Blood Sacrifice", "Brittle Barrier", "Chill of Corruption", "Combustibles", "Corrupted Energy",
 		"Fragility", "Hungry Abyss", "Mutated Growth", "Pacifism", "Powerlessness", "Sacrificial Harvest", "Self-Flagellation", "Vaal Sentencing",
 		"Weight of Sin", "Fevered Mind", 'Blood of Corruption', "Malachai's Vision",
-		# Prophecy drop only
-		'Kintsugi', "Hinekora's Sight", "Ascent From Flesh", 'The Ascetic',
 		# Divination card only item
 		'Maw of Mischief',
 		# Fated Uniques
-		'Kaltensoul', 'Thirst for Horrors', 'Atziri\'s Reflection', 'The Oak', 'Ezomyte Hold', 'Frostferno', 'Martyr\'s Crown', 'Asenath\'s Chant', 'Deidbellow',
-		'Malachai\'s Awakening', 'Wall of Brambles', 'Wildwrap', 'Fox\'s Fortune', 'Crystal Vault', 'Windshriek', 'Greedtrap', 'Shavronne\'s Gambit', 'Duskblight',
-		'Sunspite', 'Hrimburn', 'Doedre\'s Malevolence', 'Amplification Rod', 'Corona Solaris', 'Sanguine Gambol', 'The Gryphon', 'Dreadsurge', 'Dreadbeak', 'Cameria\'s Avarice',
-		'Silverbough', 'The Tempest', 'Doomfletch\'s Prism', 'Death\'s Opus', 'Mirebough', 'Realm Ender', 'The Stormwall', 'The Cauteriser', 'Queen\'s Escape', 'The Dancing Duo',
-		'Hrimnor\'s Dirge', 'Panquetzaliztli', 'Geofri\'s Devotion', 'Voidheart', 'Kaom\'s Way', 'Winterweave', 'Timetwist', 'Ngamahu Tiki', 'Karui Charge', 'The Effigon',
-		'The Tactician', 'The Nomad', 'The Signal Fire', 'Cragfall', 'Hyrri\'s Demise', 'Chaber Cairn', 'Geofri\'s Legacy', 'The Iron Fortress', 'Whakatutuki o Matua',
+		"Amplification Rod", "Asenath's Chant", "Atziri's Reflection", "Cameria's Avarice", "Chaber Cairn", "Cragfall", "Death's Opus", "Doedre's Malevolence", "Doomfletch's Prism",
+		"Dreadbeak", "Duskblight", "Frostferno", "Geofri's Devotion", "Geofri's Legacy", "Hrimburn", "Hyrri's Demise", "Kaom's Way", "Malachai's Awakening", "Queen's Escape",
+		"The Cauteriser", "The Dancing Duo", "The Iron Fortress", "The Nomad", "The Signal Fire", "The Stormwall", "The Tactician", "The Tempest", "Thirst for Horrors", "Timetwist",
+		"Whakatutuki o Matua", "Wildwrap", "Windshriek", "Winterweave",
 		# Vendor recipes
 		'The Anima Stone', 'Arborix', 'Duskdawn', 'The Goddess Scorned', 'The Goddess Unleashed', 'Kingmaker', 'Magna Eclipsis', 'The Retch', 'Star of Wraeclast', 'The Taming',
 		'The Vinktar Square', 'Loreweave',
-		#  incursion uniques from upgrades
+		# incursion uniques from upgrades
 		'Transcendent Flesh', 'Transcendent Mind', 'Transcendent Spirit', 'Soul Ripper', 'Slavedriver\'s Hand', 'Coward\'s Legacy', 'Omeyocan', 'Fate of the Vaal', 'Mask of the Stitched Demon',
 		'Apep\'s Supremacy', 'Zerphi\'s Heart',
 		# incursion uniques
 		'Sacrificial Heart', 'String of Servitude', 'Tempered Flesh', 'Tempered Mind', 'Tempered Spirit',
 		'Shadowstitch', "Apep's Slumber", "Architect's Hand", "Coward's Chains", 'Dance of the Offered', 'Mask of the Spirit Drinker', 'Story of the Vaal',
-		# Upgraded Breach Uniques
+		# Breach Uniques
 		'Xoph\'s Nurture', 'The Formless Inferno', 'Xoph\'s Blood', 'Tulfall', 'The Perfect Form', 'The Pandemonius', 'Hand of Wisdom and Action', 'Esh\'s Visage', 'Choir of the Storm',
 		'Uul-Netol\'s Embrace', 'The Red Trail', 'The Surrender', 'United in Dream', 'Skin of the Lords', 'Presence of Chayula', 'The Red Nightmare', 'The Green Nightmare', 'The Blue Nightmare',
 		# Harbinger Uniques -- Currently only drops as pieces
@@ -57,18 +53,15 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, auto_a
 		"Blasphemer's Grasp", "Shimmeron", "Nebuloch", "Hopeshredder", "Impresence", "Cyclopean Coil",
 		"Indigon", "The Eternity Shroud", "Disintegrator", "Voidforge", "Mark of the Elder", "Mark of the Shaper", "Voidfletcher", "Watcher's Eye",
 		# Atziri
-		"Atziri's Step", "Doryani's Catalyst", "Doryani's Invitation", "Atziri's Promise",
-		"The Vertex", "Atziri's Splendour", "Atziri's Acuity", "Atziri's Disfavour",
+		"Atziri's Step", "Doryani's Catalyst", "Doryani's Invitation", "Atziri's Promise", "Atziri's Reflection",
+		"The Vertex", "Atziri's Splendour", "Atziri's Acuity", "Atziri's Disfavour", "Pledge of Hands",
 		# Maven
-		"Arn's Anguish", "Graven's Secret", "Olesya's Delight", "Viridi's Veil", 'The Walls', 'The Claim', 'The Closest Peak', 'Atop the Atlas', 'The Vast Horizon', 'The Builder', 'Restless Cycles', 'The False Hope', 'Legacy of Fury',
+		"Arn's Anguish", "Graven's Secret", "Olesya's Delight", "Viridi's Veil", 'The Walls', 'The Claim', 'The Closest Peak', 'Atop the Atlas', 'The Vast Horizon', 'The Builder', 'Restless Cycles', 'The False Hope', 'Legacy of Fury',  'Doppelgänger Guise',
 		# Bestiary League
 		"Saqawal's Flock", "Saqawal's Nest", "Saqawal's Talons", "Saqawal's Winds",
 		"Fenumus' Toxins", "Fenumus' Shroud", "Fenumus' Spinnerets", "Fenumus' Weave",
 		"Craiceann's Chitin", "Craiceann's Carapace", "Craiceann's Tracks", "Craiceann's Pincers",
 		"Farrul's Bite", "Farrul's Fur", "Farrul's Chase", "Farrul's Pounce",
-		# Pale Court
-		"Mind of the Council", "Grip of the Council", "Breath of the Council", "Reach of the Council",
-		"Eber's Unification", "Yriel's Fostering", "Inya's Epiphany", "Volkuur's Guidance",
 		# Pillars of Arun
 		"Gorgon's Gaze",
 		# Doryani's Machinarium
@@ -91,8 +84,6 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, auto_a
 		"Precursor's Emblem",
 		# Betrayal League
 		"Bitterbind Point", "The Devouring Diadem", "The Queen's Hunger", "Cinderswallow", "Paradoxica", "The Crimson Storm", "Hyperboreus", 'Vivinsect', "Cloak of Tawm'r Isley",
-		# Perandus League
-		"Seven-League Step", "Trypanon", "Umbilicus Immortalis", "Varunastra", "Zerphi's Last Breath",
 		# Blight League
 		"Breathstealer", "Cowl of the Ceraunophile", "Cowl of the Cryophile", "Cowl of the Thermophile", "Sporeguard", "The Stampede",
 		# Conqueror
@@ -112,7 +103,10 @@ def unique_preprocess(data, val, base_sound, currency_val, tiers, minval, auto_a
 		"Atziri's Rule", "Cane of Kulemak", "Glimpse of Chaos", "Hateforge", "Mahuxotl's Machination", "Relic of the Pact", "Steelworm", "Temptation Step", "The Scales of Justice", "Triumvirate Authority", "Yaomac's Accord",
 		# Scourge
 		"Stranglegasp", "Uul-Netol's Vow", "Stasis Prison",
-	]
+		# Archnemesis
+		# Seige of the Atlas
+	}
+
 	unique_list = defaultdict(list)
 	unique_list_limited = defaultdict(list)
 	unique_list_replica = defaultdict(list)
@@ -247,13 +241,12 @@ def convert_json_to_filter():
 	packs = [
 		# json blob, priority, filter base rules, pricing funct, acceptable tiers, hide/ignore/show below min
 		# Following classes have defaults for normal in show_catchall:
-		# Map Fragments, Currency(also prophecy, oil, etc), Divination Card, Incubator, Unique, Helm Enchant, Misc Map Items
+		# Map Fragments, Currency(also oil, etc), Divination Card, Incubator, Unique, Helm Enchant, Misc Map Items
 		['currency', 1, 'currency', price_currency, ['mirror', 'extremely high', 'very high', 'high', 'normal', 'low'], 'hide'],
 		['currency_strict', 1, 'currency', price_currency, ['mirror', 'extremely high', 'very high', 'high', 'normal'], 'hide'],
 		['incubator', 7, 'currency', price_currency, ['mirror', 'extremely high', 'very high', 'high', 'normal'], 'hide'],
 		['div', 2, 'divination', price_currency, ['mirror', 'extremely high', 'very high', 'high', 'normal', 'low'], 'show'],
 		['fragment', 5, 'fragment', price_currency, ['mirror', 'extremely high', 'very high', 'high', 'normal', 'low'], 'show'],
-		['prophecy', 8, 'currency', price_currency, ['mirror', 'extremely high', 'very high', 'high', 'normal', 'low'], 'show'],
 		['enchant', 3, 'show', price_currency, ['mirror', 'extremely high', 'very high'], 'ignore'],
 		['base', 4, 'base', price_currency, ['mirror', 'extremely high', 'very high'], 'ignore'],
 		['gems', 6, 'gem', price_currency, ['mirror', 'extremely high', 'very high', 'high'], 'ignore'],

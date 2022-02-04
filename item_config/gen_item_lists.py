@@ -951,16 +951,20 @@ bases = {
 			{'drop': 80, 'base': 'Ring', 'name': 'Cerulean Ring', 'tier': 2},  # (8 to 10)% increased maximum Mana
 		],
 		"Quiver": [
-			{'drop': 4, 'base': 'Quiver', 'name': 'Two-Point Arrow Quiver', 'tier': 4},  # (20-30)% increased Global Accuracy Rating
-			{'drop': 5, 'base': 'Quiver', 'name': 'Serrated Arrow Quiver', 'tier': 4},  # Adds 1 to 4 Physical Damage to Bow Attacks
-			{'drop': 10, 'base': 'Quiver', 'name': 'Sharktooth Arrow Quiver', 'tier': 4},  # +(3-4) Life gained for each Enemy hit by your Attacks
-			{'drop': 16, 'base': 'Quiver', 'name': 'Blunt Arrow Quiver', 'tier': 4},  # (25-35)% increased Stun Duration on Enemies
-			{'drop': 22, 'base': 'Quiver', 'name': 'Fire Arrow Quiver', 'tier': 4},  # Adds 4 to 8 Fire Damage to Bow Attacks
-			{'drop': 28, 'base': 'Quiver', 'name': 'Broadhead Arrow Quiver', 'tier': 3},  # Adds 6 to 12 Physical Damage to Bow Attacks
-			{'drop': 36, 'base': 'Quiver', 'name': 'Penetrating Arrow Quiver', 'tier': 2},  # Arrows Pierce an additional Target
+			{'drop': 4, 'base': 'Quiver', 'name': 'Serrated Arrow Quiver', 'tier': 4},  # (1-4 Added Physical Damage with Bow Attacks)
+			{'drop': 9, 'base': 'Quiver', 'name': 'Fire Arrow Quiver', 'tier': 4},  # (3-5 Added Fire Damage with Bow Attacks)
+			{'drop': 14, 'base': 'Quiver', 'name': 'Sharktooth Arrow Quiver', 'tier': 4},  # (6-8 Life gained for each Enemy Hit by your Attacks)
+			{'drop': 20, 'base': 'Quiver', 'name': 'Feathered Arrow Quiver', 'tier': 2},  # (20-30% increased Arrow Speed)
+			{'drop': 25, 'base': 'Quiver', 'name': 'Penetrating Arrow Quiver', 'tier': 1},  # (Arrows Pierce an additional Target)
+			{'drop': 31, 'base': 'Quiver', 'name': 'Blunt Arrow Quiver', 'tier': 2},  # ((7-9) to (13-16) Added Physical Damage with Bow Attacks)
+			{'drop': 36, 'base': 'Quiver', 'name': 'Two-Point Arrow Quiver', 'tier': 3},  # (20-30% increased Global Accuracy Rating)
+			{'drop': 40, 'base': 'Quiver', 'name': 'Spike-Point Arrow Quiver', 'tier': 1},  # (20-30% increased Critical Strike Chance with Bows)
+			{'drop': 45, 'base': 'Quiver', 'name': 'Blazing Arrow Quiver', 'tier': 2},  # ((12-15) to (24-27) Added Fire Damage with Bow Attacks)
 			{'drop': 45, 'base': 'Quiver', 'name': 'Ornate Quiver', 'tier': 0},  # Has 1 Socket
-			{'drop': 45, 'base': 'Quiver', 'name': 'Spike-Point Arrow Quiver', 'tier': 2},  # (20-30)% increased Global Critical Strike Chance
-			{'drop': 74, 'base': 'Quiver', 'name': 'Artillery Quiver', 'tier': 1},  # (20-30)% increased Totem Placement Speed
+			{'drop': 49, 'base': 'Quiver', 'name': 'Broadhead Arrow Quiver', 'tier': 1},  # (8-10% increased Attack Speed)
+			{'drop': 55, 'base': 'Quiver', 'name': 'Vile Arrow Quiver', 'tier': 1},  # (Gain 10-15% of Physical Damage as Extra Chaos Damage)
+			{'drop': 61, 'base': 'Quiver', 'name': 'Heavy Arrow Quiver', 'tier': 1},  # ((12-16) to (24-27) Added Physical Damage with Bow Attacks)F
+			{'drop': 66, 'base': 'Quiver', 'name': 'Primal Arrow Quiver', 'tier': 1},  # (20-30% increased Elemental Damage with Attack Skills)
 
 		],
 		"Other": [
@@ -1022,7 +1026,7 @@ def genraresleveling(flags='All', overlevel=3, maxlevel=67, alwayshighlight=('Ac
 					cur = bases[category][vals][i]
 					if cur['drop'] <= maxlevel:
 						ret[cur['name']] = {"baseexact": cur['name'], "other": ["AreaLevel <= {}".format(maxlevel)], "type": "levelling rare normal"}
-			elif flags == 'All' or set(f).intersection(set(flags)) or set(f).intersection(set(alwayshighlight)):
+			elif 'All' in flags or set(f).intersection(set(flags)) or set(f).intersection(set(alwayshighlight)):
 				for i in range(l-1):
 					cur = bases[category][vals][i]
 					if cur['drop'] <= maxlevel:
@@ -1056,7 +1060,7 @@ def gennonrareleveling(flags='All', overlevel=0, maxlevel=35, alwayshighlight=()
 					cur = bases[category][vals][i]
 					if cur['drop'] <= maxlevel:
 						ret[cur['name']] = {"baseexact": cur['name'], "other": ["Rarity <= Normal", "AreaLevel <= {}".format(maxlevel)], "type": "leveling low"}
-			elif flags == 'All' or set(f).intersection(set(flags)) or set(f).intersection(set(alwayshighlight)):
+			elif 'All' in flags or set(f).intersection(set(flags)) or set(f).intersection(set(alwayshighlight)):
 				for i in range(l-1):
 					cur = bases[category][vals][i]
 					if cur['drop'] <= maxlevel:
@@ -1081,8 +1085,9 @@ def genrareshighlighttiered():
 
 	ret = {}
 	# Bases that are always shown when a certain ilvl threshold is reached.  Highlighting rules still followed
-	alwaysshow = {'Wand': 68, 'Shield': 68, 'Helmet': 68, 'Boots': 68, 'Gloves': 68, 'Accessory': 68, 'Other': 1}
-	#alwaysshow = {'Boots': 86, 'Accessory': 84, 'Other': 1}
+	alwaysshow = {'Armour': 68, 'Accessory': 68, 'Other': 1}
+	# alwaysshow = {'Wand': 68, 'Shield': 68, 'Helmet': 68, 'Boots': 68, 'Gloves': 68, 'Accessory': 68, 'Other': 1}
+	# alwaysshow = {'Boots': 86, 'Accessory': 84, 'Other': 1}
 	# list of bases that should be ignored, even for always show
 	bad_bases = [
 		'Gold Amulet',

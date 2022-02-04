@@ -16,8 +16,8 @@ def scrape_ninja(league='tmpstandard'):
 	leaguelookup = {
 		"Standard": "Standard",
 		"Hardcore": "Hardcore",
-		"tmpstandard": "Scourge",
-		"tmphardcore": "Hardcore Scourge",
+		"tmpstandard": "Archnemesis",
+		"tmphardcore": "Hardcore Archnemesis",
 	}
 
 	keys = [
@@ -32,7 +32,6 @@ def scrape_ninja(league='tmpstandard'):
 		"Incubator",
 		'Essence',
 		'DivinationCard',
-		'Prophecy',
 		'BaseType',
 		'HelmetEnchant',
 		'UniqueMap',
@@ -41,7 +40,6 @@ def scrape_ninja(league='tmpstandard'):
 		'UniqueWeapon',
 		'UniqueArmour',
 		'UniqueAccessory',
-		'Watchstone',
 		'DeliriumOrb',
 		'ClusterJewel'
 	]
@@ -64,8 +62,6 @@ def scrape_ninja(league='tmpstandard'):
 
 		'DivinationCard': 'div',
 
-		'Prophecy': 'prophecy',
-
 		'BaseType': 'base',
 		'ClusterJewel': 'base',
 
@@ -78,7 +74,6 @@ def scrape_ninja(league='tmpstandard'):
 		'UniqueWeapon': 'unique',
 		'UniqueArmour': 'unique',
 		'UniqueAccessory': 'unique',
-		'Watchstone': 'unique',
 
 		'Oil': 'challenge_stack',
 	}
@@ -138,21 +133,10 @@ def scrape_ninja(league='tmpstandard'):
 					text = '|'.join([x['text'].replace('\n', ' ') for x in i["explicitModifiers"]])
 					missing_unhandled.append(f'"{i["name"]}": {{}},  # {text}, count: {i["stackSize"] if "stackSize" in i else 1}')
 
-		elif key == 'Prophecy':
-			for i in data['lines']:
-				tname = i['name']
-				if i['name'] in price_val[classtypes[key]]:
-					print(f"Duplicate key for {i['name']} found")
-					while i['name'] in price_val[classtypes[key]]:
-						i['name'] += "*"
-				price_val[classtypes[key]][i['name']] = {'prophecy': tname, 'value': i['chaosValue'], 'count': i['count']}
-
 		elif key in ['UniqueJewel', 'UniqueFlask', 'UniqueWeapon', 'UniqueArmour', 'UniqueAccessory']:
 			for i in data['lines']:
 				if (('links' in i and i['links']) or 'relic' in i['icon']) and i['name'] != 'Tabula Rasa':
 					continue
-				if key == 'Watchstone':
-					i['baseType'] = 'Ivory Watchstone'
 				elif 'Synthesised' in i['baseType']:
 					i['baseType'] = i['baseType'][12:]
 				if i['name'] in price_val[classtypes[key]]:
@@ -175,20 +159,6 @@ def scrape_ninja(league='tmpstandard'):
 						price_val[classtypes[key]][name] = {'baseexact': i['baseType'], 'value': i['chaosValue'], 'count': i['count'], 'tier': i['mapTier'], "other": [f"MapTier = {i['mapTier']}"]}
 				else:
 					price_val[classtypes[key]][i['name']] = {'baseexact': i['baseType'], 'value': i['chaosValue'], 'count': i['count'], 'tier': i['mapTier'], "other": [f"MapTier = {i['mapTier']}"]}
-
-		elif key == 'Watchstone':
-			for i in data['lines']:
-				if i['name'] in price_val[classtypes[key]]:
-					if i['mapTier'] > price_val[classtypes[key]][i['name']]['charges']:
-						t = price_val[classtypes[key]][i['name']]
-						name = f"{i['name']} {t['charges']}"
-						price_val[classtypes[key]][name] = {'baseexact': 'Ivory Watchstone', 'value': t['value'], 'count': t['count'], 'charges': t['charges']}
-						price_val[classtypes[key]][i['name']] = {'baseexact': 'Ivory Watchstone', 'value': i['chaosValue'], 'count': i['count'], 'charges': i['mapTier']}
-					else:
-						name = f"{i['name']} {i['mapTier']}"
-						price_val[classtypes[key]][name] = {'baseexact': 'Ivory Watchstone', 'value': i['chaosValue'], 'count': i['count'], 'charges': i['mapTier']}
-				else:
-					price_val[classtypes[key]][i['name']] = {'baseexact': 'Ivory Watchstone', 'value': i['chaosValue'], 'count': i['count'], 'charges': i['mapTier']}
 
 		elif key == 'BaseType':
 			for i in data['lines']:

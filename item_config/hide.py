@@ -50,8 +50,4 @@ items = {
 	"1 Whispering Incubator": {"base": "Whispering Incubator", "class": "Incubator", "type": "hide"},
 	"1 Primal Incubator": {"base": "Primal Incubator", "class": "Incubator", "type": "hide"},
 	"1 Abyssal Incubator": {"base": "Abyssal Incubator", "class": "Incubator", "type": "hide"},
-	# bad incubators at low ilvl
-	"1 Celestial Jeweller's Incubator": {"base": "Celestial Jeweller's Incubator", 'other': ['ItemLevel < 73'], "class": "Incubator", "type": "hide"},
-	"1 Celestial Blacksmith's Incubator": {"base": "Celestial Blacksmith's Incubator", 'other': ['ItemLevel < 84'], "class": "Incubator", "type": "hide"},
-	"1 Celestial Armoursmith's Incubator": {"base": "Celestial Armoursmith's Incubator", 'other': ['ItemLevel < 83'], "class": "Incubator", "type": "hide"},
 }

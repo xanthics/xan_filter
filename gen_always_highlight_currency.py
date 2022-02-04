@@ -10,7 +10,7 @@ from item_config.gen_item_lists import bases
 def create_always_highlight():
 	currencytab = "0"  # Update to the tabid(s) where you keep your currency
 	ex_shard_tab = "5"
-	league = "Scourge"
+	league = "Archnemesis"
 	accountname = "xanqos"
 	cookies = {'POESESSID': ''}  # update to your session id, blank session id will use default(on) highlighting rules
 	header = {
@@ -95,7 +95,7 @@ def create_highlight_currency(currencytab, league, accountname, cookies, header,
 		"Armourer's Scrap": 160,
 		"Blacksmith's Whetstone": 80,
 		"Blessed Orb": 100,
-		"Chaos Orb": 500,
+		"Chaos Orb": 9999,
 		"Chromatic Orb": 500,
 		"Engineer's Orb": 20,
 		"Gemcutter's Prism": 100,
@@ -254,7 +254,6 @@ def create_highlight_challenge(accountname, league, cookies, header, requester):
 				"Item Level 100 Item": [{'ilvl100'}],
 				"Jewel": [{'jewel'}],
 				"Influenced Item": [{'influenced'}],
-				"Prophecy": [{'prophecy'}],
 				"Rare Item": [{'rare'}],
 				"Six-Linked Item": [{'6l'}],
 				"Scarab": [{'scarab'}],
