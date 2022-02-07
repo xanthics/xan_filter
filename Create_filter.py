@@ -61,6 +61,9 @@ def gen_list_compact(items, desc):
 			if 'base' in item_info:
 				base = item_info['base']
 				flag = 1
+			elif 'archnem' in item_info:
+				base = item_info['archnem']
+				flag = 2
 			elif 'enchant' in item_info:
 				base = item_info['enchant']
 				flag = 3
@@ -135,6 +138,8 @@ def gen_list_compact(items, desc):
 				base += t
 				if flag == '1':
 					base += "\n\tBaseType \"{}\"".format('" "'.join(influencelist[influence]))
+				elif flag == '2':
+					base += "\n\tArchnemesisMod == \"{}\"".format('" "'.join(influencelist[influence]))
 				elif flag == '3':
 					base += "\n\tHasEnchantment == \"{}\"".format('" "'.join(influencelist[influence]))
 				elif flag == '4':
@@ -234,7 +239,7 @@ Show
 		buffer += gen_list_compact(gennonrareleveling(flags, overlevel=2, maxlevel=10), desc)
 
 	buffer += gen_list_compact(recipe_item.items, recipe_item.desc)  # Items for vendor recipe
-#	buffer += gen_list_compact(custom_ex_shard_recipe.items, custom_ex_shard_recipe.desc)  # autogen rules for ex shard recipe items
+	buffer += gen_list_compact(custom_ex_shard_recipe.items, custom_ex_shard_recipe.desc)  # autogen rules for ex shard recipe items
 	buffer += gen_list_compact(show_catchall.items, show_catchall.desc)  # Always show these items
 
 	poeDir = get_poe_path()

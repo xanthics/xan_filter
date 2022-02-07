@@ -6,16 +6,18 @@ from bs4 import BeautifulSoup
 from item_config.card_meta import card_meta
 from item_config.gen_item_lists import bases
 
+from secrets import account, poe_sessid, header_from
+
 
 def create_always_highlight():
 	currencytab = "0"  # Update to the tabid(s) where you keep your currency
-	ex_shard_tab = "5"
+	ex_shard_tab = "4"
 	league = "Archnemesis"
-	accountname = "xanqos"
-	cookies = {'POESESSID': ''}  # update to your session id, blank session id will use default(on) highlighting rules
+	accountname = account
+	cookies = {'POESESSID': poe_sessid}  # update to your session id, blank session id will use default(on) highlighting rules
 	header = {
-		'User-Agent': 'xan.filter)',
-		'From': 'xanthics on discord'
+		'User-Agent': 'xan.filter',
+		'From': header_from
 	}
 	if cookies['POESESSID']:
 		requester = requests.session()

@@ -354,8 +354,10 @@ settings.update({
 					   'CustomAlertSound "{}_map_good"'.format('low')],
 
 	"leveling high": ["SetFontSize {}".format(size['normal']),
+	                  'MinimapIcon 2 Orange Moon',
 					  "SetBorderColor {}".format(color['nemesisoutline'])],
 	"leveling normal": ["SetFontSize {}".format(size['small']),
+	                    'MinimapIcon 2 Orange Moon',
 						"SetBorderColor {}".format(color['tormentoutline'])],
 	"leveling low": ["SetFontSize {}".format(size['minimum']),
 					 "SetBorderColor {}".format(color['normal'])],
@@ -396,7 +398,7 @@ settings.update({
 							   "SetFontSize {}".format(size['small']),
 						       "SetBackgroundColor {} 220".format(color['cold'])],
 
-	"item mod": ["SetBorderColor {} 150".format(color['premiumlpurple']),
+	"item mod": ["SetBorderColor {} 200".format(color['premiumlpurple']),
 				 'MinimapIcon 2 Grey UpsideDownHouse',
 				 "SetFontSize {}".format(size['normal'])],
 

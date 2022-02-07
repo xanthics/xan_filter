@@ -182,7 +182,14 @@ def magicmods():
 				 "Martinet's": ["Sceptre", "Wand", "Dagger", "Shield"],
 				 "Mad Lord's": ["Sceptre", "Wand", "Dagger", "Shield"],
 				 "Lithomancer's": ["Sceptre", "Wand", "Dagger","Shield"],
-				 # Veiled mods so they can be eventually disabled when unlocked
+				# +1 gems on amulet
+	             "Exalter's": ['Amulet'],
+	             "Vulcanist's": ['Amulet'],
+	             "Rimedweller's": ['Amulet'],
+	             "Stormbrewer's": ['Amulet'],
+	             "Behemoth's": ['Amulet'],
+	             "Provocateur's": ['Amulet'],
+	             # Veiled mods so they can be eventually disabled when unlocked
 				 "Veiled": [
 					 "Claw", "Rune Daggers", "Dagger", "One Hand Axe", "One Hand Mace", "One Hand Sword", "Sceptre",
 					 "Wand",
@@ -203,7 +210,7 @@ def magicmods():
 
 	modtoitem["of the Veil"] = modtoitem["Veiled"].copy()
 
-	modanyitem = [#'Eldritch', "The Shaper's", 'of the Elder', 'of Shaping',
+	modanyitem = ["The Elder's", "The Shaper's", 'of the Elder', 'of Shaping',
 				  "Subterranean", "of the Underground",
 				  # "of Weaponcraft", "of Spellcraft",
 				  "of Crafting",

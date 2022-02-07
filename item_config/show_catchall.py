@@ -54,12 +54,13 @@ items = {
 	#	"91 scourged rares": {"other": ["Scourged True"], "type": "rare corrupted"},
 	"92 corrupted rares": {"other": ["Corrupted True", "CorruptedMods > 0"], "type": "rare corrupted"},
 	"93 Talisman rares": {"base": "Talisman", "type": "rare corrupted"},
-	"99 identified rares": {"other": ["Identified True"], "type": "rare low"},
-	"999 Amulet": {"class": "Amulets", "other": ["Rarity >= Rare"], "type": "low"},
-	"999 Ring": {"class": "Rings", "other": ["Rarity >= Rare"], "type": "low"},
-	"999 Belt": {"class": "Belts", "other": ["Rarity >= Rare"], "type": "low"},
+	# "99 identified rares": {"other": ["Identified True"], "type": "rare low"},
+	# "999 Amulet": {"class": "Amulets", "other": ["Rarity >= Rare"], "type": "low"},
+	# "999 Ring": {"class": "Rings", "other": ["Rarity >= Rare"], "type": "low"},
+	# "999 Belt": {"class": "Belts", "other": ["Rarity >= Rare"], "type": "low"},
 
+#	"0 gloves": {"class": "Gloves", "other": ["Rarity < Unique"], "type": "show normal quiet"},
 	"0 86+ helmet": {"class": "Helmet", "other": ["ItemLevel >= 86", "Rarity < Unique", "DropLevel >= 68"], "type": "show normal quiet"},
-#	"0 wand": {"class": "Wand", "other": ["ItemLevel >= 73", "Rarity Rare"], "type": "show normal quiet"},
+	#	"0 wand": {"class": "Wand", "other": ["ItemLevel >= 73", "Rarity Rare"], "type": "show normal quiet"},
 
 }

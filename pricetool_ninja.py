@@ -9,6 +9,7 @@ from ninja_helm_lookup import helmnames
 from ninja_cluster_lookup import clusternames
 from validate_ninja_data import validate_data
 from item_config.card_meta import card_meta
+from secrets import header_from
 
 
 # get price data from poe.ninja
@@ -88,7 +89,7 @@ def scrape_ninja(league='tmpstandard'):
 	requester = requests.session()
 	header = {
 		'User-Agent': 'xan.filter',
-		'From': 'xanthics on discord'
+		'From': header_from
 	}
 	price_val = {}
 
@@ -146,8 +147,8 @@ def scrape_ninja(league='tmpstandard'):
 
 		elif key == 'UniqueMap':
 			for i in data['lines']:
-				if 'Synthesised' in i['baseType']:
-					i['baseType'] = i['baseType'][12:]
+				if 'Map' == i['baseType']:
+					continue
 				if i['name'] in price_val[classtypes[key]]:
 					if i['mapTier'] < price_val[classtypes[key]][i['name']]['tier']:
 						t = price_val[classtypes[key]][i['name']]
