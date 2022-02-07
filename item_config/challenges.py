@@ -44,75 +44,80 @@ for base in [
 	items[f"1 Heist {base} 83+"] = {'base': base, "class": "Heist", "other": ["ItemLevel >= 83"], "type": "challenge normal"}
 
 archnem_parts = {
-	"Toxic": {},  # Generic Gems
-	"Chaosweaver": {},  # Gems
-	"Frostweaver": {},  # Armour
-	"Permafrost": {},  # Generic, Armour
-	"Hasted": {},  # Generic
-	"Deadeye": {},  # Armour, Trinkets
-	"Bombardier": {},  # Weapon, Armour
-	"Flameweaver": {},  # Weapon
-	"Incendiary": {},  # Generic, Weapon
-	"Arcane Buffer": {},  # Essences
-	"Echoist": {},  # Generic, Currency
-	"Stormweaver": {},  # Trinkets
-	"Dynamo": {},  # Generic, Trinkets
-	"Bonebreaker": {},  # Generic, Weapon
-	"Bloodletter": {},  # Weapon, Trinkets - Items dropped from the Monster and its Minions are Corrupted
-	"Steel-infused": {},  # Weapon
-	"Gargantuan": {},  # Currency
-	"Berserker": {},  # Uniques
-	"Sentinel": {},  # Armour Armour
-	"Juggernaut": {},  # Harbinger
-	"Vampiric": {},  # Fossils
-	"Overcharged": {},  # Trinkets, Trinkets
-	"Soul Conduit": {},  # Maps
-	"Opulent": {},  # Monster is fabulously wealthy
-	"Malediction": {},  # Divination Cards
-	"Consecrator": {},  # Fragments
-	"Frenzied": {},  # Generic, Uniques
-	"Heralding Minions": {"Dynamo", "Arcane Buffer"},  # Fragments, Fragments
-	"Empowering Minions": {"Necromancer", "Executioner", "Gargantuan"},  # Blight, Ritual
-	"Assassin": {"Deadeye", "Vampiric"},  # Currency, Currency
-	"Trickster": {"Overcharged", "Assassin", "Echoist"},  # Currency, Uniques, Divination Cards
-	"Necromancer": {"Bombardier", "Overcharged"},  # Generic - Rewards are rolled 2 additional times, choosing the rarest result
-	"Rejuvenating": {"Gargantuan", "Vampiric"},  # Currency - Rewards are rolled 1 additional time, choosing the rarest result
-	"Executioner": {"Frenzied", "Berserker"},  # Legion Breach
-	"Hexer": {"Chaosweaver", "Echoist"},  # Essences, Essences
-	"Drought Bringer": {"Malediction", "Deadeye"},  # Labyrinth Labyrinth
-	"Entangler": {"Toxic", "Bloodletter"},  # Fossils, Fossils
-	"Temporal Bubble": {"Juggernaut", "Hexer", "Arcane Buffer"},  # Heist, Expedition
-	"Treant Horde": {"Toxic", "Sentinel", "Steel-infused"},  # Generic - Monster's Minions drop a randomly-chosen Reward Type
-	"Frost Strider": {"Frostweaver", "Hasted"},  # Armour, Armour, Armour
-	"Ice Prison": {"Permafrost", "Sentinel"},  # Armour Armour - Rewards are rolled 1 additional time, choosing the rarest result
-	"Soul Eater": {"Soul Conduit", "Necromancer", "Gargantuan"},  # Maps, Maps
-	"Flame Strider": {"Flameweaver", "Hasted"},  # Weapon, Weapon, Weapon
-	"Corpse Detonator": {"Necromancer", "Incendiary"},  # Divination Cards, Divination Cards
-	"Evocationist": {"lameweaver", "Frostweaver", "Stormweaver"},  # Generic, Weapon, Armour, Trinkets
-	"Magma Barrier": {"Incendiary", "Bonebreaker"},  # Weapon, Weapon - Rewards are rolled 1 additional time, choosing the rarest result
-	"Mirror Image": {"Echoist", "Soul Conduit"},  # Scarabs - Rewards are rolled 2 additional times, choosing the rarest result
-	"Storm Strider": {"Stormweaver", "Hasted"},  # Trinkets, Trinkets, Trinkets
-	"Mana Siphoner": {"Consecrator", "Dynamo"},  # Trinkets, Trinkets - Rewards are rolled 1 additional time, choosing the rarest result
-	"Corrupter": {"Bloodletter", "Chaosweaver"},  # Abyss, Abyss - Items dropped from the Monster and its Minions are Corrupted
-	"Invulnerable": {"Sentinel", "Juggernaut", "Consecrator"},  # Delirium, Metamorphosis
-	"Crystal-skinned": {"Permafrost", "Rejuvenating", "Berserker"},  # Harbinger, Harbinger
-	"Empowered Elements": {"Evocationist", "Steel-infused", "Chaosweaver"},  # Uniques, Uniques - Rewards are rolled 1 additional time, choosing the rarest result
-	"Effigy": {"Hexer", "Malediction", "Corrupter"},  # Divination Cards, Divination Cards - Rewards are rolled 1 additional time, choosing the rarest result
-	"Lunaris-touched": {"Invulnerable", "Frost Strider", "Empowering Minions"},  # Uniques - All Reward Types have an additional reward
-	"Solaris-touched": {"Invulnerable", "Magma Barrier", "Empowering Minions"},  # Scarabs - All Reward Types have an additional reward
-	"Arakaali-touched": {"Corpse Detonator", "Entangler", "Assassin"},  # Divination Cards - All Reward Types are Divination Cards
-	"Brine King-touched": {"Ice Prison", "Storm Strider", "Heralding Minions"},  # Armour, Armour, Armour - Rewards are rolled 6 additional times, choosing the rarest result
-	"Tukohama-touched": {"Bonebreaker", "Executioner", "Magma Barrier"},  # Weapon, Weapon, Fragments - Rewards are rolled 4 additional times, choosing the rarest result
-	"Abberath-touched": {"Flame Strider", "Frenzied", "Rejuvenating"},  # Trinkets, Trinkets, Maps - Rewards are rolled 4 additional times, choosing the rarest result
-	"Shakari-touched": {"Entangler", "Soul Eater", "Drought Bringer"},  # Uniques - All Reward Types are Uniques
-	"Innocence-touched": {"Lunaris-touched", "Solaris-touched", "Mirror Image", "Mana Siphoner"},  # Currency, Currency, Currency - All Reward Types are Currency
-	"Kitava-touched": {"Tukohama-touched", "Abberath-touched", "Corrupter", "Corpse Detonator"},  # Generic - Rewards are doubled
+	# Basic Drops
+	'Arcane Buffer': {},  # Essences
+	'Berserker': {},  # Uniques
+	'Bloodletter': {},  # Weapon, Trinkets - Items dropped from the Monster and its Minions are Corrupted
+	'Bombardier': {},  # Weapon, Armour
+	'Bonebreaker': {},  # Generic, Weapon
+	'Chaosweaver': {},  # Gems
+	'Consecrator': {},  # Fragments
+	'Deadeye': {},  # Armour, Trinkets
+	'Dynamo': {},  # Generic, Trinkets
+	'Echoist': {},  # Generic, Currency
+	'Flameweaver': {},  # Weapon
+	'Frenzied': {},  # Generic, Uniques
+	'Frostweaver': {},  # Armour
+	'Gargantuan': {},  # Currency
+	'Hasted': {},  # Generic
+	'Incendiary': {},  # Generic, Weapon
+	'Juggernaut': {},  # Harbinger
+	'Malediction': {},  # Divination Cards
+	'Opulent': {},  # Monster is fabulously wealthy
+	'Overcharged': {},  # Trinkets, Trinkets
+	'Permafrost': {},  # Generic, Armour
+	'Sentinel': {},  # Armour Armour
+	'Soul Conduit': {},  # Maps
+	'Steel-infused': {},  # Weapon
+	'Stormweaver': {},  # Trinkets
+	'Toxic': {},  # Generic Gems
+	'Vampiric': {},  # Fossils
+	# Basic Recipes
+	'Executioner': {'Frenzied', 'Berserker'},  # Legion Breach
+	'Necromancer': {'Overcharged', 'Bombardier'},  # Generic - Rewards are rolled 2 additional times, choosing the rarest result
+	# Intermediate Recipes
+	'Empowering Minions': {'Executioner', 'Gargantuan', 'Necromancer'},  # Blight, Ritual
+	'Flame Strider': {'Hasted', 'Flameweaver'},  # Weapon, Weapon, Weapon
+	'Frost Strider': {'Hasted', 'Frostweaver'},  # Armour, Armour, Armour
+	'Invulnerable': {'Sentinel', 'Consecrator', 'Juggernaut'},  # Delirium, Metamorphosis
+	'Magma Barrier': {'Bonebreaker', 'Incendiary'},  # Weapon, Weapon - Rewards are rolled 1 additional time, choosing the rarest result
+	'Rejuvenating': {'Vampiric', 'Gargantuan'},  # Currency - Rewards are rolled 1 additional time, choosing the rarest result
+	# Complex Recipes
+	'Abberath-touched': {'Frenzied', 'Flame Strider', 'Rejuvenating'},  # Trinkets, Trinkets, Maps - Rewards are rolled 4 additional times, choosing the rarest result
+	'Assassin': {'Deadeye', 'Vampiric'},  # Currency, Currency
+	'Corpse Detonator': {'Necromancer', 'Incendiary'},  # Divination Cards, Divination Cards
+	'Corrupter': {'Chaosweaver', 'Bloodletter'},  # Abyss, Abyss - Items dropped from the Monster and its Minions are Corrupted
+	'Drought Bringer': {'Malediction', 'Deadeye'},  # Labyrinth Labyrinth
+	'Entangler': {'Bloodletter', 'Toxic'},  # Fossils, Fossils
+	'Evocationist': {'Stormweaver', 'lameweaver', 'Frostweaver'},  # Generic, Weapon, Armour, Trinkets
+	'Heralding Minions': {'Dynamo', 'Arcane Buffer'},  # Fragments, Fragments
+	'Hexer': {'Chaosweaver', 'Echoist'},  # Essences, Essences
+	'Ice Prison': {'Permafrost', 'Sentinel'},  # Armour Armour - Rewards are rolled 1 additional time, choosing the rarest result
+	'Lunaris-touched': {'Frost Strider', 'Invulnerable', 'Empowering Minions'},  # Uniques - All Reward Types have an additional reward
+	'Mana Siphoner': {'Consecrator', 'Dynamo'},  # Trinkets, Trinkets - Rewards are rolled 1 additional time, choosing the rarest result
+	'Mirror Image': {'Soul Conduit', 'Echoist'},  # Scarabs - Rewards are rolled 2 additional times, choosing the rarest result
+	'Solaris-touched': {'Magma Barrier', 'Invulnerable', 'Empowering Minions'},  # Scarabs - All Reward Types have an additional reward
+	'Soul Eater': {'Soul Conduit', 'Gargantuan', 'Necromancer'},  # Maps, Maps
+	'Storm Strider': {'Hasted', 'Stormweaver'},  # Trinkets, Trinkets, Trinkets
+	'Tukohama-touched': {'Executioner', 'Magma Barrier', 'Bonebreaker'},  # Weapon, Weapon, Fragments - Rewards are rolled 4 additional times, choosing the rarest result
+	# Terminal Recipes
+	'Arakaali-touched': {'Entangler', 'Corpse Detonator', 'Assassin'},  # Divination Cards - All Reward Types are Divination Cards
+	'Brine King-touched': {'Storm Strider', 'Ice Prison', 'Heralding Minions'},  # Armour, Armour, Armour - Rewards are rolled 6 additional times, choosing the rarest result
+	'Crystal-skinned': {'Permafrost', 'Rejuvenating', 'Berserker'},  # Harbinger, Harbinger
+	'Effigy': {'Malediction', 'Hexer', 'Corrupter'},  # Divination Cards, Divination Cards - Rewards are rolled 1 additional time, choosing the rarest result
+	'Empowered Elements': {'Chaosweaver', 'Evocationist', 'Steel-infused'},  # Uniques, Uniques - Rewards are rolled 1 additional time, choosing the rarest result
+	'Innocence-touched': {'Solaris-touched', 'Lunaris-touched', 'Mana Siphoner', 'Mirror Image'},  # Currency, Currency, Currency - All Reward Types are Currency
+	'Kitava-touched': {'Abberath-touched', 'Tukohama-touched', 'Corrupter', 'Corpse Detonator'},  # Generic - Rewards are doubled
+	'Shakari-touched': {'Drought Bringer', 'Entangler', 'Soul Eater'},  # Uniques - All Reward Types are Uniques
+	'Temporal Bubble': {'Juggernaut', 'Hexer', 'Arcane Buffer'},  # Heist, Expedition
+	'Treant Horde': {'Sentinel', 'Toxic', 'Steel-infused'},  # Generic - Monster's Minions drop a randomly-chosen Reward Type
+	'Trickster': {'Overcharged', 'Echoist', 'Assassin'},  # Currency, Uniques, Divination Cards
 }
 
 good = {"Echoist", "Gargantuan", "Opulent", "Assassin", "Rejuvenating", "Treant Horde", "Mirror Image", "Effigy", "Solaris-touched", "Arakaali-touched", "Innocence-touched", "Kitava-touched"}
 highlight = {"Opulent", "Treant Horde", "Kitava-touched",
              "Arakaali-touched", "Innocence-touched", "Lunaris-touched", "Effigy", "Empowering Minions", "Shakari-touched", "Solaris-touched"}
-have = {"Dynamo", "Vampiric", "Incendiary", "Echoist", "Bombardier", "Flameweaver", "Hasted"}
+have = {"Dynamo", "Vampiric", "Incendiary", "Echoist", "Bombardier", "Flameweaver", "Hasted", "Bonebreaker"}
 
 base_set = set()
 set_len = good | highlight
