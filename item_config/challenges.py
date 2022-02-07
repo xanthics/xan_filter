@@ -112,7 +112,7 @@ archnem_parts = {
 good = {"Echoist", "Gargantuan", "Opulent", "Assassin", "Rejuvenating", "Treant Horde", "Mirror Image", "Effigy", "Solaris-touched", "Arakaali-touched", "Innocence-touched", "Kitava-touched"}
 highlight = {"Opulent", "Treant Horde", "Kitava-touched",
              "Arakaali-touched", "Innocence-touched", "Lunaris-touched", "Effigy", "Empowering Minions", "Shakari-touched", "Solaris-touched"}
-have = {"Dynamo", "Vampiric", "Incendiary", "Echoist", "Bombardier"}
+have = {"Dynamo", "Vampiric", "Incendiary", "Echoist", "Bombardier", "Flameweaver", "Hasted"}
 
 base_set = set()
 set_len = good | highlight
@@ -124,7 +124,7 @@ while set_len:
 	set_len = t_set
 
 for base in base_set:
-	items[f"1 Archnemesis {base} 68+"] = {'archnem': base, "class": "Archnemesis Mod", "type": "challenge normal"}
+	items[f"1 Archnemesis {base}"] = {'archnem': base, "class": "Archnemesis Mod", "type": "challenge normal"}
 
 base_set = set()
 set_len = highlight
@@ -136,6 +136,10 @@ while set_len:
 	set_len = t_set
 
 base_set -= have
+base_set -= highlight
 
 for base in base_set:
-	items[f"1 Archnemesis {base} 68+"]['other'].append('PlayEffect Green')
+	items[f"1 Archnemesis {base}"]['other'] = 'PlayEffect Green'
+
+for base in highlight:
+	items[f"1 Archnemesis {base}"]['other'] = 'PlayEffect Red'
