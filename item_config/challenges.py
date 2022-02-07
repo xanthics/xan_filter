@@ -139,7 +139,7 @@ base_set -= have
 base_set -= highlight
 
 for base in base_set:
-	items[f"1 Archnemesis {base}"]['other'] = 'PlayEffect Green'
+	items[f"1 Archnemesis {base}"]['other'] = ['PlayEffect Green']
 
 for base in highlight:
-	items[f"1 Archnemesis {base}"]['other'] = 'PlayEffect Red'
+	items[f"1 Archnemesis {base}"]['other'] = ['PlayEffect Red']
