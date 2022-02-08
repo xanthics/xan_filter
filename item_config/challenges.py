@@ -89,7 +89,7 @@ archnem_parts = {
 	'Corrupter': {'Chaosweaver', 'Bloodletter'},  # Abyss, Abyss - Items dropped from the Monster and its Minions are Corrupted
 	'Drought Bringer': {'Malediction', 'Deadeye'},  # Labyrinth Labyrinth
 	'Entangler': {'Bloodletter', 'Toxic'},  # Fossils, Fossils
-	'Evocationist': {'Stormweaver', 'lameweaver', 'Frostweaver'},  # Generic, Weapon, Armour, Trinkets
+	'Evocationist': {'Stormweaver', 'Flameweaver', 'Frostweaver'},  # Generic, Weapon, Armour, Trinkets
 	'Heralding Minions': {'Dynamo', 'Arcane Buffer'},  # Fragments, Fragments
 	'Hexer': {'Chaosweaver', 'Echoist'},  # Essences, Essences
 	'Ice Prison': {'Permafrost', 'Sentinel'},  # Armour Armour - Rewards are rolled 1 additional time, choosing the rarest result
@@ -114,37 +114,47 @@ archnem_parts = {
 	'Trickster': {'Overcharged', 'Echoist', 'Assassin'},  # Currency, Uniques, Divination Cards
 }
 
-good = {"Echoist", "Gargantuan", "Opulent", "Assassin", "Rejuvenating", "Treant Horde", "Mirror Image", "Effigy", "Solaris-touched", "Arakaali-touched", "Innocence-touched", "Kitava-touched"}
-highlight = {"Opulent", "Treant Horde", "Kitava-touched",
+good = set()  # {"Echoist", "Gargantuan", "Opulent", "Assassin", "Rejuvenating", "Treant Horde", "Mirror Image", "Effigy", "Solaris-touched", "Arakaali-touched", "Innocence-touched", "Kitava-touched"}
+
+highlight = {"Opulent", "Kitava-touched",  # , "Treant Horde"
              "Arakaali-touched", "Innocence-touched", "Lunaris-touched", "Effigy", "Empowering Minions", "Shakari-touched", "Solaris-touched"}
-have = {"Dynamo", "Vampiric", "Incendiary", "Echoist", "Bombardier", "Flameweaver", "Hasted", "Bonebreaker"}
+
+have = {"Toxic", "", "Sentinel", "", "", "", "", "",
+        "Juggernaut", "Flame Strider", "Malediction", "Bonebreaker", "Frostweaver", "Sentinel", "Gargantuan", "",
+        "Soul Eater", "Corpse Detonator", "Magma Barrier", "Hexer", '', 'Vampiric' "Overcharged", "Frenzied"}
 
 base_set = set()
-set_len = good | highlight
+set_len = (good | highlight) - have
+
 while set_len:
 	base_set.update(set_len)
 	t_set = set()
 	for base in set_len:
-		t_set.update(archnem_parts[base])
+		if archnem_parts[base] and have.issuperset(archnem_parts[base]) and base not in have:
+			print(f"Craft {base} with {archnem_parts[base]}")
+		if base not in have:
+			t_set.update(archnem_parts[base])
 	set_len = t_set
 
+base_set -= have
 for base in base_set:
 	items[f"1 Archnemesis {base}"] = {'archnem': base, "class": "Archnemesis Mod", "type": "challenge normal"}
 
 base_set = set()
-set_len = highlight
+set_len = highlight - have
 while set_len:
 	base_set.update(set_len)
 	t_set = set()
 	for base in set_len:
-		t_set.update(archnem_parts[base])
+		if base not in have:
+			t_set.update(archnem_parts[base])
 	set_len = t_set
 
 base_set -= have
 base_set -= highlight
 
 for base in base_set:
-	items[f"1 Archnemesis {base}"]['other'] = ['PlayEffect Green']
+	items[f"1 Archnemesis {base}"]['other'] = ['PlayEffect Pink']
 
 for base in highlight:
-	items[f"1 Archnemesis {base}"]['other'] = ['PlayEffect Red']
+	items[f"1 Archnemesis {base}"]['other'] = ['PlayEffect White']
