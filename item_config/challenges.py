@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 # Author: Jeremy Parks
 # Note: Requires Python 3.3.x or higher
+from collections import defaultdict
+
 
 desc = "challenge item"
 
@@ -114,47 +116,58 @@ archnem_parts = {
 	'Trickster': {'Overcharged', 'Echoist', 'Assassin'},  # Currency, Uniques, Divination Cards
 }
 
-good = set()  # {"Echoist", "Gargantuan", "Opulent", "Assassin", "Rejuvenating", "Treant Horde", "Mirror Image", "Effigy", "Solaris-touched", "Arakaali-touched", "Innocence-touched", "Kitava-touched"}
+good_highlight = {"Opulent"}  # {"Echoist", "Gargantuan", "Opulent", "Assassin", "Rejuvenating", "Treant Horde", "Mirror Image", "Effigy", "Solaris-touched", "Arakaali-touched", "Innocence-touched", "Kitava-touched"}
 
-highlight = {"Opulent", "Kitava-touched",  # , "Treant Horde"
-             "Arakaali-touched", "Innocence-touched", "Lunaris-touched", "Effigy", "Empowering Minions", "Shakari-touched", "Solaris-touched"}
+need_highlight = {"Arakaali-touched", "Innocence-touched", "Lunaris-touched", "Effigy", "Solaris-touched"}
 
-have = {"Toxic", "", "Sentinel", "", "", "", "", "",
-        "Juggernaut", "Flame Strider", "Malediction", "Bonebreaker", "Frostweaver", "Sentinel", "Gargantuan", "",
-        "Soul Eater", "Corpse Detonator", "Magma Barrier", "Hexer", '', 'Vampiric' "Overcharged", "Frenzied"}
+have_list = [
+	"", "", "", "", "", "", "", "",
+	"", "Magma Barrier", "", "", "", "", "", "",
+	"Invulnerable", "Malediction", "Gargantuan", "Toxic", "Berserker", "Frost Strider", "Sentinel", "Necromancer",
+	"Mirror Image", "", "Overcharged", "Hexer", 'Mana Siphoner', 'Assassin', "Frostweaver", "Sentinel"
+]
 
-base_set = set()
-set_len = (good | highlight) - have
-
-while set_len:
-	base_set.update(set_len)
+# Initialise our item counts
+need = defaultdict(int)
+need_t = defaultdict(int)
+for i in need_highlight:
+	need_t[i] += 1
+have = defaultdict(int)
+for i in have_list:
+	if i:
+		have[i] += 1
+# calculate how many we need of each part
+while need_t:
+	for i in need_t:
+		need[i] += need_t[i]
+	t_set = defaultdict(int)
+	for i in need_t:
+		if archnem_parts[i] and all(j in have and have[j] for j in archnem_parts[i]):
+			print(f"Craft {i} with: {archnem_parts[i]}")
+		for j in archnem_parts[i]:
+			if j in have and have[j]:
+				have[j] -= 1
+				continue
+			t_set[j] += 1
+	need_t = t_set
+# calculate what parts are good, always seen
+want = set()
+good = good_highlight
+while good:
+	want.update(good)
 	t_set = set()
-	for base in set_len:
-		if archnem_parts[base] and have.issuperset(archnem_parts[base]) and base not in have:
-			print(f"Craft {base} with {archnem_parts[base]}")
-		if base not in have:
-			t_set.update(archnem_parts[base])
-	set_len = t_set
+	for i in good:
+		t_set.update(archnem_parts[i])
+	good = t_set
 
-base_set -= have
-for base in base_set:
-	items[f"1 Archnemesis {base}"] = {'archnem': base, "class": "Archnemesis Mod", "type": "challenge normal"}
+# create filter rules
+for base in set(need.keys()) | want:
+	if need[base] or base in want:
+		if not archnem_parts[base] and base in need and need[base]:
+			print(f"Need: {base} ({need[base]})")
+		items[f"1 Archnemesis {base}"] = {'archnem': base, "class": "Archnemesis Mod", "type": "challenge normal"}
+		if base in good_highlight | need_highlight:
+			items[f"1 Archnemesis {base}"]['other'] = ['PlayEffect White']
+		else:
+			items[f"1 Archnemesis {base}"]['other'] = ['PlayEffect Green']
 
-base_set = set()
-set_len = highlight - have
-while set_len:
-	base_set.update(set_len)
-	t_set = set()
-	for base in set_len:
-		if base not in have:
-			t_set.update(archnem_parts[base])
-	set_len = t_set
-
-base_set -= have
-base_set -= highlight
-
-for base in base_set:
-	items[f"1 Archnemesis {base}"]['other'] = ['PlayEffect Pink']
-
-for base in highlight:
-	items[f"1 Archnemesis {base}"]['other'] = ['PlayEffect White']
