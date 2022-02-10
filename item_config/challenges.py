@@ -127,6 +127,9 @@ have_list = [
 	"Mirror Image", "", "Overcharged", "Hexer", 'Mana Siphoner', 'Assassin', "Frostweaver", "Sentinel"
 ]
 
+# validate have_list
+if any(i not in archnem_parts for i in have_list if i):
+	print(f"invalid have names: {set(have_list) - set(archnem_parts) - {''}}")
 # Initialise our item counts
 need = defaultdict(int)
 need_t = defaultdict(int)
