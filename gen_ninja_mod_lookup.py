@@ -1,4 +1,5 @@
 import json
+from math import isclose
 
 
 def validate(state, conditions):
@@ -80,6 +81,9 @@ def gen_helm_lookups(mods, translation):
 					if v:
 						if "2dp" in v[0]:
 							mq[idx] = round(mq[idx] * value_transforms[v[0]], 2)
+							# for blade trap rotation and spectral helix spirals
+							if isclose(int(mq[idx]), mq[idx]):
+								mq[idx] = int(mq[idx])
 						else:
 							mq[idx] = int(mq[idx] * value_transforms[v[0]])
 					if cond['format'][idx] not in ['#', 'ignore']:
